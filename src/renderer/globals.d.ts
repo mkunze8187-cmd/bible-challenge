@@ -37,6 +37,23 @@ interface CustomContentImportResult {
   error?: string;
 }
 
+interface AppUpdateInfo {
+  currentVersion: string;
+  latestVersion: string;
+  hasUpdate: boolean;
+  releaseName?: string;
+  releaseUrl: string;
+  assetName?: string;
+  assetSize?: number;
+  message: string;
+}
+
+interface AppUpdateInstallResult {
+  started: boolean;
+  installerPath?: string;
+  message: string;
+}
+
 declare global {
   interface Window {
     audioHost?: {
@@ -59,6 +76,8 @@ declare global {
       openExternal: (url: string) => Promise<void>;
       getAppSettings: () => Promise<unknown>;
       saveAppSettings: (settings: unknown) => Promise<unknown>;
+      checkForUpdates: () => Promise<AppUpdateInfo>;
+      downloadAndInstallUpdate: () => Promise<AppUpdateInstallResult>;
       listCustomContentPacks: () => Promise<unknown>;
       chooseCustomContentJson: () => Promise<CustomContentImportResult>;
       saveCustomContentPack: (pack: unknown) => Promise<unknown>;

@@ -120,9 +120,10 @@ interface FlashMessage {
 }
 
 type AppTheme = "classic" | "forest" | "ocean" | "plum" | "dawn" | "meadow" | "ruby";
-type SettingsTab = "appearance" | "players" | "timers" | "audio" | "feedback" | "content" | "event" | "stats";
+type SettingsTab = "appearance" | "players" | "timers" | "audio" | "feedback" | "content" | "event" | "stats" | "updates";
 type TimerPreset = "off" | "beginner" | "standard" | "advanced" | "expert" | "custom";
 type DisplayMode = "normal" | "projector";
+type UpdateCheckResult = Awaited<ReturnType<NonNullable<Window["desktopHost"]>["checkForUpdates"]>>;
 type ContentPackId =
   | "all"
   | "core"
@@ -222,7 +223,8 @@ const SETTINGS_TABS: { id: SettingsTab; label: string }[] = [
   { id: "feedback", label: "Feedback" },
   { id: "content", label: "Content" },
   { id: "event", label: "Event" },
-  { id: "stats", label: "Stats" }
+  { id: "stats", label: "Stats" },
+  { id: "updates", label: "Updates" }
 ];
 const DEFAULT_TEAMS: TeamSetup[] = [
   {
@@ -1671,6 +1673,10 @@ export function App() {
   const [feedbackDraft, setFeedbackDraft] = useState<FeedbackDraft | null>(null);
   const [feedbackStatus, setFeedbackStatus] = useState("");
   const [isSubmittingFeedback, setIsSubmittingFeedback] = useState(false);
+  const [updateInfo, setUpdateInfo] = useState<UpdateCheckResult | null>(null);
+  const [updateStatus, setUpdateStatus] = useState("");
+  const [isCheckingUpdates, setIsCheckingUpdates] = useState(false);
+  const [isInstallingUpdate, setIsInstallingUpdate] = useState(false);
   const [hasLoadedAppSettings, setHasLoadedAppSettings] = useState(false);
   const [settingsWarning, setSettingsWarning] = useState("");
   const [isOnline, setIsOnline] = useState(() => (typeof navigator === "undefined" ? true : navigator.onLine));
@@ -2906,6 +2912,45 @@ export function App() {
     }
   }
 
+  async function checkForUpdates() {
+    if (!window.desktopHost?.checkForUpdates) {
+      setUpdateStatus("Update checks are only available in the desktop app.");
+      return;
+    }
+
+    setIsCheckingUpdates(true);
+    setUpdateStatus("Checking GitHub releases...");
+
+    try {
+      const result = await window.desktopHost.checkForUpdates();
+      setUpdateInfo(result);
+      setUpdateStatus(result.message);
+    } catch (error) {
+      setUpdateInfo(null);
+      setUpdateStatus(error instanceof Error ? error.message : "Unable to check for updates.");
+    } finally {
+      setIsCheckingUpdates(false);
+    }
+  }
+
+  async function downloadAndInstallUpdate() {
+    if (!window.desktopHost?.downloadAndInstallUpdate) {
+      setUpdateStatus("Update installs are only available in the desktop app.");
+      return;
+    }
+
+    setIsInstallingUpdate(true);
+    setUpdateStatus("Downloading installer...");
+
+    try {
+      const result = await window.desktopHost.downloadAndInstallUpdate();
+      setUpdateStatus(result.message);
+    } catch (error) {
+      setUpdateStatus(error instanceof Error ? error.message : "Unable to download and install the update.");
+      setIsInstallingUpdate(false);
+    }
+  }
+
   function submitChallengeRating(mode: GameId, stars: number) {
     setChallengeRatings((current) => {
       const existing = current[mode] ?? { totalStars: 0, ratingCount: 0 };
@@ -3936,6 +3981,68 @@ export function App() {
                         </article>
                       ))
                     )}
+                  </div>
+                </div>
+              ) : null}
+
+              {activeSettingsTab === "updates" ? (
+                <div
+                  id="settings-panel-updates"
+                  className="settings-panel"
+                  role="tabpanel"
+                  aria-labelledby="settings-tab-updates"
+                >
+                  <div className="static-card settings-card">
+                    <div className="settings-card-header">
+                      <div>
+                        <strong>App Updates</strong>
+                        <p className="settings-help">
+                          Installed version: {updateInfo?.currentVersion ?? "Check for updates to read the desktop version."}
+                        </p>
+                      </div>
+                      <button
+                        type="button"
+                        className="secondary-button"
+                        onClick={() => void checkForUpdates()}
+                        disabled={isCheckingUpdates || isInstallingUpdate}
+                      >
+                        {isCheckingUpdates ? "Checking..." : "Check For Updates"}
+                      </button>
+                    </div>
+
+                    {updateInfo ? (
+                      <div className="update-summary-grid">
+                        <span>
+                          Current <strong>{updateInfo.currentVersion}</strong>
+                        </span>
+                        <span>
+                          Latest <strong>{updateInfo.latestVersion}</strong>
+                        </span>
+                        <span>
+                          Installer <strong>{updateInfo.assetName ?? "Not available"}</strong>
+                        </span>
+                      </div>
+                    ) : null}
+
+                    {updateStatus ? <p className="settings-help">{updateStatus}</p> : null}
+
+                    <div className="audio-button-row">
+                      <button
+                        type="button"
+                        className="primary-button"
+                        onClick={() => void downloadAndInstallUpdate()}
+                        disabled={!updateInfo?.hasUpdate || isCheckingUpdates || isInstallingUpdate}
+                      >
+                        {isInstallingUpdate ? "Downloading..." : "Download And Install"}
+                      </button>
+                      <button
+                        type="button"
+                        className="ghost-button"
+                        onClick={() => void window.desktopHost?.openExternal(updateInfo?.releaseUrl ?? "https://github.com/mkunze8187-cmd/bible-challenge/releases")}
+                      >
+                        Open Releases
+                      </button>
+                    </div>
                   </div>
                 </div>
               ) : null}
