@@ -1,0 +1,2764 @@
+{
+  "$schema": "./schemas/scripture-puzzles.schema.json",
+  "game": "scripture-puzzles",
+  "version": 1,
+  "displayName": "Verse Reveal",
+  "roundsPerSession": 5,
+  "sessions": [
+    {
+      "id": "sp-session-001",
+      "title": "Scripture Puzzle Pack 001",
+      "theme": "KJV scripture puzzle rounds",
+      "rounds": [
+        {
+          "id": "sp-r001",
+          "reference": "Genesis 1:1",
+          "referenceAliases": [
+            "Genesis 1:1",
+            "Gen 1:1"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Creation",
+          "contextClue": "The Bible's opening declaration about the beginning.",
+          "contentMode": "public-domain-text",
+          "verseText": "In the beginning God created the heaven and the earth.",
+          "solutionAliases": [
+            "In the beginning God created the heaven and the earth."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 1:1 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r002",
+          "reference": "Exodus 14:14",
+          "referenceAliases": [
+            "Exodus 14:14",
+            "Exod 14:14"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Deliverance",
+          "contextClue": "A calm command given at the edge of the sea.",
+          "contentMode": "public-domain-text",
+          "verseText": "The LORD shall fight for you, and ye shall hold your peace.",
+          "solutionAliases": [
+            "The LORD shall fight for you, and ye shall hold your peace."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 14:14 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r003",
+          "reference": "Joshua 1:9",
+          "referenceAliases": [
+            "Joshua 1:9",
+            "Josh 1:9"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Courage",
+          "contextClue": "A charge to lead with strength because God goes with you.",
+          "contentMode": "public-domain-text",
+          "verseText": "Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest.",
+          "solutionAliases": [
+            "Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Joshua 1:9 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r004",
+          "reference": "Psalm 23:1",
+          "referenceAliases": [
+            "Psalm 23:1",
+            "Ps 23:1"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Provision",
+          "contextClue": "A shepherd image that begins one of Scripture's best-known psalms.",
+          "contentMode": "public-domain-text",
+          "verseText": "The LORD is my shepherd; I shall not want.",
+          "solutionAliases": [
+            "The LORD is my shepherd; I shall not want."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Psalm 23:1 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r005",
+          "reference": "Proverbs 3:5",
+          "referenceAliases": [
+            "Proverbs 3:5",
+            "Prov 3:5"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Trust",
+          "contextClue": "Wisdom literature calling for dependence on the Lord over self-reliance.",
+          "contentMode": "public-domain-text",
+          "verseText": "Trust in the LORD with all thine heart; and lean not unto thine own understanding.",
+          "solutionAliases": [
+            "Trust in the LORD with all thine heart; and lean not unto thine own understanding."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Proverbs 3:5 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "sp-session-002",
+      "title": "Scripture Puzzle Pack 002",
+      "theme": "KJV scripture puzzle rounds",
+      "rounds": [
+        {
+          "id": "sp-r006",
+          "reference": "Isaiah 40:31",
+          "referenceAliases": [
+            "Isaiah 40:31",
+            "Isa 40:31"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Strength",
+          "contextClue": "A promise for those who wait on the Lord.",
+          "contentMode": "public-domain-text",
+          "verseText": "But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint.",
+          "solutionAliases": [
+            "But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Isaiah 40:31 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r007",
+          "reference": "Jeremiah 29:11",
+          "referenceAliases": [
+            "Jeremiah 29:11",
+            "Jer 29:11"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Hope",
+          "contextClue": "A frequently quoted promise spoken to people living in exile.",
+          "contentMode": "public-domain-text",
+          "verseText": "For I know the thoughts that I think toward you, saith the LORD, thoughts of peace, and not of evil, to give you an expected end.",
+          "solutionAliases": [
+            "For I know the thoughts that I think toward you, saith the LORD, thoughts of peace, and not of evil, to give you an expected end."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Jeremiah 29:11 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r008",
+          "reference": "Micah 6:8",
+          "referenceAliases": [
+            "Micah 6:8",
+            "Mic 6:8"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Justice",
+          "contextClue": "A concise summary of what the Lord requires.",
+          "contentMode": "public-domain-text",
+          "verseText": "He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?",
+          "solutionAliases": [
+            "He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Micah 6:8 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r009",
+          "reference": "Ezekiel 36:26",
+          "referenceAliases": [
+            "Ezekiel 36:26",
+            "Ezek 36:26"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Renewal",
+          "contextClue": "A promise about inner transformation using heart imagery.",
+          "contentMode": "public-domain-text",
+          "verseText": "A new heart also will I give you, and a new spirit will I put within you: and I will take away the stony heart out of your flesh, and I will give you an heart of flesh.",
+          "solutionAliases": [
+            "A new heart also will I give you, and a new spirit will I put within you: and I will take away the stony heart out of your flesh, and I will give you an heart of flesh."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Ezekiel 36:26 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r010",
+          "reference": "Habakkuk 2:4",
+          "referenceAliases": [
+            "Habakkuk 2:4",
+            "Hab 2:4"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Faith",
+          "contextClue": "A short prophetic line later echoed in the New Testament.",
+          "contentMode": "public-domain-text",
+          "verseText": "Behold, his soul which is lifted up is not upright in him: but the just shall live by his faith.",
+          "solutionAliases": [
+            "Behold, his soul which is lifted up is not upright in him: but the just shall live by his faith."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Habakkuk 2:4 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "sp-session-003",
+      "title": "Scripture Puzzle Pack 003",
+      "theme": "KJV scripture puzzle rounds",
+      "rounds": [
+        {
+          "id": "sp-r011",
+          "reference": "Matthew 5:16",
+          "referenceAliases": [
+            "Matthew 5:16",
+            "Matt 5:16"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Witness",
+          "contextClue": "A Sermon on the Mount call for visible good works.",
+          "contentMode": "public-domain-text",
+          "verseText": "Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven.",
+          "solutionAliases": [
+            "Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Matthew 5:16 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r012",
+          "reference": "Matthew 11:28",
+          "referenceAliases": [
+            "Matthew 11:28",
+            "Matt 11:28"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Rest",
+          "contextClue": "Jesus invites the weary to come to him.",
+          "contentMode": "public-domain-text",
+          "verseText": "Come unto me, all ye that labour and are heavy laden, and I will give you rest.",
+          "solutionAliases": [
+            "Come unto me, all ye that labour and are heavy laden, and I will give you rest."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Matthew 11:28 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r013",
+          "reference": "John 3:16",
+          "referenceAliases": [
+            "John 3:16",
+            "Jn 3:16"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Salvation",
+          "contextClue": "A central gospel summary from Jesus' conversation with Nicodemus.",
+          "contentMode": "public-domain-text",
+          "verseText": "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.",
+          "solutionAliases": [
+            "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review John 3:16 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r014",
+          "reference": "John 8:12",
+          "referenceAliases": [
+            "John 8:12",
+            "Jn 8:12"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Light",
+          "contextClue": "An 'I am' statement about guidance and darkness.",
+          "contentMode": "public-domain-text",
+          "verseText": "Then spake Jesus again unto them, saying, I am the light of the world: he that followeth me shall not walk in darkness, but shall have the light of life.",
+          "solutionAliases": [
+            "Then spake Jesus again unto them, saying, I am the light of the world: he that followeth me shall not walk in darkness, but shall have the light of life."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review John 8:12 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r015",
+          "reference": "John 14:6",
+          "referenceAliases": [
+            "John 14:6",
+            "Jn 14:6"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Way",
+          "contextClue": "Jesus answers Thomas with an exclusive claim about access to the Father.",
+          "contentMode": "public-domain-text",
+          "verseText": "Jesus saith unto him, I am the way, the truth, and the life: no man cometh unto the Father, but by me.",
+          "solutionAliases": [
+            "Jesus saith unto him, I am the way, the truth, and the life: no man cometh unto the Father, but by me."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review John 14:6 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "sp-session-004",
+      "title": "Scripture Puzzle Pack 004",
+      "theme": "KJV scripture puzzle rounds",
+      "rounds": [
+        {
+          "id": "sp-r016",
+          "reference": "Romans 8:28",
+          "referenceAliases": [
+            "Romans 8:28",
+            "Rom 8:28"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Purpose",
+          "contextClue": "Paul frames suffering and calling under God's active good purpose.",
+          "contentMode": "public-domain-text",
+          "verseText": "And we know that all things work together for good to them that love God, to them who are the called according to his purpose.",
+          "solutionAliases": [
+            "And we know that all things work together for good to them that love God, to them who are the called according to his purpose."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Romans 8:28 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r017",
+          "reference": "Romans 12:2",
+          "referenceAliases": [
+            "Romans 12:2",
+            "Rom 12:2"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Transformation",
+          "contextClue": "A command about renewal of mind instead of conformity.",
+          "contentMode": "public-domain-text",
+          "verseText": "And be not conformed to this world: but be ye transformed by the renewing of your mind, that ye may prove what is that good, and acceptable, and perfect, will of God.",
+          "solutionAliases": [
+            "And be not conformed to this world: but be ye transformed by the renewing of your mind, that ye may prove what is that good, and acceptable, and perfect, will of God."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Romans 12:2 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r018",
+          "reference": "1 Corinthians 13:4",
+          "referenceAliases": [
+            "1 Corinthians 13:4",
+            "1 Cor 13:4"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Love",
+          "contextClue": "Paul begins a defining description of love's character.",
+          "contentMode": "public-domain-text",
+          "verseText": "Charity suffereth long, and is kind; charity envieth not; charity vaunteth not itself, is not puffed up,",
+          "solutionAliases": [
+            "Charity suffereth long, and is kind; charity envieth not; charity vaunteth not itself, is not puffed up,"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review 1 Corinthians 13:4 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r019",
+          "reference": "Galatians 5:22",
+          "referenceAliases": [
+            "Galatians 5:22",
+            "Gal 5:22"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Character",
+          "contextClue": "A Spirit-shaped list that begins with love and joy.",
+          "contentMode": "public-domain-text",
+          "verseText": "But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith,",
+          "solutionAliases": [
+            "But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith,"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Galatians 5:22 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r020",
+          "reference": "Ephesians 2:8",
+          "referenceAliases": [
+            "Ephesians 2:8",
+            "Eph 2:8"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Grace",
+          "contextClue": "A concise statement that salvation is received, not achieved.",
+          "contentMode": "public-domain-text",
+          "verseText": "For by grace are ye saved through faith; and that not of yourselves: it is the gift of God:",
+          "solutionAliases": [
+            "For by grace are ye saved through faith; and that not of yourselves: it is the gift of God:"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Ephesians 2:8 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "sp-session-005",
+      "title": "Scripture Puzzle Pack 005",
+      "theme": "KJV scripture puzzle rounds",
+      "rounds": [
+        {
+          "id": "sp-r021",
+          "reference": "Philippians 4:6",
+          "referenceAliases": [
+            "Philippians 4:6",
+            "Phil 4:6"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Prayer",
+          "contextClue": "An instruction to trade anxiety for prayerful dependence.",
+          "contentMode": "public-domain-text",
+          "verseText": "Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God.",
+          "solutionAliases": [
+            "Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Philippians 4:6 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r022",
+          "reference": "Philippians 4:13",
+          "referenceAliases": [
+            "Philippians 4:13",
+            "Phil 4:13"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Strength",
+          "contextClue": "Paul describes endurance through Christ in every circumstance.",
+          "contentMode": "public-domain-text",
+          "verseText": "I can do all things through Christ which strengtheneth me.",
+          "solutionAliases": [
+            "I can do all things through Christ which strengtheneth me."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Philippians 4:13 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r023",
+          "reference": "James 1:5",
+          "referenceAliases": [
+            "James 1:5",
+            "Jas 1:5"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Wisdom",
+          "contextClue": "A promise for those who ask God for wisdom without pretending to have enough.",
+          "contentMode": "public-domain-text",
+          "verseText": "If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him.",
+          "solutionAliases": [
+            "If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review James 1:5 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r024",
+          "reference": "1 Peter 5:7",
+          "referenceAliases": [
+            "1 Peter 5:7",
+            "1 Pet 5:7"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Care",
+          "contextClue": "A short command to hand over worry because God cares.",
+          "contentMode": "public-domain-text",
+          "verseText": "Casting all your care upon him; for he careth for you.",
+          "solutionAliases": [
+            "Casting all your care upon him; for he careth for you."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review 1 Peter 5:7 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r025",
+          "reference": "Revelation 21:4",
+          "referenceAliases": [
+            "Revelation 21:4",
+            "Rev 21:4"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Restoration",
+          "contextClue": "A closing vision of grief and death being removed forever.",
+          "contentMode": "public-domain-text",
+          "verseText": "And God shall wipe away all tears from their eyes; and there shall be no more death, neither sorrow, nor crying, neither shall there be any more pain: for the former things are passed away.",
+          "solutionAliases": [
+            "And God shall wipe away all tears from their eyes; and there shall be no more death, neither sorrow, nor crying, neither shall there be any more pain: for the former things are passed away."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Revelation 21:4 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "sp-session-006",
+      "title": "Scripture Puzzle Pack 006",
+      "theme": "KJV scripture puzzle rounds",
+      "rounds": [
+        {
+          "id": "sp-r026",
+          "reference": "John 11:2",
+          "referenceAliases": [
+            "John 11:2",
+            "John 11 2",
+            "John chapter 11 verse 2",
+            "John Eleven Two"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "contextClue": "A KJV verse connected with god's character in John.",
+          "contentMode": "public-domain-text",
+          "verseText": "(It was that Mary which anointed the Lord with ointment, and wiped his feet with her hair, whose brother Lazarus was sick.)",
+          "solutionAliases": [
+            "(It was that Mary which anointed the Lord with ointment, and wiped his feet with her hair, whose brother Lazarus was sick.)"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review John 11:2 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r027",
+          "reference": "John 11:43",
+          "referenceAliases": [
+            "John 11:43",
+            "John 11 43",
+            "John chapter 11 verse 43",
+            "John Eleven Forty Three"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in John.",
+          "contentMode": "public-domain-text",
+          "verseText": "And when he thus had spoken, he cried with a loud voice, Lazarus, come forth.",
+          "solutionAliases": [
+            "And when he thus had spoken, he cried with a loud voice, Lazarus, come forth."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review John 11:43 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r028",
+          "reference": "John 12:28",
+          "referenceAliases": [
+            "John 12:28",
+            "John 12 28",
+            "John chapter 12 verse 28",
+            "John Twelve Twenty Eight"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in John.",
+          "contentMode": "public-domain-text",
+          "verseText": "Father, glorify thy name. Then came there a voice from heaven, saying, I have both glorified it, and will glorify it again.",
+          "solutionAliases": [
+            "Father, glorify thy name. Then came there a voice from heaven, saying, I have both glorified it, and will glorify it again."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review John 12:28 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r029",
+          "reference": "John 13:20",
+          "referenceAliases": [
+            "John 13:20",
+            "John 13 20",
+            "John chapter 13 verse 20",
+            "John Thirteen Twenty"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in John.",
+          "contentMode": "public-domain-text",
+          "verseText": "Verily, verily, I say unto you, He that receiveth whomsoever I send receiveth me; and he that receiveth me receiveth him that sent me.",
+          "solutionAliases": [
+            "Verily, verily, I say unto you, He that receiveth whomsoever I send receiveth me; and he that receiveth me receiveth him that sent me."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review John 13:20 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r030",
+          "reference": "John 14:29",
+          "referenceAliases": [
+            "John 14:29",
+            "John 14 29",
+            "John chapter 14 verse 29",
+            "John Fourteen Twenty Nine"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Faith",
+          "contextClue": "A KJV verse connected with faith in John.",
+          "contentMode": "public-domain-text",
+          "verseText": "And now I have told you before it come to pass, that, when it is come to pass, ye might believe.",
+          "solutionAliases": [
+            "And now I have told you before it come to pass, that, when it is come to pass, ye might believe."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review John 14:29 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "sp-session-007",
+      "title": "Scripture Puzzle Pack 007",
+      "theme": "KJV scripture puzzle rounds",
+      "rounds": [
+        {
+          "id": "sp-r031",
+          "reference": "John 16:22",
+          "referenceAliases": [
+            "John 16:22",
+            "John 16 22",
+            "John chapter 16 verse 22",
+            "John Sixteen Twenty Two"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Joy",
+          "contextClue": "A KJV verse connected with joy in John.",
+          "contentMode": "public-domain-text",
+          "verseText": "And ye now therefore have sorrow: but I will see you again, and your heart shall rejoice, and your joy no man taketh from you.",
+          "solutionAliases": [
+            "And ye now therefore have sorrow: but I will see you again, and your heart shall rejoice, and your joy no man taketh from you."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review John 16:22 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r032",
+          "reference": "John 18:9",
+          "referenceAliases": [
+            "John 18:9",
+            "John 18 9",
+            "John chapter 18 verse 9",
+            "John Eighteen Nine"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in John.",
+          "contentMode": "public-domain-text",
+          "verseText": "That the saying might be fulfilled, which he spake, Of them which thou gavest me have I lost none.",
+          "solutionAliases": [
+            "That the saying might be fulfilled, which he spake, Of them which thou gavest me have I lost none."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review John 18:9 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r033",
+          "reference": "John 19:14",
+          "referenceAliases": [
+            "John 19:14",
+            "John 19 14",
+            "John chapter 19 verse 14",
+            "John Nineteen Fourteen"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Kingdom",
+          "contextClue": "A KJV verse connected with kingdom in John.",
+          "contentMode": "public-domain-text",
+          "verseText": "And it was the preparation of the passover, and about the sixth hour: and he saith unto the Jews, Behold your King!",
+          "solutionAliases": [
+            "And it was the preparation of the passover, and about the sixth hour: and he saith unto the Jews, Behold your King!"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review John 19:14 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r034",
+          "reference": "John 20:20",
+          "referenceAliases": [
+            "John 20:20",
+            "John 20 20",
+            "John chapter 20 verse 20",
+            "John Twenty Twenty"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Joy",
+          "contextClue": "A KJV verse connected with joy in John.",
+          "contentMode": "public-domain-text",
+          "verseText": "And when he had so said, he shewed unto them his hands and his side. Then were the disciples glad, when they saw the Lord.",
+          "solutionAliases": [
+            "And when he had so said, he shewed unto them his hands and his side. Then were the disciples glad, when they saw the Lord."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review John 20:20 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r035",
+          "reference": "Acts 1:16",
+          "referenceAliases": [
+            "Acts 1:16",
+            "Acts 1 16",
+            "Acts chapter 1 verse 16",
+            "Acts One Sixteen"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in Acts.",
+          "contentMode": "public-domain-text",
+          "verseText": "Men and brethren, this scripture must needs have been fulfilled, which the Holy Ghost by the mouth of David spake before concerning Judas, which was guide to them that took Jesus.",
+          "solutionAliases": [
+            "Men and brethren, this scripture must needs have been fulfilled, which the Holy Ghost by the mouth of David spake before concerning Judas, which was guide to them that took Jesus."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Acts 1:16 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "sp-session-008",
+      "title": "Scripture Puzzle Pack 008",
+      "theme": "KJV scripture puzzle rounds",
+      "rounds": [
+        {
+          "id": "sp-r036",
+          "reference": "Acts 2:34",
+          "referenceAliases": [
+            "Acts 2:34",
+            "Acts 2 34",
+            "Acts chapter 2 verse 34",
+            "Acts Two Thirty Four"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "contextClue": "A KJV verse connected with god's character in Acts.",
+          "contentMode": "public-domain-text",
+          "verseText": "For David is not ascended into the heavens: but he saith himself, The Lord said unto my Lord, Sit thou on my right hand,",
+          "solutionAliases": [
+            "For David is not ascended into the heavens: but he saith himself, The Lord said unto my Lord, Sit thou on my right hand,"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Acts 2:34 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r037",
+          "reference": "Acts 4:6",
+          "referenceAliases": [
+            "Acts 4:6",
+            "Acts 4 6",
+            "Acts chapter 4 verse 6",
+            "Acts Four Six"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in Acts.",
+          "contentMode": "public-domain-text",
+          "verseText": "And Annas the high priest, and Caiaphas, and John, and Alexander, and as many as were of the kindred of the high priest, were gathered together at Jerusalem.",
+          "solutionAliases": [
+            "And Annas the high priest, and Caiaphas, and John, and Alexander, and as many as were of the kindred of the high priest, were gathered together at Jerusalem."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Acts 4:6 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r038",
+          "reference": "Acts 5:14",
+          "referenceAliases": [
+            "Acts 5:14",
+            "Acts 5 14",
+            "Acts chapter 5 verse 14",
+            "Acts Five Fourteen"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "contextClue": "A KJV verse connected with god's character in Acts.",
+          "contentMode": "public-domain-text",
+          "verseText": "And believers were the more added to the Lord, multitudes both of men and women.)",
+          "solutionAliases": [
+            "And believers were the more added to the Lord, multitudes both of men and women.)"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Acts 5:14 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r039",
+          "reference": "Acts 7:2",
+          "referenceAliases": [
+            "Acts 7:2",
+            "Acts 7 2",
+            "Acts chapter 7 verse 2",
+            "Acts Seven Two"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "contextClue": "A KJV verse connected with god's character in Acts.",
+          "contentMode": "public-domain-text",
+          "verseText": "And he said, Men, brethren, and fathers, hearken; The God of glory appeared unto our father Abraham, when he was in Mesopotamia, before he dwelt in Charran,",
+          "solutionAliases": [
+            "And he said, Men, brethren, and fathers, hearken; The God of glory appeared unto our father Abraham, when he was in Mesopotamia, before he dwelt in Charran,"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Acts 7:2 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r040",
+          "reference": "Acts 7:52",
+          "referenceAliases": [
+            "Acts 7:52",
+            "Acts 7 52",
+            "Acts chapter 7 verse 52",
+            "Acts Seven Fifty Two"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in Acts.",
+          "contentMode": "public-domain-text",
+          "verseText": "Which of the prophets have not your fathers persecuted? and they have slain them which shewed before of the coming of the Just One; of whom ye have been now the betrayers and murderers:",
+          "solutionAliases": [
+            "Which of the prophets have not your fathers persecuted? and they have slain them which shewed before of the coming of the Just One; of whom ye have been now the betrayers and murderers:"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Acts 7:52 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "sp-session-009",
+      "title": "Scripture Puzzle Pack 009",
+      "theme": "KJV scripture puzzle rounds",
+      "rounds": [
+        {
+          "id": "sp-r041",
+          "reference": "Acts 8:36",
+          "referenceAliases": [
+            "Acts 8:36",
+            "Acts 8 36",
+            "Acts chapter 8 verse 36",
+            "Acts Eight Thirty Six"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in Acts.",
+          "contentMode": "public-domain-text",
+          "verseText": "And as they went on their way, they came unto a certain water: and the eunuch said, See, here is water; what doth hinder me to be baptized?",
+          "solutionAliases": [
+            "And as they went on their way, they came unto a certain water: and the eunuch said, See, here is water; what doth hinder me to be baptized?"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Acts 8:36 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r042",
+          "reference": "Acts 9:40",
+          "referenceAliases": [
+            "Acts 9:40",
+            "Acts 9 40",
+            "Acts chapter 9 verse 40",
+            "Acts Nine Forty"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in Acts.",
+          "contentMode": "public-domain-text",
+          "verseText": "But Peter put them all forth, and kneeled down, and prayed; and turning him to the body said, Tabitha, arise. And she opened her eyes: and when she saw Peter, she sat up.",
+          "solutionAliases": [
+            "But Peter put them all forth, and kneeled down, and prayed; and turning him to the body said, Tabitha, arise. And she opened her eyes: and when she saw Peter, she sat up."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Acts 9:40 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r043",
+          "reference": "Acts 10:42",
+          "referenceAliases": [
+            "Acts 10:42",
+            "Acts 10 42",
+            "Acts chapter 10 verse 42",
+            "Acts Ten Forty Two"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "contextClue": "A KJV verse connected with god's character in Acts.",
+          "contentMode": "public-domain-text",
+          "verseText": "And he commanded us to preach unto the people, and to testify that it is he which was ordained of God to be the Judge of quick and dead.",
+          "solutionAliases": [
+            "And he commanded us to preach unto the people, and to testify that it is he which was ordained of God to be the Judge of quick and dead."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Acts 10:42 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r044",
+          "reference": "Acts 12:8",
+          "referenceAliases": [
+            "Acts 12:8",
+            "Acts 12 8",
+            "Acts chapter 12 verse 8",
+            "Acts Twelve Eight"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in Acts.",
+          "contentMode": "public-domain-text",
+          "verseText": "And the angel said unto him, Gird thyself, and bind on thy sandals. And so he did. And he saith unto him, Cast thy garment about thee, and follow me.",
+          "solutionAliases": [
+            "And the angel said unto him, Gird thyself, and bind on thy sandals. And so he did. And he saith unto him, Cast thy garment about thee, and follow me."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Acts 12:8 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r045",
+          "reference": "Acts 13:38",
+          "referenceAliases": [
+            "Acts 13:38",
+            "Acts 13 38",
+            "Acts chapter 13 verse 38",
+            "Acts Thirteen Thirty Eight"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in Acts.",
+          "contentMode": "public-domain-text",
+          "verseText": "Be it known unto you therefore, men and brethren, that through this man is preached unto you the forgiveness of sins:",
+          "solutionAliases": [
+            "Be it known unto you therefore, men and brethren, that through this man is preached unto you the forgiveness of sins:"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Acts 13:38 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "sp-session-010",
+      "title": "Scripture Puzzle Pack 010",
+      "theme": "KJV scripture puzzle rounds",
+      "rounds": [
+        {
+          "id": "sp-r046",
+          "reference": "Acts 15:3",
+          "referenceAliases": [
+            "Acts 15:3",
+            "Acts 15 3",
+            "Acts chapter 15 verse 3",
+            "Acts Fifteen Three"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Joy",
+          "contextClue": "A KJV verse connected with joy in Acts.",
+          "contentMode": "public-domain-text",
+          "verseText": "And being brought on their way by the church, they passed through Phenice and Samaria, declaring the conversion of the Gentiles: and they caused great joy unto all the brethren.",
+          "solutionAliases": [
+            "And being brought on their way by the church, they passed through Phenice and Samaria, declaring the conversion of the Gentiles: and they caused great joy unto all the brethren."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Acts 15:3 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r047",
+          "reference": "Acts 16:6",
+          "referenceAliases": [
+            "Acts 16:6",
+            "Acts 16 6",
+            "Acts chapter 16 verse 6",
+            "Acts Sixteen Six"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "God's Word",
+          "contextClue": "A KJV verse connected with god's word in Acts.",
+          "contentMode": "public-domain-text",
+          "verseText": "Now when they had gone throughout Phrygia and the region of Galatia, and were forbidden of the Holy Ghost to preach the word in Asia,",
+          "solutionAliases": [
+            "Now when they had gone throughout Phrygia and the region of Galatia, and were forbidden of the Holy Ghost to preach the word in Asia,"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Acts 16:6 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r048",
+          "reference": "Acts 17:9",
+          "referenceAliases": [
+            "Acts 17:9",
+            "Acts 17 9",
+            "Acts chapter 17 verse 9",
+            "Acts Seventeen Nine"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in Acts.",
+          "contentMode": "public-domain-text",
+          "verseText": "And when they had taken security of Jason, and of the other, they let them go.",
+          "solutionAliases": [
+            "And when they had taken security of Jason, and of the other, they let them go."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Acts 17:9 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r049",
+          "reference": "Acts 18:21",
+          "referenceAliases": [
+            "Acts 18:21",
+            "Acts 18 21",
+            "Acts chapter 18 verse 21",
+            "Acts Eighteen Twenty One"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "contextClue": "A KJV verse connected with god's character in Acts.",
+          "contentMode": "public-domain-text",
+          "verseText": "But bade them farewell, saying, I must by all means keep this feast that cometh in Jerusalem: but I will return again unto you, if God will. And he sailed from Ephesus.",
+          "solutionAliases": [
+            "But bade them farewell, saying, I must by all means keep this feast that cometh in Jerusalem: but I will return again unto you, if God will. And he sailed from Ephesus."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Acts 18:21 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r050",
+          "reference": "Acts 19:38",
+          "referenceAliases": [
+            "Acts 19:38",
+            "Acts 19 38",
+            "Acts chapter 19 verse 38",
+            "Acts Nineteen Thirty Eight"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "God's Word",
+          "contextClue": "A KJV verse connected with god's word in Acts.",
+          "contentMode": "public-domain-text",
+          "verseText": "Wherefore if Demetrius, and the craftsmen which are with him, have a matter against any man, the law is open, and there are deputies: let them implead one another.",
+          "solutionAliases": [
+            "Wherefore if Demetrius, and the craftsmen which are with him, have a matter against any man, the law is open, and there are deputies: let them implead one another."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Acts 19:38 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "sp-session-011",
+      "title": "Scripture Puzzle Pack 011",
+      "theme": "KJV scripture puzzle rounds",
+      "rounds": [
+        {
+          "id": "sp-r051",
+          "reference": "Acts 21:3",
+          "referenceAliases": [
+            "Acts 21:3",
+            "Acts 21 3",
+            "Acts chapter 21 verse 3",
+            "Acts Twenty One Three"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in Acts.",
+          "contentMode": "public-domain-text",
+          "verseText": "Now when we had discovered Cyprus, we left it on the left hand, and sailed into Syria, and landed at Tyre: for there the ship was to unlade her burden.",
+          "solutionAliases": [
+            "Now when we had discovered Cyprus, we left it on the left hand, and sailed into Syria, and landed at Tyre: for there the ship was to unlade her burden."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Acts 21:3 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r052",
+          "reference": "Acts 22:16",
+          "referenceAliases": [
+            "Acts 22:16",
+            "Acts 22 16",
+            "Acts chapter 22 verse 16",
+            "Acts Twenty Two Sixteen"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "contextClue": "A KJV verse connected with god's character in Acts.",
+          "contentMode": "public-domain-text",
+          "verseText": "And now why tarriest thou? arise, and be baptized, and wash away thy sins, calling on the name of the Lord.",
+          "solutionAliases": [
+            "And now why tarriest thou? arise, and be baptized, and wash away thy sins, calling on the name of the Lord."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Acts 22:16 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r053",
+          "reference": "Acts 23:34",
+          "referenceAliases": [
+            "Acts 23:34",
+            "Acts 23 34",
+            "Acts chapter 23 verse 34",
+            "Acts Twenty Three Thirty Four"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in Acts.",
+          "contentMode": "public-domain-text",
+          "verseText": "And when the governor had read the letter, he asked of what province he was. And when he understood that he was of Cilicia;",
+          "solutionAliases": [
+            "And when the governor had read the letter, he asked of what province he was. And when he understood that he was of Cilicia;"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Acts 23:34 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r054",
+          "reference": "Acts 25:17",
+          "referenceAliases": [
+            "Acts 25:17",
+            "Acts 25 17",
+            "Acts chapter 25 verse 17",
+            "Acts Twenty Five Seventeen"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in Acts.",
+          "contentMode": "public-domain-text",
+          "verseText": "Therefore, when they were come hither, without any delay on the morrow I sat on the judgment seat, and commanded the man to be brought forth.",
+          "solutionAliases": [
+            "Therefore, when they were come hither, without any delay on the morrow I sat on the judgment seat, and commanded the man to be brought forth."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Acts 25:17 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r055",
+          "reference": "Acts 27:7",
+          "referenceAliases": [
+            "Acts 27:7",
+            "Acts 27 7",
+            "Acts chapter 27 verse 7",
+            "Acts Twenty Seven Seven"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in Acts.",
+          "contentMode": "public-domain-text",
+          "verseText": "And when we had sailed slowly many days, and scarce were come over against Cnidus, the wind not suffering us, we sailed under Crete, over against Salmone;",
+          "solutionAliases": [
+            "And when we had sailed slowly many days, and scarce were come over against Cnidus, the wind not suffering us, we sailed under Crete, over against Salmone;"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Acts 27:7 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "sp-session-012",
+      "title": "Scripture Puzzle Pack 012",
+      "theme": "KJV scripture puzzle rounds",
+      "rounds": [
+        {
+          "id": "sp-r056",
+          "reference": "Acts 28:9",
+          "referenceAliases": [
+            "Acts 28:9",
+            "Acts 28 9",
+            "Acts chapter 28 verse 9",
+            "Acts Twenty Eight Nine"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in Acts.",
+          "contentMode": "public-domain-text",
+          "verseText": "So when this was done, others also, which had diseases in the island, came, and were healed:",
+          "solutionAliases": [
+            "So when this was done, others also, which had diseases in the island, came, and were healed:"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Acts 28:9 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r057",
+          "reference": "Romans 1:23",
+          "referenceAliases": [
+            "Romans 1:23",
+            "Romans 1 23",
+            "Romans chapter 1 verse 23",
+            "Rom 1:23",
+            "Rom 1 23",
+            "Romans One Twenty Three"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "contextClue": "A KJV verse connected with god's character in Romans.",
+          "contentMode": "public-domain-text",
+          "verseText": "And changed the glory of the uncorruptible God into an image made like to corruptible man, and to birds, and fourfooted beasts, and creeping things.",
+          "solutionAliases": [
+            "And changed the glory of the uncorruptible God into an image made like to corruptible man, and to birds, and fourfooted beasts, and creeping things."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Romans 1:23 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r058",
+          "reference": "Romans 3:4",
+          "referenceAliases": [
+            "Romans 3:4",
+            "Romans 3 4",
+            "Romans chapter 3 verse 4",
+            "Rom 3:4",
+            "Rom 3 4",
+            "Romans Three Four"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "contextClue": "A KJV verse connected with god's character in Romans.",
+          "contentMode": "public-domain-text",
+          "verseText": "God forbid: yea, let God be true, but every man a liar; as it is written, That thou mightest be justified in thy sayings, and mightest overcome when thou art judged.",
+          "solutionAliases": [
+            "God forbid: yea, let God be true, but every man a liar; as it is written, That thou mightest be justified in thy sayings, and mightest overcome when thou art judged."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Romans 3:4 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r059",
+          "reference": "Romans 4:19",
+          "referenceAliases": [
+            "Romans 4:19",
+            "Romans 4 19",
+            "Romans chapter 4 verse 19",
+            "Rom 4:19",
+            "Rom 4 19",
+            "Romans Four Nineteen"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Faith",
+          "contextClue": "A KJV verse connected with faith in Romans.",
+          "contentMode": "public-domain-text",
+          "verseText": "And being not weak in faith, he considered not his own body now dead, when he was about an hundred years old, neither yet the deadness of Sarah's womb:",
+          "solutionAliases": [
+            "And being not weak in faith, he considered not his own body now dead, when he was about an hundred years old, neither yet the deadness of Sarah's womb:"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Romans 4:19 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r060",
+          "reference": "Romans 6:17",
+          "referenceAliases": [
+            "Romans 6:17",
+            "Romans 6 17",
+            "Romans chapter 6 verse 17",
+            "Rom 6:17",
+            "Rom 6 17",
+            "Romans Six Seventeen"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Mercy",
+          "contextClue": "A KJV verse connected with mercy in Romans.",
+          "contentMode": "public-domain-text",
+          "verseText": "But God be thanked, that ye were the servants of sin, but ye have obeyed from the heart that form of doctrine which was delivered you.",
+          "solutionAliases": [
+            "But God be thanked, that ye were the servants of sin, but ye have obeyed from the heart that form of doctrine which was delivered you."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Romans 6:17 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "sp-session-013",
+      "title": "Scripture Puzzle Pack 013",
+      "theme": "KJV scripture puzzle rounds",
+      "rounds": [
+        {
+          "id": "sp-r061",
+          "reference": "Romans 8:17",
+          "referenceAliases": [
+            "Romans 8:17",
+            "Romans 8 17",
+            "Romans chapter 8 verse 17",
+            "Rom 8:17",
+            "Rom 8 17",
+            "Romans Eight Seventeen"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "contextClue": "A KJV verse connected with god's character in Romans.",
+          "contentMode": "public-domain-text",
+          "verseText": "And if children, then heirs; heirs of God, and joint-heirs with Christ; if so be that we suffer with him, that we may be also glorified together.",
+          "solutionAliases": [
+            "And if children, then heirs; heirs of God, and joint-heirs with Christ; if so be that we suffer with him, that we may be also glorified together."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Romans 8:17 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r062",
+          "reference": "Romans 9:20",
+          "referenceAliases": [
+            "Romans 9:20",
+            "Romans 9 20",
+            "Romans chapter 9 verse 20",
+            "Rom 9:20",
+            "Rom 9 20",
+            "Romans Nine Twenty"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "contextClue": "A KJV verse connected with god's character in Romans.",
+          "contentMode": "public-domain-text",
+          "verseText": "Nay but, O man, who art thou that repliest against God? Shall the thing formed say to him that formed it, Why hast thou made me thus?",
+          "solutionAliases": [
+            "Nay but, O man, who art thou that repliest against God? Shall the thing formed say to him that formed it, Why hast thou made me thus?"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Romans 9:20 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r063",
+          "reference": "Romans 11:5",
+          "referenceAliases": [
+            "Romans 11:5",
+            "Romans 11 5",
+            "Romans chapter 11 verse 5",
+            "Rom 11:5",
+            "Rom 11 5",
+            "Romans Eleven Five"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in Romans.",
+          "contentMode": "public-domain-text",
+          "verseText": "Even so then at this present time also there is a remnant according to the election of grace.",
+          "solutionAliases": [
+            "Even so then at this present time also there is a remnant according to the election of grace."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Romans 11:5 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r064",
+          "reference": "Romans 12:13",
+          "referenceAliases": [
+            "Romans 12:13",
+            "Romans 12 13",
+            "Romans chapter 12 verse 13",
+            "Rom 12:13",
+            "Rom 12 13",
+            "Romans Twelve Thirteen"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in Romans.",
+          "contentMode": "public-domain-text",
+          "verseText": "Distributing to the necessity of saints; given to hospitality.",
+          "solutionAliases": [
+            "Distributing to the necessity of saints; given to hospitality."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Romans 12:13 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r065",
+          "reference": "Romans 14:23",
+          "referenceAliases": [
+            "Romans 14:23",
+            "Romans 14 23",
+            "Romans chapter 14 verse 23",
+            "Rom 14:23",
+            "Rom 14 23",
+            "Romans Fourteen Twenty Three"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Faith",
+          "contextClue": "A KJV verse connected with faith in Romans.",
+          "contentMode": "public-domain-text",
+          "verseText": "And he that doubteth is damned if he eat, because he eateth not of faith: for whatsoever is not of faith is sin.",
+          "solutionAliases": [
+            "And he that doubteth is damned if he eat, because he eateth not of faith: for whatsoever is not of faith is sin."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Romans 14:23 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "sp-session-014",
+      "title": "Scripture Puzzle Pack 014",
+      "theme": "KJV scripture puzzle rounds",
+      "rounds": [
+        {
+          "id": "sp-r066",
+          "reference": "Romans 16:11",
+          "referenceAliases": [
+            "Romans 16:11",
+            "Romans 16 11",
+            "Romans chapter 16 verse 11",
+            "Rom 16:11",
+            "Rom 16 11",
+            "Romans Sixteen Eleven"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "contextClue": "A KJV verse connected with god's character in Romans.",
+          "contentMode": "public-domain-text",
+          "verseText": "Salute Herodion my kinsman. Greet them that be of the household of Narcissus, which are in the Lord.",
+          "solutionAliases": [
+            "Salute Herodion my kinsman. Greet them that be of the household of Narcissus, which are in the Lord."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Romans 16:11 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r067",
+          "reference": "1 Corinthians 1:27",
+          "referenceAliases": [
+            "1 Corinthians 1:27",
+            "1 Corinthians 1 27",
+            "1 Corinthians chapter 1 verse 27",
+            "1 Cor 1:27",
+            "1 Cor 1 27",
+            "First Corinthians One Twenty Seven"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Wisdom",
+          "contextClue": "A KJV verse connected with wisdom in 1 Corinthians.",
+          "contentMode": "public-domain-text",
+          "verseText": "But God hath chosen the foolish things of the world to confound the wise; and God hath chosen the weak things of the world to confound the things which are mighty;",
+          "solutionAliases": [
+            "But God hath chosen the foolish things of the world to confound the wise; and God hath chosen the weak things of the world to confound the things which are mighty;"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review 1 Corinthians 1:27 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r068",
+          "reference": "1 Corinthians 3:22",
+          "referenceAliases": [
+            "1 Corinthians 3:22",
+            "1 Corinthians 3 22",
+            "1 Corinthians chapter 3 verse 22",
+            "1 Cor 3:22",
+            "1 Cor 3 22",
+            "First Corinthians Three Twenty Two"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in 1 Corinthians.",
+          "contentMode": "public-domain-text",
+          "verseText": "Whether Paul, or Apollos, or Cephas, or the world, or life, or death, or things present, or things to come; all are your's;",
+          "solutionAliases": [
+            "Whether Paul, or Apollos, or Cephas, or the world, or life, or death, or things present, or things to come; all are your's;"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review 1 Corinthians 3:22 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r069",
+          "reference": "1 Corinthians 6:10",
+          "referenceAliases": [
+            "1 Corinthians 6:10",
+            "1 Corinthians 6 10",
+            "1 Corinthians chapter 6 verse 10",
+            "1 Cor 6:10",
+            "1 Cor 6 10",
+            "First Corinthians Six Ten"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Kingdom",
+          "contextClue": "A KJV verse connected with kingdom in 1 Corinthians.",
+          "contentMode": "public-domain-text",
+          "verseText": "Nor thieves, nor covetous, nor drunkards, nor revilers, nor extortioners, shall inherit the kingdom of God.",
+          "solutionAliases": [
+            "Nor thieves, nor covetous, nor drunkards, nor revilers, nor extortioners, shall inherit the kingdom of God."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review 1 Corinthians 6:10 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r070",
+          "reference": "1 Corinthians 7:32",
+          "referenceAliases": [
+            "1 Corinthians 7:32",
+            "1 Corinthians 7 32",
+            "1 Corinthians chapter 7 verse 32",
+            "1 Cor 7:32",
+            "1 Cor 7 32",
+            "First Corinthians Seven Thirty Two"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "contextClue": "A KJV verse connected with god's character in 1 Corinthians.",
+          "contentMode": "public-domain-text",
+          "verseText": "But I would have you without carefulness. He that is unmarried careth for the things that belong to the Lord, how he may please the Lord:",
+          "solutionAliases": [
+            "But I would have you without carefulness. He that is unmarried careth for the things that belong to the Lord, how he may please the Lord:"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review 1 Corinthians 7:32 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "sp-session-015",
+      "title": "Scripture Puzzle Pack 015",
+      "theme": "KJV scripture puzzle rounds",
+      "rounds": [
+        {
+          "id": "sp-r071",
+          "reference": "1 Corinthians 9:27",
+          "referenceAliases": [
+            "1 Corinthians 9:27",
+            "1 Corinthians 9 27",
+            "1 Corinthians chapter 9 verse 27",
+            "1 Cor 9:27",
+            "1 Cor 9 27",
+            "First Corinthians Nine Twenty Seven"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in 1 Corinthians.",
+          "contentMode": "public-domain-text",
+          "verseText": "But I keep under my body, and bring it into subjection: lest that by any means, when I have preached to others, I myself should be a castaway.",
+          "solutionAliases": [
+            "But I keep under my body, and bring it into subjection: lest that by any means, when I have preached to others, I myself should be a castaway."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review 1 Corinthians 9:27 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r072",
+          "reference": "1 Corinthians 11:11",
+          "referenceAliases": [
+            "1 Corinthians 11:11",
+            "1 Corinthians 11 11",
+            "1 Corinthians chapter 11 verse 11",
+            "1 Cor 11:11",
+            "1 Cor 11 11",
+            "First Corinthians Eleven Eleven"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "contextClue": "A KJV verse connected with god's character in 1 Corinthians.",
+          "contentMode": "public-domain-text",
+          "verseText": "Nevertheless neither is the man without the woman, neither the woman without the man, in the Lord.",
+          "solutionAliases": [
+            "Nevertheless neither is the man without the woman, neither the woman without the man, in the Lord."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review 1 Corinthians 11:11 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r073",
+          "reference": "1 Corinthians 12:19",
+          "referenceAliases": [
+            "1 Corinthians 12:19",
+            "1 Corinthians 12 19",
+            "1 Corinthians chapter 12 verse 19",
+            "1 Cor 12:19",
+            "1 Cor 12 19",
+            "First Corinthians Twelve Nineteen"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in 1 Corinthians.",
+          "contentMode": "public-domain-text",
+          "verseText": "And if they were all one member, where were the body?",
+          "solutionAliases": [
+            "And if they were all one member, where were the body?"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review 1 Corinthians 12:19 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r074",
+          "reference": "1 Corinthians 14:15",
+          "referenceAliases": [
+            "1 Corinthians 14:15",
+            "1 Corinthians 14 15",
+            "1 Corinthians chapter 14 verse 15",
+            "1 Cor 14:15",
+            "1 Cor 14 15",
+            "First Corinthians Fourteen Fifteen"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Prayer",
+          "contextClue": "A KJV verse connected with prayer in 1 Corinthians.",
+          "contentMode": "public-domain-text",
+          "verseText": "What is it then? I will pray with the spirit, and I will pray with the understanding also: I will sing with the spirit, and I will sing with the understanding also.",
+          "solutionAliases": [
+            "What is it then? I will pray with the spirit, and I will pray with the understanding also: I will sing with the spirit, and I will sing with the understanding also."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review 1 Corinthians 14:15 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r075",
+          "reference": "1 Corinthians 15:17",
+          "referenceAliases": [
+            "1 Corinthians 15:17",
+            "1 Corinthians 15 17",
+            "1 Corinthians chapter 15 verse 17",
+            "1 Cor 15:17",
+            "1 Cor 15 17",
+            "First Corinthians Fifteen Seventeen"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Faith",
+          "contextClue": "A KJV verse connected with faith in 1 Corinthians.",
+          "contentMode": "public-domain-text",
+          "verseText": "And if Christ be not raised, your faith is vain; ye are yet in your sins.",
+          "solutionAliases": [
+            "And if Christ be not raised, your faith is vain; ye are yet in your sins."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review 1 Corinthians 15:17 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "sp-session-016",
+      "title": "Scripture Puzzle Pack 016",
+      "theme": "KJV scripture puzzle rounds",
+      "rounds": [
+        {
+          "id": "sp-r076",
+          "reference": "1 Corinthians 16:2",
+          "referenceAliases": [
+            "1 Corinthians 16:2",
+            "1 Corinthians 16 2",
+            "1 Corinthians chapter 16 verse 2",
+            "1 Cor 16:2",
+            "1 Cor 16 2",
+            "First Corinthians Sixteen Two"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "contextClue": "A KJV verse connected with god's character in 1 Corinthians.",
+          "contentMode": "public-domain-text",
+          "verseText": "Upon the first day of the week let every one of you lay by him in store, as God hath prospered him, that there be no gatherings when I come.",
+          "solutionAliases": [
+            "Upon the first day of the week let every one of you lay by him in store, as God hath prospered him, that there be no gatherings when I come."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review 1 Corinthians 16:2 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r077",
+          "reference": "2 Corinthians 1:23",
+          "referenceAliases": [
+            "2 Corinthians 1:23",
+            "2 Corinthians 1 23",
+            "2 Corinthians chapter 1 verse 23",
+            "2 Cor 1:23",
+            "2 Cor 1 23",
+            "Second Corinthians One Twenty Three"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "contextClue": "A KJV verse connected with god's character in 2 Corinthians.",
+          "contentMode": "public-domain-text",
+          "verseText": "Moreover I call God for a record upon my soul, that to spare you I came not as yet unto Corinth.",
+          "solutionAliases": [
+            "Moreover I call God for a record upon my soul, that to spare you I came not as yet unto Corinth."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review 2 Corinthians 1:23 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r078",
+          "reference": "2 Corinthians 4:10",
+          "referenceAliases": [
+            "2 Corinthians 4:10",
+            "2 Corinthians 4 10",
+            "2 Corinthians chapter 4 verse 10",
+            "2 Cor 4:10",
+            "2 Cor 4 10",
+            "Second Corinthians Four Ten"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "contextClue": "A KJV verse connected with god's character in 2 Corinthians.",
+          "contentMode": "public-domain-text",
+          "verseText": "Always bearing about in the body the dying of the Lord Jesus, that the life also of Jesus might be made manifest in our body.",
+          "solutionAliases": [
+            "Always bearing about in the body the dying of the Lord Jesus, that the life also of Jesus might be made manifest in our body."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review 2 Corinthians 4:10 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r079",
+          "reference": "2 Corinthians 6:12",
+          "referenceAliases": [
+            "2 Corinthians 6:12",
+            "2 Corinthians 6 12",
+            "2 Corinthians chapter 6 verse 12",
+            "2 Cor 6:12",
+            "2 Cor 6 12",
+            "Second Corinthians Six Twelve"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in 2 Corinthians.",
+          "contentMode": "public-domain-text",
+          "verseText": "Ye are not straitened in us, but ye are straitened in your own bowels.",
+          "solutionAliases": [
+            "Ye are not straitened in us, but ye are straitened in your own bowels."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review 2 Corinthians 6:12 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r080",
+          "reference": "2 Corinthians 9:2",
+          "referenceAliases": [
+            "2 Corinthians 9:2",
+            "2 Corinthians 9 2",
+            "2 Corinthians chapter 9 verse 2",
+            "2 Cor 9:2",
+            "2 Cor 9 2",
+            "Second Corinthians Nine Two"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in 2 Corinthians.",
+          "contentMode": "public-domain-text",
+          "verseText": "For I know the forwardness of your mind, for which I boast of you to them of Macedonia, that Achaia was ready a year ago; and your zeal hath provoked very many.",
+          "solutionAliases": [
+            "For I know the forwardness of your mind, for which I boast of you to them of Macedonia, that Achaia was ready a year ago; and your zeal hath provoked very many."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review 2 Corinthians 9:2 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "sp-session-017",
+      "title": "Scripture Puzzle Pack 017",
+      "theme": "KJV scripture puzzle rounds",
+      "rounds": [
+        {
+          "id": "sp-r081",
+          "reference": "2 Corinthians 11:17",
+          "referenceAliases": [
+            "2 Corinthians 11:17",
+            "2 Corinthians 11 17",
+            "2 Corinthians chapter 11 verse 17",
+            "2 Cor 11:17",
+            "2 Cor 11 17",
+            "Second Corinthians Eleven Seventeen"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "contextClue": "A KJV verse connected with god's character in 2 Corinthians.",
+          "contentMode": "public-domain-text",
+          "verseText": "That which I speak, I speak it not after the Lord, but as it were foolishly, in this confidence of boasting.",
+          "solutionAliases": [
+            "That which I speak, I speak it not after the Lord, but as it were foolishly, in this confidence of boasting."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review 2 Corinthians 11:17 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r082",
+          "reference": "Galatians 1:1",
+          "referenceAliases": [
+            "Galatians 1:1",
+            "Galatians 1 1",
+            "Galatians chapter 1 verse 1",
+            "Gal 1:1",
+            "Gal 1 1",
+            "Galatians One One"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "contextClue": "A KJV verse connected with god's character in Galatians.",
+          "contentMode": "public-domain-text",
+          "verseText": "Paul, an apostle, (not of men, neither by man, but by Jesus Christ, and God the Father, who raised him from the dead;)",
+          "solutionAliases": [
+            "Paul, an apostle, (not of men, neither by man, but by Jesus Christ, and God the Father, who raised him from the dead;)"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Galatians 1:1 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r083",
+          "reference": "Galatians 3:3",
+          "referenceAliases": [
+            "Galatians 3:3",
+            "Galatians 3 3",
+            "Galatians chapter 3 verse 3",
+            "Gal 3:3",
+            "Gal 3 3",
+            "Galatians Three Three"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in Galatians.",
+          "contentMode": "public-domain-text",
+          "verseText": "Are ye so foolish? having begun in the Spirit, are ye now made perfect by the flesh?",
+          "solutionAliases": [
+            "Are ye so foolish? having begun in the Spirit, are ye now made perfect by the flesh?"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Galatians 3:3 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r084",
+          "reference": "Galatians 4:15",
+          "referenceAliases": [
+            "Galatians 4:15",
+            "Galatians 4 15",
+            "Galatians chapter 4 verse 15",
+            "Gal 4:15",
+            "Gal 4 15",
+            "Galatians Four Fifteen"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in Galatians.",
+          "contentMode": "public-domain-text",
+          "verseText": "Where is then the blessedness ye spake of? for I bear you record, that, if it had been possible, ye would have plucked out your own eyes, and have given them to me.",
+          "solutionAliases": [
+            "Where is then the blessedness ye spake of? for I bear you record, that, if it had been possible, ye would have plucked out your own eyes, and have given them to me."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Galatians 4:15 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r085",
+          "reference": "Galatians 6:2",
+          "referenceAliases": [
+            "Galatians 6:2",
+            "Galatians 6 2",
+            "Galatians chapter 6 verse 2",
+            "Gal 6:2",
+            "Gal 6 2",
+            "Galatians Six Two"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "God's Word",
+          "contextClue": "A KJV verse connected with god's word in Galatians.",
+          "contentMode": "public-domain-text",
+          "verseText": "Bear ye one another's burdens, and so fulfil the law of Christ.",
+          "solutionAliases": [
+            "Bear ye one another's burdens, and so fulfil the law of Christ."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Galatians 6:2 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "sp-session-018",
+      "title": "Scripture Puzzle Pack 018",
+      "theme": "KJV scripture puzzle rounds",
+      "rounds": [
+        {
+          "id": "sp-r086",
+          "reference": "Ephesians 2:2",
+          "referenceAliases": [
+            "Ephesians 2:2",
+            "Ephesians 2 2",
+            "Ephesians chapter 2 verse 2",
+            "Eph 2:2",
+            "Eph 2 2",
+            "Ephesians Two Two"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in Ephesians.",
+          "contentMode": "public-domain-text",
+          "verseText": "Wherein in time past ye walked according to the course of this world, according to the prince of the power of the air, the spirit that now worketh in the children of disobedience:",
+          "solutionAliases": [
+            "Wherein in time past ye walked according to the course of this world, according to the prince of the power of the air, the spirit that now worketh in the children of disobedience:"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Ephesians 2:2 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r087",
+          "reference": "Ephesians 4:1",
+          "referenceAliases": [
+            "Ephesians 4:1",
+            "Ephesians 4 1",
+            "Ephesians chapter 4 verse 1",
+            "Eph 4:1",
+            "Eph 4 1",
+            "Ephesians Four One"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "contextClue": "A KJV verse connected with god's character in Ephesians.",
+          "contentMode": "public-domain-text",
+          "verseText": "I therefore, the prisoner of the Lord, beseech you that ye walk worthy of the vocation wherewith ye are called,",
+          "solutionAliases": [
+            "I therefore, the prisoner of the Lord, beseech you that ye walk worthy of the vocation wherewith ye are called,"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Ephesians 4:1 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r088",
+          "reference": "Ephesians 5:19",
+          "referenceAliases": [
+            "Ephesians 5:19",
+            "Ephesians 5 19",
+            "Ephesians chapter 5 verse 19",
+            "Eph 5:19",
+            "Eph 5 19",
+            "Ephesians Five Nineteen"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "contextClue": "A KJV verse connected with god's character in Ephesians.",
+          "contentMode": "public-domain-text",
+          "verseText": "Speaking to yourselves in psalms and hymns and spiritual songs, singing and making melody in your heart to the Lord;",
+          "solutionAliases": [
+            "Speaking to yourselves in psalms and hymns and spiritual songs, singing and making melody in your heart to the Lord;"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Ephesians 5:19 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r089",
+          "reference": "Philippians 1:2",
+          "referenceAliases": [
+            "Philippians 1:2",
+            "Philippians 1 2",
+            "Philippians chapter 1 verse 2",
+            "Phil 1:2",
+            "Phil 1 2",
+            "Philippians One Two"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Peace",
+          "contextClue": "A KJV verse connected with peace in Philippians.",
+          "contentMode": "public-domain-text",
+          "verseText": "Grace be unto you, and peace, from God our Father, and from the Lord Jesus Christ.",
+          "solutionAliases": [
+            "Grace be unto you, and peace, from God our Father, and from the Lord Jesus Christ."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Philippians 1:2 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r090",
+          "reference": "Philippians 2:15",
+          "referenceAliases": [
+            "Philippians 2:15",
+            "Philippians 2 15",
+            "Philippians chapter 2 verse 15",
+            "Phil 2:15",
+            "Phil 2 15",
+            "Philippians Two Fifteen"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "contextClue": "A KJV verse connected with god's character in Philippians.",
+          "contentMode": "public-domain-text",
+          "verseText": "That ye may be blameless and harmless, the sons of God, without rebuke, in the midst of a crooked and perverse nation, among whom ye shine as lights in the world;",
+          "solutionAliases": [
+            "That ye may be blameless and harmless, the sons of God, without rebuke, in the midst of a crooked and perverse nation, among whom ye shine as lights in the world;"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Philippians 2:15 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "sp-session-019",
+      "title": "Scripture Puzzle Pack 019",
+      "theme": "KJV scripture puzzle rounds",
+      "rounds": [
+        {
+          "id": "sp-r091",
+          "reference": "Philippians 4:5",
+          "referenceAliases": [
+            "Philippians 4:5",
+            "Philippians 4 5",
+            "Philippians chapter 4 verse 5",
+            "Phil 4:5",
+            "Phil 4 5",
+            "Philippians Four Five"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "contextClue": "A KJV verse connected with god's character in Philippians.",
+          "contentMode": "public-domain-text",
+          "verseText": "Let your moderation be known unto all men. The Lord is at hand.",
+          "solutionAliases": [
+            "Let your moderation be known unto all men. The Lord is at hand."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Philippians 4:5 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r092",
+          "reference": "Colossians 1:28",
+          "referenceAliases": [
+            "Colossians 1:28",
+            "Colossians 1 28",
+            "Colossians chapter 1 verse 28",
+            "Col 1:28",
+            "Col 1 28",
+            "Colossians One Twenty Eight"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Wisdom",
+          "contextClue": "A KJV verse connected with wisdom in Colossians.",
+          "contentMode": "public-domain-text",
+          "verseText": "Whom we preach, warning every man, and teaching every man in all wisdom; that we may present every man perfect in Christ Jesus:",
+          "solutionAliases": [
+            "Whom we preach, warning every man, and teaching every man in all wisdom; that we may present every man perfect in Christ Jesus:"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Colossians 1:28 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r093",
+          "reference": "Colossians 3:19",
+          "referenceAliases": [
+            "Colossians 3:19",
+            "Colossians 3 19",
+            "Colossians chapter 3 verse 19",
+            "Col 3:19",
+            "Col 3 19",
+            "Colossians Three Nineteen"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Love",
+          "contextClue": "A KJV verse connected with love in Colossians.",
+          "contentMode": "public-domain-text",
+          "verseText": "Husbands, love your wives, and be not bitter against them.",
+          "solutionAliases": [
+            "Husbands, love your wives, and be not bitter against them."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Colossians 3:19 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r094",
+          "reference": "1 Thessalonians 2:12",
+          "referenceAliases": [
+            "1 Thessalonians 2:12",
+            "1 Thessalonians 2 12",
+            "1 Thessalonians chapter 2 verse 12",
+            "1 Thess 2:12",
+            "1 Thess 2 12",
+            "First Thessalonians Two Twelve"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Kingdom",
+          "contextClue": "A KJV verse connected with kingdom in 1 Thessalonians.",
+          "contentMode": "public-domain-text",
+          "verseText": "That ye would walk worthy of God, who hath called you unto his kingdom and glory.",
+          "solutionAliases": [
+            "That ye would walk worthy of God, who hath called you unto his kingdom and glory."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review 1 Thessalonians 2:12 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r095",
+          "reference": "1 Thessalonians 5:7",
+          "referenceAliases": [
+            "1 Thessalonians 5:7",
+            "1 Thessalonians 5 7",
+            "1 Thessalonians chapter 5 verse 7",
+            "1 Thess 5:7",
+            "1 Thess 5 7",
+            "First Thessalonians Five Seven"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in 1 Thessalonians.",
+          "contentMode": "public-domain-text",
+          "verseText": "For they that sleep sleep in the night; and they that be drunken are drunken in the night.",
+          "solutionAliases": [
+            "For they that sleep sleep in the night; and they that be drunken are drunken in the night."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review 1 Thessalonians 5:7 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "sp-session-020",
+      "title": "Scripture Puzzle Pack 020",
+      "theme": "KJV scripture puzzle rounds",
+      "rounds": [
+        {
+          "id": "sp-r096",
+          "reference": "2 Thessalonians 2:15",
+          "referenceAliases": [
+            "2 Thessalonians 2:15",
+            "2 Thessalonians 2 15",
+            "2 Thessalonians chapter 2 verse 15",
+            "2 Thess 2:15",
+            "2 Thess 2 15",
+            "Second Thessalonians Two Fifteen"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "God's Word",
+          "contextClue": "A KJV verse connected with god's word in 2 Thessalonians.",
+          "contentMode": "public-domain-text",
+          "verseText": "Therefore, brethren, stand fast, and hold the traditions which ye have been taught, whether by word, or our epistle.",
+          "solutionAliases": [
+            "Therefore, brethren, stand fast, and hold the traditions which ye have been taught, whether by word, or our epistle."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review 2 Thessalonians 2:15 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r097",
+          "reference": "1 Timothy 2:2",
+          "referenceAliases": [
+            "1 Timothy 2:2",
+            "1 Timothy 2 2",
+            "1 Timothy chapter 2 verse 2",
+            "1 Tim 2:2",
+            "1 Tim 2 2",
+            "First Timothy Two Two"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in 1 Timothy.",
+          "contentMode": "public-domain-text",
+          "verseText": "For kings, and for all that are in authority; that we may lead a quiet and peaceable life in all godliness and honesty.",
+          "solutionAliases": [
+            "For kings, and for all that are in authority; that we may lead a quiet and peaceable life in all godliness and honesty."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review 1 Timothy 2:2 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r098",
+          "reference": "1 Timothy 4:15",
+          "referenceAliases": [
+            "1 Timothy 4:15",
+            "1 Timothy 4 15",
+            "1 Timothy chapter 4 verse 15",
+            "1 Tim 4:15",
+            "1 Tim 4 15",
+            "First Timothy Four Fifteen"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in 1 Timothy.",
+          "contentMode": "public-domain-text",
+          "verseText": "Meditate upon these things; give thyself wholly to them; that thy profiting may appear to all.",
+          "solutionAliases": [
+            "Meditate upon these things; give thyself wholly to them; that thy profiting may appear to all."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review 1 Timothy 4:15 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r099",
+          "reference": "1 Timothy 6:19",
+          "referenceAliases": [
+            "1 Timothy 6:19",
+            "1 Timothy 6 19",
+            "1 Timothy chapter 6 verse 19",
+            "1 Tim 6:19",
+            "1 Tim 6 19",
+            "First Timothy Six Nineteen"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in 1 Timothy.",
+          "contentMode": "public-domain-text",
+          "verseText": "Laying up in store for themselves a good foundation against the time to come, that they may lay hold on eternal life.",
+          "solutionAliases": [
+            "Laying up in store for themselves a good foundation against the time to come, that they may lay hold on eternal life."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review 1 Timothy 6:19 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r100",
+          "reference": "2 Timothy 2:21",
+          "referenceAliases": [
+            "2 Timothy 2:21",
+            "2 Timothy 2 21",
+            "2 Timothy chapter 2 verse 21",
+            "2 Tim 2:21",
+            "2 Tim 2 21",
+            "Second Timothy Two Twenty One"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in 2 Timothy.",
+          "contentMode": "public-domain-text",
+          "verseText": "If a man therefore purge himself from these, he shall be a vessel unto honour, sanctified, and meet for the master's use, and prepared unto every good work.",
+          "solutionAliases": [
+            "If a man therefore purge himself from these, he shall be a vessel unto honour, sanctified, and meet for the master's use, and prepared unto every good work."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review 2 Timothy 2:21 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "sp-session-021",
+      "title": "Scripture Puzzle Pack 021",
+      "theme": "KJV scripture puzzle rounds",
+      "rounds": [
+        {
+          "id": "sp-r101",
+          "reference": "2 Timothy 4:22",
+          "referenceAliases": [
+            "2 Timothy 4:22",
+            "2 Timothy 4 22",
+            "2 Timothy chapter 4 verse 22",
+            "2 Tim 4:22",
+            "2 Tim 4 22",
+            "Second Timothy Four Twenty Two"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "contextClue": "A KJV verse connected with god's character in 2 Timothy.",
+          "contentMode": "public-domain-text",
+          "verseText": "The Lord Jesus Christ be with thy spirit. Grace be with you. Amen.",
+          "solutionAliases": [
+            "The Lord Jesus Christ be with thy spirit. Grace be with you. Amen."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review 2 Timothy 4:22 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r102",
+          "reference": "Titus 3:11",
+          "referenceAliases": [
+            "Titus 3:11",
+            "Titus 3 11",
+            "Titus chapter 3 verse 11",
+            "Titus Three Eleven"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in Titus.",
+          "contentMode": "public-domain-text",
+          "verseText": "Knowing that he that is such is subverted, and sinneth, being condemned of himself.",
+          "solutionAliases": [
+            "Knowing that he that is such is subverted, and sinneth, being condemned of himself."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Titus 3:11 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r103",
+          "reference": "Hebrews 1:14",
+          "referenceAliases": [
+            "Hebrews 1:14",
+            "Hebrews 1 14",
+            "Hebrews chapter 1 verse 14",
+            "Heb 1:14",
+            "Heb 1 14",
+            "Hebrews One Fourteen"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in Hebrews.",
+          "contentMode": "public-domain-text",
+          "verseText": "Are they not all ministering spirits, sent forth to minister for them who shall be heirs of salvation?",
+          "solutionAliases": [
+            "Are they not all ministering spirits, sent forth to minister for them who shall be heirs of salvation?"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Hebrews 1:14 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r104",
+          "reference": "Hebrews 4:8",
+          "referenceAliases": [
+            "Hebrews 4:8",
+            "Hebrews 4 8",
+            "Hebrews chapter 4 verse 8",
+            "Heb 4:8",
+            "Heb 4 8",
+            "Hebrews Four Eight"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Peace",
+          "contextClue": "A KJV verse connected with peace in Hebrews.",
+          "contentMode": "public-domain-text",
+          "verseText": "For if Jesus had given them rest, then would he not afterward have spoken of another day.",
+          "solutionAliases": [
+            "For if Jesus had given them rest, then would he not afterward have spoken of another day."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Hebrews 4:8 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r105",
+          "reference": "Hebrews 7:1",
+          "referenceAliases": [
+            "Hebrews 7:1",
+            "Hebrews 7 1",
+            "Hebrews chapter 7 verse 1",
+            "Heb 7:1",
+            "Heb 7 1",
+            "Hebrews Seven One"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Kingdom",
+          "contextClue": "A KJV verse connected with kingdom in Hebrews.",
+          "contentMode": "public-domain-text",
+          "verseText": "For this Melchisedec, king of Salem, priest of the most high God, who met Abraham returning from the slaughter of the kings, and blessed him;",
+          "solutionAliases": [
+            "For this Melchisedec, king of Salem, priest of the most high God, who met Abraham returning from the slaughter of the kings, and blessed him;"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Hebrews 7:1 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "sp-session-022",
+      "title": "Scripture Puzzle Pack 022",
+      "theme": "KJV scripture puzzle rounds",
+      "rounds": [
+        {
+          "id": "sp-r106",
+          "reference": "Hebrews 9:7",
+          "referenceAliases": [
+            "Hebrews 9:7",
+            "Hebrews 9 7",
+            "Hebrews chapter 9 verse 7",
+            "Heb 9:7",
+            "Heb 9 7",
+            "Hebrews Nine Seven"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in Hebrews.",
+          "contentMode": "public-domain-text",
+          "verseText": "But into the second went the high priest alone once every year, not without blood, which he offered for himself, and for the errors of the people:",
+          "solutionAliases": [
+            "But into the second went the high priest alone once every year, not without blood, which he offered for himself, and for the errors of the people:"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Hebrews 9:7 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r107",
+          "reference": "Hebrews 10:23",
+          "referenceAliases": [
+            "Hebrews 10:23",
+            "Hebrews 10 23",
+            "Hebrews chapter 10 verse 23",
+            "Heb 10:23",
+            "Heb 10 23",
+            "Hebrews Ten Twenty Three"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Faith",
+          "contextClue": "A KJV verse connected with faith in Hebrews.",
+          "contentMode": "public-domain-text",
+          "verseText": "Let us hold fast the profession of our faith without wavering; (for he is faithful that promised;)",
+          "solutionAliases": [
+            "Let us hold fast the profession of our faith without wavering; (for he is faithful that promised;)"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Hebrews 10:23 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r108",
+          "reference": "Hebrews 11:27",
+          "referenceAliases": [
+            "Hebrews 11:27",
+            "Hebrews 11 27",
+            "Hebrews chapter 11 verse 27",
+            "Heb 11:27",
+            "Heb 11 27",
+            "Hebrews Eleven Twenty Seven"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Faith",
+          "contextClue": "A KJV verse connected with faith in Hebrews.",
+          "contentMode": "public-domain-text",
+          "verseText": "By faith he forsook Egypt, not fearing the wrath of the king: for he endured, as seeing him who is invisible.",
+          "solutionAliases": [
+            "By faith he forsook Egypt, not fearing the wrath of the king: for he endured, as seeing him who is invisible."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Hebrews 11:27 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r109",
+          "reference": "Hebrews 13:3",
+          "referenceAliases": [
+            "Hebrews 13:3",
+            "Hebrews 13 3",
+            "Hebrews chapter 13 verse 3",
+            "Heb 13:3",
+            "Heb 13 3",
+            "Hebrews Thirteen Three"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in Hebrews.",
+          "contentMode": "public-domain-text",
+          "verseText": "Remember them that are in bonds, as bound with them; and them which suffer adversity, as being yourselves also in the body.",
+          "solutionAliases": [
+            "Remember them that are in bonds, as bound with them; and them which suffer adversity, as being yourselves also in the body."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Hebrews 13:3 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r110",
+          "reference": "James 1:24",
+          "referenceAliases": [
+            "James 1:24",
+            "James 1 24",
+            "James chapter 1 verse 24",
+            "Jas 1:24",
+            "Jas 1 24",
+            "James One Twenty Four"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in James.",
+          "contentMode": "public-domain-text",
+          "verseText": "For he beholdeth himself, and goeth his way, and straightway forgetteth what manner of man he was.",
+          "solutionAliases": [
+            "For he beholdeth himself, and goeth his way, and straightway forgetteth what manner of man he was."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review James 1:24 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "sp-session-023",
+      "title": "Scripture Puzzle Pack 023",
+      "theme": "KJV scripture puzzle rounds",
+      "rounds": [
+        {
+          "id": "sp-r111",
+          "reference": "James 3:12",
+          "referenceAliases": [
+            "James 3:12",
+            "James 3 12",
+            "James chapter 3 verse 12",
+            "Jas 3:12",
+            "Jas 3 12",
+            "James Three Twelve"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in James.",
+          "contentMode": "public-domain-text",
+          "verseText": "Can the fig tree, my brethren, bear olive berries? either a vine, figs? so can no fountain both yield salt water and fresh.",
+          "solutionAliases": [
+            "Can the fig tree, my brethren, bear olive berries? either a vine, figs? so can no fountain both yield salt water and fresh."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review James 3:12 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r112",
+          "reference": "1 Peter 1:4",
+          "referenceAliases": [
+            "1 Peter 1:4",
+            "1 Peter 1 4",
+            "1 Peter chapter 1 verse 4",
+            "1 Pet 1:4",
+            "1 Pet 1 4",
+            "First Peter One Four"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in 1 Peter.",
+          "contentMode": "public-domain-text",
+          "verseText": "To an inheritance incorruptible, and undefiled, and that fadeth not away, reserved in heaven for you,",
+          "solutionAliases": [
+            "To an inheritance incorruptible, and undefiled, and that fadeth not away, reserved in heaven for you,"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review 1 Peter 1:4 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r113",
+          "reference": "1 Peter 2:24",
+          "referenceAliases": [
+            "1 Peter 2:24",
+            "1 Peter 2 24",
+            "1 Peter chapter 2 verse 24",
+            "1 Pet 2:24",
+            "1 Pet 2 24",
+            "First Peter Two Twenty Four"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in 1 Peter.",
+          "contentMode": "public-domain-text",
+          "verseText": "Who his own self bare our sins in his own body on the tree, that we, being dead to sins, should live unto righteousness: by whose stripes ye were healed.",
+          "solutionAliases": [
+            "Who his own self bare our sins in his own body on the tree, that we, being dead to sins, should live unto righteousness: by whose stripes ye were healed."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review 1 Peter 2:24 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r114",
+          "reference": "2 Peter 2:16",
+          "referenceAliases": [
+            "2 Peter 2:16",
+            "2 Peter 2 16",
+            "2 Peter chapter 2 verse 16",
+            "2 Pet 2:16",
+            "2 Pet 2 16",
+            "Second Peter Two Sixteen"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in 2 Peter.",
+          "contentMode": "public-domain-text",
+          "verseText": "But was rebuked for his iniquity: the dumb ass speaking with man's voice forbad the madness of the prophet.",
+          "solutionAliases": [
+            "But was rebuked for his iniquity: the dumb ass speaking with man's voice forbad the madness of the prophet."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review 2 Peter 2:16 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r115",
+          "reference": "1 John 2:8",
+          "referenceAliases": [
+            "1 John 2:8",
+            "1 John 2 8",
+            "1 John chapter 2 verse 8",
+            "First John Two Eight"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Light",
+          "contextClue": "A KJV verse connected with light in 1 John.",
+          "contentMode": "public-domain-text",
+          "verseText": "Again, a new commandment I write unto you, which thing is true in him and in you: because the darkness is past, and the true light now shineth.",
+          "solutionAliases": [
+            "Again, a new commandment I write unto you, which thing is true in him and in you: because the darkness is past, and the true light now shineth."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review 1 John 2:8 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "sp-session-024",
+      "title": "Scripture Puzzle Pack 024",
+      "theme": "KJV scripture puzzle rounds",
+      "rounds": [
+        {
+          "id": "sp-r116",
+          "reference": "1 John 4:1",
+          "referenceAliases": [
+            "1 John 4:1",
+            "1 John 4 1",
+            "1 John chapter 4 verse 1",
+            "First John Four One"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Faith",
+          "contextClue": "A KJV verse connected with faith in 1 John.",
+          "contentMode": "public-domain-text",
+          "verseText": "Beloved, believe not every spirit, but try the spirits whether they are of God: because many false prophets are gone out into the world.",
+          "solutionAliases": [
+            "Beloved, believe not every spirit, but try the spirits whether they are of God: because many false prophets are gone out into the world."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review 1 John 4:1 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r117",
+          "reference": "2 John 1:8",
+          "referenceAliases": [
+            "2 John 1:8",
+            "2 John 1 8",
+            "2 John chapter 1 verse 8",
+            "Second John One Eight"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in 2 John.",
+          "contentMode": "public-domain-text",
+          "verseText": "Look to yourselves, that we lose not those things which we have wrought, but that we receive a full reward.",
+          "solutionAliases": [
+            "Look to yourselves, that we lose not those things which we have wrought, but that we receive a full reward."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review 2 John 1:8 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r118",
+          "reference": "Revelation 1:6",
+          "referenceAliases": [
+            "Revelation 1:6",
+            "Revelation 1 6",
+            "Revelation chapter 1 verse 6",
+            "Rev 1:6",
+            "Rev 1 6",
+            "Revelation One Six"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "contextClue": "A KJV verse connected with god's character in Revelation.",
+          "contentMode": "public-domain-text",
+          "verseText": "And hath made us kings and priests unto God and his Father; to him be glory and dominion for ever and ever. Amen.",
+          "solutionAliases": [
+            "And hath made us kings and priests unto God and his Father; to him be glory and dominion for ever and ever. Amen."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Revelation 1:6 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r119",
+          "reference": "Revelation 3:19",
+          "referenceAliases": [
+            "Revelation 3:19",
+            "Revelation 3 19",
+            "Revelation chapter 3 verse 19",
+            "Rev 3:19",
+            "Rev 3 19",
+            "Revelation Three Nineteen"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Love",
+          "contextClue": "A KJV verse connected with love in Revelation.",
+          "contentMode": "public-domain-text",
+          "verseText": "As many as I love, I rebuke and chasten: be zealous therefore, and repent.",
+          "solutionAliases": [
+            "As many as I love, I rebuke and chasten: be zealous therefore, and repent."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Revelation 3:19 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r120",
+          "reference": "Revelation 7:11",
+          "referenceAliases": [
+            "Revelation 7:11",
+            "Revelation 7 11",
+            "Revelation chapter 7 verse 11",
+            "Rev 7:11",
+            "Rev 7 11",
+            "Revelation Seven Eleven"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "contextClue": "A KJV verse connected with god's character in Revelation.",
+          "contentMode": "public-domain-text",
+          "verseText": "And all the angels stood round about the throne, and about the elders and the four beasts, and fell before the throne on their faces, and worshipped God,",
+          "solutionAliases": [
+            "And all the angels stood round about the throne, and about the elders and the four beasts, and fell before the throne on their faces, and worshipped God,"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Revelation 7:11 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "sp-session-025",
+      "title": "Scripture Puzzle Pack 025",
+      "theme": "KJV scripture puzzle rounds",
+      "rounds": [
+        {
+          "id": "sp-r121",
+          "reference": "Revelation 11:7",
+          "referenceAliases": [
+            "Revelation 11:7",
+            "Revelation 11 7",
+            "Revelation chapter 11 verse 7",
+            "Rev 11:7",
+            "Rev 11 7",
+            "Revelation Eleven Seven"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in Revelation.",
+          "contentMode": "public-domain-text",
+          "verseText": "And when they shall have finished their testimony, the beast that ascendeth out of the bottomless pit shall make war against them, and shall overcome them, and kill them.",
+          "solutionAliases": [
+            "And when they shall have finished their testimony, the beast that ascendeth out of the bottomless pit shall make war against them, and shall overcome them, and kill them."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Revelation 11:7 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r122",
+          "reference": "Revelation 14:9",
+          "referenceAliases": [
+            "Revelation 14:9",
+            "Revelation 14 9",
+            "Revelation chapter 14 verse 9",
+            "Rev 14:9",
+            "Rev 14 9",
+            "Revelation Fourteen Nine"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in Revelation.",
+          "contentMode": "public-domain-text",
+          "verseText": "And the third angel followed them, saying with a loud voice, If any man worship the beast and his image, and receive his mark in his forehead, or in his hand,",
+          "solutionAliases": [
+            "And the third angel followed them, saying with a loud voice, If any man worship the beast and his image, and receive his mark in his forehead, or in his hand,"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Revelation 14:9 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r123",
+          "reference": "Revelation 17:17",
+          "referenceAliases": [
+            "Revelation 17:17",
+            "Revelation 17 17",
+            "Revelation chapter 17 verse 17",
+            "Rev 17:17",
+            "Rev 17 17",
+            "Revelation Seventeen Seventeen"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Kingdom",
+          "contextClue": "A KJV verse connected with kingdom in Revelation.",
+          "contentMode": "public-domain-text",
+          "verseText": "For God hath put in their hearts to fulfil his will, and to agree, and give their kingdom unto the beast, until the words of God shall be fulfilled.",
+          "solutionAliases": [
+            "For God hath put in their hearts to fulfil his will, and to agree, and give their kingdom unto the beast, until the words of God shall be fulfilled."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Revelation 17:17 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r124",
+          "reference": "Revelation 20:11",
+          "referenceAliases": [
+            "Revelation 20:11",
+            "Revelation 20 11",
+            "Revelation chapter 20 verse 11",
+            "Rev 20:11",
+            "Rev 20 11",
+            "Revelation Twenty Eleven"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in Revelation.",
+          "contentMode": "public-domain-text",
+          "verseText": "And I saw a great white throne, and him that sat on it, from whose face the earth and the heaven fled away; and there was found no place for them.",
+          "solutionAliases": [
+            "And I saw a great white throne, and him that sat on it, from whose face the earth and the heaven fled away; and there was found no place for them."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Revelation 20:11 and the full verse before continuing."
+        },
+        {
+          "id": "sp-r125",
+          "reference": "Genesis 11:26",
+          "referenceAliases": [
+            "Genesis 11:26",
+            "Gen 11:26",
+            "Genesis 11 26",
+            "Gen 11 26",
+            "Genesis chapter 11 verse 26",
+            "Genesis Eleven Twenty Six"
+          ],
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "contextClue": "A KJV verse connected with scripture in Genesis.",
+          "contentMode": "public-domain-text",
+          "verseText": "And Terah lived seventy years, and begat Abram, Nahor, and Haran.",
+          "solutionAliases": [
+            "And Terah lived seventy years, and begat Abram, Nahor, and Haran."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 11:26 and the full verse before continuing."
+        }
+      ]
+    }
+  ]
+}

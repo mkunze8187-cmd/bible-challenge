@@ -1,0 +1,3959 @@
+{
+  "$schema": "./schemas/prophecy-categories.schema.json",
+  "game": "prophecy-categories",
+  "version": 1,
+  "displayName": "Prophecy Categories Challenge",
+  "roundsPerSession": 1,
+  "sessions": [
+    {
+      "id": "pc-session-01",
+      "title": "Prophecy Category Board 01",
+      "theme": "Sorting prophecy references by major theme",
+      "rounds": [
+        {
+          "id": "pc-001",
+          "title": "Prophecy Category Board 01",
+          "theme": "Reference-based prophecy categories",
+          "categories": [
+            "Messiah's Birth",
+            "Messiah's Suffering",
+            "Messiah's Kingship",
+            "Forerunner / Messenger",
+            "Nations"
+          ],
+          "cards": [
+            {
+              "cardId": "pc-s01-c01",
+              "reference": "Isaiah 7:14",
+              "summary": "A child called Immanuel is given as a sign.",
+              "textShort": "Behold, a virgin shall conceive, and bear a son.",
+              "category": "Messiah's Birth",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Isaiah 7:14 in the infancy narrative."
+            },
+            {
+              "cardId": "pc-s01-c02",
+              "reference": "Micah 5:2",
+              "summary": "A ruler for Israel comes from Bethlehem.",
+              "textShort": "Out of thee shall he come forth unto me that is to be ruler in Israel.",
+              "category": "Messiah's Birth",
+              "difficulty": "easy",
+              "teachingNote": "Matthew directly links Messiah's birthplace with Micah 5:2."
+            },
+            {
+              "cardId": "pc-s01-c03",
+              "reference": "Hosea 11:1",
+              "summary": "God calls His son out of Egypt.",
+              "textShort": "Out of Egypt have I called my son.",
+              "category": "Messiah's Birth",
+              "difficulty": "medium",
+              "teachingNote": "Matthew reads Israel's story typologically in relation to Jesus."
+            },
+            {
+              "cardId": "pc-s01-c04",
+              "reference": "Psalm 22:18",
+              "summary": "Garments are parted and lots are cast.",
+              "textShort": "They part my garments among them, and cast lots upon my vesture.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "John explicitly cites the casting of lots as fulfillment of scripture."
+            },
+            {
+              "cardId": "pc-s01-c05",
+              "reference": "Psalm 34:20",
+              "summary": "The righteous sufferer's bones are preserved.",
+              "textShort": "He keepeth all his bones: not one of them is broken.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "John cites this detail while describing Jesus' death."
+            },
+            {
+              "cardId": "pc-s01-c06",
+              "reference": "Psalm 69:21",
+              "summary": "The suffering figure receives gall and vinegar.",
+              "textShort": "In my thirst they gave me vinegar to drink.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "The Gospels connect this detail with Jesus' crucifixion."
+            },
+            {
+              "cardId": "pc-s01-c07",
+              "reference": "Psalm 110:1",
+              "summary": "The Lord invites David's Lord to sit at His right hand.",
+              "textShort": "Sit thou at my right hand.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Psalm 110 is one of the New Testament's most frequent messianic texts."
+            },
+            {
+              "cardId": "pc-s01-c08",
+              "reference": "Isaiah 9:6-7",
+              "summary": "A child is born whose government and peace increase.",
+              "textShort": "Unto us a child is born... and the government shall be upon his shoulder.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Luke's announcement uses Davidic kingdom language that Christians connect with Isaiah's promise."
+            },
+            {
+              "cardId": "pc-s01-c09",
+              "reference": "Zechariah 9:9",
+              "summary": "Zion's king comes lowly and riding on an ass.",
+              "textShort": "Thy King cometh unto thee... riding upon an ass.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Zechariah during the triumphal entry."
+            },
+            {
+              "cardId": "pc-s01-c10",
+              "reference": "Isaiah 40:3",
+              "summary": "A voice prepares the way of the Lord in the wilderness.",
+              "textShort": "Prepare ye the way of the Lord.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "easy",
+              "teachingNote": "The Synoptic Gospels connect Isaiah 40:3 with John the Baptist."
+            },
+            {
+              "cardId": "pc-s01-c11",
+              "reference": "Malachi 3:1",
+              "summary": "A messenger prepares the way before the Lord.",
+              "textShort": "I will send my messenger, and he shall prepare the way before me.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "easy",
+              "teachingNote": "Mark uses messenger texts to frame John the Baptist's ministry."
+            },
+            {
+              "cardId": "pc-s01-c12",
+              "reference": "Malachi 4:5-6",
+              "summary": "Elijah is promised before the great day of the Lord.",
+              "textShort": "I will send you Elijah the prophet before the coming of the great... day.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "medium",
+              "teachingNote": "Matthew presents John the Baptist as fulfilling the Elijah-type role."
+            },
+            {
+              "cardId": "pc-s01-c13",
+              "reference": "Isaiah 9:1-2",
+              "summary": "Light comes to Galilee and people in darkness.",
+              "textShort": "The people that walked in darkness have seen a great light.",
+              "category": "Nations",
+              "difficulty": "easy",
+              "teachingNote": "The Gospel citation ties the prophecy to Jesus' public ministry in Galilee."
+            },
+            {
+              "cardId": "pc-s01-c14",
+              "reference": "Isaiah 42:1-4",
+              "summary": "The servant is upheld by God and brings judgment to the Gentiles.",
+              "textShort": "Behold my servant, whom I uphold; mine elect.",
+              "category": "Nations",
+              "difficulty": "medium",
+              "teachingNote": "Matthew's quotation presents Jesus' ministry through Isaiah's servant language."
+            },
+            {
+              "cardId": "pc-s01-c15",
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram.",
+              "textShort": "In thee shall all families of the earth be blessed.",
+              "category": "Nations",
+              "difficulty": "easy",
+              "teachingNote": "The New Testament explicitly applies this Abraham promise to the gospel going to the nations."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Prophecy Category Board 01 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "pc-session-02",
+      "title": "Prophecy Category Board 02",
+      "theme": "Sorting prophecy references by major theme",
+      "rounds": [
+        {
+          "id": "pc-002",
+          "title": "Prophecy Category Board 02",
+          "theme": "Reference-based prophecy categories",
+          "categories": [
+            "Messiah's Suffering",
+            "Messiah's Kingship",
+            "Forerunner / Messenger",
+            "Nations",
+            "Jerusalem / Temple"
+          ],
+          "cards": [
+            {
+              "cardId": "pc-s02-c01",
+              "reference": "Psalm 22:18",
+              "summary": "Garments are parted and lots are cast.",
+              "textShort": "They part my garments among them, and cast lots upon my vesture.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "John explicitly cites the casting of lots as fulfillment of scripture."
+            },
+            {
+              "cardId": "pc-s02-c02",
+              "reference": "Psalm 34:20",
+              "summary": "The righteous sufferer's bones are preserved.",
+              "textShort": "He keepeth all his bones: not one of them is broken.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "John cites this detail while describing Jesus' death."
+            },
+            {
+              "cardId": "pc-s02-c03",
+              "reference": "Psalm 69:21",
+              "summary": "The suffering figure receives gall and vinegar.",
+              "textShort": "In my thirst they gave me vinegar to drink.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "The Gospels connect this detail with Jesus' crucifixion."
+            },
+            {
+              "cardId": "pc-s02-c04",
+              "reference": "Psalm 110:1",
+              "summary": "The Lord invites David's Lord to sit at His right hand.",
+              "textShort": "Sit thou at my right hand.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Psalm 110 is one of the New Testament's most frequent messianic texts."
+            },
+            {
+              "cardId": "pc-s02-c05",
+              "reference": "Isaiah 9:6-7",
+              "summary": "A child is born whose government and peace increase.",
+              "textShort": "Unto us a child is born... and the government shall be upon his shoulder.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Luke's announcement uses Davidic kingdom language that Christians connect with Isaiah's promise."
+            },
+            {
+              "cardId": "pc-s02-c06",
+              "reference": "Zechariah 9:9",
+              "summary": "Zion's king comes lowly and riding on an ass.",
+              "textShort": "Thy King cometh unto thee... riding upon an ass.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Zechariah during the triumphal entry."
+            },
+            {
+              "cardId": "pc-s02-c07",
+              "reference": "Isaiah 40:3",
+              "summary": "A voice prepares the way of the Lord in the wilderness.",
+              "textShort": "Prepare ye the way of the Lord.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "easy",
+              "teachingNote": "The Synoptic Gospels connect Isaiah 40:3 with John the Baptist."
+            },
+            {
+              "cardId": "pc-s02-c08",
+              "reference": "Malachi 3:1",
+              "summary": "A messenger prepares the way before the Lord.",
+              "textShort": "I will send my messenger, and he shall prepare the way before me.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "easy",
+              "teachingNote": "Mark uses messenger texts to frame John the Baptist's ministry."
+            },
+            {
+              "cardId": "pc-s02-c09",
+              "reference": "Malachi 4:5-6",
+              "summary": "Elijah is promised before the great day of the Lord.",
+              "textShort": "I will send you Elijah the prophet before the coming of the great... day.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "medium",
+              "teachingNote": "Matthew presents John the Baptist as fulfilling the Elijah-type role."
+            },
+            {
+              "cardId": "pc-s02-c10",
+              "reference": "Isaiah 9:1-2",
+              "summary": "Light comes to Galilee and people in darkness.",
+              "textShort": "The people that walked in darkness have seen a great light.",
+              "category": "Nations",
+              "difficulty": "easy",
+              "teachingNote": "The Gospel citation ties the prophecy to Jesus' public ministry in Galilee."
+            },
+            {
+              "cardId": "pc-s02-c11",
+              "reference": "Isaiah 42:1-4",
+              "summary": "The servant is upheld by God and brings judgment to the Gentiles.",
+              "textShort": "Behold my servant, whom I uphold; mine elect.",
+              "category": "Nations",
+              "difficulty": "medium",
+              "teachingNote": "Matthew's quotation presents Jesus' ministry through Isaiah's servant language."
+            },
+            {
+              "cardId": "pc-s02-c12",
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram.",
+              "textShort": "In thee shall all families of the earth be blessed.",
+              "category": "Nations",
+              "difficulty": "easy",
+              "teachingNote": "The New Testament explicitly applies this Abraham promise to the gospel going to the nations."
+            },
+            {
+              "cardId": "pc-s02-c13",
+              "reference": "Zechariah 11:12-13",
+              "summary": "Thirty pieces of silver are weighed and connected with the potter.",
+              "textShort": "So they weighed for my price thirty pieces of silver.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "medium",
+              "teachingNote": "Matthew cites the event as prophetic fulfillment; the textual attribution is discussed by interpreters."
+            },
+            {
+              "cardId": "pc-s02-c14",
+              "reference": "Psalm 69:9",
+              "summary": "Zeal for the Lord's house consumes the speaker.",
+              "textShort": "The zeal of thine house hath eaten me up.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "medium",
+              "teachingNote": "John presents the temple cleansing through the lens of Psalm 69."
+            },
+            {
+              "cardId": "pc-s02-c15",
+              "reference": "Zechariah 9:9",
+              "summary": "Zion's king comes lowly and riding on an ass.",
+              "textShort": "Thy King cometh unto thee... riding upon an ass.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Zechariah during the triumphal entry."
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Prophecy Category Board 02 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "pc-session-03",
+      "title": "Prophecy Category Board 03",
+      "theme": "Sorting prophecy references by major theme",
+      "rounds": [
+        {
+          "id": "pc-003",
+          "title": "Prophecy Category Board 03",
+          "theme": "Reference-based prophecy categories",
+          "categories": [
+            "Messiah's Kingship",
+            "Forerunner / Messenger",
+            "Nations",
+            "Jerusalem / Temple",
+            "Resurrection / Victory"
+          ],
+          "cards": [
+            {
+              "cardId": "pc-s03-c01",
+              "reference": "Psalm 110:1",
+              "summary": "The Lord invites David's Lord to sit at His right hand.",
+              "textShort": "Sit thou at my right hand.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Psalm 110 is one of the New Testament's most frequent messianic texts."
+            },
+            {
+              "cardId": "pc-s03-c02",
+              "reference": "Isaiah 9:6-7",
+              "summary": "A child is born whose government and peace increase.",
+              "textShort": "Unto us a child is born... and the government shall be upon his shoulder.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Luke's announcement uses Davidic kingdom language that Christians connect with Isaiah's promise."
+            },
+            {
+              "cardId": "pc-s03-c03",
+              "reference": "Zechariah 9:9",
+              "summary": "Zion's king comes lowly and riding on an ass.",
+              "textShort": "Thy King cometh unto thee... riding upon an ass.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Zechariah during the triumphal entry."
+            },
+            {
+              "cardId": "pc-s03-c04",
+              "reference": "Isaiah 40:3",
+              "summary": "A voice prepares the way of the Lord in the wilderness.",
+              "textShort": "Prepare ye the way of the Lord.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "easy",
+              "teachingNote": "The Synoptic Gospels connect Isaiah 40:3 with John the Baptist."
+            },
+            {
+              "cardId": "pc-s03-c05",
+              "reference": "Malachi 3:1",
+              "summary": "A messenger prepares the way before the Lord.",
+              "textShort": "I will send my messenger, and he shall prepare the way before me.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "easy",
+              "teachingNote": "Mark uses messenger texts to frame John the Baptist's ministry."
+            },
+            {
+              "cardId": "pc-s03-c06",
+              "reference": "Malachi 4:5-6",
+              "summary": "Elijah is promised before the great day of the Lord.",
+              "textShort": "I will send you Elijah the prophet before the coming of the great... day.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "medium",
+              "teachingNote": "Matthew presents John the Baptist as fulfilling the Elijah-type role."
+            },
+            {
+              "cardId": "pc-s03-c07",
+              "reference": "Isaiah 9:1-2",
+              "summary": "Light comes to Galilee and people in darkness.",
+              "textShort": "The people that walked in darkness have seen a great light.",
+              "category": "Nations",
+              "difficulty": "easy",
+              "teachingNote": "The Gospel citation ties the prophecy to Jesus' public ministry in Galilee."
+            },
+            {
+              "cardId": "pc-s03-c08",
+              "reference": "Isaiah 42:1-4",
+              "summary": "The servant is upheld by God and brings judgment to the Gentiles.",
+              "textShort": "Behold my servant, whom I uphold; mine elect.",
+              "category": "Nations",
+              "difficulty": "medium",
+              "teachingNote": "Matthew's quotation presents Jesus' ministry through Isaiah's servant language."
+            },
+            {
+              "cardId": "pc-s03-c09",
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram.",
+              "textShort": "In thee shall all families of the earth be blessed.",
+              "category": "Nations",
+              "difficulty": "easy",
+              "teachingNote": "The New Testament explicitly applies this Abraham promise to the gospel going to the nations."
+            },
+            {
+              "cardId": "pc-s03-c10",
+              "reference": "Zechariah 11:12-13",
+              "summary": "Thirty pieces of silver are weighed and connected with the potter.",
+              "textShort": "So they weighed for my price thirty pieces of silver.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "medium",
+              "teachingNote": "Matthew cites the event as prophetic fulfillment; the textual attribution is discussed by interpreters."
+            },
+            {
+              "cardId": "pc-s03-c11",
+              "reference": "Psalm 69:9",
+              "summary": "Zeal for the Lord's house consumes the speaker.",
+              "textShort": "The zeal of thine house hath eaten me up.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "medium",
+              "teachingNote": "John presents the temple cleansing through the lens of Psalm 69."
+            },
+            {
+              "cardId": "pc-s03-c12",
+              "reference": "Zechariah 9:9",
+              "summary": "Zion's king comes lowly and riding on an ass.",
+              "textShort": "Thy King cometh unto thee... riding upon an ass.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Zechariah during the triumphal entry."
+            },
+            {
+              "cardId": "pc-s03-c13",
+              "reference": "Genesis 3:15",
+              "summary": "The serpent's head would be bruised by the woman's seed.",
+              "textShort": "It shall bruise thy head, and thou shalt bruise his heel.",
+              "category": "Resurrection / Victory",
+              "difficulty": "medium",
+              "teachingNote": "This is commonly read by Christian interpreters as an early promise of victory over evil."
+            },
+            {
+              "cardId": "pc-s03-c14",
+              "reference": "Psalm 16:10",
+              "summary": "The Holy One would not be left to corruption.",
+              "textShort": "Neither wilt thou suffer thine Holy One to see corruption.",
+              "category": "Resurrection / Victory",
+              "difficulty": "easy",
+              "teachingNote": "Acts 2 directly connects Psalm 16 with the resurrection of Jesus."
+            },
+            {
+              "cardId": "pc-s03-c15",
+              "reference": "Psalm 118:22",
+              "summary": "The rejected stone becomes the head of the corner.",
+              "textShort": "The stone which the builders refused is become the head stone.",
+              "category": "Resurrection / Victory",
+              "difficulty": "easy",
+              "teachingNote": "Acts directly applies the stone image to Jesus' rejection and exaltation."
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Prophecy Category Board 03 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "pc-session-04",
+      "title": "Prophecy Category Board 04",
+      "theme": "Sorting prophecy references by major theme",
+      "rounds": [
+        {
+          "id": "pc-004",
+          "title": "Prophecy Category Board 04",
+          "theme": "Reference-based prophecy categories",
+          "categories": [
+            "Forerunner / Messenger",
+            "Nations",
+            "Jerusalem / Temple",
+            "Resurrection / Victory",
+            "Betrayal / Rejection"
+          ],
+          "cards": [
+            {
+              "cardId": "pc-s04-c01",
+              "reference": "Isaiah 40:3",
+              "summary": "A voice prepares the way of the Lord in the wilderness.",
+              "textShort": "Prepare ye the way of the Lord.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "easy",
+              "teachingNote": "The Synoptic Gospels connect Isaiah 40:3 with John the Baptist."
+            },
+            {
+              "cardId": "pc-s04-c02",
+              "reference": "Malachi 3:1",
+              "summary": "A messenger prepares the way before the Lord.",
+              "textShort": "I will send my messenger, and he shall prepare the way before me.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "easy",
+              "teachingNote": "Mark uses messenger texts to frame John the Baptist's ministry."
+            },
+            {
+              "cardId": "pc-s04-c03",
+              "reference": "Malachi 4:5-6",
+              "summary": "Elijah is promised before the great day of the Lord.",
+              "textShort": "I will send you Elijah the prophet before the coming of the great... day.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "medium",
+              "teachingNote": "Matthew presents John the Baptist as fulfilling the Elijah-type role."
+            },
+            {
+              "cardId": "pc-s04-c04",
+              "reference": "Isaiah 9:1-2",
+              "summary": "Light comes to Galilee and people in darkness.",
+              "textShort": "The people that walked in darkness have seen a great light.",
+              "category": "Nations",
+              "difficulty": "easy",
+              "teachingNote": "The Gospel citation ties the prophecy to Jesus' public ministry in Galilee."
+            },
+            {
+              "cardId": "pc-s04-c05",
+              "reference": "Isaiah 42:1-4",
+              "summary": "The servant is upheld by God and brings judgment to the Gentiles.",
+              "textShort": "Behold my servant, whom I uphold; mine elect.",
+              "category": "Nations",
+              "difficulty": "medium",
+              "teachingNote": "Matthew's quotation presents Jesus' ministry through Isaiah's servant language."
+            },
+            {
+              "cardId": "pc-s04-c06",
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram.",
+              "textShort": "In thee shall all families of the earth be blessed.",
+              "category": "Nations",
+              "difficulty": "easy",
+              "teachingNote": "The New Testament explicitly applies this Abraham promise to the gospel going to the nations."
+            },
+            {
+              "cardId": "pc-s04-c07",
+              "reference": "Zechariah 11:12-13",
+              "summary": "Thirty pieces of silver are weighed and connected with the potter.",
+              "textShort": "So they weighed for my price thirty pieces of silver.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "medium",
+              "teachingNote": "Matthew cites the event as prophetic fulfillment; the textual attribution is discussed by interpreters."
+            },
+            {
+              "cardId": "pc-s04-c08",
+              "reference": "Psalm 69:9",
+              "summary": "Zeal for the Lord's house consumes the speaker.",
+              "textShort": "The zeal of thine house hath eaten me up.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "medium",
+              "teachingNote": "John presents the temple cleansing through the lens of Psalm 69."
+            },
+            {
+              "cardId": "pc-s04-c09",
+              "reference": "Zechariah 9:9",
+              "summary": "Zion's king comes lowly and riding on an ass.",
+              "textShort": "Thy King cometh unto thee... riding upon an ass.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Zechariah during the triumphal entry."
+            },
+            {
+              "cardId": "pc-s04-c10",
+              "reference": "Genesis 3:15",
+              "summary": "The serpent's head would be bruised by the woman's seed.",
+              "textShort": "It shall bruise thy head, and thou shalt bruise his heel.",
+              "category": "Resurrection / Victory",
+              "difficulty": "medium",
+              "teachingNote": "This is commonly read by Christian interpreters as an early promise of victory over evil."
+            },
+            {
+              "cardId": "pc-s04-c11",
+              "reference": "Psalm 16:10",
+              "summary": "The Holy One would not be left to corruption.",
+              "textShort": "Neither wilt thou suffer thine Holy One to see corruption.",
+              "category": "Resurrection / Victory",
+              "difficulty": "easy",
+              "teachingNote": "Acts 2 directly connects Psalm 16 with the resurrection of Jesus."
+            },
+            {
+              "cardId": "pc-s04-c12",
+              "reference": "Psalm 118:22",
+              "summary": "The rejected stone becomes the head of the corner.",
+              "textShort": "The stone which the builders refused is become the head stone.",
+              "category": "Resurrection / Victory",
+              "difficulty": "easy",
+              "teachingNote": "Acts directly applies the stone image to Jesus' rejection and exaltation."
+            },
+            {
+              "cardId": "pc-s04-c13",
+              "reference": "Zechariah 11:12-13",
+              "summary": "Thirty pieces of silver are weighed and connected with the potter.",
+              "textShort": "So they weighed for my price thirty pieces of silver.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "medium",
+              "teachingNote": "Matthew cites the event as prophetic fulfillment; the textual attribution is discussed by interpreters."
+            },
+            {
+              "cardId": "pc-s04-c14",
+              "reference": "Psalm 41:9",
+              "summary": "A familiar friend lifts up his heel against the speaker.",
+              "textShort": "Mine own familiar friend... hath lifted up his heel against me.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "easy",
+              "teachingNote": "John records Jesus citing the psalm in the context of Judas's betrayal."
+            },
+            {
+              "cardId": "pc-s04-c15",
+              "reference": "Psalm 118:22",
+              "summary": "The rejected stone becomes the head of the corner.",
+              "textShort": "The stone which the builders refused is become the head stone.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "easy",
+              "teachingNote": "Acts directly applies the stone image to Jesus' rejection and exaltation."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Prophecy Category Board 04 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "pc-session-05",
+      "title": "Prophecy Category Board 05",
+      "theme": "Sorting prophecy references by major theme",
+      "rounds": [
+        {
+          "id": "pc-005",
+          "title": "Prophecy Category Board 05",
+          "theme": "Reference-based prophecy categories",
+          "categories": [
+            "Nations",
+            "Jerusalem / Temple",
+            "Resurrection / Victory",
+            "Betrayal / Rejection",
+            "New Covenant"
+          ],
+          "cards": [
+            {
+              "cardId": "pc-s05-c01",
+              "reference": "Isaiah 9:1-2",
+              "summary": "Light comes to Galilee and people in darkness.",
+              "textShort": "The people that walked in darkness have seen a great light.",
+              "category": "Nations",
+              "difficulty": "easy",
+              "teachingNote": "The Gospel citation ties the prophecy to Jesus' public ministry in Galilee."
+            },
+            {
+              "cardId": "pc-s05-c02",
+              "reference": "Isaiah 42:1-4",
+              "summary": "The servant is upheld by God and brings judgment to the Gentiles.",
+              "textShort": "Behold my servant, whom I uphold; mine elect.",
+              "category": "Nations",
+              "difficulty": "medium",
+              "teachingNote": "Matthew's quotation presents Jesus' ministry through Isaiah's servant language."
+            },
+            {
+              "cardId": "pc-s05-c03",
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram.",
+              "textShort": "In thee shall all families of the earth be blessed.",
+              "category": "Nations",
+              "difficulty": "easy",
+              "teachingNote": "The New Testament explicitly applies this Abraham promise to the gospel going to the nations."
+            },
+            {
+              "cardId": "pc-s05-c04",
+              "reference": "Zechariah 11:12-13",
+              "summary": "Thirty pieces of silver are weighed and connected with the potter.",
+              "textShort": "So they weighed for my price thirty pieces of silver.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "medium",
+              "teachingNote": "Matthew cites the event as prophetic fulfillment; the textual attribution is discussed by interpreters."
+            },
+            {
+              "cardId": "pc-s05-c05",
+              "reference": "Psalm 69:9",
+              "summary": "Zeal for the Lord's house consumes the speaker.",
+              "textShort": "The zeal of thine house hath eaten me up.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "medium",
+              "teachingNote": "John presents the temple cleansing through the lens of Psalm 69."
+            },
+            {
+              "cardId": "pc-s05-c06",
+              "reference": "Zechariah 9:9",
+              "summary": "Zion's king comes lowly and riding on an ass.",
+              "textShort": "Thy King cometh unto thee... riding upon an ass.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Zechariah during the triumphal entry."
+            },
+            {
+              "cardId": "pc-s05-c07",
+              "reference": "Genesis 3:15",
+              "summary": "The serpent's head would be bruised by the woman's seed.",
+              "textShort": "It shall bruise thy head, and thou shalt bruise his heel.",
+              "category": "Resurrection / Victory",
+              "difficulty": "medium",
+              "teachingNote": "This is commonly read by Christian interpreters as an early promise of victory over evil."
+            },
+            {
+              "cardId": "pc-s05-c08",
+              "reference": "Psalm 16:10",
+              "summary": "The Holy One would not be left to corruption.",
+              "textShort": "Neither wilt thou suffer thine Holy One to see corruption.",
+              "category": "Resurrection / Victory",
+              "difficulty": "easy",
+              "teachingNote": "Acts 2 directly connects Psalm 16 with the resurrection of Jesus."
+            },
+            {
+              "cardId": "pc-s05-c09",
+              "reference": "Psalm 118:22",
+              "summary": "The rejected stone becomes the head of the corner.",
+              "textShort": "The stone which the builders refused is become the head stone.",
+              "category": "Resurrection / Victory",
+              "difficulty": "easy",
+              "teachingNote": "Acts directly applies the stone image to Jesus' rejection and exaltation."
+            },
+            {
+              "cardId": "pc-s05-c10",
+              "reference": "Zechariah 11:12-13",
+              "summary": "Thirty pieces of silver are weighed and connected with the potter.",
+              "textShort": "So they weighed for my price thirty pieces of silver.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "medium",
+              "teachingNote": "Matthew cites the event as prophetic fulfillment; the textual attribution is discussed by interpreters."
+            },
+            {
+              "cardId": "pc-s05-c11",
+              "reference": "Psalm 41:9",
+              "summary": "A familiar friend lifts up his heel against the speaker.",
+              "textShort": "Mine own familiar friend... hath lifted up his heel against me.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "easy",
+              "teachingNote": "John records Jesus citing the psalm in the context of Judas's betrayal."
+            },
+            {
+              "cardId": "pc-s05-c12",
+              "reference": "Psalm 118:22",
+              "summary": "The rejected stone becomes the head of the corner.",
+              "textShort": "The stone which the builders refused is become the head stone.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "easy",
+              "teachingNote": "Acts directly applies the stone image to Jesus' rejection and exaltation."
+            },
+            {
+              "cardId": "pc-s05-c13",
+              "reference": "Isaiah 53:5",
+              "summary": "The servant is wounded and bruised for others.",
+              "textShort": "He was wounded for our transgressions.",
+              "category": "New Covenant",
+              "difficulty": "easy",
+              "teachingNote": "1 Peter explicitly uses Isaiah 53 language for Christ's suffering."
+            },
+            {
+              "cardId": "pc-s05-c14",
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram.",
+              "textShort": "In thee shall all families of the earth be blessed.",
+              "category": "New Covenant",
+              "difficulty": "easy",
+              "teachingNote": "The New Testament explicitly applies this Abraham promise to the gospel going to the nations."
+            },
+            {
+              "cardId": "pc-s05-c15",
+              "reference": "Isaiah 42:1-4",
+              "summary": "The servant is upheld by God and brings judgment to the Gentiles.",
+              "textShort": "Behold my servant, whom I uphold; mine elect.",
+              "category": "New Covenant",
+              "difficulty": "medium",
+              "teachingNote": "Matthew's quotation presents Jesus' ministry through Isaiah's servant language."
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Prophecy Category Board 05 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "pc-session-06",
+      "title": "Prophecy Category Board 06",
+      "theme": "Sorting prophecy references by major theme",
+      "rounds": [
+        {
+          "id": "pc-006",
+          "title": "Prophecy Category Board 06",
+          "theme": "Reference-based prophecy categories",
+          "categories": [
+            "Jerusalem / Temple",
+            "Resurrection / Victory",
+            "Betrayal / Rejection",
+            "New Covenant",
+            "Day of the Lord"
+          ],
+          "cards": [
+            {
+              "cardId": "pc-s06-c01",
+              "reference": "Zechariah 11:12-13",
+              "summary": "Thirty pieces of silver are weighed and connected with the potter.",
+              "textShort": "So they weighed for my price thirty pieces of silver.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "medium",
+              "teachingNote": "Matthew cites the event as prophetic fulfillment; the textual attribution is discussed by interpreters."
+            },
+            {
+              "cardId": "pc-s06-c02",
+              "reference": "Psalm 69:9",
+              "summary": "Zeal for the Lord's house consumes the speaker.",
+              "textShort": "The zeal of thine house hath eaten me up.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "medium",
+              "teachingNote": "John presents the temple cleansing through the lens of Psalm 69."
+            },
+            {
+              "cardId": "pc-s06-c03",
+              "reference": "Zechariah 9:9",
+              "summary": "Zion's king comes lowly and riding on an ass.",
+              "textShort": "Thy King cometh unto thee... riding upon an ass.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Zechariah during the triumphal entry."
+            },
+            {
+              "cardId": "pc-s06-c04",
+              "reference": "Genesis 3:15",
+              "summary": "The serpent's head would be bruised by the woman's seed.",
+              "textShort": "It shall bruise thy head, and thou shalt bruise his heel.",
+              "category": "Resurrection / Victory",
+              "difficulty": "medium",
+              "teachingNote": "This is commonly read by Christian interpreters as an early promise of victory over evil."
+            },
+            {
+              "cardId": "pc-s06-c05",
+              "reference": "Psalm 16:10",
+              "summary": "The Holy One would not be left to corruption.",
+              "textShort": "Neither wilt thou suffer thine Holy One to see corruption.",
+              "category": "Resurrection / Victory",
+              "difficulty": "easy",
+              "teachingNote": "Acts 2 directly connects Psalm 16 with the resurrection of Jesus."
+            },
+            {
+              "cardId": "pc-s06-c06",
+              "reference": "Psalm 118:22",
+              "summary": "The rejected stone becomes the head of the corner.",
+              "textShort": "The stone which the builders refused is become the head stone.",
+              "category": "Resurrection / Victory",
+              "difficulty": "easy",
+              "teachingNote": "Acts directly applies the stone image to Jesus' rejection and exaltation."
+            },
+            {
+              "cardId": "pc-s06-c07",
+              "reference": "Zechariah 11:12-13",
+              "summary": "Thirty pieces of silver are weighed and connected with the potter.",
+              "textShort": "So they weighed for my price thirty pieces of silver.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "medium",
+              "teachingNote": "Matthew cites the event as prophetic fulfillment; the textual attribution is discussed by interpreters."
+            },
+            {
+              "cardId": "pc-s06-c08",
+              "reference": "Psalm 41:9",
+              "summary": "A familiar friend lifts up his heel against the speaker.",
+              "textShort": "Mine own familiar friend... hath lifted up his heel against me.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "easy",
+              "teachingNote": "John records Jesus citing the psalm in the context of Judas's betrayal."
+            },
+            {
+              "cardId": "pc-s06-c09",
+              "reference": "Psalm 118:22",
+              "summary": "The rejected stone becomes the head of the corner.",
+              "textShort": "The stone which the builders refused is become the head stone.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "easy",
+              "teachingNote": "Acts directly applies the stone image to Jesus' rejection and exaltation."
+            },
+            {
+              "cardId": "pc-s06-c10",
+              "reference": "Isaiah 53:5",
+              "summary": "The servant is wounded and bruised for others.",
+              "textShort": "He was wounded for our transgressions.",
+              "category": "New Covenant",
+              "difficulty": "easy",
+              "teachingNote": "1 Peter explicitly uses Isaiah 53 language for Christ's suffering."
+            },
+            {
+              "cardId": "pc-s06-c11",
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram.",
+              "textShort": "In thee shall all families of the earth be blessed.",
+              "category": "New Covenant",
+              "difficulty": "easy",
+              "teachingNote": "The New Testament explicitly applies this Abraham promise to the gospel going to the nations."
+            },
+            {
+              "cardId": "pc-s06-c12",
+              "reference": "Isaiah 42:1-4",
+              "summary": "The servant is upheld by God and brings judgment to the Gentiles.",
+              "textShort": "Behold my servant, whom I uphold; mine elect.",
+              "category": "New Covenant",
+              "difficulty": "medium",
+              "teachingNote": "Matthew's quotation presents Jesus' ministry through Isaiah's servant language."
+            },
+            {
+              "cardId": "pc-s06-c13",
+              "reference": "Genesis 3:15",
+              "summary": "The serpent's head would be bruised by the woman's seed.",
+              "textShort": "It shall bruise thy head, and thou shalt bruise his heel.",
+              "category": "Day of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "This is commonly read by Christian interpreters as an early promise of victory over evil."
+            },
+            {
+              "cardId": "pc-s06-c14",
+              "reference": "Psalm 110:1",
+              "summary": "The Lord invites David's Lord to sit at His right hand.",
+              "textShort": "Sit thou at my right hand.",
+              "category": "Day of the Lord",
+              "difficulty": "easy",
+              "teachingNote": "Psalm 110 is one of the New Testament's most frequent messianic texts."
+            },
+            {
+              "cardId": "pc-s06-c15",
+              "reference": "Malachi 4:5-6",
+              "summary": "Elijah is promised before the great day of the Lord.",
+              "textShort": "I will send you Elijah the prophet before the coming of the great... day.",
+              "category": "Day of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "Matthew presents John the Baptist as fulfilling the Elijah-type role."
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Prophecy Category Board 06 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "pc-session-07",
+      "title": "Prophecy Category Board 07",
+      "theme": "Sorting prophecy references by major theme",
+      "rounds": [
+        {
+          "id": "pc-007",
+          "title": "Prophecy Category Board 07",
+          "theme": "Reference-based prophecy categories",
+          "categories": [
+            "Resurrection / Victory",
+            "Betrayal / Rejection",
+            "New Covenant",
+            "Day of the Lord",
+            "Messiah's Birth"
+          ],
+          "cards": [
+            {
+              "cardId": "pc-s07-c01",
+              "reference": "Genesis 3:15",
+              "summary": "The serpent's head would be bruised by the woman's seed.",
+              "textShort": "It shall bruise thy head, and thou shalt bruise his heel.",
+              "category": "Resurrection / Victory",
+              "difficulty": "medium",
+              "teachingNote": "This is commonly read by Christian interpreters as an early promise of victory over evil."
+            },
+            {
+              "cardId": "pc-s07-c02",
+              "reference": "Psalm 16:10",
+              "summary": "The Holy One would not be left to corruption.",
+              "textShort": "Neither wilt thou suffer thine Holy One to see corruption.",
+              "category": "Resurrection / Victory",
+              "difficulty": "easy",
+              "teachingNote": "Acts 2 directly connects Psalm 16 with the resurrection of Jesus."
+            },
+            {
+              "cardId": "pc-s07-c03",
+              "reference": "Psalm 118:22",
+              "summary": "The rejected stone becomes the head of the corner.",
+              "textShort": "The stone which the builders refused is become the head stone.",
+              "category": "Resurrection / Victory",
+              "difficulty": "easy",
+              "teachingNote": "Acts directly applies the stone image to Jesus' rejection and exaltation."
+            },
+            {
+              "cardId": "pc-s07-c04",
+              "reference": "Zechariah 11:12-13",
+              "summary": "Thirty pieces of silver are weighed and connected with the potter.",
+              "textShort": "So they weighed for my price thirty pieces of silver.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "medium",
+              "teachingNote": "Matthew cites the event as prophetic fulfillment; the textual attribution is discussed by interpreters."
+            },
+            {
+              "cardId": "pc-s07-c05",
+              "reference": "Psalm 41:9",
+              "summary": "A familiar friend lifts up his heel against the speaker.",
+              "textShort": "Mine own familiar friend... hath lifted up his heel against me.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "easy",
+              "teachingNote": "John records Jesus citing the psalm in the context of Judas's betrayal."
+            },
+            {
+              "cardId": "pc-s07-c06",
+              "reference": "Psalm 118:22",
+              "summary": "The rejected stone becomes the head of the corner.",
+              "textShort": "The stone which the builders refused is become the head stone.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "easy",
+              "teachingNote": "Acts directly applies the stone image to Jesus' rejection and exaltation."
+            },
+            {
+              "cardId": "pc-s07-c07",
+              "reference": "Isaiah 53:5",
+              "summary": "The servant is wounded and bruised for others.",
+              "textShort": "He was wounded for our transgressions.",
+              "category": "New Covenant",
+              "difficulty": "easy",
+              "teachingNote": "1 Peter explicitly uses Isaiah 53 language for Christ's suffering."
+            },
+            {
+              "cardId": "pc-s07-c08",
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram.",
+              "textShort": "In thee shall all families of the earth be blessed.",
+              "category": "New Covenant",
+              "difficulty": "easy",
+              "teachingNote": "The New Testament explicitly applies this Abraham promise to the gospel going to the nations."
+            },
+            {
+              "cardId": "pc-s07-c09",
+              "reference": "Isaiah 42:1-4",
+              "summary": "The servant is upheld by God and brings judgment to the Gentiles.",
+              "textShort": "Behold my servant, whom I uphold; mine elect.",
+              "category": "New Covenant",
+              "difficulty": "medium",
+              "teachingNote": "Matthew's quotation presents Jesus' ministry through Isaiah's servant language."
+            },
+            {
+              "cardId": "pc-s07-c10",
+              "reference": "Genesis 3:15",
+              "summary": "The serpent's head would be bruised by the woman's seed.",
+              "textShort": "It shall bruise thy head, and thou shalt bruise his heel.",
+              "category": "Day of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "This is commonly read by Christian interpreters as an early promise of victory over evil."
+            },
+            {
+              "cardId": "pc-s07-c11",
+              "reference": "Psalm 110:1",
+              "summary": "The Lord invites David's Lord to sit at His right hand.",
+              "textShort": "Sit thou at my right hand.",
+              "category": "Day of the Lord",
+              "difficulty": "easy",
+              "teachingNote": "Psalm 110 is one of the New Testament's most frequent messianic texts."
+            },
+            {
+              "cardId": "pc-s07-c12",
+              "reference": "Malachi 4:5-6",
+              "summary": "Elijah is promised before the great day of the Lord.",
+              "textShort": "I will send you Elijah the prophet before the coming of the great... day.",
+              "category": "Day of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "Matthew presents John the Baptist as fulfilling the Elijah-type role."
+            },
+            {
+              "cardId": "pc-s07-c13",
+              "reference": "Micah 5:2",
+              "summary": "A ruler for Israel comes from Bethlehem.",
+              "textShort": "Out of thee shall he come forth unto me that is to be ruler in Israel.",
+              "category": "Messiah's Birth",
+              "difficulty": "easy",
+              "teachingNote": "Matthew directly links Messiah's birthplace with Micah 5:2."
+            },
+            {
+              "cardId": "pc-s07-c14",
+              "reference": "Hosea 11:1",
+              "summary": "God calls His son out of Egypt.",
+              "textShort": "Out of Egypt have I called my son.",
+              "category": "Messiah's Birth",
+              "difficulty": "medium",
+              "teachingNote": "Matthew reads Israel's story typologically in relation to Jesus."
+            },
+            {
+              "cardId": "pc-s07-c15",
+              "reference": "Isaiah 7:14",
+              "summary": "A child called Immanuel is given as a sign.",
+              "textShort": "Behold, a virgin shall conceive, and bear a son.",
+              "category": "Messiah's Birth",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Isaiah 7:14 in the infancy narrative."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Prophecy Category Board 07 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "pc-session-08",
+      "title": "Prophecy Category Board 08",
+      "theme": "Sorting prophecy references by major theme",
+      "rounds": [
+        {
+          "id": "pc-008",
+          "title": "Prophecy Category Board 08",
+          "theme": "Reference-based prophecy categories",
+          "categories": [
+            "Betrayal / Rejection",
+            "New Covenant",
+            "Day of the Lord",
+            "Messiah's Birth",
+            "Messiah's Suffering"
+          ],
+          "cards": [
+            {
+              "cardId": "pc-s08-c01",
+              "reference": "Zechariah 11:12-13",
+              "summary": "Thirty pieces of silver are weighed and connected with the potter.",
+              "textShort": "So they weighed for my price thirty pieces of silver.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "medium",
+              "teachingNote": "Matthew cites the event as prophetic fulfillment; the textual attribution is discussed by interpreters."
+            },
+            {
+              "cardId": "pc-s08-c02",
+              "reference": "Psalm 41:9",
+              "summary": "A familiar friend lifts up his heel against the speaker.",
+              "textShort": "Mine own familiar friend... hath lifted up his heel against me.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "easy",
+              "teachingNote": "John records Jesus citing the psalm in the context of Judas's betrayal."
+            },
+            {
+              "cardId": "pc-s08-c03",
+              "reference": "Psalm 118:22",
+              "summary": "The rejected stone becomes the head of the corner.",
+              "textShort": "The stone which the builders refused is become the head stone.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "easy",
+              "teachingNote": "Acts directly applies the stone image to Jesus' rejection and exaltation."
+            },
+            {
+              "cardId": "pc-s08-c04",
+              "reference": "Isaiah 53:5",
+              "summary": "The servant is wounded and bruised for others.",
+              "textShort": "He was wounded for our transgressions.",
+              "category": "New Covenant",
+              "difficulty": "easy",
+              "teachingNote": "1 Peter explicitly uses Isaiah 53 language for Christ's suffering."
+            },
+            {
+              "cardId": "pc-s08-c05",
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram.",
+              "textShort": "In thee shall all families of the earth be blessed.",
+              "category": "New Covenant",
+              "difficulty": "easy",
+              "teachingNote": "The New Testament explicitly applies this Abraham promise to the gospel going to the nations."
+            },
+            {
+              "cardId": "pc-s08-c06",
+              "reference": "Isaiah 42:1-4",
+              "summary": "The servant is upheld by God and brings judgment to the Gentiles.",
+              "textShort": "Behold my servant, whom I uphold; mine elect.",
+              "category": "New Covenant",
+              "difficulty": "medium",
+              "teachingNote": "Matthew's quotation presents Jesus' ministry through Isaiah's servant language."
+            },
+            {
+              "cardId": "pc-s08-c07",
+              "reference": "Genesis 3:15",
+              "summary": "The serpent's head would be bruised by the woman's seed.",
+              "textShort": "It shall bruise thy head, and thou shalt bruise his heel.",
+              "category": "Day of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "This is commonly read by Christian interpreters as an early promise of victory over evil."
+            },
+            {
+              "cardId": "pc-s08-c08",
+              "reference": "Psalm 110:1",
+              "summary": "The Lord invites David's Lord to sit at His right hand.",
+              "textShort": "Sit thou at my right hand.",
+              "category": "Day of the Lord",
+              "difficulty": "easy",
+              "teachingNote": "Psalm 110 is one of the New Testament's most frequent messianic texts."
+            },
+            {
+              "cardId": "pc-s08-c09",
+              "reference": "Malachi 4:5-6",
+              "summary": "Elijah is promised before the great day of the Lord.",
+              "textShort": "I will send you Elijah the prophet before the coming of the great... day.",
+              "category": "Day of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "Matthew presents John the Baptist as fulfilling the Elijah-type role."
+            },
+            {
+              "cardId": "pc-s08-c10",
+              "reference": "Micah 5:2",
+              "summary": "A ruler for Israel comes from Bethlehem.",
+              "textShort": "Out of thee shall he come forth unto me that is to be ruler in Israel.",
+              "category": "Messiah's Birth",
+              "difficulty": "easy",
+              "teachingNote": "Matthew directly links Messiah's birthplace with Micah 5:2."
+            },
+            {
+              "cardId": "pc-s08-c11",
+              "reference": "Hosea 11:1",
+              "summary": "God calls His son out of Egypt.",
+              "textShort": "Out of Egypt have I called my son.",
+              "category": "Messiah's Birth",
+              "difficulty": "medium",
+              "teachingNote": "Matthew reads Israel's story typologically in relation to Jesus."
+            },
+            {
+              "cardId": "pc-s08-c12",
+              "reference": "Isaiah 7:14",
+              "summary": "A child called Immanuel is given as a sign.",
+              "textShort": "Behold, a virgin shall conceive, and bear a son.",
+              "category": "Messiah's Birth",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Isaiah 7:14 in the infancy narrative."
+            },
+            {
+              "cardId": "pc-s08-c13",
+              "reference": "Psalm 34:20",
+              "summary": "The righteous sufferer's bones are preserved.",
+              "textShort": "He keepeth all his bones: not one of them is broken.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "John cites this detail while describing Jesus' death."
+            },
+            {
+              "cardId": "pc-s08-c14",
+              "reference": "Psalm 69:21",
+              "summary": "The suffering figure receives gall and vinegar.",
+              "textShort": "In my thirst they gave me vinegar to drink.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "The Gospels connect this detail with Jesus' crucifixion."
+            },
+            {
+              "cardId": "pc-s08-c15",
+              "reference": "Isaiah 53:5",
+              "summary": "The servant is wounded and bruised for others.",
+              "textShort": "He was wounded for our transgressions.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "1 Peter explicitly uses Isaiah 53 language for Christ's suffering."
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Prophecy Category Board 08 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "pc-session-09",
+      "title": "Prophecy Category Board 09",
+      "theme": "Sorting prophecy references by major theme",
+      "rounds": [
+        {
+          "id": "pc-009",
+          "title": "Prophecy Category Board 09",
+          "theme": "Reference-based prophecy categories",
+          "categories": [
+            "New Covenant",
+            "Day of the Lord",
+            "Messiah's Birth",
+            "Messiah's Suffering",
+            "Messiah's Kingship"
+          ],
+          "cards": [
+            {
+              "cardId": "pc-s09-c01",
+              "reference": "Isaiah 53:5",
+              "summary": "The servant is wounded and bruised for others.",
+              "textShort": "He was wounded for our transgressions.",
+              "category": "New Covenant",
+              "difficulty": "easy",
+              "teachingNote": "1 Peter explicitly uses Isaiah 53 language for Christ's suffering."
+            },
+            {
+              "cardId": "pc-s09-c02",
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram.",
+              "textShort": "In thee shall all families of the earth be blessed.",
+              "category": "New Covenant",
+              "difficulty": "easy",
+              "teachingNote": "The New Testament explicitly applies this Abraham promise to the gospel going to the nations."
+            },
+            {
+              "cardId": "pc-s09-c03",
+              "reference": "Isaiah 42:1-4",
+              "summary": "The servant is upheld by God and brings judgment to the Gentiles.",
+              "textShort": "Behold my servant, whom I uphold; mine elect.",
+              "category": "New Covenant",
+              "difficulty": "medium",
+              "teachingNote": "Matthew's quotation presents Jesus' ministry through Isaiah's servant language."
+            },
+            {
+              "cardId": "pc-s09-c04",
+              "reference": "Genesis 3:15",
+              "summary": "The serpent's head would be bruised by the woman's seed.",
+              "textShort": "It shall bruise thy head, and thou shalt bruise his heel.",
+              "category": "Day of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "This is commonly read by Christian interpreters as an early promise of victory over evil."
+            },
+            {
+              "cardId": "pc-s09-c05",
+              "reference": "Psalm 110:1",
+              "summary": "The Lord invites David's Lord to sit at His right hand.",
+              "textShort": "Sit thou at my right hand.",
+              "category": "Day of the Lord",
+              "difficulty": "easy",
+              "teachingNote": "Psalm 110 is one of the New Testament's most frequent messianic texts."
+            },
+            {
+              "cardId": "pc-s09-c06",
+              "reference": "Malachi 4:5-6",
+              "summary": "Elijah is promised before the great day of the Lord.",
+              "textShort": "I will send you Elijah the prophet before the coming of the great... day.",
+              "category": "Day of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "Matthew presents John the Baptist as fulfilling the Elijah-type role."
+            },
+            {
+              "cardId": "pc-s09-c07",
+              "reference": "Micah 5:2",
+              "summary": "A ruler for Israel comes from Bethlehem.",
+              "textShort": "Out of thee shall he come forth unto me that is to be ruler in Israel.",
+              "category": "Messiah's Birth",
+              "difficulty": "easy",
+              "teachingNote": "Matthew directly links Messiah's birthplace with Micah 5:2."
+            },
+            {
+              "cardId": "pc-s09-c08",
+              "reference": "Hosea 11:1",
+              "summary": "God calls His son out of Egypt.",
+              "textShort": "Out of Egypt have I called my son.",
+              "category": "Messiah's Birth",
+              "difficulty": "medium",
+              "teachingNote": "Matthew reads Israel's story typologically in relation to Jesus."
+            },
+            {
+              "cardId": "pc-s09-c09",
+              "reference": "Isaiah 7:14",
+              "summary": "A child called Immanuel is given as a sign.",
+              "textShort": "Behold, a virgin shall conceive, and bear a son.",
+              "category": "Messiah's Birth",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Isaiah 7:14 in the infancy narrative."
+            },
+            {
+              "cardId": "pc-s09-c10",
+              "reference": "Psalm 34:20",
+              "summary": "The righteous sufferer's bones are preserved.",
+              "textShort": "He keepeth all his bones: not one of them is broken.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "John cites this detail while describing Jesus' death."
+            },
+            {
+              "cardId": "pc-s09-c11",
+              "reference": "Psalm 69:21",
+              "summary": "The suffering figure receives gall and vinegar.",
+              "textShort": "In my thirst they gave me vinegar to drink.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "The Gospels connect this detail with Jesus' crucifixion."
+            },
+            {
+              "cardId": "pc-s09-c12",
+              "reference": "Isaiah 53:5",
+              "summary": "The servant is wounded and bruised for others.",
+              "textShort": "He was wounded for our transgressions.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "1 Peter explicitly uses Isaiah 53 language for Christ's suffering."
+            },
+            {
+              "cardId": "pc-s09-c13",
+              "reference": "Psalm 110:1",
+              "summary": "The Lord invites David's Lord to sit at His right hand.",
+              "textShort": "Sit thou at my right hand.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Psalm 110 is one of the New Testament's most frequent messianic texts."
+            },
+            {
+              "cardId": "pc-s09-c14",
+              "reference": "Isaiah 9:6-7",
+              "summary": "A child is born whose government and peace increase.",
+              "textShort": "Unto us a child is born... and the government shall be upon his shoulder.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Luke's announcement uses Davidic kingdom language that Christians connect with Isaiah's promise."
+            },
+            {
+              "cardId": "pc-s09-c15",
+              "reference": "Zechariah 9:9",
+              "summary": "Zion's king comes lowly and riding on an ass.",
+              "textShort": "Thy King cometh unto thee... riding upon an ass.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Zechariah during the triumphal entry."
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Prophecy Category Board 09 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "pc-session-10",
+      "title": "Prophecy Category Board 10",
+      "theme": "Sorting prophecy references by major theme",
+      "rounds": [
+        {
+          "id": "pc-010",
+          "title": "Prophecy Category Board 10",
+          "theme": "Reference-based prophecy categories",
+          "categories": [
+            "Day of the Lord",
+            "Messiah's Birth",
+            "Messiah's Suffering",
+            "Messiah's Kingship",
+            "Forerunner / Messenger"
+          ],
+          "cards": [
+            {
+              "cardId": "pc-s10-c01",
+              "reference": "Genesis 3:15",
+              "summary": "The serpent's head would be bruised by the woman's seed.",
+              "textShort": "It shall bruise thy head, and thou shalt bruise his heel.",
+              "category": "Day of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "This is commonly read by Christian interpreters as an early promise of victory over evil."
+            },
+            {
+              "cardId": "pc-s10-c02",
+              "reference": "Psalm 110:1",
+              "summary": "The Lord invites David's Lord to sit at His right hand.",
+              "textShort": "Sit thou at my right hand.",
+              "category": "Day of the Lord",
+              "difficulty": "easy",
+              "teachingNote": "Psalm 110 is one of the New Testament's most frequent messianic texts."
+            },
+            {
+              "cardId": "pc-s10-c03",
+              "reference": "Malachi 4:5-6",
+              "summary": "Elijah is promised before the great day of the Lord.",
+              "textShort": "I will send you Elijah the prophet before the coming of the great... day.",
+              "category": "Day of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "Matthew presents John the Baptist as fulfilling the Elijah-type role."
+            },
+            {
+              "cardId": "pc-s10-c04",
+              "reference": "Micah 5:2",
+              "summary": "A ruler for Israel comes from Bethlehem.",
+              "textShort": "Out of thee shall he come forth unto me that is to be ruler in Israel.",
+              "category": "Messiah's Birth",
+              "difficulty": "easy",
+              "teachingNote": "Matthew directly links Messiah's birthplace with Micah 5:2."
+            },
+            {
+              "cardId": "pc-s10-c05",
+              "reference": "Hosea 11:1",
+              "summary": "God calls His son out of Egypt.",
+              "textShort": "Out of Egypt have I called my son.",
+              "category": "Messiah's Birth",
+              "difficulty": "medium",
+              "teachingNote": "Matthew reads Israel's story typologically in relation to Jesus."
+            },
+            {
+              "cardId": "pc-s10-c06",
+              "reference": "Isaiah 7:14",
+              "summary": "A child called Immanuel is given as a sign.",
+              "textShort": "Behold, a virgin shall conceive, and bear a son.",
+              "category": "Messiah's Birth",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Isaiah 7:14 in the infancy narrative."
+            },
+            {
+              "cardId": "pc-s10-c07",
+              "reference": "Psalm 34:20",
+              "summary": "The righteous sufferer's bones are preserved.",
+              "textShort": "He keepeth all his bones: not one of them is broken.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "John cites this detail while describing Jesus' death."
+            },
+            {
+              "cardId": "pc-s10-c08",
+              "reference": "Psalm 69:21",
+              "summary": "The suffering figure receives gall and vinegar.",
+              "textShort": "In my thirst they gave me vinegar to drink.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "The Gospels connect this detail with Jesus' crucifixion."
+            },
+            {
+              "cardId": "pc-s10-c09",
+              "reference": "Isaiah 53:5",
+              "summary": "The servant is wounded and bruised for others.",
+              "textShort": "He was wounded for our transgressions.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "1 Peter explicitly uses Isaiah 53 language for Christ's suffering."
+            },
+            {
+              "cardId": "pc-s10-c10",
+              "reference": "Psalm 110:1",
+              "summary": "The Lord invites David's Lord to sit at His right hand.",
+              "textShort": "Sit thou at my right hand.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Psalm 110 is one of the New Testament's most frequent messianic texts."
+            },
+            {
+              "cardId": "pc-s10-c11",
+              "reference": "Isaiah 9:6-7",
+              "summary": "A child is born whose government and peace increase.",
+              "textShort": "Unto us a child is born... and the government shall be upon his shoulder.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Luke's announcement uses Davidic kingdom language that Christians connect with Isaiah's promise."
+            },
+            {
+              "cardId": "pc-s10-c12",
+              "reference": "Zechariah 9:9",
+              "summary": "Zion's king comes lowly and riding on an ass.",
+              "textShort": "Thy King cometh unto thee... riding upon an ass.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Zechariah during the triumphal entry."
+            },
+            {
+              "cardId": "pc-s10-c13",
+              "reference": "Malachi 3:1",
+              "summary": "A messenger prepares the way before the Lord.",
+              "textShort": "I will send my messenger, and he shall prepare the way before me.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "easy",
+              "teachingNote": "Mark uses messenger texts to frame John the Baptist's ministry."
+            },
+            {
+              "cardId": "pc-s10-c14",
+              "reference": "Malachi 4:5-6",
+              "summary": "Elijah is promised before the great day of the Lord.",
+              "textShort": "I will send you Elijah the prophet before the coming of the great... day.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "medium",
+              "teachingNote": "Matthew presents John the Baptist as fulfilling the Elijah-type role."
+            },
+            {
+              "cardId": "pc-s10-c15",
+              "reference": "Isaiah 40:3",
+              "summary": "A voice prepares the way of the Lord in the wilderness.",
+              "textShort": "Prepare ye the way of the Lord.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "easy",
+              "teachingNote": "The Synoptic Gospels connect Isaiah 40:3 with John the Baptist."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Prophecy Category Board 10 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "pc-session-11",
+      "title": "Prophecy Category Board 11",
+      "theme": "Sorting prophecy references by major theme",
+      "rounds": [
+        {
+          "id": "pc-011",
+          "title": "Prophecy Category Board 11",
+          "theme": "Reference-based prophecy categories",
+          "categories": [
+            "Messiah's Birth",
+            "Messiah's Suffering",
+            "Messiah's Kingship",
+            "Forerunner / Messenger",
+            "Nations"
+          ],
+          "cards": [
+            {
+              "cardId": "pc-s11-c01",
+              "reference": "Micah 5:2",
+              "summary": "A ruler for Israel comes from Bethlehem.",
+              "textShort": "Out of thee shall he come forth unto me that is to be ruler in Israel.",
+              "category": "Messiah's Birth",
+              "difficulty": "easy",
+              "teachingNote": "Matthew directly links Messiah's birthplace with Micah 5:2."
+            },
+            {
+              "cardId": "pc-s11-c02",
+              "reference": "Hosea 11:1",
+              "summary": "God calls His son out of Egypt.",
+              "textShort": "Out of Egypt have I called my son.",
+              "category": "Messiah's Birth",
+              "difficulty": "medium",
+              "teachingNote": "Matthew reads Israel's story typologically in relation to Jesus."
+            },
+            {
+              "cardId": "pc-s11-c03",
+              "reference": "Isaiah 7:14",
+              "summary": "A child called Immanuel is given as a sign.",
+              "textShort": "Behold, a virgin shall conceive, and bear a son.",
+              "category": "Messiah's Birth",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Isaiah 7:14 in the infancy narrative."
+            },
+            {
+              "cardId": "pc-s11-c04",
+              "reference": "Psalm 34:20",
+              "summary": "The righteous sufferer's bones are preserved.",
+              "textShort": "He keepeth all his bones: not one of them is broken.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "John cites this detail while describing Jesus' death."
+            },
+            {
+              "cardId": "pc-s11-c05",
+              "reference": "Psalm 69:21",
+              "summary": "The suffering figure receives gall and vinegar.",
+              "textShort": "In my thirst they gave me vinegar to drink.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "The Gospels connect this detail with Jesus' crucifixion."
+            },
+            {
+              "cardId": "pc-s11-c06",
+              "reference": "Isaiah 53:5",
+              "summary": "The servant is wounded and bruised for others.",
+              "textShort": "He was wounded for our transgressions.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "1 Peter explicitly uses Isaiah 53 language for Christ's suffering."
+            },
+            {
+              "cardId": "pc-s11-c07",
+              "reference": "Psalm 110:1",
+              "summary": "The Lord invites David's Lord to sit at His right hand.",
+              "textShort": "Sit thou at my right hand.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Psalm 110 is one of the New Testament's most frequent messianic texts."
+            },
+            {
+              "cardId": "pc-s11-c08",
+              "reference": "Isaiah 9:6-7",
+              "summary": "A child is born whose government and peace increase.",
+              "textShort": "Unto us a child is born... and the government shall be upon his shoulder.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Luke's announcement uses Davidic kingdom language that Christians connect with Isaiah's promise."
+            },
+            {
+              "cardId": "pc-s11-c09",
+              "reference": "Zechariah 9:9",
+              "summary": "Zion's king comes lowly and riding on an ass.",
+              "textShort": "Thy King cometh unto thee... riding upon an ass.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Zechariah during the triumphal entry."
+            },
+            {
+              "cardId": "pc-s11-c10",
+              "reference": "Malachi 3:1",
+              "summary": "A messenger prepares the way before the Lord.",
+              "textShort": "I will send my messenger, and he shall prepare the way before me.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "easy",
+              "teachingNote": "Mark uses messenger texts to frame John the Baptist's ministry."
+            },
+            {
+              "cardId": "pc-s11-c11",
+              "reference": "Malachi 4:5-6",
+              "summary": "Elijah is promised before the great day of the Lord.",
+              "textShort": "I will send you Elijah the prophet before the coming of the great... day.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "medium",
+              "teachingNote": "Matthew presents John the Baptist as fulfilling the Elijah-type role."
+            },
+            {
+              "cardId": "pc-s11-c12",
+              "reference": "Isaiah 40:3",
+              "summary": "A voice prepares the way of the Lord in the wilderness.",
+              "textShort": "Prepare ye the way of the Lord.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "easy",
+              "teachingNote": "The Synoptic Gospels connect Isaiah 40:3 with John the Baptist."
+            },
+            {
+              "cardId": "pc-s11-c13",
+              "reference": "Isaiah 42:1-4",
+              "summary": "The servant is upheld by God and brings judgment to the Gentiles.",
+              "textShort": "Behold my servant, whom I uphold; mine elect.",
+              "category": "Nations",
+              "difficulty": "medium",
+              "teachingNote": "Matthew's quotation presents Jesus' ministry through Isaiah's servant language."
+            },
+            {
+              "cardId": "pc-s11-c14",
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram.",
+              "textShort": "In thee shall all families of the earth be blessed.",
+              "category": "Nations",
+              "difficulty": "easy",
+              "teachingNote": "The New Testament explicitly applies this Abraham promise to the gospel going to the nations."
+            },
+            {
+              "cardId": "pc-s11-c15",
+              "reference": "Isaiah 9:1-2",
+              "summary": "Light comes to Galilee and people in darkness.",
+              "textShort": "The people that walked in darkness have seen a great light.",
+              "category": "Nations",
+              "difficulty": "easy",
+              "teachingNote": "The Gospel citation ties the prophecy to Jesus' public ministry in Galilee."
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Prophecy Category Board 11 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "pc-session-12",
+      "title": "Prophecy Category Board 12",
+      "theme": "Sorting prophecy references by major theme",
+      "rounds": [
+        {
+          "id": "pc-012",
+          "title": "Prophecy Category Board 12",
+          "theme": "Reference-based prophecy categories",
+          "categories": [
+            "Messiah's Suffering",
+            "Messiah's Kingship",
+            "Forerunner / Messenger",
+            "Nations",
+            "Jerusalem / Temple"
+          ],
+          "cards": [
+            {
+              "cardId": "pc-s12-c01",
+              "reference": "Psalm 34:20",
+              "summary": "The righteous sufferer's bones are preserved.",
+              "textShort": "He keepeth all his bones: not one of them is broken.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "John cites this detail while describing Jesus' death."
+            },
+            {
+              "cardId": "pc-s12-c02",
+              "reference": "Psalm 69:21",
+              "summary": "The suffering figure receives gall and vinegar.",
+              "textShort": "In my thirst they gave me vinegar to drink.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "The Gospels connect this detail with Jesus' crucifixion."
+            },
+            {
+              "cardId": "pc-s12-c03",
+              "reference": "Isaiah 53:5",
+              "summary": "The servant is wounded and bruised for others.",
+              "textShort": "He was wounded for our transgressions.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "1 Peter explicitly uses Isaiah 53 language for Christ's suffering."
+            },
+            {
+              "cardId": "pc-s12-c04",
+              "reference": "Psalm 110:1",
+              "summary": "The Lord invites David's Lord to sit at His right hand.",
+              "textShort": "Sit thou at my right hand.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Psalm 110 is one of the New Testament's most frequent messianic texts."
+            },
+            {
+              "cardId": "pc-s12-c05",
+              "reference": "Isaiah 9:6-7",
+              "summary": "A child is born whose government and peace increase.",
+              "textShort": "Unto us a child is born... and the government shall be upon his shoulder.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Luke's announcement uses Davidic kingdom language that Christians connect with Isaiah's promise."
+            },
+            {
+              "cardId": "pc-s12-c06",
+              "reference": "Zechariah 9:9",
+              "summary": "Zion's king comes lowly and riding on an ass.",
+              "textShort": "Thy King cometh unto thee... riding upon an ass.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Zechariah during the triumphal entry."
+            },
+            {
+              "cardId": "pc-s12-c07",
+              "reference": "Malachi 3:1",
+              "summary": "A messenger prepares the way before the Lord.",
+              "textShort": "I will send my messenger, and he shall prepare the way before me.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "easy",
+              "teachingNote": "Mark uses messenger texts to frame John the Baptist's ministry."
+            },
+            {
+              "cardId": "pc-s12-c08",
+              "reference": "Malachi 4:5-6",
+              "summary": "Elijah is promised before the great day of the Lord.",
+              "textShort": "I will send you Elijah the prophet before the coming of the great... day.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "medium",
+              "teachingNote": "Matthew presents John the Baptist as fulfilling the Elijah-type role."
+            },
+            {
+              "cardId": "pc-s12-c09",
+              "reference": "Isaiah 40:3",
+              "summary": "A voice prepares the way of the Lord in the wilderness.",
+              "textShort": "Prepare ye the way of the Lord.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "easy",
+              "teachingNote": "The Synoptic Gospels connect Isaiah 40:3 with John the Baptist."
+            },
+            {
+              "cardId": "pc-s12-c10",
+              "reference": "Isaiah 42:1-4",
+              "summary": "The servant is upheld by God and brings judgment to the Gentiles.",
+              "textShort": "Behold my servant, whom I uphold; mine elect.",
+              "category": "Nations",
+              "difficulty": "medium",
+              "teachingNote": "Matthew's quotation presents Jesus' ministry through Isaiah's servant language."
+            },
+            {
+              "cardId": "pc-s12-c11",
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram.",
+              "textShort": "In thee shall all families of the earth be blessed.",
+              "category": "Nations",
+              "difficulty": "easy",
+              "teachingNote": "The New Testament explicitly applies this Abraham promise to the gospel going to the nations."
+            },
+            {
+              "cardId": "pc-s12-c12",
+              "reference": "Isaiah 9:1-2",
+              "summary": "Light comes to Galilee and people in darkness.",
+              "textShort": "The people that walked in darkness have seen a great light.",
+              "category": "Nations",
+              "difficulty": "easy",
+              "teachingNote": "The Gospel citation ties the prophecy to Jesus' public ministry in Galilee."
+            },
+            {
+              "cardId": "pc-s12-c13",
+              "reference": "Psalm 69:9",
+              "summary": "Zeal for the Lord's house consumes the speaker.",
+              "textShort": "The zeal of thine house hath eaten me up.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "medium",
+              "teachingNote": "John presents the temple cleansing through the lens of Psalm 69."
+            },
+            {
+              "cardId": "pc-s12-c14",
+              "reference": "Zechariah 9:9",
+              "summary": "Zion's king comes lowly and riding on an ass.",
+              "textShort": "Thy King cometh unto thee... riding upon an ass.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Zechariah during the triumphal entry."
+            },
+            {
+              "cardId": "pc-s12-c15",
+              "reference": "Zechariah 11:12-13",
+              "summary": "Thirty pieces of silver are weighed and connected with the potter.",
+              "textShort": "So they weighed for my price thirty pieces of silver.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "medium",
+              "teachingNote": "Matthew cites the event as prophetic fulfillment; the textual attribution is discussed by interpreters."
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Prophecy Category Board 12 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "pc-session-13",
+      "title": "Prophecy Category Board 13",
+      "theme": "Sorting prophecy references by major theme",
+      "rounds": [
+        {
+          "id": "pc-013",
+          "title": "Prophecy Category Board 13",
+          "theme": "Reference-based prophecy categories",
+          "categories": [
+            "Messiah's Kingship",
+            "Forerunner / Messenger",
+            "Nations",
+            "Jerusalem / Temple",
+            "Resurrection / Victory"
+          ],
+          "cards": [
+            {
+              "cardId": "pc-s13-c01",
+              "reference": "Psalm 110:1",
+              "summary": "The Lord invites David's Lord to sit at His right hand.",
+              "textShort": "Sit thou at my right hand.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Psalm 110 is one of the New Testament's most frequent messianic texts."
+            },
+            {
+              "cardId": "pc-s13-c02",
+              "reference": "Isaiah 9:6-7",
+              "summary": "A child is born whose government and peace increase.",
+              "textShort": "Unto us a child is born... and the government shall be upon his shoulder.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Luke's announcement uses Davidic kingdom language that Christians connect with Isaiah's promise."
+            },
+            {
+              "cardId": "pc-s13-c03",
+              "reference": "Zechariah 9:9",
+              "summary": "Zion's king comes lowly and riding on an ass.",
+              "textShort": "Thy King cometh unto thee... riding upon an ass.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Zechariah during the triumphal entry."
+            },
+            {
+              "cardId": "pc-s13-c04",
+              "reference": "Malachi 3:1",
+              "summary": "A messenger prepares the way before the Lord.",
+              "textShort": "I will send my messenger, and he shall prepare the way before me.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "easy",
+              "teachingNote": "Mark uses messenger texts to frame John the Baptist's ministry."
+            },
+            {
+              "cardId": "pc-s13-c05",
+              "reference": "Malachi 4:5-6",
+              "summary": "Elijah is promised before the great day of the Lord.",
+              "textShort": "I will send you Elijah the prophet before the coming of the great... day.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "medium",
+              "teachingNote": "Matthew presents John the Baptist as fulfilling the Elijah-type role."
+            },
+            {
+              "cardId": "pc-s13-c06",
+              "reference": "Isaiah 40:3",
+              "summary": "A voice prepares the way of the Lord in the wilderness.",
+              "textShort": "Prepare ye the way of the Lord.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "easy",
+              "teachingNote": "The Synoptic Gospels connect Isaiah 40:3 with John the Baptist."
+            },
+            {
+              "cardId": "pc-s13-c07",
+              "reference": "Isaiah 42:1-4",
+              "summary": "The servant is upheld by God and brings judgment to the Gentiles.",
+              "textShort": "Behold my servant, whom I uphold; mine elect.",
+              "category": "Nations",
+              "difficulty": "medium",
+              "teachingNote": "Matthew's quotation presents Jesus' ministry through Isaiah's servant language."
+            },
+            {
+              "cardId": "pc-s13-c08",
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram.",
+              "textShort": "In thee shall all families of the earth be blessed.",
+              "category": "Nations",
+              "difficulty": "easy",
+              "teachingNote": "The New Testament explicitly applies this Abraham promise to the gospel going to the nations."
+            },
+            {
+              "cardId": "pc-s13-c09",
+              "reference": "Isaiah 9:1-2",
+              "summary": "Light comes to Galilee and people in darkness.",
+              "textShort": "The people that walked in darkness have seen a great light.",
+              "category": "Nations",
+              "difficulty": "easy",
+              "teachingNote": "The Gospel citation ties the prophecy to Jesus' public ministry in Galilee."
+            },
+            {
+              "cardId": "pc-s13-c10",
+              "reference": "Psalm 69:9",
+              "summary": "Zeal for the Lord's house consumes the speaker.",
+              "textShort": "The zeal of thine house hath eaten me up.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "medium",
+              "teachingNote": "John presents the temple cleansing through the lens of Psalm 69."
+            },
+            {
+              "cardId": "pc-s13-c11",
+              "reference": "Zechariah 9:9",
+              "summary": "Zion's king comes lowly and riding on an ass.",
+              "textShort": "Thy King cometh unto thee... riding upon an ass.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Zechariah during the triumphal entry."
+            },
+            {
+              "cardId": "pc-s13-c12",
+              "reference": "Zechariah 11:12-13",
+              "summary": "Thirty pieces of silver are weighed and connected with the potter.",
+              "textShort": "So they weighed for my price thirty pieces of silver.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "medium",
+              "teachingNote": "Matthew cites the event as prophetic fulfillment; the textual attribution is discussed by interpreters."
+            },
+            {
+              "cardId": "pc-s13-c13",
+              "reference": "Psalm 16:10",
+              "summary": "The Holy One would not be left to corruption.",
+              "textShort": "Neither wilt thou suffer thine Holy One to see corruption.",
+              "category": "Resurrection / Victory",
+              "difficulty": "easy",
+              "teachingNote": "Acts 2 directly connects Psalm 16 with the resurrection of Jesus."
+            },
+            {
+              "cardId": "pc-s13-c14",
+              "reference": "Psalm 118:22",
+              "summary": "The rejected stone becomes the head of the corner.",
+              "textShort": "The stone which the builders refused is become the head stone.",
+              "category": "Resurrection / Victory",
+              "difficulty": "easy",
+              "teachingNote": "Acts directly applies the stone image to Jesus' rejection and exaltation."
+            },
+            {
+              "cardId": "pc-s13-c15",
+              "reference": "Genesis 3:15",
+              "summary": "The serpent's head would be bruised by the woman's seed.",
+              "textShort": "It shall bruise thy head, and thou shalt bruise his heel.",
+              "category": "Resurrection / Victory",
+              "difficulty": "medium",
+              "teachingNote": "This is commonly read by Christian interpreters as an early promise of victory over evil."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Prophecy Category Board 13 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "pc-session-14",
+      "title": "Prophecy Category Board 14",
+      "theme": "Sorting prophecy references by major theme",
+      "rounds": [
+        {
+          "id": "pc-014",
+          "title": "Prophecy Category Board 14",
+          "theme": "Reference-based prophecy categories",
+          "categories": [
+            "Forerunner / Messenger",
+            "Nations",
+            "Jerusalem / Temple",
+            "Resurrection / Victory",
+            "Betrayal / Rejection"
+          ],
+          "cards": [
+            {
+              "cardId": "pc-s14-c01",
+              "reference": "Malachi 3:1",
+              "summary": "A messenger prepares the way before the Lord.",
+              "textShort": "I will send my messenger, and he shall prepare the way before me.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "easy",
+              "teachingNote": "Mark uses messenger texts to frame John the Baptist's ministry."
+            },
+            {
+              "cardId": "pc-s14-c02",
+              "reference": "Malachi 4:5-6",
+              "summary": "Elijah is promised before the great day of the Lord.",
+              "textShort": "I will send you Elijah the prophet before the coming of the great... day.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "medium",
+              "teachingNote": "Matthew presents John the Baptist as fulfilling the Elijah-type role."
+            },
+            {
+              "cardId": "pc-s14-c03",
+              "reference": "Isaiah 40:3",
+              "summary": "A voice prepares the way of the Lord in the wilderness.",
+              "textShort": "Prepare ye the way of the Lord.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "easy",
+              "teachingNote": "The Synoptic Gospels connect Isaiah 40:3 with John the Baptist."
+            },
+            {
+              "cardId": "pc-s14-c04",
+              "reference": "Isaiah 42:1-4",
+              "summary": "The servant is upheld by God and brings judgment to the Gentiles.",
+              "textShort": "Behold my servant, whom I uphold; mine elect.",
+              "category": "Nations",
+              "difficulty": "medium",
+              "teachingNote": "Matthew's quotation presents Jesus' ministry through Isaiah's servant language."
+            },
+            {
+              "cardId": "pc-s14-c05",
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram.",
+              "textShort": "In thee shall all families of the earth be blessed.",
+              "category": "Nations",
+              "difficulty": "easy",
+              "teachingNote": "The New Testament explicitly applies this Abraham promise to the gospel going to the nations."
+            },
+            {
+              "cardId": "pc-s14-c06",
+              "reference": "Isaiah 9:1-2",
+              "summary": "Light comes to Galilee and people in darkness.",
+              "textShort": "The people that walked in darkness have seen a great light.",
+              "category": "Nations",
+              "difficulty": "easy",
+              "teachingNote": "The Gospel citation ties the prophecy to Jesus' public ministry in Galilee."
+            },
+            {
+              "cardId": "pc-s14-c07",
+              "reference": "Psalm 69:9",
+              "summary": "Zeal for the Lord's house consumes the speaker.",
+              "textShort": "The zeal of thine house hath eaten me up.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "medium",
+              "teachingNote": "John presents the temple cleansing through the lens of Psalm 69."
+            },
+            {
+              "cardId": "pc-s14-c08",
+              "reference": "Zechariah 9:9",
+              "summary": "Zion's king comes lowly and riding on an ass.",
+              "textShort": "Thy King cometh unto thee... riding upon an ass.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Zechariah during the triumphal entry."
+            },
+            {
+              "cardId": "pc-s14-c09",
+              "reference": "Zechariah 11:12-13",
+              "summary": "Thirty pieces of silver are weighed and connected with the potter.",
+              "textShort": "So they weighed for my price thirty pieces of silver.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "medium",
+              "teachingNote": "Matthew cites the event as prophetic fulfillment; the textual attribution is discussed by interpreters."
+            },
+            {
+              "cardId": "pc-s14-c10",
+              "reference": "Psalm 16:10",
+              "summary": "The Holy One would not be left to corruption.",
+              "textShort": "Neither wilt thou suffer thine Holy One to see corruption.",
+              "category": "Resurrection / Victory",
+              "difficulty": "easy",
+              "teachingNote": "Acts 2 directly connects Psalm 16 with the resurrection of Jesus."
+            },
+            {
+              "cardId": "pc-s14-c11",
+              "reference": "Psalm 118:22",
+              "summary": "The rejected stone becomes the head of the corner.",
+              "textShort": "The stone which the builders refused is become the head stone.",
+              "category": "Resurrection / Victory",
+              "difficulty": "easy",
+              "teachingNote": "Acts directly applies the stone image to Jesus' rejection and exaltation."
+            },
+            {
+              "cardId": "pc-s14-c12",
+              "reference": "Genesis 3:15",
+              "summary": "The serpent's head would be bruised by the woman's seed.",
+              "textShort": "It shall bruise thy head, and thou shalt bruise his heel.",
+              "category": "Resurrection / Victory",
+              "difficulty": "medium",
+              "teachingNote": "This is commonly read by Christian interpreters as an early promise of victory over evil."
+            },
+            {
+              "cardId": "pc-s14-c13",
+              "reference": "Psalm 118:22",
+              "summary": "The rejected stone becomes the head of the corner.",
+              "textShort": "The stone which the builders refused is become the head stone.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "easy",
+              "teachingNote": "Acts directly applies the stone image to Jesus' rejection and exaltation."
+            },
+            {
+              "cardId": "pc-s14-c14",
+              "reference": "Isaiah 53:3",
+              "summary": "The servant is despised, rejected, and acquainted with grief.",
+              "textShort": "He is despised and rejected of men.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "medium",
+              "teachingNote": "This pairing is thematic rather than a direct quotation, so the wording stays careful."
+            },
+            {
+              "cardId": "pc-s14-c15",
+              "reference": "Zechariah 11:12-13",
+              "summary": "Thirty pieces of silver are weighed and connected with the potter.",
+              "textShort": "So they weighed for my price thirty pieces of silver.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "medium",
+              "teachingNote": "Matthew cites the event as prophetic fulfillment; the textual attribution is discussed by interpreters."
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Prophecy Category Board 14 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "pc-session-15",
+      "title": "Prophecy Category Board 15",
+      "theme": "Sorting prophecy references by major theme",
+      "rounds": [
+        {
+          "id": "pc-015",
+          "title": "Prophecy Category Board 15",
+          "theme": "Reference-based prophecy categories",
+          "categories": [
+            "Nations",
+            "Jerusalem / Temple",
+            "Resurrection / Victory",
+            "Betrayal / Rejection",
+            "New Covenant"
+          ],
+          "cards": [
+            {
+              "cardId": "pc-s15-c01",
+              "reference": "Isaiah 42:1-4",
+              "summary": "The servant is upheld by God and brings judgment to the Gentiles.",
+              "textShort": "Behold my servant, whom I uphold; mine elect.",
+              "category": "Nations",
+              "difficulty": "medium",
+              "teachingNote": "Matthew's quotation presents Jesus' ministry through Isaiah's servant language."
+            },
+            {
+              "cardId": "pc-s15-c02",
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram.",
+              "textShort": "In thee shall all families of the earth be blessed.",
+              "category": "Nations",
+              "difficulty": "easy",
+              "teachingNote": "The New Testament explicitly applies this Abraham promise to the gospel going to the nations."
+            },
+            {
+              "cardId": "pc-s15-c03",
+              "reference": "Isaiah 9:1-2",
+              "summary": "Light comes to Galilee and people in darkness.",
+              "textShort": "The people that walked in darkness have seen a great light.",
+              "category": "Nations",
+              "difficulty": "easy",
+              "teachingNote": "The Gospel citation ties the prophecy to Jesus' public ministry in Galilee."
+            },
+            {
+              "cardId": "pc-s15-c04",
+              "reference": "Psalm 69:9",
+              "summary": "Zeal for the Lord's house consumes the speaker.",
+              "textShort": "The zeal of thine house hath eaten me up.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "medium",
+              "teachingNote": "John presents the temple cleansing through the lens of Psalm 69."
+            },
+            {
+              "cardId": "pc-s15-c05",
+              "reference": "Zechariah 9:9",
+              "summary": "Zion's king comes lowly and riding on an ass.",
+              "textShort": "Thy King cometh unto thee... riding upon an ass.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Zechariah during the triumphal entry."
+            },
+            {
+              "cardId": "pc-s15-c06",
+              "reference": "Zechariah 11:12-13",
+              "summary": "Thirty pieces of silver are weighed and connected with the potter.",
+              "textShort": "So they weighed for my price thirty pieces of silver.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "medium",
+              "teachingNote": "Matthew cites the event as prophetic fulfillment; the textual attribution is discussed by interpreters."
+            },
+            {
+              "cardId": "pc-s15-c07",
+              "reference": "Psalm 16:10",
+              "summary": "The Holy One would not be left to corruption.",
+              "textShort": "Neither wilt thou suffer thine Holy One to see corruption.",
+              "category": "Resurrection / Victory",
+              "difficulty": "easy",
+              "teachingNote": "Acts 2 directly connects Psalm 16 with the resurrection of Jesus."
+            },
+            {
+              "cardId": "pc-s15-c08",
+              "reference": "Psalm 118:22",
+              "summary": "The rejected stone becomes the head of the corner.",
+              "textShort": "The stone which the builders refused is become the head stone.",
+              "category": "Resurrection / Victory",
+              "difficulty": "easy",
+              "teachingNote": "Acts directly applies the stone image to Jesus' rejection and exaltation."
+            },
+            {
+              "cardId": "pc-s15-c09",
+              "reference": "Genesis 3:15",
+              "summary": "The serpent's head would be bruised by the woman's seed.",
+              "textShort": "It shall bruise thy head, and thou shalt bruise his heel.",
+              "category": "Resurrection / Victory",
+              "difficulty": "medium",
+              "teachingNote": "This is commonly read by Christian interpreters as an early promise of victory over evil."
+            },
+            {
+              "cardId": "pc-s15-c10",
+              "reference": "Psalm 118:22",
+              "summary": "The rejected stone becomes the head of the corner.",
+              "textShort": "The stone which the builders refused is become the head stone.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "easy",
+              "teachingNote": "Acts directly applies the stone image to Jesus' rejection and exaltation."
+            },
+            {
+              "cardId": "pc-s15-c11",
+              "reference": "Isaiah 53:3",
+              "summary": "The servant is despised, rejected, and acquainted with grief.",
+              "textShort": "He is despised and rejected of men.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "medium",
+              "teachingNote": "This pairing is thematic rather than a direct quotation, so the wording stays careful."
+            },
+            {
+              "cardId": "pc-s15-c12",
+              "reference": "Zechariah 11:12-13",
+              "summary": "Thirty pieces of silver are weighed and connected with the potter.",
+              "textShort": "So they weighed for my price thirty pieces of silver.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "medium",
+              "teachingNote": "Matthew cites the event as prophetic fulfillment; the textual attribution is discussed by interpreters."
+            },
+            {
+              "cardId": "pc-s15-c13",
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram.",
+              "textShort": "In thee shall all families of the earth be blessed.",
+              "category": "New Covenant",
+              "difficulty": "easy",
+              "teachingNote": "The New Testament explicitly applies this Abraham promise to the gospel going to the nations."
+            },
+            {
+              "cardId": "pc-s15-c14",
+              "reference": "Isaiah 42:1-4",
+              "summary": "The servant is upheld by God and brings judgment to the Gentiles.",
+              "textShort": "Behold my servant, whom I uphold; mine elect.",
+              "category": "New Covenant",
+              "difficulty": "medium",
+              "teachingNote": "Matthew's quotation presents Jesus' ministry through Isaiah's servant language."
+            },
+            {
+              "cardId": "pc-s15-c15",
+              "reference": "Isaiah 53:5",
+              "summary": "The servant is wounded and bruised for others.",
+              "textShort": "He was wounded for our transgressions.",
+              "category": "New Covenant",
+              "difficulty": "easy",
+              "teachingNote": "1 Peter explicitly uses Isaiah 53 language for Christ's suffering."
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Prophecy Category Board 15 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "pc-session-16",
+      "title": "Prophecy Category Board 16",
+      "theme": "Sorting prophecy references by major theme",
+      "rounds": [
+        {
+          "id": "pc-016",
+          "title": "Prophecy Category Board 16",
+          "theme": "Reference-based prophecy categories",
+          "categories": [
+            "Jerusalem / Temple",
+            "Resurrection / Victory",
+            "Betrayal / Rejection",
+            "New Covenant",
+            "Day of the Lord"
+          ],
+          "cards": [
+            {
+              "cardId": "pc-s16-c01",
+              "reference": "Psalm 69:9",
+              "summary": "Zeal for the Lord's house consumes the speaker.",
+              "textShort": "The zeal of thine house hath eaten me up.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "medium",
+              "teachingNote": "John presents the temple cleansing through the lens of Psalm 69."
+            },
+            {
+              "cardId": "pc-s16-c02",
+              "reference": "Zechariah 9:9",
+              "summary": "Zion's king comes lowly and riding on an ass.",
+              "textShort": "Thy King cometh unto thee... riding upon an ass.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Zechariah during the triumphal entry."
+            },
+            {
+              "cardId": "pc-s16-c03",
+              "reference": "Zechariah 11:12-13",
+              "summary": "Thirty pieces of silver are weighed and connected with the potter.",
+              "textShort": "So they weighed for my price thirty pieces of silver.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "medium",
+              "teachingNote": "Matthew cites the event as prophetic fulfillment; the textual attribution is discussed by interpreters."
+            },
+            {
+              "cardId": "pc-s16-c04",
+              "reference": "Psalm 16:10",
+              "summary": "The Holy One would not be left to corruption.",
+              "textShort": "Neither wilt thou suffer thine Holy One to see corruption.",
+              "category": "Resurrection / Victory",
+              "difficulty": "easy",
+              "teachingNote": "Acts 2 directly connects Psalm 16 with the resurrection of Jesus."
+            },
+            {
+              "cardId": "pc-s16-c05",
+              "reference": "Psalm 118:22",
+              "summary": "The rejected stone becomes the head of the corner.",
+              "textShort": "The stone which the builders refused is become the head stone.",
+              "category": "Resurrection / Victory",
+              "difficulty": "easy",
+              "teachingNote": "Acts directly applies the stone image to Jesus' rejection and exaltation."
+            },
+            {
+              "cardId": "pc-s16-c06",
+              "reference": "Genesis 3:15",
+              "summary": "The serpent's head would be bruised by the woman's seed.",
+              "textShort": "It shall bruise thy head, and thou shalt bruise his heel.",
+              "category": "Resurrection / Victory",
+              "difficulty": "medium",
+              "teachingNote": "This is commonly read by Christian interpreters as an early promise of victory over evil."
+            },
+            {
+              "cardId": "pc-s16-c07",
+              "reference": "Psalm 118:22",
+              "summary": "The rejected stone becomes the head of the corner.",
+              "textShort": "The stone which the builders refused is become the head stone.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "easy",
+              "teachingNote": "Acts directly applies the stone image to Jesus' rejection and exaltation."
+            },
+            {
+              "cardId": "pc-s16-c08",
+              "reference": "Isaiah 53:3",
+              "summary": "The servant is despised, rejected, and acquainted with grief.",
+              "textShort": "He is despised and rejected of men.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "medium",
+              "teachingNote": "This pairing is thematic rather than a direct quotation, so the wording stays careful."
+            },
+            {
+              "cardId": "pc-s16-c09",
+              "reference": "Zechariah 11:12-13",
+              "summary": "Thirty pieces of silver are weighed and connected with the potter.",
+              "textShort": "So they weighed for my price thirty pieces of silver.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "medium",
+              "teachingNote": "Matthew cites the event as prophetic fulfillment; the textual attribution is discussed by interpreters."
+            },
+            {
+              "cardId": "pc-s16-c10",
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram.",
+              "textShort": "In thee shall all families of the earth be blessed.",
+              "category": "New Covenant",
+              "difficulty": "easy",
+              "teachingNote": "The New Testament explicitly applies this Abraham promise to the gospel going to the nations."
+            },
+            {
+              "cardId": "pc-s16-c11",
+              "reference": "Isaiah 42:1-4",
+              "summary": "The servant is upheld by God and brings judgment to the Gentiles.",
+              "textShort": "Behold my servant, whom I uphold; mine elect.",
+              "category": "New Covenant",
+              "difficulty": "medium",
+              "teachingNote": "Matthew's quotation presents Jesus' ministry through Isaiah's servant language."
+            },
+            {
+              "cardId": "pc-s16-c12",
+              "reference": "Isaiah 53:5",
+              "summary": "The servant is wounded and bruised for others.",
+              "textShort": "He was wounded for our transgressions.",
+              "category": "New Covenant",
+              "difficulty": "easy",
+              "teachingNote": "1 Peter explicitly uses Isaiah 53 language for Christ's suffering."
+            },
+            {
+              "cardId": "pc-s16-c13",
+              "reference": "Psalm 110:1",
+              "summary": "The Lord invites David's Lord to sit at His right hand.",
+              "textShort": "Sit thou at my right hand.",
+              "category": "Day of the Lord",
+              "difficulty": "easy",
+              "teachingNote": "Psalm 110 is one of the New Testament's most frequent messianic texts."
+            },
+            {
+              "cardId": "pc-s16-c14",
+              "reference": "Malachi 4:5-6",
+              "summary": "Elijah is promised before the great day of the Lord.",
+              "textShort": "I will send you Elijah the prophet before the coming of the great... day.",
+              "category": "Day of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "Matthew presents John the Baptist as fulfilling the Elijah-type role."
+            },
+            {
+              "cardId": "pc-s16-c15",
+              "reference": "Genesis 3:15",
+              "summary": "The serpent's head would be bruised by the woman's seed.",
+              "textShort": "It shall bruise thy head, and thou shalt bruise his heel.",
+              "category": "Day of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "This is commonly read by Christian interpreters as an early promise of victory over evil."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Prophecy Category Board 16 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "pc-session-17",
+      "title": "Prophecy Category Board 17",
+      "theme": "Sorting prophecy references by major theme",
+      "rounds": [
+        {
+          "id": "pc-017",
+          "title": "Prophecy Category Board 17",
+          "theme": "Reference-based prophecy categories",
+          "categories": [
+            "Resurrection / Victory",
+            "Betrayal / Rejection",
+            "New Covenant",
+            "Day of the Lord",
+            "Messiah's Birth"
+          ],
+          "cards": [
+            {
+              "cardId": "pc-s17-c01",
+              "reference": "Psalm 16:10",
+              "summary": "The Holy One would not be left to corruption.",
+              "textShort": "Neither wilt thou suffer thine Holy One to see corruption.",
+              "category": "Resurrection / Victory",
+              "difficulty": "easy",
+              "teachingNote": "Acts 2 directly connects Psalm 16 with the resurrection of Jesus."
+            },
+            {
+              "cardId": "pc-s17-c02",
+              "reference": "Psalm 118:22",
+              "summary": "The rejected stone becomes the head of the corner.",
+              "textShort": "The stone which the builders refused is become the head stone.",
+              "category": "Resurrection / Victory",
+              "difficulty": "easy",
+              "teachingNote": "Acts directly applies the stone image to Jesus' rejection and exaltation."
+            },
+            {
+              "cardId": "pc-s17-c03",
+              "reference": "Genesis 3:15",
+              "summary": "The serpent's head would be bruised by the woman's seed.",
+              "textShort": "It shall bruise thy head, and thou shalt bruise his heel.",
+              "category": "Resurrection / Victory",
+              "difficulty": "medium",
+              "teachingNote": "This is commonly read by Christian interpreters as an early promise of victory over evil."
+            },
+            {
+              "cardId": "pc-s17-c04",
+              "reference": "Psalm 118:22",
+              "summary": "The rejected stone becomes the head of the corner.",
+              "textShort": "The stone which the builders refused is become the head stone.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "easy",
+              "teachingNote": "Acts directly applies the stone image to Jesus' rejection and exaltation."
+            },
+            {
+              "cardId": "pc-s17-c05",
+              "reference": "Isaiah 53:3",
+              "summary": "The servant is despised, rejected, and acquainted with grief.",
+              "textShort": "He is despised and rejected of men.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "medium",
+              "teachingNote": "This pairing is thematic rather than a direct quotation, so the wording stays careful."
+            },
+            {
+              "cardId": "pc-s17-c06",
+              "reference": "Zechariah 11:12-13",
+              "summary": "Thirty pieces of silver are weighed and connected with the potter.",
+              "textShort": "So they weighed for my price thirty pieces of silver.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "medium",
+              "teachingNote": "Matthew cites the event as prophetic fulfillment; the textual attribution is discussed by interpreters."
+            },
+            {
+              "cardId": "pc-s17-c07",
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram.",
+              "textShort": "In thee shall all families of the earth be blessed.",
+              "category": "New Covenant",
+              "difficulty": "easy",
+              "teachingNote": "The New Testament explicitly applies this Abraham promise to the gospel going to the nations."
+            },
+            {
+              "cardId": "pc-s17-c08",
+              "reference": "Isaiah 42:1-4",
+              "summary": "The servant is upheld by God and brings judgment to the Gentiles.",
+              "textShort": "Behold my servant, whom I uphold; mine elect.",
+              "category": "New Covenant",
+              "difficulty": "medium",
+              "teachingNote": "Matthew's quotation presents Jesus' ministry through Isaiah's servant language."
+            },
+            {
+              "cardId": "pc-s17-c09",
+              "reference": "Isaiah 53:5",
+              "summary": "The servant is wounded and bruised for others.",
+              "textShort": "He was wounded for our transgressions.",
+              "category": "New Covenant",
+              "difficulty": "easy",
+              "teachingNote": "1 Peter explicitly uses Isaiah 53 language for Christ's suffering."
+            },
+            {
+              "cardId": "pc-s17-c10",
+              "reference": "Psalm 110:1",
+              "summary": "The Lord invites David's Lord to sit at His right hand.",
+              "textShort": "Sit thou at my right hand.",
+              "category": "Day of the Lord",
+              "difficulty": "easy",
+              "teachingNote": "Psalm 110 is one of the New Testament's most frequent messianic texts."
+            },
+            {
+              "cardId": "pc-s17-c11",
+              "reference": "Malachi 4:5-6",
+              "summary": "Elijah is promised before the great day of the Lord.",
+              "textShort": "I will send you Elijah the prophet before the coming of the great... day.",
+              "category": "Day of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "Matthew presents John the Baptist as fulfilling the Elijah-type role."
+            },
+            {
+              "cardId": "pc-s17-c12",
+              "reference": "Genesis 3:15",
+              "summary": "The serpent's head would be bruised by the woman's seed.",
+              "textShort": "It shall bruise thy head, and thou shalt bruise his heel.",
+              "category": "Day of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "This is commonly read by Christian interpreters as an early promise of victory over evil."
+            },
+            {
+              "cardId": "pc-s17-c13",
+              "reference": "Hosea 11:1",
+              "summary": "God calls His son out of Egypt.",
+              "textShort": "Out of Egypt have I called my son.",
+              "category": "Messiah's Birth",
+              "difficulty": "medium",
+              "teachingNote": "Matthew reads Israel's story typologically in relation to Jesus."
+            },
+            {
+              "cardId": "pc-s17-c14",
+              "reference": "Isaiah 7:14",
+              "summary": "A child called Immanuel is given as a sign.",
+              "textShort": "Behold, a virgin shall conceive, and bear a son.",
+              "category": "Messiah's Birth",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Isaiah 7:14 in the infancy narrative."
+            },
+            {
+              "cardId": "pc-s17-c15",
+              "reference": "Micah 5:2",
+              "summary": "A ruler for Israel comes from Bethlehem.",
+              "textShort": "Out of thee shall he come forth unto me that is to be ruler in Israel.",
+              "category": "Messiah's Birth",
+              "difficulty": "easy",
+              "teachingNote": "Matthew directly links Messiah's birthplace with Micah 5:2."
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Prophecy Category Board 17 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "pc-session-18",
+      "title": "Prophecy Category Board 18",
+      "theme": "Sorting prophecy references by major theme",
+      "rounds": [
+        {
+          "id": "pc-018",
+          "title": "Prophecy Category Board 18",
+          "theme": "Reference-based prophecy categories",
+          "categories": [
+            "Betrayal / Rejection",
+            "New Covenant",
+            "Day of the Lord",
+            "Messiah's Birth",
+            "Messiah's Suffering"
+          ],
+          "cards": [
+            {
+              "cardId": "pc-s18-c01",
+              "reference": "Psalm 118:22",
+              "summary": "The rejected stone becomes the head of the corner.",
+              "textShort": "The stone which the builders refused is become the head stone.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "easy",
+              "teachingNote": "Acts directly applies the stone image to Jesus' rejection and exaltation."
+            },
+            {
+              "cardId": "pc-s18-c02",
+              "reference": "Isaiah 53:3",
+              "summary": "The servant is despised, rejected, and acquainted with grief.",
+              "textShort": "He is despised and rejected of men.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "medium",
+              "teachingNote": "This pairing is thematic rather than a direct quotation, so the wording stays careful."
+            },
+            {
+              "cardId": "pc-s18-c03",
+              "reference": "Zechariah 11:12-13",
+              "summary": "Thirty pieces of silver are weighed and connected with the potter.",
+              "textShort": "So they weighed for my price thirty pieces of silver.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "medium",
+              "teachingNote": "Matthew cites the event as prophetic fulfillment; the textual attribution is discussed by interpreters."
+            },
+            {
+              "cardId": "pc-s18-c04",
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram.",
+              "textShort": "In thee shall all families of the earth be blessed.",
+              "category": "New Covenant",
+              "difficulty": "easy",
+              "teachingNote": "The New Testament explicitly applies this Abraham promise to the gospel going to the nations."
+            },
+            {
+              "cardId": "pc-s18-c05",
+              "reference": "Isaiah 42:1-4",
+              "summary": "The servant is upheld by God and brings judgment to the Gentiles.",
+              "textShort": "Behold my servant, whom I uphold; mine elect.",
+              "category": "New Covenant",
+              "difficulty": "medium",
+              "teachingNote": "Matthew's quotation presents Jesus' ministry through Isaiah's servant language."
+            },
+            {
+              "cardId": "pc-s18-c06",
+              "reference": "Isaiah 53:5",
+              "summary": "The servant is wounded and bruised for others.",
+              "textShort": "He was wounded for our transgressions.",
+              "category": "New Covenant",
+              "difficulty": "easy",
+              "teachingNote": "1 Peter explicitly uses Isaiah 53 language for Christ's suffering."
+            },
+            {
+              "cardId": "pc-s18-c07",
+              "reference": "Psalm 110:1",
+              "summary": "The Lord invites David's Lord to sit at His right hand.",
+              "textShort": "Sit thou at my right hand.",
+              "category": "Day of the Lord",
+              "difficulty": "easy",
+              "teachingNote": "Psalm 110 is one of the New Testament's most frequent messianic texts."
+            },
+            {
+              "cardId": "pc-s18-c08",
+              "reference": "Malachi 4:5-6",
+              "summary": "Elijah is promised before the great day of the Lord.",
+              "textShort": "I will send you Elijah the prophet before the coming of the great... day.",
+              "category": "Day of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "Matthew presents John the Baptist as fulfilling the Elijah-type role."
+            },
+            {
+              "cardId": "pc-s18-c09",
+              "reference": "Genesis 3:15",
+              "summary": "The serpent's head would be bruised by the woman's seed.",
+              "textShort": "It shall bruise thy head, and thou shalt bruise his heel.",
+              "category": "Day of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "This is commonly read by Christian interpreters as an early promise of victory over evil."
+            },
+            {
+              "cardId": "pc-s18-c10",
+              "reference": "Hosea 11:1",
+              "summary": "God calls His son out of Egypt.",
+              "textShort": "Out of Egypt have I called my son.",
+              "category": "Messiah's Birth",
+              "difficulty": "medium",
+              "teachingNote": "Matthew reads Israel's story typologically in relation to Jesus."
+            },
+            {
+              "cardId": "pc-s18-c11",
+              "reference": "Isaiah 7:14",
+              "summary": "A child called Immanuel is given as a sign.",
+              "textShort": "Behold, a virgin shall conceive, and bear a son.",
+              "category": "Messiah's Birth",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Isaiah 7:14 in the infancy narrative."
+            },
+            {
+              "cardId": "pc-s18-c12",
+              "reference": "Micah 5:2",
+              "summary": "A ruler for Israel comes from Bethlehem.",
+              "textShort": "Out of thee shall he come forth unto me that is to be ruler in Israel.",
+              "category": "Messiah's Birth",
+              "difficulty": "easy",
+              "teachingNote": "Matthew directly links Messiah's birthplace with Micah 5:2."
+            },
+            {
+              "cardId": "pc-s18-c13",
+              "reference": "Psalm 69:21",
+              "summary": "The suffering figure receives gall and vinegar.",
+              "textShort": "In my thirst they gave me vinegar to drink.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "The Gospels connect this detail with Jesus' crucifixion."
+            },
+            {
+              "cardId": "pc-s18-c14",
+              "reference": "Isaiah 53:5",
+              "summary": "The servant is wounded and bruised for others.",
+              "textShort": "He was wounded for our transgressions.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "1 Peter explicitly uses Isaiah 53 language for Christ's suffering."
+            },
+            {
+              "cardId": "pc-s18-c15",
+              "reference": "Isaiah 53:7",
+              "summary": "The servant is oppressed yet does not open his mouth.",
+              "textShort": "He opened not his mouth.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "The Gospel scene is a widely recognized fulfillment connection to Isaiah 53."
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Prophecy Category Board 18 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "pc-session-19",
+      "title": "Prophecy Category Board 19",
+      "theme": "Sorting prophecy references by major theme",
+      "rounds": [
+        {
+          "id": "pc-019",
+          "title": "Prophecy Category Board 19",
+          "theme": "Reference-based prophecy categories",
+          "categories": [
+            "New Covenant",
+            "Day of the Lord",
+            "Messiah's Birth",
+            "Messiah's Suffering",
+            "Messiah's Kingship"
+          ],
+          "cards": [
+            {
+              "cardId": "pc-s19-c01",
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram.",
+              "textShort": "In thee shall all families of the earth be blessed.",
+              "category": "New Covenant",
+              "difficulty": "easy",
+              "teachingNote": "The New Testament explicitly applies this Abraham promise to the gospel going to the nations."
+            },
+            {
+              "cardId": "pc-s19-c02",
+              "reference": "Isaiah 42:1-4",
+              "summary": "The servant is upheld by God and brings judgment to the Gentiles.",
+              "textShort": "Behold my servant, whom I uphold; mine elect.",
+              "category": "New Covenant",
+              "difficulty": "medium",
+              "teachingNote": "Matthew's quotation presents Jesus' ministry through Isaiah's servant language."
+            },
+            {
+              "cardId": "pc-s19-c03",
+              "reference": "Isaiah 53:5",
+              "summary": "The servant is wounded and bruised for others.",
+              "textShort": "He was wounded for our transgressions.",
+              "category": "New Covenant",
+              "difficulty": "easy",
+              "teachingNote": "1 Peter explicitly uses Isaiah 53 language for Christ's suffering."
+            },
+            {
+              "cardId": "pc-s19-c04",
+              "reference": "Psalm 110:1",
+              "summary": "The Lord invites David's Lord to sit at His right hand.",
+              "textShort": "Sit thou at my right hand.",
+              "category": "Day of the Lord",
+              "difficulty": "easy",
+              "teachingNote": "Psalm 110 is one of the New Testament's most frequent messianic texts."
+            },
+            {
+              "cardId": "pc-s19-c05",
+              "reference": "Malachi 4:5-6",
+              "summary": "Elijah is promised before the great day of the Lord.",
+              "textShort": "I will send you Elijah the prophet before the coming of the great... day.",
+              "category": "Day of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "Matthew presents John the Baptist as fulfilling the Elijah-type role."
+            },
+            {
+              "cardId": "pc-s19-c06",
+              "reference": "Genesis 3:15",
+              "summary": "The serpent's head would be bruised by the woman's seed.",
+              "textShort": "It shall bruise thy head, and thou shalt bruise his heel.",
+              "category": "Day of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "This is commonly read by Christian interpreters as an early promise of victory over evil."
+            },
+            {
+              "cardId": "pc-s19-c07",
+              "reference": "Hosea 11:1",
+              "summary": "God calls His son out of Egypt.",
+              "textShort": "Out of Egypt have I called my son.",
+              "category": "Messiah's Birth",
+              "difficulty": "medium",
+              "teachingNote": "Matthew reads Israel's story typologically in relation to Jesus."
+            },
+            {
+              "cardId": "pc-s19-c08",
+              "reference": "Isaiah 7:14",
+              "summary": "A child called Immanuel is given as a sign.",
+              "textShort": "Behold, a virgin shall conceive, and bear a son.",
+              "category": "Messiah's Birth",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Isaiah 7:14 in the infancy narrative."
+            },
+            {
+              "cardId": "pc-s19-c09",
+              "reference": "Micah 5:2",
+              "summary": "A ruler for Israel comes from Bethlehem.",
+              "textShort": "Out of thee shall he come forth unto me that is to be ruler in Israel.",
+              "category": "Messiah's Birth",
+              "difficulty": "easy",
+              "teachingNote": "Matthew directly links Messiah's birthplace with Micah 5:2."
+            },
+            {
+              "cardId": "pc-s19-c10",
+              "reference": "Psalm 69:21",
+              "summary": "The suffering figure receives gall and vinegar.",
+              "textShort": "In my thirst they gave me vinegar to drink.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "The Gospels connect this detail with Jesus' crucifixion."
+            },
+            {
+              "cardId": "pc-s19-c11",
+              "reference": "Isaiah 53:5",
+              "summary": "The servant is wounded and bruised for others.",
+              "textShort": "He was wounded for our transgressions.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "1 Peter explicitly uses Isaiah 53 language for Christ's suffering."
+            },
+            {
+              "cardId": "pc-s19-c12",
+              "reference": "Isaiah 53:7",
+              "summary": "The servant is oppressed yet does not open his mouth.",
+              "textShort": "He opened not his mouth.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "The Gospel scene is a widely recognized fulfillment connection to Isaiah 53."
+            },
+            {
+              "cardId": "pc-s19-c13",
+              "reference": "Psalm 110:1",
+              "summary": "The Lord invites David's Lord to sit at His right hand.",
+              "textShort": "Sit thou at my right hand.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Psalm 110 is one of the New Testament's most frequent messianic texts."
+            },
+            {
+              "cardId": "pc-s19-c14",
+              "reference": "Isaiah 9:6-7",
+              "summary": "A child is born whose government and peace increase.",
+              "textShort": "Unto us a child is born... and the government shall be upon his shoulder.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Luke's announcement uses Davidic kingdom language that Christians connect with Isaiah's promise."
+            },
+            {
+              "cardId": "pc-s19-c15",
+              "reference": "Zechariah 9:9",
+              "summary": "Zion's king comes lowly and riding on an ass.",
+              "textShort": "Thy King cometh unto thee... riding upon an ass.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Zechariah during the triumphal entry."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Prophecy Category Board 19 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "pc-session-20",
+      "title": "Prophecy Category Board 20",
+      "theme": "Sorting prophecy references by major theme",
+      "rounds": [
+        {
+          "id": "pc-020",
+          "title": "Prophecy Category Board 20",
+          "theme": "Reference-based prophecy categories",
+          "categories": [
+            "Day of the Lord",
+            "Messiah's Birth",
+            "Messiah's Suffering",
+            "Messiah's Kingship",
+            "Forerunner / Messenger"
+          ],
+          "cards": [
+            {
+              "cardId": "pc-s20-c01",
+              "reference": "Psalm 110:1",
+              "summary": "The Lord invites David's Lord to sit at His right hand.",
+              "textShort": "Sit thou at my right hand.",
+              "category": "Day of the Lord",
+              "difficulty": "easy",
+              "teachingNote": "Psalm 110 is one of the New Testament's most frequent messianic texts."
+            },
+            {
+              "cardId": "pc-s20-c02",
+              "reference": "Malachi 4:5-6",
+              "summary": "Elijah is promised before the great day of the Lord.",
+              "textShort": "I will send you Elijah the prophet before the coming of the great... day.",
+              "category": "Day of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "Matthew presents John the Baptist as fulfilling the Elijah-type role."
+            },
+            {
+              "cardId": "pc-s20-c03",
+              "reference": "Genesis 3:15",
+              "summary": "The serpent's head would be bruised by the woman's seed.",
+              "textShort": "It shall bruise thy head, and thou shalt bruise his heel.",
+              "category": "Day of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "This is commonly read by Christian interpreters as an early promise of victory over evil."
+            },
+            {
+              "cardId": "pc-s20-c04",
+              "reference": "Hosea 11:1",
+              "summary": "God calls His son out of Egypt.",
+              "textShort": "Out of Egypt have I called my son.",
+              "category": "Messiah's Birth",
+              "difficulty": "medium",
+              "teachingNote": "Matthew reads Israel's story typologically in relation to Jesus."
+            },
+            {
+              "cardId": "pc-s20-c05",
+              "reference": "Isaiah 7:14",
+              "summary": "A child called Immanuel is given as a sign.",
+              "textShort": "Behold, a virgin shall conceive, and bear a son.",
+              "category": "Messiah's Birth",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Isaiah 7:14 in the infancy narrative."
+            },
+            {
+              "cardId": "pc-s20-c06",
+              "reference": "Micah 5:2",
+              "summary": "A ruler for Israel comes from Bethlehem.",
+              "textShort": "Out of thee shall he come forth unto me that is to be ruler in Israel.",
+              "category": "Messiah's Birth",
+              "difficulty": "easy",
+              "teachingNote": "Matthew directly links Messiah's birthplace with Micah 5:2."
+            },
+            {
+              "cardId": "pc-s20-c07",
+              "reference": "Psalm 69:21",
+              "summary": "The suffering figure receives gall and vinegar.",
+              "textShort": "In my thirst they gave me vinegar to drink.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "The Gospels connect this detail with Jesus' crucifixion."
+            },
+            {
+              "cardId": "pc-s20-c08",
+              "reference": "Isaiah 53:5",
+              "summary": "The servant is wounded and bruised for others.",
+              "textShort": "He was wounded for our transgressions.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "1 Peter explicitly uses Isaiah 53 language for Christ's suffering."
+            },
+            {
+              "cardId": "pc-s20-c09",
+              "reference": "Isaiah 53:7",
+              "summary": "The servant is oppressed yet does not open his mouth.",
+              "textShort": "He opened not his mouth.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "The Gospel scene is a widely recognized fulfillment connection to Isaiah 53."
+            },
+            {
+              "cardId": "pc-s20-c10",
+              "reference": "Psalm 110:1",
+              "summary": "The Lord invites David's Lord to sit at His right hand.",
+              "textShort": "Sit thou at my right hand.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Psalm 110 is one of the New Testament's most frequent messianic texts."
+            },
+            {
+              "cardId": "pc-s20-c11",
+              "reference": "Isaiah 9:6-7",
+              "summary": "A child is born whose government and peace increase.",
+              "textShort": "Unto us a child is born... and the government shall be upon his shoulder.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Luke's announcement uses Davidic kingdom language that Christians connect with Isaiah's promise."
+            },
+            {
+              "cardId": "pc-s20-c12",
+              "reference": "Zechariah 9:9",
+              "summary": "Zion's king comes lowly and riding on an ass.",
+              "textShort": "Thy King cometh unto thee... riding upon an ass.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Zechariah during the triumphal entry."
+            },
+            {
+              "cardId": "pc-s20-c13",
+              "reference": "Malachi 4:5-6",
+              "summary": "Elijah is promised before the great day of the Lord.",
+              "textShort": "I will send you Elijah the prophet before the coming of the great... day.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "medium",
+              "teachingNote": "Matthew presents John the Baptist as fulfilling the Elijah-type role."
+            },
+            {
+              "cardId": "pc-s20-c14",
+              "reference": "Isaiah 40:3",
+              "summary": "A voice prepares the way of the Lord in the wilderness.",
+              "textShort": "Prepare ye the way of the Lord.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "easy",
+              "teachingNote": "The Synoptic Gospels connect Isaiah 40:3 with John the Baptist."
+            },
+            {
+              "cardId": "pc-s20-c15",
+              "reference": "Malachi 3:1",
+              "summary": "A messenger prepares the way before the Lord.",
+              "textShort": "I will send my messenger, and he shall prepare the way before me.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "easy",
+              "teachingNote": "Mark uses messenger texts to frame John the Baptist's ministry."
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Prophecy Category Board 20 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "pc-session-21",
+      "title": "Prophecy Category Board 21",
+      "theme": "Sorting prophecy references by major theme",
+      "rounds": [
+        {
+          "id": "pc-021",
+          "title": "Prophecy Category Board 21",
+          "theme": "Reference-based prophecy categories",
+          "categories": [
+            "Messiah's Birth",
+            "Messiah's Suffering",
+            "Messiah's Kingship",
+            "Forerunner / Messenger",
+            "Nations"
+          ],
+          "cards": [
+            {
+              "cardId": "pc-s21-c01",
+              "reference": "Hosea 11:1",
+              "summary": "God calls His son out of Egypt.",
+              "textShort": "Out of Egypt have I called my son.",
+              "category": "Messiah's Birth",
+              "difficulty": "medium",
+              "teachingNote": "Matthew reads Israel's story typologically in relation to Jesus."
+            },
+            {
+              "cardId": "pc-s21-c02",
+              "reference": "Isaiah 7:14",
+              "summary": "A child called Immanuel is given as a sign.",
+              "textShort": "Behold, a virgin shall conceive, and bear a son.",
+              "category": "Messiah's Birth",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Isaiah 7:14 in the infancy narrative."
+            },
+            {
+              "cardId": "pc-s21-c03",
+              "reference": "Micah 5:2",
+              "summary": "A ruler for Israel comes from Bethlehem.",
+              "textShort": "Out of thee shall he come forth unto me that is to be ruler in Israel.",
+              "category": "Messiah's Birth",
+              "difficulty": "easy",
+              "teachingNote": "Matthew directly links Messiah's birthplace with Micah 5:2."
+            },
+            {
+              "cardId": "pc-s21-c04",
+              "reference": "Psalm 69:21",
+              "summary": "The suffering figure receives gall and vinegar.",
+              "textShort": "In my thirst they gave me vinegar to drink.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "The Gospels connect this detail with Jesus' crucifixion."
+            },
+            {
+              "cardId": "pc-s21-c05",
+              "reference": "Isaiah 53:5",
+              "summary": "The servant is wounded and bruised for others.",
+              "textShort": "He was wounded for our transgressions.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "1 Peter explicitly uses Isaiah 53 language for Christ's suffering."
+            },
+            {
+              "cardId": "pc-s21-c06",
+              "reference": "Isaiah 53:7",
+              "summary": "The servant is oppressed yet does not open his mouth.",
+              "textShort": "He opened not his mouth.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "The Gospel scene is a widely recognized fulfillment connection to Isaiah 53."
+            },
+            {
+              "cardId": "pc-s21-c07",
+              "reference": "Psalm 110:1",
+              "summary": "The Lord invites David's Lord to sit at His right hand.",
+              "textShort": "Sit thou at my right hand.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Psalm 110 is one of the New Testament's most frequent messianic texts."
+            },
+            {
+              "cardId": "pc-s21-c08",
+              "reference": "Isaiah 9:6-7",
+              "summary": "A child is born whose government and peace increase.",
+              "textShort": "Unto us a child is born... and the government shall be upon his shoulder.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Luke's announcement uses Davidic kingdom language that Christians connect with Isaiah's promise."
+            },
+            {
+              "cardId": "pc-s21-c09",
+              "reference": "Zechariah 9:9",
+              "summary": "Zion's king comes lowly and riding on an ass.",
+              "textShort": "Thy King cometh unto thee... riding upon an ass.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Zechariah during the triumphal entry."
+            },
+            {
+              "cardId": "pc-s21-c10",
+              "reference": "Malachi 4:5-6",
+              "summary": "Elijah is promised before the great day of the Lord.",
+              "textShort": "I will send you Elijah the prophet before the coming of the great... day.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "medium",
+              "teachingNote": "Matthew presents John the Baptist as fulfilling the Elijah-type role."
+            },
+            {
+              "cardId": "pc-s21-c11",
+              "reference": "Isaiah 40:3",
+              "summary": "A voice prepares the way of the Lord in the wilderness.",
+              "textShort": "Prepare ye the way of the Lord.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "easy",
+              "teachingNote": "The Synoptic Gospels connect Isaiah 40:3 with John the Baptist."
+            },
+            {
+              "cardId": "pc-s21-c12",
+              "reference": "Malachi 3:1",
+              "summary": "A messenger prepares the way before the Lord.",
+              "textShort": "I will send my messenger, and he shall prepare the way before me.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "easy",
+              "teachingNote": "Mark uses messenger texts to frame John the Baptist's ministry."
+            },
+            {
+              "cardId": "pc-s21-c13",
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram.",
+              "textShort": "In thee shall all families of the earth be blessed.",
+              "category": "Nations",
+              "difficulty": "easy",
+              "teachingNote": "The New Testament explicitly applies this Abraham promise to the gospel going to the nations."
+            },
+            {
+              "cardId": "pc-s21-c14",
+              "reference": "Isaiah 9:1-2",
+              "summary": "Light comes to Galilee and people in darkness.",
+              "textShort": "The people that walked in darkness have seen a great light.",
+              "category": "Nations",
+              "difficulty": "easy",
+              "teachingNote": "The Gospel citation ties the prophecy to Jesus' public ministry in Galilee."
+            },
+            {
+              "cardId": "pc-s21-c15",
+              "reference": "Isaiah 42:1-4",
+              "summary": "The servant is upheld by God and brings judgment to the Gentiles.",
+              "textShort": "Behold my servant, whom I uphold; mine elect.",
+              "category": "Nations",
+              "difficulty": "medium",
+              "teachingNote": "Matthew's quotation presents Jesus' ministry through Isaiah's servant language."
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Prophecy Category Board 21 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "pc-session-22",
+      "title": "Prophecy Category Board 22",
+      "theme": "Sorting prophecy references by major theme",
+      "rounds": [
+        {
+          "id": "pc-022",
+          "title": "Prophecy Category Board 22",
+          "theme": "Reference-based prophecy categories",
+          "categories": [
+            "Messiah's Suffering",
+            "Messiah's Kingship",
+            "Forerunner / Messenger",
+            "Nations",
+            "Jerusalem / Temple"
+          ],
+          "cards": [
+            {
+              "cardId": "pc-s22-c01",
+              "reference": "Psalm 69:21",
+              "summary": "The suffering figure receives gall and vinegar.",
+              "textShort": "In my thirst they gave me vinegar to drink.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "The Gospels connect this detail with Jesus' crucifixion."
+            },
+            {
+              "cardId": "pc-s22-c02",
+              "reference": "Isaiah 53:5",
+              "summary": "The servant is wounded and bruised for others.",
+              "textShort": "He was wounded for our transgressions.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "1 Peter explicitly uses Isaiah 53 language for Christ's suffering."
+            },
+            {
+              "cardId": "pc-s22-c03",
+              "reference": "Isaiah 53:7",
+              "summary": "The servant is oppressed yet does not open his mouth.",
+              "textShort": "He opened not his mouth.",
+              "category": "Messiah's Suffering",
+              "difficulty": "easy",
+              "teachingNote": "The Gospel scene is a widely recognized fulfillment connection to Isaiah 53."
+            },
+            {
+              "cardId": "pc-s22-c04",
+              "reference": "Psalm 110:1",
+              "summary": "The Lord invites David's Lord to sit at His right hand.",
+              "textShort": "Sit thou at my right hand.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Psalm 110 is one of the New Testament's most frequent messianic texts."
+            },
+            {
+              "cardId": "pc-s22-c05",
+              "reference": "Isaiah 9:6-7",
+              "summary": "A child is born whose government and peace increase.",
+              "textShort": "Unto us a child is born... and the government shall be upon his shoulder.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Luke's announcement uses Davidic kingdom language that Christians connect with Isaiah's promise."
+            },
+            {
+              "cardId": "pc-s22-c06",
+              "reference": "Zechariah 9:9",
+              "summary": "Zion's king comes lowly and riding on an ass.",
+              "textShort": "Thy King cometh unto thee... riding upon an ass.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Zechariah during the triumphal entry."
+            },
+            {
+              "cardId": "pc-s22-c07",
+              "reference": "Malachi 4:5-6",
+              "summary": "Elijah is promised before the great day of the Lord.",
+              "textShort": "I will send you Elijah the prophet before the coming of the great... day.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "medium",
+              "teachingNote": "Matthew presents John the Baptist as fulfilling the Elijah-type role."
+            },
+            {
+              "cardId": "pc-s22-c08",
+              "reference": "Isaiah 40:3",
+              "summary": "A voice prepares the way of the Lord in the wilderness.",
+              "textShort": "Prepare ye the way of the Lord.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "easy",
+              "teachingNote": "The Synoptic Gospels connect Isaiah 40:3 with John the Baptist."
+            },
+            {
+              "cardId": "pc-s22-c09",
+              "reference": "Malachi 3:1",
+              "summary": "A messenger prepares the way before the Lord.",
+              "textShort": "I will send my messenger, and he shall prepare the way before me.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "easy",
+              "teachingNote": "Mark uses messenger texts to frame John the Baptist's ministry."
+            },
+            {
+              "cardId": "pc-s22-c10",
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram.",
+              "textShort": "In thee shall all families of the earth be blessed.",
+              "category": "Nations",
+              "difficulty": "easy",
+              "teachingNote": "The New Testament explicitly applies this Abraham promise to the gospel going to the nations."
+            },
+            {
+              "cardId": "pc-s22-c11",
+              "reference": "Isaiah 9:1-2",
+              "summary": "Light comes to Galilee and people in darkness.",
+              "textShort": "The people that walked in darkness have seen a great light.",
+              "category": "Nations",
+              "difficulty": "easy",
+              "teachingNote": "The Gospel citation ties the prophecy to Jesus' public ministry in Galilee."
+            },
+            {
+              "cardId": "pc-s22-c12",
+              "reference": "Isaiah 42:1-4",
+              "summary": "The servant is upheld by God and brings judgment to the Gentiles.",
+              "textShort": "Behold my servant, whom I uphold; mine elect.",
+              "category": "Nations",
+              "difficulty": "medium",
+              "teachingNote": "Matthew's quotation presents Jesus' ministry through Isaiah's servant language."
+            },
+            {
+              "cardId": "pc-s22-c13",
+              "reference": "Zechariah 9:9",
+              "summary": "Zion's king comes lowly and riding on an ass.",
+              "textShort": "Thy King cometh unto thee... riding upon an ass.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Zechariah during the triumphal entry."
+            },
+            {
+              "cardId": "pc-s22-c14",
+              "reference": "Zechariah 11:12-13",
+              "summary": "Thirty pieces of silver are weighed and connected with the potter.",
+              "textShort": "So they weighed for my price thirty pieces of silver.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "medium",
+              "teachingNote": "Matthew cites the event as prophetic fulfillment; the textual attribution is discussed by interpreters."
+            },
+            {
+              "cardId": "pc-s22-c15",
+              "reference": "Psalm 69:9",
+              "summary": "Zeal for the Lord's house consumes the speaker.",
+              "textShort": "The zeal of thine house hath eaten me up.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "medium",
+              "teachingNote": "John presents the temple cleansing through the lens of Psalm 69."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Prophecy Category Board 22 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "pc-session-23",
+      "title": "Prophecy Category Board 23",
+      "theme": "Sorting prophecy references by major theme",
+      "rounds": [
+        {
+          "id": "pc-023",
+          "title": "Prophecy Category Board 23",
+          "theme": "Reference-based prophecy categories",
+          "categories": [
+            "Messiah's Kingship",
+            "Forerunner / Messenger",
+            "Nations",
+            "Jerusalem / Temple",
+            "Resurrection / Victory"
+          ],
+          "cards": [
+            {
+              "cardId": "pc-s23-c01",
+              "reference": "Psalm 110:1",
+              "summary": "The Lord invites David's Lord to sit at His right hand.",
+              "textShort": "Sit thou at my right hand.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Psalm 110 is one of the New Testament's most frequent messianic texts."
+            },
+            {
+              "cardId": "pc-s23-c02",
+              "reference": "Isaiah 9:6-7",
+              "summary": "A child is born whose government and peace increase.",
+              "textShort": "Unto us a child is born... and the government shall be upon his shoulder.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Luke's announcement uses Davidic kingdom language that Christians connect with Isaiah's promise."
+            },
+            {
+              "cardId": "pc-s23-c03",
+              "reference": "Zechariah 9:9",
+              "summary": "Zion's king comes lowly and riding on an ass.",
+              "textShort": "Thy King cometh unto thee... riding upon an ass.",
+              "category": "Messiah's Kingship",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Zechariah during the triumphal entry."
+            },
+            {
+              "cardId": "pc-s23-c04",
+              "reference": "Malachi 4:5-6",
+              "summary": "Elijah is promised before the great day of the Lord.",
+              "textShort": "I will send you Elijah the prophet before the coming of the great... day.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "medium",
+              "teachingNote": "Matthew presents John the Baptist as fulfilling the Elijah-type role."
+            },
+            {
+              "cardId": "pc-s23-c05",
+              "reference": "Isaiah 40:3",
+              "summary": "A voice prepares the way of the Lord in the wilderness.",
+              "textShort": "Prepare ye the way of the Lord.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "easy",
+              "teachingNote": "The Synoptic Gospels connect Isaiah 40:3 with John the Baptist."
+            },
+            {
+              "cardId": "pc-s23-c06",
+              "reference": "Malachi 3:1",
+              "summary": "A messenger prepares the way before the Lord.",
+              "textShort": "I will send my messenger, and he shall prepare the way before me.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "easy",
+              "teachingNote": "Mark uses messenger texts to frame John the Baptist's ministry."
+            },
+            {
+              "cardId": "pc-s23-c07",
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram.",
+              "textShort": "In thee shall all families of the earth be blessed.",
+              "category": "Nations",
+              "difficulty": "easy",
+              "teachingNote": "The New Testament explicitly applies this Abraham promise to the gospel going to the nations."
+            },
+            {
+              "cardId": "pc-s23-c08",
+              "reference": "Isaiah 9:1-2",
+              "summary": "Light comes to Galilee and people in darkness.",
+              "textShort": "The people that walked in darkness have seen a great light.",
+              "category": "Nations",
+              "difficulty": "easy",
+              "teachingNote": "The Gospel citation ties the prophecy to Jesus' public ministry in Galilee."
+            },
+            {
+              "cardId": "pc-s23-c09",
+              "reference": "Isaiah 42:1-4",
+              "summary": "The servant is upheld by God and brings judgment to the Gentiles.",
+              "textShort": "Behold my servant, whom I uphold; mine elect.",
+              "category": "Nations",
+              "difficulty": "medium",
+              "teachingNote": "Matthew's quotation presents Jesus' ministry through Isaiah's servant language."
+            },
+            {
+              "cardId": "pc-s23-c10",
+              "reference": "Zechariah 9:9",
+              "summary": "Zion's king comes lowly and riding on an ass.",
+              "textShort": "Thy King cometh unto thee... riding upon an ass.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Zechariah during the triumphal entry."
+            },
+            {
+              "cardId": "pc-s23-c11",
+              "reference": "Zechariah 11:12-13",
+              "summary": "Thirty pieces of silver are weighed and connected with the potter.",
+              "textShort": "So they weighed for my price thirty pieces of silver.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "medium",
+              "teachingNote": "Matthew cites the event as prophetic fulfillment; the textual attribution is discussed by interpreters."
+            },
+            {
+              "cardId": "pc-s23-c12",
+              "reference": "Psalm 69:9",
+              "summary": "Zeal for the Lord's house consumes the speaker.",
+              "textShort": "The zeal of thine house hath eaten me up.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "medium",
+              "teachingNote": "John presents the temple cleansing through the lens of Psalm 69."
+            },
+            {
+              "cardId": "pc-s23-c13",
+              "reference": "Psalm 118:22",
+              "summary": "The rejected stone becomes the head of the corner.",
+              "textShort": "The stone which the builders refused is become the head stone.",
+              "category": "Resurrection / Victory",
+              "difficulty": "easy",
+              "teachingNote": "Acts directly applies the stone image to Jesus' rejection and exaltation."
+            },
+            {
+              "cardId": "pc-s23-c14",
+              "reference": "Genesis 3:15",
+              "summary": "The serpent's head would be bruised by the woman's seed.",
+              "textShort": "It shall bruise thy head, and thou shalt bruise his heel.",
+              "category": "Resurrection / Victory",
+              "difficulty": "medium",
+              "teachingNote": "This is commonly read by Christian interpreters as an early promise of victory over evil."
+            },
+            {
+              "cardId": "pc-s23-c15",
+              "reference": "Psalm 16:10",
+              "summary": "The Holy One would not be left to corruption.",
+              "textShort": "Neither wilt thou suffer thine Holy One to see corruption.",
+              "category": "Resurrection / Victory",
+              "difficulty": "easy",
+              "teachingNote": "Acts 2 directly connects Psalm 16 with the resurrection of Jesus."
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Prophecy Category Board 23 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "pc-session-24",
+      "title": "Prophecy Category Board 24",
+      "theme": "Sorting prophecy references by major theme",
+      "rounds": [
+        {
+          "id": "pc-024",
+          "title": "Prophecy Category Board 24",
+          "theme": "Reference-based prophecy categories",
+          "categories": [
+            "Forerunner / Messenger",
+            "Nations",
+            "Jerusalem / Temple",
+            "Resurrection / Victory",
+            "Betrayal / Rejection"
+          ],
+          "cards": [
+            {
+              "cardId": "pc-s24-c01",
+              "reference": "Malachi 4:5-6",
+              "summary": "Elijah is promised before the great day of the Lord.",
+              "textShort": "I will send you Elijah the prophet before the coming of the great... day.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "medium",
+              "teachingNote": "Matthew presents John the Baptist as fulfilling the Elijah-type role."
+            },
+            {
+              "cardId": "pc-s24-c02",
+              "reference": "Isaiah 40:3",
+              "summary": "A voice prepares the way of the Lord in the wilderness.",
+              "textShort": "Prepare ye the way of the Lord.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "easy",
+              "teachingNote": "The Synoptic Gospels connect Isaiah 40:3 with John the Baptist."
+            },
+            {
+              "cardId": "pc-s24-c03",
+              "reference": "Malachi 3:1",
+              "summary": "A messenger prepares the way before the Lord.",
+              "textShort": "I will send my messenger, and he shall prepare the way before me.",
+              "category": "Forerunner / Messenger",
+              "difficulty": "easy",
+              "teachingNote": "Mark uses messenger texts to frame John the Baptist's ministry."
+            },
+            {
+              "cardId": "pc-s24-c04",
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram.",
+              "textShort": "In thee shall all families of the earth be blessed.",
+              "category": "Nations",
+              "difficulty": "easy",
+              "teachingNote": "The New Testament explicitly applies this Abraham promise to the gospel going to the nations."
+            },
+            {
+              "cardId": "pc-s24-c05",
+              "reference": "Isaiah 9:1-2",
+              "summary": "Light comes to Galilee and people in darkness.",
+              "textShort": "The people that walked in darkness have seen a great light.",
+              "category": "Nations",
+              "difficulty": "easy",
+              "teachingNote": "The Gospel citation ties the prophecy to Jesus' public ministry in Galilee."
+            },
+            {
+              "cardId": "pc-s24-c06",
+              "reference": "Isaiah 42:1-4",
+              "summary": "The servant is upheld by God and brings judgment to the Gentiles.",
+              "textShort": "Behold my servant, whom I uphold; mine elect.",
+              "category": "Nations",
+              "difficulty": "medium",
+              "teachingNote": "Matthew's quotation presents Jesus' ministry through Isaiah's servant language."
+            },
+            {
+              "cardId": "pc-s24-c07",
+              "reference": "Zechariah 9:9",
+              "summary": "Zion's king comes lowly and riding on an ass.",
+              "textShort": "Thy King cometh unto thee... riding upon an ass.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Zechariah during the triumphal entry."
+            },
+            {
+              "cardId": "pc-s24-c08",
+              "reference": "Zechariah 11:12-13",
+              "summary": "Thirty pieces of silver are weighed and connected with the potter.",
+              "textShort": "So they weighed for my price thirty pieces of silver.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "medium",
+              "teachingNote": "Matthew cites the event as prophetic fulfillment; the textual attribution is discussed by interpreters."
+            },
+            {
+              "cardId": "pc-s24-c09",
+              "reference": "Psalm 69:9",
+              "summary": "Zeal for the Lord's house consumes the speaker.",
+              "textShort": "The zeal of thine house hath eaten me up.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "medium",
+              "teachingNote": "John presents the temple cleansing through the lens of Psalm 69."
+            },
+            {
+              "cardId": "pc-s24-c10",
+              "reference": "Psalm 118:22",
+              "summary": "The rejected stone becomes the head of the corner.",
+              "textShort": "The stone which the builders refused is become the head stone.",
+              "category": "Resurrection / Victory",
+              "difficulty": "easy",
+              "teachingNote": "Acts directly applies the stone image to Jesus' rejection and exaltation."
+            },
+            {
+              "cardId": "pc-s24-c11",
+              "reference": "Genesis 3:15",
+              "summary": "The serpent's head would be bruised by the woman's seed.",
+              "textShort": "It shall bruise thy head, and thou shalt bruise his heel.",
+              "category": "Resurrection / Victory",
+              "difficulty": "medium",
+              "teachingNote": "This is commonly read by Christian interpreters as an early promise of victory over evil."
+            },
+            {
+              "cardId": "pc-s24-c12",
+              "reference": "Psalm 16:10",
+              "summary": "The Holy One would not be left to corruption.",
+              "textShort": "Neither wilt thou suffer thine Holy One to see corruption.",
+              "category": "Resurrection / Victory",
+              "difficulty": "easy",
+              "teachingNote": "Acts 2 directly connects Psalm 16 with the resurrection of Jesus."
+            },
+            {
+              "cardId": "pc-s24-c13",
+              "reference": "Zechariah 11:12-13",
+              "summary": "Thirty pieces of silver are weighed and connected with the potter.",
+              "textShort": "So they weighed for my price thirty pieces of silver.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "medium",
+              "teachingNote": "Matthew cites the event as prophetic fulfillment; the textual attribution is discussed by interpreters."
+            },
+            {
+              "cardId": "pc-s24-c14",
+              "reference": "Psalm 41:9",
+              "summary": "A familiar friend lifts up his heel against the speaker.",
+              "textShort": "Mine own familiar friend... hath lifted up his heel against me.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "easy",
+              "teachingNote": "John records Jesus citing the psalm in the context of Judas's betrayal."
+            },
+            {
+              "cardId": "pc-s24-c15",
+              "reference": "Psalm 118:22",
+              "summary": "The rejected stone becomes the head of the corner.",
+              "textShort": "The stone which the builders refused is become the head stone.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "easy",
+              "teachingNote": "Acts directly applies the stone image to Jesus' rejection and exaltation."
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Prophecy Category Board 24 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "pc-session-25",
+      "title": "Prophecy Category Board 25",
+      "theme": "Sorting prophecy references by major theme",
+      "rounds": [
+        {
+          "id": "pc-025",
+          "title": "Prophecy Category Board 25",
+          "theme": "Reference-based prophecy categories",
+          "categories": [
+            "Nations",
+            "Jerusalem / Temple",
+            "Resurrection / Victory",
+            "Betrayal / Rejection",
+            "New Covenant"
+          ],
+          "cards": [
+            {
+              "cardId": "pc-s25-c01",
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram.",
+              "textShort": "In thee shall all families of the earth be blessed.",
+              "category": "Nations",
+              "difficulty": "easy",
+              "teachingNote": "The New Testament explicitly applies this Abraham promise to the gospel going to the nations."
+            },
+            {
+              "cardId": "pc-s25-c02",
+              "reference": "Isaiah 9:1-2",
+              "summary": "Light comes to Galilee and people in darkness.",
+              "textShort": "The people that walked in darkness have seen a great light.",
+              "category": "Nations",
+              "difficulty": "easy",
+              "teachingNote": "The Gospel citation ties the prophecy to Jesus' public ministry in Galilee."
+            },
+            {
+              "cardId": "pc-s25-c03",
+              "reference": "Isaiah 42:1-4",
+              "summary": "The servant is upheld by God and brings judgment to the Gentiles.",
+              "textShort": "Behold my servant, whom I uphold; mine elect.",
+              "category": "Nations",
+              "difficulty": "medium",
+              "teachingNote": "Matthew's quotation presents Jesus' ministry through Isaiah's servant language."
+            },
+            {
+              "cardId": "pc-s25-c04",
+              "reference": "Zechariah 9:9",
+              "summary": "Zion's king comes lowly and riding on an ass.",
+              "textShort": "Thy King cometh unto thee... riding upon an ass.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "easy",
+              "teachingNote": "Matthew explicitly quotes Zechariah during the triumphal entry."
+            },
+            {
+              "cardId": "pc-s25-c05",
+              "reference": "Zechariah 11:12-13",
+              "summary": "Thirty pieces of silver are weighed and connected with the potter.",
+              "textShort": "So they weighed for my price thirty pieces of silver.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "medium",
+              "teachingNote": "Matthew cites the event as prophetic fulfillment; the textual attribution is discussed by interpreters."
+            },
+            {
+              "cardId": "pc-s25-c06",
+              "reference": "Psalm 69:9",
+              "summary": "Zeal for the Lord's house consumes the speaker.",
+              "textShort": "The zeal of thine house hath eaten me up.",
+              "category": "Jerusalem / Temple",
+              "difficulty": "medium",
+              "teachingNote": "John presents the temple cleansing through the lens of Psalm 69."
+            },
+            {
+              "cardId": "pc-s25-c07",
+              "reference": "Psalm 118:22",
+              "summary": "The rejected stone becomes the head of the corner.",
+              "textShort": "The stone which the builders refused is become the head stone.",
+              "category": "Resurrection / Victory",
+              "difficulty": "easy",
+              "teachingNote": "Acts directly applies the stone image to Jesus' rejection and exaltation."
+            },
+            {
+              "cardId": "pc-s25-c08",
+              "reference": "Genesis 3:15",
+              "summary": "The serpent's head would be bruised by the woman's seed.",
+              "textShort": "It shall bruise thy head, and thou shalt bruise his heel.",
+              "category": "Resurrection / Victory",
+              "difficulty": "medium",
+              "teachingNote": "This is commonly read by Christian interpreters as an early promise of victory over evil."
+            },
+            {
+              "cardId": "pc-s25-c09",
+              "reference": "Psalm 16:10",
+              "summary": "The Holy One would not be left to corruption.",
+              "textShort": "Neither wilt thou suffer thine Holy One to see corruption.",
+              "category": "Resurrection / Victory",
+              "difficulty": "easy",
+              "teachingNote": "Acts 2 directly connects Psalm 16 with the resurrection of Jesus."
+            },
+            {
+              "cardId": "pc-s25-c10",
+              "reference": "Zechariah 11:12-13",
+              "summary": "Thirty pieces of silver are weighed and connected with the potter.",
+              "textShort": "So they weighed for my price thirty pieces of silver.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "medium",
+              "teachingNote": "Matthew cites the event as prophetic fulfillment; the textual attribution is discussed by interpreters."
+            },
+            {
+              "cardId": "pc-s25-c11",
+              "reference": "Psalm 41:9",
+              "summary": "A familiar friend lifts up his heel against the speaker.",
+              "textShort": "Mine own familiar friend... hath lifted up his heel against me.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "easy",
+              "teachingNote": "John records Jesus citing the psalm in the context of Judas's betrayal."
+            },
+            {
+              "cardId": "pc-s25-c12",
+              "reference": "Psalm 118:22",
+              "summary": "The rejected stone becomes the head of the corner.",
+              "textShort": "The stone which the builders refused is become the head stone.",
+              "category": "Betrayal / Rejection",
+              "difficulty": "easy",
+              "teachingNote": "Acts directly applies the stone image to Jesus' rejection and exaltation."
+            },
+            {
+              "cardId": "pc-s25-c13",
+              "reference": "Isaiah 42:1-4",
+              "summary": "The servant is upheld by God and brings judgment to the Gentiles.",
+              "textShort": "Behold my servant, whom I uphold; mine elect.",
+              "category": "New Covenant",
+              "difficulty": "medium",
+              "teachingNote": "Matthew's quotation presents Jesus' ministry through Isaiah's servant language."
+            },
+            {
+              "cardId": "pc-s25-c14",
+              "reference": "Isaiah 53:5",
+              "summary": "The servant is wounded and bruised for others.",
+              "textShort": "He was wounded for our transgressions.",
+              "category": "New Covenant",
+              "difficulty": "easy",
+              "teachingNote": "1 Peter explicitly uses Isaiah 53 language for Christ's suffering."
+            },
+            {
+              "cardId": "pc-s25-c15",
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram.",
+              "textShort": "In thee shall all families of the earth be blessed.",
+              "category": "New Covenant",
+              "difficulty": "easy",
+              "teachingNote": "The New Testament explicitly applies this Abraham promise to the gospel going to the nations."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Prophecy Category Board 25 and how it connects to the Bible before continuing."
+        }
+      ]
+    }
+  ]
+}

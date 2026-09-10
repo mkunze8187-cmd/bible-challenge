@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">Bible Challenge logo</title>
+  <desc id="desc">An open Bible forming a challenge shield with a rising path and star.</desc>
+  <defs>
+    <linearGradient id="shield" x1="70" x2="250" y1="42" y2="292" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2f7a65"/>
+      <stop offset="1" stop-color="#173f38"/>
+    </linearGradient>
+    <linearGradient id="page" x1="78" x2="242" y1="112" y2="228" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff8e8"/>
+      <stop offset="1" stop-color="#e8d4a9"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="120" x2="234" y1="54" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f3d27a"/>
+      <stop offset="1" stop-color="#b97a2c"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#shield)" d="M160 25 268 68v75c0 72-41 125-108 152C93 268 52 215 52 143V68L160 25Z"/>
+  <path fill="#0f2f2b" opacity=".22" d="M160 25v270c67-27 108-80 108-152V68L160 25Z"/>
+  <path fill="none" stroke="#f7e6b8" stroke-width="10" d="M160 43 249 79v64c0 59-31 103-89 129-58-26-89-70-89-129V79l89-36Z"/>
+  <path fill="url(#page)" d="M82 124c33-16 58-12 78 9 20-21 45-25 78-9v102c-32-12-57-7-78 15-21-22-46-27-78-15V124Z"/>
+  <path fill="#fdf3dc" d="M96 139c23-8 40-4 54 12v57c-16-12-34-15-54-8v-61Z"/>
+  <path fill="#f0dcb4" d="M224 139c-23-8-40-4-54 12v57c16-12 34-15 54-8v-61Z"/>
+  <path fill="none" stroke="#724d24" stroke-linecap="round" stroke-width="6" d="M160 132v107"/>
+  <path fill="none" stroke="#9a743e" stroke-linecap="round" stroke-width="5" d="M108 157h30M108 178h34M212 157h-30M212 178h-34"/>
+  <path fill="none" stroke="url(#gold)" stroke-linecap="round" stroke-linejoin="round" stroke-width="13" d="M114 111c18-34 44-45 80-35"/>
+  <path fill="url(#gold)" d="m207 59 9 20 22 2-17 15 5 22-19-11-19 11 5-22-17-15 22-2 9-20Z"/>
+  <path fill="#fff4ce" opacity=".86" d="m207 70 5 11 12 1-9 8 3 12-11-6-10 6 2-12-9-8 12-1 5-11Z"/>
+</svg>

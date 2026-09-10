@@ -1,0 +1,391 @@
+{
+  "$schema": "./schemas/wisdom-match.schema.json",
+  "game": "wisdom-match",
+  "version": 1,
+  "displayName": "Wisdom Match Challenge",
+  "roundsPerSession": 10,
+  "sessions": [
+    {
+      "id": "wm-session-01",
+      "title": "Proverbs Wisdom Themes",
+      "theme": "Match Proverbs excerpts to wisdom themes.",
+      "rounds": [
+        {
+          "id": "wm-001",
+          "title": "Proverbs 1:7",
+          "reference": "Proverbs 1:7",
+          "verseTextShort": "The fear of the Lord is the beginning of knowledge: but fools despise wisdom and instruction.",
+          "correctTheme": "Fear of the Lord",
+          "choices": [
+            "Fear of the Lord",
+            "Wisdom",
+            "Understanding",
+            "Speech"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Reverence for the Lord is the starting point of biblical wisdom."
+        },
+        {
+          "id": "wm-002",
+          "title": "Proverbs 2:6",
+          "reference": "Proverbs 2:6",
+          "verseTextShort": "For the Lord giveth wisdom: out of his mouth cometh knowledge and understanding.",
+          "correctTheme": "Wisdom",
+          "choices": [
+            "Wisdom",
+            "Understanding",
+            "Speech",
+            "Anger"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Wisdom is received from the Lord."
+        },
+        {
+          "id": "wm-003",
+          "title": "Proverbs 3:5-6",
+          "reference": "Proverbs 3:5-6",
+          "verseTextShort": "Trust in the Lord with all thine heart; and lean not unto thine own understanding.",
+          "correctTheme": "Understanding",
+          "choices": [
+            "Understanding",
+            "Speech",
+            "Anger",
+            "Pride"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "The passage warns against depending only on one's own understanding."
+        },
+        {
+          "id": "wm-004",
+          "title": "Proverbs 4:7",
+          "reference": "Proverbs 4:7",
+          "verseTextShort": "Wisdom is the principal thing; therefore get wisdom: and with all thy getting get understanding.",
+          "correctTheme": "Understanding",
+          "choices": [
+            "Understanding",
+            "Speech",
+            "Anger",
+            "Pride"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Wisdom and understanding are presented as things to pursue."
+        },
+        {
+          "id": "wm-005",
+          "title": "Proverbs 4:23",
+          "reference": "Proverbs 4:23",
+          "verseTextShort": "Keep thy heart with all diligence; for out of it are the issues of life.",
+          "correctTheme": "The Heart",
+          "choices": [
+            "The Heart",
+            "Anger",
+            "Pride",
+            "Humility"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "The heart must be guarded because it shapes life."
+        },
+        {
+          "id": "wm-006",
+          "title": "Proverbs 6:6",
+          "reference": "Proverbs 6:6",
+          "verseTextShort": "Go to the ant, thou sluggard; consider her ways, and be wise.",
+          "correctTheme": "Diligence",
+          "choices": [
+            "Diligence",
+            "Pride",
+            "Humility",
+            "Slothfulness"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "The proverb rebukes laziness by pointing to steady work."
+        },
+        {
+          "id": "wm-007",
+          "title": "Proverbs 10:12",
+          "reference": "Proverbs 10:12",
+          "verseTextShort": "Hatred stirreth up strifes: but love covereth all sins.",
+          "correctTheme": "Peace",
+          "choices": [
+            "Peace",
+            "Humility",
+            "Diligence",
+            "Slothfulness"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Love is contrasted with strife."
+        },
+        {
+          "id": "wm-008",
+          "title": "Proverbs 10:19",
+          "reference": "Proverbs 10:19",
+          "verseTextShort": "In the multitude of words there wanteth not sin: but he that refraineth his lips is wise.",
+          "correctTheme": "Speech",
+          "choices": [
+            "Speech",
+            "Diligence",
+            "Slothfulness",
+            "Friendship"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Wisdom includes restraint in speech."
+        },
+        {
+          "id": "wm-009",
+          "title": "Proverbs 11:14",
+          "reference": "Proverbs 11:14",
+          "verseTextShort": "Where no counsel is, the people fall: but in the multitude of counsellors there is safety.",
+          "correctTheme": "Counsel",
+          "choices": [
+            "Counsel",
+            "Slothfulness",
+            "Friendship",
+            "Correction"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Many counsellors provide safety."
+        },
+        {
+          "id": "wm-010",
+          "title": "Proverbs 11:25",
+          "reference": "Proverbs 11:25",
+          "verseTextShort": "The liberal soul shall be made fat: and he that watereth shall be watered also himself.",
+          "correctTheme": "Generosity",
+          "choices": [
+            "Generosity",
+            "Friendship",
+            "Correction",
+            "Discipline"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Generosity is pictured as fruitful refreshment."
+        },
+        {
+          "id": "wm-011",
+          "title": "Proverbs 12:22",
+          "reference": "Proverbs 12:22",
+          "verseTextShort": "Lying lips are abomination to the Lord: but they that deal truly are his delight.",
+          "correctTheme": "Integrity",
+          "choices": [
+            "Integrity",
+            "Correction",
+            "Discipline",
+            "Money"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Truthfulness is pleasing to the Lord."
+        },
+        {
+          "id": "wm-012",
+          "title": "Proverbs 13:20",
+          "reference": "Proverbs 13:20",
+          "verseTextShort": "He that walketh with wise men shall be wise: but a companion of fools shall be destroyed.",
+          "correctTheme": "Friendship",
+          "choices": [
+            "Friendship",
+            "Discipline",
+            "Money",
+            "Integrity"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Companions shape a person's path."
+        },
+        {
+          "id": "wm-013",
+          "title": "Proverbs 14:12",
+          "reference": "Proverbs 14:12",
+          "verseTextShort": "There is a way which seemeth right unto a man, but the end thereof are the ways of death.",
+          "correctTheme": "Foolishness",
+          "choices": [
+            "Foolishness",
+            "Money",
+            "Integrity",
+            "Counsel"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "A path can appear right while leading to death."
+        },
+        {
+          "id": "wm-014",
+          "title": "Proverbs 14:29",
+          "reference": "Proverbs 14:29",
+          "verseTextShort": "He that is slow to wrath is of great understanding: but he that is hasty of spirit exalteth folly.",
+          "correctTheme": "Anger",
+          "choices": [
+            "Anger",
+            "Integrity",
+            "Counsel",
+            "Parents and Children"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Patience with anger is tied to understanding."
+        },
+        {
+          "id": "wm-015",
+          "title": "Proverbs 15:1",
+          "reference": "Proverbs 15:1",
+          "verseTextShort": "A soft answer turneth away wrath: but grievous words stir up anger.",
+          "correctTheme": "Speech",
+          "choices": [
+            "Speech",
+            "Counsel",
+            "Parents and Children",
+            "The Heart"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Words can calm or inflame anger."
+        },
+        {
+          "id": "wm-016",
+          "title": "Proverbs 15:22",
+          "reference": "Proverbs 15:22",
+          "verseTextShort": "Without counsel purposes are disappointed: but in the multitude of counsellors they are established.",
+          "correctTheme": "Counsel",
+          "choices": [
+            "Counsel",
+            "Parents and Children",
+            "The Heart",
+            "Peace"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Plans are strengthened by counsel."
+        },
+        {
+          "id": "wm-017",
+          "title": "Proverbs 16:18",
+          "reference": "Proverbs 16:18",
+          "verseTextShort": "Pride goeth before destruction, and an haughty spirit before a fall.",
+          "correctTheme": "Pride",
+          "choices": [
+            "Pride",
+            "The Heart",
+            "Peace",
+            "Generosity"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Pride is shown as a warning sign before ruin."
+        },
+        {
+          "id": "wm-018",
+          "title": "Proverbs 16:24",
+          "reference": "Proverbs 16:24",
+          "verseTextShort": "Pleasant words are as an honeycomb, sweet to the soul, and health to the bones.",
+          "correctTheme": "Speech",
+          "choices": [
+            "Speech",
+            "Peace",
+            "Generosity",
+            "Foolishness"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Gracious words bring sweetness and health."
+        },
+        {
+          "id": "wm-019",
+          "title": "Proverbs 17:17",
+          "reference": "Proverbs 17:17",
+          "verseTextShort": "A friend loveth at all times, and a brother is born for adversity.",
+          "correctTheme": "Friendship",
+          "choices": [
+            "Friendship",
+            "Generosity",
+            "Foolishness",
+            "Fear of the Lord"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Faithful friendship is steady in adversity."
+        },
+        {
+          "id": "wm-020",
+          "title": "Proverbs 18:10",
+          "reference": "Proverbs 18:10",
+          "verseTextShort": "The name of the Lord is a strong tower: the righteous runneth into it, and is safe.",
+          "correctTheme": "Fear of the Lord",
+          "choices": [
+            "Fear of the Lord",
+            "Foolishness",
+            "Wisdom",
+            "Understanding"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "The righteous find safety in the Lord's name."
+        },
+        {
+          "id": "wm-021",
+          "title": "Proverbs 18:21",
+          "reference": "Proverbs 18:21",
+          "verseTextShort": "Death and life are in the power of the tongue: and they that love it shall eat the fruit thereof.",
+          "correctTheme": "Speech",
+          "choices": [
+            "Speech",
+            "Fear of the Lord",
+            "Wisdom",
+            "Understanding"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "The tongue carries serious power."
+        },
+        {
+          "id": "wm-022",
+          "title": "Proverbs 19:17",
+          "reference": "Proverbs 19:17",
+          "verseTextShort": "He that hath pity upon the poor lendeth unto the Lord; and that which he hath given will he pay him again.",
+          "correctTheme": "Generosity",
+          "choices": [
+            "Generosity",
+            "Wisdom",
+            "Understanding",
+            "Speech"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Mercy to the poor is treated as service to the Lord."
+        },
+        {
+          "id": "wm-023",
+          "title": "Proverbs 22:1",
+          "reference": "Proverbs 22:1",
+          "verseTextShort": "A good name is rather to be chosen than great riches, and loving favour rather than silver and gold.",
+          "correctTheme": "Integrity",
+          "choices": [
+            "Integrity",
+            "Understanding",
+            "Speech",
+            "Anger"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Reputation is valued above wealth."
+        },
+        {
+          "id": "wm-024",
+          "title": "Proverbs 22:6",
+          "reference": "Proverbs 22:6",
+          "verseTextShort": "Train up a child in the way he should go: and when he is old, he will not depart from it.",
+          "correctTheme": "Parents and Children",
+          "choices": [
+            "Parents and Children",
+            "Speech",
+            "Anger",
+            "Pride"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "The proverb speaks to parental formation and instruction."
+        },
+        {
+          "id": "wm-025",
+          "title": "Proverbs 27:17",
+          "reference": "Proverbs 27:17",
+          "verseTextShort": "Iron sharpeneth iron; so a man sharpeneth the countenance of his friend.",
+          "correctTheme": "Friendship",
+          "choices": [
+            "Friendship",
+            "Anger",
+            "Pride",
+            "Humility"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Wise friendship sharpens and strengthens."
+        }
+      ]
+    }
+  ]
+}

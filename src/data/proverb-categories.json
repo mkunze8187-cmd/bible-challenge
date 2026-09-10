@@ -1,0 +1,3416 @@
+{
+  "$schema": "./schemas/proverb-categories.schema.json",
+  "game": "proverb-categories",
+  "version": 1,
+  "displayName": "Proverb Categories Challenge",
+  "roundsPerSession": 1,
+  "sessions": [
+    {
+      "id": "pcv-session-01",
+      "title": "Proverb Category Boards",
+      "theme": "Sort Proverbs cards into wisdom categories.",
+      "rounds": [
+        {
+          "id": "pcv-001",
+          "title": "Proverb Category Board 01",
+          "theme": "Sorting Proverbs by wisdom category",
+          "categories": [
+            "Fear of the Lord",
+            "Pride and Humility",
+            "Correction and Discipline",
+            "Parents and Children",
+            "Peace and Conflict"
+          ],
+          "cards": [
+            {
+              "cardId": "pcv-s01-c01",
+              "reference": "Proverbs 1:7",
+              "textShort": "The fear of the Lord is the beginning of knowledge.",
+              "category": "Fear of the Lord",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with fear of the lord because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s01-c02",
+              "reference": "Proverbs 9:10",
+              "textShort": "The fear of the Lord is the beginning of wisdom.",
+              "category": "Fear of the Lord",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with fear of the lord because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s01-c03",
+              "reference": "Proverbs 14:27",
+              "textShort": "The fear of the Lord is a fountain of life.",
+              "category": "Fear of the Lord",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with fear of the lord because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s01-c04",
+              "reference": "Proverbs 16:18",
+              "textShort": "Pride goeth before destruction.",
+              "category": "Pride and Humility",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with pride and humility because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s01-c05",
+              "reference": "Proverbs 18:12",
+              "textShort": "Before honour is humility.",
+              "category": "Pride and Humility",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with pride and humility because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s01-c06",
+              "reference": "Proverbs 22:4",
+              "textShort": "By humility and the fear of the Lord are riches.",
+              "category": "Pride and Humility",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with pride and humility because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s01-c07",
+              "reference": "Proverbs 12:1",
+              "textShort": "Whoso loveth instruction loveth knowledge.",
+              "category": "Correction and Discipline",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with correction and discipline because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s01-c08",
+              "reference": "Proverbs 13:24",
+              "textShort": "He that loveth him chasteneth him betimes.",
+              "category": "Correction and Discipline",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with correction and discipline because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s01-c09",
+              "reference": "Proverbs 19:18",
+              "textShort": "Chasten thy son while there is hope.",
+              "category": "Correction and Discipline",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with correction and discipline because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s01-c10",
+              "reference": "Proverbs 1:8",
+              "textShort": "My son, hear the instruction of thy father.",
+              "category": "Parents and Children",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with parents and children because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s01-c11",
+              "reference": "Proverbs 22:6",
+              "textShort": "Train up a child in the way he should go.",
+              "category": "Parents and Children",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with parents and children because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s01-c12",
+              "reference": "Proverbs 31:10",
+              "textShort": "Who can find a virtuous woman?",
+              "category": "Parents and Children",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with parents and children because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s01-c13",
+              "reference": "Proverbs 10:12",
+              "textShort": "Hatred stirreth up strifes.",
+              "category": "Peace and Conflict",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with peace and conflict because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s01-c14",
+              "reference": "Proverbs 15:18",
+              "textShort": "A wrathful man stirreth up strife.",
+              "category": "Peace and Conflict",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with peace and conflict because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s01-c15",
+              "reference": "Proverbs 17:14",
+              "textShort": "The beginning of strife is as when one letteth out water.",
+              "category": "Peace and Conflict",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with peace and conflict because its wording centers on that wisdom theme."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Proverb Category Board 01 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "pcv-002",
+          "title": "Proverb Category Board 02",
+          "theme": "Sorting Proverbs by wisdom category",
+          "categories": [
+            "Wise Speech",
+            "Diligence and Laziness",
+            "Money and Generosity",
+            "Wisdom and Understanding",
+            "Foolishness"
+          ],
+          "cards": [
+            {
+              "cardId": "pcv-s02-c01",
+              "reference": "Proverbs 10:19",
+              "textShort": "He that refraineth his lips is wise.",
+              "category": "Wise Speech",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with wise speech because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s02-c02",
+              "reference": "Proverbs 15:1",
+              "textShort": "A soft answer turneth away wrath.",
+              "category": "Wise Speech",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with wise speech because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s02-c03",
+              "reference": "Proverbs 16:24",
+              "textShort": "Pleasant words are as an honeycomb.",
+              "category": "Wise Speech",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with wise speech because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s02-c04",
+              "reference": "Proverbs 6:6",
+              "textShort": "Go to the ant, thou sluggard.",
+              "category": "Diligence and Laziness",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with diligence and laziness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s02-c05",
+              "reference": "Proverbs 10:4",
+              "textShort": "The hand of the diligent maketh rich.",
+              "category": "Diligence and Laziness",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with diligence and laziness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s02-c06",
+              "reference": "Proverbs 13:4",
+              "textShort": "The soul of the diligent shall be made fat.",
+              "category": "Diligence and Laziness",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with diligence and laziness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s02-c07",
+              "reference": "Proverbs 11:25",
+              "textShort": "The liberal soul shall be made fat.",
+              "category": "Money and Generosity",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with money and generosity because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s02-c08",
+              "reference": "Proverbs 19:17",
+              "textShort": "He that hath pity upon the poor lendeth unto the Lord.",
+              "category": "Money and Generosity",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with money and generosity because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s02-c09",
+              "reference": "Proverbs 22:1",
+              "textShort": "A good name is rather to be chosen than great riches.",
+              "category": "Money and Generosity",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with money and generosity because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s02-c10",
+              "reference": "Proverbs 2:6",
+              "textShort": "For the Lord giveth wisdom.",
+              "category": "Wisdom and Understanding",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with wisdom and understanding because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s02-c11",
+              "reference": "Proverbs 3:5-6",
+              "textShort": "Trust in the Lord with all thine heart.",
+              "category": "Wisdom and Understanding",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with wisdom and understanding because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s02-c12",
+              "reference": "Proverbs 4:7",
+              "textShort": "Wisdom is the principal thing.",
+              "category": "Wisdom and Understanding",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with wisdom and understanding because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s02-c13",
+              "reference": "Proverbs 12:15",
+              "textShort": "The way of a fool is right in his own eyes.",
+              "category": "Foolishness",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with foolishness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s02-c14",
+              "reference": "Proverbs 14:12",
+              "textShort": "There is a way which seemeth right unto a man.",
+              "category": "Foolishness",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with foolishness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s02-c15",
+              "reference": "Proverbs 26:4",
+              "textShort": "Answer not a fool according to his folly.",
+              "category": "Foolishness",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with foolishness because its wording centers on that wisdom theme."
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Proverb Category Board 02 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "pcv-003",
+          "title": "Proverb Category Board 03",
+          "theme": "Sorting Proverbs by wisdom category",
+          "categories": [
+            "Anger and Self-Control",
+            "Friendship and Counsel",
+            "Integrity and Honesty",
+            "The Heart",
+            "Planning and Counsel"
+          ],
+          "cards": [
+            {
+              "cardId": "pcv-s03-c01",
+              "reference": "Proverbs 14:29",
+              "textShort": "He that is slow to wrath is of great understanding.",
+              "category": "Anger and Self-Control",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with anger and self-control because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s03-c02",
+              "reference": "Proverbs 16:32",
+              "textShort": "He that is slow to anger is better than the mighty.",
+              "category": "Anger and Self-Control",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with anger and self-control because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s03-c03",
+              "reference": "Proverbs 29:11",
+              "textShort": "A fool uttereth all his mind.",
+              "category": "Anger and Self-Control",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with anger and self-control because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s03-c04",
+              "reference": "Proverbs 11:14",
+              "textShort": "In the multitude of counsellors there is safety.",
+              "category": "Friendship and Counsel",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with friendship and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s03-c05",
+              "reference": "Proverbs 17:17",
+              "textShort": "A friend loveth at all times.",
+              "category": "Friendship and Counsel",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with friendship and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s03-c06",
+              "reference": "Proverbs 27:17",
+              "textShort": "Iron sharpeneth iron.",
+              "category": "Friendship and Counsel",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with friendship and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s03-c07",
+              "reference": "Proverbs 10:9",
+              "textShort": "He that walketh uprightly walketh surely.",
+              "category": "Integrity and Honesty",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with integrity and honesty because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s03-c08",
+              "reference": "Proverbs 12:22",
+              "textShort": "Lying lips are abomination to the Lord.",
+              "category": "Integrity and Honesty",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with integrity and honesty because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s03-c09",
+              "reference": "Proverbs 20:7",
+              "textShort": "The just man walketh in his integrity.",
+              "category": "Integrity and Honesty",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with integrity and honesty because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s03-c10",
+              "reference": "Proverbs 4:23",
+              "textShort": "Keep thy heart with all diligence.",
+              "category": "The Heart",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with the heart because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s03-c11",
+              "reference": "Proverbs 14:30",
+              "textShort": "A sound heart is the life of the flesh.",
+              "category": "The Heart",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with the heart because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s03-c12",
+              "reference": "Proverbs 23:7",
+              "textShort": "For as he thinketh in his heart, so is he.",
+              "category": "The Heart",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with the heart because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s03-c13",
+              "reference": "Proverbs 15:22",
+              "textShort": "Without counsel purposes are disappointed.",
+              "category": "Planning and Counsel",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with planning and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s03-c14",
+              "reference": "Proverbs 16:3",
+              "textShort": "Commit thy works unto the Lord.",
+              "category": "Planning and Counsel",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with planning and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s03-c15",
+              "reference": "Proverbs 21:5",
+              "textShort": "The thoughts of the diligent tend only to plenteousness.",
+              "category": "Planning and Counsel",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with planning and counsel because its wording centers on that wisdom theme."
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Proverb Category Board 03 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "pcv-004",
+          "title": "Proverb Category Board 04",
+          "theme": "Sorting Proverbs by wisdom category",
+          "categories": [
+            "Pride and Humility",
+            "Correction and Discipline",
+            "Parents and Children",
+            "Peace and Conflict",
+            "Fear of the Lord"
+          ],
+          "cards": [
+            {
+              "cardId": "pcv-s04-c01",
+              "reference": "Proverbs 16:18",
+              "textShort": "Pride goeth before destruction.",
+              "category": "Pride and Humility",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with pride and humility because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s04-c02",
+              "reference": "Proverbs 18:12",
+              "textShort": "Before honour is humility.",
+              "category": "Pride and Humility",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with pride and humility because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s04-c03",
+              "reference": "Proverbs 22:4",
+              "textShort": "By humility and the fear of the Lord are riches.",
+              "category": "Pride and Humility",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with pride and humility because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s04-c04",
+              "reference": "Proverbs 12:1",
+              "textShort": "Whoso loveth instruction loveth knowledge.",
+              "category": "Correction and Discipline",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with correction and discipline because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s04-c05",
+              "reference": "Proverbs 13:24",
+              "textShort": "He that loveth him chasteneth him betimes.",
+              "category": "Correction and Discipline",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with correction and discipline because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s04-c06",
+              "reference": "Proverbs 19:18",
+              "textShort": "Chasten thy son while there is hope.",
+              "category": "Correction and Discipline",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with correction and discipline because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s04-c07",
+              "reference": "Proverbs 1:8",
+              "textShort": "My son, hear the instruction of thy father.",
+              "category": "Parents and Children",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with parents and children because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s04-c08",
+              "reference": "Proverbs 22:6",
+              "textShort": "Train up a child in the way he should go.",
+              "category": "Parents and Children",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with parents and children because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s04-c09",
+              "reference": "Proverbs 31:10",
+              "textShort": "Who can find a virtuous woman?",
+              "category": "Parents and Children",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with parents and children because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s04-c10",
+              "reference": "Proverbs 10:12",
+              "textShort": "Hatred stirreth up strifes.",
+              "category": "Peace and Conflict",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with peace and conflict because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s04-c11",
+              "reference": "Proverbs 15:18",
+              "textShort": "A wrathful man stirreth up strife.",
+              "category": "Peace and Conflict",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with peace and conflict because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s04-c12",
+              "reference": "Proverbs 17:14",
+              "textShort": "The beginning of strife is as when one letteth out water.",
+              "category": "Peace and Conflict",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with peace and conflict because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s04-c13",
+              "reference": "Proverbs 1:7",
+              "textShort": "The fear of the Lord is the beginning of knowledge.",
+              "category": "Fear of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with fear of the lord because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s04-c14",
+              "reference": "Proverbs 9:10",
+              "textShort": "The fear of the Lord is the beginning of wisdom.",
+              "category": "Fear of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with fear of the lord because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s04-c15",
+              "reference": "Proverbs 14:27",
+              "textShort": "The fear of the Lord is a fountain of life.",
+              "category": "Fear of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with fear of the lord because its wording centers on that wisdom theme."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Proverb Category Board 04 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "pcv-005",
+          "title": "Proverb Category Board 05",
+          "theme": "Sorting Proverbs by wisdom category",
+          "categories": [
+            "Diligence and Laziness",
+            "Money and Generosity",
+            "Wisdom and Understanding",
+            "Foolishness",
+            "Wise Speech"
+          ],
+          "cards": [
+            {
+              "cardId": "pcv-s05-c01",
+              "reference": "Proverbs 6:6",
+              "textShort": "Go to the ant, thou sluggard.",
+              "category": "Diligence and Laziness",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with diligence and laziness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s05-c02",
+              "reference": "Proverbs 10:4",
+              "textShort": "The hand of the diligent maketh rich.",
+              "category": "Diligence and Laziness",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with diligence and laziness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s05-c03",
+              "reference": "Proverbs 13:4",
+              "textShort": "The soul of the diligent shall be made fat.",
+              "category": "Diligence and Laziness",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with diligence and laziness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s05-c04",
+              "reference": "Proverbs 11:25",
+              "textShort": "The liberal soul shall be made fat.",
+              "category": "Money and Generosity",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with money and generosity because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s05-c05",
+              "reference": "Proverbs 19:17",
+              "textShort": "He that hath pity upon the poor lendeth unto the Lord.",
+              "category": "Money and Generosity",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with money and generosity because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s05-c06",
+              "reference": "Proverbs 22:1",
+              "textShort": "A good name is rather to be chosen than great riches.",
+              "category": "Money and Generosity",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with money and generosity because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s05-c07",
+              "reference": "Proverbs 2:6",
+              "textShort": "For the Lord giveth wisdom.",
+              "category": "Wisdom and Understanding",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with wisdom and understanding because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s05-c08",
+              "reference": "Proverbs 3:5-6",
+              "textShort": "Trust in the Lord with all thine heart.",
+              "category": "Wisdom and Understanding",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with wisdom and understanding because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s05-c09",
+              "reference": "Proverbs 4:7",
+              "textShort": "Wisdom is the principal thing.",
+              "category": "Wisdom and Understanding",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with wisdom and understanding because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s05-c10",
+              "reference": "Proverbs 12:15",
+              "textShort": "The way of a fool is right in his own eyes.",
+              "category": "Foolishness",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with foolishness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s05-c11",
+              "reference": "Proverbs 14:12",
+              "textShort": "There is a way which seemeth right unto a man.",
+              "category": "Foolishness",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with foolishness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s05-c12",
+              "reference": "Proverbs 26:4",
+              "textShort": "Answer not a fool according to his folly.",
+              "category": "Foolishness",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with foolishness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s05-c13",
+              "reference": "Proverbs 10:19",
+              "textShort": "He that refraineth his lips is wise.",
+              "category": "Wise Speech",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with wise speech because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s05-c14",
+              "reference": "Proverbs 15:1",
+              "textShort": "A soft answer turneth away wrath.",
+              "category": "Wise Speech",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with wise speech because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s05-c15",
+              "reference": "Proverbs 16:24",
+              "textShort": "Pleasant words are as an honeycomb.",
+              "category": "Wise Speech",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with wise speech because its wording centers on that wisdom theme."
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Proverb Category Board 05 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "pcv-006",
+          "title": "Proverb Category Board 06",
+          "theme": "Sorting Proverbs by wisdom category",
+          "categories": [
+            "Friendship and Counsel",
+            "Integrity and Honesty",
+            "The Heart",
+            "Planning and Counsel",
+            "Anger and Self-Control"
+          ],
+          "cards": [
+            {
+              "cardId": "pcv-s06-c01",
+              "reference": "Proverbs 11:14",
+              "textShort": "In the multitude of counsellors there is safety.",
+              "category": "Friendship and Counsel",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with friendship and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s06-c02",
+              "reference": "Proverbs 17:17",
+              "textShort": "A friend loveth at all times.",
+              "category": "Friendship and Counsel",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with friendship and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s06-c03",
+              "reference": "Proverbs 27:17",
+              "textShort": "Iron sharpeneth iron.",
+              "category": "Friendship and Counsel",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with friendship and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s06-c04",
+              "reference": "Proverbs 10:9",
+              "textShort": "He that walketh uprightly walketh surely.",
+              "category": "Integrity and Honesty",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with integrity and honesty because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s06-c05",
+              "reference": "Proverbs 12:22",
+              "textShort": "Lying lips are abomination to the Lord.",
+              "category": "Integrity and Honesty",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with integrity and honesty because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s06-c06",
+              "reference": "Proverbs 20:7",
+              "textShort": "The just man walketh in his integrity.",
+              "category": "Integrity and Honesty",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with integrity and honesty because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s06-c07",
+              "reference": "Proverbs 4:23",
+              "textShort": "Keep thy heart with all diligence.",
+              "category": "The Heart",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with the heart because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s06-c08",
+              "reference": "Proverbs 14:30",
+              "textShort": "A sound heart is the life of the flesh.",
+              "category": "The Heart",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with the heart because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s06-c09",
+              "reference": "Proverbs 23:7",
+              "textShort": "For as he thinketh in his heart, so is he.",
+              "category": "The Heart",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with the heart because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s06-c10",
+              "reference": "Proverbs 15:22",
+              "textShort": "Without counsel purposes are disappointed.",
+              "category": "Planning and Counsel",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with planning and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s06-c11",
+              "reference": "Proverbs 16:3",
+              "textShort": "Commit thy works unto the Lord.",
+              "category": "Planning and Counsel",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with planning and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s06-c12",
+              "reference": "Proverbs 21:5",
+              "textShort": "The thoughts of the diligent tend only to plenteousness.",
+              "category": "Planning and Counsel",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with planning and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s06-c13",
+              "reference": "Proverbs 14:29",
+              "textShort": "He that is slow to wrath is of great understanding.",
+              "category": "Anger and Self-Control",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with anger and self-control because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s06-c14",
+              "reference": "Proverbs 16:32",
+              "textShort": "He that is slow to anger is better than the mighty.",
+              "category": "Anger and Self-Control",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with anger and self-control because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s06-c15",
+              "reference": "Proverbs 29:11",
+              "textShort": "A fool uttereth all his mind.",
+              "category": "Anger and Self-Control",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with anger and self-control because its wording centers on that wisdom theme."
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Proverb Category Board 06 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "pcv-007",
+          "title": "Proverb Category Board 07",
+          "theme": "Sorting Proverbs by wisdom category",
+          "categories": [
+            "Correction and Discipline",
+            "Parents and Children",
+            "Peace and Conflict",
+            "Fear of the Lord",
+            "Pride and Humility"
+          ],
+          "cards": [
+            {
+              "cardId": "pcv-s07-c01",
+              "reference": "Proverbs 12:1",
+              "textShort": "Whoso loveth instruction loveth knowledge.",
+              "category": "Correction and Discipline",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with correction and discipline because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s07-c02",
+              "reference": "Proverbs 13:24",
+              "textShort": "He that loveth him chasteneth him betimes.",
+              "category": "Correction and Discipline",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with correction and discipline because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s07-c03",
+              "reference": "Proverbs 19:18",
+              "textShort": "Chasten thy son while there is hope.",
+              "category": "Correction and Discipline",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with correction and discipline because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s07-c04",
+              "reference": "Proverbs 1:8",
+              "textShort": "My son, hear the instruction of thy father.",
+              "category": "Parents and Children",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with parents and children because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s07-c05",
+              "reference": "Proverbs 22:6",
+              "textShort": "Train up a child in the way he should go.",
+              "category": "Parents and Children",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with parents and children because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s07-c06",
+              "reference": "Proverbs 31:10",
+              "textShort": "Who can find a virtuous woman?",
+              "category": "Parents and Children",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with parents and children because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s07-c07",
+              "reference": "Proverbs 10:12",
+              "textShort": "Hatred stirreth up strifes.",
+              "category": "Peace and Conflict",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with peace and conflict because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s07-c08",
+              "reference": "Proverbs 15:18",
+              "textShort": "A wrathful man stirreth up strife.",
+              "category": "Peace and Conflict",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with peace and conflict because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s07-c09",
+              "reference": "Proverbs 17:14",
+              "textShort": "The beginning of strife is as when one letteth out water.",
+              "category": "Peace and Conflict",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with peace and conflict because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s07-c10",
+              "reference": "Proverbs 1:7",
+              "textShort": "The fear of the Lord is the beginning of knowledge.",
+              "category": "Fear of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with fear of the lord because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s07-c11",
+              "reference": "Proverbs 9:10",
+              "textShort": "The fear of the Lord is the beginning of wisdom.",
+              "category": "Fear of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with fear of the lord because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s07-c12",
+              "reference": "Proverbs 14:27",
+              "textShort": "The fear of the Lord is a fountain of life.",
+              "category": "Fear of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with fear of the lord because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s07-c13",
+              "reference": "Proverbs 16:18",
+              "textShort": "Pride goeth before destruction.",
+              "category": "Pride and Humility",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with pride and humility because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s07-c14",
+              "reference": "Proverbs 18:12",
+              "textShort": "Before honour is humility.",
+              "category": "Pride and Humility",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with pride and humility because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s07-c15",
+              "reference": "Proverbs 22:4",
+              "textShort": "By humility and the fear of the Lord are riches.",
+              "category": "Pride and Humility",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with pride and humility because its wording centers on that wisdom theme."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Proverb Category Board 07 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "pcv-008",
+          "title": "Proverb Category Board 08",
+          "theme": "Sorting Proverbs by wisdom category",
+          "categories": [
+            "Money and Generosity",
+            "Wisdom and Understanding",
+            "Foolishness",
+            "Wise Speech",
+            "Diligence and Laziness"
+          ],
+          "cards": [
+            {
+              "cardId": "pcv-s08-c01",
+              "reference": "Proverbs 11:25",
+              "textShort": "The liberal soul shall be made fat.",
+              "category": "Money and Generosity",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with money and generosity because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s08-c02",
+              "reference": "Proverbs 19:17",
+              "textShort": "He that hath pity upon the poor lendeth unto the Lord.",
+              "category": "Money and Generosity",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with money and generosity because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s08-c03",
+              "reference": "Proverbs 22:1",
+              "textShort": "A good name is rather to be chosen than great riches.",
+              "category": "Money and Generosity",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with money and generosity because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s08-c04",
+              "reference": "Proverbs 2:6",
+              "textShort": "For the Lord giveth wisdom.",
+              "category": "Wisdom and Understanding",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with wisdom and understanding because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s08-c05",
+              "reference": "Proverbs 3:5-6",
+              "textShort": "Trust in the Lord with all thine heart.",
+              "category": "Wisdom and Understanding",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with wisdom and understanding because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s08-c06",
+              "reference": "Proverbs 4:7",
+              "textShort": "Wisdom is the principal thing.",
+              "category": "Wisdom and Understanding",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with wisdom and understanding because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s08-c07",
+              "reference": "Proverbs 12:15",
+              "textShort": "The way of a fool is right in his own eyes.",
+              "category": "Foolishness",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with foolishness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s08-c08",
+              "reference": "Proverbs 14:12",
+              "textShort": "There is a way which seemeth right unto a man.",
+              "category": "Foolishness",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with foolishness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s08-c09",
+              "reference": "Proverbs 26:4",
+              "textShort": "Answer not a fool according to his folly.",
+              "category": "Foolishness",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with foolishness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s08-c10",
+              "reference": "Proverbs 10:19",
+              "textShort": "He that refraineth his lips is wise.",
+              "category": "Wise Speech",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with wise speech because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s08-c11",
+              "reference": "Proverbs 15:1",
+              "textShort": "A soft answer turneth away wrath.",
+              "category": "Wise Speech",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with wise speech because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s08-c12",
+              "reference": "Proverbs 16:24",
+              "textShort": "Pleasant words are as an honeycomb.",
+              "category": "Wise Speech",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with wise speech because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s08-c13",
+              "reference": "Proverbs 6:6",
+              "textShort": "Go to the ant, thou sluggard.",
+              "category": "Diligence and Laziness",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with diligence and laziness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s08-c14",
+              "reference": "Proverbs 10:4",
+              "textShort": "The hand of the diligent maketh rich.",
+              "category": "Diligence and Laziness",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with diligence and laziness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s08-c15",
+              "reference": "Proverbs 13:4",
+              "textShort": "The soul of the diligent shall be made fat.",
+              "category": "Diligence and Laziness",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with diligence and laziness because its wording centers on that wisdom theme."
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Proverb Category Board 08 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "pcv-009",
+          "title": "Proverb Category Board 09",
+          "theme": "Sorting Proverbs by wisdom category",
+          "categories": [
+            "Integrity and Honesty",
+            "The Heart",
+            "Planning and Counsel",
+            "Anger and Self-Control",
+            "Friendship and Counsel"
+          ],
+          "cards": [
+            {
+              "cardId": "pcv-s09-c01",
+              "reference": "Proverbs 10:9",
+              "textShort": "He that walketh uprightly walketh surely.",
+              "category": "Integrity and Honesty",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with integrity and honesty because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s09-c02",
+              "reference": "Proverbs 12:22",
+              "textShort": "Lying lips are abomination to the Lord.",
+              "category": "Integrity and Honesty",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with integrity and honesty because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s09-c03",
+              "reference": "Proverbs 20:7",
+              "textShort": "The just man walketh in his integrity.",
+              "category": "Integrity and Honesty",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with integrity and honesty because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s09-c04",
+              "reference": "Proverbs 4:23",
+              "textShort": "Keep thy heart with all diligence.",
+              "category": "The Heart",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with the heart because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s09-c05",
+              "reference": "Proverbs 14:30",
+              "textShort": "A sound heart is the life of the flesh.",
+              "category": "The Heart",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with the heart because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s09-c06",
+              "reference": "Proverbs 23:7",
+              "textShort": "For as he thinketh in his heart, so is he.",
+              "category": "The Heart",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with the heart because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s09-c07",
+              "reference": "Proverbs 15:22",
+              "textShort": "Without counsel purposes are disappointed.",
+              "category": "Planning and Counsel",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with planning and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s09-c08",
+              "reference": "Proverbs 16:3",
+              "textShort": "Commit thy works unto the Lord.",
+              "category": "Planning and Counsel",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with planning and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s09-c09",
+              "reference": "Proverbs 21:5",
+              "textShort": "The thoughts of the diligent tend only to plenteousness.",
+              "category": "Planning and Counsel",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with planning and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s09-c10",
+              "reference": "Proverbs 14:29",
+              "textShort": "He that is slow to wrath is of great understanding.",
+              "category": "Anger and Self-Control",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with anger and self-control because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s09-c11",
+              "reference": "Proverbs 16:32",
+              "textShort": "He that is slow to anger is better than the mighty.",
+              "category": "Anger and Self-Control",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with anger and self-control because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s09-c12",
+              "reference": "Proverbs 29:11",
+              "textShort": "A fool uttereth all his mind.",
+              "category": "Anger and Self-Control",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with anger and self-control because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s09-c13",
+              "reference": "Proverbs 11:14",
+              "textShort": "In the multitude of counsellors there is safety.",
+              "category": "Friendship and Counsel",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with friendship and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s09-c14",
+              "reference": "Proverbs 17:17",
+              "textShort": "A friend loveth at all times.",
+              "category": "Friendship and Counsel",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with friendship and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s09-c15",
+              "reference": "Proverbs 27:17",
+              "textShort": "Iron sharpeneth iron.",
+              "category": "Friendship and Counsel",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with friendship and counsel because its wording centers on that wisdom theme."
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Proverb Category Board 09 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "pcv-010",
+          "title": "Proverb Category Board 10",
+          "theme": "Sorting Proverbs by wisdom category",
+          "categories": [
+            "Parents and Children",
+            "Peace and Conflict",
+            "Fear of the Lord",
+            "Pride and Humility",
+            "Correction and Discipline"
+          ],
+          "cards": [
+            {
+              "cardId": "pcv-s10-c01",
+              "reference": "Proverbs 1:8",
+              "textShort": "My son, hear the instruction of thy father.",
+              "category": "Parents and Children",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with parents and children because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s10-c02",
+              "reference": "Proverbs 22:6",
+              "textShort": "Train up a child in the way he should go.",
+              "category": "Parents and Children",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with parents and children because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s10-c03",
+              "reference": "Proverbs 31:10",
+              "textShort": "Who can find a virtuous woman?",
+              "category": "Parents and Children",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with parents and children because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s10-c04",
+              "reference": "Proverbs 10:12",
+              "textShort": "Hatred stirreth up strifes.",
+              "category": "Peace and Conflict",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with peace and conflict because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s10-c05",
+              "reference": "Proverbs 15:18",
+              "textShort": "A wrathful man stirreth up strife.",
+              "category": "Peace and Conflict",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with peace and conflict because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s10-c06",
+              "reference": "Proverbs 17:14",
+              "textShort": "The beginning of strife is as when one letteth out water.",
+              "category": "Peace and Conflict",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with peace and conflict because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s10-c07",
+              "reference": "Proverbs 1:7",
+              "textShort": "The fear of the Lord is the beginning of knowledge.",
+              "category": "Fear of the Lord",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with fear of the lord because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s10-c08",
+              "reference": "Proverbs 9:10",
+              "textShort": "The fear of the Lord is the beginning of wisdom.",
+              "category": "Fear of the Lord",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with fear of the lord because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s10-c09",
+              "reference": "Proverbs 14:27",
+              "textShort": "The fear of the Lord is a fountain of life.",
+              "category": "Fear of the Lord",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with fear of the lord because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s10-c10",
+              "reference": "Proverbs 16:18",
+              "textShort": "Pride goeth before destruction.",
+              "category": "Pride and Humility",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with pride and humility because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s10-c11",
+              "reference": "Proverbs 18:12",
+              "textShort": "Before honour is humility.",
+              "category": "Pride and Humility",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with pride and humility because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s10-c12",
+              "reference": "Proverbs 22:4",
+              "textShort": "By humility and the fear of the Lord are riches.",
+              "category": "Pride and Humility",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with pride and humility because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s10-c13",
+              "reference": "Proverbs 12:1",
+              "textShort": "Whoso loveth instruction loveth knowledge.",
+              "category": "Correction and Discipline",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with correction and discipline because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s10-c14",
+              "reference": "Proverbs 13:24",
+              "textShort": "He that loveth him chasteneth him betimes.",
+              "category": "Correction and Discipline",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with correction and discipline because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s10-c15",
+              "reference": "Proverbs 19:18",
+              "textShort": "Chasten thy son while there is hope.",
+              "category": "Correction and Discipline",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with correction and discipline because its wording centers on that wisdom theme."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Proverb Category Board 10 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "pcv-011",
+          "title": "Proverb Category Board 11",
+          "theme": "Sorting Proverbs by wisdom category",
+          "categories": [
+            "Wisdom and Understanding",
+            "Foolishness",
+            "Wise Speech",
+            "Diligence and Laziness",
+            "Money and Generosity"
+          ],
+          "cards": [
+            {
+              "cardId": "pcv-s11-c01",
+              "reference": "Proverbs 2:6",
+              "textShort": "For the Lord giveth wisdom.",
+              "category": "Wisdom and Understanding",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with wisdom and understanding because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s11-c02",
+              "reference": "Proverbs 3:5-6",
+              "textShort": "Trust in the Lord with all thine heart.",
+              "category": "Wisdom and Understanding",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with wisdom and understanding because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s11-c03",
+              "reference": "Proverbs 4:7",
+              "textShort": "Wisdom is the principal thing.",
+              "category": "Wisdom and Understanding",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with wisdom and understanding because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s11-c04",
+              "reference": "Proverbs 12:15",
+              "textShort": "The way of a fool is right in his own eyes.",
+              "category": "Foolishness",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with foolishness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s11-c05",
+              "reference": "Proverbs 14:12",
+              "textShort": "There is a way which seemeth right unto a man.",
+              "category": "Foolishness",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with foolishness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s11-c06",
+              "reference": "Proverbs 26:4",
+              "textShort": "Answer not a fool according to his folly.",
+              "category": "Foolishness",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with foolishness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s11-c07",
+              "reference": "Proverbs 10:19",
+              "textShort": "He that refraineth his lips is wise.",
+              "category": "Wise Speech",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with wise speech because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s11-c08",
+              "reference": "Proverbs 15:1",
+              "textShort": "A soft answer turneth away wrath.",
+              "category": "Wise Speech",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with wise speech because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s11-c09",
+              "reference": "Proverbs 16:24",
+              "textShort": "Pleasant words are as an honeycomb.",
+              "category": "Wise Speech",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with wise speech because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s11-c10",
+              "reference": "Proverbs 6:6",
+              "textShort": "Go to the ant, thou sluggard.",
+              "category": "Diligence and Laziness",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with diligence and laziness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s11-c11",
+              "reference": "Proverbs 10:4",
+              "textShort": "The hand of the diligent maketh rich.",
+              "category": "Diligence and Laziness",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with diligence and laziness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s11-c12",
+              "reference": "Proverbs 13:4",
+              "textShort": "The soul of the diligent shall be made fat.",
+              "category": "Diligence and Laziness",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with diligence and laziness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s11-c13",
+              "reference": "Proverbs 11:25",
+              "textShort": "The liberal soul shall be made fat.",
+              "category": "Money and Generosity",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with money and generosity because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s11-c14",
+              "reference": "Proverbs 19:17",
+              "textShort": "He that hath pity upon the poor lendeth unto the Lord.",
+              "category": "Money and Generosity",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with money and generosity because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s11-c15",
+              "reference": "Proverbs 22:1",
+              "textShort": "A good name is rather to be chosen than great riches.",
+              "category": "Money and Generosity",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with money and generosity because its wording centers on that wisdom theme."
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Proverb Category Board 11 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "pcv-012",
+          "title": "Proverb Category Board 12",
+          "theme": "Sorting Proverbs by wisdom category",
+          "categories": [
+            "The Heart",
+            "Planning and Counsel",
+            "Anger and Self-Control",
+            "Friendship and Counsel",
+            "Integrity and Honesty"
+          ],
+          "cards": [
+            {
+              "cardId": "pcv-s12-c01",
+              "reference": "Proverbs 4:23",
+              "textShort": "Keep thy heart with all diligence.",
+              "category": "The Heart",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with the heart because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s12-c02",
+              "reference": "Proverbs 14:30",
+              "textShort": "A sound heart is the life of the flesh.",
+              "category": "The Heart",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with the heart because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s12-c03",
+              "reference": "Proverbs 23:7",
+              "textShort": "For as he thinketh in his heart, so is he.",
+              "category": "The Heart",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with the heart because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s12-c04",
+              "reference": "Proverbs 15:22",
+              "textShort": "Without counsel purposes are disappointed.",
+              "category": "Planning and Counsel",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with planning and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s12-c05",
+              "reference": "Proverbs 16:3",
+              "textShort": "Commit thy works unto the Lord.",
+              "category": "Planning and Counsel",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with planning and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s12-c06",
+              "reference": "Proverbs 21:5",
+              "textShort": "The thoughts of the diligent tend only to plenteousness.",
+              "category": "Planning and Counsel",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with planning and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s12-c07",
+              "reference": "Proverbs 14:29",
+              "textShort": "He that is slow to wrath is of great understanding.",
+              "category": "Anger and Self-Control",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with anger and self-control because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s12-c08",
+              "reference": "Proverbs 16:32",
+              "textShort": "He that is slow to anger is better than the mighty.",
+              "category": "Anger and Self-Control",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with anger and self-control because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s12-c09",
+              "reference": "Proverbs 29:11",
+              "textShort": "A fool uttereth all his mind.",
+              "category": "Anger and Self-Control",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with anger and self-control because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s12-c10",
+              "reference": "Proverbs 11:14",
+              "textShort": "In the multitude of counsellors there is safety.",
+              "category": "Friendship and Counsel",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with friendship and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s12-c11",
+              "reference": "Proverbs 17:17",
+              "textShort": "A friend loveth at all times.",
+              "category": "Friendship and Counsel",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with friendship and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s12-c12",
+              "reference": "Proverbs 27:17",
+              "textShort": "Iron sharpeneth iron.",
+              "category": "Friendship and Counsel",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with friendship and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s12-c13",
+              "reference": "Proverbs 10:9",
+              "textShort": "He that walketh uprightly walketh surely.",
+              "category": "Integrity and Honesty",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with integrity and honesty because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s12-c14",
+              "reference": "Proverbs 12:22",
+              "textShort": "Lying lips are abomination to the Lord.",
+              "category": "Integrity and Honesty",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with integrity and honesty because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s12-c15",
+              "reference": "Proverbs 20:7",
+              "textShort": "The just man walketh in his integrity.",
+              "category": "Integrity and Honesty",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with integrity and honesty because its wording centers on that wisdom theme."
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Proverb Category Board 12 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "pcv-013",
+          "title": "Proverb Category Board 13",
+          "theme": "Sorting Proverbs by wisdom category",
+          "categories": [
+            "Peace and Conflict",
+            "Fear of the Lord",
+            "Pride and Humility",
+            "Correction and Discipline",
+            "Parents and Children"
+          ],
+          "cards": [
+            {
+              "cardId": "pcv-s13-c01",
+              "reference": "Proverbs 10:12",
+              "textShort": "Hatred stirreth up strifes.",
+              "category": "Peace and Conflict",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with peace and conflict because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s13-c02",
+              "reference": "Proverbs 15:18",
+              "textShort": "A wrathful man stirreth up strife.",
+              "category": "Peace and Conflict",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with peace and conflict because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s13-c03",
+              "reference": "Proverbs 17:14",
+              "textShort": "The beginning of strife is as when one letteth out water.",
+              "category": "Peace and Conflict",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with peace and conflict because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s13-c04",
+              "reference": "Proverbs 1:7",
+              "textShort": "The fear of the Lord is the beginning of knowledge.",
+              "category": "Fear of the Lord",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with fear of the lord because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s13-c05",
+              "reference": "Proverbs 9:10",
+              "textShort": "The fear of the Lord is the beginning of wisdom.",
+              "category": "Fear of the Lord",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with fear of the lord because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s13-c06",
+              "reference": "Proverbs 14:27",
+              "textShort": "The fear of the Lord is a fountain of life.",
+              "category": "Fear of the Lord",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with fear of the lord because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s13-c07",
+              "reference": "Proverbs 16:18",
+              "textShort": "Pride goeth before destruction.",
+              "category": "Pride and Humility",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with pride and humility because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s13-c08",
+              "reference": "Proverbs 18:12",
+              "textShort": "Before honour is humility.",
+              "category": "Pride and Humility",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with pride and humility because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s13-c09",
+              "reference": "Proverbs 22:4",
+              "textShort": "By humility and the fear of the Lord are riches.",
+              "category": "Pride and Humility",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with pride and humility because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s13-c10",
+              "reference": "Proverbs 12:1",
+              "textShort": "Whoso loveth instruction loveth knowledge.",
+              "category": "Correction and Discipline",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with correction and discipline because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s13-c11",
+              "reference": "Proverbs 13:24",
+              "textShort": "He that loveth him chasteneth him betimes.",
+              "category": "Correction and Discipline",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with correction and discipline because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s13-c12",
+              "reference": "Proverbs 19:18",
+              "textShort": "Chasten thy son while there is hope.",
+              "category": "Correction and Discipline",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with correction and discipline because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s13-c13",
+              "reference": "Proverbs 1:8",
+              "textShort": "My son, hear the instruction of thy father.",
+              "category": "Parents and Children",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with parents and children because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s13-c14",
+              "reference": "Proverbs 22:6",
+              "textShort": "Train up a child in the way he should go.",
+              "category": "Parents and Children",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with parents and children because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s13-c15",
+              "reference": "Proverbs 31:10",
+              "textShort": "Who can find a virtuous woman?",
+              "category": "Parents and Children",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with parents and children because its wording centers on that wisdom theme."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Proverb Category Board 13 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "pcv-014",
+          "title": "Proverb Category Board 14",
+          "theme": "Sorting Proverbs by wisdom category",
+          "categories": [
+            "Foolishness",
+            "Wise Speech",
+            "Diligence and Laziness",
+            "Money and Generosity",
+            "Wisdom and Understanding"
+          ],
+          "cards": [
+            {
+              "cardId": "pcv-s14-c01",
+              "reference": "Proverbs 12:15",
+              "textShort": "The way of a fool is right in his own eyes.",
+              "category": "Foolishness",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with foolishness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s14-c02",
+              "reference": "Proverbs 14:12",
+              "textShort": "There is a way which seemeth right unto a man.",
+              "category": "Foolishness",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with foolishness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s14-c03",
+              "reference": "Proverbs 26:4",
+              "textShort": "Answer not a fool according to his folly.",
+              "category": "Foolishness",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with foolishness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s14-c04",
+              "reference": "Proverbs 10:19",
+              "textShort": "He that refraineth his lips is wise.",
+              "category": "Wise Speech",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with wise speech because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s14-c05",
+              "reference": "Proverbs 15:1",
+              "textShort": "A soft answer turneth away wrath.",
+              "category": "Wise Speech",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with wise speech because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s14-c06",
+              "reference": "Proverbs 16:24",
+              "textShort": "Pleasant words are as an honeycomb.",
+              "category": "Wise Speech",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with wise speech because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s14-c07",
+              "reference": "Proverbs 6:6",
+              "textShort": "Go to the ant, thou sluggard.",
+              "category": "Diligence and Laziness",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with diligence and laziness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s14-c08",
+              "reference": "Proverbs 10:4",
+              "textShort": "The hand of the diligent maketh rich.",
+              "category": "Diligence and Laziness",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with diligence and laziness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s14-c09",
+              "reference": "Proverbs 13:4",
+              "textShort": "The soul of the diligent shall be made fat.",
+              "category": "Diligence and Laziness",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with diligence and laziness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s14-c10",
+              "reference": "Proverbs 11:25",
+              "textShort": "The liberal soul shall be made fat.",
+              "category": "Money and Generosity",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with money and generosity because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s14-c11",
+              "reference": "Proverbs 19:17",
+              "textShort": "He that hath pity upon the poor lendeth unto the Lord.",
+              "category": "Money and Generosity",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with money and generosity because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s14-c12",
+              "reference": "Proverbs 22:1",
+              "textShort": "A good name is rather to be chosen than great riches.",
+              "category": "Money and Generosity",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with money and generosity because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s14-c13",
+              "reference": "Proverbs 2:6",
+              "textShort": "For the Lord giveth wisdom.",
+              "category": "Wisdom and Understanding",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with wisdom and understanding because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s14-c14",
+              "reference": "Proverbs 3:5-6",
+              "textShort": "Trust in the Lord with all thine heart.",
+              "category": "Wisdom and Understanding",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with wisdom and understanding because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s14-c15",
+              "reference": "Proverbs 4:7",
+              "textShort": "Wisdom is the principal thing.",
+              "category": "Wisdom and Understanding",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with wisdom and understanding because its wording centers on that wisdom theme."
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Proverb Category Board 14 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "pcv-015",
+          "title": "Proverb Category Board 15",
+          "theme": "Sorting Proverbs by wisdom category",
+          "categories": [
+            "Planning and Counsel",
+            "Anger and Self-Control",
+            "Friendship and Counsel",
+            "Integrity and Honesty",
+            "The Heart"
+          ],
+          "cards": [
+            {
+              "cardId": "pcv-s15-c01",
+              "reference": "Proverbs 15:22",
+              "textShort": "Without counsel purposes are disappointed.",
+              "category": "Planning and Counsel",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with planning and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s15-c02",
+              "reference": "Proverbs 16:3",
+              "textShort": "Commit thy works unto the Lord.",
+              "category": "Planning and Counsel",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with planning and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s15-c03",
+              "reference": "Proverbs 21:5",
+              "textShort": "The thoughts of the diligent tend only to plenteousness.",
+              "category": "Planning and Counsel",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with planning and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s15-c04",
+              "reference": "Proverbs 14:29",
+              "textShort": "He that is slow to wrath is of great understanding.",
+              "category": "Anger and Self-Control",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with anger and self-control because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s15-c05",
+              "reference": "Proverbs 16:32",
+              "textShort": "He that is slow to anger is better than the mighty.",
+              "category": "Anger and Self-Control",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with anger and self-control because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s15-c06",
+              "reference": "Proverbs 29:11",
+              "textShort": "A fool uttereth all his mind.",
+              "category": "Anger and Self-Control",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with anger and self-control because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s15-c07",
+              "reference": "Proverbs 11:14",
+              "textShort": "In the multitude of counsellors there is safety.",
+              "category": "Friendship and Counsel",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with friendship and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s15-c08",
+              "reference": "Proverbs 17:17",
+              "textShort": "A friend loveth at all times.",
+              "category": "Friendship and Counsel",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with friendship and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s15-c09",
+              "reference": "Proverbs 27:17",
+              "textShort": "Iron sharpeneth iron.",
+              "category": "Friendship and Counsel",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with friendship and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s15-c10",
+              "reference": "Proverbs 10:9",
+              "textShort": "He that walketh uprightly walketh surely.",
+              "category": "Integrity and Honesty",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with integrity and honesty because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s15-c11",
+              "reference": "Proverbs 12:22",
+              "textShort": "Lying lips are abomination to the Lord.",
+              "category": "Integrity and Honesty",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with integrity and honesty because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s15-c12",
+              "reference": "Proverbs 20:7",
+              "textShort": "The just man walketh in his integrity.",
+              "category": "Integrity and Honesty",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with integrity and honesty because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s15-c13",
+              "reference": "Proverbs 4:23",
+              "textShort": "Keep thy heart with all diligence.",
+              "category": "The Heart",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with the heart because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s15-c14",
+              "reference": "Proverbs 14:30",
+              "textShort": "A sound heart is the life of the flesh.",
+              "category": "The Heart",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with the heart because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s15-c15",
+              "reference": "Proverbs 23:7",
+              "textShort": "For as he thinketh in his heart, so is he.",
+              "category": "The Heart",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with the heart because its wording centers on that wisdom theme."
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Proverb Category Board 15 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "pcv-016",
+          "title": "Proverb Category Board 16",
+          "theme": "Sorting Proverbs by wisdom category",
+          "categories": [
+            "Fear of the Lord",
+            "Pride and Humility",
+            "Correction and Discipline",
+            "Parents and Children",
+            "Peace and Conflict"
+          ],
+          "cards": [
+            {
+              "cardId": "pcv-s16-c01",
+              "reference": "Proverbs 1:7",
+              "textShort": "The fear of the Lord is the beginning of knowledge.",
+              "category": "Fear of the Lord",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with fear of the lord because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s16-c02",
+              "reference": "Proverbs 9:10",
+              "textShort": "The fear of the Lord is the beginning of wisdom.",
+              "category": "Fear of the Lord",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with fear of the lord because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s16-c03",
+              "reference": "Proverbs 14:27",
+              "textShort": "The fear of the Lord is a fountain of life.",
+              "category": "Fear of the Lord",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with fear of the lord because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s16-c04",
+              "reference": "Proverbs 16:18",
+              "textShort": "Pride goeth before destruction.",
+              "category": "Pride and Humility",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with pride and humility because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s16-c05",
+              "reference": "Proverbs 18:12",
+              "textShort": "Before honour is humility.",
+              "category": "Pride and Humility",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with pride and humility because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s16-c06",
+              "reference": "Proverbs 22:4",
+              "textShort": "By humility and the fear of the Lord are riches.",
+              "category": "Pride and Humility",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with pride and humility because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s16-c07",
+              "reference": "Proverbs 12:1",
+              "textShort": "Whoso loveth instruction loveth knowledge.",
+              "category": "Correction and Discipline",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with correction and discipline because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s16-c08",
+              "reference": "Proverbs 13:24",
+              "textShort": "He that loveth him chasteneth him betimes.",
+              "category": "Correction and Discipline",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with correction and discipline because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s16-c09",
+              "reference": "Proverbs 19:18",
+              "textShort": "Chasten thy son while there is hope.",
+              "category": "Correction and Discipline",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with correction and discipline because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s16-c10",
+              "reference": "Proverbs 1:8",
+              "textShort": "My son, hear the instruction of thy father.",
+              "category": "Parents and Children",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with parents and children because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s16-c11",
+              "reference": "Proverbs 22:6",
+              "textShort": "Train up a child in the way he should go.",
+              "category": "Parents and Children",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with parents and children because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s16-c12",
+              "reference": "Proverbs 31:10",
+              "textShort": "Who can find a virtuous woman?",
+              "category": "Parents and Children",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with parents and children because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s16-c13",
+              "reference": "Proverbs 10:12",
+              "textShort": "Hatred stirreth up strifes.",
+              "category": "Peace and Conflict",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with peace and conflict because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s16-c14",
+              "reference": "Proverbs 15:18",
+              "textShort": "A wrathful man stirreth up strife.",
+              "category": "Peace and Conflict",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with peace and conflict because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s16-c15",
+              "reference": "Proverbs 17:14",
+              "textShort": "The beginning of strife is as when one letteth out water.",
+              "category": "Peace and Conflict",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with peace and conflict because its wording centers on that wisdom theme."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Proverb Category Board 16 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "pcv-017",
+          "title": "Proverb Category Board 17",
+          "theme": "Sorting Proverbs by wisdom category",
+          "categories": [
+            "Wise Speech",
+            "Diligence and Laziness",
+            "Money and Generosity",
+            "Wisdom and Understanding",
+            "Foolishness"
+          ],
+          "cards": [
+            {
+              "cardId": "pcv-s17-c01",
+              "reference": "Proverbs 10:19",
+              "textShort": "He that refraineth his lips is wise.",
+              "category": "Wise Speech",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with wise speech because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s17-c02",
+              "reference": "Proverbs 15:1",
+              "textShort": "A soft answer turneth away wrath.",
+              "category": "Wise Speech",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with wise speech because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s17-c03",
+              "reference": "Proverbs 16:24",
+              "textShort": "Pleasant words are as an honeycomb.",
+              "category": "Wise Speech",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with wise speech because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s17-c04",
+              "reference": "Proverbs 6:6",
+              "textShort": "Go to the ant, thou sluggard.",
+              "category": "Diligence and Laziness",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with diligence and laziness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s17-c05",
+              "reference": "Proverbs 10:4",
+              "textShort": "The hand of the diligent maketh rich.",
+              "category": "Diligence and Laziness",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with diligence and laziness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s17-c06",
+              "reference": "Proverbs 13:4",
+              "textShort": "The soul of the diligent shall be made fat.",
+              "category": "Diligence and Laziness",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with diligence and laziness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s17-c07",
+              "reference": "Proverbs 11:25",
+              "textShort": "The liberal soul shall be made fat.",
+              "category": "Money and Generosity",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with money and generosity because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s17-c08",
+              "reference": "Proverbs 19:17",
+              "textShort": "He that hath pity upon the poor lendeth unto the Lord.",
+              "category": "Money and Generosity",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with money and generosity because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s17-c09",
+              "reference": "Proverbs 22:1",
+              "textShort": "A good name is rather to be chosen than great riches.",
+              "category": "Money and Generosity",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with money and generosity because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s17-c10",
+              "reference": "Proverbs 2:6",
+              "textShort": "For the Lord giveth wisdom.",
+              "category": "Wisdom and Understanding",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with wisdom and understanding because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s17-c11",
+              "reference": "Proverbs 3:5-6",
+              "textShort": "Trust in the Lord with all thine heart.",
+              "category": "Wisdom and Understanding",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with wisdom and understanding because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s17-c12",
+              "reference": "Proverbs 4:7",
+              "textShort": "Wisdom is the principal thing.",
+              "category": "Wisdom and Understanding",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with wisdom and understanding because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s17-c13",
+              "reference": "Proverbs 12:15",
+              "textShort": "The way of a fool is right in his own eyes.",
+              "category": "Foolishness",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with foolishness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s17-c14",
+              "reference": "Proverbs 14:12",
+              "textShort": "There is a way which seemeth right unto a man.",
+              "category": "Foolishness",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with foolishness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s17-c15",
+              "reference": "Proverbs 26:4",
+              "textShort": "Answer not a fool according to his folly.",
+              "category": "Foolishness",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with foolishness because its wording centers on that wisdom theme."
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Proverb Category Board 17 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "pcv-018",
+          "title": "Proverb Category Board 18",
+          "theme": "Sorting Proverbs by wisdom category",
+          "categories": [
+            "Anger and Self-Control",
+            "Friendship and Counsel",
+            "Integrity and Honesty",
+            "The Heart",
+            "Planning and Counsel"
+          ],
+          "cards": [
+            {
+              "cardId": "pcv-s18-c01",
+              "reference": "Proverbs 14:29",
+              "textShort": "He that is slow to wrath is of great understanding.",
+              "category": "Anger and Self-Control",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with anger and self-control because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s18-c02",
+              "reference": "Proverbs 16:32",
+              "textShort": "He that is slow to anger is better than the mighty.",
+              "category": "Anger and Self-Control",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with anger and self-control because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s18-c03",
+              "reference": "Proverbs 29:11",
+              "textShort": "A fool uttereth all his mind.",
+              "category": "Anger and Self-Control",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with anger and self-control because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s18-c04",
+              "reference": "Proverbs 11:14",
+              "textShort": "In the multitude of counsellors there is safety.",
+              "category": "Friendship and Counsel",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with friendship and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s18-c05",
+              "reference": "Proverbs 17:17",
+              "textShort": "A friend loveth at all times.",
+              "category": "Friendship and Counsel",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with friendship and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s18-c06",
+              "reference": "Proverbs 27:17",
+              "textShort": "Iron sharpeneth iron.",
+              "category": "Friendship and Counsel",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with friendship and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s18-c07",
+              "reference": "Proverbs 10:9",
+              "textShort": "He that walketh uprightly walketh surely.",
+              "category": "Integrity and Honesty",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with integrity and honesty because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s18-c08",
+              "reference": "Proverbs 12:22",
+              "textShort": "Lying lips are abomination to the Lord.",
+              "category": "Integrity and Honesty",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with integrity and honesty because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s18-c09",
+              "reference": "Proverbs 20:7",
+              "textShort": "The just man walketh in his integrity.",
+              "category": "Integrity and Honesty",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with integrity and honesty because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s18-c10",
+              "reference": "Proverbs 4:23",
+              "textShort": "Keep thy heart with all diligence.",
+              "category": "The Heart",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with the heart because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s18-c11",
+              "reference": "Proverbs 14:30",
+              "textShort": "A sound heart is the life of the flesh.",
+              "category": "The Heart",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with the heart because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s18-c12",
+              "reference": "Proverbs 23:7",
+              "textShort": "For as he thinketh in his heart, so is he.",
+              "category": "The Heart",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with the heart because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s18-c13",
+              "reference": "Proverbs 15:22",
+              "textShort": "Without counsel purposes are disappointed.",
+              "category": "Planning and Counsel",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with planning and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s18-c14",
+              "reference": "Proverbs 16:3",
+              "textShort": "Commit thy works unto the Lord.",
+              "category": "Planning and Counsel",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with planning and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s18-c15",
+              "reference": "Proverbs 21:5",
+              "textShort": "The thoughts of the diligent tend only to plenteousness.",
+              "category": "Planning and Counsel",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with planning and counsel because its wording centers on that wisdom theme."
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Proverb Category Board 18 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "pcv-019",
+          "title": "Proverb Category Board 19",
+          "theme": "Sorting Proverbs by wisdom category",
+          "categories": [
+            "Pride and Humility",
+            "Correction and Discipline",
+            "Parents and Children",
+            "Peace and Conflict",
+            "Fear of the Lord"
+          ],
+          "cards": [
+            {
+              "cardId": "pcv-s19-c01",
+              "reference": "Proverbs 16:18",
+              "textShort": "Pride goeth before destruction.",
+              "category": "Pride and Humility",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with pride and humility because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s19-c02",
+              "reference": "Proverbs 18:12",
+              "textShort": "Before honour is humility.",
+              "category": "Pride and Humility",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with pride and humility because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s19-c03",
+              "reference": "Proverbs 22:4",
+              "textShort": "By humility and the fear of the Lord are riches.",
+              "category": "Pride and Humility",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with pride and humility because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s19-c04",
+              "reference": "Proverbs 12:1",
+              "textShort": "Whoso loveth instruction loveth knowledge.",
+              "category": "Correction and Discipline",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with correction and discipline because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s19-c05",
+              "reference": "Proverbs 13:24",
+              "textShort": "He that loveth him chasteneth him betimes.",
+              "category": "Correction and Discipline",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with correction and discipline because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s19-c06",
+              "reference": "Proverbs 19:18",
+              "textShort": "Chasten thy son while there is hope.",
+              "category": "Correction and Discipline",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with correction and discipline because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s19-c07",
+              "reference": "Proverbs 1:8",
+              "textShort": "My son, hear the instruction of thy father.",
+              "category": "Parents and Children",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with parents and children because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s19-c08",
+              "reference": "Proverbs 22:6",
+              "textShort": "Train up a child in the way he should go.",
+              "category": "Parents and Children",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with parents and children because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s19-c09",
+              "reference": "Proverbs 31:10",
+              "textShort": "Who can find a virtuous woman?",
+              "category": "Parents and Children",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with parents and children because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s19-c10",
+              "reference": "Proverbs 10:12",
+              "textShort": "Hatred stirreth up strifes.",
+              "category": "Peace and Conflict",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with peace and conflict because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s19-c11",
+              "reference": "Proverbs 15:18",
+              "textShort": "A wrathful man stirreth up strife.",
+              "category": "Peace and Conflict",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with peace and conflict because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s19-c12",
+              "reference": "Proverbs 17:14",
+              "textShort": "The beginning of strife is as when one letteth out water.",
+              "category": "Peace and Conflict",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with peace and conflict because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s19-c13",
+              "reference": "Proverbs 1:7",
+              "textShort": "The fear of the Lord is the beginning of knowledge.",
+              "category": "Fear of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with fear of the lord because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s19-c14",
+              "reference": "Proverbs 9:10",
+              "textShort": "The fear of the Lord is the beginning of wisdom.",
+              "category": "Fear of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with fear of the lord because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s19-c15",
+              "reference": "Proverbs 14:27",
+              "textShort": "The fear of the Lord is a fountain of life.",
+              "category": "Fear of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with fear of the lord because its wording centers on that wisdom theme."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Proverb Category Board 19 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "pcv-020",
+          "title": "Proverb Category Board 20",
+          "theme": "Sorting Proverbs by wisdom category",
+          "categories": [
+            "Diligence and Laziness",
+            "Money and Generosity",
+            "Wisdom and Understanding",
+            "Foolishness",
+            "Wise Speech"
+          ],
+          "cards": [
+            {
+              "cardId": "pcv-s20-c01",
+              "reference": "Proverbs 6:6",
+              "textShort": "Go to the ant, thou sluggard.",
+              "category": "Diligence and Laziness",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with diligence and laziness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s20-c02",
+              "reference": "Proverbs 10:4",
+              "textShort": "The hand of the diligent maketh rich.",
+              "category": "Diligence and Laziness",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with diligence and laziness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s20-c03",
+              "reference": "Proverbs 13:4",
+              "textShort": "The soul of the diligent shall be made fat.",
+              "category": "Diligence and Laziness",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with diligence and laziness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s20-c04",
+              "reference": "Proverbs 11:25",
+              "textShort": "The liberal soul shall be made fat.",
+              "category": "Money and Generosity",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with money and generosity because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s20-c05",
+              "reference": "Proverbs 19:17",
+              "textShort": "He that hath pity upon the poor lendeth unto the Lord.",
+              "category": "Money and Generosity",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with money and generosity because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s20-c06",
+              "reference": "Proverbs 22:1",
+              "textShort": "A good name is rather to be chosen than great riches.",
+              "category": "Money and Generosity",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with money and generosity because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s20-c07",
+              "reference": "Proverbs 2:6",
+              "textShort": "For the Lord giveth wisdom.",
+              "category": "Wisdom and Understanding",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with wisdom and understanding because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s20-c08",
+              "reference": "Proverbs 3:5-6",
+              "textShort": "Trust in the Lord with all thine heart.",
+              "category": "Wisdom and Understanding",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with wisdom and understanding because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s20-c09",
+              "reference": "Proverbs 4:7",
+              "textShort": "Wisdom is the principal thing.",
+              "category": "Wisdom and Understanding",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with wisdom and understanding because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s20-c10",
+              "reference": "Proverbs 12:15",
+              "textShort": "The way of a fool is right in his own eyes.",
+              "category": "Foolishness",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with foolishness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s20-c11",
+              "reference": "Proverbs 14:12",
+              "textShort": "There is a way which seemeth right unto a man.",
+              "category": "Foolishness",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with foolishness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s20-c12",
+              "reference": "Proverbs 26:4",
+              "textShort": "Answer not a fool according to his folly.",
+              "category": "Foolishness",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with foolishness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s20-c13",
+              "reference": "Proverbs 10:19",
+              "textShort": "He that refraineth his lips is wise.",
+              "category": "Wise Speech",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with wise speech because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s20-c14",
+              "reference": "Proverbs 15:1",
+              "textShort": "A soft answer turneth away wrath.",
+              "category": "Wise Speech",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with wise speech because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s20-c15",
+              "reference": "Proverbs 16:24",
+              "textShort": "Pleasant words are as an honeycomb.",
+              "category": "Wise Speech",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with wise speech because its wording centers on that wisdom theme."
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Proverb Category Board 20 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "pcv-021",
+          "title": "Proverb Category Board 21",
+          "theme": "Sorting Proverbs by wisdom category",
+          "categories": [
+            "Friendship and Counsel",
+            "Integrity and Honesty",
+            "The Heart",
+            "Planning and Counsel",
+            "Anger and Self-Control"
+          ],
+          "cards": [
+            {
+              "cardId": "pcv-s21-c01",
+              "reference": "Proverbs 11:14",
+              "textShort": "In the multitude of counsellors there is safety.",
+              "category": "Friendship and Counsel",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with friendship and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s21-c02",
+              "reference": "Proverbs 17:17",
+              "textShort": "A friend loveth at all times.",
+              "category": "Friendship and Counsel",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with friendship and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s21-c03",
+              "reference": "Proverbs 27:17",
+              "textShort": "Iron sharpeneth iron.",
+              "category": "Friendship and Counsel",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with friendship and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s21-c04",
+              "reference": "Proverbs 10:9",
+              "textShort": "He that walketh uprightly walketh surely.",
+              "category": "Integrity and Honesty",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with integrity and honesty because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s21-c05",
+              "reference": "Proverbs 12:22",
+              "textShort": "Lying lips are abomination to the Lord.",
+              "category": "Integrity and Honesty",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with integrity and honesty because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s21-c06",
+              "reference": "Proverbs 20:7",
+              "textShort": "The just man walketh in his integrity.",
+              "category": "Integrity and Honesty",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with integrity and honesty because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s21-c07",
+              "reference": "Proverbs 4:23",
+              "textShort": "Keep thy heart with all diligence.",
+              "category": "The Heart",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with the heart because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s21-c08",
+              "reference": "Proverbs 14:30",
+              "textShort": "A sound heart is the life of the flesh.",
+              "category": "The Heart",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with the heart because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s21-c09",
+              "reference": "Proverbs 23:7",
+              "textShort": "For as he thinketh in his heart, so is he.",
+              "category": "The Heart",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with the heart because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s21-c10",
+              "reference": "Proverbs 15:22",
+              "textShort": "Without counsel purposes are disappointed.",
+              "category": "Planning and Counsel",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with planning and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s21-c11",
+              "reference": "Proverbs 16:3",
+              "textShort": "Commit thy works unto the Lord.",
+              "category": "Planning and Counsel",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with planning and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s21-c12",
+              "reference": "Proverbs 21:5",
+              "textShort": "The thoughts of the diligent tend only to plenteousness.",
+              "category": "Planning and Counsel",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with planning and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s21-c13",
+              "reference": "Proverbs 14:29",
+              "textShort": "He that is slow to wrath is of great understanding.",
+              "category": "Anger and Self-Control",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with anger and self-control because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s21-c14",
+              "reference": "Proverbs 16:32",
+              "textShort": "He that is slow to anger is better than the mighty.",
+              "category": "Anger and Self-Control",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with anger and self-control because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s21-c15",
+              "reference": "Proverbs 29:11",
+              "textShort": "A fool uttereth all his mind.",
+              "category": "Anger and Self-Control",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with anger and self-control because its wording centers on that wisdom theme."
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Proverb Category Board 21 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "pcv-022",
+          "title": "Proverb Category Board 22",
+          "theme": "Sorting Proverbs by wisdom category",
+          "categories": [
+            "Correction and Discipline",
+            "Parents and Children",
+            "Peace and Conflict",
+            "Fear of the Lord",
+            "Pride and Humility"
+          ],
+          "cards": [
+            {
+              "cardId": "pcv-s22-c01",
+              "reference": "Proverbs 12:1",
+              "textShort": "Whoso loveth instruction loveth knowledge.",
+              "category": "Correction and Discipline",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with correction and discipline because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s22-c02",
+              "reference": "Proverbs 13:24",
+              "textShort": "He that loveth him chasteneth him betimes.",
+              "category": "Correction and Discipline",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with correction and discipline because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s22-c03",
+              "reference": "Proverbs 19:18",
+              "textShort": "Chasten thy son while there is hope.",
+              "category": "Correction and Discipline",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with correction and discipline because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s22-c04",
+              "reference": "Proverbs 1:8",
+              "textShort": "My son, hear the instruction of thy father.",
+              "category": "Parents and Children",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with parents and children because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s22-c05",
+              "reference": "Proverbs 22:6",
+              "textShort": "Train up a child in the way he should go.",
+              "category": "Parents and Children",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with parents and children because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s22-c06",
+              "reference": "Proverbs 31:10",
+              "textShort": "Who can find a virtuous woman?",
+              "category": "Parents and Children",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with parents and children because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s22-c07",
+              "reference": "Proverbs 10:12",
+              "textShort": "Hatred stirreth up strifes.",
+              "category": "Peace and Conflict",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with peace and conflict because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s22-c08",
+              "reference": "Proverbs 15:18",
+              "textShort": "A wrathful man stirreth up strife.",
+              "category": "Peace and Conflict",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with peace and conflict because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s22-c09",
+              "reference": "Proverbs 17:14",
+              "textShort": "The beginning of strife is as when one letteth out water.",
+              "category": "Peace and Conflict",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with peace and conflict because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s22-c10",
+              "reference": "Proverbs 1:7",
+              "textShort": "The fear of the Lord is the beginning of knowledge.",
+              "category": "Fear of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with fear of the lord because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s22-c11",
+              "reference": "Proverbs 9:10",
+              "textShort": "The fear of the Lord is the beginning of wisdom.",
+              "category": "Fear of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with fear of the lord because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s22-c12",
+              "reference": "Proverbs 14:27",
+              "textShort": "The fear of the Lord is a fountain of life.",
+              "category": "Fear of the Lord",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with fear of the lord because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s22-c13",
+              "reference": "Proverbs 16:18",
+              "textShort": "Pride goeth before destruction.",
+              "category": "Pride and Humility",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with pride and humility because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s22-c14",
+              "reference": "Proverbs 18:12",
+              "textShort": "Before honour is humility.",
+              "category": "Pride and Humility",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with pride and humility because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s22-c15",
+              "reference": "Proverbs 22:4",
+              "textShort": "By humility and the fear of the Lord are riches.",
+              "category": "Pride and Humility",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with pride and humility because its wording centers on that wisdom theme."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Proverb Category Board 22 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "pcv-023",
+          "title": "Proverb Category Board 23",
+          "theme": "Sorting Proverbs by wisdom category",
+          "categories": [
+            "Money and Generosity",
+            "Wisdom and Understanding",
+            "Foolishness",
+            "Wise Speech",
+            "Diligence and Laziness"
+          ],
+          "cards": [
+            {
+              "cardId": "pcv-s23-c01",
+              "reference": "Proverbs 11:25",
+              "textShort": "The liberal soul shall be made fat.",
+              "category": "Money and Generosity",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with money and generosity because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s23-c02",
+              "reference": "Proverbs 19:17",
+              "textShort": "He that hath pity upon the poor lendeth unto the Lord.",
+              "category": "Money and Generosity",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with money and generosity because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s23-c03",
+              "reference": "Proverbs 22:1",
+              "textShort": "A good name is rather to be chosen than great riches.",
+              "category": "Money and Generosity",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with money and generosity because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s23-c04",
+              "reference": "Proverbs 2:6",
+              "textShort": "For the Lord giveth wisdom.",
+              "category": "Wisdom and Understanding",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with wisdom and understanding because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s23-c05",
+              "reference": "Proverbs 3:5-6",
+              "textShort": "Trust in the Lord with all thine heart.",
+              "category": "Wisdom and Understanding",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with wisdom and understanding because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s23-c06",
+              "reference": "Proverbs 4:7",
+              "textShort": "Wisdom is the principal thing.",
+              "category": "Wisdom and Understanding",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with wisdom and understanding because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s23-c07",
+              "reference": "Proverbs 12:15",
+              "textShort": "The way of a fool is right in his own eyes.",
+              "category": "Foolishness",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with foolishness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s23-c08",
+              "reference": "Proverbs 14:12",
+              "textShort": "There is a way which seemeth right unto a man.",
+              "category": "Foolishness",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with foolishness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s23-c09",
+              "reference": "Proverbs 26:4",
+              "textShort": "Answer not a fool according to his folly.",
+              "category": "Foolishness",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with foolishness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s23-c10",
+              "reference": "Proverbs 10:19",
+              "textShort": "He that refraineth his lips is wise.",
+              "category": "Wise Speech",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with wise speech because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s23-c11",
+              "reference": "Proverbs 15:1",
+              "textShort": "A soft answer turneth away wrath.",
+              "category": "Wise Speech",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with wise speech because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s23-c12",
+              "reference": "Proverbs 16:24",
+              "textShort": "Pleasant words are as an honeycomb.",
+              "category": "Wise Speech",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with wise speech because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s23-c13",
+              "reference": "Proverbs 6:6",
+              "textShort": "Go to the ant, thou sluggard.",
+              "category": "Diligence and Laziness",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with diligence and laziness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s23-c14",
+              "reference": "Proverbs 10:4",
+              "textShort": "The hand of the diligent maketh rich.",
+              "category": "Diligence and Laziness",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with diligence and laziness because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s23-c15",
+              "reference": "Proverbs 13:4",
+              "textShort": "The soul of the diligent shall be made fat.",
+              "category": "Diligence and Laziness",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with diligence and laziness because its wording centers on that wisdom theme."
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Proverb Category Board 23 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "pcv-024",
+          "title": "Proverb Category Board 24",
+          "theme": "Sorting Proverbs by wisdom category",
+          "categories": [
+            "Integrity and Honesty",
+            "The Heart",
+            "Planning and Counsel",
+            "Anger and Self-Control",
+            "Friendship and Counsel"
+          ],
+          "cards": [
+            {
+              "cardId": "pcv-s24-c01",
+              "reference": "Proverbs 10:9",
+              "textShort": "He that walketh uprightly walketh surely.",
+              "category": "Integrity and Honesty",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with integrity and honesty because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s24-c02",
+              "reference": "Proverbs 12:22",
+              "textShort": "Lying lips are abomination to the Lord.",
+              "category": "Integrity and Honesty",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with integrity and honesty because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s24-c03",
+              "reference": "Proverbs 20:7",
+              "textShort": "The just man walketh in his integrity.",
+              "category": "Integrity and Honesty",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with integrity and honesty because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s24-c04",
+              "reference": "Proverbs 4:23",
+              "textShort": "Keep thy heart with all diligence.",
+              "category": "The Heart",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with the heart because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s24-c05",
+              "reference": "Proverbs 14:30",
+              "textShort": "A sound heart is the life of the flesh.",
+              "category": "The Heart",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with the heart because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s24-c06",
+              "reference": "Proverbs 23:7",
+              "textShort": "For as he thinketh in his heart, so is he.",
+              "category": "The Heart",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with the heart because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s24-c07",
+              "reference": "Proverbs 15:22",
+              "textShort": "Without counsel purposes are disappointed.",
+              "category": "Planning and Counsel",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with planning and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s24-c08",
+              "reference": "Proverbs 16:3",
+              "textShort": "Commit thy works unto the Lord.",
+              "category": "Planning and Counsel",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with planning and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s24-c09",
+              "reference": "Proverbs 21:5",
+              "textShort": "The thoughts of the diligent tend only to plenteousness.",
+              "category": "Planning and Counsel",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with planning and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s24-c10",
+              "reference": "Proverbs 14:29",
+              "textShort": "He that is slow to wrath is of great understanding.",
+              "category": "Anger and Self-Control",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with anger and self-control because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s24-c11",
+              "reference": "Proverbs 16:32",
+              "textShort": "He that is slow to anger is better than the mighty.",
+              "category": "Anger and Self-Control",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with anger and self-control because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s24-c12",
+              "reference": "Proverbs 29:11",
+              "textShort": "A fool uttereth all his mind.",
+              "category": "Anger and Self-Control",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with anger and self-control because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s24-c13",
+              "reference": "Proverbs 11:14",
+              "textShort": "In the multitude of counsellors there is safety.",
+              "category": "Friendship and Counsel",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with friendship and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s24-c14",
+              "reference": "Proverbs 17:17",
+              "textShort": "A friend loveth at all times.",
+              "category": "Friendship and Counsel",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with friendship and counsel because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s24-c15",
+              "reference": "Proverbs 27:17",
+              "textShort": "Iron sharpeneth iron.",
+              "category": "Friendship and Counsel",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with friendship and counsel because its wording centers on that wisdom theme."
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Proverb Category Board 24 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "pcv-025",
+          "title": "Proverb Category Board 25",
+          "theme": "Sorting Proverbs by wisdom category",
+          "categories": [
+            "Parents and Children",
+            "Peace and Conflict",
+            "Fear of the Lord",
+            "Pride and Humility",
+            "Correction and Discipline"
+          ],
+          "cards": [
+            {
+              "cardId": "pcv-s25-c01",
+              "reference": "Proverbs 1:8",
+              "textShort": "My son, hear the instruction of thy father.",
+              "category": "Parents and Children",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with parents and children because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s25-c02",
+              "reference": "Proverbs 22:6",
+              "textShort": "Train up a child in the way he should go.",
+              "category": "Parents and Children",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with parents and children because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s25-c03",
+              "reference": "Proverbs 31:10",
+              "textShort": "Who can find a virtuous woman?",
+              "category": "Parents and Children",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with parents and children because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s25-c04",
+              "reference": "Proverbs 10:12",
+              "textShort": "Hatred stirreth up strifes.",
+              "category": "Peace and Conflict",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with peace and conflict because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s25-c05",
+              "reference": "Proverbs 15:18",
+              "textShort": "A wrathful man stirreth up strife.",
+              "category": "Peace and Conflict",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with peace and conflict because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s25-c06",
+              "reference": "Proverbs 17:14",
+              "textShort": "The beginning of strife is as when one letteth out water.",
+              "category": "Peace and Conflict",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with peace and conflict because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s25-c07",
+              "reference": "Proverbs 1:7",
+              "textShort": "The fear of the Lord is the beginning of knowledge.",
+              "category": "Fear of the Lord",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with fear of the lord because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s25-c08",
+              "reference": "Proverbs 9:10",
+              "textShort": "The fear of the Lord is the beginning of wisdom.",
+              "category": "Fear of the Lord",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with fear of the lord because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s25-c09",
+              "reference": "Proverbs 14:27",
+              "textShort": "The fear of the Lord is a fountain of life.",
+              "category": "Fear of the Lord",
+              "difficulty": "easy",
+              "teachingNote": "This proverb belongs with fear of the lord because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s25-c10",
+              "reference": "Proverbs 16:18",
+              "textShort": "Pride goeth before destruction.",
+              "category": "Pride and Humility",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with pride and humility because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s25-c11",
+              "reference": "Proverbs 18:12",
+              "textShort": "Before honour is humility.",
+              "category": "Pride and Humility",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with pride and humility because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s25-c12",
+              "reference": "Proverbs 22:4",
+              "textShort": "By humility and the fear of the Lord are riches.",
+              "category": "Pride and Humility",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with pride and humility because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s25-c13",
+              "reference": "Proverbs 12:1",
+              "textShort": "Whoso loveth instruction loveth knowledge.",
+              "category": "Correction and Discipline",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with correction and discipline because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s25-c14",
+              "reference": "Proverbs 13:24",
+              "textShort": "He that loveth him chasteneth him betimes.",
+              "category": "Correction and Discipline",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with correction and discipline because its wording centers on that wisdom theme."
+            },
+            {
+              "cardId": "pcv-s25-c15",
+              "reference": "Proverbs 19:18",
+              "textShort": "Chasten thy son while there is hope.",
+              "category": "Correction and Discipline",
+              "difficulty": "medium",
+              "teachingNote": "This proverb belongs with correction and discipline because its wording centers on that wisdom theme."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Proverb Category Board 25 and how it connects to the Bible before continuing."
+        }
+      ]
+    }
+  ]
+}

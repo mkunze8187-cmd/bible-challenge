@@ -1,0 +1,819 @@
+{
+  "$schema": "./schemas/fulfillment-finder.schema.json",
+  "game": "fulfillment-finder",
+  "version": 1,
+  "displayName": "Fulfillment Finder Challenge",
+  "roundsPerSession": 5,
+  "sessions": [
+    {
+      "id": "ff-session-01",
+      "title": "Fulfillment Finder Set 01",
+      "theme": "Find the Old Testament prophecy behind a fulfillment",
+      "rounds": [
+        {
+          "id": "ff-001",
+          "title": "Seed Of The Woman",
+          "theme": "Victory",
+          "fulfillmentReference": "Hebrews 2:14",
+          "fulfillmentSummary": "Christ is presented as defeating the devil through death.",
+          "fulfillmentText": "Forasmuch then as the children are partakers of flesh and blood, he also himself likewise took part of the same; that through death he might destroy him that had the power of death, that is, the devil;",
+          "prompt": "Which Old Testament prophecy is most directly connected with this New Testament fulfillment?",
+          "correctProphecyReference": "Genesis 3:15",
+          "correctProphecySummary": "The serpent's head would be bruised by the woman's seed.",
+          "choices": [
+            {
+              "reference": "Deuteronomy 18:15",
+              "summary": "The Lord would raise up a prophet like Moses."
+            },
+            {
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram."
+            },
+            {
+              "reference": "Genesis 3:15",
+              "summary": "The serpent's head would be bruised by the woman's seed."
+            },
+            {
+              "reference": "Genesis 49:10",
+              "summary": "The sceptre is associated with Judah and a coming ruler."
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "This is commonly read by Christian interpreters as an early promise of victory over evil."
+        },
+        {
+          "id": "ff-002",
+          "title": "Blessing To All Nations",
+          "theme": "Nations",
+          "fulfillmentReference": "Galatians 3:8",
+          "fulfillmentSummary": "Paul connects the promise to the gospel blessing reaching Gentiles.",
+          "fulfillmentText": "And the scripture, foreseeing that God would justify the heathen through faith, preached before the gospel unto Abraham, saying, In thee shall all nations be blessed.",
+          "prompt": "Which Old Testament prophecy is most directly connected with this New Testament fulfillment?",
+          "correctProphecyReference": "Genesis 12:3",
+          "correctProphecySummary": "All families of the earth would be blessed through Abram.",
+          "choices": [
+            {
+              "reference": "Deuteronomy 18:15",
+              "summary": "The Lord would raise up a prophet like Moses."
+            },
+            {
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram."
+            },
+            {
+              "reference": "Psalm 16:10",
+              "summary": "The Holy One would not be left to corruption."
+            },
+            {
+              "reference": "Psalm 2:7",
+              "summary": "The anointed king is addressed as God's Son."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "The New Testament explicitly applies this Abraham promise to the gospel going to the nations."
+        },
+        {
+          "id": "ff-003",
+          "title": "Ruler From Judah",
+          "theme": "Kingship",
+          "fulfillmentReference": "Hebrews 7:14",
+          "fulfillmentSummary": "Jesus is identified as coming from the tribe of Judah.",
+          "fulfillmentText": "For it is evident that our Lord sprang out of Juda; of which tribe Moses spake nothing concerning priesthood.",
+          "prompt": "Which Old Testament prophecy is most directly connected with this New Testament fulfillment?",
+          "correctProphecyReference": "Genesis 49:10",
+          "correctProphecySummary": "The sceptre is associated with Judah and a coming ruler.",
+          "choices": [
+            {
+              "reference": "Genesis 49:10",
+              "summary": "The sceptre is associated with Judah and a coming ruler."
+            },
+            {
+              "reference": "Psalm 16:10",
+              "summary": "The Holy One would not be left to corruption."
+            },
+            {
+              "reference": "Psalm 22:1",
+              "summary": "The psalm opens with a cry of being forsaken."
+            },
+            {
+              "reference": "Psalm 22:18",
+              "summary": "Garments are parted and lots are cast."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "The Judah connection is a widely recognized messianic theme."
+        },
+        {
+          "id": "ff-004",
+          "title": "Prophet Like Moses",
+          "theme": "Prophet",
+          "fulfillmentReference": "Acts 3:22",
+          "fulfillmentSummary": "Peter quotes this prophecy while preaching about Christ.",
+          "fulfillmentText": "For Moses truly said unto the fathers, A prophet shall the Lord your God raise up unto you of your brethren, like unto me; him shall ye hear in all things whatsoever he shall say unto you.",
+          "prompt": "Which Old Testament prophecy is most directly connected with this New Testament fulfillment?",
+          "correctProphecyReference": "Deuteronomy 18:15",
+          "correctProphecySummary": "The Lord would raise up a prophet like Moses.",
+          "choices": [
+            {
+              "reference": "Deuteronomy 18:15",
+              "summary": "The Lord would raise up a prophet like Moses."
+            },
+            {
+              "reference": "Psalm 22:18",
+              "summary": "Garments are parted and lots are cast."
+            },
+            {
+              "reference": "Psalm 34:20",
+              "summary": "The righteous sufferer's bones are preserved."
+            },
+            {
+              "reference": "Psalm 41:9",
+              "summary": "A familiar friend lifts up his heel against the speaker."
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Acts gives this passage a direct place in apostolic preaching about Jesus."
+        },
+        {
+          "id": "ff-005",
+          "title": "Son And King",
+          "theme": "Kingship",
+          "fulfillmentReference": "Acts 13:33",
+          "fulfillmentSummary": "Paul quotes Psalm 2 in connection with Jesus being raised up.",
+          "fulfillmentText": "God hath fulfilled the same unto us their children, in that he hath raised up Jesus again; as it is also written in the second psalm, Thou art my Son, this day have I begotten thee.",
+          "prompt": "Which Old Testament prophecy is most directly connected with this New Testament fulfillment?",
+          "correctProphecyReference": "Psalm 2:7",
+          "correctProphecySummary": "The anointed king is addressed as God's Son.",
+          "choices": [
+            {
+              "reference": "Psalm 2:7",
+              "summary": "The anointed king is addressed as God's Son."
+            },
+            {
+              "reference": "Psalm 41:9",
+              "summary": "A familiar friend lifts up his heel against the speaker."
+            },
+            {
+              "reference": "Psalm 69:21",
+              "summary": "The suffering figure receives gall and vinegar."
+            },
+            {
+              "reference": "Psalm 69:9",
+              "summary": "Zeal for the Lord's house consumes the speaker."
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Psalm 2 is used in the New Testament to speak of the Messiah's sonship and reign."
+        }
+      ]
+    },
+    {
+      "id": "ff-session-02",
+      "title": "Fulfillment Finder Set 02",
+      "theme": "Find the Old Testament prophecy behind a fulfillment",
+      "rounds": [
+        {
+          "id": "ff-006",
+          "title": "Not Seeing Corruption",
+          "theme": "Resurrection",
+          "fulfillmentReference": "Acts 2:31",
+          "fulfillmentSummary": "Peter says this was spoken of Christ's resurrection.",
+          "fulfillmentText": "He seeing this before spake of the resurrection of Christ, that his soul was not left in hell, neither his flesh did see corruption.",
+          "prompt": "Which Old Testament prophecy is most directly connected with this New Testament fulfillment?",
+          "correctProphecyReference": "Psalm 16:10",
+          "correctProphecySummary": "The Holy One would not be left to corruption.",
+          "choices": [
+            {
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram."
+            },
+            {
+              "reference": "Genesis 3:15",
+              "summary": "The serpent's head would be bruised by the woman's seed."
+            },
+            {
+              "reference": "Genesis 49:10",
+              "summary": "The sceptre is associated with Judah and a coming ruler."
+            },
+            {
+              "reference": "Psalm 16:10",
+              "summary": "The Holy One would not be left to corruption."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Acts 2 directly connects Psalm 16 with the resurrection of Jesus."
+        },
+        {
+          "id": "ff-007",
+          "title": "Suffering Cry",
+          "theme": "Suffering",
+          "fulfillmentReference": "Matthew 27:46",
+          "fulfillmentSummary": "Jesus speaks this line from the cross.",
+          "fulfillmentText": "And about the ninth hour Jesus cried with a loud voice, saying, Eli, Eli, lama sabachthani? that is to say, My God, my God, why hast thou forsaken me?",
+          "prompt": "Which Old Testament prophecy is most directly connected with this New Testament fulfillment?",
+          "correctProphecyReference": "Psalm 22:1",
+          "correctProphecySummary": "The psalm opens with a cry of being forsaken.",
+          "choices": [
+            {
+              "reference": "Deuteronomy 18:15",
+              "summary": "The Lord would raise up a prophet like Moses."
+            },
+            {
+              "reference": "Genesis 49:10",
+              "summary": "The sceptre is associated with Judah and a coming ruler."
+            },
+            {
+              "reference": "Psalm 2:7",
+              "summary": "The anointed king is addressed as God's Son."
+            },
+            {
+              "reference": "Psalm 22:1",
+              "summary": "The psalm opens with a cry of being forsaken."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "The Gospel records Jesus using Psalm 22 language during the crucifixion."
+        },
+        {
+          "id": "ff-008",
+          "title": "Garments Divided",
+          "theme": "Suffering",
+          "fulfillmentReference": "John 19:24",
+          "fulfillmentSummary": "Soldiers cast lots for Jesus' garment.",
+          "fulfillmentText": "They said therefore among themselves, Let us not rend it, but cast lots for it, whose it shall be: that the scripture might be fulfilled, which saith, They parted my raiment among them, and for my vesture they did cast lots. These things therefore the soldiers did.",
+          "prompt": "Which Old Testament prophecy is most directly connected with this New Testament fulfillment?",
+          "correctProphecyReference": "Psalm 22:18",
+          "correctProphecySummary": "Garments are parted and lots are cast.",
+          "choices": [
+            {
+              "reference": "Psalm 16:10",
+              "summary": "The Holy One would not be left to corruption."
+            },
+            {
+              "reference": "Psalm 2:7",
+              "summary": "The anointed king is addressed as God's Son."
+            },
+            {
+              "reference": "Psalm 22:1",
+              "summary": "The psalm opens with a cry of being forsaken."
+            },
+            {
+              "reference": "Psalm 22:18",
+              "summary": "Garments are parted and lots are cast."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "John explicitly cites the casting of lots as fulfillment of scripture."
+        },
+        {
+          "id": "ff-009",
+          "title": "Bones Not Broken",
+          "theme": "Suffering",
+          "fulfillmentReference": "John 19:36",
+          "fulfillmentSummary": "Jesus' bones were not broken at the crucifixion.",
+          "fulfillmentText": "For these things were done, that the scripture should be fulfilled, A bone of him shall not be broken.",
+          "prompt": "Which Old Testament prophecy is most directly connected with this New Testament fulfillment?",
+          "correctProphecyReference": "Psalm 34:20",
+          "correctProphecySummary": "The righteous sufferer's bones are preserved.",
+          "choices": [
+            {
+              "reference": "Psalm 22:1",
+              "summary": "The psalm opens with a cry of being forsaken."
+            },
+            {
+              "reference": "Psalm 22:18",
+              "summary": "Garments are parted and lots are cast."
+            },
+            {
+              "reference": "Psalm 34:20",
+              "summary": "The righteous sufferer's bones are preserved."
+            },
+            {
+              "reference": "Psalm 41:9",
+              "summary": "A familiar friend lifts up his heel against the speaker."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "John cites this detail while describing Jesus' death."
+        },
+        {
+          "id": "ff-010",
+          "title": "Betrayed By A Friend",
+          "theme": "Betrayal",
+          "fulfillmentReference": "John 13:18",
+          "fulfillmentSummary": "Jesus applies the text to betrayal within his circle.",
+          "fulfillmentText": "I speak not of you all: I know whom I have chosen: but that the scripture may be fulfilled, He that eateth bread with me hath lifted up his heel against me.",
+          "prompt": "Which Old Testament prophecy is most directly connected with this New Testament fulfillment?",
+          "correctProphecyReference": "Psalm 41:9",
+          "correctProphecySummary": "A familiar friend lifts up his heel against the speaker.",
+          "choices": [
+            {
+              "reference": "Psalm 34:20",
+              "summary": "The righteous sufferer's bones are preserved."
+            },
+            {
+              "reference": "Psalm 41:9",
+              "summary": "A familiar friend lifts up his heel against the speaker."
+            },
+            {
+              "reference": "Psalm 69:21",
+              "summary": "The suffering figure receives gall and vinegar."
+            },
+            {
+              "reference": "Psalm 69:9",
+              "summary": "Zeal for the Lord's house consumes the speaker."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "John records Jesus citing the psalm in the context of Judas's betrayal."
+        }
+      ]
+    },
+    {
+      "id": "ff-session-03",
+      "title": "Fulfillment Finder Set 03",
+      "theme": "Find the Old Testament prophecy behind a fulfillment",
+      "rounds": [
+        {
+          "id": "ff-011",
+          "title": "Zeal For God's House",
+          "theme": "Temple",
+          "fulfillmentReference": "John 2:17",
+          "fulfillmentSummary": "The disciples remember this scripture after Jesus cleanses the temple.",
+          "fulfillmentText": "And his disciples remembered that it was written, The zeal of thine house hath eaten me up.",
+          "prompt": "Which Old Testament prophecy is most directly connected with this New Testament fulfillment?",
+          "correctProphecyReference": "Psalm 69:9",
+          "correctProphecySummary": "Zeal for the Lord's house consumes the speaker.",
+          "choices": [
+            {
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram."
+            },
+            {
+              "reference": "Genesis 3:15",
+              "summary": "The serpent's head would be bruised by the woman's seed."
+            },
+            {
+              "reference": "Genesis 49:10",
+              "summary": "The sceptre is associated with Judah and a coming ruler."
+            },
+            {
+              "reference": "Psalm 69:9",
+              "summary": "Zeal for the Lord's house consumes the speaker."
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "John presents the temple cleansing through the lens of Psalm 69."
+        },
+        {
+          "id": "ff-012",
+          "title": "Vinegar Given",
+          "theme": "Suffering",
+          "fulfillmentReference": "John 19:29",
+          "fulfillmentSummary": "Jesus is given vinegar during the crucifixion.",
+          "fulfillmentText": "Now there was set a vessel full of vinegar: and they filled a spunge with vinegar, and put it upon hyssop, and put it to his mouth.",
+          "prompt": "Which Old Testament prophecy is most directly connected with this New Testament fulfillment?",
+          "correctProphecyReference": "Psalm 69:21",
+          "correctProphecySummary": "The suffering figure receives gall and vinegar.",
+          "choices": [
+            {
+              "reference": "Deuteronomy 18:15",
+              "summary": "The Lord would raise up a prophet like Moses."
+            },
+            {
+              "reference": "Genesis 49:10",
+              "summary": "The sceptre is associated with Judah and a coming ruler."
+            },
+            {
+              "reference": "Psalm 2:7",
+              "summary": "The anointed king is addressed as God's Son."
+            },
+            {
+              "reference": "Psalm 69:21",
+              "summary": "The suffering figure receives gall and vinegar."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "The Gospels connect this detail with Jesus' crucifixion."
+        },
+        {
+          "id": "ff-013",
+          "title": "At God's Right Hand",
+          "theme": "Exaltation",
+          "fulfillmentReference": "Hebrews 1:13",
+          "fulfillmentSummary": "The verse is applied to the exalted Son.",
+          "fulfillmentText": "But to which of the angels said he at any time, Sit on my right hand, until I make thine enemies thy footstool?",
+          "prompt": "Which Old Testament prophecy is most directly connected with this New Testament fulfillment?",
+          "correctProphecyReference": "Psalm 110:1",
+          "correctProphecySummary": "The Lord invites David's Lord to sit at His right hand.",
+          "choices": [
+            {
+              "reference": "Psalm 110:1",
+              "summary": "The Lord invites David's Lord to sit at His right hand."
+            },
+            {
+              "reference": "Psalm 16:10",
+              "summary": "The Holy One would not be left to corruption."
+            },
+            {
+              "reference": "Psalm 2:7",
+              "summary": "The anointed king is addressed as God's Son."
+            },
+            {
+              "reference": "Psalm 22:1",
+              "summary": "The psalm opens with a cry of being forsaken."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Psalm 110 is one of the New Testament's most frequent messianic texts."
+        },
+        {
+          "id": "ff-014",
+          "title": "Rejected Stone",
+          "theme": "Rejection",
+          "fulfillmentReference": "Acts 4:11",
+          "fulfillmentSummary": "Peter applies the rejected stone to Jesus.",
+          "fulfillmentText": "This is the stone which was set at nought of you builders, which is become the head of the corner.",
+          "prompt": "Which Old Testament prophecy is most directly connected with this New Testament fulfillment?",
+          "correctProphecyReference": "Psalm 118:22",
+          "correctProphecySummary": "The rejected stone becomes the head of the corner.",
+          "choices": [
+            {
+              "reference": "Psalm 118:22",
+              "summary": "The rejected stone becomes the head of the corner."
+            },
+            {
+              "reference": "Psalm 22:1",
+              "summary": "The psalm opens with a cry of being forsaken."
+            },
+            {
+              "reference": "Psalm 22:18",
+              "summary": "Garments are parted and lots are cast."
+            },
+            {
+              "reference": "Psalm 34:20",
+              "summary": "The righteous sufferer's bones are preserved."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Acts directly applies the stone image to Jesus' rejection and exaltation."
+        },
+        {
+          "id": "ff-015",
+          "title": "Virgin-Born Sign",
+          "theme": "Birth",
+          "fulfillmentReference": "Matthew 1:23",
+          "fulfillmentSummary": "Matthew quotes the sign in connection with Jesus' birth.",
+          "fulfillmentText": "Behold, a virgin shall be with child, and shall bring forth a son, and they shall call his name Emmanuel, which being interpreted is, God with us.",
+          "prompt": "Which Old Testament prophecy is most directly connected with this New Testament fulfillment?",
+          "correctProphecyReference": "Isaiah 7:14",
+          "correctProphecySummary": "A child called Immanuel is given as a sign.",
+          "choices": [
+            {
+              "reference": "Isaiah 7:14",
+              "summary": "A child called Immanuel is given as a sign."
+            },
+            {
+              "reference": "Psalm 34:20",
+              "summary": "The righteous sufferer's bones are preserved."
+            },
+            {
+              "reference": "Psalm 41:9",
+              "summary": "A familiar friend lifts up his heel against the speaker."
+            },
+            {
+              "reference": "Psalm 69:9",
+              "summary": "Zeal for the Lord's house consumes the speaker."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Matthew explicitly quotes Isaiah 7:14 in the infancy narrative."
+        }
+      ]
+    },
+    {
+      "id": "ff-session-04",
+      "title": "Fulfillment Finder Set 04",
+      "theme": "Find the Old Testament prophecy behind a fulfillment",
+      "rounds": [
+        {
+          "id": "ff-016",
+          "title": "Light In Galilee",
+          "theme": "Ministry",
+          "fulfillmentReference": "Matthew 4:15-16",
+          "fulfillmentSummary": "Matthew connects Jesus' Galilean ministry with Isaiah's words.",
+          "fulfillmentText": "The land of Zabulon, and the land of Nephthalim, by the way of the sea, beyond Jordan, Galilee of the Gentiles; The people which sat in darkness saw great light; and to them which sat in the region and shadow of death light is sprung up.",
+          "prompt": "Which Old Testament prophecy is most directly connected with this New Testament fulfillment?",
+          "correctProphecyReference": "Isaiah 9:1-2",
+          "correctProphecySummary": "Light comes to Galilee and people in darkness.",
+          "choices": [
+            {
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram."
+            },
+            {
+              "reference": "Genesis 3:15",
+              "summary": "The serpent's head would be bruised by the woman's seed."
+            },
+            {
+              "reference": "Genesis 49:10",
+              "summary": "The sceptre is associated with Judah and a coming ruler."
+            },
+            {
+              "reference": "Isaiah 9:1-2",
+              "summary": "Light comes to Galilee and people in darkness."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "The Gospel citation ties the prophecy to Jesus' public ministry in Galilee."
+        },
+        {
+          "id": "ff-017",
+          "title": "Child And Kingdom",
+          "theme": "Kingship",
+          "fulfillmentReference": "Luke 1:32-33",
+          "fulfillmentSummary": "Gabriel announces Davidic rule and an everlasting kingdom.",
+          "fulfillmentText": "He shall be great, and shall be called the Son of the Highest: and the Lord God shall give unto him the throne of his father David: And he shall reign over the house of Jacob for ever; and of his kingdom there shall be no end.",
+          "prompt": "Which Old Testament prophecy is most directly connected with this New Testament fulfillment?",
+          "correctProphecyReference": "Isaiah 9:6-7",
+          "correctProphecySummary": "A child is born whose government and peace increase.",
+          "choices": [
+            {
+              "reference": "Deuteronomy 18:15",
+              "summary": "The Lord would raise up a prophet like Moses."
+            },
+            {
+              "reference": "Genesis 49:10",
+              "summary": "The sceptre is associated with Judah and a coming ruler."
+            },
+            {
+              "reference": "Isaiah 9:6-7",
+              "summary": "A child is born whose government and peace increase."
+            },
+            {
+              "reference": "Psalm 2:7",
+              "summary": "The anointed king is addressed as God's Son."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Luke's announcement uses Davidic kingdom language that Christians connect with Isaiah's promise."
+        },
+        {
+          "id": "ff-018",
+          "title": "Voice In The Wilderness",
+          "theme": "Forerunner",
+          "fulfillmentReference": "Matthew 3:3",
+          "fulfillmentSummary": "John the Baptist is identified with the wilderness voice.",
+          "fulfillmentText": "For this is he that was spoken of by the prophet Esaias, saying, The voice of one crying in the wilderness, Prepare ye the way of the Lord, make his paths straight.",
+          "prompt": "Which Old Testament prophecy is most directly connected with this New Testament fulfillment?",
+          "correctProphecyReference": "Isaiah 40:3",
+          "correctProphecySummary": "A voice prepares the way of the Lord in the wilderness.",
+          "choices": [
+            {
+              "reference": "Isaiah 40:3",
+              "summary": "A voice prepares the way of the Lord in the wilderness."
+            },
+            {
+              "reference": "Psalm 16:10",
+              "summary": "The Holy One would not be left to corruption."
+            },
+            {
+              "reference": "Psalm 2:7",
+              "summary": "The anointed king is addressed as God's Son."
+            },
+            {
+              "reference": "Psalm 22:1",
+              "summary": "The psalm opens with a cry of being forsaken."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "The Synoptic Gospels connect Isaiah 40:3 with John the Baptist."
+        },
+        {
+          "id": "ff-019",
+          "title": "Chosen Servant",
+          "theme": "Servant",
+          "fulfillmentReference": "Matthew 12:18-21",
+          "fulfillmentSummary": "Matthew quotes the servant passage in relation to Jesus' ministry.",
+          "fulfillmentText": "Behold my servant, whom I have chosen; my beloved, in whom my soul is well pleased: I will put my spirit upon him, and he shall shew judgment to the Gentiles. He shall not strive, nor cry; neither shall any man hear his voice in the streets. A bruised reed shall he not break, and smoking flax shall he not quench, till he send forth judgment unto victory. And in his name shall the Gentiles trust.",
+          "prompt": "Which Old Testament prophecy is most directly connected with this New Testament fulfillment?",
+          "correctProphecyReference": "Isaiah 42:1-4",
+          "correctProphecySummary": "The servant is upheld by God and brings judgment to the Gentiles.",
+          "choices": [
+            {
+              "reference": "Isaiah 42:1-4",
+              "summary": "The servant is upheld by God and brings judgment to the Gentiles."
+            },
+            {
+              "reference": "Psalm 22:1",
+              "summary": "The psalm opens with a cry of being forsaken."
+            },
+            {
+              "reference": "Psalm 22:18",
+              "summary": "Garments are parted and lots are cast."
+            },
+            {
+              "reference": "Psalm 34:20",
+              "summary": "The righteous sufferer's bones are preserved."
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Matthew's quotation presents Jesus' ministry through Isaiah's servant language."
+        },
+        {
+          "id": "ff-020",
+          "title": "Despised And Rejected",
+          "theme": "Suffering",
+          "fulfillmentReference": "John 1:11",
+          "fulfillmentSummary": "John says Jesus came to his own, and his own received him not.",
+          "fulfillmentText": "He came unto his own, and his own received him not.",
+          "prompt": "Which Old Testament prophecy is most directly connected with this New Testament fulfillment?",
+          "correctProphecyReference": "Isaiah 53:3",
+          "correctProphecySummary": "The servant is despised, rejected, and acquainted with grief.",
+          "choices": [
+            {
+              "reference": "Isaiah 53:3",
+              "summary": "The servant is despised, rejected, and acquainted with grief."
+            },
+            {
+              "reference": "Psalm 34:20",
+              "summary": "The righteous sufferer's bones are preserved."
+            },
+            {
+              "reference": "Psalm 41:9",
+              "summary": "A familiar friend lifts up his heel against the speaker."
+            },
+            {
+              "reference": "Psalm 69:9",
+              "summary": "Zeal for the Lord's house consumes the speaker."
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "This pairing is thematic rather than a direct quotation, so the wording stays careful."
+        }
+      ]
+    },
+    {
+      "id": "ff-session-05",
+      "title": "Fulfillment Finder Set 05",
+      "theme": "Find the Old Testament prophecy behind a fulfillment",
+      "rounds": [
+        {
+          "id": "ff-021",
+          "title": "Wounded For Transgressions",
+          "theme": "Suffering",
+          "fulfillmentReference": "1 Peter 2:24",
+          "fulfillmentSummary": "Peter applies the servant's suffering to Christ's death.",
+          "fulfillmentText": "Who his own self bare our sins in his own body on the tree, that we, being dead to sins, should live unto righteousness: by whose stripes ye were healed.",
+          "prompt": "Which Old Testament prophecy is most directly connected with this New Testament fulfillment?",
+          "correctProphecyReference": "Isaiah 53:5",
+          "correctProphecySummary": "The servant is wounded and bruised for others.",
+          "choices": [
+            {
+              "reference": "Genesis 12:3",
+              "summary": "All families of the earth would be blessed through Abram."
+            },
+            {
+              "reference": "Genesis 3:15",
+              "summary": "The serpent's head would be bruised by the woman's seed."
+            },
+            {
+              "reference": "Genesis 49:10",
+              "summary": "The sceptre is associated with Judah and a coming ruler."
+            },
+            {
+              "reference": "Isaiah 53:5",
+              "summary": "The servant is wounded and bruised for others."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "1 Peter explicitly uses Isaiah 53 language for Christ's suffering."
+        },
+        {
+          "id": "ff-022",
+          "title": "Silent Before Accusers",
+          "theme": "Suffering",
+          "fulfillmentReference": "Matthew 27:14",
+          "fulfillmentSummary": "Jesus gives no answer before Pilate's accusations.",
+          "fulfillmentText": "And he answered him to never a word; insomuch that the governor marvelled greatly.",
+          "prompt": "Which Old Testament prophecy is most directly connected with this New Testament fulfillment?",
+          "correctProphecyReference": "Isaiah 53:7",
+          "correctProphecySummary": "The servant is oppressed yet does not open his mouth.",
+          "choices": [
+            {
+              "reference": "Deuteronomy 18:15",
+              "summary": "The Lord would raise up a prophet like Moses."
+            },
+            {
+              "reference": "Genesis 49:10",
+              "summary": "The sceptre is associated with Judah and a coming ruler."
+            },
+            {
+              "reference": "Isaiah 53:7",
+              "summary": "The servant is oppressed yet does not open his mouth."
+            },
+            {
+              "reference": "Psalm 2:7",
+              "summary": "The anointed king is addressed as God's Son."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "The Gospel scene is a widely recognized fulfillment connection to Isaiah 53."
+        },
+        {
+          "id": "ff-023",
+          "title": "With The Rich In Death",
+          "theme": "Death",
+          "fulfillmentReference": "Matthew 27:57-60",
+          "fulfillmentSummary": "Joseph of Arimathaea, a rich man, buries Jesus in his tomb.",
+          "fulfillmentText": "When the even was come, there came a rich man of Arimathaea, named Joseph, who also himself was Jesus' disciple: He went to Pilate, and begged the body of Jesus. Then Pilate commanded the body to be delivered. And when Joseph had taken the body, he wrapped it in a clean linen cloth, And laid it in his own new tomb, which he had hewn out in the rock: and he rolled a great stone to the door of the sepulchre, and departed.",
+          "prompt": "Which Old Testament prophecy is most directly connected with this New Testament fulfillment?",
+          "correctProphecyReference": "Isaiah 53:9",
+          "correctProphecySummary": "The servant is associated with the rich in his death.",
+          "choices": [
+            {
+              "reference": "Isaiah 53:9",
+              "summary": "The servant is associated with the rich in his death."
+            },
+            {
+              "reference": "Psalm 16:10",
+              "summary": "The Holy One would not be left to corruption."
+            },
+            {
+              "reference": "Psalm 2:7",
+              "summary": "The anointed king is addressed as God's Son."
+            },
+            {
+              "reference": "Psalm 22:1",
+              "summary": "The psalm opens with a cry of being forsaken."
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Matthew's burial account is commonly read with Isaiah 53:9."
+        },
+        {
+          "id": "ff-024",
+          "title": "Numbered With Transgressors",
+          "theme": "Suffering",
+          "fulfillmentReference": "Luke 22:37",
+          "fulfillmentSummary": "Jesus quotes this line before his arrest.",
+          "fulfillmentText": "For I say unto you, that this that is written must yet be accomplished in me, And he was reckoned among the transgressors: for the things concerning me have an end.",
+          "prompt": "Which Old Testament prophecy is most directly connected with this New Testament fulfillment?",
+          "correctProphecyReference": "Isaiah 53:12",
+          "correctProphecySummary": "The servant is numbered with transgressors.",
+          "choices": [
+            {
+              "reference": "Isaiah 53:12",
+              "summary": "The servant is numbered with transgressors."
+            },
+            {
+              "reference": "Psalm 22:1",
+              "summary": "The psalm opens with a cry of being forsaken."
+            },
+            {
+              "reference": "Psalm 22:18",
+              "summary": "Garments are parted and lots are cast."
+            },
+            {
+              "reference": "Psalm 34:20",
+              "summary": "The righteous sufferer's bones are preserved."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Luke records Jesus explicitly quoting this line about what must be accomplished."
+        },
+        {
+          "id": "ff-025",
+          "title": "Bethlehem Ruler",
+          "theme": "Birth",
+          "fulfillmentReference": "Matthew 2:1-6",
+          "fulfillmentSummary": "Chief priests and scribes identify Bethlehem when Herod asks about Messiah's birth.",
+          "fulfillmentText": "Now when Jesus was born in Bethlehem of Judaea in the days of Herod the king, behold, there came wise men from the east to Jerusalem, Saying, Where is he that is born King of the Jews? for we have seen his star in the east, and are come to worship him. When Herod the king had heard these things, he was troubled, and all Jerusalem with him. And when he had gathered all the chief priests and scribes of the people together, he demanded of them where Christ should be born. And they said unto him, In Bethlehem of Judaea: for thus it is written by the prophet, And thou Bethlehem, in the land of Juda, art not the least among the princes of Juda: for out of thee shall come a Governor, that shall rule my people Israel.",
+          "prompt": "Which Old Testament prophecy is most directly connected with this New Testament fulfillment?",
+          "correctProphecyReference": "Micah 5:2",
+          "correctProphecySummary": "A ruler for Israel comes from Bethlehem.",
+          "choices": [
+            {
+              "reference": "Micah 5:2",
+              "summary": "A ruler for Israel comes from Bethlehem."
+            },
+            {
+              "reference": "Psalm 34:20",
+              "summary": "The righteous sufferer's bones are preserved."
+            },
+            {
+              "reference": "Psalm 41:9",
+              "summary": "A familiar friend lifts up his heel against the speaker."
+            },
+            {
+              "reference": "Psalm 69:9",
+              "summary": "Zeal for the Lord's house consumes the speaker."
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Matthew directly links Messiah's birthplace with Micah 5:2."
+        }
+      ]
+    }
+  ]
+}

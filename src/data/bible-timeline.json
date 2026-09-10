@@ -1,0 +1,5252 @@
+{
+  "$schema": "./schemas/bible-timeline.schema.json",
+  "game": "bible-timeline",
+  "version": 1,
+  "displayName": "Bible Timeline",
+  "roundsPerSession": 5,
+  "sessions": [
+    {
+      "id": "bt-session-001",
+      "title": "Timeline Pack 001",
+      "theme": "Bible chronology",
+      "rounds": [
+        {
+          "id": "bt-r001",
+          "prompt": "Put these early Genesis events in order.",
+          "events": [
+            {
+              "id": "bt-r001-e01",
+              "label": "Creation",
+              "order": 1,
+              "clue": "Early Genesis"
+            },
+            {
+              "id": "bt-r001-e02",
+              "label": "Fall in Eden",
+              "order": 2,
+              "clue": "Early Genesis"
+            },
+            {
+              "id": "bt-r001-e03",
+              "label": "Cain kills Abel",
+              "order": 3,
+              "clue": "Early Genesis"
+            },
+            {
+              "id": "bt-r001-e04",
+              "label": "Noah builds the ark",
+              "order": 4,
+              "clue": "Early Genesis"
+            },
+            {
+              "id": "bt-r001-e05",
+              "label": "Tower of Babel",
+              "order": 5,
+              "clue": "Early Genesis"
+            },
+            {
+              "id": "bt-r001-e06",
+              "label": "Abram called",
+              "order": 6,
+              "clue": "Early Genesis"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these early Genesis events in order. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r002",
+          "prompt": "Arrange these Abraham and Isaac events.",
+          "events": [
+            {
+              "id": "bt-r002-e01",
+              "label": "Abram enters Canaan",
+              "order": 1,
+              "clue": "Abraham And Isaac"
+            },
+            {
+              "id": "bt-r002-e02",
+              "label": "Lot separates from Abram",
+              "order": 2,
+              "clue": "Abraham And Isaac"
+            },
+            {
+              "id": "bt-r002-e03",
+              "label": "Isaac is promised",
+              "order": 3,
+              "clue": "Abraham And Isaac"
+            },
+            {
+              "id": "bt-r002-e04",
+              "label": "Sodom and Gomorrah judged",
+              "order": 4,
+              "clue": "Abraham And Isaac"
+            },
+            {
+              "id": "bt-r002-e05",
+              "label": "Isaac is born",
+              "order": 5,
+              "clue": "Abraham And Isaac"
+            },
+            {
+              "id": "bt-r002-e06",
+              "label": "Isaac is offered",
+              "order": 6,
+              "clue": "Abraham And Isaac"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Arrange these Abraham and Isaac events. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r003",
+          "prompt": "Arrange these Jacob and Joseph events.",
+          "events": [
+            {
+              "id": "bt-r003-e01",
+              "label": "Jacob receives blessing",
+              "order": 1,
+              "clue": "Jacob And Joseph"
+            },
+            {
+              "id": "bt-r003-e02",
+              "label": "Jacob dreams at Bethel",
+              "order": 2,
+              "clue": "Jacob And Joseph"
+            },
+            {
+              "id": "bt-r003-e03",
+              "label": "Jacob marries Leah and Rachel",
+              "order": 3,
+              "clue": "Jacob And Joseph"
+            },
+            {
+              "id": "bt-r003-e04",
+              "label": "Joseph receives dreams",
+              "order": 4,
+              "clue": "Jacob And Joseph"
+            },
+            {
+              "id": "bt-r003-e05",
+              "label": "Joseph is sold",
+              "order": 5,
+              "clue": "Jacob And Joseph"
+            },
+            {
+              "id": "bt-r003-e06",
+              "label": "Israel moves to Egypt",
+              "order": 6,
+              "clue": "Jacob And Joseph"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Arrange these Jacob and Joseph events. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r004",
+          "prompt": "Arrange these Exodus events.",
+          "events": [
+            {
+              "id": "bt-r004-e01",
+              "label": "Moses at the burning bush",
+              "order": 1,
+              "clue": "Exodus"
+            },
+            {
+              "id": "bt-r004-e02",
+              "label": "Plagues in Egypt",
+              "order": 2,
+              "clue": "Exodus"
+            },
+            {
+              "id": "bt-r004-e03",
+              "label": "Passover night",
+              "order": 3,
+              "clue": "Exodus"
+            },
+            {
+              "id": "bt-r004-e04",
+              "label": "Red Sea crossing",
+              "order": 4,
+              "clue": "Exodus"
+            },
+            {
+              "id": "bt-r004-e05",
+              "label": "Law given at Sinai",
+              "order": 5,
+              "clue": "Exodus"
+            },
+            {
+              "id": "bt-r004-e06",
+              "label": "Golden calf incident",
+              "order": 6,
+              "clue": "Exodus"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Arrange these Exodus events. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r005",
+          "prompt": "Place these wilderness events in order.",
+          "events": [
+            {
+              "id": "bt-r005-e01",
+              "label": "Manna is given",
+              "order": 1,
+              "clue": "Wilderness"
+            },
+            {
+              "id": "bt-r005-e02",
+              "label": "Water from the rock",
+              "order": 2,
+              "clue": "Wilderness"
+            },
+            {
+              "id": "bt-r005-e03",
+              "label": "Spies enter Canaan",
+              "order": 3,
+              "clue": "Wilderness"
+            },
+            {
+              "id": "bt-r005-e04",
+              "label": "Korah rebels",
+              "order": 4,
+              "clue": "Wilderness"
+            },
+            {
+              "id": "bt-r005-e05",
+              "label": "Bronze serpent lifted",
+              "order": 5,
+              "clue": "Wilderness"
+            },
+            {
+              "id": "bt-r005-e06",
+              "label": "Moses views Canaan",
+              "order": 6,
+              "clue": "Wilderness"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Place these wilderness events in order. and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bt-session-002",
+      "title": "Timeline Pack 002",
+      "theme": "Bible chronology",
+      "rounds": [
+        {
+          "id": "bt-r006",
+          "prompt": "Put these conquest events in order.",
+          "events": [
+            {
+              "id": "bt-r006-e01",
+              "label": "Joshua leads Israel",
+              "order": 1,
+              "clue": "Conquest"
+            },
+            {
+              "id": "bt-r006-e02",
+              "label": "Jordan River crossing",
+              "order": 2,
+              "clue": "Conquest"
+            },
+            {
+              "id": "bt-r006-e03",
+              "label": "Jericho falls",
+              "order": 3,
+              "clue": "Conquest"
+            },
+            {
+              "id": "bt-r006-e04",
+              "label": "Achan's sin discovered",
+              "order": 4,
+              "clue": "Conquest"
+            },
+            {
+              "id": "bt-r006-e05",
+              "label": "Ai is defeated",
+              "order": 5,
+              "clue": "Conquest"
+            },
+            {
+              "id": "bt-r006-e06",
+              "label": "Land is divided",
+              "order": 6,
+              "clue": "Conquest"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these conquest events in order. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r007",
+          "prompt": "Arrange these Judges-era events.",
+          "events": [
+            {
+              "id": "bt-r007-e01",
+              "label": "Othniel delivers Israel",
+              "order": 1,
+              "clue": "Judges"
+            },
+            {
+              "id": "bt-r007-e02",
+              "label": "Ehud defeats Eglon",
+              "order": 2,
+              "clue": "Judges"
+            },
+            {
+              "id": "bt-r007-e03",
+              "label": "Deborah judges Israel",
+              "order": 3,
+              "clue": "Judges"
+            },
+            {
+              "id": "bt-r007-e04",
+              "label": "Gideon defeats Midian",
+              "order": 4,
+              "clue": "Judges"
+            },
+            {
+              "id": "bt-r007-e05",
+              "label": "Jephthah leads Israel",
+              "order": 5,
+              "clue": "Judges"
+            },
+            {
+              "id": "bt-r007-e06",
+              "label": "Samson defeats Philistines",
+              "order": 6,
+              "clue": "Judges"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Arrange these Judges-era events. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r008",
+          "prompt": "Place these events around Ruth and Samuel.",
+          "events": [
+            {
+              "id": "bt-r008-e01",
+              "label": "Ruth meets Boaz",
+              "order": 1,
+              "clue": "Ruth And Samuel"
+            },
+            {
+              "id": "bt-r008-e02",
+              "label": "Obed is born",
+              "order": 2,
+              "clue": "Ruth And Samuel"
+            },
+            {
+              "id": "bt-r008-e03",
+              "label": "Hannah prays for a son",
+              "order": 3,
+              "clue": "Ruth And Samuel"
+            },
+            {
+              "id": "bt-r008-e04",
+              "label": "Samuel is called",
+              "order": 4,
+              "clue": "Ruth And Samuel"
+            },
+            {
+              "id": "bt-r008-e05",
+              "label": "Ark is captured",
+              "order": 5,
+              "clue": "Ruth And Samuel"
+            },
+            {
+              "id": "bt-r008-e06",
+              "label": "Israel asks for a king",
+              "order": 6,
+              "clue": "Ruth And Samuel"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Place these events around Ruth and Samuel. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r009",
+          "prompt": "Arrange these Saul and David events.",
+          "events": [
+            {
+              "id": "bt-r009-e01",
+              "label": "Saul becomes king",
+              "order": 1,
+              "clue": "Saul And David"
+            },
+            {
+              "id": "bt-r009-e02",
+              "label": "David is anointed",
+              "order": 2,
+              "clue": "Saul And David"
+            },
+            {
+              "id": "bt-r009-e03",
+              "label": "David defeats Goliath",
+              "order": 3,
+              "clue": "Saul And David"
+            },
+            {
+              "id": "bt-r009-e04",
+              "label": "David spares Saul",
+              "order": 4,
+              "clue": "Saul And David"
+            },
+            {
+              "id": "bt-r009-e05",
+              "label": "Saul dies at Gilboa",
+              "order": 5,
+              "clue": "Saul And David"
+            },
+            {
+              "id": "bt-r009-e06",
+              "label": "David becomes king over Judah",
+              "order": 6,
+              "clue": "Saul And David"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Arrange these Saul and David events. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r010",
+          "prompt": "Put these events from David's reign in order.",
+          "events": [
+            {
+              "id": "bt-r010-e01",
+              "label": "David captures Jerusalem",
+              "order": 1,
+              "clue": "David's Reign"
+            },
+            {
+              "id": "bt-r010-e02",
+              "label": "Ark brought to Jerusalem",
+              "order": 2,
+              "clue": "David's Reign"
+            },
+            {
+              "id": "bt-r010-e03",
+              "label": "Promise made to David",
+              "order": 3,
+              "clue": "David's Reign"
+            },
+            {
+              "id": "bt-r010-e04",
+              "label": "David sins with Bathsheba",
+              "order": 4,
+              "clue": "David's Reign"
+            },
+            {
+              "id": "bt-r010-e05",
+              "label": "Absalom rebels",
+              "order": 5,
+              "clue": "David's Reign"
+            },
+            {
+              "id": "bt-r010-e06",
+              "label": "Solomon is named successor",
+              "order": 6,
+              "clue": "David's Reign"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these events from David's reign in order. and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bt-session-003",
+      "title": "Timeline Pack 003",
+      "theme": "Bible chronology",
+      "rounds": [
+        {
+          "id": "bt-r011",
+          "prompt": "Arrange these Solomon events.",
+          "events": [
+            {
+              "id": "bt-r011-e01",
+              "label": "Solomon asks for wisdom",
+              "order": 1,
+              "clue": "Solomon"
+            },
+            {
+              "id": "bt-r011-e02",
+              "label": "Temple construction begins",
+              "order": 2,
+              "clue": "Solomon"
+            },
+            {
+              "id": "bt-r011-e03",
+              "label": "Temple is dedicated",
+              "order": 3,
+              "clue": "Solomon"
+            },
+            {
+              "id": "bt-r011-e04",
+              "label": "Queen of Sheba visits",
+              "order": 4,
+              "clue": "Solomon"
+            },
+            {
+              "id": "bt-r011-e05",
+              "label": "Solomon turns from the Lord",
+              "order": 5,
+              "clue": "Solomon"
+            },
+            {
+              "id": "bt-r011-e06",
+              "label": "Solomon dies",
+              "order": 6,
+              "clue": "Solomon"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Arrange these Solomon events. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r012",
+          "prompt": "Place these divided kingdom events.",
+          "events": [
+            {
+              "id": "bt-r012-e01",
+              "label": "Rehoboam rejects counsel",
+              "order": 1,
+              "clue": "Divided Kingdom"
+            },
+            {
+              "id": "bt-r012-e02",
+              "label": "Kingdom divides",
+              "order": 2,
+              "clue": "Divided Kingdom"
+            },
+            {
+              "id": "bt-r012-e03",
+              "label": "Jeroboam sets golden calves",
+              "order": 3,
+              "clue": "Divided Kingdom"
+            },
+            {
+              "id": "bt-r012-e04",
+              "label": "Asa reforms Judah",
+              "order": 4,
+              "clue": "Divided Kingdom"
+            },
+            {
+              "id": "bt-r012-e05",
+              "label": "Omri rules Israel",
+              "order": 5,
+              "clue": "Divided Kingdom"
+            },
+            {
+              "id": "bt-r012-e06",
+              "label": "Ahab marries Jezebel",
+              "order": 6,
+              "clue": "Divided Kingdom"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Place these divided kingdom events. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r013",
+          "prompt": "Arrange these Elijah events.",
+          "events": [
+            {
+              "id": "bt-r013-e01",
+              "label": "Elijah announces drought",
+              "order": 1,
+              "clue": "Elijah"
+            },
+            {
+              "id": "bt-r013-e02",
+              "label": "Ravens feed Elijah",
+              "order": 2,
+              "clue": "Elijah"
+            },
+            {
+              "id": "bt-r013-e03",
+              "label": "Widow's son is raised",
+              "order": 3,
+              "clue": "Elijah"
+            },
+            {
+              "id": "bt-r013-e04",
+              "label": "Carmel contest",
+              "order": 4,
+              "clue": "Elijah"
+            },
+            {
+              "id": "bt-r013-e05",
+              "label": "Elijah flees to Horeb",
+              "order": 5,
+              "clue": "Elijah"
+            },
+            {
+              "id": "bt-r013-e06",
+              "label": "Elijah taken up",
+              "order": 6,
+              "clue": "Elijah"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Arrange these Elijah events. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r014",
+          "prompt": "Put these Elisha events in order.",
+          "events": [
+            {
+              "id": "bt-r014-e01",
+              "label": "Elisha receives Elijah's mantle",
+              "order": 1,
+              "clue": "Elisha"
+            },
+            {
+              "id": "bt-r014-e02",
+              "label": "Waters of Jericho healed",
+              "order": 2,
+              "clue": "Elisha"
+            },
+            {
+              "id": "bt-r014-e03",
+              "label": "Widow's oil multiplied",
+              "order": 3,
+              "clue": "Elisha"
+            },
+            {
+              "id": "bt-r014-e04",
+              "label": "Shunammite's son raised",
+              "order": 4,
+              "clue": "Elisha"
+            },
+            {
+              "id": "bt-r014-e05",
+              "label": "Naaman healed",
+              "order": 5,
+              "clue": "Elisha"
+            },
+            {
+              "id": "bt-r014-e06",
+              "label": "Aramean army blinded",
+              "order": 6,
+              "clue": "Elisha"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Elisha events in order. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r015",
+          "prompt": "Arrange these Assyrian-period events.",
+          "events": [
+            {
+              "id": "bt-r015-e01",
+              "label": "Jonah sent to Nineveh",
+              "order": 1,
+              "clue": "Assyria"
+            },
+            {
+              "id": "bt-r015-e02",
+              "label": "Amos warns Israel",
+              "order": 2,
+              "clue": "Assyria"
+            },
+            {
+              "id": "bt-r015-e03",
+              "label": "Hosea warns Israel",
+              "order": 3,
+              "clue": "Assyria"
+            },
+            {
+              "id": "bt-r015-e04",
+              "label": "Isaiah sees the Lord",
+              "order": 4,
+              "clue": "Assyria"
+            },
+            {
+              "id": "bt-r015-e05",
+              "label": "Samaria falls",
+              "order": 5,
+              "clue": "Assyria"
+            },
+            {
+              "id": "bt-r015-e06",
+              "label": "Sennacherib threatens Jerusalem",
+              "order": 6,
+              "clue": "Assyria"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Arrange these Assyrian-period events. and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bt-session-004",
+      "title": "Timeline Pack 004",
+      "theme": "Bible chronology",
+      "rounds": [
+        {
+          "id": "bt-r016",
+          "prompt": "Place these late Judah events.",
+          "events": [
+            {
+              "id": "bt-r016-e01",
+              "label": "Hezekiah reforms Judah",
+              "order": 1,
+              "clue": "Judah Before Exile"
+            },
+            {
+              "id": "bt-r016-e02",
+              "label": "Manasseh reigns",
+              "order": 2,
+              "clue": "Judah Before Exile"
+            },
+            {
+              "id": "bt-r016-e03",
+              "label": "Josiah finds the law",
+              "order": 3,
+              "clue": "Judah Before Exile"
+            },
+            {
+              "id": "bt-r016-e04",
+              "label": "Jeremiah begins ministry",
+              "order": 4,
+              "clue": "Judah Before Exile"
+            },
+            {
+              "id": "bt-r016-e05",
+              "label": "First Babylonian deportation",
+              "order": 5,
+              "clue": "Judah Before Exile"
+            },
+            {
+              "id": "bt-r016-e06",
+              "label": "Jerusalem falls",
+              "order": 6,
+              "clue": "Judah Before Exile"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Place these late Judah events. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r017",
+          "prompt": "Arrange these exile events.",
+          "events": [
+            {
+              "id": "bt-r017-e01",
+              "label": "Daniel taken to Babylon",
+              "order": 1,
+              "clue": "Exile"
+            },
+            {
+              "id": "bt-r017-e02",
+              "label": "Fiery furnace",
+              "order": 2,
+              "clue": "Exile"
+            },
+            {
+              "id": "bt-r017-e03",
+              "label": "Ezekiel sees visions",
+              "order": 3,
+              "clue": "Exile"
+            },
+            {
+              "id": "bt-r017-e04",
+              "label": "Nebuchadnezzar humbled",
+              "order": 4,
+              "clue": "Exile"
+            },
+            {
+              "id": "bt-r017-e05",
+              "label": "Handwriting on the wall",
+              "order": 5,
+              "clue": "Exile"
+            },
+            {
+              "id": "bt-r017-e06",
+              "label": "Daniel in the lions' den",
+              "order": 6,
+              "clue": "Exile"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Arrange these exile events. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r018",
+          "prompt": "Put these return-from-exile events in order.",
+          "events": [
+            {
+              "id": "bt-r018-e01",
+              "label": "Cyrus decrees return",
+              "order": 1,
+              "clue": "Return"
+            },
+            {
+              "id": "bt-r018-e02",
+              "label": "Temple foundation laid",
+              "order": 2,
+              "clue": "Return"
+            },
+            {
+              "id": "bt-r018-e03",
+              "label": "Temple rebuilding resumes",
+              "order": 3,
+              "clue": "Return"
+            },
+            {
+              "id": "bt-r018-e04",
+              "label": "Temple completed",
+              "order": 4,
+              "clue": "Return"
+            },
+            {
+              "id": "bt-r018-e05",
+              "label": "Ezra arrives",
+              "order": 5,
+              "clue": "Return"
+            },
+            {
+              "id": "bt-r018-e06",
+              "label": "Nehemiah rebuilds wall",
+              "order": 6,
+              "clue": "Return"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these return-from-exile events in order. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r019",
+          "prompt": "Arrange these events leading into the Gospels.",
+          "events": [
+            {
+              "id": "bt-r019-e01",
+              "label": "Persian period ends",
+              "order": 1,
+              "clue": "Between Testaments And Birth"
+            },
+            {
+              "id": "bt-r019-e02",
+              "label": "Greek rule begins",
+              "order": 2,
+              "clue": "Between Testaments And Birth"
+            },
+            {
+              "id": "bt-r019-e03",
+              "label": "Roman rule in Judea",
+              "order": 3,
+              "clue": "Between Testaments And Birth"
+            },
+            {
+              "id": "bt-r019-e04",
+              "label": "Gabriel visits Zacharias",
+              "order": 4,
+              "clue": "Between Testaments And Birth"
+            },
+            {
+              "id": "bt-r019-e05",
+              "label": "Gabriel visits Mary",
+              "order": 5,
+              "clue": "Between Testaments And Birth"
+            },
+            {
+              "id": "bt-r019-e06",
+              "label": "Jesus is born",
+              "order": 6,
+              "clue": "Between Testaments And Birth"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Arrange these events leading into the Gospels. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r020",
+          "prompt": "Put these early Gospel events in order.",
+          "events": [
+            {
+              "id": "bt-r020-e01",
+              "label": "John the Baptist preaches",
+              "order": 1,
+              "clue": "Early Jesus Ministry"
+            },
+            {
+              "id": "bt-r020-e02",
+              "label": "Jesus is baptized",
+              "order": 2,
+              "clue": "Early Jesus Ministry"
+            },
+            {
+              "id": "bt-r020-e03",
+              "label": "Jesus is tempted",
+              "order": 3,
+              "clue": "Early Jesus Ministry"
+            },
+            {
+              "id": "bt-r020-e04",
+              "label": "First disciples called",
+              "order": 4,
+              "clue": "Early Jesus Ministry"
+            },
+            {
+              "id": "bt-r020-e05",
+              "label": "Water turned to wine",
+              "order": 5,
+              "clue": "Early Jesus Ministry"
+            },
+            {
+              "id": "bt-r020-e06",
+              "label": "Sermon on the Mount",
+              "order": 6,
+              "clue": "Early Jesus Ministry"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these early Gospel events in order. and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bt-session-005",
+      "title": "Timeline Pack 005",
+      "theme": "Bible chronology",
+      "rounds": [
+        {
+          "id": "bt-r021",
+          "prompt": "Arrange these ministry events.",
+          "events": [
+            {
+              "id": "bt-r021-e01",
+              "label": "Nobleman's son healed",
+              "order": 1,
+              "clue": "Jesus' Miracles"
+            },
+            {
+              "id": "bt-r021-e02",
+              "label": "Paralytic lowered through roof",
+              "order": 2,
+              "clue": "Jesus' Miracles"
+            },
+            {
+              "id": "bt-r021-e03",
+              "label": "Storm is calmed",
+              "order": 3,
+              "clue": "Jesus' Miracles"
+            },
+            {
+              "id": "bt-r021-e04",
+              "label": "Jairus's daughter raised",
+              "order": 4,
+              "clue": "Jesus' Miracles"
+            },
+            {
+              "id": "bt-r021-e05",
+              "label": "Five thousand fed",
+              "order": 5,
+              "clue": "Jesus' Miracles"
+            },
+            {
+              "id": "bt-r021-e06",
+              "label": "Jesus walks on water",
+              "order": 6,
+              "clue": "Jesus' Miracles"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Arrange these ministry events. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r022",
+          "prompt": "Place these later Gospel events.",
+          "events": [
+            {
+              "id": "bt-r022-e01",
+              "label": "Peter confesses Christ",
+              "order": 1,
+              "clue": "Toward Jerusalem"
+            },
+            {
+              "id": "bt-r022-e02",
+              "label": "Transfiguration",
+              "order": 2,
+              "clue": "Toward Jerusalem"
+            },
+            {
+              "id": "bt-r022-e03",
+              "label": "Seventy sent out",
+              "order": 3,
+              "clue": "Toward Jerusalem"
+            },
+            {
+              "id": "bt-r022-e04",
+              "label": "Lazarus raised",
+              "order": 4,
+              "clue": "Toward Jerusalem"
+            },
+            {
+              "id": "bt-r022-e05",
+              "label": "Triumphal entry",
+              "order": 5,
+              "clue": "Toward Jerusalem"
+            },
+            {
+              "id": "bt-r022-e06",
+              "label": "Temple cleansed",
+              "order": 6,
+              "clue": "Toward Jerusalem"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Place these later Gospel events. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r023",
+          "prompt": "Put these Passion Week events in order.",
+          "events": [
+            {
+              "id": "bt-r023-e01",
+              "label": "Last Supper",
+              "order": 1,
+              "clue": "Passion Week"
+            },
+            {
+              "id": "bt-r023-e02",
+              "label": "Gethsemane prayer",
+              "order": 2,
+              "clue": "Passion Week"
+            },
+            {
+              "id": "bt-r023-e03",
+              "label": "Jesus before Pilate",
+              "order": 3,
+              "clue": "Passion Week"
+            },
+            {
+              "id": "bt-r023-e04",
+              "label": "Crucifixion",
+              "order": 4,
+              "clue": "Passion Week"
+            },
+            {
+              "id": "bt-r023-e05",
+              "label": "Burial",
+              "order": 5,
+              "clue": "Passion Week"
+            },
+            {
+              "id": "bt-r023-e06",
+              "label": "Resurrection",
+              "order": 6,
+              "clue": "Passion Week"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Passion Week events in order. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r024",
+          "prompt": "Arrange these Acts events.",
+          "events": [
+            {
+              "id": "bt-r024-e01",
+              "label": "Ascension",
+              "order": 1,
+              "clue": "Early Church"
+            },
+            {
+              "id": "bt-r024-e02",
+              "label": "Pentecost",
+              "order": 2,
+              "clue": "Early Church"
+            },
+            {
+              "id": "bt-r024-e03",
+              "label": "Lame man healed at temple",
+              "order": 3,
+              "clue": "Early Church"
+            },
+            {
+              "id": "bt-r024-e04",
+              "label": "Stephen is martyred",
+              "order": 4,
+              "clue": "Early Church"
+            },
+            {
+              "id": "bt-r024-e05",
+              "label": "Saul is converted",
+              "order": 5,
+              "clue": "Early Church"
+            },
+            {
+              "id": "bt-r024-e06",
+              "label": "Cornelius hears Peter",
+              "order": 6,
+              "clue": "Early Church"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Arrange these Acts events. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r025",
+          "prompt": "Place these Paul events in order.",
+          "events": [
+            {
+              "id": "bt-r025-e01",
+              "label": "Paul and Barnabas sent",
+              "order": 1,
+              "clue": "Paul's Journeys"
+            },
+            {
+              "id": "bt-r025-e02",
+              "label": "Jerusalem Council",
+              "order": 2,
+              "clue": "Paul's Journeys"
+            },
+            {
+              "id": "bt-r025-e03",
+              "label": "Lydia believes",
+              "order": 3,
+              "clue": "Paul's Journeys"
+            },
+            {
+              "id": "bt-r025-e04",
+              "label": "Paul preaches in Athens",
+              "order": 4,
+              "clue": "Paul's Journeys"
+            },
+            {
+              "id": "bt-r025-e05",
+              "label": "Paul arrested in Jerusalem",
+              "order": 5,
+              "clue": "Paul's Journeys"
+            },
+            {
+              "id": "bt-r025-e06",
+              "label": "Paul reaches Rome",
+              "order": 6,
+              "clue": "Paul's Journeys"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Place these Paul events in order. and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bt-session-006",
+      "title": "Timeline Pack 006",
+      "theme": "Bible chronology",
+      "rounds": [
+        {
+          "id": "bt-r026",
+          "prompt": "Put these Bible events in order, from Creation through Flood covers the earth.",
+          "events": [
+            {
+              "id": "bt-r026-e01",
+              "label": "Creation",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r026-e02",
+              "label": "Fall in Eden",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r026-e03",
+              "label": "Cain kills Abel",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r026-e04",
+              "label": "Noah builds the ark",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r026-e05",
+              "label": "Flood covers the earth",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from Creation through Flood covers the earth. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r027",
+          "prompt": "Put these Bible events in order, from Fall in Eden through Tower of Babel.",
+          "events": [
+            {
+              "id": "bt-r027-e01",
+              "label": "Fall in Eden",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r027-e02",
+              "label": "Cain kills Abel",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r027-e03",
+              "label": "Noah builds the ark",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r027-e04",
+              "label": "Flood covers the earth",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r027-e05",
+              "label": "Tower of Babel",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from Fall in Eden through Tower of Babel. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r028",
+          "prompt": "Put these Bible events in order, from Cain kills Abel through Abram leaves Haran.",
+          "events": [
+            {
+              "id": "bt-r028-e01",
+              "label": "Cain kills Abel",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r028-e02",
+              "label": "Noah builds the ark",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r028-e03",
+              "label": "Flood covers the earth",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r028-e04",
+              "label": "Tower of Babel",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r028-e05",
+              "label": "Abram leaves Haran",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from Cain kills Abel through Abram leaves Haran. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r029",
+          "prompt": "Put these Bible events in order, from Noah builds the ark through Isaac is born.",
+          "events": [
+            {
+              "id": "bt-r029-e01",
+              "label": "Noah builds the ark",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r029-e02",
+              "label": "Flood covers the earth",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r029-e03",
+              "label": "Tower of Babel",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r029-e04",
+              "label": "Abram leaves Haran",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r029-e05",
+              "label": "Isaac is born",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from Noah builds the ark through Isaac is born. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r030",
+          "prompt": "Put these Bible events in order, from Flood covers the earth through Jacob receives the blessing.",
+          "events": [
+            {
+              "id": "bt-r030-e01",
+              "label": "Flood covers the earth",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r030-e02",
+              "label": "Tower of Babel",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r030-e03",
+              "label": "Abram leaves Haran",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r030-e04",
+              "label": "Isaac is born",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r030-e05",
+              "label": "Jacob receives the blessing",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from Flood covers the earth through Jacob receives the blessing. and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bt-session-007",
+      "title": "Timeline Pack 007",
+      "theme": "Bible chronology",
+      "rounds": [
+        {
+          "id": "bt-r031",
+          "prompt": "Put these Bible events in order, from Tower of Babel through Joseph is sold by his brothers.",
+          "events": [
+            {
+              "id": "bt-r031-e01",
+              "label": "Tower of Babel",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r031-e02",
+              "label": "Abram leaves Haran",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r031-e03",
+              "label": "Isaac is born",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r031-e04",
+              "label": "Jacob receives the blessing",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r031-e05",
+              "label": "Joseph is sold by his brothers",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from Tower of Babel through Joseph is sold by his brothers. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r032",
+          "prompt": "Put these Bible events in order, from Abram leaves Haran through Israel moves to Egypt.",
+          "events": [
+            {
+              "id": "bt-r032-e01",
+              "label": "Abram leaves Haran",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r032-e02",
+              "label": "Isaac is born",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r032-e03",
+              "label": "Jacob receives the blessing",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r032-e04",
+              "label": "Joseph is sold by his brothers",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r032-e05",
+              "label": "Israel moves to Egypt",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from Abram leaves Haran through Israel moves to Egypt. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r033",
+          "prompt": "Put these Bible events in order, from Isaac is born through Moses is born.",
+          "events": [
+            {
+              "id": "bt-r033-e01",
+              "label": "Isaac is born",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r033-e02",
+              "label": "Jacob receives the blessing",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r033-e03",
+              "label": "Joseph is sold by his brothers",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r033-e04",
+              "label": "Israel moves to Egypt",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r033-e05",
+              "label": "Moses is born",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from Isaac is born through Moses is born. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r034",
+          "prompt": "Put these Bible events in order, from Jacob receives the blessing through Moses sees the burning bush.",
+          "events": [
+            {
+              "id": "bt-r034-e01",
+              "label": "Jacob receives the blessing",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r034-e02",
+              "label": "Joseph is sold by his brothers",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r034-e03",
+              "label": "Israel moves to Egypt",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r034-e04",
+              "label": "Moses is born",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r034-e05",
+              "label": "Moses sees the burning bush",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from Jacob receives the blessing through Moses sees the burning bush. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r035",
+          "prompt": "Put these Bible events in order, from Joseph is sold by his brothers through Plagues strike Egypt.",
+          "events": [
+            {
+              "id": "bt-r035-e01",
+              "label": "Joseph is sold by his brothers",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r035-e02",
+              "label": "Israel moves to Egypt",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r035-e03",
+              "label": "Moses is born",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r035-e04",
+              "label": "Moses sees the burning bush",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r035-e05",
+              "label": "Plagues strike Egypt",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from Joseph is sold by his brothers through Plagues strike Egypt. and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bt-session-008",
+      "title": "Timeline Pack 008",
+      "theme": "Bible chronology",
+      "rounds": [
+        {
+          "id": "bt-r036",
+          "prompt": "Put these Bible events in order, from Israel moves to Egypt through The Passover night.",
+          "events": [
+            {
+              "id": "bt-r036-e01",
+              "label": "Israel moves to Egypt",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r036-e02",
+              "label": "Moses is born",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r036-e03",
+              "label": "Moses sees the burning bush",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r036-e04",
+              "label": "Plagues strike Egypt",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r036-e05",
+              "label": "The Passover night",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from Israel moves to Egypt through The Passover night. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r037",
+          "prompt": "Put these Bible events in order, from Moses is born through The Red Sea crossing.",
+          "events": [
+            {
+              "id": "bt-r037-e01",
+              "label": "Moses is born",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r037-e02",
+              "label": "Moses sees the burning bush",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r037-e03",
+              "label": "Plagues strike Egypt",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r037-e04",
+              "label": "The Passover night",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r037-e05",
+              "label": "The Red Sea crossing",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from Moses is born through The Red Sea crossing. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r038",
+          "prompt": "Put these Bible events in order, from Moses sees the burning bush through The law is given at Sinai.",
+          "events": [
+            {
+              "id": "bt-r038-e01",
+              "label": "Moses sees the burning bush",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r038-e02",
+              "label": "Plagues strike Egypt",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r038-e03",
+              "label": "The Passover night",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r038-e04",
+              "label": "The Red Sea crossing",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r038-e05",
+              "label": "The law is given at Sinai",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from Moses sees the burning bush through The law is given at Sinai. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r039",
+          "prompt": "Put these Bible events in order, from Plagues strike Egypt through The tabernacle is built.",
+          "events": [
+            {
+              "id": "bt-r039-e01",
+              "label": "Plagues strike Egypt",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r039-e02",
+              "label": "The Passover night",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r039-e03",
+              "label": "The Red Sea crossing",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r039-e04",
+              "label": "The law is given at Sinai",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r039-e05",
+              "label": "The tabernacle is built",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from Plagues strike Egypt through The tabernacle is built. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r040",
+          "prompt": "Put these Bible events in order, from The Passover night through The spies enter Canaan.",
+          "events": [
+            {
+              "id": "bt-r040-e01",
+              "label": "The Passover night",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r040-e02",
+              "label": "The Red Sea crossing",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r040-e03",
+              "label": "The law is given at Sinai",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r040-e04",
+              "label": "The tabernacle is built",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r040-e05",
+              "label": "The spies enter Canaan",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from The Passover night through The spies enter Canaan. and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bt-session-009",
+      "title": "Timeline Pack 009",
+      "theme": "Bible chronology",
+      "rounds": [
+        {
+          "id": "bt-r041",
+          "prompt": "Put these Bible events in order, from The Red Sea crossing through Joshua leads Israel.",
+          "events": [
+            {
+              "id": "bt-r041-e01",
+              "label": "The Red Sea crossing",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r041-e02",
+              "label": "The law is given at Sinai",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r041-e03",
+              "label": "The tabernacle is built",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r041-e04",
+              "label": "The spies enter Canaan",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r041-e05",
+              "label": "Joshua leads Israel",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from The Red Sea crossing through Joshua leads Israel. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r042",
+          "prompt": "Put these Bible events in order, from The law is given at Sinai through The Jordan River crossing.",
+          "events": [
+            {
+              "id": "bt-r042-e01",
+              "label": "The law is given at Sinai",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r042-e02",
+              "label": "The tabernacle is built",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r042-e03",
+              "label": "The spies enter Canaan",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r042-e04",
+              "label": "Joshua leads Israel",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r042-e05",
+              "label": "The Jordan River crossing",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from The law is given at Sinai through The Jordan River crossing. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r043",
+          "prompt": "Put these Bible events in order, from The tabernacle is built through Jericho falls.",
+          "events": [
+            {
+              "id": "bt-r043-e01",
+              "label": "The tabernacle is built",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r043-e02",
+              "label": "The spies enter Canaan",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r043-e03",
+              "label": "Joshua leads Israel",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r043-e04",
+              "label": "The Jordan River crossing",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r043-e05",
+              "label": "Jericho falls",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from The tabernacle is built through Jericho falls. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r044",
+          "prompt": "Put these Bible events in order, from The spies enter Canaan through Deborah judges Israel.",
+          "events": [
+            {
+              "id": "bt-r044-e01",
+              "label": "The spies enter Canaan",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r044-e02",
+              "label": "Joshua leads Israel",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r044-e03",
+              "label": "The Jordan River crossing",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r044-e04",
+              "label": "Jericho falls",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r044-e05",
+              "label": "Deborah judges Israel",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from The spies enter Canaan through Deborah judges Israel. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r045",
+          "prompt": "Put these Bible events in order, from Joshua leads Israel through Gideon defeats Midian.",
+          "events": [
+            {
+              "id": "bt-r045-e01",
+              "label": "Joshua leads Israel",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r045-e02",
+              "label": "The Jordan River crossing",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r045-e03",
+              "label": "Jericho falls",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r045-e04",
+              "label": "Deborah judges Israel",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r045-e05",
+              "label": "Gideon defeats Midian",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from Joshua leads Israel through Gideon defeats Midian. and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bt-session-010",
+      "title": "Timeline Pack 010",
+      "theme": "Bible chronology",
+      "rounds": [
+        {
+          "id": "bt-r046",
+          "prompt": "Put these Bible events in order, from The Jordan River crossing through Samson fights the Philistines.",
+          "events": [
+            {
+              "id": "bt-r046-e01",
+              "label": "The Jordan River crossing",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r046-e02",
+              "label": "Jericho falls",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r046-e03",
+              "label": "Deborah judges Israel",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r046-e04",
+              "label": "Gideon defeats Midian",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r046-e05",
+              "label": "Samson fights the Philistines",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from The Jordan River crossing through Samson fights the Philistines. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r047",
+          "prompt": "Put these Bible events in order, from Jericho falls through Ruth meets Boaz.",
+          "events": [
+            {
+              "id": "bt-r047-e01",
+              "label": "Jericho falls",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r047-e02",
+              "label": "Deborah judges Israel",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r047-e03",
+              "label": "Gideon defeats Midian",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r047-e04",
+              "label": "Samson fights the Philistines",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r047-e05",
+              "label": "Ruth meets Boaz",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from Jericho falls through Ruth meets Boaz. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r048",
+          "prompt": "Put these Bible events in order, from Deborah judges Israel through Samuel is called.",
+          "events": [
+            {
+              "id": "bt-r048-e01",
+              "label": "Deborah judges Israel",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r048-e02",
+              "label": "Gideon defeats Midian",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r048-e03",
+              "label": "Samson fights the Philistines",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r048-e04",
+              "label": "Ruth meets Boaz",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r048-e05",
+              "label": "Samuel is called",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from Deborah judges Israel through Samuel is called. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r049",
+          "prompt": "Put these Bible events in order, from Gideon defeats Midian through Saul becomes king.",
+          "events": [
+            {
+              "id": "bt-r049-e01",
+              "label": "Gideon defeats Midian",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r049-e02",
+              "label": "Samson fights the Philistines",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r049-e03",
+              "label": "Ruth meets Boaz",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r049-e04",
+              "label": "Samuel is called",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r049-e05",
+              "label": "Saul becomes king",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from Gideon defeats Midian through Saul becomes king. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r050",
+          "prompt": "Put these Bible events in order, from Samson fights the Philistines through David defeats Goliath.",
+          "events": [
+            {
+              "id": "bt-r050-e01",
+              "label": "Samson fights the Philistines",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r050-e02",
+              "label": "Ruth meets Boaz",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r050-e03",
+              "label": "Samuel is called",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r050-e04",
+              "label": "Saul becomes king",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r050-e05",
+              "label": "David defeats Goliath",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from Samson fights the Philistines through David defeats Goliath. and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bt-session-011",
+      "title": "Timeline Pack 011",
+      "theme": "Bible chronology",
+      "rounds": [
+        {
+          "id": "bt-r051",
+          "prompt": "Put these Bible events in order, from Ruth meets Boaz through David becomes king.",
+          "events": [
+            {
+              "id": "bt-r051-e01",
+              "label": "Ruth meets Boaz",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r051-e02",
+              "label": "Samuel is called",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r051-e03",
+              "label": "Saul becomes king",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r051-e04",
+              "label": "David defeats Goliath",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r051-e05",
+              "label": "David becomes king",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from Ruth meets Boaz through David becomes king. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r052",
+          "prompt": "Put these Bible events in order, from Samuel is called through Solomon asks for wisdom.",
+          "events": [
+            {
+              "id": "bt-r052-e01",
+              "label": "Samuel is called",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r052-e02",
+              "label": "Saul becomes king",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r052-e03",
+              "label": "David defeats Goliath",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r052-e04",
+              "label": "David becomes king",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r052-e05",
+              "label": "Solomon asks for wisdom",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from Samuel is called through Solomon asks for wisdom. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r053",
+          "prompt": "Put these Bible events in order, from Saul becomes king through Solomon builds the temple.",
+          "events": [
+            {
+              "id": "bt-r053-e01",
+              "label": "Saul becomes king",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r053-e02",
+              "label": "David defeats Goliath",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r053-e03",
+              "label": "David becomes king",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r053-e04",
+              "label": "Solomon asks for wisdom",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r053-e05",
+              "label": "Solomon builds the temple",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from Saul becomes king through Solomon builds the temple. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r054",
+          "prompt": "Put these Bible events in order, from David defeats Goliath through The kingdom divides.",
+          "events": [
+            {
+              "id": "bt-r054-e01",
+              "label": "David defeats Goliath",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r054-e02",
+              "label": "David becomes king",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r054-e03",
+              "label": "Solomon asks for wisdom",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r054-e04",
+              "label": "Solomon builds the temple",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r054-e05",
+              "label": "The kingdom divides",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from David defeats Goliath through The kingdom divides. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r055",
+          "prompt": "Put these Bible events in order, from David becomes king through Elijah confronts Baal's prophets.",
+          "events": [
+            {
+              "id": "bt-r055-e01",
+              "label": "David becomes king",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r055-e02",
+              "label": "Solomon asks for wisdom",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r055-e03",
+              "label": "Solomon builds the temple",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r055-e04",
+              "label": "The kingdom divides",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r055-e05",
+              "label": "Elijah confronts Baal's prophets",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from David becomes king through Elijah confronts Baal's prophets. and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bt-session-012",
+      "title": "Timeline Pack 012",
+      "theme": "Bible chronology",
+      "rounds": [
+        {
+          "id": "bt-r056",
+          "prompt": "Put these Bible events in order, from Solomon asks for wisdom through Elisha receives Elijah's mantle.",
+          "events": [
+            {
+              "id": "bt-r056-e01",
+              "label": "Solomon asks for wisdom",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r056-e02",
+              "label": "Solomon builds the temple",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r056-e03",
+              "label": "The kingdom divides",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r056-e04",
+              "label": "Elijah confronts Baal's prophets",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r056-e05",
+              "label": "Elisha receives Elijah's mantle",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from Solomon asks for wisdom through Elisha receives Elijah's mantle. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r057",
+          "prompt": "Put these Bible events in order, from Solomon builds the temple through Jonah preaches to Nineveh.",
+          "events": [
+            {
+              "id": "bt-r057-e01",
+              "label": "Solomon builds the temple",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r057-e02",
+              "label": "The kingdom divides",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r057-e03",
+              "label": "Elijah confronts Baal's prophets",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r057-e04",
+              "label": "Elisha receives Elijah's mantle",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r057-e05",
+              "label": "Jonah preaches to Nineveh",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from Solomon builds the temple through Jonah preaches to Nineveh. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r058",
+          "prompt": "Put these Bible events in order, from The kingdom divides through Isaiah sees the Lord.",
+          "events": [
+            {
+              "id": "bt-r058-e01",
+              "label": "The kingdom divides",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r058-e02",
+              "label": "Elijah confronts Baal's prophets",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r058-e03",
+              "label": "Elisha receives Elijah's mantle",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r058-e04",
+              "label": "Jonah preaches to Nineveh",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r058-e05",
+              "label": "Isaiah sees the Lord",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from The kingdom divides through Isaiah sees the Lord. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r059",
+          "prompt": "Put these Bible events in order, from Elijah confronts Baal's prophets through Samaria falls to Assyria.",
+          "events": [
+            {
+              "id": "bt-r059-e01",
+              "label": "Elijah confronts Baal's prophets",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r059-e02",
+              "label": "Elisha receives Elijah's mantle",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r059-e03",
+              "label": "Jonah preaches to Nineveh",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r059-e04",
+              "label": "Isaiah sees the Lord",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r059-e05",
+              "label": "Samaria falls to Assyria",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from Elijah confronts Baal's prophets through Samaria falls to Assyria. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r060",
+          "prompt": "Put these Bible events in order, from Elisha receives Elijah's mantle through Josiah finds the book of the law.",
+          "events": [
+            {
+              "id": "bt-r060-e01",
+              "label": "Elisha receives Elijah's mantle",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r060-e02",
+              "label": "Jonah preaches to Nineveh",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r060-e03",
+              "label": "Isaiah sees the Lord",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r060-e04",
+              "label": "Samaria falls to Assyria",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r060-e05",
+              "label": "Josiah finds the book of the law",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from Elisha receives Elijah's mantle through Josiah finds the book of the law. and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bt-session-013",
+      "title": "Timeline Pack 013",
+      "theme": "Bible chronology",
+      "rounds": [
+        {
+          "id": "bt-r061",
+          "prompt": "Put these Bible events in order, from Jonah preaches to Nineveh through Jeremiah warns Judah.",
+          "events": [
+            {
+              "id": "bt-r061-e01",
+              "label": "Jonah preaches to Nineveh",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r061-e02",
+              "label": "Isaiah sees the Lord",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r061-e03",
+              "label": "Samaria falls to Assyria",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r061-e04",
+              "label": "Josiah finds the book of the law",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r061-e05",
+              "label": "Jeremiah warns Judah",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from Jonah preaches to Nineveh through Jeremiah warns Judah. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r062",
+          "prompt": "Put these Bible events in order, from Isaiah sees the Lord through Jerusalem falls to Babylon.",
+          "events": [
+            {
+              "id": "bt-r062-e01",
+              "label": "Isaiah sees the Lord",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r062-e02",
+              "label": "Samaria falls to Assyria",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r062-e03",
+              "label": "Josiah finds the book of the law",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r062-e04",
+              "label": "Jeremiah warns Judah",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r062-e05",
+              "label": "Jerusalem falls to Babylon",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from Isaiah sees the Lord through Jerusalem falls to Babylon. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r063",
+          "prompt": "Put these Bible events in order, from Samaria falls to Assyria through Daniel serves in Babylon.",
+          "events": [
+            {
+              "id": "bt-r063-e01",
+              "label": "Samaria falls to Assyria",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r063-e02",
+              "label": "Josiah finds the book of the law",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r063-e03",
+              "label": "Jeremiah warns Judah",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r063-e04",
+              "label": "Jerusalem falls to Babylon",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r063-e05",
+              "label": "Daniel serves in Babylon",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from Samaria falls to Assyria through Daniel serves in Babylon. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r064",
+          "prompt": "Put these Bible events in order, from Josiah finds the book of the law through The fiery furnace.",
+          "events": [
+            {
+              "id": "bt-r064-e01",
+              "label": "Josiah finds the book of the law",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r064-e02",
+              "label": "Jeremiah warns Judah",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r064-e03",
+              "label": "Jerusalem falls to Babylon",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r064-e04",
+              "label": "Daniel serves in Babylon",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r064-e05",
+              "label": "The fiery furnace",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from Josiah finds the book of the law through The fiery furnace. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r065",
+          "prompt": "Put these Bible events in order, from Jeremiah warns Judah through Daniel in the lions' den.",
+          "events": [
+            {
+              "id": "bt-r065-e01",
+              "label": "Jeremiah warns Judah",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r065-e02",
+              "label": "Jerusalem falls to Babylon",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r065-e03",
+              "label": "Daniel serves in Babylon",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r065-e04",
+              "label": "The fiery furnace",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r065-e05",
+              "label": "Daniel in the lions' den",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from Jeremiah warns Judah through Daniel in the lions' den. and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bt-session-014",
+      "title": "Timeline Pack 014",
+      "theme": "Bible chronology",
+      "rounds": [
+        {
+          "id": "bt-r066",
+          "prompt": "Put these Bible events in order, from Jerusalem falls to Babylon through Cyrus permits the return.",
+          "events": [
+            {
+              "id": "bt-r066-e01",
+              "label": "Jerusalem falls to Babylon",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r066-e02",
+              "label": "Daniel serves in Babylon",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r066-e03",
+              "label": "The fiery furnace",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r066-e04",
+              "label": "Daniel in the lions' den",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r066-e05",
+              "label": "Cyrus permits the return",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from Jerusalem falls to Babylon through Cyrus permits the return. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r067",
+          "prompt": "Put these Bible events in order, from Daniel serves in Babylon through The second temple is completed.",
+          "events": [
+            {
+              "id": "bt-r067-e01",
+              "label": "Daniel serves in Babylon",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r067-e02",
+              "label": "The fiery furnace",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r067-e03",
+              "label": "Daniel in the lions' den",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r067-e04",
+              "label": "Cyrus permits the return",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r067-e05",
+              "label": "The second temple is completed",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from Daniel serves in Babylon through The second temple is completed. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r068",
+          "prompt": "Put these Bible events in order, from The fiery furnace through Ezra teaches the law.",
+          "events": [
+            {
+              "id": "bt-r068-e01",
+              "label": "The fiery furnace",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r068-e02",
+              "label": "Daniel in the lions' den",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r068-e03",
+              "label": "Cyrus permits the return",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r068-e04",
+              "label": "The second temple is completed",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r068-e05",
+              "label": "Ezra teaches the law",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from The fiery furnace through Ezra teaches the law. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r069",
+          "prompt": "Put these Bible events in order, from Daniel in the lions' den through Nehemiah rebuilds Jerusalem's wall.",
+          "events": [
+            {
+              "id": "bt-r069-e01",
+              "label": "Daniel in the lions' den",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r069-e02",
+              "label": "Cyrus permits the return",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r069-e03",
+              "label": "The second temple is completed",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r069-e04",
+              "label": "Ezra teaches the law",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r069-e05",
+              "label": "Nehemiah rebuilds Jerusalem's wall",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from Daniel in the lions' den through Nehemiah rebuilds Jerusalem's wall. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r070",
+          "prompt": "Put these Bible events in order, from Cyrus permits the return through Gabriel visits Zacharias.",
+          "events": [
+            {
+              "id": "bt-r070-e01",
+              "label": "Cyrus permits the return",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r070-e02",
+              "label": "The second temple is completed",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r070-e03",
+              "label": "Ezra teaches the law",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r070-e04",
+              "label": "Nehemiah rebuilds Jerusalem's wall",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r070-e05",
+              "label": "Gabriel visits Zacharias",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from Cyrus permits the return through Gabriel visits Zacharias. and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bt-session-015",
+      "title": "Timeline Pack 015",
+      "theme": "Bible chronology",
+      "rounds": [
+        {
+          "id": "bt-r071",
+          "prompt": "Put these Bible events in order, from The second temple is completed through Gabriel visits Mary.",
+          "events": [
+            {
+              "id": "bt-r071-e01",
+              "label": "The second temple is completed",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r071-e02",
+              "label": "Ezra teaches the law",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r071-e03",
+              "label": "Nehemiah rebuilds Jerusalem's wall",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r071-e04",
+              "label": "Gabriel visits Zacharias",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r071-e05",
+              "label": "Gabriel visits Mary",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from The second temple is completed through Gabriel visits Mary. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r072",
+          "prompt": "Put these Bible events in order, from Ezra teaches the law through Jesus is born.",
+          "events": [
+            {
+              "id": "bt-r072-e01",
+              "label": "Ezra teaches the law",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r072-e02",
+              "label": "Nehemiah rebuilds Jerusalem's wall",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r072-e03",
+              "label": "Gabriel visits Zacharias",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r072-e04",
+              "label": "Gabriel visits Mary",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r072-e05",
+              "label": "Jesus is born",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from Ezra teaches the law through Jesus is born. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r073",
+          "prompt": "Put these Bible events in order, from Nehemiah rebuilds Jerusalem's wall through John the Baptist preaches.",
+          "events": [
+            {
+              "id": "bt-r073-e01",
+              "label": "Nehemiah rebuilds Jerusalem's wall",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r073-e02",
+              "label": "Gabriel visits Zacharias",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r073-e03",
+              "label": "Gabriel visits Mary",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r073-e04",
+              "label": "Jesus is born",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r073-e05",
+              "label": "John the Baptist preaches",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from Nehemiah rebuilds Jerusalem's wall through John the Baptist preaches. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r074",
+          "prompt": "Put these Bible events in order, from Gabriel visits Zacharias through Jesus is baptized.",
+          "events": [
+            {
+              "id": "bt-r074-e01",
+              "label": "Gabriel visits Zacharias",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r074-e02",
+              "label": "Gabriel visits Mary",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r074-e03",
+              "label": "Jesus is born",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r074-e04",
+              "label": "John the Baptist preaches",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r074-e05",
+              "label": "Jesus is baptized",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from Gabriel visits Zacharias through Jesus is baptized. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r075",
+          "prompt": "Put these Bible events in order, from Gabriel visits Mary through Jesus is tempted.",
+          "events": [
+            {
+              "id": "bt-r075-e01",
+              "label": "Gabriel visits Mary",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r075-e02",
+              "label": "Jesus is born",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r075-e03",
+              "label": "John the Baptist preaches",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r075-e04",
+              "label": "Jesus is baptized",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r075-e05",
+              "label": "Jesus is tempted",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from Gabriel visits Mary through Jesus is tempted. and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bt-session-016",
+      "title": "Timeline Pack 016",
+      "theme": "Bible chronology",
+      "rounds": [
+        {
+          "id": "bt-r076",
+          "prompt": "Put these Bible events in order, from Jesus is born through Jesus calls the first disciples.",
+          "events": [
+            {
+              "id": "bt-r076-e01",
+              "label": "Jesus is born",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r076-e02",
+              "label": "John the Baptist preaches",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r076-e03",
+              "label": "Jesus is baptized",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r076-e04",
+              "label": "Jesus is tempted",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r076-e05",
+              "label": "Jesus calls the first disciples",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from Jesus is born through Jesus calls the first disciples. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r077",
+          "prompt": "Put these Bible events in order, from John the Baptist preaches through Sermon on the Mount.",
+          "events": [
+            {
+              "id": "bt-r077-e01",
+              "label": "John the Baptist preaches",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r077-e02",
+              "label": "Jesus is baptized",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r077-e03",
+              "label": "Jesus is tempted",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r077-e04",
+              "label": "Jesus calls the first disciples",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r077-e05",
+              "label": "Sermon on the Mount",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from John the Baptist preaches through Sermon on the Mount. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r078",
+          "prompt": "Put these Bible events in order, from Jesus is baptized through Jesus calms the storm.",
+          "events": [
+            {
+              "id": "bt-r078-e01",
+              "label": "Jesus is baptized",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r078-e02",
+              "label": "Jesus is tempted",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r078-e03",
+              "label": "Jesus calls the first disciples",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r078-e04",
+              "label": "Sermon on the Mount",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r078-e05",
+              "label": "Jesus calms the storm",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from Jesus is baptized through Jesus calms the storm. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r079",
+          "prompt": "Put these Bible events in order, from Jesus is tempted through Jesus feeds the five thousand.",
+          "events": [
+            {
+              "id": "bt-r079-e01",
+              "label": "Jesus is tempted",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r079-e02",
+              "label": "Jesus calls the first disciples",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r079-e03",
+              "label": "Sermon on the Mount",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r079-e04",
+              "label": "Jesus calms the storm",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r079-e05",
+              "label": "Jesus feeds the five thousand",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from Jesus is tempted through Jesus feeds the five thousand. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r080",
+          "prompt": "Put these Bible events in order, from Jesus calls the first disciples through Peter confesses Christ.",
+          "events": [
+            {
+              "id": "bt-r080-e01",
+              "label": "Jesus calls the first disciples",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r080-e02",
+              "label": "Sermon on the Mount",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r080-e03",
+              "label": "Jesus calms the storm",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r080-e04",
+              "label": "Jesus feeds the five thousand",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r080-e05",
+              "label": "Peter confesses Christ",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from Jesus calls the first disciples through Peter confesses Christ. and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bt-session-017",
+      "title": "Timeline Pack 017",
+      "theme": "Bible chronology",
+      "rounds": [
+        {
+          "id": "bt-r081",
+          "prompt": "Put these Bible events in order, from Sermon on the Mount through The transfiguration.",
+          "events": [
+            {
+              "id": "bt-r081-e01",
+              "label": "Sermon on the Mount",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r081-e02",
+              "label": "Jesus calms the storm",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r081-e03",
+              "label": "Jesus feeds the five thousand",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r081-e04",
+              "label": "Peter confesses Christ",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r081-e05",
+              "label": "The transfiguration",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from Sermon on the Mount through The transfiguration. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r082",
+          "prompt": "Put these Bible events in order, from Jesus calms the storm through Lazarus is raised.",
+          "events": [
+            {
+              "id": "bt-r082-e01",
+              "label": "Jesus calms the storm",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r082-e02",
+              "label": "Jesus feeds the five thousand",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r082-e03",
+              "label": "Peter confesses Christ",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r082-e04",
+              "label": "The transfiguration",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r082-e05",
+              "label": "Lazarus is raised",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from Jesus calms the storm through Lazarus is raised. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r083",
+          "prompt": "Put these Bible events in order, from Jesus feeds the five thousand through The triumphal entry.",
+          "events": [
+            {
+              "id": "bt-r083-e01",
+              "label": "Jesus feeds the five thousand",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r083-e02",
+              "label": "Peter confesses Christ",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r083-e03",
+              "label": "The transfiguration",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r083-e04",
+              "label": "Lazarus is raised",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r083-e05",
+              "label": "The triumphal entry",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from Jesus feeds the five thousand through The triumphal entry. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r084",
+          "prompt": "Put these Bible events in order, from Peter confesses Christ through The Last Supper.",
+          "events": [
+            {
+              "id": "bt-r084-e01",
+              "label": "Peter confesses Christ",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r084-e02",
+              "label": "The transfiguration",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r084-e03",
+              "label": "Lazarus is raised",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r084-e04",
+              "label": "The triumphal entry",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r084-e05",
+              "label": "The Last Supper",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from Peter confesses Christ through The Last Supper. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r085",
+          "prompt": "Put these Bible events in order, from The transfiguration through Jesus prays in Gethsemane.",
+          "events": [
+            {
+              "id": "bt-r085-e01",
+              "label": "The transfiguration",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r085-e02",
+              "label": "Lazarus is raised",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r085-e03",
+              "label": "The triumphal entry",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r085-e04",
+              "label": "The Last Supper",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r085-e05",
+              "label": "Jesus prays in Gethsemane",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from The transfiguration through Jesus prays in Gethsemane. and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bt-session-018",
+      "title": "Timeline Pack 018",
+      "theme": "Bible chronology",
+      "rounds": [
+        {
+          "id": "bt-r086",
+          "prompt": "Put these Bible events in order, from Lazarus is raised through The crucifixion.",
+          "events": [
+            {
+              "id": "bt-r086-e01",
+              "label": "Lazarus is raised",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r086-e02",
+              "label": "The triumphal entry",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r086-e03",
+              "label": "The Last Supper",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r086-e04",
+              "label": "Jesus prays in Gethsemane",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r086-e05",
+              "label": "The crucifixion",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from Lazarus is raised through The crucifixion. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r087",
+          "prompt": "Put these Bible events in order, from The triumphal entry through The resurrection.",
+          "events": [
+            {
+              "id": "bt-r087-e01",
+              "label": "The triumphal entry",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r087-e02",
+              "label": "The Last Supper",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r087-e03",
+              "label": "Jesus prays in Gethsemane",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r087-e04",
+              "label": "The crucifixion",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r087-e05",
+              "label": "The resurrection",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from The triumphal entry through The resurrection. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r088",
+          "prompt": "Put these Bible events in order, from The Last Supper through The ascension.",
+          "events": [
+            {
+              "id": "bt-r088-e01",
+              "label": "The Last Supper",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r088-e02",
+              "label": "Jesus prays in Gethsemane",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r088-e03",
+              "label": "The crucifixion",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r088-e04",
+              "label": "The resurrection",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r088-e05",
+              "label": "The ascension",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from The Last Supper through The ascension. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r089",
+          "prompt": "Put these Bible events in order, from Jesus prays in Gethsemane through Pentecost.",
+          "events": [
+            {
+              "id": "bt-r089-e01",
+              "label": "Jesus prays in Gethsemane",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r089-e02",
+              "label": "The crucifixion",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r089-e03",
+              "label": "The resurrection",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r089-e04",
+              "label": "The ascension",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r089-e05",
+              "label": "Pentecost",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from Jesus prays in Gethsemane through Pentecost. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r090",
+          "prompt": "Put these Bible events in order, from The crucifixion through Stephen is martyred.",
+          "events": [
+            {
+              "id": "bt-r090-e01",
+              "label": "The crucifixion",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r090-e02",
+              "label": "The resurrection",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r090-e03",
+              "label": "The ascension",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r090-e04",
+              "label": "Pentecost",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r090-e05",
+              "label": "Stephen is martyred",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from The crucifixion through Stephen is martyred. and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bt-session-019",
+      "title": "Timeline Pack 019",
+      "theme": "Bible chronology",
+      "rounds": [
+        {
+          "id": "bt-r091",
+          "prompt": "Put these Bible events in order, from The resurrection through Saul is converted.",
+          "events": [
+            {
+              "id": "bt-r091-e01",
+              "label": "The resurrection",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r091-e02",
+              "label": "The ascension",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r091-e03",
+              "label": "Pentecost",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r091-e04",
+              "label": "Stephen is martyred",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r091-e05",
+              "label": "Saul is converted",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from The resurrection through Saul is converted. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r092",
+          "prompt": "Put these Bible events in order, from The ascension through Cornelius hears Peter.",
+          "events": [
+            {
+              "id": "bt-r092-e01",
+              "label": "The ascension",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r092-e02",
+              "label": "Pentecost",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r092-e03",
+              "label": "Stephen is martyred",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r092-e04",
+              "label": "Saul is converted",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r092-e05",
+              "label": "Cornelius hears Peter",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from The ascension through Cornelius hears Peter. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r093",
+          "prompt": "Put these Bible events in order, from Pentecost through The Jerusalem Council.",
+          "events": [
+            {
+              "id": "bt-r093-e01",
+              "label": "Pentecost",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r093-e02",
+              "label": "Stephen is martyred",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r093-e03",
+              "label": "Saul is converted",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r093-e04",
+              "label": "Cornelius hears Peter",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r093-e05",
+              "label": "The Jerusalem Council",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from Pentecost through The Jerusalem Council. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r094",
+          "prompt": "Put these Bible events in order, from Stephen is martyred through Paul preaches in Athens.",
+          "events": [
+            {
+              "id": "bt-r094-e01",
+              "label": "Stephen is martyred",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r094-e02",
+              "label": "Saul is converted",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r094-e03",
+              "label": "Cornelius hears Peter",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r094-e04",
+              "label": "The Jerusalem Council",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r094-e05",
+              "label": "Paul preaches in Athens",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from Stephen is martyred through Paul preaches in Athens. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r095",
+          "prompt": "Put these Bible events in order, from Saul is converted through Paul is arrested in Jerusalem.",
+          "events": [
+            {
+              "id": "bt-r095-e01",
+              "label": "Saul is converted",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r095-e02",
+              "label": "Cornelius hears Peter",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r095-e03",
+              "label": "The Jerusalem Council",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r095-e04",
+              "label": "Paul preaches in Athens",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r095-e05",
+              "label": "Paul is arrested in Jerusalem",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from Saul is converted through Paul is arrested in Jerusalem. and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bt-session-020",
+      "title": "Timeline Pack 020",
+      "theme": "Bible chronology",
+      "rounds": [
+        {
+          "id": "bt-r096",
+          "prompt": "Put these Bible events in order, from Cornelius hears Peter through Paul reaches Rome.",
+          "events": [
+            {
+              "id": "bt-r096-e01",
+              "label": "Cornelius hears Peter",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r096-e02",
+              "label": "The Jerusalem Council",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r096-e03",
+              "label": "Paul preaches in Athens",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r096-e04",
+              "label": "Paul is arrested in Jerusalem",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r096-e05",
+              "label": "Paul reaches Rome",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from Cornelius hears Peter through Paul reaches Rome. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r097",
+          "prompt": "Put these Bible events in order, from The Jerusalem Council through John receives Revelation.",
+          "events": [
+            {
+              "id": "bt-r097-e01",
+              "label": "The Jerusalem Council",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r097-e02",
+              "label": "Paul preaches in Athens",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r097-e03",
+              "label": "Paul is arrested in Jerusalem",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r097-e04",
+              "label": "Paul reaches Rome",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r097-e05",
+              "label": "John receives Revelation",
+              "order": 5,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from The Jerusalem Council through John receives Revelation. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r098",
+          "prompt": "Put these Bible events in order, from Creation through Tower of Babel.",
+          "events": [
+            {
+              "id": "bt-r098-e01",
+              "label": "Creation",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r098-e02",
+              "label": "Fall in Eden",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r098-e03",
+              "label": "Cain kills Abel",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r098-e04",
+              "label": "Noah builds the ark",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r098-e05",
+              "label": "Flood covers the earth",
+              "order": 5,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r098-e06",
+              "label": "Tower of Babel",
+              "order": 6,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from Creation through Tower of Babel. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r099",
+          "prompt": "Put these Bible events in order, from Fall in Eden through Abram leaves Haran.",
+          "events": [
+            {
+              "id": "bt-r099-e01",
+              "label": "Fall in Eden",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r099-e02",
+              "label": "Cain kills Abel",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r099-e03",
+              "label": "Noah builds the ark",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r099-e04",
+              "label": "Flood covers the earth",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r099-e05",
+              "label": "Tower of Babel",
+              "order": 5,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r099-e06",
+              "label": "Abram leaves Haran",
+              "order": 6,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from Fall in Eden through Abram leaves Haran. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r100",
+          "prompt": "Put these Bible events in order, from Cain kills Abel through Isaac is born.",
+          "events": [
+            {
+              "id": "bt-r100-e01",
+              "label": "Cain kills Abel",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r100-e02",
+              "label": "Noah builds the ark",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r100-e03",
+              "label": "Flood covers the earth",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r100-e04",
+              "label": "Tower of Babel",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r100-e05",
+              "label": "Abram leaves Haran",
+              "order": 5,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r100-e06",
+              "label": "Isaac is born",
+              "order": 6,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from Cain kills Abel through Isaac is born. and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bt-session-021",
+      "title": "Timeline Pack 021",
+      "theme": "Bible chronology",
+      "rounds": [
+        {
+          "id": "bt-r101",
+          "prompt": "Put these Bible events in order, from Noah builds the ark through Jacob receives the blessing.",
+          "events": [
+            {
+              "id": "bt-r101-e01",
+              "label": "Noah builds the ark",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r101-e02",
+              "label": "Flood covers the earth",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r101-e03",
+              "label": "Tower of Babel",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r101-e04",
+              "label": "Abram leaves Haran",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r101-e05",
+              "label": "Isaac is born",
+              "order": 5,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r101-e06",
+              "label": "Jacob receives the blessing",
+              "order": 6,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from Noah builds the ark through Jacob receives the blessing. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r102",
+          "prompt": "Put these Bible events in order, from Flood covers the earth through Joseph is sold by his brothers.",
+          "events": [
+            {
+              "id": "bt-r102-e01",
+              "label": "Flood covers the earth",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r102-e02",
+              "label": "Tower of Babel",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r102-e03",
+              "label": "Abram leaves Haran",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r102-e04",
+              "label": "Isaac is born",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r102-e05",
+              "label": "Jacob receives the blessing",
+              "order": 5,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r102-e06",
+              "label": "Joseph is sold by his brothers",
+              "order": 6,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from Flood covers the earth through Joseph is sold by his brothers. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r103",
+          "prompt": "Put these Bible events in order, from Tower of Babel through Israel moves to Egypt.",
+          "events": [
+            {
+              "id": "bt-r103-e01",
+              "label": "Tower of Babel",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r103-e02",
+              "label": "Abram leaves Haran",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r103-e03",
+              "label": "Isaac is born",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r103-e04",
+              "label": "Jacob receives the blessing",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r103-e05",
+              "label": "Joseph is sold by his brothers",
+              "order": 5,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r103-e06",
+              "label": "Israel moves to Egypt",
+              "order": 6,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from Tower of Babel through Israel moves to Egypt. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r104",
+          "prompt": "Put these Bible events in order, from Abram leaves Haran through Moses is born.",
+          "events": [
+            {
+              "id": "bt-r104-e01",
+              "label": "Abram leaves Haran",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r104-e02",
+              "label": "Isaac is born",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r104-e03",
+              "label": "Jacob receives the blessing",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r104-e04",
+              "label": "Joseph is sold by his brothers",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r104-e05",
+              "label": "Israel moves to Egypt",
+              "order": 5,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r104-e06",
+              "label": "Moses is born",
+              "order": 6,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from Abram leaves Haran through Moses is born. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r105",
+          "prompt": "Put these Bible events in order, from Isaac is born through Moses sees the burning bush.",
+          "events": [
+            {
+              "id": "bt-r105-e01",
+              "label": "Isaac is born",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r105-e02",
+              "label": "Jacob receives the blessing",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r105-e03",
+              "label": "Joseph is sold by his brothers",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r105-e04",
+              "label": "Israel moves to Egypt",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r105-e05",
+              "label": "Moses is born",
+              "order": 5,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r105-e06",
+              "label": "Moses sees the burning bush",
+              "order": 6,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from Isaac is born through Moses sees the burning bush. and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bt-session-022",
+      "title": "Timeline Pack 022",
+      "theme": "Bible chronology",
+      "rounds": [
+        {
+          "id": "bt-r106",
+          "prompt": "Put these Bible events in order, from Jacob receives the blessing through Plagues strike Egypt.",
+          "events": [
+            {
+              "id": "bt-r106-e01",
+              "label": "Jacob receives the blessing",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r106-e02",
+              "label": "Joseph is sold by his brothers",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r106-e03",
+              "label": "Israel moves to Egypt",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r106-e04",
+              "label": "Moses is born",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r106-e05",
+              "label": "Moses sees the burning bush",
+              "order": 5,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r106-e06",
+              "label": "Plagues strike Egypt",
+              "order": 6,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from Jacob receives the blessing through Plagues strike Egypt. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r107",
+          "prompt": "Put these Bible events in order, from Joseph is sold by his brothers through The Passover night.",
+          "events": [
+            {
+              "id": "bt-r107-e01",
+              "label": "Joseph is sold by his brothers",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r107-e02",
+              "label": "Israel moves to Egypt",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r107-e03",
+              "label": "Moses is born",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r107-e04",
+              "label": "Moses sees the burning bush",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r107-e05",
+              "label": "Plagues strike Egypt",
+              "order": 5,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r107-e06",
+              "label": "The Passover night",
+              "order": 6,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from Joseph is sold by his brothers through The Passover night. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r108",
+          "prompt": "Put these Bible events in order, from Israel moves to Egypt through The Red Sea crossing.",
+          "events": [
+            {
+              "id": "bt-r108-e01",
+              "label": "Israel moves to Egypt",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r108-e02",
+              "label": "Moses is born",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r108-e03",
+              "label": "Moses sees the burning bush",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r108-e04",
+              "label": "Plagues strike Egypt",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r108-e05",
+              "label": "The Passover night",
+              "order": 5,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r108-e06",
+              "label": "The Red Sea crossing",
+              "order": 6,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from Israel moves to Egypt through The Red Sea crossing. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r109",
+          "prompt": "Put these Bible events in order, from Moses is born through The law is given at Sinai.",
+          "events": [
+            {
+              "id": "bt-r109-e01",
+              "label": "Moses is born",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r109-e02",
+              "label": "Moses sees the burning bush",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r109-e03",
+              "label": "Plagues strike Egypt",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r109-e04",
+              "label": "The Passover night",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r109-e05",
+              "label": "The Red Sea crossing",
+              "order": 5,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r109-e06",
+              "label": "The law is given at Sinai",
+              "order": 6,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from Moses is born through The law is given at Sinai. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r110",
+          "prompt": "Put these Bible events in order, from Moses sees the burning bush through The tabernacle is built.",
+          "events": [
+            {
+              "id": "bt-r110-e01",
+              "label": "Moses sees the burning bush",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r110-e02",
+              "label": "Plagues strike Egypt",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r110-e03",
+              "label": "The Passover night",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r110-e04",
+              "label": "The Red Sea crossing",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r110-e05",
+              "label": "The law is given at Sinai",
+              "order": 5,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r110-e06",
+              "label": "The tabernacle is built",
+              "order": 6,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from Moses sees the burning bush through The tabernacle is built. and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bt-session-023",
+      "title": "Timeline Pack 023",
+      "theme": "Bible chronology",
+      "rounds": [
+        {
+          "id": "bt-r111",
+          "prompt": "Put these Bible events in order, from Plagues strike Egypt through The spies enter Canaan.",
+          "events": [
+            {
+              "id": "bt-r111-e01",
+              "label": "Plagues strike Egypt",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r111-e02",
+              "label": "The Passover night",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r111-e03",
+              "label": "The Red Sea crossing",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r111-e04",
+              "label": "The law is given at Sinai",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r111-e05",
+              "label": "The tabernacle is built",
+              "order": 5,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r111-e06",
+              "label": "The spies enter Canaan",
+              "order": 6,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from Plagues strike Egypt through The spies enter Canaan. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r112",
+          "prompt": "Put these Bible events in order, from The Passover night through Joshua leads Israel.",
+          "events": [
+            {
+              "id": "bt-r112-e01",
+              "label": "The Passover night",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r112-e02",
+              "label": "The Red Sea crossing",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r112-e03",
+              "label": "The law is given at Sinai",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r112-e04",
+              "label": "The tabernacle is built",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r112-e05",
+              "label": "The spies enter Canaan",
+              "order": 5,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r112-e06",
+              "label": "Joshua leads Israel",
+              "order": 6,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from The Passover night through Joshua leads Israel. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r113",
+          "prompt": "Put these Bible events in order, from The Red Sea crossing through The Jordan River crossing.",
+          "events": [
+            {
+              "id": "bt-r113-e01",
+              "label": "The Red Sea crossing",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r113-e02",
+              "label": "The law is given at Sinai",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r113-e03",
+              "label": "The tabernacle is built",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r113-e04",
+              "label": "The spies enter Canaan",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r113-e05",
+              "label": "Joshua leads Israel",
+              "order": 5,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r113-e06",
+              "label": "The Jordan River crossing",
+              "order": 6,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from The Red Sea crossing through The Jordan River crossing. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r114",
+          "prompt": "Put these Bible events in order, from The law is given at Sinai through Jericho falls.",
+          "events": [
+            {
+              "id": "bt-r114-e01",
+              "label": "The law is given at Sinai",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r114-e02",
+              "label": "The tabernacle is built",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r114-e03",
+              "label": "The spies enter Canaan",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r114-e04",
+              "label": "Joshua leads Israel",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r114-e05",
+              "label": "The Jordan River crossing",
+              "order": 5,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r114-e06",
+              "label": "Jericho falls",
+              "order": 6,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from The law is given at Sinai through Jericho falls. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r115",
+          "prompt": "Put these Bible events in order, from The tabernacle is built through Deborah judges Israel.",
+          "events": [
+            {
+              "id": "bt-r115-e01",
+              "label": "The tabernacle is built",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r115-e02",
+              "label": "The spies enter Canaan",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r115-e03",
+              "label": "Joshua leads Israel",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r115-e04",
+              "label": "The Jordan River crossing",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r115-e05",
+              "label": "Jericho falls",
+              "order": 5,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r115-e06",
+              "label": "Deborah judges Israel",
+              "order": 6,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from The tabernacle is built through Deborah judges Israel. and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bt-session-024",
+      "title": "Timeline Pack 024",
+      "theme": "Bible chronology",
+      "rounds": [
+        {
+          "id": "bt-r116",
+          "prompt": "Put these Bible events in order, from The spies enter Canaan through Gideon defeats Midian.",
+          "events": [
+            {
+              "id": "bt-r116-e01",
+              "label": "The spies enter Canaan",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r116-e02",
+              "label": "Joshua leads Israel",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r116-e03",
+              "label": "The Jordan River crossing",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r116-e04",
+              "label": "Jericho falls",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r116-e05",
+              "label": "Deborah judges Israel",
+              "order": 5,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r116-e06",
+              "label": "Gideon defeats Midian",
+              "order": 6,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from The spies enter Canaan through Gideon defeats Midian. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r117",
+          "prompt": "Put these Bible events in order, from Joshua leads Israel through Samson fights the Philistines.",
+          "events": [
+            {
+              "id": "bt-r117-e01",
+              "label": "Joshua leads Israel",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r117-e02",
+              "label": "The Jordan River crossing",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r117-e03",
+              "label": "Jericho falls",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r117-e04",
+              "label": "Deborah judges Israel",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r117-e05",
+              "label": "Gideon defeats Midian",
+              "order": 5,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r117-e06",
+              "label": "Samson fights the Philistines",
+              "order": 6,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from Joshua leads Israel through Samson fights the Philistines. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r118",
+          "prompt": "Put these Bible events in order, from The Jordan River crossing through Ruth meets Boaz.",
+          "events": [
+            {
+              "id": "bt-r118-e01",
+              "label": "The Jordan River crossing",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r118-e02",
+              "label": "Jericho falls",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r118-e03",
+              "label": "Deborah judges Israel",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r118-e04",
+              "label": "Gideon defeats Midian",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r118-e05",
+              "label": "Samson fights the Philistines",
+              "order": 5,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r118-e06",
+              "label": "Ruth meets Boaz",
+              "order": 6,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from The Jordan River crossing through Ruth meets Boaz. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r119",
+          "prompt": "Put these Bible events in order, from Jericho falls through Samuel is called.",
+          "events": [
+            {
+              "id": "bt-r119-e01",
+              "label": "Jericho falls",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r119-e02",
+              "label": "Deborah judges Israel",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r119-e03",
+              "label": "Gideon defeats Midian",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r119-e04",
+              "label": "Samson fights the Philistines",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r119-e05",
+              "label": "Ruth meets Boaz",
+              "order": 5,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r119-e06",
+              "label": "Samuel is called",
+              "order": 6,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from Jericho falls through Samuel is called. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r120",
+          "prompt": "Put these Bible events in order, from Deborah judges Israel through Saul becomes king.",
+          "events": [
+            {
+              "id": "bt-r120-e01",
+              "label": "Deborah judges Israel",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r120-e02",
+              "label": "Gideon defeats Midian",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r120-e03",
+              "label": "Samson fights the Philistines",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r120-e04",
+              "label": "Ruth meets Boaz",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r120-e05",
+              "label": "Samuel is called",
+              "order": 5,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r120-e06",
+              "label": "Saul becomes king",
+              "order": 6,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from Deborah judges Israel through Saul becomes king. and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bt-session-025",
+      "title": "Timeline Pack 025",
+      "theme": "Bible chronology",
+      "rounds": [
+        {
+          "id": "bt-r121",
+          "prompt": "Put these Bible events in order, from Gideon defeats Midian through David defeats Goliath.",
+          "events": [
+            {
+              "id": "bt-r121-e01",
+              "label": "Gideon defeats Midian",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r121-e02",
+              "label": "Samson fights the Philistines",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r121-e03",
+              "label": "Ruth meets Boaz",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r121-e04",
+              "label": "Samuel is called",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r121-e05",
+              "label": "Saul becomes king",
+              "order": 5,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r121-e06",
+              "label": "David defeats Goliath",
+              "order": 6,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from Gideon defeats Midian through David defeats Goliath. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r122",
+          "prompt": "Put these Bible events in order, from Samson fights the Philistines through David becomes king.",
+          "events": [
+            {
+              "id": "bt-r122-e01",
+              "label": "Samson fights the Philistines",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r122-e02",
+              "label": "Ruth meets Boaz",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r122-e03",
+              "label": "Samuel is called",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r122-e04",
+              "label": "Saul becomes king",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r122-e05",
+              "label": "David defeats Goliath",
+              "order": 5,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r122-e06",
+              "label": "David becomes king",
+              "order": 6,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from Samson fights the Philistines through David becomes king. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r123",
+          "prompt": "Put these Bible events in order, from Ruth meets Boaz through Solomon asks for wisdom.",
+          "events": [
+            {
+              "id": "bt-r123-e01",
+              "label": "Ruth meets Boaz",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r123-e02",
+              "label": "Samuel is called",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r123-e03",
+              "label": "Saul becomes king",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r123-e04",
+              "label": "David defeats Goliath",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r123-e05",
+              "label": "David becomes king",
+              "order": 5,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r123-e06",
+              "label": "Solomon asks for wisdom",
+              "order": 6,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Put these Bible events in order, from Ruth meets Boaz through Solomon asks for wisdom. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r124",
+          "prompt": "Put these Bible events in order, from Samuel is called through Solomon builds the temple.",
+          "events": [
+            {
+              "id": "bt-r124-e01",
+              "label": "Samuel is called",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r124-e02",
+              "label": "Saul becomes king",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r124-e03",
+              "label": "David defeats Goliath",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r124-e04",
+              "label": "David becomes king",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r124-e05",
+              "label": "Solomon asks for wisdom",
+              "order": 5,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r124-e06",
+              "label": "Solomon builds the temple",
+              "order": 6,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Put these Bible events in order, from Samuel is called through Solomon builds the temple. and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bt-r125",
+          "prompt": "Put these Bible events in order, from Saul becomes king through The kingdom divides.",
+          "events": [
+            {
+              "id": "bt-r125-e01",
+              "label": "Saul becomes king",
+              "order": 1,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r125-e02",
+              "label": "David defeats Goliath",
+              "order": 2,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r125-e03",
+              "label": "David becomes king",
+              "order": 3,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r125-e04",
+              "label": "Solomon asks for wisdom",
+              "order": 4,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r125-e05",
+              "label": "Solomon builds the temple",
+              "order": 5,
+              "clue": "Bible chronology"
+            },
+            {
+              "id": "bt-r125-e06",
+              "label": "The kingdom divides",
+              "order": 6,
+              "clue": "Bible chronology"
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Put these Bible events in order, from Saul becomes king through The kingdom divides. and how it connects to the Bible before continuing."
+        }
+      ]
+    }
+  ]
+}

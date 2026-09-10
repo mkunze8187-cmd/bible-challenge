@@ -1,0 +1,4048 @@
+{
+  "$schema": "./schemas/who-said-it.schema.json",
+  "game": "who-said-it",
+  "version": 1,
+  "displayName": "Who Said It?",
+  "roundsPerSession": 10,
+  "sessions": [
+    {
+      "id": "wsi-session-001",
+      "title": "Who Said It Pack 001",
+      "theme": "Bible speakers",
+      "rounds": [
+        {
+          "id": "wsi-r001",
+          "quote": "Am I my brother's keeper?",
+          "speaker": "Cain",
+          "speakerAliases": [
+            "Cain"
+          ],
+          "reference": "Genesis 4:9",
+          "context": "Cain answered the LORD after Abel's death.",
+          "sourceTranslation": "KJV",
+          "theme": "Genesis",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 4:9 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r002",
+          "quote": "My son, God will provide himself a lamb for a burnt offering.",
+          "speaker": "Abraham",
+          "speakerAliases": [
+            "Abraham",
+            "Abram"
+          ],
+          "reference": "Genesis 22:8",
+          "context": "Abraham answered Isaac on the way to Moriah.",
+          "sourceTranslation": "KJV",
+          "theme": "Faith",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 22:8 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r003",
+          "quote": "Who is the LORD, that I should obey his voice to let Israel go?",
+          "speaker": "Pharaoh",
+          "speakerAliases": [
+            "Pharaoh",
+            "King of Egypt"
+          ],
+          "reference": "Exodus 5:2",
+          "context": "Pharaoh answered Moses and Aaron in Egypt.",
+          "sourceTranslation": "KJV",
+          "theme": "Exodus",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 5:2 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r004",
+          "quote": "Intreat me not to leave thee, or to return from following after thee.",
+          "speaker": "Ruth",
+          "speakerAliases": [
+            "Ruth"
+          ],
+          "reference": "Ruth 1:16",
+          "context": "Ruth spoke to Naomi on the road from Moab.",
+          "sourceTranslation": "KJV",
+          "theme": "Loyalty",
+          "difficulty": "easy",
+          "teachingNote": "Review Ruth 1:16 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r005",
+          "quote": "Thou comest to me with a sword, and with a spear, and with a shield.",
+          "speaker": "David",
+          "speakerAliases": [
+            "David",
+            "King David"
+          ],
+          "reference": "1 Samuel 17:45",
+          "context": "David spoke to Goliath before the battle.",
+          "sourceTranslation": "KJV",
+          "theme": "Courage",
+          "difficulty": "medium",
+          "teachingNote": "Review 1 Samuel 17:45 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r006",
+          "quote": "The LORD gave, and the LORD hath taken away; blessed be the name of the LORD.",
+          "speaker": "Job",
+          "speakerAliases": [
+            "Job"
+          ],
+          "reference": "Job 1:21",
+          "context": "Job worshipped after losing his children and possessions.",
+          "sourceTranslation": "KJV",
+          "theme": "Endurance",
+          "difficulty": "hard",
+          "teachingNote": "Review Job 1:21 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r007",
+          "quote": "Here am I; send me.",
+          "speaker": "Isaiah",
+          "speakerAliases": [
+            "Isaiah",
+            "Isaiah the prophet"
+          ],
+          "reference": "Isaiah 6:8",
+          "context": "Isaiah answered the Lord's call.",
+          "sourceTranslation": "KJV",
+          "theme": "Calling",
+          "difficulty": "easy",
+          "teachingNote": "Review Isaiah 6:8 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r008",
+          "quote": "Salvation is of the LORD.",
+          "speaker": "Jonah",
+          "speakerAliases": [
+            "Jonah",
+            "Jonah the prophet"
+          ],
+          "reference": "Jonah 2:9",
+          "context": "Jonah prayed from inside the fish.",
+          "sourceTranslation": "KJV",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "Review Jonah 2:9 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r009",
+          "quote": "This is my beloved Son, in whom I am well pleased.",
+          "speaker": "God the Father",
+          "speakerAliases": [
+            "God the Father",
+            "God",
+            "The Father"
+          ],
+          "reference": "Matthew 3:17",
+          "context": "The voice from heaven spoke at Jesus' baptism.",
+          "sourceTranslation": "KJV",
+          "theme": "Jesus",
+          "difficulty": "hard",
+          "teachingNote": "Review Matthew 3:17 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r010",
+          "quote": "Man shall not live by bread alone, but by every word that proceedeth out of the mouth of God.",
+          "speaker": "Jesus",
+          "speakerAliases": [
+            "Jesus",
+            "Jesus Christ",
+            "Christ"
+          ],
+          "reference": "Matthew 4:4",
+          "context": "Jesus answered the tempter in the wilderness.",
+          "sourceTranslation": "KJV",
+          "theme": "Temptation",
+          "difficulty": "easy",
+          "teachingNote": "Review Matthew 4:4 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "wsi-session-002",
+      "title": "Who Said It Pack 002",
+      "theme": "Bible speakers",
+      "rounds": [
+        {
+          "id": "wsi-r011",
+          "quote": "Thou art the Christ, the Son of the living God.",
+          "speaker": "Peter",
+          "speakerAliases": [
+            "Peter",
+            "Simon Peter",
+            "Simon Barjona"
+          ],
+          "reference": "Matthew 16:16",
+          "context": "Peter answered Jesus at Caesarea Philippi.",
+          "sourceTranslation": "KJV",
+          "theme": "Confession",
+          "difficulty": "medium",
+          "teachingNote": "Review Matthew 16:16 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r012",
+          "quote": "Behold the handmaid of the Lord; be it unto me according to thy word.",
+          "speaker": "Mary",
+          "speakerAliases": [
+            "Mary",
+            "Mary the mother of Jesus"
+          ],
+          "reference": "Luke 1:38",
+          "context": "Mary answered Gabriel.",
+          "sourceTranslation": "KJV",
+          "theme": "Birth of Jesus",
+          "difficulty": "hard",
+          "teachingNote": "Review Luke 1:38 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r013",
+          "quote": "My soul doth magnify the Lord,",
+          "speaker": "Mary",
+          "speakerAliases": [
+            "Mary",
+            "Mary the mother of Jesus"
+          ],
+          "reference": "Luke 1:46",
+          "context": "Mary spoke while visiting Elisabeth.",
+          "sourceTranslation": "KJV",
+          "theme": "Praise",
+          "difficulty": "easy",
+          "teachingNote": "Review Luke 1:46 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r014",
+          "quote": "Lord, now lettest thou thy servant depart in peace, according to thy word:",
+          "speaker": "Simeon",
+          "speakerAliases": [
+            "Simeon"
+          ],
+          "reference": "Luke 2:29",
+          "context": "Simeon blessed God while holding the infant Jesus.",
+          "sourceTranslation": "KJV",
+          "theme": "Promise",
+          "difficulty": "medium",
+          "teachingNote": "Review Luke 2:29 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r015",
+          "quote": "Behold the Lamb of God, which taketh away the sin of the world.",
+          "speaker": "John the Baptist",
+          "speakerAliases": [
+            "John the Baptist",
+            "John Baptist",
+            "John"
+          ],
+          "reference": "John 1:29",
+          "context": "John identified Jesus near Jordan.",
+          "sourceTranslation": "KJV",
+          "theme": "Witness",
+          "difficulty": "hard",
+          "teachingNote": "Review John 1:29 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r016",
+          "quote": "Yea, Lord: I believe that thou art the Christ, the Son of God.",
+          "speaker": "Martha",
+          "speakerAliases": [
+            "Martha",
+            "Martha of Bethany"
+          ],
+          "reference": "John 11:27",
+          "context": "Martha spoke to Jesus before Lazarus was raised.",
+          "sourceTranslation": "KJV",
+          "theme": "Resurrection",
+          "difficulty": "easy",
+          "teachingNote": "Review John 11:27 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r017",
+          "quote": "My Lord and my God.",
+          "speaker": "Thomas",
+          "speakerAliases": [
+            "Thomas",
+            "Didymus",
+            "Doubting Thomas"
+          ],
+          "reference": "John 20:28",
+          "context": "Thomas answered the risen Jesus.",
+          "sourceTranslation": "KJV",
+          "theme": "Resurrection",
+          "difficulty": "medium",
+          "teachingNote": "Review John 20:28 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r018",
+          "quote": "Who art thou, Lord?",
+          "speaker": "Saul",
+          "speakerAliases": [
+            "Saul",
+            "Paul",
+            "Saul of Tarsus",
+            "Paul the Apostle"
+          ],
+          "reference": "Acts 9:5",
+          "context": "Saul spoke on the road to Damascus.",
+          "sourceTranslation": "KJV",
+          "theme": "Conversion",
+          "difficulty": "hard",
+          "teachingNote": "Review Acts 9:5 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r019",
+          "quote": "Sirs, what must I do to be saved?",
+          "speaker": "The Philippian jailer",
+          "speakerAliases": [
+            "The Philippian jailer",
+            "Philippian jailer",
+            "Jailer"
+          ],
+          "reference": "Acts 16:30",
+          "context": "The jailer asked Paul and Silas after the prison doors opened.",
+          "sourceTranslation": "KJV",
+          "theme": "Salvation",
+          "difficulty": "easy",
+          "teachingNote": "Review Acts 16:30 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r020",
+          "quote": "Almost thou persuadest me to be a Christian.",
+          "speaker": "Agrippa",
+          "speakerAliases": [
+            "Agrippa",
+            "King Agrippa",
+            "Herod Agrippa"
+          ],
+          "reference": "Acts 26:28",
+          "context": "Agrippa answered Paul during Paul's defense.",
+          "sourceTranslation": "KJV",
+          "theme": "Witness",
+          "difficulty": "medium",
+          "teachingNote": "Review Acts 26:28 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "wsi-session-003",
+      "title": "Who Said It Pack 003",
+      "theme": "Bible speakers",
+      "rounds": [
+        {
+          "id": "wsi-r021",
+          "quote": "Let there be light: and there was light.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 1:3",
+          "context": "God spoke in Genesis 1:3.",
+          "sourceTranslation": "KJV",
+          "theme": "Light",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 1:3 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r022",
+          "quote": "Let there be a firmament in the midst of the waters, and let it divide the waters from the waters.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 1:6",
+          "context": "God spoke in Genesis 1:6.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 1:6 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r023",
+          "quote": "Let the waters under the heaven be gathered together unto one place, and let the dry land appear: and it was so.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 1:9",
+          "context": "God spoke in Genesis 1:9.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 1:9 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r024",
+          "quote": "Let the earth bring forth grass, the herb yielding seed, and the fruit tree yielding fruit after his kind, whose seed is in itself, upon the earth: and it was so.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 1:11",
+          "context": "God spoke in Genesis 1:11.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 1:11 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r025",
+          "quote": "Let there be lights in the firmament of the heaven to divide the day from the night; and let them be for signs, and for seasons, and for days, and years:",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 1:14",
+          "context": "God spoke in Genesis 1:14.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 1:14 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r026",
+          "quote": "Let the waters bring forth abundantly the moving creature that hath life, and fowl that may fly above the earth in the open firmament of heaven.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 1:20",
+          "context": "God spoke in Genesis 1:20.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 1:20 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r027",
+          "quote": "Let the earth bring forth the living creature after his kind, cattle, and creeping thing, and beast of the earth after his kind: and it was so.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 1:24",
+          "context": "God spoke in Genesis 1:24.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 1:24 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r028",
+          "quote": "It is not good that the man should be alone; I will make him an help meet for him.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 2:18",
+          "context": "God spoke in Genesis 2:18.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 2:18 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r029",
+          "quote": "This is now bone of my bones, and flesh of my flesh: she shall be called Woman, because she was taken out of Man.",
+          "speaker": "Adam",
+          "speakerAliases": [
+            "Adam"
+          ],
+          "reference": "Genesis 2:23",
+          "context": "Adam spoke in Genesis 2:23.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 2:23 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r030",
+          "quote": "Where art thou?",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 3:9",
+          "context": "God spoke in Genesis 3:9.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 3:9 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "wsi-session-004",
+      "title": "Who Said It Pack 004",
+      "theme": "Bible speakers",
+      "rounds": [
+        {
+          "id": "wsi-r031",
+          "quote": "Because thou hast done this, thou art cursed above all cattle, and above every beast of the field; upon thy belly shalt thou go, and dust shalt thou eat all the days of thy life:",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 3:14",
+          "context": "God spoke in Genesis 3:14.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 3:14 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r032",
+          "quote": "Behold, the man is become as one of us, to know good and evil: and now, lest he put forth his hand, and take also of the tree of life, and eat, and live for ever:",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 3:22",
+          "context": "God spoke in Genesis 3:22.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 3:22 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r033",
+          "quote": "Why art thou wroth? and why is thy countenance fallen?",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 4:6",
+          "context": "God spoke in Genesis 4:6.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 4:6 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r034",
+          "quote": "My punishment is greater than I can bear.",
+          "speaker": "Cain",
+          "speakerAliases": [
+            "Cain"
+          ],
+          "reference": "Genesis 4:13",
+          "context": "Cain spoke in Genesis 4:13.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 4:13 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r035",
+          "quote": "Therefore whosoever slayeth Cain, vengeance shall be taken on him sevenfold. And the Lord set a mark upon Cain, lest any finding him should kill him.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 4:15",
+          "context": "God spoke in Genesis 4:15.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 4:15 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r036",
+          "quote": "My spirit shall not always strive with man, for that he also is flesh: yet his days shall be an hundred and twenty years.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 6:3",
+          "context": "God spoke in Genesis 6:3.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 6:3 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r037",
+          "quote": "I will destroy man whom I have created from the face of the earth; both man, and beast, and the creeping thing, and the fowls of the air; for it repenteth me that I have made them.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 6:7",
+          "context": "God spoke in Genesis 6:7.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 6:7 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r038",
+          "quote": "The end of all flesh is come before me; for the earth is filled with violence through them; and, behold, I will destroy them with the earth.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 6:13",
+          "context": "God spoke in Genesis 6:13.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 6:13 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r039",
+          "quote": "Come thou and all thy house into the ark; for thee have I seen righteous before me in this generation.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 7:1",
+          "context": "God spoke in Genesis 7:1.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 7:1 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r040",
+          "quote": "Be fruitful, and multiply, and replenish the earth.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 9:1",
+          "context": "God spoke in Genesis 9:1.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 9:1 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "wsi-session-005",
+      "title": "Who Said It Pack 005",
+      "theme": "Bible speakers",
+      "rounds": [
+        {
+          "id": "wsi-r041",
+          "quote": "and to his sons with him, saying,",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 9:8",
+          "context": "God spoke in Genesis 9:8.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 9:8 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r042",
+          "quote": "This is the token of the covenant which I make between me and you and every living creature that is with you, for perpetual generations:",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 9:12",
+          "context": "God spoke in Genesis 9:12.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 9:12 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r043",
+          "quote": "This is the token of the covenant, which I have established between me and all flesh that is upon the earth.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 9:17",
+          "context": "God spoke in Genesis 9:17.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 9:17 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r044",
+          "quote": "Behold, the people is one, and they have all one language; and this they begin to do: and now nothing will be restrained from them, which they have imagined to do.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 11:6",
+          "context": "God spoke in Genesis 11:6.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 11:6 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r045",
+          "quote": "Unto thy seed will I give this land: and there builded he an altar unto the Lord, who appeared unto him.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 12:7",
+          "context": "God spoke in Genesis 12:7.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 12:7 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r046",
+          "quote": "Thou shalt keep my covenant therefore, thou, and thy seed after thee in their generations.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 17:9",
+          "context": "God spoke in Genesis 17:9.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 17:9 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r047",
+          "quote": "As for Sarai thy wife, thou shalt not call her name Sarai, but Sarah shall her name be.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 17:15",
+          "context": "God spoke in Genesis 17:15.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 17:15 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r048",
+          "quote": "O that Ishmael might live before thee!",
+          "speaker": "Abraham",
+          "speakerAliases": [
+            "Abraham"
+          ],
+          "reference": "Genesis 17:18",
+          "context": "Abraham spoke in Genesis 17:18.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 17:18 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r049",
+          "quote": "Sarah thy wife shall bear thee a son indeed; and thou shalt call his name Isaac: and I will establish my covenant with him for an everlasting covenant, and with his seed after him.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 17:19",
+          "context": "God spoke in Genesis 17:19.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 17:19 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r050",
+          "quote": "Make ready quickly three measures of fine meal, knead it, and make cakes upon the hearth.",
+          "speaker": "Abraham",
+          "speakerAliases": [
+            "Abraham"
+          ],
+          "reference": "Genesis 18:6",
+          "context": "Abraham spoke in Genesis 18:6.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 18:6 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "wsi-session-006",
+      "title": "Who Said It Pack 006",
+      "theme": "Bible speakers",
+      "rounds": [
+        {
+          "id": "wsi-r051",
+          "quote": "Wherefore did Sarah laugh, saying, Shall I of a surety bear a child, which am old?",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 18:13",
+          "context": "God spoke in Genesis 18:13.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 18:13 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r052",
+          "quote": "Shall I hide from Abraham that thing which I do;",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 18:17",
+          "context": "God spoke in Genesis 18:17.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 18:17 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r053",
+          "quote": "Because the cry of Sodom and Gomorrah is great, and because their sin is very grievous;",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 18:20",
+          "context": "God spoke in Genesis 18:20.",
+          "sourceTranslation": "KJV",
+          "theme": "Mercy",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 18:20 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r054",
+          "quote": "Wilt thou also destroy the righteous with the wicked?",
+          "speaker": "Abraham",
+          "speakerAliases": [
+            "Abraham"
+          ],
+          "reference": "Genesis 18:23",
+          "context": "Abraham spoke in Genesis 18:23.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 18:23 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r055",
+          "quote": "If I find in Sodom fifty righteous within the city, then I will spare all the place for their sakes.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 18:26",
+          "context": "God spoke in Genesis 18:26.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 18:26 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r056",
+          "quote": "Behold now, I have taken upon me to speak unto the Lord, which am but dust and ashes:",
+          "speaker": "Abraham",
+          "speakerAliases": [
+            "Abraham"
+          ],
+          "reference": "Genesis 18:27",
+          "context": "Abraham spoke in Genesis 18:27.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 18:27 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r057",
+          "quote": "Behold, thou art but a dead man, for the woman which thou hast taken; for she is a man's wife.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 20:3",
+          "context": "God spoke in Genesis 20:3.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 20:3 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r058",
+          "quote": "Yea, I know that thou didst this in the integrity of thy heart; for I also withheld thee from sinning against me: therefore suffered I thee not to touch her.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 20:6",
+          "context": "God spoke in Genesis 20:6.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 20:6 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r059",
+          "quote": "Because I thought, Surely the fear of God is not in this place; and they will slay me for my wife's sake.",
+          "speaker": "Abraham",
+          "speakerAliases": [
+            "Abraham"
+          ],
+          "reference": "Genesis 20:11",
+          "context": "Abraham spoke in Genesis 20:11.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 20:11 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r060",
+          "quote": "I will swear.",
+          "speaker": "Abraham",
+          "speakerAliases": [
+            "Abraham"
+          ],
+          "reference": "Genesis 21:24",
+          "context": "Abraham spoke in Genesis 21:24.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 21:24 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "wsi-session-007",
+      "title": "Who Said It Pack 007",
+      "theme": "Bible speakers",
+      "rounds": [
+        {
+          "id": "wsi-r061",
+          "quote": "Abide ye here with the ass; and I and the lad will go yonder and worship, and come again to you.",
+          "speaker": "Abraham",
+          "speakerAliases": [
+            "Abraham"
+          ],
+          "reference": "Genesis 22:5",
+          "context": "Abraham spoke in Genesis 22:5.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 22:5 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r062",
+          "quote": "My son, God will provide himself a lamb for a burnt offering: so they went both of them together.",
+          "speaker": "Abraham",
+          "speakerAliases": [
+            "Abraham"
+          ],
+          "reference": "Genesis 22:8",
+          "context": "Abraham spoke in Genesis 22:8.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 22:8 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r063",
+          "quote": "that ruled over all that he had, Put, I pray thee, thy hand under my thigh:",
+          "speaker": "Abraham",
+          "speakerAliases": [
+            "Abraham"
+          ],
+          "reference": "Genesis 24:2",
+          "context": "Abraham spoke in Genesis 24:2.",
+          "sourceTranslation": "KJV",
+          "theme": "Prayer",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 24:2 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r064",
+          "quote": "Beware thou that thou bring not my son thither again.",
+          "speaker": "Abraham",
+          "speakerAliases": [
+            "Abraham"
+          ],
+          "reference": "Genesis 24:6",
+          "context": "Abraham spoke in Genesis 24:6.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 24:6 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r065",
+          "quote": "Sell me this day thy birthright.",
+          "speaker": "Jacob",
+          "speakerAliases": [
+            "Jacob"
+          ],
+          "reference": "Genesis 25:31",
+          "context": "Jacob spoke in Genesis 25:31.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 25:31 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r066",
+          "quote": "Swear to me this day; and he sware unto him: and he sold his birthright unto Jacob.",
+          "speaker": "Jacob",
+          "speakerAliases": [
+            "Jacob"
+          ],
+          "reference": "Genesis 25:33",
+          "context": "Jacob spoke in Genesis 25:33.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 25:33 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r067",
+          "quote": "Go not down into Egypt; dwell in the land which I shall tell thee of:",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 26:2",
+          "context": "God spoke in Genesis 26:2.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 26:2 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r068",
+          "quote": "I am the God of Abraham thy father: fear not, for I am with thee, and will bless thee, and multiply thy seed for my servant Abraham's sake.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 26:24",
+          "context": "God spoke in Genesis 26:24.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 26:24 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r069",
+          "quote": "Wherefore come ye to me, seeing ye hate me, and have sent me away from you?",
+          "speaker": "Isaac",
+          "speakerAliases": [
+            "Isaac"
+          ],
+          "reference": "Genesis 26:27",
+          "context": "Isaac spoke in Genesis 26:27.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 26:27 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r070",
+          "quote": "Behold, Esau my brother is a hairy man, and I am a smooth man:",
+          "speaker": "Jacob",
+          "speakerAliases": [
+            "Jacob"
+          ],
+          "reference": "Genesis 27:11",
+          "context": "Jacob spoke in Genesis 27:11.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 27:11 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "wsi-session-008",
+      "title": "Who Said It Pack 008",
+      "theme": "Bible speakers",
+      "rounds": [
+        {
+          "id": "wsi-r071",
+          "quote": "I am Esau thy first born; I have done according as thou badest me: arise, I pray thee, sit and eat of my venison, that thy soul may bless me.",
+          "speaker": "Jacob",
+          "speakerAliases": [
+            "Jacob"
+          ],
+          "reference": "Genesis 27:19",
+          "context": "Jacob spoke in Genesis 27:19.",
+          "sourceTranslation": "KJV",
+          "theme": "Prayer",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 27:19 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r072",
+          "quote": "Come near, I pray thee, that I may feel thee, my son, whether thou be my very son Esau or not.",
+          "speaker": "Isaac",
+          "speakerAliases": [
+            "Isaac"
+          ],
+          "reference": "Genesis 27:21",
+          "context": "Isaac spoke in Genesis 27:21.",
+          "sourceTranslation": "KJV",
+          "theme": "Prayer",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 27:21 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r073",
+          "quote": "Who? where is he that hath taken venison, and brought it me, and I have eaten of all before thou camest, and have blessed him? yea, and he shall be blessed.",
+          "speaker": "Isaac",
+          "speakerAliases": [
+            "Isaac"
+          ],
+          "reference": "Genesis 27:33",
+          "context": "Isaac spoke in Genesis 27:33.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 27:33 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r074",
+          "quote": "Behold, I have made him thy lord, and all his brethren have I given to him for servants; and with corn and wine have I sustained him: and what shall I do now unto thee, my son?",
+          "speaker": "Isaac",
+          "speakerAliases": [
+            "Isaac"
+          ],
+          "reference": "Genesis 27:37",
+          "context": "Isaac spoke in Genesis 27:37.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 27:37 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r075",
+          "quote": "Thou shalt not take a wife of the daughters of Canaan.",
+          "speaker": "Isaac",
+          "speakerAliases": [
+            "Isaac"
+          ],
+          "reference": "Genesis 28:1",
+          "context": "Isaac spoke in Genesis 28:1.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 28:1 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r076",
+          "quote": "Give me my wife, for my days are fulfilled, that I may go in unto her.",
+          "speaker": "Jacob",
+          "speakerAliases": [
+            "Jacob"
+          ],
+          "reference": "Genesis 29:21",
+          "context": "Jacob spoke in Genesis 29:21.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 29:21 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r077",
+          "quote": "Return unto the land of thy fathers, and to thy kindred; and I will be with thee.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 31:3",
+          "context": "God spoke in Genesis 31:3.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 31:3 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r078",
+          "quote": "Take heed that thou speak not to Jacob either good or bad.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 31:24",
+          "context": "God spoke in Genesis 31:24.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 31:24 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r079",
+          "quote": "Because I was afraid: for I said, Peradventure thou wouldest take by force thy daughters from me.",
+          "speaker": "Jacob",
+          "speakerAliases": [
+            "Jacob"
+          ],
+          "reference": "Genesis 31:31",
+          "context": "Jacob spoke in Genesis 31:31.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 31:31 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r080",
+          "quote": "Gather stones; and they took stones, and made an heap: and they did eat there upon the heap.",
+          "speaker": "Jacob",
+          "speakerAliases": [
+            "Jacob"
+          ],
+          "reference": "Genesis 31:46",
+          "context": "Jacob spoke in Genesis 31:46.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 31:46 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "wsi-session-009",
+      "title": "Who Said It Pack 009",
+      "theme": "Bible speakers",
+      "rounds": [
+        {
+          "id": "wsi-r081",
+          "quote": "O God of my father Abraham, and God of my father Isaac, the Lord which saidst unto me, Return unto thy country, and to thy kindred, and I will deal well with thee:",
+          "speaker": "Jacob",
+          "speakerAliases": [
+            "Jacob"
+          ],
+          "reference": "Genesis 32:9",
+          "context": "Jacob spoke in Genesis 32:9.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 32:9 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r082",
+          "quote": "Arise, go up to Bethel, and dwell there: and make there an altar unto God, that appeared unto thee when thou fleddest from the face of Esau thy brother.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 35:1",
+          "context": "God spoke in Genesis 35:1.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 35:1 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r083",
+          "quote": "and to all that were with him, Put away the strange gods that are among you, and be clean, and change your garments:",
+          "speaker": "Jacob",
+          "speakerAliases": [
+            "Jacob"
+          ],
+          "reference": "Genesis 35:2",
+          "context": "Jacob spoke in Genesis 35:2.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 35:2 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r084",
+          "quote": "Thy name is Jacob: thy name shall not be called any more Jacob, but Israel shall be thy name: and he called his name Israel.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 35:10",
+          "context": "God spoke in Genesis 35:10.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 35:10 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r085",
+          "quote": "I am God Almighty: be fruitful and multiply; a nation and a company of nations shall be of thee, and kings shall come out of thy loins;",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Genesis 35:11",
+          "context": "God spoke in Genesis 35:11.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 35:11 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r086",
+          "quote": "This is the interpretation of it: The three branches are three days:",
+          "speaker": "Joseph",
+          "speakerAliases": [
+            "Joseph"
+          ],
+          "reference": "Genesis 40:12",
+          "context": "Joseph spoke in Genesis 40:12.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 40:12 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r087",
+          "quote": "This is the interpretation thereof: The three baskets are three days:",
+          "speaker": "Joseph",
+          "speakerAliases": [
+            "Joseph"
+          ],
+          "reference": "Genesis 40:18",
+          "context": "Joseph spoke in Genesis 40:18.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 40:18 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r088",
+          "quote": "I have dreamed a dream, and there is none that can interpret it: and I have heard say of thee, that thou canst understand a dream to interpret it.",
+          "speaker": "Pharaoh",
+          "speakerAliases": [
+            "Pharaoh"
+          ],
+          "reference": "Genesis 41:15",
+          "context": "Pharaoh spoke in Genesis 41:15.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 41:15 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r089",
+          "quote": "In my dream, behold, I stood upon the bank of the river:",
+          "speaker": "Pharaoh",
+          "speakerAliases": [
+            "Pharaoh"
+          ],
+          "reference": "Genesis 41:17",
+          "context": "Pharaoh spoke in Genesis 41:17.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 41:17 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r090",
+          "quote": "The dream of Pharaoh is one: God hath shewed Pharaoh what he is about to do.",
+          "speaker": "Joseph",
+          "speakerAliases": [
+            "Joseph"
+          ],
+          "reference": "Genesis 41:25",
+          "context": "Joseph spoke in Genesis 41:25.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 41:25 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "wsi-session-010",
+      "title": "Who Said It Pack 010",
+      "theme": "Bible speakers",
+      "rounds": [
+        {
+          "id": "wsi-r091",
+          "quote": "Can we find such a one as this is, a man in whom the Spirit of God is?",
+          "speaker": "Pharaoh",
+          "speakerAliases": [
+            "Pharaoh"
+          ],
+          "reference": "Genesis 41:38",
+          "context": "Pharaoh spoke in Genesis 41:38.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 41:38 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r092",
+          "quote": "Forasmuch as God hath shewed thee all this, there is none so discreet and wise as thou art:",
+          "speaker": "Pharaoh",
+          "speakerAliases": [
+            "Pharaoh"
+          ],
+          "reference": "Genesis 41:39",
+          "context": "Pharaoh spoke in Genesis 41:39.",
+          "sourceTranslation": "KJV",
+          "theme": "Wisdom",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 41:39 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r093",
+          "quote": "See, I have set thee over all the land of Egypt.",
+          "speaker": "Pharaoh",
+          "speakerAliases": [
+            "Pharaoh"
+          ],
+          "reference": "Genesis 41:41",
+          "context": "Pharaoh spoke in Genesis 41:41.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 41:41 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r094",
+          "quote": "I am Pharaoh, and without thee shall no man lift up his hand or foot in all the land of Egypt.",
+          "speaker": "Pharaoh",
+          "speakerAliases": [
+            "Pharaoh"
+          ],
+          "reference": "Genesis 41:44",
+          "context": "Pharaoh spoke in Genesis 41:44.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 41:44 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r095",
+          "quote": "Ye are spies; to see the nakedness of the land ye are come.",
+          "speaker": "Joseph",
+          "speakerAliases": [
+            "Joseph"
+          ],
+          "reference": "Genesis 42:9",
+          "context": "Joseph spoke in Genesis 42:9.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 42:9 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r096",
+          "quote": "That is it that I spake unto you, saying, Ye are spies:",
+          "speaker": "Joseph",
+          "speakerAliases": [
+            "Joseph"
+          ],
+          "reference": "Genesis 42:14",
+          "context": "Joseph spoke in Genesis 42:14.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 42:14 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r097",
+          "quote": "This do, and live; for I fear God:",
+          "speaker": "Joseph",
+          "speakerAliases": [
+            "Joseph"
+          ],
+          "reference": "Genesis 42:18",
+          "context": "Joseph spoke in Genesis 42:18.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 42:18 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r098",
+          "quote": "What deed is this that ye have done? wot ye not that such a man as I can certainly divine?",
+          "speaker": "Joseph",
+          "speakerAliases": [
+            "Joseph"
+          ],
+          "reference": "Genesis 44:15",
+          "context": "Joseph spoke in Genesis 44:15.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 44:15 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r099",
+          "quote": "I am Joseph; doth my father yet live? And his brethren could not answer him; for they were troubled at his presence.",
+          "speaker": "Joseph",
+          "speakerAliases": [
+            "Joseph"
+          ],
+          "reference": "Genesis 45:3",
+          "context": "Joseph spoke in Genesis 45:3.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 45:3 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r100",
+          "quote": "Say unto thy brethren, This do ye; lade your beasts, and go, get you unto the land of Canaan;",
+          "speaker": "Pharaoh",
+          "speakerAliases": [
+            "Pharaoh"
+          ],
+          "reference": "Genesis 45:17",
+          "context": "Pharaoh spoke in Genesis 45:17.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 45:17 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "wsi-session-011",
+      "title": "Who Said It Pack 011",
+      "theme": "Bible speakers",
+      "rounds": [
+        {
+          "id": "wsi-r101",
+          "quote": "and unto his father's house, I will go up, and shew Pharaoh, and say unto him, My brethren, and my father's house, which were in the land of Canaan, are come unto me;",
+          "speaker": "Joseph",
+          "speakerAliases": [
+            "Joseph"
+          ],
+          "reference": "Genesis 46:31",
+          "context": "Joseph spoke in Genesis 46:31.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 46:31 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r102",
+          "quote": "My father and my brethren, and their flocks, and their herds, and all that they have, are come out of the land of Canaan; and, behold, they are in the land of Goshen.",
+          "speaker": "Joseph",
+          "speakerAliases": [
+            "Joseph"
+          ],
+          "reference": "Genesis 47:1",
+          "context": "Joseph spoke in Genesis 47:1.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 47:1 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r103",
+          "quote": "saying, Thy father and thy brethren are come unto thee:",
+          "speaker": "Pharaoh",
+          "speakerAliases": [
+            "Pharaoh"
+          ],
+          "reference": "Genesis 47:5",
+          "context": "Pharaoh spoke in Genesis 47:5.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 47:5 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r104",
+          "quote": "How old art thou?",
+          "speaker": "Pharaoh",
+          "speakerAliases": [
+            "Pharaoh"
+          ],
+          "reference": "Genesis 47:8",
+          "context": "Pharaoh spoke in Genesis 47:8.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 47:8 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r105",
+          "quote": "Give your cattle; and I will give you for your cattle, if money fail.",
+          "speaker": "Joseph",
+          "speakerAliases": [
+            "Joseph"
+          ],
+          "reference": "Genesis 47:16",
+          "context": "Joseph spoke in Genesis 47:16.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 47:16 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r106",
+          "quote": "Behold, I have bought you this day and your land for Pharaoh: lo, here is seed for you, and ye shall sow the land.",
+          "speaker": "Joseph",
+          "speakerAliases": [
+            "Joseph"
+          ],
+          "reference": "Genesis 47:23",
+          "context": "Joseph spoke in Genesis 47:23.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 47:23 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r107",
+          "quote": "God Almighty appeared unto me at Luz in the land of Canaan, and blessed me,",
+          "speaker": "Jacob",
+          "speakerAliases": [
+            "Jacob"
+          ],
+          "reference": "Genesis 48:3",
+          "context": "Jacob spoke in Genesis 48:3.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 48:3 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r108",
+          "quote": "Not so, my father: for this is the firstborn; put thy right hand upon his head.",
+          "speaker": "Joseph",
+          "speakerAliases": [
+            "Joseph"
+          ],
+          "reference": "Genesis 48:18",
+          "context": "Joseph spoke in Genesis 48:18.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 48:18 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r109",
+          "quote": "Gather yourselves together, that I may tell you that which shall befall you in the last days.",
+          "speaker": "Jacob",
+          "speakerAliases": [
+            "Jacob"
+          ],
+          "reference": "Genesis 49:1",
+          "context": "Jacob spoke in Genesis 49:1.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 49:1 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r110",
+          "quote": "Go up, and bury thy father, according as he made thee swear.",
+          "speaker": "Pharaoh",
+          "speakerAliases": [
+            "Pharaoh"
+          ],
+          "reference": "Genesis 50:6",
+          "context": "Pharaoh spoke in Genesis 50:6.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 50:6 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "wsi-session-012",
+      "title": "Who Said It Pack 012",
+      "theme": "Bible speakers",
+      "rounds": [
+        {
+          "id": "wsi-r111",
+          "quote": "Fear not: for am I in the place of God?",
+          "speaker": "Joseph",
+          "speakerAliases": [
+            "Joseph"
+          ],
+          "reference": "Genesis 50:19",
+          "context": "Joseph spoke in Genesis 50:19.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 50:19 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r112",
+          "quote": "I die: and God will surely visit you, and bring you out of this land unto the land which he sware to Abraham, to Isaac, and to Jacob.",
+          "speaker": "Joseph",
+          "speakerAliases": [
+            "Joseph"
+          ],
+          "reference": "Genesis 50:24",
+          "context": "Joseph spoke in Genesis 50:24.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 50:24 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r113",
+          "quote": "I will now turn aside, and see this great sight, why the bush is not burnt.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Exodus 3:3",
+          "context": "Moses spoke in Exodus 3:3.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 3:3 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r114",
+          "quote": "I have surely seen the affliction of my people which are in Egypt, and have heard their cry by reason of their taskmasters; for I know their sorrows;",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 3:7",
+          "context": "God spoke in Exodus 3:7.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 3:7 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r115",
+          "quote": "Who am I, that I should go unto Pharaoh, and that I should bring forth the children of Israel out of Egypt?",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Exodus 3:11",
+          "context": "Moses spoke in Exodus 3:11.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 3:11 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r116",
+          "quote": "But, behold, they will not believe me, nor hearken unto my voice: for they will say, The Lord hath not appeared unto thee.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Exodus 4:1",
+          "context": "Moses spoke in Exodus 4:1.",
+          "sourceTranslation": "KJV",
+          "theme": "Faith",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 4:1 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r117",
+          "quote": "Put forth thine hand, and take it by the tail. And he put forth his hand, and caught it, and it became a rod in his hand:",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 4:4",
+          "context": "God spoke in Exodus 4:4.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 4:4 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r118",
+          "quote": "O my Lord, I am not eloquent, neither heretofore, nor since thou hast spoken unto thy servant: but I am slow of speech, and of a slow tongue.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Exodus 4:10",
+          "context": "Moses spoke in Exodus 4:10.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 4:10 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r119",
+          "quote": "Who hath made man's mouth? or who maketh the dumb, or deaf, or the seeing, or the blind? have not I the Lord?",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 4:11",
+          "context": "God spoke in Exodus 4:11.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 4:11 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r120",
+          "quote": "Let me go, I pray thee, and return unto my brethren which are in Egypt, and see whether they be yet alive. And Jethro said to Moses, Go in peace.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Exodus 4:18",
+          "context": "Moses spoke in Exodus 4:18.",
+          "sourceTranslation": "KJV",
+          "theme": "Peace",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 4:18 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "wsi-session-013",
+      "title": "Who Said It Pack 013",
+      "theme": "Bible speakers",
+      "rounds": [
+        {
+          "id": "wsi-r121",
+          "quote": "Go, return into Egypt: for all the men are dead which sought thy life.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 4:19",
+          "context": "God spoke in Exodus 4:19.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 4:19 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r122",
+          "quote": "Go into the wilderness to meet Moses. And he went, and met him in the mount of God, and kissed him.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 4:27",
+          "context": "God spoke in Exodus 4:27.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 4:27 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r123",
+          "quote": "Who is the Lord, that I should obey his voice to let Israel go? I know not the Lord, neither will I let Israel go.",
+          "speaker": "Pharaoh",
+          "speakerAliases": [
+            "Pharaoh"
+          ],
+          "reference": "Exodus 5:2",
+          "context": "Pharaoh spoke in Exodus 5:2.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 5:2 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r124",
+          "quote": "Behold, the people of the land now are many, and ye make them rest from their burdens.",
+          "speaker": "Pharaoh",
+          "speakerAliases": [
+            "Pharaoh"
+          ],
+          "reference": "Exodus 5:5",
+          "context": "Pharaoh spoke in Exodus 5:5.",
+          "sourceTranslation": "KJV",
+          "theme": "Peace",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 5:5 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r125",
+          "quote": "Lord, wherefore hast thou so evil entreated this people? why is it that thou hast sent me?",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Exodus 5:22",
+          "context": "Moses spoke in Exodus 5:22.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 5:22 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r126",
+          "quote": "Now shalt thou see what I will do to Pharaoh: for with a strong hand shall he let them go, and with a strong hand shall he drive them out of his land.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 6:1",
+          "context": "God spoke in Exodus 6:1.",
+          "sourceTranslation": "KJV",
+          "theme": "Strength",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 6:1 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r127",
+          "quote": "and said unto him, I am the Lord:",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 6:2",
+          "context": "God spoke in Exodus 6:2.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 6:2 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r128",
+          "quote": "and gave them a charge unto the children of Israel, and unto Pharaoh king of Egypt, to bring the children of Israel out of the land of Egypt.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 6:13",
+          "context": "God spoke in Exodus 6:13.",
+          "sourceTranslation": "KJV",
+          "theme": "Kingdom",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 6:13 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r129",
+          "quote": "See, I have made thee a god to Pharaoh: and Aaron thy brother shall be thy prophet.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 7:1",
+          "context": "God spoke in Exodus 7:1.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 7:1 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r130",
+          "quote": "Pharaoh's heart is hardened, he refuseth to let the people go.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 7:14",
+          "context": "God spoke in Exodus 7:14.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 7:14 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "wsi-session-014",
+      "title": "Who Said It Pack 014",
+      "theme": "Bible speakers",
+      "rounds": [
+        {
+          "id": "wsi-r131",
+          "quote": "Go unto Pharaoh, and say unto him, Thus saith the Lord, Let my people go, that they may serve me.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 8:1",
+          "context": "God spoke in Exodus 8:1.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 8:1 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r132",
+          "quote": "Say unto Aaron, Stretch forth thine hand with thy rod over the streams, over the rivers, and over the ponds, and cause frogs to come up upon the land of Egypt.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 8:5",
+          "context": "God spoke in Exodus 8:5.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 8:5 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r133",
+          "quote": "Intreat the Lord, that he may take away the frogs from me, and from my people; and I will let the people go, that they may do sacrifice unto the Lord.",
+          "speaker": "Pharaoh",
+          "speakerAliases": [
+            "Pharaoh"
+          ],
+          "reference": "Exodus 8:8",
+          "context": "Pharaoh spoke in Exodus 8:8.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 8:8 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r134",
+          "quote": "Glory over me: when shall I intreat for thee, and for thy servants, and for thy people, to destroy the frogs from thee and thy houses, that they may remain in the river only?",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Exodus 8:9",
+          "context": "Moses spoke in Exodus 8:9.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 8:9 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r135",
+          "quote": "Say unto Aaron, Stretch out thy rod, and smite the dust of the land, that it may become lice throughout all the land of Egypt.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 8:16",
+          "context": "God spoke in Exodus 8:16.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 8:16 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r136",
+          "quote": "Rise up early in the morning, and stand before Pharaoh; lo, he cometh forth to the water; and say unto him, Thus saith the Lord, Let my people go, that they may serve me.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 8:20",
+          "context": "God spoke in Exodus 8:20.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 8:20 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r137",
+          "quote": "Go ye, sacrifice to your God in the land.",
+          "speaker": "Pharaoh",
+          "speakerAliases": [
+            "Pharaoh"
+          ],
+          "reference": "Exodus 8:25",
+          "context": "Pharaoh spoke in Exodus 8:25.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 8:25 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r138",
+          "quote": "I will let you go, that ye may sacrifice to the Lord your God in the wilderness; only ye shall not go very far away: intreat for me.",
+          "speaker": "Pharaoh",
+          "speakerAliases": [
+            "Pharaoh"
+          ],
+          "reference": "Exodus 8:28",
+          "context": "Pharaoh spoke in Exodus 8:28.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 8:28 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r139",
+          "quote": "Go in unto Pharaoh, and tell him, Thus saith the Lord God of the Hebrews, Let my people go, that they may serve me.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 9:1",
+          "context": "God spoke in Exodus 9:1.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 9:1 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r140",
+          "quote": "Take to you handfuls of ashes of the furnace, and let Moses sprinkle it toward the heaven in the sight of Pharaoh.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 9:8",
+          "context": "God spoke in Exodus 9:8.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 9:8 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "wsi-session-015",
+      "title": "Who Said It Pack 015",
+      "theme": "Bible speakers",
+      "rounds": [
+        {
+          "id": "wsi-r141",
+          "quote": "Rise up early in the morning, and stand before Pharaoh, and say unto him, Thus saith the Lord God of the Hebrews, Let my people go, that they may serve me.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 9:13",
+          "context": "God spoke in Exodus 9:13.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 9:13 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r142",
+          "quote": "Stretch forth thine hand toward heaven, that there may be hail in all the land of Egypt, upon man, and upon beast, and upon every herb of the field, throughout the land of Egypt.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 9:22",
+          "context": "God spoke in Exodus 9:22.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 9:22 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r143",
+          "quote": "I have sinned this time: the Lord is righteous, and I and my people are wicked.",
+          "speaker": "Pharaoh",
+          "speakerAliases": [
+            "Pharaoh"
+          ],
+          "reference": "Exodus 9:27",
+          "context": "Pharaoh spoke in Exodus 9:27.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 9:27 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r144",
+          "quote": "Go in unto Pharaoh: for I have hardened his heart, and the heart of his servants, that I might shew these my signs before him:",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 10:1",
+          "context": "God spoke in Exodus 10:1.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 10:1 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r145",
+          "quote": "Thus saith the Lord God of the Hebrews, How long wilt thou refuse to humble thyself before me? let my people go, that they may serve me.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Exodus 10:3",
+          "context": "Moses spoke in Exodus 10:3.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 10:3 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r146",
+          "quote": "We will go with our young and with our old, with our sons and with our daughters, with our flocks and with our herds will we go; for we must hold a feast unto the Lord.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Exodus 10:9",
+          "context": "Moses spoke in Exodus 10:9.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 10:9 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r147",
+          "quote": "Stretch out thine hand over the land of Egypt for the locusts, that they may come up upon the land of Egypt, and eat every herb of the land, even all that the hail hath left.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 10:12",
+          "context": "God spoke in Exodus 10:12.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 10:12 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r148",
+          "quote": "Stretch out thine hand toward heaven, that there may be darkness over the land of Egypt, even darkness which may be felt.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 10:21",
+          "context": "God spoke in Exodus 10:21.",
+          "sourceTranslation": "KJV",
+          "theme": "Light",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 10:21 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r149",
+          "quote": "Go ye, serve the Lord; only let your flocks and your herds be stayed: let your little ones also go with you.",
+          "speaker": "Pharaoh",
+          "speakerAliases": [
+            "Pharaoh"
+          ],
+          "reference": "Exodus 10:24",
+          "context": "Pharaoh spoke in Exodus 10:24.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 10:24 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r150",
+          "quote": "Thou must give us also sacrifices and burnt offerings, that we may sacrifice unto the Lord our God.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Exodus 10:25",
+          "context": "Moses spoke in Exodus 10:25.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 10:25 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "wsi-session-016",
+      "title": "Who Said It Pack 016",
+      "theme": "Bible speakers",
+      "rounds": [
+        {
+          "id": "wsi-r151",
+          "quote": "Get thee from me, take heed to thyself, see my face no more; for in that day thou seest my face thou shalt die.",
+          "speaker": "Pharaoh",
+          "speakerAliases": [
+            "Pharaoh"
+          ],
+          "reference": "Exodus 10:28",
+          "context": "Pharaoh spoke in Exodus 10:28.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 10:28 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r152",
+          "quote": "Thou hast spoken well, I will see thy face again no more.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Exodus 10:29",
+          "context": "Moses spoke in Exodus 10:29.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 10:29 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r153",
+          "quote": "Yet will I bring one plague more upon Pharaoh, and upon Egypt; afterwards he will let you go hence: when he shall let you go, he shall surely thrust you out hence altogether.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 11:1",
+          "context": "God spoke in Exodus 11:1.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 11:1 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r154",
+          "quote": "Thus saith the Lord, About midnight will I go out into the midst of Egypt:",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Exodus 11:4",
+          "context": "Moses spoke in Exodus 11:4.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 11:4 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r155",
+          "quote": "Pharaoh shall not hearken unto you; that my wonders may be multiplied in the land of Egypt.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 11:9",
+          "context": "God spoke in Exodus 11:9.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 11:9 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r156",
+          "quote": "Draw out and take you a lamb according to your families, and kill the passover.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Exodus 12:21",
+          "context": "Moses spoke in Exodus 12:21.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 12:21 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r157",
+          "quote": "This is the ordinance of the passover: There shall no stranger eat thereof:",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 12:43",
+          "context": "God spoke in Exodus 12:43.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 12:43 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r158",
+          "quote": "Fear ye not, stand still, and see the salvation of the Lord, which he will shew to you to day: for the Egyptians whom ye have seen to day, ye shall see them again no more for ever.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Exodus 14:13",
+          "context": "Moses spoke in Exodus 14:13.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 14:13 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r159",
+          "quote": "Wherefore criest thou unto me? speak unto the children of Israel, that they go forward:",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 14:15",
+          "context": "God spoke in Exodus 14:15.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 14:15 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r160",
+          "quote": "Stretch out thine hand over the sea, that the waters may come again upon the Egyptians, upon their chariots, and upon their horsemen.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 14:26",
+          "context": "God spoke in Exodus 14:26.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 14:26 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "wsi-session-017",
+      "title": "Who Said It Pack 017",
+      "theme": "Bible speakers",
+      "rounds": [
+        {
+          "id": "wsi-r161",
+          "quote": "Say unto all the congregation of the children of Israel, Come near before the Lord: for he hath heard your murmurings.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Exodus 16:9",
+          "context": "Moses spoke in Exodus 16:9.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 16:9 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r162",
+          "quote": "Let no man leave of it till the morning.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Exodus 16:19",
+          "context": "Moses spoke in Exodus 16:19.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 16:19 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r163",
+          "quote": "Eat that to day; for to day is a sabbath unto the Lord: to day ye shall not find it in the field.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Exodus 16:25",
+          "context": "Moses spoke in Exodus 16:25.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 16:25 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r164",
+          "quote": "How long refuse ye to keep my commandments and my laws?",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 16:28",
+          "context": "God spoke in Exodus 16:28.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 16:28 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r165",
+          "quote": "Take a pot, and put an omer full of manna therein, and lay it up before the Lord, to be kept for your generations.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Exodus 16:33",
+          "context": "Moses spoke in Exodus 16:33.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 16:33 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r166",
+          "quote": "Go on before the people, and take with thee of the elders of Israel; and thy rod, wherewith thou smotest the river, take in thine hand, and go.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 17:5",
+          "context": "God spoke in Exodus 17:5.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 17:5 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r167",
+          "quote": "Choose us out men, and go out, fight with Amalek: to morrow I will stand on the top of the hill with the rod of God in mine hand.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Exodus 17:9",
+          "context": "Moses spoke in Exodus 17:9.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 17:9 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r168",
+          "quote": "Write this for a memorial in a book, and rehearse it in the ears of Joshua: for I will utterly put out the remembrance of Amalek from under heaven.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 17:14",
+          "context": "God spoke in Exodus 17:14.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 17:14 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r169",
+          "quote": "Because the people come unto me to enquire of God:",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Exodus 18:15",
+          "context": "Moses spoke in Exodus 18:15.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 18:15 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r170",
+          "quote": "Lo, I come unto thee in a thick cloud, that the people may hear when I speak with thee, and believe thee for ever. And Moses told the words of the people unto the Lord.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 19:9",
+          "context": "God spoke in Exodus 19:9.",
+          "sourceTranslation": "KJV",
+          "theme": "Faith",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 19:9 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "wsi-session-018",
+      "title": "Who Said It Pack 018",
+      "theme": "Bible speakers",
+      "rounds": [
+        {
+          "id": "wsi-r171",
+          "quote": "Go unto the people, and sanctify them to day and to morrow, and let them wash their clothes,",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 19:10",
+          "context": "God spoke in Exodus 19:10.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 19:10 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r172",
+          "quote": "Go down, charge the people, lest they break through unto the Lord to gaze, and many of them perish.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 19:21",
+          "context": "God spoke in Exodus 19:21.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 19:21 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r173",
+          "quote": "The people cannot come up to mount Sinai: for thou chargedst us, saying, Set bounds about the mount, and sanctify it.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Exodus 19:23",
+          "context": "Moses spoke in Exodus 19:23.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 19:23 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r174",
+          "quote": "Fear not: for God is come to prove you, and that his fear may be before your faces, that ye sin not.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Exodus 20:20",
+          "context": "Moses spoke in Exodus 20:20.",
+          "sourceTranslation": "KJV",
+          "theme": "Mercy",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 20:20 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r175",
+          "quote": "Thus thou shalt say unto the children of Israel, Ye have seen that I have talked with you from heaven.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 20:22",
+          "context": "God spoke in Exodus 20:22.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 20:22 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r176",
+          "quote": "Behold the blood of the covenant, which the Lord hath made with you concerning all these words.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Exodus 24:8",
+          "context": "Moses spoke in Exodus 24:8.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 24:8 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r177",
+          "quote": "Come up to me into the mount, and be there: and I will give thee tables of stone, and a law, and commandments which I have written; that thou mayest teach them.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 24:12",
+          "context": "God spoke in Exodus 24:12.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Word",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 24:12 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r178",
+          "quote": "Take unto thee sweet spices, stacte, and onycha, and galbanum; these sweet spices with pure frankincense: of each shall there be a like weight:",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 30:34",
+          "context": "God spoke in Exodus 30:34.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 30:34 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r179",
+          "quote": "Break off the golden earrings, which are in the ears of your wives, of your sons, and of your daughters, and bring them unto me.",
+          "speaker": "Aaron",
+          "speakerAliases": [
+            "Aaron"
+          ],
+          "reference": "Exodus 32:2",
+          "context": "Aaron spoke in Exodus 32:2.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 32:2 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r180",
+          "quote": "Go, get thee down; for thy people, which thou broughtest out of the land of Egypt, have corrupted themselves:",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 32:7",
+          "context": "God spoke in Exodus 32:7.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 32:7 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "wsi-session-019",
+      "title": "Who Said It Pack 019",
+      "theme": "Bible speakers",
+      "rounds": [
+        {
+          "id": "wsi-r181",
+          "quote": "I have seen this people, and, behold, it is a stiffnecked people:",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 32:9",
+          "context": "God spoke in Exodus 32:9.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 32:9 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r182",
+          "quote": "Lord, why doth thy wrath wax hot against thy people, which thou hast brought forth out of the land of Egypt with great power, and with a mighty hand?",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Exodus 32:11",
+          "context": "Moses spoke in Exodus 32:11.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 32:11 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r183",
+          "quote": "What did this people unto thee, that thou hast brought so great a sin upon them?",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Exodus 32:21",
+          "context": "Moses spoke in Exodus 32:21.",
+          "sourceTranslation": "KJV",
+          "theme": "Mercy",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 32:21 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r184",
+          "quote": "Let not the anger of my lord wax hot: thou knowest the people, that they are set on mischief.",
+          "speaker": "Aaron",
+          "speakerAliases": [
+            "Aaron"
+          ],
+          "reference": "Exodus 32:22",
+          "context": "Aaron spoke in Exodus 32:22.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 32:22 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r185",
+          "quote": "Who is on the Lord's side? let him come unto me. And all the sons of Levi gathered themselves together unto him.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Exodus 32:26",
+          "context": "Moses spoke in Exodus 32:26.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 32:26 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r186",
+          "quote": "Oh, this people have sinned a great sin, and have made them gods of gold.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Exodus 32:31",
+          "context": "Moses spoke in Exodus 32:31.",
+          "sourceTranslation": "KJV",
+          "theme": "Mercy",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 32:31 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r187",
+          "quote": "Whosoever hath sinned against me, him will I blot out of my book.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 32:33",
+          "context": "God spoke in Exodus 32:33.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 32:33 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r188",
+          "quote": "as a man speaketh unto his friend. And he turned again into the camp: but his servant Joshua, the son of Nun, a young man, departed not out of the tabernacle.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 33:11",
+          "context": "God spoke in Exodus 33:11.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 33:11 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r189",
+          "quote": "I will do this thing also that thou hast spoken: for thou hast found grace in my sight, and I know thee by name.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 33:17",
+          "context": "God spoke in Exodus 33:17.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 33:17 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r190",
+          "quote": "Behold, there is a place by me, and thou shalt stand upon a rock:",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 33:21",
+          "context": "God spoke in Exodus 33:21.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 33:21 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "wsi-session-020",
+      "title": "Who Said It Pack 020",
+      "theme": "Bible speakers",
+      "rounds": [
+        {
+          "id": "wsi-r191",
+          "quote": "Hew thee two tables of stone like unto the first: and I will write upon these tables the words that were in the first tables, which thou brakest.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 34:1",
+          "context": "God spoke in Exodus 34:1.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 34:1 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r192",
+          "quote": "Write thou these words: for after the tenor of these words I have made a covenant with thee and with Israel.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Exodus 34:27",
+          "context": "God spoke in Exodus 34:27.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 34:27 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r193",
+          "quote": "saying, This is the thing which the Lord commanded, saying,",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Exodus 35:4",
+          "context": "Moses spoke in Exodus 35:4.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 35:4 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r194",
+          "quote": "See, the Lord hath called by name Bezaleel the son of Uri, the son of Hur, of the tribe of Judah;",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Exodus 35:30",
+          "context": "Moses spoke in Exodus 35:30.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 35:30 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r195",
+          "quote": "This is the thing which the Lord commanded to be done.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Leviticus 8:5",
+          "context": "Moses spoke in Leviticus 8:5.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "hard",
+          "teachingNote": "Review Leviticus 8:5 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r196",
+          "quote": "This is the thing which the Lord commanded that ye should do: and the glory of the Lord shall appear unto you.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Leviticus 9:6",
+          "context": "Moses spoke in Leviticus 9:6.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "easy",
+          "teachingNote": "Review Leviticus 9:6 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r197",
+          "quote": "This is it that the Lord spake, saying, I will be sanctified in them that come nigh me, and before all the people I will be glorified. And Aaron held his peace.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Leviticus 10:3",
+          "context": "Moses spoke in Leviticus 10:3.",
+          "sourceTranslation": "KJV",
+          "theme": "Peace",
+          "difficulty": "medium",
+          "teachingNote": "Review Leviticus 10:3 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r198",
+          "quote": "saying unto them,",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Leviticus 11:1",
+          "context": "God spoke in Leviticus 11:1.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Leviticus 11:1 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r199",
+          "quote": "when they offered before the Lord, and died;",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Leviticus 16:1",
+          "context": "God spoke in Leviticus 16:1.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "easy",
+          "teachingNote": "Review Leviticus 16:1 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r200",
+          "quote": "Speak unto the priests the sons of Aaron, and say unto them, There shall none be defiled for the dead among his people:",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Leviticus 21:1",
+          "context": "God spoke in Leviticus 21:1.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Leviticus 21:1 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "wsi-session-021",
+      "title": "Who Said It Pack 021",
+      "theme": "Bible speakers",
+      "rounds": [
+        {
+          "id": "wsi-r201",
+          "quote": "that they should bring forth him that had cursed out of the camp, and stone him with stones. And the children of Israel did as the Lord commanded Moses.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Leviticus 24:23",
+          "context": "Moses spoke in Leviticus 24:23.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "hard",
+          "teachingNote": "Review Leviticus 24:23 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r202",
+          "quote": "in the tabernacle of the congregation, on the first day of the second month, in the second year after they were come out of the land of Egypt, saying,",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Numbers 1:1",
+          "context": "God spoke in Numbers 1:1.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Numbers 1:1 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r203",
+          "quote": "Number all the firstborn of the males of the children of Israel from a month old and upward, and take the number of their names.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Numbers 3:40",
+          "context": "God spoke in Numbers 3:40.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 3:40 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r204",
+          "quote": "They shall offer their offering, each prince on his day, for the dedicating of the altar.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Numbers 7:11",
+          "context": "God spoke in Numbers 7:11.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 7:11 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r205",
+          "quote": "in the first month of the second year after they were come out of the land of Egypt, saying,",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Numbers 9:1",
+          "context": "God spoke in Numbers 9:1.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Numbers 9:1 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r206",
+          "quote": "that they should keep the passover.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Numbers 9:4",
+          "context": "Moses spoke in Numbers 9:4.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 9:4 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r207",
+          "quote": "Stand still, and I will hear what the Lord will command concerning you.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Numbers 9:8",
+          "context": "Moses spoke in Numbers 9:8.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 9:8 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r208",
+          "quote": "Wherefore hast thou afflicted thy servant? and wherefore have I not found favour in thy sight, that thou layest the burden of all this people upon me?",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Numbers 11:11",
+          "context": "Moses spoke in Numbers 11:11.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Numbers 11:11 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r209",
+          "quote": "The people, among whom I am, are six hundred thousand footmen; and thou hast said, I will give them flesh, that they may eat a whole month.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Numbers 11:21",
+          "context": "Moses spoke in Numbers 11:21.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 11:21 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r210",
+          "quote": "Is the Lord'S hand waxed short? thou shalt see now whether my word shall come to pass unto thee or not.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Numbers 11:23",
+          "context": "God spoke in Numbers 11:23.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Word",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 11:23 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "wsi-session-022",
+      "title": "Who Said It Pack 022",
+      "theme": "Bible speakers",
+      "rounds": [
+        {
+          "id": "wsi-r211",
+          "quote": "Enviest thou for my sake? would God that all the Lord'S people were prophets, and that the Lord would put his spirit upon them!",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Numbers 11:29",
+          "context": "Moses spoke in Numbers 11:29.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "easy",
+          "teachingNote": "Review Numbers 11:29 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r212",
+          "quote": "Alas, my lord, I beseech thee, lay not the sin upon us, wherein we have done foolishly, and wherein we have sinned.",
+          "speaker": "Aaron",
+          "speakerAliases": [
+            "Aaron"
+          ],
+          "reference": "Numbers 12:11",
+          "context": "Aaron spoke in Numbers 12:11.",
+          "sourceTranslation": "KJV",
+          "theme": "Mercy",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 12:11 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r213",
+          "quote": "If her father had but spit in her face, should she not be ashamed seven days? let her be shut out from the camp seven days, and after that let her be received in again.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Numbers 12:14",
+          "context": "God spoke in Numbers 12:14.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 12:14 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r214",
+          "quote": "Get you up this way southward, and go up into the mountain:",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Numbers 13:17",
+          "context": "Moses spoke in Numbers 13:17.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Numbers 13:17 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r215",
+          "quote": "How long will this people provoke me? and how long will it be ere they believe me, for all the signs which I have shewed among them?",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Numbers 14:11",
+          "context": "God spoke in Numbers 14:11.",
+          "sourceTranslation": "KJV",
+          "theme": "Faith",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 14:11 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r216",
+          "quote": "Then the Egyptians shall hear it, (for thou broughtest up this people in thy might from among them;)",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Numbers 14:13",
+          "context": "Moses spoke in Numbers 14:13.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 14:13 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r217",
+          "quote": "I have pardoned according to thy word:",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Numbers 14:20",
+          "context": "God spoke in Numbers 14:20.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Word",
+          "difficulty": "easy",
+          "teachingNote": "Review Numbers 14:20 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r218",
+          "quote": "Wherefore now do ye transgress the commandment of the Lord? but it shall not prosper.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Numbers 14:41",
+          "context": "Moses spoke in Numbers 14:41.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Word",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 14:41 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r219",
+          "quote": "The man shall be surely put to death: all the congregation shall stone him with stones without the camp.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Numbers 15:35",
+          "context": "God spoke in Numbers 15:35.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 15:35 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r220",
+          "quote": "Hear, I pray you, ye sons of Levi:",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Numbers 16:8",
+          "context": "Moses spoke in Numbers 16:8.",
+          "sourceTranslation": "KJV",
+          "theme": "Prayer",
+          "difficulty": "easy",
+          "teachingNote": "Review Numbers 16:8 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "wsi-session-023",
+      "title": "Who Said It Pack 023",
+      "theme": "Bible speakers",
+      "rounds": [
+        {
+          "id": "wsi-r221",
+          "quote": "Respect not thou their offering: I have not taken one ass from them, neither have I hurt one of them.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Numbers 16:15",
+          "context": "Moses spoke in Numbers 16:15.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 16:15 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r222",
+          "quote": "Be thou and all thy company before the Lord, thou, and they, and Aaron, to morrow:",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Numbers 16:16",
+          "context": "Moses spoke in Numbers 16:16.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 16:16 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r223",
+          "quote": "Hereby ye shall know that the Lord hath sent me to do all these works; for I have not done them of mine own mind.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Numbers 16:28",
+          "context": "Moses spoke in Numbers 16:28.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "easy",
+          "teachingNote": "Review Numbers 16:28 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r224",
+          "quote": "and every one of their princes gave him a rod apiece, for each prince one, according to their fathers' houses, even twelve rods: and the rod of Aaron was among their rods.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Numbers 17:6",
+          "context": "Moses spoke in Numbers 17:6.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 17:6 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r225",
+          "quote": "Bring Aaron's rod again before the testimony, to be kept for a token against the rebels; and thou shalt quite take away their murmurings from me, that they die not.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Numbers 17:10",
+          "context": "God spoke in Numbers 17:10.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 17:10 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r226",
+          "quote": "Thou and thy sons and thy father's house with thee shall bear the iniquity of the sanctuary: and thou and thy sons with thee shall bear the iniquity of your priesthood.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Numbers 18:1",
+          "context": "God spoke in Numbers 18:1.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Numbers 18:1 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r227",
+          "quote": "Thou shalt have no inheritance in their land, neither shalt thou have any part among them: I am thy part and thine inheritance among the children of Israel.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Numbers 18:20",
+          "context": "God spoke in Numbers 18:20.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 18:20 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r228",
+          "quote": "Because ye believed me not, to sanctify me in the eyes of the children of Israel, therefore ye shall not bring this congregation into the land which I have given them.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Numbers 20:12",
+          "context": "God spoke in Numbers 20:12.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 20:12 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r229",
+          "quote": "by the coast of the land of Edom, saying,",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Numbers 20:23",
+          "context": "God spoke in Numbers 20:23.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Numbers 20:23 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r230",
+          "quote": "Make thee a fiery serpent, and set it upon a pole: and it shall come to pass, that every one that is bitten, when he looketh upon it, shall live.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Numbers 21:8",
+          "context": "God spoke in Numbers 21:8.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 21:8 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "wsi-session-024",
+      "title": "Who Said It Pack 024",
+      "theme": "Bible speakers",
+      "rounds": [
+        {
+          "id": "wsi-r231",
+          "quote": "What men are these with thee?",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Numbers 22:9",
+          "context": "God spoke in Numbers 22:9.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 22:9 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r232",
+          "quote": "Thou shalt not go with them; thou shalt not curse the people: for they are blessed.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Numbers 22:12",
+          "context": "God spoke in Numbers 22:12.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Numbers 22:12 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r233",
+          "quote": "If the men come to call thee, rise up, and go with them; but yet the word which I shall say unto thee, that shalt thou do.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Numbers 22:20",
+          "context": "God spoke in Numbers 22:20.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Word",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 22:20 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r234",
+          "quote": "Return unto Balak, and thus thou shalt speak.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Numbers 23:5",
+          "context": "God spoke in Numbers 23:5.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 23:5 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r235",
+          "quote": "Go again unto Balak, and say thus.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Numbers 23:16",
+          "context": "God spoke in Numbers 23:16.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Numbers 23:16 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r236",
+          "quote": "Take all the heads of the people, and hang them up before the Lord against the sun, that the fierce anger of the Lord may be turned away from Israel.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Numbers 25:4",
+          "context": "God spoke in Numbers 25:4.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 25:4 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r237",
+          "quote": "Slay ye every one his men that were joined unto Baalpeor.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Numbers 25:5",
+          "context": "Moses spoke in Numbers 25:5.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 25:5 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r238",
+          "quote": "Get thee up into this mount Abarim, and see the land which I have given unto the children of Israel.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Numbers 27:12",
+          "context": "God spoke in Numbers 27:12.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Numbers 27:12 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r239",
+          "quote": "Take thee Joshua the son of Nun, a man in whom is the spirit, and lay thine hand upon him;",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Numbers 27:18",
+          "context": "God spoke in Numbers 27:18.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 27:18 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r240",
+          "quote": "saying, This is the thing which the Lord hath commanded.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Numbers 30:1",
+          "context": "Moses spoke in Numbers 30:1.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 30:1 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "wsi-session-025",
+      "title": "Who Said It Pack 025",
+      "theme": "Bible speakers",
+      "rounds": [
+        {
+          "id": "wsi-r241",
+          "quote": "saying, Arm some of yourselves unto the war, and let them go against the Midianites, and avenge the Lord of Midian.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Numbers 31:3",
+          "context": "Moses spoke in Numbers 31:3.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "easy",
+          "teachingNote": "Review Numbers 31:3 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r242",
+          "quote": "Have ye saved all the women alive?",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Numbers 31:15",
+          "context": "Moses spoke in Numbers 31:15.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 31:15 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r243",
+          "quote": "Shall your brethren go to war, and shall ye sit here?",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Numbers 32:6",
+          "context": "Moses spoke in Numbers 32:6.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 32:6 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r244",
+          "quote": "If ye will do this thing, if ye will go armed before the Lord to war,",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Numbers 32:20",
+          "context": "Moses spoke in Numbers 32:20.",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "difficulty": "easy",
+          "teachingNote": "Review Numbers 32:20 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r245",
+          "quote": "Say unto them. Go not up, neither fight; for I am not among you; lest ye be smitten before your enemies.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Deuteronomy 1:42",
+          "context": "God spoke in Deuteronomy 1:42.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Deuteronomy 1:42 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r246",
+          "quote": "Behold, I have begun to give Sihon and his land before thee: begin to possess, that thou mayest inherit his land.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Deuteronomy 2:31",
+          "context": "God spoke in Deuteronomy 2:31.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Deuteronomy 2:31 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r247",
+          "quote": "ye heard the voice of the words, but saw no similitude; only ye heard a voice.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Deuteronomy 4:12",
+          "context": "God spoke in Deuteronomy 4:12.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Deuteronomy 4:12 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r248",
+          "quote": "Hear, O Israel, the statutes and judgments which I speak in your ears this day, that ye may learn them, and keep, and do them.",
+          "speaker": "Moses",
+          "speakerAliases": [
+            "Moses"
+          ],
+          "reference": "Deuteronomy 5:1",
+          "context": "Moses spoke in Deuteronomy 5:1.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "medium",
+          "teachingNote": "Review Deuteronomy 5:1 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r249",
+          "quote": "Arise, take thy journey before the people, that they may go in and possess the land, which I sware unto their fathers to give unto them.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Deuteronomy 10:11",
+          "context": "God spoke in Deuteronomy 10:11.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "hard",
+          "teachingNote": "Review Deuteronomy 10:11 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "wsi-r250",
+          "quote": "They have well spoken that which they have spoken.",
+          "speaker": "God",
+          "speakerAliases": [
+            "God",
+            "The LORD",
+            "Lord God",
+            "The Lord"
+          ],
+          "reference": "Deuteronomy 18:17",
+          "context": "God spoke in Deuteronomy 18:17.",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "difficulty": "easy",
+          "teachingNote": "Review Deuteronomy 18:17 and how it connects to the Bible before continuing."
+        }
+      ]
+    }
+  ]
+}

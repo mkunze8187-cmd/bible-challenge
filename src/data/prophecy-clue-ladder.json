@@ -1,0 +1,619 @@
+{
+  "$schema": "./schemas/prophecy-clue-ladder.schema.json",
+  "game": "prophecy-clue-ladder",
+  "version": 1,
+  "displayName": "Prophecy Clue Ladder",
+  "roundsPerSession": 5,
+  "sessions": [
+    {
+      "id": "pcl-session-01",
+      "title": "Prophecy Clue Ladder Set 01",
+      "theme": "Five-clue prophecy identification rounds",
+      "rounds": [
+        {
+          "id": "pcl-001",
+          "title": "Seed Of The Woman",
+          "theme": "Victory",
+          "answer": "Christ's victory over sin and death",
+          "acceptedAnswers": [
+            "Christ's victory over sin and death",
+            "Seed Of The Woman",
+            "Genesis 3:15",
+            "Hebrews 2:14"
+          ],
+          "reference": "Genesis 3:15",
+          "fulfillmentReference": "Hebrews 2:14",
+          "clues": [
+            "This prophecy belongs to the victory theme.",
+            "The Old Testament reference is Genesis 3:15.",
+            "The wording includes: \"It shall bruise thy head, and thou shalt bruise his heel.\"",
+            "A New Testament connection appears at Hebrews 2:14.",
+            "The fulfillment wording includes: \"That through death he might destroy him that had the power of death.\""
+          ],
+          "difficulty": "medium",
+          "teachingNote": "This is commonly read by Christian interpreters as an early promise of victory over evil."
+        },
+        {
+          "id": "pcl-002",
+          "title": "Blessing To All Nations",
+          "theme": "Nations",
+          "answer": "Blessing to the nations",
+          "acceptedAnswers": [
+            "Blessing to the nations",
+            "Blessing To All Nations",
+            "Genesis 12:3",
+            "Galatians 3:8"
+          ],
+          "reference": "Genesis 12:3",
+          "fulfillmentReference": "Galatians 3:8",
+          "clues": [
+            "This prophecy belongs to the nations theme.",
+            "The Old Testament reference is Genesis 12:3.",
+            "The wording includes: \"In thee shall all families of the earth be blessed.\"",
+            "A New Testament connection appears at Galatians 3:8.",
+            "The fulfillment wording includes: \"In thee shall all nations be blessed.\""
+          ],
+          "difficulty": "easy",
+          "teachingNote": "The New Testament explicitly applies this Abraham promise to the gospel going to the nations."
+        },
+        {
+          "id": "pcl-003",
+          "title": "Ruler From Judah",
+          "theme": "Kingship",
+          "answer": "Comes from Judah",
+          "acceptedAnswers": [
+            "Comes from Judah",
+            "Ruler From Judah",
+            "Genesis 49:10",
+            "Hebrews 7:14"
+          ],
+          "reference": "Genesis 49:10",
+          "fulfillmentReference": "Hebrews 7:14",
+          "clues": [
+            "This prophecy belongs to the kingship theme.",
+            "The Old Testament reference is Genesis 49:10.",
+            "The wording includes: \"The sceptre shall not depart from Judah.\"",
+            "A New Testament connection appears at Hebrews 7:14.",
+            "The fulfillment wording includes: \"Our Lord sprang out of Juda.\""
+          ],
+          "difficulty": "easy",
+          "teachingNote": "The Judah connection is a widely recognized messianic theme."
+        },
+        {
+          "id": "pcl-004",
+          "title": "Prophet Like Moses",
+          "theme": "Prophet",
+          "answer": "Prophet like Moses",
+          "acceptedAnswers": [
+            "Prophet like Moses",
+            "Prophet Like Moses",
+            "Deuteronomy 18:15",
+            "Acts 3:22"
+          ],
+          "reference": "Deuteronomy 18:15",
+          "fulfillmentReference": "Acts 3:22",
+          "clues": [
+            "This prophecy belongs to the prophet theme.",
+            "The Old Testament reference is Deuteronomy 18:15.",
+            "The wording includes: \"The Lord thy God will raise up unto thee a Prophet.\"",
+            "A New Testament connection appears at Acts 3:22.",
+            "The fulfillment wording includes: \"A prophet shall the Lord your God raise up unto you.\""
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Acts gives this passage a direct place in apostolic preaching about Jesus."
+        },
+        {
+          "id": "pcl-005",
+          "title": "Son And King",
+          "theme": "Kingship",
+          "answer": "God's Son and anointed King",
+          "acceptedAnswers": [
+            "God's Son and anointed King",
+            "Son And King",
+            "Psalm 2:7",
+            "Acts 13:33"
+          ],
+          "reference": "Psalm 2:7",
+          "fulfillmentReference": "Acts 13:33",
+          "clues": [
+            "This prophecy belongs to the kingship theme.",
+            "The Old Testament reference is Psalm 2:7.",
+            "The wording includes: \"Thou art my Son; this day have I begotten thee.\"",
+            "A New Testament connection appears at Acts 13:33.",
+            "The fulfillment wording includes: \"Thou art my Son, this day have I begotten thee.\""
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Psalm 2 is used in the New Testament to speak of the Messiah's sonship and reign."
+        }
+      ]
+    },
+    {
+      "id": "pcl-session-02",
+      "title": "Prophecy Clue Ladder Set 02",
+      "theme": "Five-clue prophecy identification rounds",
+      "rounds": [
+        {
+          "id": "pcl-006",
+          "title": "Not Seeing Corruption",
+          "theme": "Resurrection",
+          "answer": "Resurrection without seeing corruption",
+          "acceptedAnswers": [
+            "Resurrection without seeing corruption",
+            "Not Seeing Corruption",
+            "Psalm 16:10",
+            "Acts 2:31"
+          ],
+          "reference": "Psalm 16:10",
+          "fulfillmentReference": "Acts 2:31",
+          "clues": [
+            "This prophecy belongs to the resurrection theme.",
+            "The Old Testament reference is Psalm 16:10.",
+            "The wording includes: \"Neither wilt thou suffer thine Holy One to see corruption.\"",
+            "A New Testament connection appears at Acts 2:31.",
+            "The fulfillment wording includes: \"His soul was not left in hell, neither his flesh did see corruption.\""
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Acts 2 directly connects Psalm 16 with the resurrection of Jesus."
+        },
+        {
+          "id": "pcl-007",
+          "title": "Suffering Cry",
+          "theme": "Suffering",
+          "answer": "Jesus' suffering cry from the cross",
+          "acceptedAnswers": [
+            "Jesus' suffering cry from the cross",
+            "Suffering Cry",
+            "Psalm 22:1",
+            "Matthew 27:46"
+          ],
+          "reference": "Psalm 22:1",
+          "fulfillmentReference": "Matthew 27:46",
+          "clues": [
+            "This prophecy belongs to the suffering theme.",
+            "The Old Testament reference is Psalm 22:1.",
+            "The wording includes: \"My God, my God, why hast thou forsaken me?\"",
+            "A New Testament connection appears at Matthew 27:46.",
+            "The fulfillment wording includes: \"My God, my God, why hast thou forsaken me?\""
+          ],
+          "difficulty": "easy",
+          "teachingNote": "The Gospel records Jesus using Psalm 22 language during the crucifixion."
+        },
+        {
+          "id": "pcl-008",
+          "title": "Garments Divided",
+          "theme": "Suffering",
+          "answer": "Garments divided",
+          "acceptedAnswers": [
+            "Garments divided",
+            "Garments Divided",
+            "Psalm 22:18",
+            "John 19:24"
+          ],
+          "reference": "Psalm 22:18",
+          "fulfillmentReference": "John 19:24",
+          "clues": [
+            "This prophecy belongs to the suffering theme.",
+            "The Old Testament reference is Psalm 22:18.",
+            "The wording includes: \"They part my garments among them, and cast lots upon my vesture.\"",
+            "A New Testament connection appears at John 19:24.",
+            "The fulfillment wording includes: \"They said therefore among themselves, Let us not rend it, but cast lots for it.\""
+          ],
+          "difficulty": "easy",
+          "teachingNote": "John explicitly cites the casting of lots as fulfillment of scripture."
+        },
+        {
+          "id": "pcl-009",
+          "title": "Bones Not Broken",
+          "theme": "Suffering",
+          "answer": "No bones broken",
+          "acceptedAnswers": [
+            "No bones broken",
+            "Bones Not Broken",
+            "Psalm 34:20",
+            "John 19:36"
+          ],
+          "reference": "Psalm 34:20",
+          "fulfillmentReference": "John 19:36",
+          "clues": [
+            "This prophecy belongs to the suffering theme.",
+            "The Old Testament reference is Psalm 34:20.",
+            "The wording includes: \"He keepeth all his bones: not one of them is broken.\"",
+            "A New Testament connection appears at John 19:36.",
+            "The fulfillment wording includes: \"A bone of him shall not be broken.\""
+          ],
+          "difficulty": "easy",
+          "teachingNote": "John cites this detail while describing Jesus' death."
+        },
+        {
+          "id": "pcl-010",
+          "title": "Betrayed By A Friend",
+          "theme": "Betrayal",
+          "answer": "Betrayed by a familiar friend",
+          "acceptedAnswers": [
+            "Betrayed by a familiar friend",
+            "Betrayed By A Friend",
+            "Psalm 41:9",
+            "John 13:18"
+          ],
+          "reference": "Psalm 41:9",
+          "fulfillmentReference": "John 13:18",
+          "clues": [
+            "This prophecy belongs to the betrayal theme.",
+            "The Old Testament reference is Psalm 41:9.",
+            "The wording includes: \"Mine own familiar friend... hath lifted up his heel against me.\"",
+            "A New Testament connection appears at John 13:18.",
+            "The fulfillment wording includes: \"He that eateth bread with me hath lifted up his heel against me.\""
+          ],
+          "difficulty": "easy",
+          "teachingNote": "John records Jesus citing the psalm in the context of Judas's betrayal."
+        }
+      ]
+    },
+    {
+      "id": "pcl-session-03",
+      "title": "Prophecy Clue Ladder Set 03",
+      "theme": "Five-clue prophecy identification rounds",
+      "rounds": [
+        {
+          "id": "pcl-011",
+          "title": "Zeal For God's House",
+          "theme": "Temple",
+          "answer": "Zeal for God's house",
+          "acceptedAnswers": [
+            "Zeal for God's house",
+            "Zeal For God's House",
+            "Psalm 69:9",
+            "John 2:17"
+          ],
+          "reference": "Psalm 69:9",
+          "fulfillmentReference": "John 2:17",
+          "clues": [
+            "This prophecy belongs to the temple theme.",
+            "The Old Testament reference is Psalm 69:9.",
+            "The wording includes: \"The zeal of thine house hath eaten me up.\"",
+            "A New Testament connection appears at John 2:17.",
+            "The fulfillment wording includes: \"The zeal of thine house hath eaten me up.\""
+          ],
+          "difficulty": "medium",
+          "teachingNote": "John presents the temple cleansing through the lens of Psalm 69."
+        },
+        {
+          "id": "pcl-012",
+          "title": "Vinegar Given",
+          "theme": "Suffering",
+          "answer": "Vinegar offered at the cross",
+          "acceptedAnswers": [
+            "Vinegar offered at the cross",
+            "Vinegar Given",
+            "Psalm 69:21",
+            "John 19:29"
+          ],
+          "reference": "Psalm 69:21",
+          "fulfillmentReference": "John 19:29",
+          "clues": [
+            "This prophecy belongs to the suffering theme.",
+            "The Old Testament reference is Psalm 69:21.",
+            "The wording includes: \"In my thirst they gave me vinegar to drink.\"",
+            "A New Testament connection appears at John 19:29.",
+            "The fulfillment wording includes: \"They filled a spunge with vinegar... and put it to his mouth.\""
+          ],
+          "difficulty": "easy",
+          "teachingNote": "The Gospels connect this detail with Jesus' crucifixion."
+        },
+        {
+          "id": "pcl-013",
+          "title": "At God's Right Hand",
+          "theme": "Exaltation",
+          "answer": "Sits at God's right hand",
+          "acceptedAnswers": [
+            "Sits at God's right hand",
+            "At God's Right Hand",
+            "Psalm 110:1",
+            "Hebrews 1:13"
+          ],
+          "reference": "Psalm 110:1",
+          "fulfillmentReference": "Hebrews 1:13",
+          "clues": [
+            "This prophecy belongs to the exaltation theme.",
+            "The Old Testament reference is Psalm 110:1.",
+            "The wording includes: \"Sit thou at my right hand.\"",
+            "A New Testament connection appears at Hebrews 1:13.",
+            "The fulfillment wording includes: \"Sit on my right hand, until I make thine enemies thy footstool.\""
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Psalm 110 is one of the New Testament's most frequent messianic texts."
+        },
+        {
+          "id": "pcl-014",
+          "title": "Rejected Stone",
+          "theme": "Rejection",
+          "answer": "Rejected stone",
+          "acceptedAnswers": [
+            "Rejected stone",
+            "Rejected Stone",
+            "Psalm 118:22",
+            "Acts 4:11"
+          ],
+          "reference": "Psalm 118:22",
+          "fulfillmentReference": "Acts 4:11",
+          "clues": [
+            "This prophecy belongs to the rejection theme.",
+            "The Old Testament reference is Psalm 118:22.",
+            "The wording includes: \"The stone which the builders refused is become the head stone.\"",
+            "A New Testament connection appears at Acts 4:11.",
+            "The fulfillment wording includes: \"The stone which was set at nought of you builders.\""
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Acts directly applies the stone image to Jesus' rejection and exaltation."
+        },
+        {
+          "id": "pcl-015",
+          "title": "Virgin-Born Sign",
+          "theme": "Birth",
+          "answer": "Virgin-born sign",
+          "acceptedAnswers": [
+            "Virgin-born sign",
+            "Virgin-Born Sign",
+            "Isaiah 7:14",
+            "Matthew 1:23"
+          ],
+          "reference": "Isaiah 7:14",
+          "fulfillmentReference": "Matthew 1:23",
+          "clues": [
+            "This prophecy belongs to the birth theme.",
+            "The Old Testament reference is Isaiah 7:14.",
+            "The wording includes: \"Behold, a virgin shall conceive, and bear a son.\"",
+            "A New Testament connection appears at Matthew 1:23.",
+            "The fulfillment wording includes: \"They shall call his name Emmanuel.\""
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Matthew explicitly quotes Isaiah 7:14 in the infancy narrative."
+        }
+      ]
+    },
+    {
+      "id": "pcl-session-04",
+      "title": "Prophecy Clue Ladder Set 04",
+      "theme": "Five-clue prophecy identification rounds",
+      "rounds": [
+        {
+          "id": "pcl-016",
+          "title": "Light In Galilee",
+          "theme": "Ministry",
+          "answer": "Light to Galilee",
+          "acceptedAnswers": [
+            "Light to Galilee",
+            "Light In Galilee",
+            "Isaiah 9:1-2",
+            "Matthew 4:15-16"
+          ],
+          "reference": "Isaiah 9:1-2",
+          "fulfillmentReference": "Matthew 4:15-16",
+          "clues": [
+            "This prophecy belongs to the ministry theme.",
+            "The Old Testament reference is Isaiah 9:1-2.",
+            "The wording includes: \"The people that walked in darkness have seen a great light.\"",
+            "A New Testament connection appears at Matthew 4:15-16.",
+            "The fulfillment wording includes: \"The people which sat in darkness saw great light.\""
+          ],
+          "difficulty": "easy",
+          "teachingNote": "The Gospel citation ties the prophecy to Jesus' public ministry in Galilee."
+        },
+        {
+          "id": "pcl-017",
+          "title": "Child And Kingdom",
+          "theme": "Kingship",
+          "answer": "Kingdom without end",
+          "acceptedAnswers": [
+            "Kingdom without end",
+            "Child And Kingdom",
+            "Isaiah 9:6-7",
+            "Luke 1:32-33"
+          ],
+          "reference": "Isaiah 9:6-7",
+          "fulfillmentReference": "Luke 1:32-33",
+          "clues": [
+            "This prophecy belongs to the kingship theme.",
+            "The Old Testament reference is Isaiah 9:6-7.",
+            "The wording includes: \"Unto us a child is born... and the government shall be upon his shoulder.\"",
+            "A New Testament connection appears at Luke 1:32-33.",
+            "The fulfillment wording includes: \"He shall reign over the house of Jacob for ever.\""
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Luke's announcement uses Davidic kingdom language that Christians connect with Isaiah's promise."
+        },
+        {
+          "id": "pcl-018",
+          "title": "Voice In The Wilderness",
+          "theme": "Forerunner",
+          "answer": "Forerunner prepares the way",
+          "acceptedAnswers": [
+            "Forerunner prepares the way",
+            "Voice In The Wilderness",
+            "Isaiah 40:3",
+            "Matthew 3:3"
+          ],
+          "reference": "Isaiah 40:3",
+          "fulfillmentReference": "Matthew 3:3",
+          "clues": [
+            "This prophecy belongs to the forerunner theme.",
+            "The Old Testament reference is Isaiah 40:3.",
+            "The wording includes: \"Prepare ye the way of the Lord.\"",
+            "A New Testament connection appears at Matthew 3:3.",
+            "The fulfillment wording includes: \"The voice of one crying in the wilderness.\""
+          ],
+          "difficulty": "easy",
+          "teachingNote": "The Synoptic Gospels connect Isaiah 40:3 with John the Baptist."
+        },
+        {
+          "id": "pcl-019",
+          "title": "Chosen Servant",
+          "theme": "Servant",
+          "answer": "Chosen servant",
+          "acceptedAnswers": [
+            "Chosen servant",
+            "Chosen Servant",
+            "Isaiah 42:1-4",
+            "Matthew 12:18-21"
+          ],
+          "reference": "Isaiah 42:1-4",
+          "fulfillmentReference": "Matthew 12:18-21",
+          "clues": [
+            "This prophecy belongs to the servant theme.",
+            "The Old Testament reference is Isaiah 42:1-4.",
+            "The wording includes: \"Behold my servant, whom I uphold; mine elect.\"",
+            "A New Testament connection appears at Matthew 12:18-21.",
+            "The fulfillment wording includes: \"Behold my servant, whom I have chosen.\""
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Matthew's quotation presents Jesus' ministry through Isaiah's servant language."
+        },
+        {
+          "id": "pcl-020",
+          "title": "Despised And Rejected",
+          "theme": "Suffering",
+          "answer": "Rejected by his own",
+          "acceptedAnswers": [
+            "Rejected by his own",
+            "Despised And Rejected",
+            "Isaiah 53:3",
+            "John 1:11"
+          ],
+          "reference": "Isaiah 53:3",
+          "fulfillmentReference": "John 1:11",
+          "clues": [
+            "This prophecy belongs to the suffering theme.",
+            "The Old Testament reference is Isaiah 53:3.",
+            "The wording includes: \"He is despised and rejected of men.\"",
+            "A New Testament connection appears at John 1:11.",
+            "The fulfillment wording includes: \"He came unto his own, and his own received him not.\""
+          ],
+          "difficulty": "medium",
+          "teachingNote": "This pairing is thematic rather than a direct quotation, so the wording stays careful."
+        }
+      ]
+    },
+    {
+      "id": "pcl-session-05",
+      "title": "Prophecy Clue Ladder Set 05",
+      "theme": "Five-clue prophecy identification rounds",
+      "rounds": [
+        {
+          "id": "pcl-021",
+          "title": "Wounded For Transgressions",
+          "theme": "Suffering",
+          "answer": "Suffering servant",
+          "acceptedAnswers": [
+            "Suffering servant",
+            "Wounded For Transgressions",
+            "Isaiah 53:5",
+            "1 Peter 2:24"
+          ],
+          "reference": "Isaiah 53:5",
+          "fulfillmentReference": "1 Peter 2:24",
+          "clues": [
+            "This prophecy belongs to the suffering theme.",
+            "The Old Testament reference is Isaiah 53:5.",
+            "The wording includes: \"He was wounded for our transgressions.\"",
+            "A New Testament connection appears at 1 Peter 2:24.",
+            "The fulfillment wording includes: \"By whose stripes ye were healed.\""
+          ],
+          "difficulty": "easy",
+          "teachingNote": "1 Peter explicitly uses Isaiah 53 language for Christ's suffering."
+        },
+        {
+          "id": "pcl-022",
+          "title": "Silent Before Accusers",
+          "theme": "Suffering",
+          "answer": "Silent before accusers",
+          "acceptedAnswers": [
+            "Silent before accusers",
+            "Silent Before Accusers",
+            "Isaiah 53:7",
+            "Matthew 27:14"
+          ],
+          "reference": "Isaiah 53:7",
+          "fulfillmentReference": "Matthew 27:14",
+          "clues": [
+            "This prophecy belongs to the suffering theme.",
+            "The Old Testament reference is Isaiah 53:7.",
+            "The wording includes: \"He opened not his mouth.\"",
+            "A New Testament connection appears at Matthew 27:14.",
+            "The fulfillment wording includes: \"He answered him to never a word.\""
+          ],
+          "difficulty": "easy",
+          "teachingNote": "The Gospel scene is a widely recognized fulfillment connection to Isaiah 53."
+        },
+        {
+          "id": "pcl-023",
+          "title": "With The Rich In Death",
+          "theme": "Death",
+          "answer": "Buried with the rich",
+          "acceptedAnswers": [
+            "Buried with the rich",
+            "With The Rich In Death",
+            "Isaiah 53:9",
+            "Matthew 27:57-60"
+          ],
+          "reference": "Isaiah 53:9",
+          "fulfillmentReference": "Matthew 27:57-60",
+          "clues": [
+            "This prophecy belongs to the death theme.",
+            "The Old Testament reference is Isaiah 53:9.",
+            "The wording includes: \"With the rich in his death.\"",
+            "A New Testament connection appears at Matthew 27:57-60.",
+            "The fulfillment wording includes: \"A rich man of Arimathaea... laid it in his own new tomb.\""
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Matthew's burial account is commonly read with Isaiah 53:9."
+        },
+        {
+          "id": "pcl-024",
+          "title": "Numbered With Transgressors",
+          "theme": "Suffering",
+          "answer": "Numbered with transgressors",
+          "acceptedAnswers": [
+            "Numbered with transgressors",
+            "Numbered With Transgressors",
+            "Isaiah 53:12",
+            "Luke 22:37"
+          ],
+          "reference": "Isaiah 53:12",
+          "fulfillmentReference": "Luke 22:37",
+          "clues": [
+            "This prophecy belongs to the suffering theme.",
+            "The Old Testament reference is Isaiah 53:12.",
+            "The wording includes: \"He was numbered with the transgressors.\"",
+            "A New Testament connection appears at Luke 22:37.",
+            "The fulfillment wording includes: \"He was reckoned among the transgressors.\""
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Luke records Jesus explicitly quoting this line about what must be accomplished."
+        },
+        {
+          "id": "pcl-025",
+          "title": "Bethlehem Ruler",
+          "theme": "Birth",
+          "answer": "Born in Bethlehem",
+          "acceptedAnswers": [
+            "Born in Bethlehem",
+            "Bethlehem Ruler",
+            "Micah 5:2",
+            "Matthew 2:1-6"
+          ],
+          "reference": "Micah 5:2",
+          "fulfillmentReference": "Matthew 2:1-6",
+          "clues": [
+            "This prophecy belongs to the birth theme.",
+            "The Old Testament reference is Micah 5:2.",
+            "The wording includes: \"Out of thee shall he come forth unto me that is to be ruler in Israel.\"",
+            "A New Testament connection appears at Matthew 2:1-6.",
+            "The fulfillment wording includes: \"In Bethlehem of Judaea: for thus it is written by the prophet.\""
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Matthew directly links Messiah's birthplace with Micah 5:2."
+        }
+      ]
+    }
+  ]
+}

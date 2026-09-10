@@ -1,0 +1,576 @@
+{
+  "$schema": "./schemas/initials.schema.json",
+  "game": "initials",
+  "version": 1,
+  "displayName": "Bible Initials",
+  "roundsPerSession": 5,
+  "sessions": [
+    {
+      "id": "in-session-01",
+      "title": "Places And Objects",
+      "theme": "Well-known locations and sacred items",
+      "rounds": [
+        {
+          "id": "in-s1-r1",
+          "category": "Object",
+          "initials": "A.C.",
+          "answer": "Ark of the Covenant",
+          "aliases": [
+            "Ark of the Covenant",
+            "ark of the covenant",
+            "covenant ark"
+          ],
+          "hints": [
+            "This answer names a sacred object rather than a person or place.",
+            "It belonged at the center of Israel's worship life.",
+            "This item represented God's covenant presence among Israel.",
+            "Priests handled it with great care during Israel's movements.",
+            "It was carried with strict instructions and housed the tablets of the law.",
+            "It sat in the Most Holy Place before the exile."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Ark of the Covenant and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "in-s1-r2",
+          "category": "Object",
+          "initials": "B.B.",
+          "answer": "Burning Bush",
+          "aliases": [
+            "Burning Bush",
+            "burning bush"
+          ],
+          "hints": [
+            "This answer describes a dramatic sign, not a permanent location.",
+            "A future deliverer noticed it while working alone outdoors.",
+            "This sign appeared while a shepherd was in the wilderness.",
+            "It interrupted ordinary work with a holy encounter.",
+            "Its mystery was not just flame, but the fact that it remained intact.",
+            "God called Moses through this object near Horeb."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Burning Bush and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "in-s1-r3",
+          "category": "Place",
+          "initials": "R.S.",
+          "answer": "Red Sea",
+          "aliases": [
+            "Red Sea",
+            "red sea"
+          ],
+          "hints": [
+            "This answer names a body of water tied to Israel's escape story.",
+            "It became the boundary between fear and deliverance.",
+            "This place became the edge of a crisis after Israel left Egypt.",
+            "God made a route through it when no route existed.",
+            "A path appeared here where there should not have been one.",
+            "Pharaoh's army was overwhelmed when the waters returned."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Red Sea and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "in-s1-r4",
+          "category": "Place",
+          "initials": "J.R.",
+          "answer": "Jordan River",
+          "aliases": [
+            "Jordan River",
+            "jordan river",
+            "river jordan"
+          ],
+          "hints": [
+            "This answer names a river rather than a city or mountain.",
+            "It is important in both Old and New Testament scenes.",
+            "Crossings and baptisms both make this location significant.",
+            "Its waters marked a transition into promise and ministry.",
+            "Israel entered the promised land after this water stopped upstream.",
+            "John baptized many people here, including Jesus."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Jordan River and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "in-s1-r5",
+          "category": "Place",
+          "initials": "U.R.",
+          "answer": "Upper Room",
+          "aliases": [
+            "Upper Room",
+            "upper room"
+          ],
+          "hints": [
+            "This answer is an indoor place connected with a small gathered group.",
+            "It became important during a tense and prayerful season in Jerusalem.",
+            "This indoor setting is tied to waiting, prayer, and shared meals.",
+            "Followers of Jesus were told to gather and remain together here.",
+            "Jesus ate with the disciples here before his arrest.",
+            "Acts also connects this place with the believers gathered in Jerusalem."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Upper Room and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "in-session-02",
+      "title": "People And Roles",
+      "theme": "Recognizable names and titles",
+      "rounds": [
+        {
+          "id": "in-s2-r1",
+          "category": "Parable Character",
+          "initials": "G.S.",
+          "answer": "Good Samaritan",
+          "aliases": [
+            "Good Samaritan",
+            "good samaritan"
+          ],
+          "hints": [
+            "This answer is a parable figure, not a historical officeholder.",
+            "He became memorable because compassion came from an unexpected source.",
+            "This figure becomes memorable because compassion came from an unexpected direction.",
+            "His actions mattered more than the religious status of those who passed by.",
+            "Religious passersby failed where this traveler acted.",
+            "Jesus used this character to redefine neighbor love."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Good Samaritan and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "in-s2-r2",
+          "category": "Prophet",
+          "initials": "J.B.",
+          "answer": "John the Baptist",
+          "aliases": [
+            "John the Baptist",
+            "john the baptist",
+            "john baptist"
+          ],
+          "hints": [
+            "This answer names a preacher whose ministry prepared for someone greater.",
+            "He lived and spoke in a rough wilderness setting.",
+            "This desert preacher prepared the way for someone greater.",
+            "His message centered on repentance and readiness.",
+            "Crowds came to hear repentance and receive baptism from him.",
+            "He baptized Jesus and later died under Herod's rule."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review John the Baptist and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "in-s2-r3",
+          "category": "Queen",
+          "initials": "Q.E.",
+          "answer": "Queen Esther",
+          "aliases": [
+            "Queen Esther",
+            "queen esther",
+            "esther"
+          ],
+          "hints": [
+            "This answer is a woman whose position gave her access in a dangerous court.",
+            "Her story depends on courage, timing, and hidden identity.",
+            "This woman navigated danger inside a Persian court.",
+            "A threat against her people forced her to act.",
+            "Her courage involved timing, banquets, and an unsummoned approach.",
+            "She helped stop Haman's plot against the Jews."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Queen Esther and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "in-s2-r4",
+          "category": "King",
+          "initials": "K.D.",
+          "answer": "King David",
+          "aliases": [
+            "King David",
+            "king david",
+            "david"
+          ],
+          "hints": [
+            "This answer is one of Israel's best-known rulers.",
+            "His story begins long before he sat on a throne.",
+            "This ruler first became known through music, courage, and a sling.",
+            "He united kingship, worship language, and military leadership.",
+            "Jerusalem became central during his reign.",
+            "He is Israel's shepherd king and a major psalm writer."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review King David and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "in-s2-r5",
+          "category": "Apostle",
+          "initials": "A.P.",
+          "answer": "Apostle Paul",
+          "aliases": [
+            "Apostle Paul",
+            "apostle paul",
+            "paul"
+          ],
+          "hints": [
+            "This answer names a major New Testament missionary.",
+            "His ministry followed a complete redirection of life.",
+            "This missionary wrote many New Testament letters.",
+            "He carried the gospel across cities in the Roman world.",
+            "His ministry followed a dramatic conversion and years of travel.",
+            "He was once known as Saul of Tarsus."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Apostle Paul and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "in-session-03",
+      "title": "Events And Images",
+      "theme": "Foundational scenes from across Scripture",
+      "rounds": [
+        {
+          "id": "in-s3-r1",
+          "category": "Law",
+          "initials": "T.C.",
+          "answer": "Ten Commandments",
+          "aliases": [
+            "Ten Commandments",
+            "ten commandments"
+          ],
+          "hints": [
+            "This answer is a group of commands rather than a person or place.",
+            "It stands near the beginning of Israel's covenant life.",
+            "These words define covenant boundaries for worship and community.",
+            "They summarize loyalty to God and responsibility toward others.",
+            "They were first given at Sinai and written on stone tablets.",
+            "They begin with loyalty to the Lord and include commands about honoring, truth, and rest."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Ten Commandments and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "in-s3-r2",
+          "category": "Meal",
+          "initials": "L.S.",
+          "answer": "Last Supper",
+          "aliases": [
+            "Last Supper",
+            "last supper"
+          ],
+          "hints": [
+            "This answer is a meal remembered for both fellowship and coming sorrow.",
+            "It took place during the final approach to the crucifixion.",
+            "This meal is remembered for bread, cup, and betrayal in the same room.",
+            "It joined covenant language with the shadow of departure.",
+            "It took place shortly before Jesus was arrested.",
+            "It is the final Passover meal Jesus shared with his disciples."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Last Supper and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "in-s3-r3",
+          "category": "Idolatry",
+          "initials": "G.C.",
+          "answer": "Golden Calf",
+          "aliases": [
+            "Golden Calf",
+            "golden calf"
+          ],
+          "hints": [
+            "This answer is an object connected to a national failure in worship.",
+            "It became a symbol of impatience while Moses was absent.",
+            "This object exposed impatience while Moses was away.",
+            "The people turned visible wealth into a false center of devotion.",
+            "Aaron's involvement made the failure especially costly.",
+            "Israel worshiped this image at Sinai."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Golden Calf and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "in-s3-r4",
+          "category": "Tower",
+          "initials": "T.B.",
+          "answer": "Tower of Babel",
+          "aliases": [
+            "Tower of Babel",
+            "tower of babel",
+            "babel tower"
+          ],
+          "hints": [
+            "This answer is a building project remembered for judgment, not completion.",
+            "It represents human ambition pushing upward in the wrong way.",
+            "Human pride and collective ambition drive this story.",
+            "Its builders wanted unity and fame on their own terms.",
+            "Its builders wanted a name for themselves and a city that would hold them together.",
+            "God answered by confusing language and scattering the people."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Tower of Babel and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "in-s3-r5",
+          "category": "Prophecy",
+          "initials": "N.J.",
+          "answer": "New Jerusalem",
+          "aliases": [
+            "New Jerusalem",
+            "new jerusalem"
+          ],
+          "hints": [
+            "This answer is a future image rather than an ancient battlefield or object.",
+            "It belongs to Scripture's final vision of restoration.",
+            "This image closes the Bible with restoration rather than ruin.",
+            "It is presented as a city prepared by God, not built by human effort.",
+            "It is described as a prepared city coming down from heaven.",
+            "Revelation presents this as the dwelling place of God with his people."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review New Jerusalem and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "in-session-04",
+      "title": "Teachings And Metaphors",
+      "theme": "Parables and identity language",
+      "rounds": [
+        {
+          "id": "in-s4-r1",
+          "category": "Parable",
+          "initials": "P.S.",
+          "answer": "Prodigal Son",
+          "aliases": [
+            "Prodigal Son",
+            "prodigal son",
+            "lost son"
+          ],
+          "hints": [
+            "This answer is a parable character rather than an historical biography.",
+            "His story moves from waste and distance toward mercy and welcome.",
+            "This story moves from rebellion to hunger to welcome.",
+            "An older brother and a patient father sharpen the lesson.",
+            "A far country and a faithful father both matter here.",
+            "Jesus used this son to picture repentance and grace."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Prodigal Son and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "in-s4-r2",
+          "category": "Parable Image",
+          "initials": "M.S.",
+          "answer": "Mustard Seed",
+          "aliases": [
+            "Mustard Seed",
+            "mustard seed"
+          ],
+          "hints": [
+            "This answer is a small image used to explain a large outcome.",
+            "Jesus used it to show how the kingdom can begin quietly.",
+            "This image highlights the surprising results of small beginnings.",
+            "Its size is part of the lesson, not just its species.",
+            "Jesus used it to describe kingdom growth.",
+            "It begins tiny but becomes large enough for birds to perch."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Mustard Seed and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "in-s4-r3",
+          "category": "Mission",
+          "initials": "G.C.",
+          "answer": "Great Commission",
+          "aliases": [
+            "Great Commission",
+            "great commission"
+          ],
+          "hints": [
+            "This answer is a mission statement rather than a miracle or title.",
+            "It comes after resurrection and before the church's outward spread.",
+            "This charge comes after resurrection and before ascension.",
+            "It turns disciples into sent witnesses.",
+            "It includes going, baptizing, and teaching.",
+            "Jesus gave this worldwide assignment to his disciples in Matthew 28."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Great Commission and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "in-s4-r4",
+          "category": "Teaching Image",
+          "initials": "L.W.",
+          "answer": "Living Water",
+          "aliases": [
+            "Living Water",
+            "living water"
+          ],
+          "hints": [
+            "This answer is a metaphor Jesus used in conversation, not a literal supply.",
+            "It turns a daily physical need into a promise of spiritual life.",
+            "This phrase turns an everyday need into a spiritual promise.",
+            "A discussion at a well made the image unforgettable.",
+            "A conversation at a well made it especially memorable.",
+            "Jesus used it to speak about life that satisfies forever."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Living Water and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "in-s4-r5",
+          "category": "Title",
+          "initials": "B.L.",
+          "answer": "Bread of Life",
+          "aliases": [
+            "Bread of Life",
+            "bread of life"
+          ],
+          "hints": [
+            "This answer is a title Jesus used for himself.",
+            "It connects a basic human need with dependence on Christ.",
+            "This title connects hunger with dependence on Christ.",
+            "It appears in teaching that follows a crowd being fed.",
+            "It appears in a discourse after a miracle meal.",
+            "Jesus used this phrase in John 6."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Bread of Life and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "in-session-05",
+      "title": "Prophets And Practice",
+      "theme": "Images of endurance, worship, and discipleship",
+      "rounds": [
+        {
+          "id": "in-s5-r1",
+          "category": "Virtue List",
+          "initials": "F.S.",
+          "answer": "Fruit of the Spirit",
+          "aliases": [
+            "Fruit of the Spirit",
+            "fruit of the spirit"
+          ],
+          "hints": [
+            "This answer names character produced by God's Spirit.",
+            "It is presented as a unified result, not a pile of unrelated achievements.",
+            "This expression describes character produced rather than merely performed.",
+            "Paul contrasts it with flesh-driven living.",
+            "Paul contrasts it with the acts of the flesh in Galatians.",
+            "Love, joy, peace, and self-control are part of this list."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Fruit of the Spirit and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "in-s5-r2",
+          "category": "Vision",
+          "initials": "D.B.",
+          "answer": "Valley of Dry Bones",
+          "aliases": [
+            "Valley of Dry Bones",
+            "valley of dry bones",
+            "dry bones"
+          ],
+          "hints": [
+            "This answer is a prophetic scene rather than a simple teaching phrase.",
+            "It begins with hopelessness spread across a landscape.",
+            "This scene begins in hopelessness and ends in breath and standing.",
+            "God uses it to picture renewal for a people who seem finished.",
+            "It is one of Ezekiel's most vivid prophetic visions.",
+            "The Lord asks whether these bones can live."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Valley of Dry Bones and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "in-s5-r3",
+          "category": "Armor",
+          "initials": "A.G.",
+          "answer": "Armor of God",
+          "aliases": [
+            "Armor of God",
+            "armor of god"
+          ],
+          "hints": [
+            "This answer is a discipleship image built from battle equipment.",
+            "It teaches readiness for spiritual conflict rather than physical war.",
+            "This teaching uses military equipment as a discipleship picture.",
+            "Each piece stands for a grace or truth believers must take up.",
+            "Truth, righteousness, peace, faith, salvation, and Scripture all appear in it.",
+            "Paul presents this image in Ephesians 6."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Armor of God and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "in-s5-r4",
+          "category": "Place",
+          "initials": "M.C.",
+          "answer": "Mount Carmel",
+          "aliases": [
+            "Mount Carmel",
+            "mount carmel"
+          ],
+          "hints": [
+            "This answer is a mountain linked to a showdown over worship.",
+            "A prophet and a corrupt religious system collide here.",
+            "This location is linked to confrontation over true worship.",
+            "Fire from heaven settles what argument alone could not.",
+            "A prophet repaired an altar and called on the Lord here.",
+            "Elijah faced the prophets of Baal on this mountain."
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Mount Carmel and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "in-s5-r5",
+          "category": "Offering",
+          "initials": "W.M.",
+          "answer": "Widow's Mite",
+          "aliases": [
+            "Widow's Mite",
+            "widow's mite",
+            "widows mite"
+          ],
+          "hints": [
+            "This answer describes a small gift that carried great spiritual weight.",
+            "Its importance comes from sacrifice, not public size.",
+            "This phrase highlights value measured by sacrifice rather than size.",
+            "Jesus used it to expose the difference between appearance and devotion.",
+            "Jesus contrasted this gift with larger public offerings.",
+            "A poor widow gave two very small coins."
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Widow's Mite and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "in-s5-r6",
+          "category": "City",
+          "initials": "C.S.",
+          "answer": "City of Samaria",
+          "aliases": [
+            "City of Samaria",
+            "city of samaria",
+            "Samaria",
+            "samaria"
+          ],
+          "hints": [
+            "This answer names a city rather than a person or object.",
+            "It became a capital city in the northern kingdom.",
+            "Prophets often spoke to rulers and people connected with this place.",
+            "Its name later became linked with a broader region and people.",
+            "Ahab and other kings of Israel ruled from this city.",
+            "Jesus also used this place name when speaking about witness beyond Jerusalem."
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review City of Samaria and how it connects to the Bible before continuing."
+        }
+      ]
+    }
+  ]
+}

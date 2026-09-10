@@ -1,0 +1,3784 @@
+{
+  "$schema": "./schemas/bible-connections.schema.json",
+  "game": "bible-connections",
+  "version": 1,
+  "displayName": "Bible Connections",
+  "roundsPerSession": 3,
+  "sessions": [
+    {
+      "id": "bc-session-001",
+      "title": "Connections Pack 001",
+      "theme": "Bible term groups",
+      "rounds": [
+        {
+          "id": "bc-r001",
+          "title": "Connections Board 1",
+          "groups": [
+            {
+              "id": "bc-r001-g01",
+              "category": "Books Of The Law",
+              "items": [
+                "Genesis",
+                "Exodus",
+                "Leviticus",
+                "Numbers"
+              ]
+            },
+            {
+              "id": "bc-r001-g02",
+              "category": "Moses Family",
+              "items": [
+                "Amram",
+                "Jochebed",
+                "Aaron",
+                "Miriam"
+              ]
+            },
+            {
+              "id": "bc-r001-g03",
+              "category": "Exodus Stops",
+              "items": [
+                "Succoth",
+                "Marah",
+                "Elim",
+                "Rephidim"
+              ]
+            },
+            {
+              "id": "bc-r001-g04",
+              "category": "Offerings",
+              "items": [
+                "Burnt",
+                "Grain",
+                "Peace",
+                "Sin"
+              ]
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Connections Board 1 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r002",
+          "title": "Connections Board 2",
+          "groups": [
+            {
+              "id": "bc-r002-g01",
+              "category": "Return History Books",
+              "items": [
+                "2 Chronicles",
+                "Ezra",
+                "Nehemiah",
+                "Esther"
+              ]
+            },
+            {
+              "id": "bc-r002-g02",
+              "category": "Twelve Apostles A",
+              "items": [
+                "Peter",
+                "Andrew",
+                "James",
+                "John"
+              ]
+            },
+            {
+              "id": "bc-r002-g03",
+              "category": "Paul Travel Places",
+              "items": [
+                "Corinth",
+                "Ephesus",
+                "Troas",
+                "Rome"
+              ]
+            },
+            {
+              "id": "bc-r002-g04",
+              "category": "Animals In Sacrifice",
+              "items": [
+                "Bullock",
+                "Ram",
+                "Lamb",
+                "Turtledove"
+              ]
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Connections Board 2 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r003",
+          "title": "Connections Board 3",
+          "groups": [
+            {
+              "id": "bc-r003-g01",
+              "category": "Minor Prophets A",
+              "items": [
+                "Hosea",
+                "Joel",
+                "Amos",
+                "Obadiah"
+              ]
+            },
+            {
+              "id": "bc-r003-g02",
+              "category": "High Priests",
+              "items": [
+                "Eli",
+                "Abiathar",
+                "Zadok",
+                "Caiaphas"
+              ]
+            },
+            {
+              "id": "bc-r003-g03",
+              "category": "Judges Places",
+              "items": [
+                "Ophrah",
+                "Timnah",
+                "Shiloh",
+                "Mizpah"
+              ]
+            },
+            {
+              "id": "bc-r003-g04",
+              "category": "More Revelation Churches",
+              "items": [
+                "Sardis",
+                "Philadelphia",
+                "Laodicea",
+                "Patmos"
+              ]
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Connections Board 3 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bc-session-002",
+      "title": "Connections Pack 002",
+      "theme": "Bible term groups",
+      "rounds": [
+        {
+          "id": "bc-r004",
+          "title": "Connections Board 4",
+          "groups": [
+            {
+              "id": "bc-r004-g01",
+              "category": "Gospels",
+              "items": [
+                "Matthew",
+                "Mark",
+                "Luke",
+                "John"
+              ]
+            },
+            {
+              "id": "bc-r004-g02",
+              "category": "Judges",
+              "items": [
+                "Deborah",
+                "Gideon",
+                "Jephthah",
+                "Samson"
+              ]
+            },
+            {
+              "id": "bc-r004-g03",
+              "category": "Tabernacle Items",
+              "items": [
+                "Ark",
+                "Altar",
+                "Lampstand",
+                "Veil"
+              ]
+            },
+            {
+              "id": "bc-r004-g04",
+              "category": "Miracles",
+              "items": [
+                "Water to wine",
+                "Storm calmed",
+                "Lazarus raised",
+                "Blind man healed"
+              ]
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Connections Board 4 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r005",
+          "title": "Connections Board 5",
+          "groups": [
+            {
+              "id": "bc-r005-g01",
+              "category": "Pastoral Letters",
+              "items": [
+                "1 Timothy",
+                "2 Timothy",
+                "Titus",
+                "Philemon"
+              ]
+            },
+            {
+              "id": "bc-r005-g02",
+              "category": "Twelve Apostles B",
+              "items": [
+                "Philip",
+                "Bartholomew",
+                "Thomas",
+                "Matthew"
+              ]
+            },
+            {
+              "id": "bc-r005-g03",
+              "category": "Kingdom Capitals",
+              "items": [
+                "Samaria",
+                "Damascus",
+                "Nineveh",
+                "Babylon"
+              ]
+            },
+            {
+              "id": "bc-r005-g04",
+              "category": "Offerings",
+              "items": [
+                "Burnt",
+                "Grain",
+                "Peace",
+                "Sin"
+              ]
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Connections Board 5 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r006",
+          "title": "Connections Board 6",
+          "groups": [
+            {
+              "id": "bc-r006-g01",
+              "category": "Pentateuch People",
+              "items": [
+                "Adam",
+                "Noah",
+                "Abraham",
+                "Moses"
+              ]
+            },
+            {
+              "id": "bc-r006-g02",
+              "category": "Foreign Rulers",
+              "items": [
+                "Pharaoh",
+                "Nebuchadnezzar",
+                "Cyrus",
+                "Herod"
+              ]
+            },
+            {
+              "id": "bc-r006-g03",
+              "category": "Temple Furnishings",
+              "items": [
+                "Sea",
+                "Lavers",
+                "Cherubim",
+                "Pillars"
+              ]
+            },
+            {
+              "id": "bc-r006-g04",
+              "category": "Animals In Sacrifice",
+              "items": [
+                "Bullock",
+                "Ram",
+                "Lamb",
+                "Turtledove"
+              ]
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Connections Board 6 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bc-session-003",
+      "title": "Connections Pack 003",
+      "theme": "Bible term groups",
+      "rounds": [
+        {
+          "id": "bc-r007",
+          "title": "Connections Board 7",
+          "groups": [
+            {
+              "id": "bc-r007-g01",
+              "category": "Poetry Themes",
+              "items": [
+                "Praise",
+                "Wisdom",
+                "Vanity",
+                "Love"
+              ]
+            },
+            {
+              "id": "bc-r007-g02",
+              "category": "United Monarchy",
+              "items": [
+                "Saul",
+                "David",
+                "Solomon",
+                "Jonathan"
+              ]
+            },
+            {
+              "id": "bc-r007-g03",
+              "category": "Return Places",
+              "items": [
+                "Jerusalem",
+                "Bethany",
+                "Emmaus",
+                "Nazareth"
+              ]
+            },
+            {
+              "id": "bc-r007-g04",
+              "category": "More Revelation Churches",
+              "items": [
+                "Sardis",
+                "Philadelphia",
+                "Laodicea",
+                "Patmos"
+              ]
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Connections Board 7 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r008",
+          "title": "Connections Board 8",
+          "groups": [
+            {
+              "id": "bc-r008-g01",
+              "category": "Early History Books",
+              "items": [
+                "Joshua",
+                "Judges",
+                "Ruth",
+                "1 Samuel"
+              ]
+            },
+            {
+              "id": "bc-r008-g02",
+              "category": "Twelve Apostles C",
+              "items": [
+                "James son of Alphaeus",
+                "Thaddaeus",
+                "Simon the Zealot",
+                "Judas Iscariot"
+              ]
+            },
+            {
+              "id": "bc-r008-g03",
+              "category": "Armor Of God",
+              "items": [
+                "Belt",
+                "Breastplate",
+                "Shield",
+                "Helmet"
+              ]
+            },
+            {
+              "id": "bc-r008-g04",
+              "category": "Miracles",
+              "items": [
+                "Water to wine",
+                "Storm calmed",
+                "Lazarus raised",
+                "Blind man healed"
+              ]
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Connections Board 8 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r009",
+          "title": "Connections Board 9",
+          "groups": [
+            {
+              "id": "bc-r009-g01",
+              "category": "Wisdom Books",
+              "items": [
+                "Job",
+                "Psalms",
+                "Proverbs",
+                "Ecclesiastes"
+              ]
+            },
+            {
+              "id": "bc-r009-g02",
+              "category": "Women Of Faith",
+              "items": [
+                "Sarah",
+                "Rebekah",
+                "Hannah",
+                "Elizabeth"
+              ]
+            },
+            {
+              "id": "bc-r009-g03",
+              "category": "Jesus Ministry Places",
+              "items": [
+                "Jordan River",
+                "Wilderness",
+                "Sea of Galilee",
+                "Mount of Olives"
+              ]
+            },
+            {
+              "id": "bc-r009-g04",
+              "category": "Offerings",
+              "items": [
+                "Burnt",
+                "Grain",
+                "Peace",
+                "Sin"
+              ]
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Connections Board 9 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bc-session-004",
+      "title": "Connections Pack 004",
+      "theme": "Bible term groups",
+      "rounds": [
+        {
+          "id": "bc-r010",
+          "title": "Connections Board 10",
+          "groups": [
+            {
+              "id": "bc-r010-g01",
+              "category": "Minor Prophets B",
+              "items": [
+                "Jonah",
+                "Micah",
+                "Nahum",
+                "Habakkuk"
+              ]
+            },
+            {
+              "id": "bc-r010-g02",
+              "category": "Queens And Royal Women",
+              "items": [
+                "Vashti",
+                "Bathsheba",
+                "Athaliah",
+                "Jezebel"
+              ]
+            },
+            {
+              "id": "bc-r010-g03",
+              "category": "Patriarch Places",
+              "items": [
+                "Haran",
+                "Bethel",
+                "Hebron",
+                "Beersheba"
+              ]
+            },
+            {
+              "id": "bc-r010-g04",
+              "category": "Animals In Sacrifice",
+              "items": [
+                "Bullock",
+                "Ram",
+                "Lamb",
+                "Turtledove"
+              ]
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Connections Board 10 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r011",
+          "title": "Connections Board 11",
+          "groups": [
+            {
+              "id": "bc-r011-g01",
+              "category": "Church Letters A",
+              "items": [
+                "Romans",
+                "1 Corinthians",
+                "2 Corinthians",
+                "Galatians"
+              ]
+            },
+            {
+              "id": "bc-r011-g02",
+              "category": "Gospel Women",
+              "items": [
+                "Mary Magdalene",
+                "Martha",
+                "Mary of Bethany",
+                "Joanna"
+              ]
+            },
+            {
+              "id": "bc-r011-g03",
+              "category": "Acts Places",
+              "items": [
+                "Joppa",
+                "Antioch",
+                "Philippi",
+                "Athens"
+              ]
+            },
+            {
+              "id": "bc-r011-g04",
+              "category": "More Revelation Churches",
+              "items": [
+                "Sardis",
+                "Philadelphia",
+                "Laodicea",
+                "Patmos"
+              ]
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Connections Board 11 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r012",
+          "title": "Connections Board 12",
+          "groups": [
+            {
+              "id": "bc-r012-g01",
+              "category": "General Letters A",
+              "items": [
+                "Hebrews",
+                "James",
+                "1 Peter",
+                "2 Peter"
+              ]
+            },
+            {
+              "id": "bc-r012-g02",
+              "category": "Prophets In Kings",
+              "items": [
+                "Elijah",
+                "Elisha",
+                "Micaiah",
+                "Huldah"
+              ]
+            },
+            {
+              "id": "bc-r012-g03",
+              "category": "Conquest Places",
+              "items": [
+                "Jordan",
+                "Jericho",
+                "Ai",
+                "Gibeon"
+              ]
+            },
+            {
+              "id": "bc-r012-g04",
+              "category": "Miracles",
+              "items": [
+                "Water to wine",
+                "Storm calmed",
+                "Lazarus raised",
+                "Blind man healed"
+              ]
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Connections Board 12 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bc-session-005",
+      "title": "Connections Pack 005",
+      "theme": "Bible term groups",
+      "rounds": [
+        {
+          "id": "bc-r013",
+          "title": "Connections Board 13",
+          "groups": [
+            {
+              "id": "bc-r013-g01",
+              "category": "Exodus Places",
+              "items": [
+                "Egypt",
+                "Goshen",
+                "Sinai",
+                "Moab"
+              ]
+            },
+            {
+              "id": "bc-r013-g02",
+              "category": "Major Prophets As People",
+              "items": [
+                "Isaiah",
+                "Jeremiah",
+                "Ezekiel",
+                "Daniel"
+              ]
+            },
+            {
+              "id": "bc-r013-g03",
+              "category": "Island Places",
+              "items": [
+                "Patmos",
+                "Cyprus",
+                "Malta",
+                "Crete"
+              ]
+            },
+            {
+              "id": "bc-r013-g04",
+              "category": "Offerings",
+              "items": [
+                "Burnt",
+                "Grain",
+                "Peace",
+                "Sin"
+              ]
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Connections Board 13 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r014",
+          "title": "Connections Board 14",
+          "groups": [
+            {
+              "id": "bc-r014-g01",
+              "category": "Prophet Books With One Chapter",
+              "items": [
+                "Obadiah",
+                "Philemon",
+                "2 John",
+                "3 John"
+              ]
+            },
+            {
+              "id": "bc-r014-g02",
+              "category": "Acts Missionaries",
+              "items": [
+                "Barnabas",
+                "Silas",
+                "Timothy",
+                "Luke"
+              ]
+            },
+            {
+              "id": "bc-r014-g03",
+              "category": "David Places",
+              "items": [
+                "Bethlehem",
+                "Adullam",
+                "Ziklag",
+                "Jerusalem"
+              ]
+            },
+            {
+              "id": "bc-r014-g04",
+              "category": "Animals In Sacrifice",
+              "items": [
+                "Bullock",
+                "Ram",
+                "Lamb",
+                "Turtledove"
+              ]
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Connections Board 14 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r015",
+          "title": "Connections Board 15",
+          "groups": [
+            {
+              "id": "bc-r015-g01",
+              "category": "Kingdom History Books",
+              "items": [
+                "2 Samuel",
+                "1 Kings",
+                "2 Kings",
+                "1 Chronicles"
+              ]
+            },
+            {
+              "id": "bc-r015-g02",
+              "category": "Villains And Opponents",
+              "items": [
+                "Goliath",
+                "Haman",
+                "Sanballat",
+                "Bar-Jesus"
+              ]
+            },
+            {
+              "id": "bc-r015-g03",
+              "category": "Priestly Items",
+              "items": [
+                "Ephod",
+                "Breastplate",
+                "Urim",
+                "Thummim"
+              ]
+            },
+            {
+              "id": "bc-r015-g04",
+              "category": "More Revelation Churches",
+              "items": [
+                "Sardis",
+                "Philadelphia",
+                "Laodicea",
+                "Patmos"
+              ]
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Connections Board 15 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bc-session-006",
+      "title": "Connections Pack 006",
+      "theme": "Bible term groups",
+      "rounds": [
+        {
+          "id": "bc-r016",
+          "title": "Connections Board 16",
+          "groups": [
+            {
+              "id": "bc-r016-g01",
+              "category": "Major Prophets",
+              "items": [
+                "Isaiah",
+                "Jeremiah",
+                "Lamentations",
+                "Ezekiel"
+              ]
+            },
+            {
+              "id": "bc-r016-g02",
+              "category": "Exile Faithful",
+              "items": [
+                "Hananiah",
+                "Mishael",
+                "Azariah",
+                "Mordecai"
+              ]
+            },
+            {
+              "id": "bc-r016-g03",
+              "category": "Exile Places",
+              "items": [
+                "Chebar",
+                "Susa",
+                "Persia",
+                "Media"
+              ]
+            },
+            {
+              "id": "bc-r016-g04",
+              "category": "Miracles",
+              "items": [
+                "Water to wine",
+                "Storm calmed",
+                "Lazarus raised",
+                "Blind man healed"
+              ]
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Connections Board 16 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r017",
+          "title": "Connections Board 17",
+          "groups": [
+            {
+              "id": "bc-r017-g01",
+              "category": "Minor Prophets C",
+              "items": [
+                "Zephaniah",
+                "Haggai",
+                "Zechariah",
+                "Malachi"
+              ]
+            },
+            {
+              "id": "bc-r017-g02",
+              "category": "Acts Converts",
+              "items": [
+                "Lydia",
+                "Cornelius",
+                "Ethiopian eunuch",
+                "Dionysius"
+              ]
+            },
+            {
+              "id": "bc-r017-g03",
+              "category": "Gospel Objects",
+              "items": [
+                "Loaves",
+                "Nets",
+                "Denarius",
+                "Alabaster box"
+              ]
+            },
+            {
+              "id": "bc-r017-g04",
+              "category": "Offerings",
+              "items": [
+                "Burnt",
+                "Grain",
+                "Peace",
+                "Sin"
+              ]
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Connections Board 17 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r018",
+          "title": "Connections Board 18",
+          "groups": [
+            {
+              "id": "bc-r018-g01",
+              "category": "Church Letters B",
+              "items": [
+                "Ephesians",
+                "Philippians",
+                "Colossians",
+                "1 Thessalonians"
+              ]
+            },
+            {
+              "id": "bc-r018-g02",
+              "category": "Patriarchs",
+              "items": [
+                "Abraham",
+                "Isaac",
+                "Jacob",
+                "Joseph"
+              ]
+            },
+            {
+              "id": "bc-r018-g03",
+              "category": "Galilee Places",
+              "items": [
+                "Capernaum",
+                "Cana",
+                "Nain",
+                "Bethsaida"
+              ]
+            },
+            {
+              "id": "bc-r018-g04",
+              "category": "Animals In Sacrifice",
+              "items": [
+                "Bullock",
+                "Ram",
+                "Lamb",
+                "Turtledove"
+              ]
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Connections Board 18 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bc-session-007",
+      "title": "Connections Pack 007",
+      "theme": "Bible term groups",
+      "rounds": [
+        {
+          "id": "bc-r019",
+          "title": "Connections Board 19",
+          "groups": [
+            {
+              "id": "bc-r019-g01",
+              "category": "John's Letters",
+              "items": [
+                "1 John",
+                "2 John",
+                "3 John",
+                "Revelation"
+              ]
+            },
+            {
+              "id": "bc-r019-g02",
+              "category": "Return Leaders",
+              "items": [
+                "Zerubbabel",
+                "Joshua",
+                "Ezra",
+                "Nehemiah"
+              ]
+            },
+            {
+              "id": "bc-r019-g03",
+              "category": "Garden And Early Places",
+              "items": [
+                "Eden",
+                "Ararat",
+                "Babel",
+                "Ur"
+              ]
+            },
+            {
+              "id": "bc-r019-g04",
+              "category": "More Revelation Churches",
+              "items": [
+                "Sardis",
+                "Philadelphia",
+                "Laodicea",
+                "Patmos"
+              ]
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Connections Board 19 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r020",
+          "title": "Connections Board 20",
+          "groups": [
+            {
+              "id": "bc-r020-g01",
+              "category": "Temple Books",
+              "items": [
+                "Kings",
+                "Chronicles",
+                "Ezra",
+                "Haggai"
+              ]
+            },
+            {
+              "id": "bc-r020-g02",
+              "category": "Paul's Friends",
+              "items": [
+                "Aquila",
+                "Priscilla",
+                "Epaphroditus",
+                "Tychicus"
+              ]
+            },
+            {
+              "id": "bc-r020-g03",
+              "category": "Passion Places",
+              "items": [
+                "Upper Room",
+                "Gethsemane",
+                "Golgotha",
+                "Tomb"
+              ]
+            },
+            {
+              "id": "bc-r020-g04",
+              "category": "Miracles",
+              "items": [
+                "Water to wine",
+                "Storm calmed",
+                "Lazarus raised",
+                "Blind man healed"
+              ]
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Connections Board 20 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r021",
+          "title": "Connections Board 21",
+          "groups": [
+            {
+              "id": "bc-r021-g01",
+              "category": "Kingdom History Books",
+              "items": [
+                "2 Samuel",
+                "1 Kings",
+                "2 Kings",
+                "1 Chronicles"
+              ]
+            },
+            {
+              "id": "bc-r021-g02",
+              "category": "Exile Faithful",
+              "items": [
+                "Hananiah",
+                "Mishael",
+                "Azariah",
+                "Mordecai"
+              ]
+            },
+            {
+              "id": "bc-r021-g03",
+              "category": "Jesus Ministry Places",
+              "items": [
+                "Jordan River",
+                "Wilderness",
+                "Sea of Galilee",
+                "Mount of Olives"
+              ]
+            },
+            {
+              "id": "bc-r021-g04",
+              "category": "Faith Chapter Examples",
+              "items": [
+                "Abel",
+                "Enoch",
+                "Rahab",
+                "Gideon"
+              ]
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Connections Board 21 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bc-session-008",
+      "title": "Connections Pack 008",
+      "theme": "Bible term groups",
+      "rounds": [
+        {
+          "id": "bc-r022",
+          "title": "Connections Board 22",
+          "groups": [
+            {
+              "id": "bc-r022-g01",
+              "category": "Major Prophets",
+              "items": [
+                "Isaiah",
+                "Jeremiah",
+                "Lamentations",
+                "Ezekiel"
+              ]
+            },
+            {
+              "id": "bc-r022-g02",
+              "category": "Acts Converts",
+              "items": [
+                "Lydia",
+                "Cornelius",
+                "Ethiopian eunuch",
+                "Dionysius"
+              ]
+            },
+            {
+              "id": "bc-r022-g03",
+              "category": "Patriarch Places",
+              "items": [
+                "Haran",
+                "Bethel",
+                "Hebron",
+                "Beersheba"
+              ]
+            },
+            {
+              "id": "bc-r022-g04",
+              "category": "I Am Sayings",
+              "items": [
+                "Bread of life",
+                "Light of the world",
+                "Good shepherd",
+                "True vine"
+              ]
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Connections Board 22 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r023",
+          "title": "Connections Board 23",
+          "groups": [
+            {
+              "id": "bc-r023-g01",
+              "category": "Minor Prophets C",
+              "items": [
+                "Zephaniah",
+                "Haggai",
+                "Zechariah",
+                "Malachi"
+              ]
+            },
+            {
+              "id": "bc-r023-g02",
+              "category": "Patriarchs",
+              "items": [
+                "Abraham",
+                "Isaac",
+                "Jacob",
+                "Joseph"
+              ]
+            },
+            {
+              "id": "bc-r023-g03",
+              "category": "Acts Places",
+              "items": [
+                "Joppa",
+                "Antioch",
+                "Philippi",
+                "Athens"
+              ]
+            },
+            {
+              "id": "bc-r023-g04",
+              "category": "Fruits Of The Spirit A",
+              "items": [
+                "Love",
+                "Joy",
+                "Peace",
+                "Longsuffering"
+              ]
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Connections Board 23 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r024",
+          "title": "Connections Board 24",
+          "groups": [
+            {
+              "id": "bc-r024-g01",
+              "category": "Church Letters B",
+              "items": [
+                "Ephesians",
+                "Philippians",
+                "Colossians",
+                "1 Thessalonians"
+              ]
+            },
+            {
+              "id": "bc-r024-g02",
+              "category": "Return Leaders",
+              "items": [
+                "Zerubbabel",
+                "Joshua",
+                "Ezra",
+                "Nehemiah"
+              ]
+            },
+            {
+              "id": "bc-r024-g03",
+              "category": "Conquest Places",
+              "items": [
+                "Jordan",
+                "Jericho",
+                "Ai",
+                "Gibeon"
+              ]
+            },
+            {
+              "id": "bc-r024-g04",
+              "category": "New Jerusalem Images",
+              "items": [
+                "Wall",
+                "Gates",
+                "River",
+                "Tree"
+              ]
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Connections Board 24 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bc-session-009",
+      "title": "Connections Pack 009",
+      "theme": "Bible term groups",
+      "rounds": [
+        {
+          "id": "bc-r025",
+          "title": "Connections Board 25",
+          "groups": [
+            {
+              "id": "bc-r025-g01",
+              "category": "John's Letters",
+              "items": [
+                "1 John",
+                "2 John",
+                "3 John",
+                "Revelation"
+              ]
+            },
+            {
+              "id": "bc-r025-g02",
+              "category": "Paul's Friends",
+              "items": [
+                "Aquila",
+                "Priscilla",
+                "Epaphroditus",
+                "Tychicus"
+              ]
+            },
+            {
+              "id": "bc-r025-g03",
+              "category": "Island Places",
+              "items": [
+                "Patmos",
+                "Cyprus",
+                "Malta",
+                "Crete"
+              ]
+            },
+            {
+              "id": "bc-r025-g04",
+              "category": "Faith Chapter Examples",
+              "items": [
+                "Abel",
+                "Enoch",
+                "Rahab",
+                "Gideon"
+              ]
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Connections Board 25 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r026",
+          "title": "Connections Board 26",
+          "groups": [
+            {
+              "id": "bc-r026-g01",
+              "category": "Temple Books",
+              "items": [
+                "Kings",
+                "Chronicles",
+                "Ezra",
+                "Haggai"
+              ]
+            },
+            {
+              "id": "bc-r026-g02",
+              "category": "Moses Family",
+              "items": [
+                "Amram",
+                "Jochebed",
+                "Aaron",
+                "Miriam"
+              ]
+            },
+            {
+              "id": "bc-r026-g03",
+              "category": "David Places",
+              "items": [
+                "Bethlehem",
+                "Adullam",
+                "Ziklag",
+                "Jerusalem"
+              ]
+            },
+            {
+              "id": "bc-r026-g04",
+              "category": "I Am Sayings",
+              "items": [
+                "Bread of life",
+                "Light of the world",
+                "Good shepherd",
+                "True vine"
+              ]
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Connections Board 26 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r027",
+          "title": "Connections Board 27",
+          "groups": [
+            {
+              "id": "bc-r027-g01",
+              "category": "Books Of The Law",
+              "items": [
+                "Genesis",
+                "Exodus",
+                "Leviticus",
+                "Numbers"
+              ]
+            },
+            {
+              "id": "bc-r027-g02",
+              "category": "Twelve Apostles A",
+              "items": [
+                "Peter",
+                "Andrew",
+                "James",
+                "John"
+              ]
+            },
+            {
+              "id": "bc-r027-g03",
+              "category": "Priestly Items",
+              "items": [
+                "Ephod",
+                "Breastplate",
+                "Urim",
+                "Thummim"
+              ]
+            },
+            {
+              "id": "bc-r027-g04",
+              "category": "Fruits Of The Spirit A",
+              "items": [
+                "Love",
+                "Joy",
+                "Peace",
+                "Longsuffering"
+              ]
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Connections Board 27 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bc-session-010",
+      "title": "Connections Pack 010",
+      "theme": "Bible term groups",
+      "rounds": [
+        {
+          "id": "bc-r028",
+          "title": "Connections Board 28",
+          "groups": [
+            {
+              "id": "bc-r028-g01",
+              "category": "Return History Books",
+              "items": [
+                "2 Chronicles",
+                "Ezra",
+                "Nehemiah",
+                "Esther"
+              ]
+            },
+            {
+              "id": "bc-r028-g02",
+              "category": "High Priests",
+              "items": [
+                "Eli",
+                "Abiathar",
+                "Zadok",
+                "Caiaphas"
+              ]
+            },
+            {
+              "id": "bc-r028-g03",
+              "category": "Exile Places",
+              "items": [
+                "Chebar",
+                "Susa",
+                "Persia",
+                "Media"
+              ]
+            },
+            {
+              "id": "bc-r028-g04",
+              "category": "New Jerusalem Images",
+              "items": [
+                "Wall",
+                "Gates",
+                "River",
+                "Tree"
+              ]
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Connections Board 28 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r029",
+          "title": "Connections Board 29",
+          "groups": [
+            {
+              "id": "bc-r029-g01",
+              "category": "Minor Prophets A",
+              "items": [
+                "Hosea",
+                "Joel",
+                "Amos",
+                "Obadiah"
+              ]
+            },
+            {
+              "id": "bc-r029-g02",
+              "category": "Judges",
+              "items": [
+                "Deborah",
+                "Gideon",
+                "Jephthah",
+                "Samson"
+              ]
+            },
+            {
+              "id": "bc-r029-g03",
+              "category": "Gospel Objects",
+              "items": [
+                "Loaves",
+                "Nets",
+                "Denarius",
+                "Alabaster box"
+              ]
+            },
+            {
+              "id": "bc-r029-g04",
+              "category": "Prayer Postures",
+              "items": [
+                "Kneeling",
+                "Standing",
+                "Lifting hands",
+                "Fasting"
+              ]
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Connections Board 29 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r030",
+          "title": "Connections Board 30",
+          "groups": [
+            {
+              "id": "bc-r030-g01",
+              "category": "Gospels",
+              "items": [
+                "Matthew",
+                "Mark",
+                "Luke",
+                "John"
+              ]
+            },
+            {
+              "id": "bc-r030-g02",
+              "category": "Twelve Apostles C",
+              "items": [
+                "James son of Alphaeus",
+                "Thaddaeus",
+                "Simon the Zealot",
+                "Judas Iscariot"
+              ]
+            },
+            {
+              "id": "bc-r030-g03",
+              "category": "Galilee Places",
+              "items": [
+                "Capernaum",
+                "Cana",
+                "Nain",
+                "Bethsaida"
+              ]
+            },
+            {
+              "id": "bc-r030-g04",
+              "category": "I Am Sayings",
+              "items": [
+                "Bread of life",
+                "Light of the world",
+                "Good shepherd",
+                "True vine"
+              ]
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Connections Board 30 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bc-session-011",
+      "title": "Connections Pack 011",
+      "theme": "Bible term groups",
+      "rounds": [
+        {
+          "id": "bc-r031",
+          "title": "Connections Board 31",
+          "groups": [
+            {
+              "id": "bc-r031-g01",
+              "category": "Pastoral Letters",
+              "items": [
+                "1 Timothy",
+                "2 Timothy",
+                "Titus",
+                "Philemon"
+              ]
+            },
+            {
+              "id": "bc-r031-g02",
+              "category": "Foreign Rulers",
+              "items": [
+                "Pharaoh",
+                "Nebuchadnezzar",
+                "Cyrus",
+                "Herod"
+              ]
+            },
+            {
+              "id": "bc-r031-g03",
+              "category": "Garden And Early Places",
+              "items": [
+                "Eden",
+                "Ararat",
+                "Babel",
+                "Ur"
+              ]
+            },
+            {
+              "id": "bc-r031-g04",
+              "category": "Fruits Of The Spirit A",
+              "items": [
+                "Love",
+                "Joy",
+                "Peace",
+                "Longsuffering"
+              ]
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Connections Board 31 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r032",
+          "title": "Connections Board 32",
+          "groups": [
+            {
+              "id": "bc-r032-g01",
+              "category": "Pentateuch People",
+              "items": [
+                "Adam",
+                "Noah",
+                "Abraham",
+                "Moses"
+              ]
+            },
+            {
+              "id": "bc-r032-g02",
+              "category": "United Monarchy",
+              "items": [
+                "Saul",
+                "David",
+                "Solomon",
+                "Jonathan"
+              ]
+            },
+            {
+              "id": "bc-r032-g03",
+              "category": "Passion Places",
+              "items": [
+                "Upper Room",
+                "Gethsemane",
+                "Golgotha",
+                "Tomb"
+              ]
+            },
+            {
+              "id": "bc-r032-g04",
+              "category": "New Jerusalem Images",
+              "items": [
+                "Wall",
+                "Gates",
+                "River",
+                "Tree"
+              ]
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Connections Board 32 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r033",
+          "title": "Connections Board 33",
+          "groups": [
+            {
+              "id": "bc-r033-g01",
+              "category": "Poetry Themes",
+              "items": [
+                "Praise",
+                "Wisdom",
+                "Vanity",
+                "Love"
+              ]
+            },
+            {
+              "id": "bc-r033-g02",
+              "category": "Twelve Apostles C",
+              "items": [
+                "James son of Alphaeus",
+                "Thaddaeus",
+                "Simon the Zealot",
+                "Judas Iscariot"
+              ]
+            },
+            {
+              "id": "bc-r033-g03",
+              "category": "Exodus Stops",
+              "items": [
+                "Succoth",
+                "Marah",
+                "Elim",
+                "Rephidim"
+              ]
+            },
+            {
+              "id": "bc-r033-g04",
+              "category": "Faith Chapter Examples",
+              "items": [
+                "Abel",
+                "Enoch",
+                "Rahab",
+                "Gideon"
+              ]
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Connections Board 33 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bc-session-012",
+      "title": "Connections Pack 012",
+      "theme": "Bible term groups",
+      "rounds": [
+        {
+          "id": "bc-r034",
+          "title": "Connections Board 34",
+          "groups": [
+            {
+              "id": "bc-r034-g01",
+              "category": "Early History Books",
+              "items": [
+                "Joshua",
+                "Judges",
+                "Ruth",
+                "1 Samuel"
+              ]
+            },
+            {
+              "id": "bc-r034-g02",
+              "category": "Women Of Faith",
+              "items": [
+                "Sarah",
+                "Rebekah",
+                "Hannah",
+                "Elizabeth"
+              ]
+            },
+            {
+              "id": "bc-r034-g03",
+              "category": "Paul Travel Places",
+              "items": [
+                "Corinth",
+                "Ephesus",
+                "Troas",
+                "Rome"
+              ]
+            },
+            {
+              "id": "bc-r034-g04",
+              "category": "I Am Sayings",
+              "items": [
+                "Bread of life",
+                "Light of the world",
+                "Good shepherd",
+                "True vine"
+              ]
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Connections Board 34 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r035",
+          "title": "Connections Board 35",
+          "groups": [
+            {
+              "id": "bc-r035-g01",
+              "category": "Wisdom Books",
+              "items": [
+                "Job",
+                "Psalms",
+                "Proverbs",
+                "Ecclesiastes"
+              ]
+            },
+            {
+              "id": "bc-r035-g02",
+              "category": "Queens And Royal Women",
+              "items": [
+                "Vashti",
+                "Bathsheba",
+                "Athaliah",
+                "Jezebel"
+              ]
+            },
+            {
+              "id": "bc-r035-g03",
+              "category": "Judges Places",
+              "items": [
+                "Ophrah",
+                "Timnah",
+                "Shiloh",
+                "Mizpah"
+              ]
+            },
+            {
+              "id": "bc-r035-g04",
+              "category": "Fruits Of The Spirit A",
+              "items": [
+                "Love",
+                "Joy",
+                "Peace",
+                "Longsuffering"
+              ]
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Connections Board 35 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r036",
+          "title": "Connections Board 36",
+          "groups": [
+            {
+              "id": "bc-r036-g01",
+              "category": "Minor Prophets B",
+              "items": [
+                "Jonah",
+                "Micah",
+                "Nahum",
+                "Habakkuk"
+              ]
+            },
+            {
+              "id": "bc-r036-g02",
+              "category": "Gospel Women",
+              "items": [
+                "Mary Magdalene",
+                "Martha",
+                "Mary of Bethany",
+                "Joanna"
+              ]
+            },
+            {
+              "id": "bc-r036-g03",
+              "category": "Tabernacle Items",
+              "items": [
+                "Ark",
+                "Altar",
+                "Lampstand",
+                "Veil"
+              ]
+            },
+            {
+              "id": "bc-r036-g04",
+              "category": "New Jerusalem Images",
+              "items": [
+                "Wall",
+                "Gates",
+                "River",
+                "Tree"
+              ]
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Connections Board 36 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bc-session-013",
+      "title": "Connections Pack 013",
+      "theme": "Bible term groups",
+      "rounds": [
+        {
+          "id": "bc-r037",
+          "title": "Connections Board 37",
+          "groups": [
+            {
+              "id": "bc-r037-g01",
+              "category": "Church Letters A",
+              "items": [
+                "Romans",
+                "1 Corinthians",
+                "2 Corinthians",
+                "Galatians"
+              ]
+            },
+            {
+              "id": "bc-r037-g02",
+              "category": "Prophets In Kings",
+              "items": [
+                "Elijah",
+                "Elisha",
+                "Micaiah",
+                "Huldah"
+              ]
+            },
+            {
+              "id": "bc-r037-g03",
+              "category": "Kingdom Capitals",
+              "items": [
+                "Samaria",
+                "Damascus",
+                "Nineveh",
+                "Babylon"
+              ]
+            },
+            {
+              "id": "bc-r037-g04",
+              "category": "Faith Chapter Examples",
+              "items": [
+                "Abel",
+                "Enoch",
+                "Rahab",
+                "Gideon"
+              ]
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Connections Board 37 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r038",
+          "title": "Connections Board 38",
+          "groups": [
+            {
+              "id": "bc-r038-g01",
+              "category": "General Letters A",
+              "items": [
+                "Hebrews",
+                "James",
+                "1 Peter",
+                "2 Peter"
+              ]
+            },
+            {
+              "id": "bc-r038-g02",
+              "category": "Major Prophets As People",
+              "items": [
+                "Isaiah",
+                "Jeremiah",
+                "Ezekiel",
+                "Daniel"
+              ]
+            },
+            {
+              "id": "bc-r038-g03",
+              "category": "Temple Furnishings",
+              "items": [
+                "Sea",
+                "Lavers",
+                "Cherubim",
+                "Pillars"
+              ]
+            },
+            {
+              "id": "bc-r038-g04",
+              "category": "I Am Sayings",
+              "items": [
+                "Bread of life",
+                "Light of the world",
+                "Good shepherd",
+                "True vine"
+              ]
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Connections Board 38 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r039",
+          "title": "Connections Board 39",
+          "groups": [
+            {
+              "id": "bc-r039-g01",
+              "category": "Exodus Places",
+              "items": [
+                "Egypt",
+                "Goshen",
+                "Sinai",
+                "Moab"
+              ]
+            },
+            {
+              "id": "bc-r039-g02",
+              "category": "Acts Missionaries",
+              "items": [
+                "Barnabas",
+                "Silas",
+                "Timothy",
+                "Luke"
+              ]
+            },
+            {
+              "id": "bc-r039-g03",
+              "category": "Return Places",
+              "items": [
+                "Jerusalem",
+                "Bethany",
+                "Emmaus",
+                "Nazareth"
+              ]
+            },
+            {
+              "id": "bc-r039-g04",
+              "category": "Fruits Of The Spirit A",
+              "items": [
+                "Love",
+                "Joy",
+                "Peace",
+                "Longsuffering"
+              ]
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Connections Board 39 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bc-session-014",
+      "title": "Connections Pack 014",
+      "theme": "Bible term groups",
+      "rounds": [
+        {
+          "id": "bc-r040",
+          "title": "Connections Board 40",
+          "groups": [
+            {
+              "id": "bc-r040-g01",
+              "category": "Prophet Books With One Chapter",
+              "items": [
+                "Obadiah",
+                "Philemon",
+                "2 John",
+                "3 John"
+              ]
+            },
+            {
+              "id": "bc-r040-g02",
+              "category": "Villains And Opponents",
+              "items": [
+                "Goliath",
+                "Haman",
+                "Sanballat",
+                "Bar-Jesus"
+              ]
+            },
+            {
+              "id": "bc-r040-g03",
+              "category": "Armor Of God",
+              "items": [
+                "Belt",
+                "Breastplate",
+                "Shield",
+                "Helmet"
+              ]
+            },
+            {
+              "id": "bc-r040-g04",
+              "category": "New Jerusalem Images",
+              "items": [
+                "Wall",
+                "Gates",
+                "River",
+                "Tree"
+              ]
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Connections Board 40 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r041",
+          "title": "Connections Board 41",
+          "groups": [
+            {
+              "id": "bc-r041-g01",
+              "category": "Wisdom Books",
+              "items": [
+                "Job",
+                "Psalms",
+                "Proverbs",
+                "Ecclesiastes"
+              ]
+            },
+            {
+              "id": "bc-r041-g02",
+              "category": "Gospel Women",
+              "items": [
+                "Mary Magdalene",
+                "Martha",
+                "Mary of Bethany",
+                "Joanna"
+              ]
+            },
+            {
+              "id": "bc-r041-g03",
+              "category": "Gospel Objects",
+              "items": [
+                "Loaves",
+                "Nets",
+                "Denarius",
+                "Alabaster box"
+              ]
+            },
+            {
+              "id": "bc-r041-g04",
+              "category": "Fruits Of The Spirit B",
+              "items": [
+                "Gentleness",
+                "Goodness",
+                "Faith",
+                "Meekness"
+              ]
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Connections Board 41 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r042",
+          "title": "Connections Board 42",
+          "groups": [
+            {
+              "id": "bc-r042-g01",
+              "category": "Minor Prophets B",
+              "items": [
+                "Jonah",
+                "Micah",
+                "Nahum",
+                "Habakkuk"
+              ]
+            },
+            {
+              "id": "bc-r042-g02",
+              "category": "Prophets In Kings",
+              "items": [
+                "Elijah",
+                "Elisha",
+                "Micaiah",
+                "Huldah"
+              ]
+            },
+            {
+              "id": "bc-r042-g03",
+              "category": "Galilee Places",
+              "items": [
+                "Capernaum",
+                "Cana",
+                "Nain",
+                "Bethsaida"
+              ]
+            },
+            {
+              "id": "bc-r042-g04",
+              "category": "Creation Days",
+              "items": [
+                "Light",
+                "Firmament",
+                "Dry land",
+                "Lights"
+              ]
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Connections Board 42 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bc-session-015",
+      "title": "Connections Pack 015",
+      "theme": "Bible term groups",
+      "rounds": [
+        {
+          "id": "bc-r043",
+          "title": "Connections Board 43",
+          "groups": [
+            {
+              "id": "bc-r043-g01",
+              "category": "Church Letters A",
+              "items": [
+                "Romans",
+                "1 Corinthians",
+                "2 Corinthians",
+                "Galatians"
+              ]
+            },
+            {
+              "id": "bc-r043-g02",
+              "category": "Major Prophets As People",
+              "items": [
+                "Isaiah",
+                "Jeremiah",
+                "Ezekiel",
+                "Daniel"
+              ]
+            },
+            {
+              "id": "bc-r043-g03",
+              "category": "Garden And Early Places",
+              "items": [
+                "Eden",
+                "Ararat",
+                "Babel",
+                "Ur"
+              ]
+            },
+            {
+              "id": "bc-r043-g04",
+              "category": "Prayer Postures",
+              "items": [
+                "Kneeling",
+                "Standing",
+                "Lifting hands",
+                "Fasting"
+              ]
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Connections Board 43 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r044",
+          "title": "Connections Board 44",
+          "groups": [
+            {
+              "id": "bc-r044-g01",
+              "category": "General Letters A",
+              "items": [
+                "Hebrews",
+                "James",
+                "1 Peter",
+                "2 Peter"
+              ]
+            },
+            {
+              "id": "bc-r044-g02",
+              "category": "Acts Missionaries",
+              "items": [
+                "Barnabas",
+                "Silas",
+                "Timothy",
+                "Luke"
+              ]
+            },
+            {
+              "id": "bc-r044-g03",
+              "category": "Passion Places",
+              "items": [
+                "Upper Room",
+                "Gethsemane",
+                "Golgotha",
+                "Tomb"
+              ]
+            },
+            {
+              "id": "bc-r044-g04",
+              "category": "Spiritual Gifts",
+              "items": [
+                "Prophecy",
+                "Teaching",
+                "Giving",
+                "Mercy"
+              ]
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Connections Board 44 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r045",
+          "title": "Connections Board 45",
+          "groups": [
+            {
+              "id": "bc-r045-g01",
+              "category": "Exodus Places",
+              "items": [
+                "Egypt",
+                "Goshen",
+                "Sinai",
+                "Moab"
+              ]
+            },
+            {
+              "id": "bc-r045-g02",
+              "category": "Villains And Opponents",
+              "items": [
+                "Goliath",
+                "Haman",
+                "Sanballat",
+                "Bar-Jesus"
+              ]
+            },
+            {
+              "id": "bc-r045-g03",
+              "category": "Exodus Stops",
+              "items": [
+                "Succoth",
+                "Marah",
+                "Elim",
+                "Rephidim"
+              ]
+            },
+            {
+              "id": "bc-r045-g04",
+              "category": "Fruits Of The Spirit B",
+              "items": [
+                "Gentleness",
+                "Goodness",
+                "Faith",
+                "Meekness"
+              ]
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Connections Board 45 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bc-session-016",
+      "title": "Connections Pack 016",
+      "theme": "Bible term groups",
+      "rounds": [
+        {
+          "id": "bc-r046",
+          "title": "Connections Board 46",
+          "groups": [
+            {
+              "id": "bc-r046-g01",
+              "category": "Prophet Books With One Chapter",
+              "items": [
+                "Obadiah",
+                "Philemon",
+                "2 John",
+                "3 John"
+              ]
+            },
+            {
+              "id": "bc-r046-g02",
+              "category": "Exile Faithful",
+              "items": [
+                "Hananiah",
+                "Mishael",
+                "Azariah",
+                "Mordecai"
+              ]
+            },
+            {
+              "id": "bc-r046-g03",
+              "category": "Paul Travel Places",
+              "items": [
+                "Corinth",
+                "Ephesus",
+                "Troas",
+                "Rome"
+              ]
+            },
+            {
+              "id": "bc-r046-g04",
+              "category": "Creation Days",
+              "items": [
+                "Light",
+                "Firmament",
+                "Dry land",
+                "Lights"
+              ]
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Connections Board 46 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r047",
+          "title": "Connections Board 47",
+          "groups": [
+            {
+              "id": "bc-r047-g01",
+              "category": "Kingdom History Books",
+              "items": [
+                "2 Samuel",
+                "1 Kings",
+                "2 Kings",
+                "1 Chronicles"
+              ]
+            },
+            {
+              "id": "bc-r047-g02",
+              "category": "Acts Converts",
+              "items": [
+                "Lydia",
+                "Cornelius",
+                "Ethiopian eunuch",
+                "Dionysius"
+              ]
+            },
+            {
+              "id": "bc-r047-g03",
+              "category": "Judges Places",
+              "items": [
+                "Ophrah",
+                "Timnah",
+                "Shiloh",
+                "Mizpah"
+              ]
+            },
+            {
+              "id": "bc-r047-g04",
+              "category": "Prayer Postures",
+              "items": [
+                "Kneeling",
+                "Standing",
+                "Lifting hands",
+                "Fasting"
+              ]
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Connections Board 47 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r048",
+          "title": "Connections Board 48",
+          "groups": [
+            {
+              "id": "bc-r048-g01",
+              "category": "Major Prophets",
+              "items": [
+                "Isaiah",
+                "Jeremiah",
+                "Lamentations",
+                "Ezekiel"
+              ]
+            },
+            {
+              "id": "bc-r048-g02",
+              "category": "Patriarchs",
+              "items": [
+                "Abraham",
+                "Isaac",
+                "Jacob",
+                "Joseph"
+              ]
+            },
+            {
+              "id": "bc-r048-g03",
+              "category": "Tabernacle Items",
+              "items": [
+                "Ark",
+                "Altar",
+                "Lampstand",
+                "Veil"
+              ]
+            },
+            {
+              "id": "bc-r048-g04",
+              "category": "Spiritual Gifts",
+              "items": [
+                "Prophecy",
+                "Teaching",
+                "Giving",
+                "Mercy"
+              ]
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Connections Board 48 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bc-session-017",
+      "title": "Connections Pack 017",
+      "theme": "Bible term groups",
+      "rounds": [
+        {
+          "id": "bc-r049",
+          "title": "Connections Board 49",
+          "groups": [
+            {
+              "id": "bc-r049-g01",
+              "category": "Minor Prophets C",
+              "items": [
+                "Zephaniah",
+                "Haggai",
+                "Zechariah",
+                "Malachi"
+              ]
+            },
+            {
+              "id": "bc-r049-g02",
+              "category": "Return Leaders",
+              "items": [
+                "Zerubbabel",
+                "Joshua",
+                "Ezra",
+                "Nehemiah"
+              ]
+            },
+            {
+              "id": "bc-r049-g03",
+              "category": "Kingdom Capitals",
+              "items": [
+                "Samaria",
+                "Damascus",
+                "Nineveh",
+                "Babylon"
+              ]
+            },
+            {
+              "id": "bc-r049-g04",
+              "category": "Fruits Of The Spirit B",
+              "items": [
+                "Gentleness",
+                "Goodness",
+                "Faith",
+                "Meekness"
+              ]
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Connections Board 49 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r050",
+          "title": "Connections Board 50",
+          "groups": [
+            {
+              "id": "bc-r050-g01",
+              "category": "Church Letters B",
+              "items": [
+                "Ephesians",
+                "Philippians",
+                "Colossians",
+                "1 Thessalonians"
+              ]
+            },
+            {
+              "id": "bc-r050-g02",
+              "category": "Paul's Friends",
+              "items": [
+                "Aquila",
+                "Priscilla",
+                "Epaphroditus",
+                "Tychicus"
+              ]
+            },
+            {
+              "id": "bc-r050-g03",
+              "category": "Temple Furnishings",
+              "items": [
+                "Sea",
+                "Lavers",
+                "Cherubim",
+                "Pillars"
+              ]
+            },
+            {
+              "id": "bc-r050-g04",
+              "category": "Creation Days",
+              "items": [
+                "Light",
+                "Firmament",
+                "Dry land",
+                "Lights"
+              ]
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Connections Board 50 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r051",
+          "title": "Connections Board 51",
+          "groups": [
+            {
+              "id": "bc-r051-g01",
+              "category": "John's Letters",
+              "items": [
+                "1 John",
+                "2 John",
+                "3 John",
+                "Revelation"
+              ]
+            },
+            {
+              "id": "bc-r051-g02",
+              "category": "Moses Family",
+              "items": [
+                "Amram",
+                "Jochebed",
+                "Aaron",
+                "Miriam"
+              ]
+            },
+            {
+              "id": "bc-r051-g03",
+              "category": "Return Places",
+              "items": [
+                "Jerusalem",
+                "Bethany",
+                "Emmaus",
+                "Nazareth"
+              ]
+            },
+            {
+              "id": "bc-r051-g04",
+              "category": "Prayer Postures",
+              "items": [
+                "Kneeling",
+                "Standing",
+                "Lifting hands",
+                "Fasting"
+              ]
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Connections Board 51 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bc-session-018",
+      "title": "Connections Pack 018",
+      "theme": "Bible term groups",
+      "rounds": [
+        {
+          "id": "bc-r052",
+          "title": "Connections Board 52",
+          "groups": [
+            {
+              "id": "bc-r052-g01",
+              "category": "Temple Books",
+              "items": [
+                "Kings",
+                "Chronicles",
+                "Ezra",
+                "Haggai"
+              ]
+            },
+            {
+              "id": "bc-r052-g02",
+              "category": "Twelve Apostles A",
+              "items": [
+                "Peter",
+                "Andrew",
+                "James",
+                "John"
+              ]
+            },
+            {
+              "id": "bc-r052-g03",
+              "category": "Armor Of God",
+              "items": [
+                "Belt",
+                "Breastplate",
+                "Shield",
+                "Helmet"
+              ]
+            },
+            {
+              "id": "bc-r052-g04",
+              "category": "Spiritual Gifts",
+              "items": [
+                "Prophecy",
+                "Teaching",
+                "Giving",
+                "Mercy"
+              ]
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Connections Board 52 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r053",
+          "title": "Connections Board 53",
+          "groups": [
+            {
+              "id": "bc-r053-g01",
+              "category": "Books Of The Law",
+              "items": [
+                "Genesis",
+                "Exodus",
+                "Leviticus",
+                "Numbers"
+              ]
+            },
+            {
+              "id": "bc-r053-g02",
+              "category": "High Priests",
+              "items": [
+                "Eli",
+                "Abiathar",
+                "Zadok",
+                "Caiaphas"
+              ]
+            },
+            {
+              "id": "bc-r053-g03",
+              "category": "Jesus Ministry Places",
+              "items": [
+                "Jordan River",
+                "Wilderness",
+                "Sea of Galilee",
+                "Mount of Olives"
+              ]
+            },
+            {
+              "id": "bc-r053-g04",
+              "category": "Fruits Of The Spirit B",
+              "items": [
+                "Gentleness",
+                "Goodness",
+                "Faith",
+                "Meekness"
+              ]
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Connections Board 53 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r054",
+          "title": "Connections Board 54",
+          "groups": [
+            {
+              "id": "bc-r054-g01",
+              "category": "Return History Books",
+              "items": [
+                "2 Chronicles",
+                "Ezra",
+                "Nehemiah",
+                "Esther"
+              ]
+            },
+            {
+              "id": "bc-r054-g02",
+              "category": "Judges",
+              "items": [
+                "Deborah",
+                "Gideon",
+                "Jephthah",
+                "Samson"
+              ]
+            },
+            {
+              "id": "bc-r054-g03",
+              "category": "Patriarch Places",
+              "items": [
+                "Haran",
+                "Bethel",
+                "Hebron",
+                "Beersheba"
+              ]
+            },
+            {
+              "id": "bc-r054-g04",
+              "category": "Creation Days",
+              "items": [
+                "Light",
+                "Firmament",
+                "Dry land",
+                "Lights"
+              ]
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Connections Board 54 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bc-session-019",
+      "title": "Connections Pack 019",
+      "theme": "Bible term groups",
+      "rounds": [
+        {
+          "id": "bc-r055",
+          "title": "Connections Board 55",
+          "groups": [
+            {
+              "id": "bc-r055-g01",
+              "category": "Minor Prophets A",
+              "items": [
+                "Hosea",
+                "Joel",
+                "Amos",
+                "Obadiah"
+              ]
+            },
+            {
+              "id": "bc-r055-g02",
+              "category": "Twelve Apostles B",
+              "items": [
+                "Philip",
+                "Bartholomew",
+                "Thomas",
+                "Matthew"
+              ]
+            },
+            {
+              "id": "bc-r055-g03",
+              "category": "Acts Places",
+              "items": [
+                "Joppa",
+                "Antioch",
+                "Philippi",
+                "Athens"
+              ]
+            },
+            {
+              "id": "bc-r055-g04",
+              "category": "Prayer Postures",
+              "items": [
+                "Kneeling",
+                "Standing",
+                "Lifting hands",
+                "Fasting"
+              ]
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Connections Board 55 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r056",
+          "title": "Connections Board 56",
+          "groups": [
+            {
+              "id": "bc-r056-g01",
+              "category": "Gospels",
+              "items": [
+                "Matthew",
+                "Mark",
+                "Luke",
+                "John"
+              ]
+            },
+            {
+              "id": "bc-r056-g02",
+              "category": "Foreign Rulers",
+              "items": [
+                "Pharaoh",
+                "Nebuchadnezzar",
+                "Cyrus",
+                "Herod"
+              ]
+            },
+            {
+              "id": "bc-r056-g03",
+              "category": "Conquest Places",
+              "items": [
+                "Jordan",
+                "Jericho",
+                "Ai",
+                "Gibeon"
+              ]
+            },
+            {
+              "id": "bc-r056-g04",
+              "category": "Spiritual Gifts",
+              "items": [
+                "Prophecy",
+                "Teaching",
+                "Giving",
+                "Mercy"
+              ]
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Connections Board 56 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r057",
+          "title": "Connections Board 57",
+          "groups": [
+            {
+              "id": "bc-r057-g01",
+              "category": "Pastoral Letters",
+              "items": [
+                "1 Timothy",
+                "2 Timothy",
+                "Titus",
+                "Philemon"
+              ]
+            },
+            {
+              "id": "bc-r057-g02",
+              "category": "United Monarchy",
+              "items": [
+                "Saul",
+                "David",
+                "Solomon",
+                "Jonathan"
+              ]
+            },
+            {
+              "id": "bc-r057-g03",
+              "category": "Island Places",
+              "items": [
+                "Patmos",
+                "Cyprus",
+                "Malta",
+                "Crete"
+              ]
+            },
+            {
+              "id": "bc-r057-g04",
+              "category": "Fruits Of The Spirit B",
+              "items": [
+                "Gentleness",
+                "Goodness",
+                "Faith",
+                "Meekness"
+              ]
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Connections Board 57 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bc-session-020",
+      "title": "Connections Pack 020",
+      "theme": "Bible term groups",
+      "rounds": [
+        {
+          "id": "bc-r058",
+          "title": "Connections Board 58",
+          "groups": [
+            {
+              "id": "bc-r058-g01",
+              "category": "Pentateuch People",
+              "items": [
+                "Adam",
+                "Noah",
+                "Abraham",
+                "Moses"
+              ]
+            },
+            {
+              "id": "bc-r058-g02",
+              "category": "Twelve Apostles C",
+              "items": [
+                "James son of Alphaeus",
+                "Thaddaeus",
+                "Simon the Zealot",
+                "Judas Iscariot"
+              ]
+            },
+            {
+              "id": "bc-r058-g03",
+              "category": "David Places",
+              "items": [
+                "Bethlehem",
+                "Adullam",
+                "Ziklag",
+                "Jerusalem"
+              ]
+            },
+            {
+              "id": "bc-r058-g04",
+              "category": "Creation Days",
+              "items": [
+                "Light",
+                "Firmament",
+                "Dry land",
+                "Lights"
+              ]
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Connections Board 58 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r059",
+          "title": "Connections Board 59",
+          "groups": [
+            {
+              "id": "bc-r059-g01",
+              "category": "Poetry Themes",
+              "items": [
+                "Praise",
+                "Wisdom",
+                "Vanity",
+                "Love"
+              ]
+            },
+            {
+              "id": "bc-r059-g02",
+              "category": "Women Of Faith",
+              "items": [
+                "Sarah",
+                "Rebekah",
+                "Hannah",
+                "Elizabeth"
+              ]
+            },
+            {
+              "id": "bc-r059-g03",
+              "category": "Priestly Items",
+              "items": [
+                "Ephod",
+                "Breastplate",
+                "Urim",
+                "Thummim"
+              ]
+            },
+            {
+              "id": "bc-r059-g04",
+              "category": "Prayer Postures",
+              "items": [
+                "Kneeling",
+                "Standing",
+                "Lifting hands",
+                "Fasting"
+              ]
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Connections Board 59 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r060",
+          "title": "Connections Board 60",
+          "groups": [
+            {
+              "id": "bc-r060-g01",
+              "category": "Early History Books",
+              "items": [
+                "Joshua",
+                "Judges",
+                "Ruth",
+                "1 Samuel"
+              ]
+            },
+            {
+              "id": "bc-r060-g02",
+              "category": "Queens And Royal Women",
+              "items": [
+                "Vashti",
+                "Bathsheba",
+                "Athaliah",
+                "Jezebel"
+              ]
+            },
+            {
+              "id": "bc-r060-g03",
+              "category": "Exile Places",
+              "items": [
+                "Chebar",
+                "Susa",
+                "Persia",
+                "Media"
+              ]
+            },
+            {
+              "id": "bc-r060-g04",
+              "category": "Spiritual Gifts",
+              "items": [
+                "Prophecy",
+                "Teaching",
+                "Giving",
+                "Mercy"
+              ]
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Connections Board 60 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bc-session-021",
+      "title": "Connections Pack 021",
+      "theme": "Bible term groups",
+      "rounds": [
+        {
+          "id": "bc-r061",
+          "title": "Connections Board 1",
+          "groups": [
+            {
+              "id": "bc-r061-g01",
+              "category": "Books Of The Law",
+              "items": [
+                "Genesis",
+                "Exodus",
+                "Leviticus",
+                "Numbers"
+              ]
+            },
+            {
+              "id": "bc-r061-g02",
+              "category": "Early History Books",
+              "items": [
+                "Joshua",
+                "Judges",
+                "Ruth",
+                "1 Samuel"
+              ]
+            },
+            {
+              "id": "bc-r061-g03",
+              "category": "Kingdom History Books",
+              "items": [
+                "2 Samuel",
+                "1 Kings",
+                "2 Kings",
+                "1 Chronicles"
+              ]
+            },
+            {
+              "id": "bc-r061-g04",
+              "category": "Return History Books",
+              "items": [
+                "2 Chronicles",
+                "Ezra",
+                "Nehemiah",
+                "Esther"
+              ]
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Connections Board 1 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r062",
+          "title": "Connections Board 2",
+          "groups": [
+            {
+              "id": "bc-r062-g01",
+              "category": "Books Of The Law",
+              "items": [
+                "Genesis",
+                "Exodus",
+                "Leviticus",
+                "Numbers"
+              ]
+            },
+            {
+              "id": "bc-r062-g02",
+              "category": "Early History Books",
+              "items": [
+                "Joshua",
+                "Judges",
+                "Ruth",
+                "1 Samuel"
+              ]
+            },
+            {
+              "id": "bc-r062-g03",
+              "category": "Kingdom History Books",
+              "items": [
+                "2 Samuel",
+                "1 Kings",
+                "2 Kings",
+                "1 Chronicles"
+              ]
+            },
+            {
+              "id": "bc-r062-g04",
+              "category": "Wisdom Books",
+              "items": [
+                "Job",
+                "Psalms",
+                "Proverbs",
+                "Ecclesiastes"
+              ]
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Connections Board 2 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r063",
+          "title": "Connections Board 3",
+          "groups": [
+            {
+              "id": "bc-r063-g01",
+              "category": "Books Of The Law",
+              "items": [
+                "Genesis",
+                "Exodus",
+                "Leviticus",
+                "Numbers"
+              ]
+            },
+            {
+              "id": "bc-r063-g02",
+              "category": "Early History Books",
+              "items": [
+                "Joshua",
+                "Judges",
+                "Ruth",
+                "1 Samuel"
+              ]
+            },
+            {
+              "id": "bc-r063-g03",
+              "category": "Kingdom History Books",
+              "items": [
+                "2 Samuel",
+                "1 Kings",
+                "2 Kings",
+                "1 Chronicles"
+              ]
+            },
+            {
+              "id": "bc-r063-g04",
+              "category": "Major Prophets",
+              "items": [
+                "Isaiah",
+                "Jeremiah",
+                "Lamentations",
+                "Ezekiel"
+              ]
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Connections Board 3 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bc-session-022",
+      "title": "Connections Pack 022",
+      "theme": "Bible term groups",
+      "rounds": [
+        {
+          "id": "bc-r064",
+          "title": "Connections Board 4",
+          "groups": [
+            {
+              "id": "bc-r064-g01",
+              "category": "Books Of The Law",
+              "items": [
+                "Genesis",
+                "Exodus",
+                "Leviticus",
+                "Numbers"
+              ]
+            },
+            {
+              "id": "bc-r064-g02",
+              "category": "Early History Books",
+              "items": [
+                "Joshua",
+                "Judges",
+                "Ruth",
+                "1 Samuel"
+              ]
+            },
+            {
+              "id": "bc-r064-g03",
+              "category": "Kingdom History Books",
+              "items": [
+                "2 Samuel",
+                "1 Kings",
+                "2 Kings",
+                "1 Chronicles"
+              ]
+            },
+            {
+              "id": "bc-r064-g04",
+              "category": "Minor Prophets A",
+              "items": [
+                "Hosea",
+                "Joel",
+                "Amos",
+                "Obadiah"
+              ]
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Connections Board 4 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r065",
+          "title": "Connections Board 5",
+          "groups": [
+            {
+              "id": "bc-r065-g01",
+              "category": "Books Of The Law",
+              "items": [
+                "Genesis",
+                "Exodus",
+                "Leviticus",
+                "Numbers"
+              ]
+            },
+            {
+              "id": "bc-r065-g02",
+              "category": "Early History Books",
+              "items": [
+                "Joshua",
+                "Judges",
+                "Ruth",
+                "1 Samuel"
+              ]
+            },
+            {
+              "id": "bc-r065-g03",
+              "category": "Kingdom History Books",
+              "items": [
+                "2 Samuel",
+                "1 Kings",
+                "2 Kings",
+                "1 Chronicles"
+              ]
+            },
+            {
+              "id": "bc-r065-g04",
+              "category": "Minor Prophets B",
+              "items": [
+                "Jonah",
+                "Micah",
+                "Nahum",
+                "Habakkuk"
+              ]
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Connections Board 5 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r066",
+          "title": "Connections Board 6",
+          "groups": [
+            {
+              "id": "bc-r066-g01",
+              "category": "Books Of The Law",
+              "items": [
+                "Genesis",
+                "Exodus",
+                "Leviticus",
+                "Numbers"
+              ]
+            },
+            {
+              "id": "bc-r066-g02",
+              "category": "Early History Books",
+              "items": [
+                "Joshua",
+                "Judges",
+                "Ruth",
+                "1 Samuel"
+              ]
+            },
+            {
+              "id": "bc-r066-g03",
+              "category": "Kingdom History Books",
+              "items": [
+                "2 Samuel",
+                "1 Kings",
+                "2 Kings",
+                "1 Chronicles"
+              ]
+            },
+            {
+              "id": "bc-r066-g04",
+              "category": "Minor Prophets C",
+              "items": [
+                "Zephaniah",
+                "Haggai",
+                "Zechariah",
+                "Malachi"
+              ]
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Connections Board 6 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bc-session-023",
+      "title": "Connections Pack 023",
+      "theme": "Bible term groups",
+      "rounds": [
+        {
+          "id": "bc-r067",
+          "title": "Connections Board 7",
+          "groups": [
+            {
+              "id": "bc-r067-g01",
+              "category": "Books Of The Law",
+              "items": [
+                "Genesis",
+                "Exodus",
+                "Leviticus",
+                "Numbers"
+              ]
+            },
+            {
+              "id": "bc-r067-g02",
+              "category": "Early History Books",
+              "items": [
+                "Joshua",
+                "Judges",
+                "Ruth",
+                "1 Samuel"
+              ]
+            },
+            {
+              "id": "bc-r067-g03",
+              "category": "Kingdom History Books",
+              "items": [
+                "2 Samuel",
+                "1 Kings",
+                "2 Kings",
+                "1 Chronicles"
+              ]
+            },
+            {
+              "id": "bc-r067-g04",
+              "category": "Gospels",
+              "items": [
+                "Matthew",
+                "Mark",
+                "Luke",
+                "John"
+              ]
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Connections Board 7 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r068",
+          "title": "Connections Board 8",
+          "groups": [
+            {
+              "id": "bc-r068-g01",
+              "category": "Books Of The Law",
+              "items": [
+                "Genesis",
+                "Exodus",
+                "Leviticus",
+                "Numbers"
+              ]
+            },
+            {
+              "id": "bc-r068-g02",
+              "category": "Early History Books",
+              "items": [
+                "Joshua",
+                "Judges",
+                "Ruth",
+                "1 Samuel"
+              ]
+            },
+            {
+              "id": "bc-r068-g03",
+              "category": "Kingdom History Books",
+              "items": [
+                "2 Samuel",
+                "1 Kings",
+                "2 Kings",
+                "1 Chronicles"
+              ]
+            },
+            {
+              "id": "bc-r068-g04",
+              "category": "Church Letters A",
+              "items": [
+                "Romans",
+                "1 Corinthians",
+                "2 Corinthians",
+                "Galatians"
+              ]
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Connections Board 8 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r069",
+          "title": "Connections Board 9",
+          "groups": [
+            {
+              "id": "bc-r069-g01",
+              "category": "Books Of The Law",
+              "items": [
+                "Genesis",
+                "Exodus",
+                "Leviticus",
+                "Numbers"
+              ]
+            },
+            {
+              "id": "bc-r069-g02",
+              "category": "Early History Books",
+              "items": [
+                "Joshua",
+                "Judges",
+                "Ruth",
+                "1 Samuel"
+              ]
+            },
+            {
+              "id": "bc-r069-g03",
+              "category": "Kingdom History Books",
+              "items": [
+                "2 Samuel",
+                "1 Kings",
+                "2 Kings",
+                "1 Chronicles"
+              ]
+            },
+            {
+              "id": "bc-r069-g04",
+              "category": "Church Letters B",
+              "items": [
+                "Ephesians",
+                "Philippians",
+                "Colossians",
+                "1 Thessalonians"
+              ]
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Connections Board 9 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bc-session-024",
+      "title": "Connections Pack 024",
+      "theme": "Bible term groups",
+      "rounds": [
+        {
+          "id": "bc-r070",
+          "title": "Connections Board 10",
+          "groups": [
+            {
+              "id": "bc-r070-g01",
+              "category": "Books Of The Law",
+              "items": [
+                "Genesis",
+                "Exodus",
+                "Leviticus",
+                "Numbers"
+              ]
+            },
+            {
+              "id": "bc-r070-g02",
+              "category": "Early History Books",
+              "items": [
+                "Joshua",
+                "Judges",
+                "Ruth",
+                "1 Samuel"
+              ]
+            },
+            {
+              "id": "bc-r070-g03",
+              "category": "Kingdom History Books",
+              "items": [
+                "2 Samuel",
+                "1 Kings",
+                "2 Kings",
+                "1 Chronicles"
+              ]
+            },
+            {
+              "id": "bc-r070-g04",
+              "category": "Pastoral Letters",
+              "items": [
+                "1 Timothy",
+                "2 Timothy",
+                "Titus",
+                "Philemon"
+              ]
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Connections Board 10 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r071",
+          "title": "Connections Board 11",
+          "groups": [
+            {
+              "id": "bc-r071-g01",
+              "category": "Books Of The Law",
+              "items": [
+                "Genesis",
+                "Exodus",
+                "Leviticus",
+                "Numbers"
+              ]
+            },
+            {
+              "id": "bc-r071-g02",
+              "category": "Early History Books",
+              "items": [
+                "Joshua",
+                "Judges",
+                "Ruth",
+                "1 Samuel"
+              ]
+            },
+            {
+              "id": "bc-r071-g03",
+              "category": "Kingdom History Books",
+              "items": [
+                "2 Samuel",
+                "1 Kings",
+                "2 Kings",
+                "1 Chronicles"
+              ]
+            },
+            {
+              "id": "bc-r071-g04",
+              "category": "General Letters A",
+              "items": [
+                "Hebrews",
+                "James",
+                "1 Peter",
+                "2 Peter"
+              ]
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Connections Board 11 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r072",
+          "title": "Connections Board 12",
+          "groups": [
+            {
+              "id": "bc-r072-g01",
+              "category": "Books Of The Law",
+              "items": [
+                "Genesis",
+                "Exodus",
+                "Leviticus",
+                "Numbers"
+              ]
+            },
+            {
+              "id": "bc-r072-g02",
+              "category": "Early History Books",
+              "items": [
+                "Joshua",
+                "Judges",
+                "Ruth",
+                "1 Samuel"
+              ]
+            },
+            {
+              "id": "bc-r072-g03",
+              "category": "Kingdom History Books",
+              "items": [
+                "2 Samuel",
+                "1 Kings",
+                "2 Kings",
+                "1 Chronicles"
+              ]
+            },
+            {
+              "id": "bc-r072-g04",
+              "category": "John's Letters",
+              "items": [
+                "1 John",
+                "2 John",
+                "3 John",
+                "Revelation"
+              ]
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Connections Board 12 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bc-session-025",
+      "title": "Connections Pack 025",
+      "theme": "Bible term groups",
+      "rounds": [
+        {
+          "id": "bc-r073",
+          "title": "Connections Board 13",
+          "groups": [
+            {
+              "id": "bc-r073-g01",
+              "category": "Books Of The Law",
+              "items": [
+                "Genesis",
+                "Exodus",
+                "Leviticus",
+                "Numbers"
+              ]
+            },
+            {
+              "id": "bc-r073-g02",
+              "category": "Early History Books",
+              "items": [
+                "Joshua",
+                "Judges",
+                "Ruth",
+                "1 Samuel"
+              ]
+            },
+            {
+              "id": "bc-r073-g03",
+              "category": "Kingdom History Books",
+              "items": [
+                "2 Samuel",
+                "1 Kings",
+                "2 Kings",
+                "1 Chronicles"
+              ]
+            },
+            {
+              "id": "bc-r073-g04",
+              "category": "Patriarchs",
+              "items": [
+                "Abraham",
+                "Isaac",
+                "Jacob",
+                "Joseph"
+              ]
+            }
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Connections Board 13 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r074",
+          "title": "Connections Board 14",
+          "groups": [
+            {
+              "id": "bc-r074-g01",
+              "category": "Books Of The Law",
+              "items": [
+                "Genesis",
+                "Exodus",
+                "Leviticus",
+                "Numbers"
+              ]
+            },
+            {
+              "id": "bc-r074-g02",
+              "category": "Early History Books",
+              "items": [
+                "Joshua",
+                "Judges",
+                "Ruth",
+                "1 Samuel"
+              ]
+            },
+            {
+              "id": "bc-r074-g03",
+              "category": "Kingdom History Books",
+              "items": [
+                "2 Samuel",
+                "1 Kings",
+                "2 Kings",
+                "1 Chronicles"
+              ]
+            },
+            {
+              "id": "bc-r074-g04",
+              "category": "Moses Family",
+              "items": [
+                "Amram",
+                "Jochebed",
+                "Aaron",
+                "Miriam"
+              ]
+            }
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Connections Board 14 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bc-r075",
+          "title": "Connections Board 15",
+          "groups": [
+            {
+              "id": "bc-r075-g01",
+              "category": "Books Of The Law",
+              "items": [
+                "Genesis",
+                "Exodus",
+                "Leviticus",
+                "Numbers"
+              ]
+            },
+            {
+              "id": "bc-r075-g02",
+              "category": "Early History Books",
+              "items": [
+                "Joshua",
+                "Judges",
+                "Ruth",
+                "1 Samuel"
+              ]
+            },
+            {
+              "id": "bc-r075-g03",
+              "category": "Kingdom History Books",
+              "items": [
+                "2 Samuel",
+                "1 Kings",
+                "2 Kings",
+                "1 Chronicles"
+              ]
+            },
+            {
+              "id": "bc-r075-g04",
+              "category": "Judges",
+              "items": [
+                "Deborah",
+                "Gideon",
+                "Jephthah",
+                "Samson"
+              ]
+            }
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Connections Board 15 and how it connects to the Bible before continuing."
+        }
+      ]
+    }
+  ]
+}

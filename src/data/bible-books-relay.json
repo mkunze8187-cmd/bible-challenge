@@ -1,0 +1,2027 @@
+{
+  "$schema": "./schemas/bible-books-relay.schema.json",
+  "game": "bible-books-relay",
+  "version": 1,
+  "displayName": "Bible Books Relay",
+  "roundsPerSession": 5,
+  "sessions": [
+    {
+      "id": "bbr-session-001",
+      "title": "Bible Books Relay Pack 001",
+      "theme": "Canonical book order",
+      "rounds": [
+        {
+          "id": "bbr-r001",
+          "title": "Pentateuch",
+          "section": "Old Testament",
+          "books": [
+            "Genesis",
+            "Exodus",
+            "Leviticus",
+            "Numbers",
+            "Deuteronomy"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Pentateuch and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r002",
+          "title": "Gospels And Acts",
+          "section": "New Testament",
+          "books": [
+            "Matthew",
+            "Mark",
+            "Luke",
+            "John",
+            "Acts"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Gospels And Acts and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r003",
+          "title": "Early Pauline Epistles",
+          "section": "New Testament",
+          "books": [
+            "Romans",
+            "1 Corinthians",
+            "2 Corinthians",
+            "Galatians",
+            "Ephesians",
+            "Philippians",
+            "Colossians",
+            "1 Thessalonians",
+            "2 Thessalonians",
+            "1 Timothy"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Early Pauline Epistles and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r004",
+          "title": "Minor Prophets Opening Run",
+          "section": "Old Testament",
+          "books": [
+            "Hosea",
+            "Joel",
+            "Amos",
+            "Obadiah",
+            "Jonah",
+            "Micah",
+            "Nahum",
+            "Habakkuk",
+            "Zephaniah",
+            "Haggai"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Minor Prophets Opening Run and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r005",
+          "title": "Wisdom And Major Prophets",
+          "section": "Old Testament",
+          "books": [
+            "Job",
+            "Psalms",
+            "Proverbs",
+            "Ecclesiastes",
+            "Song of Solomon",
+            "Isaiah",
+            "Jeremiah",
+            "Lamentations",
+            "Ezekiel",
+            "Daniel"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Wisdom And Major Prophets and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bbr-session-002",
+      "title": "Bible Books Relay Pack 002",
+      "theme": "Canonical book order",
+      "rounds": [
+        {
+          "id": "bbr-r006",
+          "title": "General Epistles",
+          "section": "New Testament",
+          "books": [
+            "Hebrews",
+            "James",
+            "1 Peter",
+            "2 Peter",
+            "1 John",
+            "2 John",
+            "3 John",
+            "Jude",
+            "Revelation"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review General Epistles and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r007",
+          "title": "Historical Books",
+          "section": "Old Testament",
+          "books": [
+            "Joshua",
+            "Judges",
+            "Ruth",
+            "1 Samuel",
+            "2 Samuel",
+            "1 Kings",
+            "2 Kings",
+            "1 Chronicles",
+            "2 Chronicles",
+            "Ezra"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Historical Books and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r008",
+          "title": "Whole Bible Starter",
+          "section": "Whole Bible",
+          "books": [
+            "Genesis",
+            "Joshua",
+            "Psalms",
+            "Isaiah",
+            "Matthew",
+            "Acts",
+            "Romans",
+            "Hebrews",
+            "Revelation"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Whole Bible Starter and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r009",
+          "title": "New Testament Middle",
+          "section": "New Testament",
+          "books": [
+            "Acts",
+            "Romans",
+            "1 Corinthians",
+            "2 Corinthians",
+            "Galatians",
+            "Ephesians",
+            "Philippians",
+            "Colossians"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review New Testament Middle and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r010",
+          "title": "Minor Prophets Closing Run",
+          "section": "Old Testament",
+          "books": [
+            "Micah",
+            "Nahum",
+            "Habakkuk",
+            "Zephaniah",
+            "Haggai",
+            "Zechariah",
+            "Malachi"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Minor Prophets Closing Run and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bbr-session-003",
+      "title": "Bible Books Relay Pack 003",
+      "theme": "Canonical book order",
+      "rounds": [
+        {
+          "id": "bbr-r011",
+          "title": "Captivity To Restoration",
+          "section": "Old Testament",
+          "books": [
+            "2 Chronicles",
+            "Ezra",
+            "Nehemiah",
+            "Esther",
+            "Job",
+            "Psalms",
+            "Proverbs"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Captivity To Restoration and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r012",
+          "title": "Whole Bible Finish",
+          "section": "Whole Bible",
+          "books": [
+            "Daniel",
+            "Jonah",
+            "Malachi",
+            "Matthew",
+            "John",
+            "Acts",
+            "Romans",
+            "James",
+            "Jude",
+            "Revelation"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Whole Bible Finish and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r013",
+          "title": "Law Relay 2",
+          "section": "Exodus through Joshua",
+          "books": [
+            "Exodus",
+            "Leviticus",
+            "Numbers",
+            "Deuteronomy",
+            "Joshua"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Law Relay 2 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r014",
+          "title": "Law Relay 3",
+          "section": "Leviticus through Judges",
+          "books": [
+            "Leviticus",
+            "Numbers",
+            "Deuteronomy",
+            "Joshua",
+            "Judges"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Law Relay 3 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r015",
+          "title": "Law Relay 4",
+          "section": "Numbers through Ruth",
+          "books": [
+            "Numbers",
+            "Deuteronomy",
+            "Joshua",
+            "Judges",
+            "Ruth"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Law Relay 4 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bbr-session-004",
+      "title": "Bible Books Relay Pack 004",
+      "theme": "Canonical book order",
+      "rounds": [
+        {
+          "id": "bbr-r016",
+          "title": "Law Relay 5",
+          "section": "Deuteronomy through 1 Samuel",
+          "books": [
+            "Deuteronomy",
+            "Joshua",
+            "Judges",
+            "Ruth",
+            "1 Samuel"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Law Relay 5 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r017",
+          "title": "History Relay 6",
+          "section": "Joshua through 2 Samuel",
+          "books": [
+            "Joshua",
+            "Judges",
+            "Ruth",
+            "1 Samuel",
+            "2 Samuel"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review History Relay 6 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r018",
+          "title": "History Relay 7",
+          "section": "Judges through 1 Kings",
+          "books": [
+            "Judges",
+            "Ruth",
+            "1 Samuel",
+            "2 Samuel",
+            "1 Kings"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review History Relay 7 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r019",
+          "title": "History Relay 8",
+          "section": "Ruth through 2 Kings",
+          "books": [
+            "Ruth",
+            "1 Samuel",
+            "2 Samuel",
+            "1 Kings",
+            "2 Kings"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review History Relay 8 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r020",
+          "title": "History Relay 9",
+          "section": "1 Samuel through 1 Chronicles",
+          "books": [
+            "1 Samuel",
+            "2 Samuel",
+            "1 Kings",
+            "2 Kings",
+            "1 Chronicles"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review History Relay 9 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bbr-session-005",
+      "title": "Bible Books Relay Pack 005",
+      "theme": "Canonical book order",
+      "rounds": [
+        {
+          "id": "bbr-r021",
+          "title": "History Relay 10",
+          "section": "2 Samuel through 2 Chronicles",
+          "books": [
+            "2 Samuel",
+            "1 Kings",
+            "2 Kings",
+            "1 Chronicles",
+            "2 Chronicles"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review History Relay 10 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r022",
+          "title": "History Relay 11",
+          "section": "1 Kings through Ezra",
+          "books": [
+            "1 Kings",
+            "2 Kings",
+            "1 Chronicles",
+            "2 Chronicles",
+            "Ezra"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review History Relay 11 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r023",
+          "title": "History Relay 12",
+          "section": "2 Kings through Nehemiah",
+          "books": [
+            "2 Kings",
+            "1 Chronicles",
+            "2 Chronicles",
+            "Ezra",
+            "Nehemiah"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review History Relay 12 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r024",
+          "title": "History Relay 13",
+          "section": "1 Chronicles through Esther",
+          "books": [
+            "1 Chronicles",
+            "2 Chronicles",
+            "Ezra",
+            "Nehemiah",
+            "Esther"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review History Relay 13 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r025",
+          "title": "History Relay 14",
+          "section": "2 Chronicles through Job",
+          "books": [
+            "2 Chronicles",
+            "Ezra",
+            "Nehemiah",
+            "Esther",
+            "Job"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review History Relay 14 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bbr-session-006",
+      "title": "Bible Books Relay Pack 006",
+      "theme": "Canonical book order",
+      "rounds": [
+        {
+          "id": "bbr-r026",
+          "title": "History Relay 15",
+          "section": "Ezra through Psalms",
+          "books": [
+            "Ezra",
+            "Nehemiah",
+            "Esther",
+            "Job",
+            "Psalms"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review History Relay 15 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r027",
+          "title": "History Relay 16",
+          "section": "Nehemiah through Proverbs",
+          "books": [
+            "Nehemiah",
+            "Esther",
+            "Job",
+            "Psalms",
+            "Proverbs"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review History Relay 16 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r028",
+          "title": "History Relay 17",
+          "section": "Esther through Ecclesiastes",
+          "books": [
+            "Esther",
+            "Job",
+            "Psalms",
+            "Proverbs",
+            "Ecclesiastes"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review History Relay 17 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r029",
+          "title": "Wisdom Relay 18",
+          "section": "Job through Song of Solomon",
+          "books": [
+            "Job",
+            "Psalms",
+            "Proverbs",
+            "Ecclesiastes",
+            "Song of Solomon"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Wisdom Relay 18 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r030",
+          "title": "Wisdom Relay 19",
+          "section": "Psalms through Isaiah",
+          "books": [
+            "Psalms",
+            "Proverbs",
+            "Ecclesiastes",
+            "Song of Solomon",
+            "Isaiah"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Wisdom Relay 19 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bbr-session-007",
+      "title": "Bible Books Relay Pack 007",
+      "theme": "Canonical book order",
+      "rounds": [
+        {
+          "id": "bbr-r031",
+          "title": "Wisdom Relay 20",
+          "section": "Proverbs through Jeremiah",
+          "books": [
+            "Proverbs",
+            "Ecclesiastes",
+            "Song of Solomon",
+            "Isaiah",
+            "Jeremiah"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Wisdom Relay 20 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r032",
+          "title": "Wisdom Relay 21",
+          "section": "Ecclesiastes through Lamentations",
+          "books": [
+            "Ecclesiastes",
+            "Song of Solomon",
+            "Isaiah",
+            "Jeremiah",
+            "Lamentations"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Wisdom Relay 21 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r033",
+          "title": "Wisdom Relay 22",
+          "section": "Song of Solomon through Ezekiel",
+          "books": [
+            "Song of Solomon",
+            "Isaiah",
+            "Jeremiah",
+            "Lamentations",
+            "Ezekiel"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Wisdom Relay 22 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r034",
+          "title": "Major Prophets Relay 23",
+          "section": "Isaiah through Daniel",
+          "books": [
+            "Isaiah",
+            "Jeremiah",
+            "Lamentations",
+            "Ezekiel",
+            "Daniel"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Major Prophets Relay 23 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r035",
+          "title": "Major Prophets Relay 24",
+          "section": "Jeremiah through Hosea",
+          "books": [
+            "Jeremiah",
+            "Lamentations",
+            "Ezekiel",
+            "Daniel",
+            "Hosea"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Major Prophets Relay 24 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bbr-session-008",
+      "title": "Bible Books Relay Pack 008",
+      "theme": "Canonical book order",
+      "rounds": [
+        {
+          "id": "bbr-r036",
+          "title": "Major Prophets Relay 25",
+          "section": "Lamentations through Joel",
+          "books": [
+            "Lamentations",
+            "Ezekiel",
+            "Daniel",
+            "Hosea",
+            "Joel"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Major Prophets Relay 25 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r037",
+          "title": "Major Prophets Relay 26",
+          "section": "Ezekiel through Amos",
+          "books": [
+            "Ezekiel",
+            "Daniel",
+            "Hosea",
+            "Joel",
+            "Amos"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Major Prophets Relay 26 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r038",
+          "title": "Major Prophets Relay 27",
+          "section": "Daniel through Obadiah",
+          "books": [
+            "Daniel",
+            "Hosea",
+            "Joel",
+            "Amos",
+            "Obadiah"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Major Prophets Relay 27 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r039",
+          "title": "Minor Prophets Relay 28",
+          "section": "Hosea through Jonah",
+          "books": [
+            "Hosea",
+            "Joel",
+            "Amos",
+            "Obadiah",
+            "Jonah"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Minor Prophets Relay 28 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r040",
+          "title": "Minor Prophets Relay 29",
+          "section": "Joel through Micah",
+          "books": [
+            "Joel",
+            "Amos",
+            "Obadiah",
+            "Jonah",
+            "Micah"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Minor Prophets Relay 29 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bbr-session-009",
+      "title": "Bible Books Relay Pack 009",
+      "theme": "Canonical book order",
+      "rounds": [
+        {
+          "id": "bbr-r041",
+          "title": "Minor Prophets Relay 30",
+          "section": "Amos through Nahum",
+          "books": [
+            "Amos",
+            "Obadiah",
+            "Jonah",
+            "Micah",
+            "Nahum"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Minor Prophets Relay 30 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r042",
+          "title": "Minor Prophets Relay 31",
+          "section": "Obadiah through Habakkuk",
+          "books": [
+            "Obadiah",
+            "Jonah",
+            "Micah",
+            "Nahum",
+            "Habakkuk"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Minor Prophets Relay 31 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r043",
+          "title": "Minor Prophets Relay 32",
+          "section": "Jonah through Zephaniah",
+          "books": [
+            "Jonah",
+            "Micah",
+            "Nahum",
+            "Habakkuk",
+            "Zephaniah"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Minor Prophets Relay 32 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r044",
+          "title": "Minor Prophets Relay 33",
+          "section": "Micah through Haggai",
+          "books": [
+            "Micah",
+            "Nahum",
+            "Habakkuk",
+            "Zephaniah",
+            "Haggai"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Minor Prophets Relay 33 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r045",
+          "title": "Minor Prophets Relay 34",
+          "section": "Nahum through Zechariah",
+          "books": [
+            "Nahum",
+            "Habakkuk",
+            "Zephaniah",
+            "Haggai",
+            "Zechariah"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Minor Prophets Relay 34 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bbr-session-010",
+      "title": "Bible Books Relay Pack 010",
+      "theme": "Canonical book order",
+      "rounds": [
+        {
+          "id": "bbr-r046",
+          "title": "Minor Prophets Relay 35",
+          "section": "Habakkuk through Malachi",
+          "books": [
+            "Habakkuk",
+            "Zephaniah",
+            "Haggai",
+            "Zechariah",
+            "Malachi"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Minor Prophets Relay 35 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r047",
+          "title": "Minor Prophets Relay 36",
+          "section": "Zephaniah through Matthew",
+          "books": [
+            "Zephaniah",
+            "Haggai",
+            "Zechariah",
+            "Malachi",
+            "Matthew"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Minor Prophets Relay 36 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r048",
+          "title": "Minor Prophets Relay 37",
+          "section": "Haggai through Mark",
+          "books": [
+            "Haggai",
+            "Zechariah",
+            "Malachi",
+            "Matthew",
+            "Mark"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Minor Prophets Relay 37 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r049",
+          "title": "Minor Prophets Relay 38",
+          "section": "Zechariah through Luke",
+          "books": [
+            "Zechariah",
+            "Malachi",
+            "Matthew",
+            "Mark",
+            "Luke"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Minor Prophets Relay 38 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r050",
+          "title": "Minor Prophets Relay 39",
+          "section": "Malachi through John",
+          "books": [
+            "Malachi",
+            "Matthew",
+            "Mark",
+            "Luke",
+            "John"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Minor Prophets Relay 39 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bbr-session-011",
+      "title": "Bible Books Relay Pack 011",
+      "theme": "Canonical book order",
+      "rounds": [
+        {
+          "id": "bbr-r051",
+          "title": "Gospels Relay 41",
+          "section": "Mark through Romans",
+          "books": [
+            "Mark",
+            "Luke",
+            "John",
+            "Acts",
+            "Romans"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Gospels Relay 41 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r052",
+          "title": "Gospels Relay 42",
+          "section": "Luke through 1 Corinthians",
+          "books": [
+            "Luke",
+            "John",
+            "Acts",
+            "Romans",
+            "1 Corinthians"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Gospels Relay 42 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r053",
+          "title": "Gospels Relay 43",
+          "section": "John through 2 Corinthians",
+          "books": [
+            "John",
+            "Acts",
+            "Romans",
+            "1 Corinthians",
+            "2 Corinthians"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Gospels Relay 43 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r054",
+          "title": "Church History Relay 44",
+          "section": "Acts through Galatians",
+          "books": [
+            "Acts",
+            "Romans",
+            "1 Corinthians",
+            "2 Corinthians",
+            "Galatians"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Church History Relay 44 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r055",
+          "title": "Letters Relay 45",
+          "section": "Romans through Ephesians",
+          "books": [
+            "Romans",
+            "1 Corinthians",
+            "2 Corinthians",
+            "Galatians",
+            "Ephesians"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Letters Relay 45 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bbr-session-012",
+      "title": "Bible Books Relay Pack 012",
+      "theme": "Canonical book order",
+      "rounds": [
+        {
+          "id": "bbr-r056",
+          "title": "Letters Relay 46",
+          "section": "1 Corinthians through Philippians",
+          "books": [
+            "1 Corinthians",
+            "2 Corinthians",
+            "Galatians",
+            "Ephesians",
+            "Philippians"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Letters Relay 46 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r057",
+          "title": "Letters Relay 47",
+          "section": "2 Corinthians through Colossians",
+          "books": [
+            "2 Corinthians",
+            "Galatians",
+            "Ephesians",
+            "Philippians",
+            "Colossians"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Letters Relay 47 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r058",
+          "title": "Letters Relay 48",
+          "section": "Galatians through 1 Thessalonians",
+          "books": [
+            "Galatians",
+            "Ephesians",
+            "Philippians",
+            "Colossians",
+            "1 Thessalonians"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Letters Relay 48 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r059",
+          "title": "Letters Relay 49",
+          "section": "Ephesians through 2 Thessalonians",
+          "books": [
+            "Ephesians",
+            "Philippians",
+            "Colossians",
+            "1 Thessalonians",
+            "2 Thessalonians"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Letters Relay 49 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r060",
+          "title": "Letters Relay 50",
+          "section": "Philippians through 1 Timothy",
+          "books": [
+            "Philippians",
+            "Colossians",
+            "1 Thessalonians",
+            "2 Thessalonians",
+            "1 Timothy"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Letters Relay 50 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bbr-session-013",
+      "title": "Bible Books Relay Pack 013",
+      "theme": "Canonical book order",
+      "rounds": [
+        {
+          "id": "bbr-r061",
+          "title": "Letters Relay 51",
+          "section": "Colossians through 2 Timothy",
+          "books": [
+            "Colossians",
+            "1 Thessalonians",
+            "2 Thessalonians",
+            "1 Timothy",
+            "2 Timothy"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Letters Relay 51 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r062",
+          "title": "Letters Relay 52",
+          "section": "1 Thessalonians through Titus",
+          "books": [
+            "1 Thessalonians",
+            "2 Thessalonians",
+            "1 Timothy",
+            "2 Timothy",
+            "Titus"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Letters Relay 52 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r063",
+          "title": "Letters Relay 53",
+          "section": "2 Thessalonians through Philemon",
+          "books": [
+            "2 Thessalonians",
+            "1 Timothy",
+            "2 Timothy",
+            "Titus",
+            "Philemon"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Letters Relay 53 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r064",
+          "title": "Letters Relay 54",
+          "section": "1 Timothy through Hebrews",
+          "books": [
+            "1 Timothy",
+            "2 Timothy",
+            "Titus",
+            "Philemon",
+            "Hebrews"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Letters Relay 54 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r065",
+          "title": "Letters Relay 55",
+          "section": "2 Timothy through James",
+          "books": [
+            "2 Timothy",
+            "Titus",
+            "Philemon",
+            "Hebrews",
+            "James"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Letters Relay 55 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bbr-session-014",
+      "title": "Bible Books Relay Pack 014",
+      "theme": "Canonical book order",
+      "rounds": [
+        {
+          "id": "bbr-r066",
+          "title": "Letters Relay 56",
+          "section": "Titus through 1 Peter",
+          "books": [
+            "Titus",
+            "Philemon",
+            "Hebrews",
+            "James",
+            "1 Peter"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Letters Relay 56 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r067",
+          "title": "Letters Relay 57",
+          "section": "Philemon through 2 Peter",
+          "books": [
+            "Philemon",
+            "Hebrews",
+            "James",
+            "1 Peter",
+            "2 Peter"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Letters Relay 57 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r068",
+          "title": "Letters Relay 58",
+          "section": "Hebrews through 1 John",
+          "books": [
+            "Hebrews",
+            "James",
+            "1 Peter",
+            "2 Peter",
+            "1 John"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Letters Relay 58 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r069",
+          "title": "Letters Relay 59",
+          "section": "James through 2 John",
+          "books": [
+            "James",
+            "1 Peter",
+            "2 Peter",
+            "1 John",
+            "2 John"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Letters Relay 59 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r070",
+          "title": "Letters Relay 60",
+          "section": "1 Peter through 3 John",
+          "books": [
+            "1 Peter",
+            "2 Peter",
+            "1 John",
+            "2 John",
+            "3 John"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Letters Relay 60 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bbr-session-015",
+      "title": "Bible Books Relay Pack 015",
+      "theme": "Canonical book order",
+      "rounds": [
+        {
+          "id": "bbr-r071",
+          "title": "Letters Relay 61",
+          "section": "2 Peter through Jude",
+          "books": [
+            "2 Peter",
+            "1 John",
+            "2 John",
+            "3 John",
+            "Jude"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Letters Relay 61 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r072",
+          "title": "Letters Relay 62",
+          "section": "1 John through Revelation",
+          "books": [
+            "1 John",
+            "2 John",
+            "3 John",
+            "Jude",
+            "Revelation"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Letters Relay 62 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r073",
+          "title": "Law Relay 63",
+          "section": "Genesis through Joshua",
+          "books": [
+            "Genesis",
+            "Exodus",
+            "Leviticus",
+            "Numbers",
+            "Deuteronomy",
+            "Joshua"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Law Relay 63 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r074",
+          "title": "Law Relay 64",
+          "section": "Exodus through Judges",
+          "books": [
+            "Exodus",
+            "Leviticus",
+            "Numbers",
+            "Deuteronomy",
+            "Joshua",
+            "Judges"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Law Relay 64 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r075",
+          "title": "Law Relay 65",
+          "section": "Leviticus through Ruth",
+          "books": [
+            "Leviticus",
+            "Numbers",
+            "Deuteronomy",
+            "Joshua",
+            "Judges",
+            "Ruth"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Law Relay 65 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bbr-session-016",
+      "title": "Bible Books Relay Pack 016",
+      "theme": "Canonical book order",
+      "rounds": [
+        {
+          "id": "bbr-r076",
+          "title": "Law Relay 66",
+          "section": "Numbers through 1 Samuel",
+          "books": [
+            "Numbers",
+            "Deuteronomy",
+            "Joshua",
+            "Judges",
+            "Ruth",
+            "1 Samuel"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Law Relay 66 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r077",
+          "title": "Law Relay 67",
+          "section": "Deuteronomy through 2 Samuel",
+          "books": [
+            "Deuteronomy",
+            "Joshua",
+            "Judges",
+            "Ruth",
+            "1 Samuel",
+            "2 Samuel"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Law Relay 67 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r078",
+          "title": "History Relay 68",
+          "section": "Joshua through 1 Kings",
+          "books": [
+            "Joshua",
+            "Judges",
+            "Ruth",
+            "1 Samuel",
+            "2 Samuel",
+            "1 Kings"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review History Relay 68 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r079",
+          "title": "History Relay 69",
+          "section": "Judges through 2 Kings",
+          "books": [
+            "Judges",
+            "Ruth",
+            "1 Samuel",
+            "2 Samuel",
+            "1 Kings",
+            "2 Kings"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review History Relay 69 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r080",
+          "title": "History Relay 70",
+          "section": "Ruth through 1 Chronicles",
+          "books": [
+            "Ruth",
+            "1 Samuel",
+            "2 Samuel",
+            "1 Kings",
+            "2 Kings",
+            "1 Chronicles"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review History Relay 70 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bbr-session-017",
+      "title": "Bible Books Relay Pack 017",
+      "theme": "Canonical book order",
+      "rounds": [
+        {
+          "id": "bbr-r081",
+          "title": "History Relay 71",
+          "section": "1 Samuel through 2 Chronicles",
+          "books": [
+            "1 Samuel",
+            "2 Samuel",
+            "1 Kings",
+            "2 Kings",
+            "1 Chronicles",
+            "2 Chronicles"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review History Relay 71 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r082",
+          "title": "History Relay 72",
+          "section": "2 Samuel through Ezra",
+          "books": [
+            "2 Samuel",
+            "1 Kings",
+            "2 Kings",
+            "1 Chronicles",
+            "2 Chronicles",
+            "Ezra"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review History Relay 72 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r083",
+          "title": "History Relay 73",
+          "section": "1 Kings through Nehemiah",
+          "books": [
+            "1 Kings",
+            "2 Kings",
+            "1 Chronicles",
+            "2 Chronicles",
+            "Ezra",
+            "Nehemiah"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review History Relay 73 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r084",
+          "title": "History Relay 74",
+          "section": "2 Kings through Esther",
+          "books": [
+            "2 Kings",
+            "1 Chronicles",
+            "2 Chronicles",
+            "Ezra",
+            "Nehemiah",
+            "Esther"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review History Relay 74 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r085",
+          "title": "History Relay 75",
+          "section": "1 Chronicles through Job",
+          "books": [
+            "1 Chronicles",
+            "2 Chronicles",
+            "Ezra",
+            "Nehemiah",
+            "Esther",
+            "Job"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review History Relay 75 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bbr-session-018",
+      "title": "Bible Books Relay Pack 018",
+      "theme": "Canonical book order",
+      "rounds": [
+        {
+          "id": "bbr-r086",
+          "title": "History Relay 76",
+          "section": "2 Chronicles through Psalms",
+          "books": [
+            "2 Chronicles",
+            "Ezra",
+            "Nehemiah",
+            "Esther",
+            "Job",
+            "Psalms"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review History Relay 76 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r087",
+          "title": "History Relay 77",
+          "section": "Ezra through Proverbs",
+          "books": [
+            "Ezra",
+            "Nehemiah",
+            "Esther",
+            "Job",
+            "Psalms",
+            "Proverbs"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review History Relay 77 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r088",
+          "title": "History Relay 78",
+          "section": "Nehemiah through Ecclesiastes",
+          "books": [
+            "Nehemiah",
+            "Esther",
+            "Job",
+            "Psalms",
+            "Proverbs",
+            "Ecclesiastes"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review History Relay 78 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r089",
+          "title": "History Relay 79",
+          "section": "Esther through Song of Solomon",
+          "books": [
+            "Esther",
+            "Job",
+            "Psalms",
+            "Proverbs",
+            "Ecclesiastes",
+            "Song of Solomon"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review History Relay 79 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r090",
+          "title": "Wisdom Relay 80",
+          "section": "Job through Isaiah",
+          "books": [
+            "Job",
+            "Psalms",
+            "Proverbs",
+            "Ecclesiastes",
+            "Song of Solomon",
+            "Isaiah"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Wisdom Relay 80 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bbr-session-019",
+      "title": "Bible Books Relay Pack 019",
+      "theme": "Canonical book order",
+      "rounds": [
+        {
+          "id": "bbr-r091",
+          "title": "Wisdom Relay 81",
+          "section": "Psalms through Jeremiah",
+          "books": [
+            "Psalms",
+            "Proverbs",
+            "Ecclesiastes",
+            "Song of Solomon",
+            "Isaiah",
+            "Jeremiah"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Wisdom Relay 81 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r092",
+          "title": "Wisdom Relay 82",
+          "section": "Proverbs through Lamentations",
+          "books": [
+            "Proverbs",
+            "Ecclesiastes",
+            "Song of Solomon",
+            "Isaiah",
+            "Jeremiah",
+            "Lamentations"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Wisdom Relay 82 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r093",
+          "title": "Wisdom Relay 83",
+          "section": "Ecclesiastes through Ezekiel",
+          "books": [
+            "Ecclesiastes",
+            "Song of Solomon",
+            "Isaiah",
+            "Jeremiah",
+            "Lamentations",
+            "Ezekiel"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Wisdom Relay 83 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r094",
+          "title": "Wisdom Relay 84",
+          "section": "Song of Solomon through Daniel",
+          "books": [
+            "Song of Solomon",
+            "Isaiah",
+            "Jeremiah",
+            "Lamentations",
+            "Ezekiel",
+            "Daniel"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Wisdom Relay 84 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r095",
+          "title": "Major Prophets Relay 85",
+          "section": "Isaiah through Hosea",
+          "books": [
+            "Isaiah",
+            "Jeremiah",
+            "Lamentations",
+            "Ezekiel",
+            "Daniel",
+            "Hosea"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Major Prophets Relay 85 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bbr-session-020",
+      "title": "Bible Books Relay Pack 020",
+      "theme": "Canonical book order",
+      "rounds": [
+        {
+          "id": "bbr-r096",
+          "title": "Major Prophets Relay 86",
+          "section": "Jeremiah through Joel",
+          "books": [
+            "Jeremiah",
+            "Lamentations",
+            "Ezekiel",
+            "Daniel",
+            "Hosea",
+            "Joel"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Major Prophets Relay 86 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r097",
+          "title": "Major Prophets Relay 87",
+          "section": "Lamentations through Amos",
+          "books": [
+            "Lamentations",
+            "Ezekiel",
+            "Daniel",
+            "Hosea",
+            "Joel",
+            "Amos"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Major Prophets Relay 87 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r098",
+          "title": "Major Prophets Relay 88",
+          "section": "Ezekiel through Obadiah",
+          "books": [
+            "Ezekiel",
+            "Daniel",
+            "Hosea",
+            "Joel",
+            "Amos",
+            "Obadiah"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Major Prophets Relay 88 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r099",
+          "title": "Major Prophets Relay 89",
+          "section": "Daniel through Jonah",
+          "books": [
+            "Daniel",
+            "Hosea",
+            "Joel",
+            "Amos",
+            "Obadiah",
+            "Jonah"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Major Prophets Relay 89 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r100",
+          "title": "Minor Prophets Relay 90",
+          "section": "Hosea through Micah",
+          "books": [
+            "Hosea",
+            "Joel",
+            "Amos",
+            "Obadiah",
+            "Jonah",
+            "Micah"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Minor Prophets Relay 90 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bbr-session-021",
+      "title": "Bible Books Relay Pack 021",
+      "theme": "Canonical book order",
+      "rounds": [
+        {
+          "id": "bbr-r101",
+          "title": "Minor Prophets Relay 91",
+          "section": "Joel through Nahum",
+          "books": [
+            "Joel",
+            "Amos",
+            "Obadiah",
+            "Jonah",
+            "Micah",
+            "Nahum"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Minor Prophets Relay 91 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r102",
+          "title": "Minor Prophets Relay 92",
+          "section": "Amos through Habakkuk",
+          "books": [
+            "Amos",
+            "Obadiah",
+            "Jonah",
+            "Micah",
+            "Nahum",
+            "Habakkuk"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Minor Prophets Relay 92 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r103",
+          "title": "Minor Prophets Relay 93",
+          "section": "Obadiah through Zephaniah",
+          "books": [
+            "Obadiah",
+            "Jonah",
+            "Micah",
+            "Nahum",
+            "Habakkuk",
+            "Zephaniah"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Minor Prophets Relay 93 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r104",
+          "title": "Minor Prophets Relay 94",
+          "section": "Jonah through Haggai",
+          "books": [
+            "Jonah",
+            "Micah",
+            "Nahum",
+            "Habakkuk",
+            "Zephaniah",
+            "Haggai"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Minor Prophets Relay 94 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r105",
+          "title": "Minor Prophets Relay 95",
+          "section": "Micah through Zechariah",
+          "books": [
+            "Micah",
+            "Nahum",
+            "Habakkuk",
+            "Zephaniah",
+            "Haggai",
+            "Zechariah"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Minor Prophets Relay 95 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bbr-session-022",
+      "title": "Bible Books Relay Pack 022",
+      "theme": "Canonical book order",
+      "rounds": [
+        {
+          "id": "bbr-r106",
+          "title": "Minor Prophets Relay 96",
+          "section": "Nahum through Malachi",
+          "books": [
+            "Nahum",
+            "Habakkuk",
+            "Zephaniah",
+            "Haggai",
+            "Zechariah",
+            "Malachi"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Minor Prophets Relay 96 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r107",
+          "title": "Minor Prophets Relay 97",
+          "section": "Habakkuk through Matthew",
+          "books": [
+            "Habakkuk",
+            "Zephaniah",
+            "Haggai",
+            "Zechariah",
+            "Malachi",
+            "Matthew"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Minor Prophets Relay 97 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r108",
+          "title": "Minor Prophets Relay 98",
+          "section": "Zephaniah through Mark",
+          "books": [
+            "Zephaniah",
+            "Haggai",
+            "Zechariah",
+            "Malachi",
+            "Matthew",
+            "Mark"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Minor Prophets Relay 98 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r109",
+          "title": "Minor Prophets Relay 99",
+          "section": "Haggai through Luke",
+          "books": [
+            "Haggai",
+            "Zechariah",
+            "Malachi",
+            "Matthew",
+            "Mark",
+            "Luke"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Minor Prophets Relay 99 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r110",
+          "title": "Minor Prophets Relay 100",
+          "section": "Zechariah through John",
+          "books": [
+            "Zechariah",
+            "Malachi",
+            "Matthew",
+            "Mark",
+            "Luke",
+            "John"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Minor Prophets Relay 100 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bbr-session-023",
+      "title": "Bible Books Relay Pack 023",
+      "theme": "Canonical book order",
+      "rounds": [
+        {
+          "id": "bbr-r111",
+          "title": "Minor Prophets Relay 101",
+          "section": "Malachi through Acts",
+          "books": [
+            "Malachi",
+            "Matthew",
+            "Mark",
+            "Luke",
+            "John",
+            "Acts"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Minor Prophets Relay 101 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r112",
+          "title": "Gospels Relay 102",
+          "section": "Matthew through Romans",
+          "books": [
+            "Matthew",
+            "Mark",
+            "Luke",
+            "John",
+            "Acts",
+            "Romans"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Gospels Relay 102 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r113",
+          "title": "Gospels Relay 103",
+          "section": "Mark through 1 Corinthians",
+          "books": [
+            "Mark",
+            "Luke",
+            "John",
+            "Acts",
+            "Romans",
+            "1 Corinthians"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Gospels Relay 103 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r114",
+          "title": "Gospels Relay 104",
+          "section": "Luke through 2 Corinthians",
+          "books": [
+            "Luke",
+            "John",
+            "Acts",
+            "Romans",
+            "1 Corinthians",
+            "2 Corinthians"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Gospels Relay 104 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r115",
+          "title": "Gospels Relay 105",
+          "section": "John through Galatians",
+          "books": [
+            "John",
+            "Acts",
+            "Romans",
+            "1 Corinthians",
+            "2 Corinthians",
+            "Galatians"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Gospels Relay 105 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bbr-session-024",
+      "title": "Bible Books Relay Pack 024",
+      "theme": "Canonical book order",
+      "rounds": [
+        {
+          "id": "bbr-r116",
+          "title": "Church History Relay 106",
+          "section": "Acts through Ephesians",
+          "books": [
+            "Acts",
+            "Romans",
+            "1 Corinthians",
+            "2 Corinthians",
+            "Galatians",
+            "Ephesians"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Church History Relay 106 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r117",
+          "title": "Letters Relay 107",
+          "section": "Romans through Philippians",
+          "books": [
+            "Romans",
+            "1 Corinthians",
+            "2 Corinthians",
+            "Galatians",
+            "Ephesians",
+            "Philippians"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Letters Relay 107 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r118",
+          "title": "Letters Relay 108",
+          "section": "1 Corinthians through Colossians",
+          "books": [
+            "1 Corinthians",
+            "2 Corinthians",
+            "Galatians",
+            "Ephesians",
+            "Philippians",
+            "Colossians"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Letters Relay 108 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r119",
+          "title": "Letters Relay 109",
+          "section": "2 Corinthians through 1 Thessalonians",
+          "books": [
+            "2 Corinthians",
+            "Galatians",
+            "Ephesians",
+            "Philippians",
+            "Colossians",
+            "1 Thessalonians"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Letters Relay 109 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r120",
+          "title": "Letters Relay 110",
+          "section": "Galatians through 2 Thessalonians",
+          "books": [
+            "Galatians",
+            "Ephesians",
+            "Philippians",
+            "Colossians",
+            "1 Thessalonians",
+            "2 Thessalonians"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Letters Relay 110 and how it connects to the Bible before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bbr-session-025",
+      "title": "Bible Books Relay Pack 025",
+      "theme": "Canonical book order",
+      "rounds": [
+        {
+          "id": "bbr-r121",
+          "title": "Letters Relay 111",
+          "section": "Ephesians through 1 Timothy",
+          "books": [
+            "Ephesians",
+            "Philippians",
+            "Colossians",
+            "1 Thessalonians",
+            "2 Thessalonians",
+            "1 Timothy"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Letters Relay 111 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r122",
+          "title": "Letters Relay 112",
+          "section": "Philippians through 2 Timothy",
+          "books": [
+            "Philippians",
+            "Colossians",
+            "1 Thessalonians",
+            "2 Thessalonians",
+            "1 Timothy",
+            "2 Timothy"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Letters Relay 112 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r123",
+          "title": "Letters Relay 113",
+          "section": "Colossians through Titus",
+          "books": [
+            "Colossians",
+            "1 Thessalonians",
+            "2 Thessalonians",
+            "1 Timothy",
+            "2 Timothy",
+            "Titus"
+          ],
+          "difficulty": "hard",
+          "teachingNote": "Review Letters Relay 113 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r124",
+          "title": "Letters Relay 114",
+          "section": "1 Thessalonians through Philemon",
+          "books": [
+            "1 Thessalonians",
+            "2 Thessalonians",
+            "1 Timothy",
+            "2 Timothy",
+            "Titus",
+            "Philemon"
+          ],
+          "difficulty": "easy",
+          "teachingNote": "Review Letters Relay 114 and how it connects to the Bible before continuing."
+        },
+        {
+          "id": "bbr-r125",
+          "title": "Letters Relay 115",
+          "section": "2 Thessalonians through Hebrews",
+          "books": [
+            "2 Thessalonians",
+            "1 Timothy",
+            "2 Timothy",
+            "Titus",
+            "Philemon",
+            "Hebrews"
+          ],
+          "difficulty": "medium",
+          "teachingNote": "Review Letters Relay 115 and how it connects to the Bible before continuing."
+        }
+      ]
+    }
+  ]
+}

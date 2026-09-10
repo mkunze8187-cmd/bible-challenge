@@ -1,0 +1,391 @@
+{
+  "$schema": "./schemas/psalm-reference-finder.schema.json",
+  "game": "psalm-reference-finder",
+  "version": 1,
+  "displayName": "Psalm Reference Finder",
+  "roundsPerSession": 10,
+  "sessions": [
+    {
+      "id": "prf-session-01",
+      "title": "Psalm Reference Finder",
+      "theme": "Identify the Psalm reference for familiar KJV excerpts.",
+      "rounds": [
+        {
+          "id": "prf-001",
+          "title": "Psalm 1:1",
+          "excerpt": "Blessed is the man that walketh not in the counsel of the ungodly.",
+          "correctReference": "Psalm 1:1",
+          "choices": [
+            "Psalm 1:1",
+            "Psalm 1:3",
+            "Psalm 8:1",
+            "Psalm 19:1"
+          ],
+          "theme": "Blessing",
+          "difficulty": "easy",
+          "teachingNote": "This opening verse begins the Psalter's contrast between two ways."
+        },
+        {
+          "id": "prf-002",
+          "title": "Psalm 1:3",
+          "excerpt": "He shall be like a tree planted by the rivers of water.",
+          "correctReference": "Psalm 1:3",
+          "choices": [
+            "Psalm 1:3",
+            "Psalm 8:1",
+            "Psalm 19:1",
+            "Psalm 19:14"
+          ],
+          "theme": "Blessing",
+          "difficulty": "easy",
+          "teachingNote": "The fruitful tree image belongs to Psalm 1."
+        },
+        {
+          "id": "prf-003",
+          "title": "Psalm 8:1",
+          "excerpt": "O Lord our Lord, how excellent is thy name in all the earth!",
+          "correctReference": "Psalm 8:1",
+          "choices": [
+            "Psalm 8:1",
+            "Psalm 19:1",
+            "Psalm 19:14",
+            "Psalm 23:1"
+          ],
+          "theme": "Praise",
+          "difficulty": "easy",
+          "teachingNote": "Psalm 8 opens and closes with this praise."
+        },
+        {
+          "id": "prf-004",
+          "title": "Psalm 19:1",
+          "excerpt": "The heavens declare the glory of God.",
+          "correctReference": "Psalm 19:1",
+          "choices": [
+            "Psalm 19:1",
+            "Psalm 19:14",
+            "Psalm 23:1",
+            "Psalm 23:4"
+          ],
+          "theme": "Creation",
+          "difficulty": "easy",
+          "teachingNote": "Psalm 19 begins with creation's testimony."
+        },
+        {
+          "id": "prf-005",
+          "title": "Psalm 19:14",
+          "excerpt": "Let the words of my mouth, and the meditation of my heart, be acceptable in thy sight.",
+          "correctReference": "Psalm 19:14",
+          "choices": [
+            "Psalm 19:14",
+            "Psalm 23:1",
+            "Psalm 23:4",
+            "Psalm 24:1"
+          ],
+          "theme": "Prayer",
+          "difficulty": "easy",
+          "teachingNote": "This prayer closes Psalm 19."
+        },
+        {
+          "id": "prf-006",
+          "title": "Psalm 23:1",
+          "excerpt": "The Lord is my shepherd; I shall not want.",
+          "correctReference": "Psalm 23:1",
+          "choices": [
+            "Psalm 23:1",
+            "Psalm 23:4",
+            "Psalm 24:1",
+            "Psalm 27:1"
+          ],
+          "theme": "Shepherd / Guidance",
+          "difficulty": "easy",
+          "teachingNote": "This is the opening line of Psalm 23."
+        },
+        {
+          "id": "prf-007",
+          "title": "Psalm 23:4",
+          "excerpt": "Yea, though I walk through the valley of the shadow of death, I will fear no evil.",
+          "correctReference": "Psalm 23:4",
+          "choices": [
+            "Psalm 23:4",
+            "Psalm 24:1",
+            "Psalm 27:1",
+            "Psalm 34:8"
+          ],
+          "theme": "Comfort",
+          "difficulty": "easy",
+          "teachingNote": "The valley line is from Psalm 23."
+        },
+        {
+          "id": "prf-008",
+          "title": "Psalm 24:1",
+          "excerpt": "The earth is the Lord's, and the fulness thereof.",
+          "correctReference": "Psalm 24:1",
+          "choices": [
+            "Psalm 24:1",
+            "Psalm 27:1",
+            "Psalm 34:8",
+            "Psalm 37:4"
+          ],
+          "theme": "God's Kingship",
+          "difficulty": "easy",
+          "teachingNote": "Psalm 24 declares the Lord's ownership."
+        },
+        {
+          "id": "prf-009",
+          "title": "Psalm 27:1",
+          "excerpt": "The Lord is my light and my salvation; whom shall I fear?",
+          "correctReference": "Psalm 27:1",
+          "choices": [
+            "Psalm 27:1",
+            "Psalm 34:8",
+            "Psalm 37:4",
+            "Psalm 46:1"
+          ],
+          "theme": "Trust",
+          "difficulty": "easy",
+          "teachingNote": "Psalm 27 begins with fearless trust."
+        },
+        {
+          "id": "prf-010",
+          "title": "Psalm 34:8",
+          "excerpt": "O taste and see that the Lord is good.",
+          "correctReference": "Psalm 34:8",
+          "choices": [
+            "Psalm 34:8",
+            "Psalm 37:4",
+            "Psalm 46:1",
+            "Psalm 51:10"
+          ],
+          "theme": "Trust",
+          "difficulty": "medium",
+          "teachingNote": "This invitation appears in Psalm 34."
+        },
+        {
+          "id": "prf-011",
+          "title": "Psalm 37:4",
+          "excerpt": "Delight thyself also in the Lord.",
+          "correctReference": "Psalm 37:4",
+          "choices": [
+            "Psalm 37:4",
+            "Psalm 46:1",
+            "Psalm 51:10",
+            "Psalm 56:3"
+          ],
+          "theme": "Trust",
+          "difficulty": "medium",
+          "teachingNote": "Psalm 37 calls the faithful to delight in the Lord."
+        },
+        {
+          "id": "prf-012",
+          "title": "Psalm 46:1",
+          "excerpt": "God is our refuge and strength, a very present help in trouble.",
+          "correctReference": "Psalm 46:1",
+          "choices": [
+            "Psalm 46:1",
+            "Psalm 51:10",
+            "Psalm 56:3",
+            "Psalm 63:1"
+          ],
+          "theme": "Protection",
+          "difficulty": "medium",
+          "teachingNote": "The refuge confession begins Psalm 46."
+        },
+        {
+          "id": "prf-013",
+          "title": "Psalm 51:10",
+          "excerpt": "Create in me a clean heart, O God.",
+          "correctReference": "Psalm 51:10",
+          "choices": [
+            "Psalm 51:10",
+            "Psalm 56:3",
+            "Psalm 63:1",
+            "Psalm 91:1"
+          ],
+          "theme": "Repentance",
+          "difficulty": "medium",
+          "teachingNote": "This renewal prayer is from Psalm 51."
+        },
+        {
+          "id": "prf-014",
+          "title": "Psalm 56:3",
+          "excerpt": "What time I am afraid, I will trust in thee.",
+          "correctReference": "Psalm 56:3",
+          "choices": [
+            "Psalm 56:3",
+            "Psalm 63:1",
+            "Psalm 91:1",
+            "Psalm 95:6"
+          ],
+          "theme": "Trust",
+          "difficulty": "medium",
+          "teachingNote": "Psalm 56 speaks trust in the face of fear."
+        },
+        {
+          "id": "prf-015",
+          "title": "Psalm 63:1",
+          "excerpt": "O God, thou art my God; early will I seek thee.",
+          "correctReference": "Psalm 63:1",
+          "choices": [
+            "Psalm 63:1",
+            "Psalm 91:1",
+            "Psalm 95:6",
+            "Psalm 100:4"
+          ],
+          "theme": "Prayer",
+          "difficulty": "medium",
+          "teachingNote": "Psalm 63 begins with seeking God."
+        },
+        {
+          "id": "prf-016",
+          "title": "Psalm 91:1",
+          "excerpt": "He that dwelleth in the secret place of the most High.",
+          "correctReference": "Psalm 91:1",
+          "choices": [
+            "Psalm 91:1",
+            "Psalm 95:6",
+            "Psalm 100:4",
+            "Psalm 103:1"
+          ],
+          "theme": "Protection",
+          "difficulty": "medium",
+          "teachingNote": "Psalm 91 opens with shelter in the Most High."
+        },
+        {
+          "id": "prf-017",
+          "title": "Psalm 95:6",
+          "excerpt": "O come, let us worship and bow down.",
+          "correctReference": "Psalm 95:6",
+          "choices": [
+            "Psalm 95:6",
+            "Psalm 100:4",
+            "Psalm 103:1",
+            "Psalm 107:1"
+          ],
+          "theme": "Worship",
+          "difficulty": "medium",
+          "teachingNote": "Psalm 95 invites worship and kneeling before the Lord."
+        },
+        {
+          "id": "prf-018",
+          "title": "Psalm 100:4",
+          "excerpt": "Enter into his gates with thanksgiving.",
+          "correctReference": "Psalm 100:4",
+          "choices": [
+            "Psalm 100:4",
+            "Psalm 103:1",
+            "Psalm 107:1",
+            "Psalm 118:24"
+          ],
+          "theme": "Thanksgiving",
+          "difficulty": "medium",
+          "teachingNote": "Psalm 100 calls worshipers into thanksgiving."
+        },
+        {
+          "id": "prf-019",
+          "title": "Psalm 103:1",
+          "excerpt": "Bless the Lord, O my soul.",
+          "correctReference": "Psalm 103:1",
+          "choices": [
+            "Psalm 103:1",
+            "Psalm 107:1",
+            "Psalm 118:24",
+            "Psalm 119:11"
+          ],
+          "theme": "Praise",
+          "difficulty": "hard",
+          "teachingNote": "Psalm 103 begins with this call to the soul."
+        },
+        {
+          "id": "prf-020",
+          "title": "Psalm 107:1",
+          "excerpt": "O give thanks unto the Lord, for he is good.",
+          "correctReference": "Psalm 107:1",
+          "choices": [
+            "Psalm 107:1",
+            "Psalm 118:24",
+            "Psalm 119:11",
+            "Psalm 119:105"
+          ],
+          "theme": "Thanksgiving",
+          "difficulty": "hard",
+          "teachingNote": "Psalm 107 opens with thanks for goodness and mercy."
+        },
+        {
+          "id": "prf-021",
+          "title": "Psalm 118:24",
+          "excerpt": "This is the day which the Lord hath made.",
+          "correctReference": "Psalm 118:24",
+          "choices": [
+            "Psalm 118:24",
+            "Psalm 119:11",
+            "Psalm 119:105",
+            "Psalm 121:1-2"
+          ],
+          "theme": "Praise",
+          "difficulty": "hard",
+          "teachingNote": "Psalm 118 calls for rejoicing in the Lord's day."
+        },
+        {
+          "id": "prf-022",
+          "title": "Psalm 119:11",
+          "excerpt": "Thy word have I hid in mine heart.",
+          "correctReference": "Psalm 119:11",
+          "choices": [
+            "Psalm 119:11",
+            "Psalm 119:105",
+            "Psalm 121:1-2",
+            "Psalm 139:14"
+          ],
+          "theme": "God's Word",
+          "difficulty": "hard",
+          "teachingNote": "Psalm 119 speaks of hiding the word in the heart."
+        },
+        {
+          "id": "prf-023",
+          "title": "Psalm 119:105",
+          "excerpt": "Thy word is a lamp unto my feet.",
+          "correctReference": "Psalm 119:105",
+          "choices": [
+            "Psalm 119:105",
+            "Psalm 121:1-2",
+            "Psalm 139:14",
+            "Psalm 1:1"
+          ],
+          "theme": "God's Word",
+          "difficulty": "hard",
+          "teachingNote": "Psalm 119 uses lamp and light imagery for the word."
+        },
+        {
+          "id": "prf-024",
+          "title": "Psalm 121:1-2",
+          "excerpt": "My help cometh from the Lord, which made heaven and earth.",
+          "correctReference": "Psalm 121:1-2",
+          "choices": [
+            "Psalm 121:1-2",
+            "Psalm 139:14",
+            "Psalm 1:1",
+            "Psalm 1:3"
+          ],
+          "theme": "Deliverance",
+          "difficulty": "hard",
+          "teachingNote": "Psalm 121 identifies the source of help."
+        },
+        {
+          "id": "prf-025",
+          "title": "Psalm 139:14",
+          "excerpt": "I am fearfully and wonderfully made.",
+          "correctReference": "Psalm 139:14",
+          "choices": [
+            "Psalm 139:14",
+            "Psalm 1:1",
+            "Psalm 1:3",
+            "Psalm 8:1"
+          ],
+          "theme": "Creation",
+          "difficulty": "hard",
+          "teachingNote": "Psalm 139 praises God's work in forming life."
+        }
+      ]
+    }
+  ]
+}

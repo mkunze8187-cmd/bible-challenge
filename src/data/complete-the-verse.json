@@ -1,0 +1,441 @@
+{
+  "$schema": "./schemas/complete-the-verse.schema.json",
+  "game": "complete-the-verse",
+  "version": 1,
+  "displayName": "Complete the Verse Challenge",
+  "roundsPerSession": 10,
+  "sessions": [
+    {
+      "id": "ctv-session-01",
+      "title": "Psalms and Proverbs Verse Endings",
+      "theme": "Complete familiar KJV passages from Psalms and Proverbs.",
+      "rounds": [
+        {
+          "id": "ctv-001",
+          "title": "Psalm 1:1",
+          "book": "Psalms",
+          "reference": "Psalm 1:1",
+          "verseStart": "Blessed is the man that walketh not in the counsel of the ungodly,",
+          "correctEnding": "nor standeth in the way of sinners, nor sitteth in the seat of the scornful.",
+          "choices": [
+            "nor standeth in the way of sinners, nor sitteth in the seat of the scornful.",
+            "but fools despise wisdom and instruction.",
+            "and a light unto my path.",
+            "a very present help in trouble."
+          ],
+          "theme": "Blessing",
+          "difficulty": "easy",
+          "teachingNote": "The blessed life is described by what a person refuses and what he follows."
+        },
+        {
+          "id": "ctv-002",
+          "title": "Psalm 1:3",
+          "book": "Psalms",
+          "reference": "Psalm 1:3",
+          "verseStart": "And he shall be like a tree planted by the rivers of water,",
+          "correctEnding": "that bringeth forth his fruit in his season; his leaf also shall not wither; and whatsoever he doeth shall prosper.",
+          "choices": [
+            "that bringeth forth his fruit in his season; his leaf also shall not wither; and whatsoever he doeth shall prosper.",
+            "and a light unto my path.",
+            "a very present help in trouble.",
+            "for out of it are the issues of life."
+          ],
+          "theme": "Blessing",
+          "difficulty": "easy",
+          "teachingNote": "Psalm 1 pictures faithful meditation as a rooted and fruitful life."
+        },
+        {
+          "id": "ctv-003",
+          "title": "Psalm 4:8",
+          "book": "Psalms",
+          "reference": "Psalm 4:8",
+          "verseStart": "I will both lay me down in peace, and sleep:",
+          "correctEnding": "for thou, Lord, only makest me dwell in safety.",
+          "choices": [
+            "for thou, Lord, only makest me dwell in safety.",
+            "a very present help in trouble.",
+            "for out of it are the issues of life.",
+            "the righteous runneth into it, and is safe."
+          ],
+          "theme": "Peace",
+          "difficulty": "easy",
+          "teachingNote": "The verse connects peaceful rest with trust in the Lord's keeping."
+        },
+        {
+          "id": "ctv-004",
+          "title": "Psalm 8:1",
+          "book": "Psalms",
+          "reference": "Psalm 8:1",
+          "verseStart": "O Lord our Lord, how excellent is thy name in all the earth!",
+          "correctEnding": "who hast set thy glory above the heavens.",
+          "choices": [
+            "who hast set thy glory above the heavens.",
+            "for out of it are the issues of life.",
+            "the righteous runneth into it, and is safe.",
+            "be thankful unto him, and bless his name."
+          ],
+          "theme": "Praise",
+          "difficulty": "easy",
+          "teachingNote": "The Psalm opens with praise for God's name and glory."
+        },
+        {
+          "id": "ctv-005",
+          "title": "Psalm 18:2",
+          "book": "Psalms",
+          "reference": "Psalm 18:2",
+          "verseStart": "The Lord is my rock, and my fortress, and my deliverer;",
+          "correctEnding": "my God, my strength, in whom I will trust; my buckler, and the horn of my salvation, and my high tower.",
+          "choices": [
+            "my God, my strength, in whom I will trust; my buckler, and the horn of my salvation, and my high tower.",
+            "the righteous runneth into it, and is safe.",
+            "be thankful unto him, and bless his name.",
+            "and renew a right spirit within me."
+          ],
+          "theme": "Deliverance",
+          "difficulty": "easy",
+          "teachingNote": "David piles up images of refuge to describe the Lord's protection."
+        },
+        {
+          "id": "ctv-006",
+          "title": "Psalm 19:1",
+          "book": "Psalms",
+          "reference": "Psalm 19:1",
+          "verseStart": "The heavens declare the glory of God;",
+          "correctEnding": "and the firmament sheweth his handywork.",
+          "choices": [
+            "and the firmament sheweth his handywork.",
+            "be thankful unto him, and bless his name.",
+            "and renew a right spirit within me.",
+            "I will trust in thee."
+          ],
+          "theme": "Creation",
+          "difficulty": "easy",
+          "teachingNote": "Creation itself is presented as a witness to God's glory."
+        },
+        {
+          "id": "ctv-007",
+          "title": "Psalm 23:1",
+          "book": "Psalms",
+          "reference": "Psalm 23:1",
+          "verseStart": "The Lord is my shepherd;",
+          "correctEnding": "I shall not want.",
+          "choices": [
+            "I shall not want.",
+            "and renew a right spirit within me.",
+            "I will trust in thee.",
+            "but fools despise wisdom and instruction."
+          ],
+          "theme": "Shepherd / Guidance",
+          "difficulty": "easy",
+          "teachingNote": "The shepherd image frames the Lord as provider and guide."
+        },
+        {
+          "id": "ctv-008",
+          "title": "Psalm 23:4",
+          "book": "Psalms",
+          "reference": "Psalm 23:4",
+          "verseStart": "Yea, though I walk through the valley of the shadow of death, I will fear no evil:",
+          "correctEnding": "for thou art with me; thy rod and thy staff they comfort me.",
+          "choices": [
+            "for thou art with me; thy rod and thy staff they comfort me.",
+            "I will trust in thee.",
+            "but fools despise wisdom and instruction.",
+            "and a light unto my path."
+          ],
+          "theme": "Comfort",
+          "difficulty": "easy",
+          "teachingNote": "The comfort comes from the Lord's presence in danger."
+        },
+        {
+          "id": "ctv-009",
+          "title": "Psalm 27:1",
+          "book": "Psalms",
+          "reference": "Psalm 27:1",
+          "verseStart": "The Lord is my light and my salvation; whom shall I fear?",
+          "correctEnding": "the Lord is the strength of my life; of whom shall I be afraid?",
+          "choices": [
+            "the Lord is the strength of my life; of whom shall I be afraid?",
+            "but fools despise wisdom and instruction.",
+            "and a light unto my path.",
+            "a very present help in trouble."
+          ],
+          "theme": "Trust",
+          "difficulty": "easy",
+          "teachingNote": "The Lord's strength answers fear."
+        },
+        {
+          "id": "ctv-010",
+          "title": "Psalm 34:8",
+          "book": "Psalms",
+          "reference": "Psalm 34:8",
+          "verseStart": "O taste and see that the Lord is good:",
+          "correctEnding": "blessed is the man that trusteth in him.",
+          "choices": [
+            "blessed is the man that trusteth in him.",
+            "and a light unto my path.",
+            "a very present help in trouble.",
+            "for out of it are the issues of life."
+          ],
+          "theme": "Trust",
+          "difficulty": "medium",
+          "teachingNote": "The verse invites personal trust in the Lord's goodness."
+        },
+        {
+          "id": "ctv-011",
+          "title": "Psalm 37:4",
+          "book": "Psalms",
+          "reference": "Psalm 37:4",
+          "verseStart": "Delight thyself also in the Lord;",
+          "correctEnding": "and he shall give thee the desires of thine heart.",
+          "choices": [
+            "and he shall give thee the desires of thine heart.",
+            "a very present help in trouble.",
+            "for out of it are the issues of life.",
+            "the righteous runneth into it, and is safe."
+          ],
+          "theme": "Trust",
+          "difficulty": "medium",
+          "teachingNote": "Desires are framed by delighting in the Lord."
+        },
+        {
+          "id": "ctv-012",
+          "title": "Psalm 46:1",
+          "book": "Psalms",
+          "reference": "Psalm 46:1",
+          "verseStart": "God is our refuge and strength,",
+          "correctEnding": "a very present help in trouble.",
+          "choices": [
+            "a very present help in trouble.",
+            "for out of it are the issues of life.",
+            "the righteous runneth into it, and is safe.",
+            "be thankful unto him, and bless his name."
+          ],
+          "theme": "Protection",
+          "difficulty": "medium",
+          "teachingNote": "The verse confesses God's nearness in trouble."
+        },
+        {
+          "id": "ctv-013",
+          "title": "Psalm 51:10",
+          "book": "Psalms",
+          "reference": "Psalm 51:10",
+          "verseStart": "Create in me a clean heart, O God;",
+          "correctEnding": "and renew a right spirit within me.",
+          "choices": [
+            "and renew a right spirit within me.",
+            "the righteous runneth into it, and is safe.",
+            "be thankful unto him, and bless his name.",
+            "I will trust in thee."
+          ],
+          "theme": "Repentance",
+          "difficulty": "medium",
+          "teachingNote": "David asks God for inward renewal."
+        },
+        {
+          "id": "ctv-014",
+          "title": "Psalm 56:3",
+          "book": "Psalms",
+          "reference": "Psalm 56:3",
+          "verseStart": "What time I am afraid,",
+          "correctEnding": "I will trust in thee.",
+          "choices": [
+            "I will trust in thee.",
+            "be thankful unto him, and bless his name.",
+            "and renew a right spirit within me.",
+            "but fools despise wisdom and instruction."
+          ],
+          "theme": "Trust",
+          "difficulty": "medium",
+          "teachingNote": "Fear becomes the setting for trust."
+        },
+        {
+          "id": "ctv-015",
+          "title": "Psalm 91:1",
+          "book": "Psalms",
+          "reference": "Psalm 91:1",
+          "verseStart": "He that dwelleth in the secret place of the most High",
+          "correctEnding": "shall abide under the shadow of the Almighty.",
+          "choices": [
+            "shall abide under the shadow of the Almighty.",
+            "and renew a right spirit within me.",
+            "I will trust in thee.",
+            "but fools despise wisdom and instruction."
+          ],
+          "theme": "Protection",
+          "difficulty": "medium",
+          "teachingNote": "The verse uses shelter imagery for God's protection."
+        },
+        {
+          "id": "ctv-016",
+          "title": "Psalm 100:4",
+          "book": "Psalms",
+          "reference": "Psalm 100:4",
+          "verseStart": "Enter into his gates with thanksgiving, and into his courts with praise:",
+          "correctEnding": "be thankful unto him, and bless his name.",
+          "choices": [
+            "be thankful unto him, and bless his name.",
+            "I will trust in thee.",
+            "but fools despise wisdom and instruction.",
+            "and a light unto my path."
+          ],
+          "theme": "Thanksgiving",
+          "difficulty": "medium",
+          "teachingNote": "Worship is marked by thanksgiving and blessing God's name."
+        },
+        {
+          "id": "ctv-017",
+          "title": "Psalm 103:1",
+          "book": "Psalms",
+          "reference": "Psalm 103:1",
+          "verseStart": "Bless the Lord, O my soul:",
+          "correctEnding": "and all that is within me, bless his holy name.",
+          "choices": [
+            "and all that is within me, bless his holy name.",
+            "but fools despise wisdom and instruction.",
+            "and a light unto my path.",
+            "a very present help in trouble."
+          ],
+          "theme": "Praise",
+          "difficulty": "medium",
+          "teachingNote": "The Psalm calls the whole person to bless the Lord."
+        },
+        {
+          "id": "ctv-018",
+          "title": "Psalm 119:11",
+          "book": "Psalms",
+          "reference": "Psalm 119:11",
+          "verseStart": "Thy word have I hid in mine heart,",
+          "correctEnding": "that I might not sin against thee.",
+          "choices": [
+            "that I might not sin against thee.",
+            "and a light unto my path.",
+            "a very present help in trouble.",
+            "for out of it are the issues of life."
+          ],
+          "theme": "God's Word",
+          "difficulty": "medium",
+          "teachingNote": "Treasuring God's word is connected with holy living."
+        },
+        {
+          "id": "ctv-019",
+          "title": "Psalm 119:105",
+          "book": "Psalms",
+          "reference": "Psalm 119:105",
+          "verseStart": "Thy word is a lamp unto my feet,",
+          "correctEnding": "and a light unto my path.",
+          "choices": [
+            "and a light unto my path.",
+            "a very present help in trouble.",
+            "for out of it are the issues of life.",
+            "the righteous runneth into it, and is safe."
+          ],
+          "theme": "God's Word",
+          "difficulty": "hard",
+          "teachingNote": "God's word is pictured as guidance for the path."
+        },
+        {
+          "id": "ctv-020",
+          "title": "Psalm 121:1-2",
+          "book": "Psalms",
+          "reference": "Psalm 121:1-2",
+          "verseStart": "I will lift up mine eyes unto the hills, from whence cometh my help.",
+          "correctEnding": "My help cometh from the Lord, which made heaven and earth.",
+          "choices": [
+            "My help cometh from the Lord, which made heaven and earth.",
+            "for out of it are the issues of life.",
+            "the righteous runneth into it, and is safe.",
+            "be thankful unto him, and bless his name."
+          ],
+          "theme": "Help",
+          "difficulty": "hard",
+          "teachingNote": "The Psalm identifies the Lord as the source of help."
+        },
+        {
+          "id": "ctv-021",
+          "title": "Proverbs 1:7",
+          "book": "Proverbs",
+          "reference": "Proverbs 1:7",
+          "verseStart": "The fear of the Lord is the beginning of knowledge:",
+          "correctEnding": "but fools despise wisdom and instruction.",
+          "choices": [
+            "but fools despise wisdom and instruction.",
+            "the righteous runneth into it, and is safe.",
+            "be thankful unto him, and bless his name.",
+            "and renew a right spirit within me."
+          ],
+          "theme": "Fear of the Lord",
+          "difficulty": "hard",
+          "teachingNote": "Proverbs begins wisdom with reverence for the Lord."
+        },
+        {
+          "id": "ctv-022",
+          "title": "Proverbs 3:5-6",
+          "book": "Proverbs",
+          "reference": "Proverbs 3:5-6",
+          "verseStart": "Trust in the Lord with all thine heart; and lean not unto thine own understanding.",
+          "correctEnding": "In all thy ways acknowledge him, and he shall direct thy paths.",
+          "choices": [
+            "In all thy ways acknowledge him, and he shall direct thy paths.",
+            "be thankful unto him, and bless his name.",
+            "and renew a right spirit within me.",
+            "I will trust in thee."
+          ],
+          "theme": "Trust",
+          "difficulty": "hard",
+          "teachingNote": "The proverb contrasts self-reliance with acknowledging the Lord."
+        },
+        {
+          "id": "ctv-023",
+          "title": "Proverbs 4:23",
+          "book": "Proverbs",
+          "reference": "Proverbs 4:23",
+          "verseStart": "Keep thy heart with all diligence;",
+          "correctEnding": "for out of it are the issues of life.",
+          "choices": [
+            "for out of it are the issues of life.",
+            "and renew a right spirit within me.",
+            "I will trust in thee.",
+            "but fools despise wisdom and instruction."
+          ],
+          "theme": "The Heart",
+          "difficulty": "hard",
+          "teachingNote": "The heart is treated as the source from which life flows."
+        },
+        {
+          "id": "ctv-024",
+          "title": "Proverbs 15:1",
+          "book": "Proverbs",
+          "reference": "Proverbs 15:1",
+          "verseStart": "A soft answer turneth away wrath:",
+          "correctEnding": "but grievous words stir up anger.",
+          "choices": [
+            "but grievous words stir up anger.",
+            "I will trust in thee.",
+            "but fools despise wisdom and instruction.",
+            "and a light unto my path."
+          ],
+          "theme": "Speech",
+          "difficulty": "hard",
+          "teachingNote": "Gentle speech can turn away anger."
+        },
+        {
+          "id": "ctv-025",
+          "title": "Proverbs 18:10",
+          "book": "Proverbs",
+          "reference": "Proverbs 18:10",
+          "verseStart": "The name of the Lord is a strong tower:",
+          "correctEnding": "the righteous runneth into it, and is safe.",
+          "choices": [
+            "the righteous runneth into it, and is safe.",
+            "but fools despise wisdom and instruction.",
+            "and a light unto my path.",
+            "a very present help in trouble."
+          ],
+          "theme": "Protection",
+          "difficulty": "hard",
+          "teachingNote": "The Lord's name is pictured as a place of safety."
+        }
+      ]
+    }
+  ]
+}

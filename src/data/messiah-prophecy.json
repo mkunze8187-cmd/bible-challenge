@@ -1,0 +1,519 @@
+{
+  "$schema": "./schemas/messiah-prophecy.schema.json",
+  "game": "messiah-prophecy",
+  "version": 1,
+  "displayName": "Messiah Prophecy Challenge",
+  "roundsPerSession": 5,
+  "sessions": [
+    {
+      "id": "mp-session-01",
+      "title": "Messiah Prophecy Set 01",
+      "theme": "Messianic prophecy answer choices",
+      "rounds": [
+        {
+          "id": "mp-001",
+          "title": "Seed Of The Woman",
+          "theme": "Victory",
+          "prophecyReference": "Genesis 3:15",
+          "prophecyTextShort": "It shall bruise thy head, and thou shalt bruise his heel.",
+          "prompt": "Which fulfillment, event, or messianic theme is connected with this prophecy?",
+          "correctAnswer": "Christ's victory over sin and death",
+          "choices": [
+            "Blessing to the nations",
+            "Christ's victory over sin and death",
+            "Comes from Judah",
+            "Prophet like Moses"
+          ],
+          "fulfillmentReference": "Hebrews 2:14",
+          "fulfillmentSummary": "Christ is presented as defeating the devil through death.",
+          "difficulty": "medium",
+          "teachingNote": "This is commonly read by Christian interpreters as an early promise of victory over evil."
+        },
+        {
+          "id": "mp-002",
+          "title": "Blessing To All Nations",
+          "theme": "Nations",
+          "prophecyReference": "Genesis 12:3",
+          "prophecyTextShort": "In thee shall all families of the earth be blessed.",
+          "prompt": "Which fulfillment, event, or messianic theme is connected with this prophecy?",
+          "correctAnswer": "Blessing to the nations",
+          "choices": [
+            "Blessing to the nations",
+            "Comes from Judah",
+            "God's Son and anointed King",
+            "Prophet like Moses"
+          ],
+          "fulfillmentReference": "Galatians 3:8",
+          "fulfillmentSummary": "Paul connects the promise to the gospel blessing reaching Gentiles.",
+          "difficulty": "easy",
+          "teachingNote": "The New Testament explicitly applies this Abraham promise to the gospel going to the nations."
+        },
+        {
+          "id": "mp-003",
+          "title": "Ruler From Judah",
+          "theme": "Kingship",
+          "prophecyReference": "Genesis 49:10",
+          "prophecyTextShort": "The sceptre shall not depart from Judah.",
+          "prompt": "Which fulfillment, event, or messianic theme is connected with this prophecy?",
+          "correctAnswer": "Comes from Judah",
+          "choices": [
+            "Comes from Judah",
+            "God's Son and anointed King",
+            "Prophet like Moses",
+            "Resurrection without seeing corruption"
+          ],
+          "fulfillmentReference": "Hebrews 7:14",
+          "fulfillmentSummary": "Jesus is identified as coming from the tribe of Judah.",
+          "difficulty": "easy",
+          "teachingNote": "The Judah connection is a widely recognized messianic theme."
+        },
+        {
+          "id": "mp-004",
+          "title": "Prophet Like Moses",
+          "theme": "Prophet",
+          "prophecyReference": "Deuteronomy 18:15",
+          "prophecyTextShort": "The Lord thy God will raise up unto thee a Prophet.",
+          "prompt": "Which fulfillment, event, or messianic theme is connected with this prophecy?",
+          "correctAnswer": "Prophet like Moses",
+          "choices": [
+            "God's Son and anointed King",
+            "Jesus' suffering cry from the cross",
+            "Prophet like Moses",
+            "Resurrection without seeing corruption"
+          ],
+          "fulfillmentReference": "Acts 3:22",
+          "fulfillmentSummary": "Peter quotes this prophecy while preaching about Christ.",
+          "difficulty": "medium",
+          "teachingNote": "Acts gives this passage a direct place in apostolic preaching about Jesus."
+        },
+        {
+          "id": "mp-005",
+          "title": "Son And King",
+          "theme": "Kingship",
+          "prophecyReference": "Psalm 2:7",
+          "prophecyTextShort": "Thou art my Son; this day have I begotten thee.",
+          "prompt": "Which fulfillment, event, or messianic theme is connected with this prophecy?",
+          "correctAnswer": "God's Son and anointed King",
+          "choices": [
+            "Garments divided",
+            "God's Son and anointed King",
+            "Jesus' suffering cry from the cross",
+            "Resurrection without seeing corruption"
+          ],
+          "fulfillmentReference": "Acts 13:33",
+          "fulfillmentSummary": "Paul quotes Psalm 2 in connection with Jesus being raised up.",
+          "difficulty": "medium",
+          "teachingNote": "Psalm 2 is used in the New Testament to speak of the Messiah's sonship and reign."
+        }
+      ]
+    },
+    {
+      "id": "mp-session-02",
+      "title": "Messiah Prophecy Set 02",
+      "theme": "Messianic prophecy answer choices",
+      "rounds": [
+        {
+          "id": "mp-006",
+          "title": "Not Seeing Corruption",
+          "theme": "Resurrection",
+          "prophecyReference": "Psalm 16:10",
+          "prophecyTextShort": "Neither wilt thou suffer thine Holy One to see corruption.",
+          "prompt": "Which fulfillment, event, or messianic theme is connected with this prophecy?",
+          "correctAnswer": "Resurrection without seeing corruption",
+          "choices": [
+            "Garments divided",
+            "Jesus' suffering cry from the cross",
+            "No bones broken",
+            "Resurrection without seeing corruption"
+          ],
+          "fulfillmentReference": "Acts 2:31",
+          "fulfillmentSummary": "Peter says this was spoken of Christ's resurrection.",
+          "difficulty": "easy",
+          "teachingNote": "Acts 2 directly connects Psalm 16 with the resurrection of Jesus."
+        },
+        {
+          "id": "mp-007",
+          "title": "Suffering Cry",
+          "theme": "Suffering",
+          "prophecyReference": "Psalm 22:1",
+          "prophecyTextShort": "My God, my God, why hast thou forsaken me?",
+          "prompt": "Which fulfillment, event, or messianic theme is connected with this prophecy?",
+          "correctAnswer": "Jesus' suffering cry from the cross",
+          "choices": [
+            "Betrayed by a familiar friend",
+            "Garments divided",
+            "Jesus' suffering cry from the cross",
+            "No bones broken"
+          ],
+          "fulfillmentReference": "Matthew 27:46",
+          "fulfillmentSummary": "Jesus speaks this line from the cross.",
+          "difficulty": "easy",
+          "teachingNote": "The Gospel records Jesus using Psalm 22 language during the crucifixion."
+        },
+        {
+          "id": "mp-008",
+          "title": "Garments Divided",
+          "theme": "Suffering",
+          "prophecyReference": "Psalm 22:18",
+          "prophecyTextShort": "They part my garments among them, and cast lots upon my vesture.",
+          "prompt": "Which fulfillment, event, or messianic theme is connected with this prophecy?",
+          "correctAnswer": "Garments divided",
+          "choices": [
+            "Blessing to the nations",
+            "Christ's victory over sin and death",
+            "Comes from Judah",
+            "Garments divided"
+          ],
+          "fulfillmentReference": "John 19:24",
+          "fulfillmentSummary": "Soldiers cast lots for Jesus' garment.",
+          "difficulty": "easy",
+          "teachingNote": "John explicitly cites the casting of lots as fulfillment of scripture."
+        },
+        {
+          "id": "mp-009",
+          "title": "Bones Not Broken",
+          "theme": "Suffering",
+          "prophecyReference": "Psalm 34:20",
+          "prophecyTextShort": "He keepeth all his bones: not one of them is broken.",
+          "prompt": "Which fulfillment, event, or messianic theme is connected with this prophecy?",
+          "correctAnswer": "No bones broken",
+          "choices": [
+            "Blessing to the nations",
+            "Comes from Judah",
+            "No bones broken",
+            "Prophet like Moses"
+          ],
+          "fulfillmentReference": "John 19:36",
+          "fulfillmentSummary": "Jesus' bones were not broken at the crucifixion.",
+          "difficulty": "easy",
+          "teachingNote": "John cites this detail while describing Jesus' death."
+        },
+        {
+          "id": "mp-010",
+          "title": "Betrayed By A Friend",
+          "theme": "Betrayal",
+          "prophecyReference": "Psalm 41:9",
+          "prophecyTextShort": "Mine own familiar friend... hath lifted up his heel against me.",
+          "prompt": "Which fulfillment, event, or messianic theme is connected with this prophecy?",
+          "correctAnswer": "Betrayed by a familiar friend",
+          "choices": [
+            "Betrayed by a familiar friend",
+            "Comes from Judah",
+            "God's Son and anointed King",
+            "Prophet like Moses"
+          ],
+          "fulfillmentReference": "John 13:18",
+          "fulfillmentSummary": "Jesus applies the text to betrayal within his circle.",
+          "difficulty": "easy",
+          "teachingNote": "John records Jesus citing the psalm in the context of Judas's betrayal."
+        }
+      ]
+    },
+    {
+      "id": "mp-session-03",
+      "title": "Messiah Prophecy Set 03",
+      "theme": "Messianic prophecy answer choices",
+      "rounds": [
+        {
+          "id": "mp-011",
+          "title": "Zeal For God's House",
+          "theme": "Temple",
+          "prophecyReference": "Psalm 69:9",
+          "prophecyTextShort": "The zeal of thine house hath eaten me up.",
+          "prompt": "Which fulfillment, event, or messianic theme is connected with this prophecy?",
+          "correctAnswer": "Zeal for God's house",
+          "choices": [
+            "God's Son and anointed King",
+            "Prophet like Moses",
+            "Resurrection without seeing corruption",
+            "Zeal for God's house"
+          ],
+          "fulfillmentReference": "John 2:17",
+          "fulfillmentSummary": "The disciples remember this scripture after Jesus cleanses the temple.",
+          "difficulty": "medium",
+          "teachingNote": "John presents the temple cleansing through the lens of Psalm 69."
+        },
+        {
+          "id": "mp-012",
+          "title": "Vinegar Given",
+          "theme": "Suffering",
+          "prophecyReference": "Psalm 69:21",
+          "prophecyTextShort": "In my thirst they gave me vinegar to drink.",
+          "prompt": "Which fulfillment, event, or messianic theme is connected with this prophecy?",
+          "correctAnswer": "Vinegar offered at the cross",
+          "choices": [
+            "God's Son and anointed King",
+            "Jesus' suffering cry from the cross",
+            "Resurrection without seeing corruption",
+            "Vinegar offered at the cross"
+          ],
+          "fulfillmentReference": "John 19:29",
+          "fulfillmentSummary": "Jesus is given vinegar during the crucifixion.",
+          "difficulty": "easy",
+          "teachingNote": "The Gospels connect this detail with Jesus' crucifixion."
+        },
+        {
+          "id": "mp-013",
+          "title": "At God's Right Hand",
+          "theme": "Exaltation",
+          "prophecyReference": "Psalm 110:1",
+          "prophecyTextShort": "Sit thou at my right hand.",
+          "prompt": "Which fulfillment, event, or messianic theme is connected with this prophecy?",
+          "correctAnswer": "Sits at God's right hand",
+          "choices": [
+            "Garments divided",
+            "Jesus' suffering cry from the cross",
+            "Resurrection without seeing corruption",
+            "Sits at God's right hand"
+          ],
+          "fulfillmentReference": "Hebrews 1:13",
+          "fulfillmentSummary": "The verse is applied to the exalted Son.",
+          "difficulty": "easy",
+          "teachingNote": "Psalm 110 is one of the New Testament's most frequent messianic texts."
+        },
+        {
+          "id": "mp-014",
+          "title": "Rejected Stone",
+          "theme": "Rejection",
+          "prophecyReference": "Psalm 118:22",
+          "prophecyTextShort": "The stone which the builders refused is become the head stone.",
+          "prompt": "Which fulfillment, event, or messianic theme is connected with this prophecy?",
+          "correctAnswer": "Rejected stone",
+          "choices": [
+            "Garments divided",
+            "Jesus' suffering cry from the cross",
+            "No bones broken",
+            "Rejected stone"
+          ],
+          "fulfillmentReference": "Acts 4:11",
+          "fulfillmentSummary": "Peter applies the rejected stone to Jesus.",
+          "difficulty": "easy",
+          "teachingNote": "Acts directly applies the stone image to Jesus' rejection and exaltation."
+        },
+        {
+          "id": "mp-015",
+          "title": "Virgin-Born Sign",
+          "theme": "Birth",
+          "prophecyReference": "Isaiah 7:14",
+          "prophecyTextShort": "Behold, a virgin shall conceive, and bear a son.",
+          "prompt": "Which fulfillment, event, or messianic theme is connected with this prophecy?",
+          "correctAnswer": "Virgin-born sign",
+          "choices": [
+            "Blessing to the nations",
+            "Christ's victory over sin and death",
+            "Comes from Judah",
+            "Virgin-born sign"
+          ],
+          "fulfillmentReference": "Matthew 1:23",
+          "fulfillmentSummary": "Matthew quotes the sign in connection with Jesus' birth.",
+          "difficulty": "easy",
+          "teachingNote": "Matthew explicitly quotes Isaiah 7:14 in the infancy narrative."
+        }
+      ]
+    },
+    {
+      "id": "mp-session-04",
+      "title": "Messiah Prophecy Set 04",
+      "theme": "Messianic prophecy answer choices",
+      "rounds": [
+        {
+          "id": "mp-016",
+          "title": "Light In Galilee",
+          "theme": "Ministry",
+          "prophecyReference": "Isaiah 9:1-2",
+          "prophecyTextShort": "The people that walked in darkness have seen a great light.",
+          "prompt": "Which fulfillment, event, or messianic theme is connected with this prophecy?",
+          "correctAnswer": "Light to Galilee",
+          "choices": [
+            "Blessing to the nations",
+            "Comes from Judah",
+            "Light to Galilee",
+            "Prophet like Moses"
+          ],
+          "fulfillmentReference": "Matthew 4:15-16",
+          "fulfillmentSummary": "Matthew connects Jesus' Galilean ministry with Isaiah's words.",
+          "difficulty": "easy",
+          "teachingNote": "The Gospel citation ties the prophecy to Jesus' public ministry in Galilee."
+        },
+        {
+          "id": "mp-017",
+          "title": "Child And Kingdom",
+          "theme": "Kingship",
+          "prophecyReference": "Isaiah 9:6-7",
+          "prophecyTextShort": "Unto us a child is born... and the government shall be upon his shoulder.",
+          "prompt": "Which fulfillment, event, or messianic theme is connected with this prophecy?",
+          "correctAnswer": "Kingdom without end",
+          "choices": [
+            "Comes from Judah",
+            "God's Son and anointed King",
+            "Kingdom without end",
+            "Prophet like Moses"
+          ],
+          "fulfillmentReference": "Luke 1:32-33",
+          "fulfillmentSummary": "Gabriel announces Davidic rule and an everlasting kingdom.",
+          "difficulty": "easy",
+          "teachingNote": "Luke's announcement uses Davidic kingdom language that Christians connect with Isaiah's promise."
+        },
+        {
+          "id": "mp-018",
+          "title": "Voice In The Wilderness",
+          "theme": "Forerunner",
+          "prophecyReference": "Isaiah 40:3",
+          "prophecyTextShort": "Prepare ye the way of the Lord.",
+          "prompt": "Which fulfillment, event, or messianic theme is connected with this prophecy?",
+          "correctAnswer": "Forerunner prepares the way",
+          "choices": [
+            "Forerunner prepares the way",
+            "God's Son and anointed King",
+            "Prophet like Moses",
+            "Resurrection without seeing corruption"
+          ],
+          "fulfillmentReference": "Matthew 3:3",
+          "fulfillmentSummary": "John the Baptist is identified with the wilderness voice.",
+          "difficulty": "easy",
+          "teachingNote": "The Synoptic Gospels connect Isaiah 40:3 with John the Baptist."
+        },
+        {
+          "id": "mp-019",
+          "title": "Chosen Servant",
+          "theme": "Servant",
+          "prophecyReference": "Isaiah 42:1-4",
+          "prophecyTextShort": "Behold my servant, whom I uphold; mine elect.",
+          "prompt": "Which fulfillment, event, or messianic theme is connected with this prophecy?",
+          "correctAnswer": "Chosen servant",
+          "choices": [
+            "Chosen servant",
+            "God's Son and anointed King",
+            "Jesus' suffering cry from the cross",
+            "Resurrection without seeing corruption"
+          ],
+          "fulfillmentReference": "Matthew 12:18-21",
+          "fulfillmentSummary": "Matthew quotes the servant passage in relation to Jesus' ministry.",
+          "difficulty": "medium",
+          "teachingNote": "Matthew's quotation presents Jesus' ministry through Isaiah's servant language."
+        },
+        {
+          "id": "mp-020",
+          "title": "Despised And Rejected",
+          "theme": "Suffering",
+          "prophecyReference": "Isaiah 53:3",
+          "prophecyTextShort": "He is despised and rejected of men.",
+          "prompt": "Which fulfillment, event, or messianic theme is connected with this prophecy?",
+          "correctAnswer": "Rejected by his own",
+          "choices": [
+            "Garments divided",
+            "Jesus' suffering cry from the cross",
+            "Rejected by his own",
+            "Resurrection without seeing corruption"
+          ],
+          "fulfillmentReference": "John 1:11",
+          "fulfillmentSummary": "John says Jesus came to his own, and his own received him not.",
+          "difficulty": "medium",
+          "teachingNote": "This pairing is thematic rather than a direct quotation, so the wording stays careful."
+        }
+      ]
+    },
+    {
+      "id": "mp-session-05",
+      "title": "Messiah Prophecy Set 05",
+      "theme": "Messianic prophecy answer choices",
+      "rounds": [
+        {
+          "id": "mp-021",
+          "title": "Wounded For Transgressions",
+          "theme": "Suffering",
+          "prophecyReference": "Isaiah 53:5",
+          "prophecyTextShort": "He was wounded for our transgressions.",
+          "prompt": "Which fulfillment, event, or messianic theme is connected with this prophecy?",
+          "correctAnswer": "Suffering servant",
+          "choices": [
+            "Garments divided",
+            "Jesus' suffering cry from the cross",
+            "No bones broken",
+            "Suffering servant"
+          ],
+          "fulfillmentReference": "1 Peter 2:24",
+          "fulfillmentSummary": "Peter applies the servant's suffering to Christ's death.",
+          "difficulty": "easy",
+          "teachingNote": "1 Peter explicitly uses Isaiah 53 language for Christ's suffering."
+        },
+        {
+          "id": "mp-022",
+          "title": "Silent Before Accusers",
+          "theme": "Suffering",
+          "prophecyReference": "Isaiah 53:7",
+          "prophecyTextShort": "He opened not his mouth.",
+          "prompt": "Which fulfillment, event, or messianic theme is connected with this prophecy?",
+          "correctAnswer": "Silent before accusers",
+          "choices": [
+            "Blessing to the nations",
+            "Christ's victory over sin and death",
+            "Comes from Judah",
+            "Silent before accusers"
+          ],
+          "fulfillmentReference": "Matthew 27:14",
+          "fulfillmentSummary": "Jesus gives no answer before Pilate's accusations.",
+          "difficulty": "easy",
+          "teachingNote": "The Gospel scene is a widely recognized fulfillment connection to Isaiah 53."
+        },
+        {
+          "id": "mp-023",
+          "title": "With The Rich In Death",
+          "theme": "Death",
+          "prophecyReference": "Isaiah 53:9",
+          "prophecyTextShort": "With the rich in his death.",
+          "prompt": "Which fulfillment, event, or messianic theme is connected with this prophecy?",
+          "correctAnswer": "Buried with the rich",
+          "choices": [
+            "Blessing to the nations",
+            "Buried with the rich",
+            "Comes from Judah",
+            "Prophet like Moses"
+          ],
+          "fulfillmentReference": "Matthew 27:57-60",
+          "fulfillmentSummary": "Joseph of Arimathaea, a rich man, buries Jesus in his tomb.",
+          "difficulty": "medium",
+          "teachingNote": "Matthew's burial account is commonly read with Isaiah 53:9."
+        },
+        {
+          "id": "mp-024",
+          "title": "Numbered With Transgressors",
+          "theme": "Suffering",
+          "prophecyReference": "Isaiah 53:12",
+          "prophecyTextShort": "He was numbered with the transgressors.",
+          "prompt": "Which fulfillment, event, or messianic theme is connected with this prophecy?",
+          "correctAnswer": "Numbered with transgressors",
+          "choices": [
+            "Comes from Judah",
+            "God's Son and anointed King",
+            "Numbered with transgressors",
+            "Prophet like Moses"
+          ],
+          "fulfillmentReference": "Luke 22:37",
+          "fulfillmentSummary": "Jesus quotes this line before his arrest.",
+          "difficulty": "easy",
+          "teachingNote": "Luke records Jesus explicitly quoting this line about what must be accomplished."
+        },
+        {
+          "id": "mp-025",
+          "title": "Bethlehem Ruler",
+          "theme": "Birth",
+          "prophecyReference": "Micah 5:2",
+          "prophecyTextShort": "Out of thee shall he come forth unto me that is to be ruler in Israel.",
+          "prompt": "Which fulfillment, event, or messianic theme is connected with this prophecy?",
+          "correctAnswer": "Born in Bethlehem",
+          "choices": [
+            "Born in Bethlehem",
+            "God's Son and anointed King",
+            "Prophet like Moses",
+            "Resurrection without seeing corruption"
+          ],
+          "fulfillmentReference": "Matthew 2:1-6",
+          "fulfillmentSummary": "Chief priests and scribes identify Bethlehem when Herod asks about Messiah's birth.",
+          "difficulty": "easy",
+          "teachingNote": "Matthew directly links Messiah's birthplace with Micah 5:2."
+        }
+      ]
+    }
+  ]
+}
