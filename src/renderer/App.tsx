@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState, type CSSProperties, type KeyboardEvent as ReactKeyboardEvent } from "react";
 import bibleChallengeLogo from "./assets/bible-challenge-logo.svg";
+import { EventHomeControls } from "./components/EventHomeControls";
+import { RatingModal } from "./components/RatingModal";
+import { StatsCardList } from "./components/StatsCardList";
 import {
   AudioManager,
   DEFAULT_AUDIO_SETTINGS,
@@ -113,6 +116,13 @@ import {
   type WisdomMatchState,
   type WhoSaidItState
 } from "../lib/gameEngine";
+import type {
+  ChallengeRating,
+  EventScoreEntry,
+  GamePlayStats,
+  MissedPromptStat,
+  SavedEventDefinition
+} from "./appTypes";
 
 interface FlashMessage {
   tone: ActivityTone;
@@ -134,48 +144,6 @@ type ContentPackId =
   | "old-testament"
   | "new-testament"
   | "custom";
-
-interface EventScoreEntry {
-  key: string;
-  participantName: string;
-  participantMode: ParticipantMode;
-  color: string;
-  totalScore: number;
-  challengesCompleted: number;
-}
-
-interface SavedEventDefinition {
-  id: string;
-  name: string;
-  gameIds: GameId[];
-}
-
-interface ChallengeRating {
-  totalStars: number;
-  ratingCount: number;
-}
-
-interface MissedPromptStat {
-  itemId: string;
-  label: string;
-  reference?: string;
-  misses: number;
-}
-
-interface GamePlayStats {
-  totalPlays: number;
-  individualPlays: number;
-  teamPlays: number;
-  eventPlays: number;
-  completedPlays: number;
-  totalPrompts: number;
-  totalMissedPrompts: number;
-  totalIncorrectAttempts: number;
-  totalScore: number;
-  bestScore: number;
-  lastPlayedAt: string | null;
-  missedPrompts: MissedPromptStat[];
-}
 
 interface FeedbackDraft {
   gameId: GameId | null;
@@ -3936,52 +3904,12 @@ export function App() {
                     </div>
                   </div>
 
-                  <div className="stats-card-list">
-                    {statsRows.length === 0 ? (
-                      <div className="static-card settings-card">
-                        <strong>No play statistics yet.</strong>
-                        <p className="settings-help">Stats are recorded when a challenge starts and updated when it is completed.</p>
-                      </div>
-                    ) : (
-                      statsRows.map(({ mode, stats }) => (
-                        <article key={mode} className="stats-card">
-                          <div className="stats-card-header">
-                            <div>
-                              <span className="winner-card-label">{GAME_LIBRARY[mode].label}</span>
-                              <strong>{stats.totalPlays} play{stats.totalPlays === 1 ? "" : "s"}</strong>
-                            </div>
-                            <span className="pill pill-muted">Last: {formatLastPlayed(stats.lastPlayedAt)}</span>
-                          </div>
-                          <div className="stats-metric-grid">
-                            <span>Individual <strong>{stats.individualPlays}</strong></span>
-                            <span>Team <strong>{stats.teamPlays}</strong></span>
-                            <span>Event <strong>{stats.eventPlays}</strong></span>
-                            <span>Completed <strong>{stats.completedPlays}</strong></span>
-                            <span>Avg Score <strong>{formatAverageScore(stats)}</strong></span>
-                            <span>Best Score <strong>{stats.bestScore}</strong></span>
-                            <span>Miss Rate <strong>{formatPercent(stats.totalMissedPrompts, stats.totalPrompts)}</strong></span>
-                            <span>Wrong Attempts <strong>{stats.totalIncorrectAttempts}</strong></span>
-                          </div>
-                          {stats.missedPrompts.length > 0 ? (
-                            <div className="missed-prompt-list">
-                              <span className="winner-card-label">Most Missed</span>
-                              {stats.missedPrompts.slice(0, 5).map((miss) => (
-                                <div key={miss.itemId} className="missed-prompt-row">
-                                  <div>
-                                    <strong>{miss.label}</strong>
-                                    {miss.reference ? <span>{miss.reference}</span> : null}
-                                  </div>
-                                  <em>{miss.misses}</em>
-                                </div>
-                              ))}
-                            </div>
-                          ) : (
-                            <p className="settings-help">No missed cards, questions, or puzzles recorded for this game.</p>
-                          )}
-                        </article>
-                      ))
-                    )}
-                  </div>
+                  <StatsCardList
+                    rows={statsRows}
+                    formatLastPlayed={formatLastPlayed}
+                    formatAverageScore={formatAverageScore}
+                    formatPercent={formatPercent}
+                  />
                 </div>
               ) : null}
 
@@ -4052,43 +3980,16 @@ export function App() {
       ) : null}
 
       {ratingGameId ? (
-        <div className="modal-backdrop" role="presentation">
-          <section className="info-modal rating-modal" role="dialog" aria-modal="true" aria-labelledby="rating-title">
-            <div className="section-header">
-              <div>
-                <p className="eyebrow">Challenge Rating</p>
-                <h2 id="rating-title">{GAME_LIBRARY[ratingGameId].label}</h2>
-              </div>
-              <button type="button" className="ghost-button" onClick={() => setRatingGameId(null)}>
-                Close
-              </button>
-            </div>
-            <div className="static-card">
-              <strong>{getRatingLabel(challengeRatings[ratingGameId])}</strong>
-              <div className="rating-dialog-stars" role="radiogroup" aria-label={`${GAME_LIBRARY[ratingGameId].label} rating`}>
-                {Array.from({ length: 5 }, (_, ratingIndex) => {
-                  const stars = ratingIndex + 1;
-                  return (
-                    <button
-                      key={stars}
-                      type="button"
-                      className="star-button rating-dialog-star"
-                      role="radio"
-                      aria-checked={false}
-                      aria-label={`Rate ${GAME_LIBRARY[ratingGameId].label} ${stars} star${stars === 1 ? "" : "s"}`}
-                      onClick={() => {
-                        submitChallengeRating(ratingGameId, stars);
-                        setRatingGameId(null);
-                      }}
-                    >
-                      ★
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          </section>
-        </div>
+        <RatingModal
+          gameId={ratingGameId}
+          gameLabel={GAME_LIBRARY[ratingGameId].label}
+          ratingLabel={getRatingLabel(challengeRatings[ratingGameId])}
+          onClose={() => setRatingGameId(null)}
+          onRate={(mode, stars) => {
+            submitChallengeRating(mode, stars);
+            setRatingGameId(null);
+          }}
+        />
       ) : null}
 
       {feedbackDraft ? (
@@ -4337,54 +4238,20 @@ export function App() {
             </div>
 
             {eventScoringEnabled ? (
-              <>
-                <div className="event-home-actions">
-                  <div>
-                    <span className="winner-card-label">Event</span>
-                    <strong>{eventActionStatus}</strong>
-                  </div>
-                  <div className="event-home-buttons">
-                    <button
-                      type="button"
-                      className="primary-button"
-                      onClick={() => void startNextEventChallenge()}
-                      disabled={eventActionDisabled}
-                    >
-                      {isStartingGame ? "Starting..." : eventActionLabel}
-                    </button>
-                    {eventHasStarted && !isEventFinished ? (
-                      <button type="button" className="secondary-button" onClick={endEventEarly}>
-                        End Event
-                      </button>
-                    ) : null}
-                  </div>
-                </div>
-                <div className="event-score-strip">
-                  <div>
-                    <span className="winner-card-label">Event Mode</span>
-                    <strong>{eventName.trim() || "Untitled Event"}</strong>
-                    <p>
-                      {eventChallengeCount} of {selectedEventChallengeCount} challenge
-                      {selectedEventChallengeCount === 1 ? "" : "s"} completed
-                    </p>
-                  </div>
-                  <div className="event-score-list">
-                    {eventStandings.length === 0 ? (
-                      <span className="event-score-empty">No completed challenges yet.</span>
-                    ) : (
-                      eventStandings.map((entry, index) => (
-                        <span
-                          key={entry.key}
-                          className="event-score-pill"
-                          style={{ "--participant-color": entry.color } as CSSProperties}
-                        >
-                          {index + 1}. {entry.participantName}: {entry.totalScore}
-                        </span>
-                      ))
-                    )}
-                  </div>
-                </div>
-              </>
+              <EventHomeControls
+                actionStatus={eventActionStatus}
+                actionLabel={eventActionLabel}
+                actionDisabled={eventActionDisabled}
+                isStartingGame={isStartingGame}
+                eventHasStarted={eventHasStarted}
+                isEventFinished={isEventFinished}
+                eventName={eventName}
+                completedChallengeCount={eventChallengeCount}
+                selectedChallengeCount={selectedEventChallengeCount}
+                standings={eventStandings}
+                onStartNext={() => void startNextEventChallenge()}
+                onEndEarly={endEventEarly}
+              />
             ) : null}
           </section>
 

@@ -1,11 +1,33 @@
 import { loadGameContent } from "./content";
 import {
-  scoreFiveGuesses,
   scoreInitials,
   scoreProphecyRetry,
   scoreScriptureLetterGuess,
   scoreScriptureSolve
 } from "./scoring";
+import type {
+  ActivityEntry,
+  ActivityTone,
+  BoardPromptBase,
+  CardRoundMeta,
+  ChallengeDifficulty,
+  DifficultyFilter,
+  EngineActionResult,
+  Participant,
+  ParticipantMode,
+  PlayerStats,
+  SessionBase
+} from "./gameCore";
+import {
+  createFiveGuessesBoard,
+  getFiveGuessesCurrentActorLabel,
+  passFiveGuessesBoardGuess,
+  selectFiveGuessesBoardCard,
+  submitFiveGuessesBoardGuess,
+  type FiveGuessesBoardCard,
+  type FiveGuessesPrompt,
+  type FiveGuessesState
+} from "./games/fiveGuesses";
 import type {
   BeforeOrAfterRound,
   BibleConnectionsRound,
@@ -14,7 +36,6 @@ import type {
   ChapterFinderRound,
   CompleteVerseRound,
   FulfillmentFinderRound,
-  FiveGuessesRound,
   GameId,
   InitialsRound,
   MessiahProphecyRound,
@@ -37,10 +58,16 @@ import type {
 } from "../types/gameData";
 
 export type { GameId } from "../types/gameData";
-export type ActivityTone = "info" | "success" | "warning";
-export type ParticipantMode = "individual" | "teams";
-export type ChallengeDifficulty = "easy" | "medium" | "hard";
-export type DifficultyFilter = ChallengeDifficulty | "mixed";
+export type {
+  ActivityEntry,
+  ActivityTone,
+  ChallengeDifficulty,
+  DifficultyFilter,
+  Participant,
+  ParticipantMode,
+  PlayerStats
+} from "./gameCore";
+export type { FiveGuessesBoardCard, FiveGuessesPrompt, FiveGuessesState } from "./games/fiveGuesses";
 
 export interface TeamSetup {
   teamName: string;
@@ -59,52 +86,7 @@ export interface SessionConfig {
   sessionId?: string;
 }
 
-export interface ParticipantMember {
-  id: string;
-  name: string;
-}
-
-export interface Participant {
-  id: string;
-  name: string;
-  color: string;
-  members: ParticipantMember[];
-  turnCounter: number;
-}
-
-export interface PlayerStats {
-  totalScore: number;
-  roundWins: number;
-  earlySolves: number;
-  initialsOnlySolves: number;
-  incorrectAttempts: number;
-  correctFullSolves: number;
-  letterRevealPoints: number;
-  hiddenLetterSolveBonus: number;
-  timelinePerfectOrders: number;
-  scrambleSolves: number;
-  connectionsGroupsFound: number;
-  bookEarlySolves: number;
-  beforeAfterCorrect: number;
-  referenceRushCorrect: number;
-  chapterFinderCorrect: number;
-  whoSaidItCorrect: number;
-  booksRelayPerfectOrders: number;
-  missingWordCorrect: number;
-}
-
-export interface ActivityEntry {
-  id: string;
-  tone: ActivityTone;
-  text: string;
-  roundNumber: number;
-}
-
-export interface ActionResult {
-  nextState: SessionState;
-  tone: ActivityTone;
-  text: string;
-}
+export type ActionResult = EngineActionResult<SessionState>;
 
 export interface Standing {
   participant: Participant;
@@ -115,60 +97,6 @@ export interface SessionOption {
   id: string;
   title: string;
   theme: string;
-}
-
-interface CardRoundMeta {
-  theme: string;
-  sourceSessionTitle: string;
-  cluePoolSize: number;
-}
-
-interface SessionBase {
-  gameId: GameId;
-  displayName: string;
-  sessionTitle: string;
-  sessionTheme: string;
-  participantMode: ParticipantMode;
-  participants: Participant[];
-  stats: Record<string, PlayerStats>;
-  activityLog: ActivityEntry[];
-  status: "in-progress" | "completed";
-  turnIndex: number;
-  totalPrompts: number;
-  resolvedPrompts: number;
-}
-
-export interface FiveGuessesBoardCard {
-  id: string;
-  round: FiveGuessesRound & CardRoundMeta;
-  pickNumber: number;
-  boardCategory: string;
-  boardValue: number;
-  status: "available" | "active" | "solved" | "unsolved";
-  winnerParticipantId: string | null;
-}
-
-interface BoardPromptBase {
-  phase: "primary" | "steal" | "resolved";
-  primaryParticipantIndex: number;
-  primaryTurnConsumed: boolean;
-  stealOrder: number[];
-  stealCursor: number;
-  resolvedMessage: string | null;
-}
-
-export interface FiveGuessesPrompt extends BoardPromptBase {
-  kind: "five-guesses";
-  cardId: string;
-  round: FiveGuessesRound & CardRoundMeta;
-  revealedClues: number;
-  primaryMemberName: string;
-}
-
-export interface FiveGuessesState extends SessionBase {
-  gameId: "five-guesses";
-  boardCards: FiveGuessesBoardCard[];
-  currentPrompt: FiveGuessesPrompt | null;
 }
 
 export interface InitialsBoardCard {
@@ -707,7 +635,6 @@ export const GAME_LIBRARY: Record<
 };
 
 const BOARD_CARD_COUNT = 25;
-const FIVE_GUESSES_CLUES_PER_CARD = 5;
 const INITIALS_CLUES_PER_CARD = 6;
 const SCRIPTURE_ROUNDS_PER_GAME = 5;
 const TIMELINE_ROUNDS_PER_GAME = 5;
@@ -1019,22 +946,6 @@ function getParticipantStats(state: SessionState, participantIndex: number): Pla
   return state.stats[participant.id];
 }
 
-function findFiveGuessesCard(
-  state: FiveGuessesState,
-  cardId: string
-): { cardIndex: number; card: FiveGuessesBoardCard } | null {
-  const cardIndex = state.boardCards.findIndex((card) => card.id === cardId);
-
-  if (cardIndex < 0) {
-    return null;
-  }
-
-  return {
-    cardIndex,
-    card: state.boardCards[cardIndex]
-  };
-}
-
 function findInitialsCard(
   state: InitialsState,
   cardId: string
@@ -1052,7 +963,7 @@ function findInitialsCard(
 }
 
 function finalizeBoardPrompt(
-  nextState: FiveGuessesState | InitialsState,
+  nextState: InitialsState,
   options: {
     solved: boolean;
     winnerParticipantIndex?: number;
@@ -1077,28 +988,15 @@ function finalizeBoardPrompt(
     nextState.status = "completed";
   }
 
-  if (nextState.gameId === "five-guesses") {
-    const found = findFiveGuessesCard(nextState, prompt.cardId);
+  const found = findInitialsCard(nextState, prompt.cardId);
 
-    if (!found) {
-      throw new Error("Unable to locate the active board card.");
-    }
-
-    found.card.status = options.solved ? "solved" : "unsolved";
-    found.card.winnerParticipantId =
-      options.winnerParticipantIndex == null ? null : nextState.participants[options.winnerParticipantIndex].id;
-  } else {
-    const found = findInitialsCard(nextState, prompt.cardId);
-
-    if (!found) {
-      throw new Error("Unable to locate the active board card.");
-    }
-
-    found.card.status = options.solved ? "solved" : "unsolved";
-    found.card.winnerParticipantId =
-      options.winnerParticipantIndex == null ? null : nextState.participants[options.winnerParticipantIndex].id;
+  if (!found) {
+    throw new Error("Unable to locate the active board card.");
   }
 
+  found.card.status = options.solved ? "solved" : "unsolved";
+  found.card.winnerParticipantId =
+    options.winnerParticipantIndex == null ? null : nextState.participants[options.winnerParticipantIndex].id;
   prompt.phase = "resolved";
   prompt.resolvedMessage = options.message;
 
@@ -1115,53 +1013,6 @@ function createScripturePrompt(round: ScripturePuzzleRound): ScripturePrompt {
     winnerParticipantId: null,
     completedReason: null
   };
-}
-
-async function createFiveGuessesBoard(
-  difficulty: DifficultyFilter | undefined,
-  customOnly = false
-): Promise<FiveGuessesBoardCard[]> {
-  const pack = await loadGameContent("five-guesses", { customOnly });
-  const allRounds = filterRoundsByDifficulty(
-    pack.sessions.flatMap((session) =>
-      session.rounds.map((round) => ({
-        ...round,
-        theme: session.theme,
-        sourceSessionTitle: session.title,
-        cluePoolSize: round.clues.length,
-        clues: pickRandomSubset(round.clues, FIVE_GUESSES_CLUES_PER_CARD)
-      }))
-    ),
-    difficulty,
-    "Five Clues"
-  );
-  const grouped = new Map<string, typeof allRounds>();
-
-  for (const round of shuffle(allRounds)) {
-    const categoryRounds = grouped.get(round.category) ?? [];
-    categoryRounds.push(round);
-    grouped.set(round.category, categoryRounds);
-  }
-
-  const categoryGroups = shuffle(Array.from(grouped.entries()).filter(([, rounds]) => rounds.length >= 5)).slice(0, 5);
-
-  if (categoryGroups.length < 5) {
-    throw new Error("Five Clues needs at least five categories with five cards each.");
-  }
-
-  return categoryGroups.flatMap(([boardCategory, rounds], categoryIndex) =>
-    shuffle(rounds)
-      .slice(0, 5)
-      .map((round, valueIndex) => ({
-        id: `${round.id}-${categoryIndex + 1}-${valueIndex + 1}`,
-        round,
-        pickNumber: categoryIndex * 5 + valueIndex + 1,
-        boardCategory,
-        boardValue: (valueIndex + 1) * 100,
-        status: "available" as const,
-        winnerParticipantId: null
-      }))
-  );
 }
 
 async function createInitialsBoard(
@@ -2373,6 +2224,10 @@ export function getUpcomingTurnLabel(state: SessionState): string {
 }
 
 export function getCurrentActorLabel(state: SessionState): string {
+  if (state.gameId === "five-guesses") {
+    return getFiveGuessesCurrentActorLabel(state);
+  }
+
   if (
     state.gameId === "scripture-puzzles" ||
     state.gameId === "bible-timeline" ||
@@ -2428,40 +2283,12 @@ export function selectBoardCard(state: SessionState, cardId: string): ActionResu
     throw new Error("This game does not use a board picker.");
   }
 
-  if (state.currentPrompt) {
-    throw new Error("Finish the active prompt before picking another card.");
+  if (state.gameId === "five-guesses") {
+    return selectFiveGuessesBoardCard(state, cardId);
   }
 
-  if (state.gameId === "five-guesses") {
-    const nextState = structuredClone(state);
-    const found = findFiveGuessesCard(nextState, cardId);
-
-    if (!found || found.card.status !== "available") {
-      throw new Error("Choose an available card.");
-    }
-
-    found.card.status = "active";
-    nextState.currentPrompt = {
-      kind: "five-guesses",
-      cardId: found.card.id,
-      round: found.card.round,
-      revealedClues: 1,
-      phase: "primary",
-      primaryParticipantIndex: nextState.turnIndex,
-      primaryTurnConsumed: false,
-      stealOrder: buildStealOrder(nextState.participants.length, nextState.turnIndex),
-      stealCursor: 0,
-      primaryMemberName: getCurrentMemberName(nextState.participants[nextState.turnIndex]),
-      resolvedMessage: null
-    };
-
-    const actor = getCurrentActorLabel(nextState);
-
-    return addActivity(
-      nextState,
-      "info",
-      `${actor} selected ${found.card.boardCategory} for ${found.card.boardValue}. Clue 1 is now visible.`
-    );
+  if (state.currentPrompt) {
+    throw new Error("Finish the active prompt before picking another card.");
   }
 
   const nextState = structuredClone(state);
@@ -2506,93 +2333,16 @@ export function submitBoardGuess(state: SessionState, guess: string): ActionResu
     throw new Error("Use the active game controls for this game.");
   }
 
+  if (state.gameId === "five-guesses") {
+    return submitFiveGuessesBoardGuess(state, trimmedGuess);
+  }
+
   if (!state.currentPrompt) {
     throw new Error("Pick a board card before guessing.");
   }
 
   if (state.currentPrompt.phase === "resolved") {
     throw new Error("Continue to the board before guessing again.");
-  }
-
-  if (state.gameId === "five-guesses") {
-    const nextState = structuredClone(state);
-    const prompt = nextState.currentPrompt!;
-    const actorIndex =
-      prompt.phase === "primary" ? prompt.primaryParticipantIndex : prompt.stealOrder[prompt.stealCursor];
-    const actor = nextState.participants[actorIndex];
-    const stats = getParticipantStats(nextState, actorIndex);
-    const actorLabel = getCurrentActorLabel(nextState);
-
-    if (isCorrectGuess(prompt.round.answer, prompt.round.aliases, trimmedGuess)) {
-      const found = findFiveGuessesCard(nextState, prompt.cardId);
-      const points = found?.card.boardValue ?? scoreFiveGuesses(prompt.revealedClues as 1 | 2 | 3 | 4 | 5);
-
-      stats.totalScore += points;
-      stats.roundWins += 1;
-      stats.earlySolves += prompt.phase === "primary" && prompt.revealedClues <= 2 ? 1 : 0;
-
-      if (prompt.phase === "steal") {
-        consumeTurn(nextState.participants, actorIndex);
-      }
-
-      return finalizeBoardPrompt(nextState, {
-        solved: true,
-        winnerParticipantIndex: actorIndex,
-        message: `${actorLabel} solved ${prompt.round.answer} for ${points} point${points === 1 ? "" : "s"}.`
-      });
-    }
-
-    stats.incorrectAttempts += 1;
-
-    if (prompt.phase === "primary") {
-      if (prompt.revealedClues < 5) {
-        prompt.revealedClues += 1;
-
-        return addActivity(
-          nextState,
-          "warning",
-          `${actorLabel} missed. Clue ${prompt.revealedClues} is now revealed.`
-        );
-      }
-
-      if (!prompt.primaryTurnConsumed) {
-        consumeTurn(nextState.participants, prompt.primaryParticipantIndex);
-        prompt.primaryTurnConsumed = true;
-      }
-
-      if (prompt.stealOrder.length === 0) {
-        return finalizeBoardPrompt(nextState, {
-          solved: false,
-          message: `No stealers remained. ${prompt.round.answer} closes unsolved.`
-        });
-      }
-
-      prompt.phase = "steal";
-      prompt.stealCursor = 0;
-
-      return addActivity(
-        nextState,
-        "warning",
-        `${actorLabel} used all five clues. ${getCurrentActorLabel(nextState)} is up first for the steal.`
-      );
-    }
-
-    consumeTurn(nextState.participants, actorIndex);
-
-    if (prompt.stealCursor < prompt.stealOrder.length - 1) {
-      prompt.stealCursor += 1;
-
-      return addActivity(
-        nextState,
-        "warning",
-        `${actorLabel} missed the steal. ${getCurrentActorLabel(nextState)} is next.`
-      );
-    }
-
-    return finalizeBoardPrompt(nextState, {
-      solved: false,
-      message: `All steal attempts missed. ${prompt.round.answer} closes unsolved.`
-    });
   }
 
   const nextState = structuredClone(state);
@@ -2679,69 +2429,16 @@ export function passBoardGuess(state: SessionState): ActionResult {
     throw new Error("Use the active game controls for this game.");
   }
 
+  if (state.gameId === "five-guesses") {
+    return passFiveGuessesBoardGuess(state);
+  }
+
   if (!state.currentPrompt) {
     throw new Error("Pick a board card before passing.");
   }
 
   if (state.currentPrompt.phase === "resolved") {
     throw new Error("Continue to the board before passing again.");
-  }
-
-  if (state.gameId === "five-guesses") {
-    const nextState = structuredClone(state);
-    const prompt = nextState.currentPrompt!;
-    const actorIndex =
-      prompt.phase === "primary" ? prompt.primaryParticipantIndex : prompt.stealOrder[prompt.stealCursor];
-    const stats = getParticipantStats(nextState, actorIndex);
-    const actorLabel = getCurrentActorLabel(nextState);
-
-    stats.incorrectAttempts += 1;
-
-    if (prompt.phase === "primary") {
-      if (prompt.revealedClues < FIVE_GUESSES_CLUES_PER_CARD) {
-        prompt.revealedClues += 1;
-
-        return addActivity(
-          nextState,
-          "warning",
-          `${actorLabel} passed. Clue ${prompt.revealedClues} is now revealed.`
-        );
-      }
-
-      if (!prompt.primaryTurnConsumed) {
-        consumeTurn(nextState.participants, prompt.primaryParticipantIndex);
-        prompt.primaryTurnConsumed = true;
-      }
-
-      if (prompt.stealOrder.length === 0) {
-        return finalizeBoardPrompt(nextState, {
-          solved: false,
-          message: `${actorLabel} passed after all five clues. ${prompt.round.answer} closes unsolved.`
-        });
-      }
-
-      prompt.phase = "steal";
-      prompt.stealCursor = 0;
-
-      return addActivity(
-        nextState,
-        "warning",
-        `${actorLabel} passed after all five clues. ${getCurrentActorLabel(nextState)} is up first for the steal.`
-      );
-    }
-
-    consumeTurn(nextState.participants, actorIndex);
-
-    if (prompt.stealCursor < prompt.stealOrder.length - 1) {
-      prompt.stealCursor += 1;
-
-      return addActivity(nextState, "warning", `${actorLabel} passed the steal. ${getCurrentActorLabel(nextState)} is next.`);
-    }
-
-    return finalizeBoardPrompt(nextState, {
-      solved: false,
-      message: `All steal attempts passed or missed. ${prompt.round.answer} closes unsolved.`
-    });
   }
 
   const nextState = structuredClone(state);
