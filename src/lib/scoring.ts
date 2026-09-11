@@ -33,3 +33,43 @@ export function scoreProphecyRetry(wrongGuessCount: number): number {
 
   return wrongGuessCount >= 3 ? 1 : 5 - wrongGuessCount;
 }
+
+export function scoreFirstLetterRecall(correctWordCount: number, totalWordCount: number): number {
+  if (!Number.isInteger(correctWordCount) || correctWordCount < 0) {
+    throw new Error("correctWordCount must be a non-negative integer.");
+  }
+
+  if (!Number.isInteger(totalWordCount) || totalWordCount <= 0) {
+    throw new Error("totalWordCount must be a positive integer.");
+  }
+
+  if (correctWordCount > totalWordCount) {
+    throw new Error("correctWordCount cannot exceed totalWordCount.");
+  }
+
+  return Math.round((correctWordCount / totalWordCount) * 10);
+}
+
+export function scoreVerseTypingRace(wpm: number, accuracy: number): number {
+  if (!Number.isFinite(wpm) || wpm < 0) {
+    throw new Error("wpm must be a non-negative number.");
+  }
+
+  if (!Number.isFinite(accuracy) || accuracy < 0 || accuracy > 1) {
+    throw new Error("accuracy must be a number from 0 to 1.");
+  }
+
+  return Math.max(0, Math.round(wpm * accuracy));
+}
+
+export function scoreWordLadder(stepsTaken: number, minSteps: number): number {
+  if (!Number.isInteger(stepsTaken) || stepsTaken <= 0) {
+    throw new Error("stepsTaken must be a positive integer.");
+  }
+
+  if (!Number.isInteger(minSteps) || minSteps <= 0) {
+    throw new Error("minSteps must be a positive integer.");
+  }
+
+  return Math.max(1, 10 - Math.max(0, stepsTaken - minSteps));
+}

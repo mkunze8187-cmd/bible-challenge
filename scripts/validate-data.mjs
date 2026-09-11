@@ -30,7 +30,13 @@ const files = [
   { fileName: "wisdom-match.json", game: "wisdom-match" },
   { fileName: "psalm-theme.json", game: "psalm-theme" },
   { fileName: "proverb-categories.json", game: "proverb-categories" },
-  { fileName: "psalm-reference-finder.json", game: "psalm-reference-finder" }
+  { fileName: "psalm-reference-finder.json", game: "psalm-reference-finder" },
+  { fileName: "two-truths-and-a-lie.json", game: "two-truths-and-a-lie" },
+  { fileName: "relay-verse-build.json", game: "relay-verse-build" },
+  { fileName: "first-letter-recall.json", game: "first-letter-recall" },
+  { fileName: "verse-typing-race.json", game: "verse-typing-race" },
+  { fileName: "word-ladder.json", game: "word-ladder" },
+  { fileName: "bible-anagrams.json", game: "bible-anagrams" }
 ];
 
 const failures = [];
@@ -631,6 +637,160 @@ function validatePsalmReferenceFinder(pack) {
   });
 }
 
+function validateTwoTruthsAndALie(pack) {
+  const rounds = getAllRounds(pack);
+  ensure(rounds.length >= 25, "two-truths-and-a-lie.json: must contain at least 25 playable rounds.");
+
+  const seenTriples = new Set();
+  rounds.forEach((round) => {
+    ensure(round.id.startsWith("ttl-"), `${round.id}: two-truths-and-a-lie ids must start with ttl-.`);
+    ["subject", "explanation", "reference", "theme", "teachingNote"].forEach((field) =>
+      ensure(isNonEmptyString(round[field]), `${round.id}: ${field} is required.`)
+    );
+    ensure(round.subjectType === "person" || round.subjectType === "event", `${round.id}: subjectType must be person or event.`);
+    ensure(Array.isArray(round.statements) && round.statements.length === 3, `${round.id}: statements must contain exactly 3 entries.`);
+    validateDifficulty(round);
+
+    if (!Array.isArray(round.statements)) {
+      return;
+    }
+
+    round.statements.forEach((statement, index) =>
+      ensure(isNonEmptyString(statement), `${round.id}: statement ${index + 1} is required.`)
+    );
+    ensure(
+      round.lieIndex === 0 || round.lieIndex === 1 || round.lieIndex === 2,
+      `${round.id}: lieIndex must be 0, 1, or 2.`
+    );
+
+    const tripleKey = round.statements.map(normalizeAlias).join("|");
+    ensure(!seenTriples.has(tripleKey), `${round.id}: duplicate statement triple.`);
+    seenTriples.add(tripleKey);
+  });
+}
+
+function validateBibleAnagrams(pack) {
+  const rounds = getAllRounds(pack);
+  ensure(rounds.length >= 25, "bible-anagrams.json: must contain at least 25 playable rounds.");
+
+  const seenAnswers = new Set();
+  rounds.forEach((round) => {
+    ensure(round.id.startsWith("ba-"), `${round.id}: bible-anagrams ids must start with ba-.`);
+    ["answer", "clue", "theme", "teachingNote"].forEach((field) =>
+      ensure(isNonEmptyString(round[field]), `${round.id}: ${field} is required.`)
+    );
+    ensure(
+      ["Person", "Place", "Thing", "Event"].includes(round.category),
+      `${round.id}: category must be Person, Place, Thing, or Event.`
+    );
+    ensure(
+      typeof round.answer === "string" && /^[A-Za-z]+( [A-Za-z]+)*$/.test(round.answer),
+      `${round.id}: answer must be letters only (spaces allowed between words).`
+    );
+    validateDifficulty(round);
+
+    const normalizedAnswer = normalizeAlias(round.answer);
+    ensure(!seenAnswers.has(normalizedAnswer), `${round.id}: duplicate answer "${round.answer}".`);
+    seenAnswers.add(normalizedAnswer);
+  });
+}
+
+function validateVerseRound(pack, fileName, idPrefix) {
+  const rounds = getAllRounds(pack);
+  ensure(rounds.length >= 25, `${fileName}: must contain at least 25 playable rounds.`);
+  validateUniqueReferences(rounds, fileName, (round) => round.reference);
+
+  rounds.forEach((round) => {
+    ensure(round.id.startsWith(idPrefix), `${round.id}: ${fileName} ids must start with ${idPrefix}.`);
+    ["reference", "theme", "verseText", "teachingNote"].forEach((field) =>
+      ensure(isNonEmptyString(round[field]), `${round.id}: ${field} is required.`)
+    );
+    ensure(round.sourceTranslation === "KJV", `${round.id}: sourceTranslation must be KJV.`);
+    validateDifficulty(round);
+  });
+}
+
+function validateRelayVerseBuild(pack) {
+  validateVerseRound(pack, "relay-verse-build.json", "rvb-");
+}
+
+function validateFirstLetterRecall(pack) {
+  validateVerseRound(pack, "first-letter-recall.json", "flr-");
+}
+
+function validateVerseTypingRace(pack) {
+  validateVerseRound(pack, "verse-typing-race.json", "vtr-");
+
+  const rounds = getAllRounds(pack);
+  rounds.forEach((round) => {
+    const wordCount = round.verseText.trim().split(/\s+/).filter(Boolean).length;
+    ensure(wordCount >= 4 && wordCount <= 30, `${round.id}: verseText should be a short-to-medium verse for a typing race.`);
+  });
+}
+
+function validateWordLadder(pack) {
+  const rounds = getAllRounds(pack);
+  ensure(rounds.length >= 25, "word-ladder.json: must contain at least 25 playable rounds.");
+
+  function hammingDistanceOne(a, b) {
+    if (a.length !== b.length) {
+      return false;
+    }
+    let differences = 0;
+    for (let index = 0; index < a.length; index += 1) {
+      if (a[index] !== b[index]) {
+        differences += 1;
+        if (differences > 1) {
+          return false;
+        }
+      }
+    }
+    return differences === 1;
+  }
+
+  rounds.forEach((round) => {
+    ensure(round.id.startsWith("wl-"), `${round.id}: word-ladder ids must start with wl-.`);
+    ["startWord", "endWord", "startFlavorText", "endFlavorText", "theme", "teachingNote"].forEach((field) =>
+      ensure(isNonEmptyString(round[field]), `${round.id}: ${field} is required.`)
+    );
+    ensure(/^[a-z]+$/.test(round.startWord), `${round.id}: startWord must be lowercase letters only.`);
+    ensure(/^[a-z]+$/.test(round.endWord), `${round.id}: endWord must be lowercase letters only.`);
+    ensure(round.startWord.length === round.endWord.length, `${round.id}: startWord and endWord must be the same length.`);
+    ensure(round.wordLength === round.startWord.length, `${round.id}: wordLength must match startWord's length.`);
+    ensure(Number.isInteger(round.minSteps) && round.minSteps >= 1, `${round.id}: minSteps must be a positive integer.`);
+    validateDifficulty(round);
+
+    ensure(
+      Array.isArray(round.revealPath) && round.revealPath.length === round.minSteps + 1,
+      `${round.id}: revealPath must contain minSteps + 1 words.`
+    );
+
+    if (!Array.isArray(round.revealPath)) {
+      return;
+    }
+
+    ensure(round.revealPath[0] === round.startWord, `${round.id}: revealPath must start with startWord.`);
+    ensure(round.revealPath[round.revealPath.length - 1] === round.endWord, `${round.id}: revealPath must end with endWord.`);
+
+    for (let index = 1; index < round.revealPath.length; index += 1) {
+      ensure(
+        hammingDistanceOne(round.revealPath[index - 1], round.revealPath[index]),
+        `${round.id}: revealPath step ${index} does not change exactly one letter.`
+      );
+    }
+  });
+}
+
+function validateWordLadderDictionary(dictionaryPack) {
+  ensure(Array.isArray(dictionaryPack.words) && dictionaryPack.words.length > 0, "word-ladder-dictionary.json: words must be a non-empty array.");
+  const seen = new Set();
+  dictionaryPack.words.forEach((word) => {
+    ensure(/^[a-z]{3,7}$/.test(word), `word-ladder-dictionary.json: "${word}" must be 3-7 lowercase letters.`);
+    ensure(!seen.has(word), `word-ladder-dictionary.json: duplicate word "${word}".`);
+    seen.add(word);
+  });
+}
+
 function validateProverbCategories(pack) {
   const rounds = getAllRounds(pack);
   ensure(rounds.length >= 25, "proverb-categories.json: must contain at least 25 playable category sessions.");
@@ -901,19 +1061,34 @@ for (const { fileName, game } of files) {
   } else if (fileName === "psalm-reference-finder.json") {
     validatePack(pack, game, fileName);
     validatePsalmReferenceFinder(pack);
+  } else if (fileName === "two-truths-and-a-lie.json") {
+    validatePack(pack, game, fileName);
+    validateTwoTruthsAndALie(pack);
+  } else if (fileName === "relay-verse-build.json") {
+    validatePack(pack, game, fileName);
+    validateRelayVerseBuild(pack);
+  } else if (fileName === "first-letter-recall.json") {
+    validatePack(pack, game, fileName);
+    validateFirstLetterRecall(pack);
+  } else if (fileName === "verse-typing-race.json") {
+    validatePack(pack, game, fileName);
+    validateVerseTypingRace(pack);
+  } else if (fileName === "word-ladder.json") {
+    validatePack(pack, game, fileName);
+    validateWordLadder(pack);
+  } else if (fileName === "bible-anagrams.json") {
+    validatePack(pack, game, fileName);
+    validateBibleAnagrams(pack);
   }
 }
+
+const wordLadderDictionaryPack = JSON.parse(await readFile(path.join(dataDir, "word-ladder-dictionary.json"), "utf8"));
+validateWordLadderDictionary(wordLadderDictionaryPack);
 
 const gameEngineSource = await readFile(path.resolve(__dirname, "../src/lib/gameEngine.ts"), "utf8");
 const appSource = await readFile(path.resolve(__dirname, "../src/renderer/App.tsx"), "utf8");
 const styleSource = await readFile(path.resolve(__dirname, "../src/renderer/styles.css"), "utf8");
-const newGames = [
-  "complete-the-verse",
-  "wisdom-match",
-  "psalm-theme",
-  "proverb-categories",
-  "psalm-reference-finder"
-];
+const newGames = ["bible-anagrams"];
 
 newGames.forEach((game) => {
   ensure(gameEngineSource.includes(`"${game}"`), `${game}: missing from game engine library or state handling.`);

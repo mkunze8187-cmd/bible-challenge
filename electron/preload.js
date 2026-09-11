@@ -11,8 +11,6 @@ contextBridge.exposeInMainWorld("desktopHost", {
   openExternal: (url) => ipcRenderer.invoke("app:open-external", url),
   getAppSettings: () => ipcRenderer.invoke("app:get-settings"),
   saveAppSettings: (settings) => ipcRenderer.invoke("app:save-settings", settings),
-  checkForUpdates: () => ipcRenderer.invoke("updates:check"),
-  downloadAndInstallUpdate: () => ipcRenderer.invoke("updates:download-and-install"),
   listCustomContentPacks: () => ipcRenderer.invoke("custom-content:list"),
   chooseCustomContentJson: () => ipcRenderer.invoke("custom-content:choose-json"),
   saveCustomContentPack: (pack) => ipcRenderer.invoke("custom-content:save", pack),

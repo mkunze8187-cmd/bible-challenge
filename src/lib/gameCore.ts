@@ -37,6 +37,7 @@ export interface PlayerStats {
   whoSaidItCorrect: number;
   booksRelayPerfectOrders: number;
   missingWordCorrect: number;
+  wordLadderStepsCompleted: number;
 }
 
 export interface ActivityEntry {

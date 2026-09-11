@@ -11,7 +11,7 @@ import {
   type SoundEffectName
 } from "./audio";
 import {
-  normalizeCustomContentPack,
+  loadWordLadderDictionary,
   normalizeCustomContentPacks,
   registerCustomContentPacks,
   type CustomContentPack
@@ -21,6 +21,7 @@ import {
   answerBeforeOrAfter,
   buildMissingWordVerse,
   buildScriptureBoard,
+  clearBibleAnagramAnswer,
   clearVerseAnswer,
   continueGame,
   createSessionState,
@@ -28,10 +29,12 @@ import {
   getScriptureRemainingLetters,
   getStandings,
   getUniqueWinner,
+  moveBibleAnagramTile,
   moveBibleBook,
   moveTimelineEvent,
   moveVerseTile,
   passBeforeOrAfter,
+  passBibleAnagram,
   passBibleBooksRelay,
   passBoardGuess,
   passChapterFinder,
@@ -48,8 +51,10 @@ import {
   passPsalmReferenceFinder,
   passPsalmTheme,
   passReferenceRush,
+  passRelayWord,
   passScriptureTurn,
   passTimelineRound,
+  passTwoTruths,
   passVerseScramble,
   passWisdomMatch,
   passWhoSaidIt,
@@ -60,11 +65,14 @@ import {
   selectProphecyMatchCard,
   selectProverbCategory,
   selectProverbCategoryCard,
+  selectTwoTruthsStatement,
+  submitBibleAnagram,
   submitCompleteVerseChoice,
   submitBibleBooksRelay,
   submitBoardGuess,
   submitChapterFinderGuess,
   submitConnectionGroup,
+  submitFirstLetterRecall,
   submitFulfillmentFinderChoice,
   submitMessiahProphecyChoice,
   submitMissingWordGuess,
@@ -76,21 +84,26 @@ import {
   submitPsalmReferenceFinderChoice,
   submitPsalmThemeChoice,
   submitReferenceRushGuess,
+  submitRelayWord,
   submitScriptureLetterGuess,
   submitScriptureSolve,
   submitTimelineOrder,
   submitVerseScramble,
+  submitVerseTypingResult,
   submitWisdomMatchChoice,
   submitWhoSaidItGuess,
+  submitWordLadderStep,
   toggleConnectionTile,
   type ActionResult,
   type ActivityTone,
   type BeforeOrAfterState,
+  type BibleAnagramsState,
   type BibleBooksRelayState,
   type BibleConnectionsState,
   type BibleTimelineState,
   type ChapterFinderState,
   type CompleteVerseState,
+  type FirstLetterRecallState,
   type FulfillmentFinderState,
   type FiveGuessesState,
   type GameId,
@@ -107,14 +120,18 @@ import {
   type PsalmReferenceFinderState,
   type PsalmThemeState,
   type ReferenceRushState,
+  type RelayVerseBuildState,
   revealProphecyClueOnTimer,
   type ScriptureState,
   type SessionState,
   type Standing,
   type TeamSetup,
+  type TwoTruthsAndALieState,
   type VerseScrambleState,
+  type VerseTypingRaceState,
   type WisdomMatchState,
-  type WhoSaidItState
+  type WhoSaidItState,
+  type WordLadderState
 } from "../lib/gameEngine";
 import type {
   ChallengeRating,
@@ -130,10 +147,9 @@ interface FlashMessage {
 }
 
 type AppTheme = "classic" | "forest" | "ocean" | "plum" | "dawn" | "meadow" | "ruby";
-type SettingsTab = "appearance" | "players" | "timers" | "audio" | "feedback" | "content" | "event" | "stats" | "updates";
+type SettingsTab = "appearance" | "players" | "timers" | "audio" | "feedback" | "content" | "event" | "stats";
 type TimerPreset = "off" | "beginner" | "standard" | "advanced" | "expert" | "custom";
 type DisplayMode = "normal" | "projector";
-type UpdateCheckResult = Awaited<ReturnType<NonNullable<Window["desktopHost"]>["checkForUpdates"]>>;
 type ContentPackId =
   | "all"
   | "core"
@@ -191,8 +207,7 @@ const SETTINGS_TABS: { id: SettingsTab; label: string }[] = [
   { id: "feedback", label: "Feedback" },
   { id: "content", label: "Content" },
   { id: "event", label: "Event" },
-  { id: "stats", label: "Stats" },
-  { id: "updates", label: "Updates" }
+  { id: "stats", label: "Stats" }
 ];
 const DEFAULT_TEAMS: TeamSetup[] = [
   {
@@ -240,7 +255,13 @@ const GAME_CONTENT_PACKS: Record<GameId, ContentPackId[]> = {
   "wisdom-match": ["psalms-proverbs"],
   "psalm-theme": ["psalms-proverbs"],
   "proverb-categories": ["psalms-proverbs"],
-  "psalm-reference-finder": ["psalms-proverbs", "scripture"]
+  "psalm-reference-finder": ["psalms-proverbs", "scripture"],
+  "two-truths-and-a-lie": ["core"],
+  "relay-verse-build": ["scripture"],
+  "first-letter-recall": ["scripture"],
+  "verse-typing-race": ["scripture"],
+  "word-ladder": ["core"],
+  "bible-anagrams": ["core"]
 };
 const DEFAULT_CHALLENGE_TIMER_SECONDS: Record<GameId, number> = {
   "five-guesses": 30,
@@ -265,7 +286,13 @@ const DEFAULT_CHALLENGE_TIMER_SECONDS: Record<GameId, number> = {
   "wisdom-match": 35,
   "psalm-theme": 35,
   "proverb-categories": 45,
-  "psalm-reference-finder": 35
+  "psalm-reference-finder": 35,
+  "two-truths-and-a-lie": 35,
+  "relay-verse-build": 30,
+  "first-letter-recall": 90,
+  "verse-typing-race": 60,
+  "word-ladder": 30,
+  "bible-anagrams": 30
 };
 const DEFAULT_VERSE_SCRAMBLE_SECONDS_PER_WORD = 6;
 const DIFFICULTY_FILTERS: Array<{ id: DifficultyFilter; label: string }> = [
@@ -293,7 +320,10 @@ const VERSE_TIMER_GAMES = new Set<GameId>([
   "missing-word",
   "complete-the-verse",
   "psalm-theme",
-  "psalm-reference-finder"
+  "psalm-reference-finder",
+  "relay-verse-build",
+  "first-letter-recall",
+  "verse-typing-race"
 ]);
 const QUICK_CHOICE_TIMER_GAMES = new Set<GameId>([
   "before-or-after",
@@ -302,7 +332,8 @@ const QUICK_CHOICE_TIMER_GAMES = new Set<GameId>([
   "complete-the-verse",
   "wisdom-match",
   "psalm-theme",
-  "psalm-reference-finder"
+  "psalm-reference-finder",
+  "two-truths-and-a-lie"
 ]);
 const TIMER_PRESET_SECONDS: Record<Exclude<TimerPreset, "off" | "custom">, { standard: number; verse: number; quick: number }> = {
   beginner: { standard: 90, verse: 120, quick: 45 },
@@ -336,9 +367,20 @@ function getActiveGuessKey(state: SessionState | null): string | null {
     state.gameId === "complete-the-verse" ||
     state.gameId === "wisdom-match" ||
     state.gameId === "psalm-theme" ||
-    state.gameId === "psalm-reference-finder"
+    state.gameId === "psalm-reference-finder" ||
+    state.gameId === "two-truths-and-a-lie" ||
+    state.gameId === "first-letter-recall" ||
+    state.gameId === "verse-typing-race" ||
+    state.gameId === "word-ladder" ||
+    state.gameId === "bible-anagrams"
   ) {
     return state.currentPrompt.phase === "active" ? `${state.gameId}-${state.roundIndex}-${state.turnIndex}` : null;
+  }
+
+  if (state.gameId === "relay-verse-build") {
+    return state.currentPrompt.phase === "active"
+      ? `${state.gameId}-${state.roundIndex}-${state.turnIndex}-${state.currentPrompt.revealedCount}`
+      : null;
   }
 
   if (state.gameId === "prophecy-match") {
@@ -497,7 +539,13 @@ function getCurrentParticipantId(state: SessionState): string | null {
     state.gameId === "wisdom-match" ||
     state.gameId === "psalm-theme" ||
     state.gameId === "proverb-categories" ||
-    state.gameId === "psalm-reference-finder"
+    state.gameId === "psalm-reference-finder" ||
+    state.gameId === "two-truths-and-a-lie" ||
+    state.gameId === "relay-verse-build" ||
+    state.gameId === "first-letter-recall" ||
+    state.gameId === "verse-typing-race" ||
+    state.gameId === "word-ladder" ||
+    state.gameId === "bible-anagrams"
   ) {
     return state.participants[state.turnIndex]?.id ?? null;
   }
@@ -1618,7 +1666,6 @@ export function App() {
   const [defaultContentPackId, setDefaultContentPackId] = useState<ContentPackId>("core");
   const [activeContentPackId, setActiveContentPackId] = useState<ContentPackId>("core");
   const [customContentPacks, setCustomContentPacks] = useState<CustomContentPack[]>([]);
-  const [customContentStatus, setCustomContentStatus] = useState("");
   const [timeRemaining, setTimeRemaining] = useState(30);
   const [eventScoringEnabled, setEventScoringEnabled] = useState(false);
   const [isEventStarted, setIsEventStarted] = useState(false);
@@ -1641,10 +1688,6 @@ export function App() {
   const [feedbackDraft, setFeedbackDraft] = useState<FeedbackDraft | null>(null);
   const [feedbackStatus, setFeedbackStatus] = useState("");
   const [isSubmittingFeedback, setIsSubmittingFeedback] = useState(false);
-  const [updateInfo, setUpdateInfo] = useState<UpdateCheckResult | null>(null);
-  const [updateStatus, setUpdateStatus] = useState("");
-  const [isCheckingUpdates, setIsCheckingUpdates] = useState(false);
-  const [isInstallingUpdate, setIsInstallingUpdate] = useState(false);
   const [hasLoadedAppSettings, setHasLoadedAppSettings] = useState(false);
   const [settingsWarning, setSettingsWarning] = useState("");
   const [isOnline, setIsOnline] = useState(() => (typeof navigator === "undefined" ? true : navigator.onLine));
@@ -1657,6 +1700,7 @@ export function App() {
   const [manualScoreInput, setManualScoreInput] = useState("");
   const [dismissedStudyNoteKey, setDismissedStudyNoteKey] = useState<string | null>(null);
   const [guessText, setGuessText] = useState("");
+  const [wordLadderDictionary, setWordLadderDictionary] = useState<ReadonlySet<string> | null>(null);
   const [scriptureLetter, setScriptureLetter] = useState("");
   const [scriptureSolveText, setScriptureSolveText] = useState("");
   const [flashMessage, setFlashMessage] = useState<FlashMessage>({
@@ -1700,13 +1744,11 @@ export function App() {
         if (!isCancelled) {
           registerCustomContentPacks(packs);
           setCustomContentPacks(packs);
-          setCustomContentStatus(packs.length > 0 ? `${packs.length} custom content pack${packs.length === 1 ? "" : "s"} loaded.` : "");
         }
-      } catch (error) {
+      } catch {
         if (!isCancelled) {
           registerCustomContentPacks([]);
           setCustomContentPacks([]);
-          setCustomContentStatus(error instanceof Error ? error.message : "Custom content could not be loaded.");
         }
       }
     }
@@ -1717,6 +1759,34 @@ export function App() {
       isCancelled = true;
     };
   }, []);
+
+  useEffect(() => {
+    let isCancelled = false;
+
+    loadWordLadderDictionary()
+      .then((dictionary) => {
+        if (!isCancelled) {
+          setWordLadderDictionary(dictionary);
+        }
+      })
+      .catch(() => {
+        if (!isCancelled) {
+          setWordLadderDictionary(new Set());
+        }
+      });
+
+    return () => {
+      isCancelled = true;
+    };
+  }, []);
+
+  function submitWordLadderStepWithDictionary(state: WordLadderState, guess: string): ActionResult {
+    if (!wordLadderDictionary) {
+      throw new Error("The Word Ladder dictionary is still loading. Try again in a moment.");
+    }
+
+    return submitWordLadderStep(state, guess, wordLadderDictionary);
+  }
 
   useEffect(() => {
     let isCancelled = false;
@@ -2161,63 +2231,6 @@ export function App() {
     setAudioWarning("");
     const isPlaying = audioManager.toggleBackgroundPreview();
     setIsMusicPreviewPlaying(isPlaying);
-  }
-
-  async function importCustomContentPack() {
-    if (!window.desktopHost?.chooseCustomContentJson || !window.desktopHost.saveCustomContentPack) {
-      setCustomContentStatus("Custom content import is available in the Electron desktop app.");
-      return;
-    }
-
-    try {
-      const result = await window.desktopHost.chooseCustomContentJson();
-
-      if (result.canceled) {
-        return;
-      }
-
-      if (result.error || !result.pack) {
-        setCustomContentStatus(result.error ?? "The selected file did not contain a content pack.");
-        return;
-      }
-
-      const normalizedPack = await normalizeCustomContentPack(result.pack);
-      const existingPack = customContentPacks.find((pack) => pack.packId === normalizedPack.packId);
-
-      if (existingPack && !window.confirm(`Replace the custom content pack "${existingPack.packName}"?`)) {
-        setCustomContentStatus("Import canceled.");
-        return;
-      }
-
-      const savedPacks = await normalizeCustomContentPacks(await window.desktopHost.saveCustomContentPack(normalizedPack));
-      registerCustomContentPacks(savedPacks);
-      setCustomContentPacks(savedPacks);
-      setActiveContentPackId("custom");
-      setCustomContentStatus(`${normalizedPack.packName} imported.`);
-    } catch (error) {
-      setCustomContentStatus(error instanceof Error ? error.message : "Custom content import failed.");
-    }
-  }
-
-  async function removeCustomContentPack(packId: string) {
-    if (!window.desktopHost?.removeCustomContentPack) {
-      setCustomContentStatus("Custom content removal is available in the Electron desktop app.");
-      return;
-    }
-
-    const pack = customContentPacks.find((entry) => entry.packId === packId);
-    if (pack && !window.confirm(`Remove the custom content pack "${pack.packName}"?`)) {
-      return;
-    }
-
-    try {
-      const savedPacks = await normalizeCustomContentPacks(await window.desktopHost.removeCustomContentPack(packId));
-      registerCustomContentPacks(savedPacks);
-      setCustomContentPacks(savedPacks);
-      setCustomContentStatus(pack ? `${pack.packName} removed.` : "Custom content pack removed.");
-    } catch (error) {
-      setCustomContentStatus(error instanceof Error ? error.message : "Custom content pack could not be removed.");
-    }
   }
 
   function handleAction(action: () => ActionResult, preferredEffect?: SoundEffectName | null) {
@@ -2880,45 +2893,6 @@ export function App() {
     }
   }
 
-  async function checkForUpdates() {
-    if (!window.desktopHost?.checkForUpdates) {
-      setUpdateStatus("Update checks are only available in the desktop app.");
-      return;
-    }
-
-    setIsCheckingUpdates(true);
-    setUpdateStatus("Checking GitHub releases...");
-
-    try {
-      const result = await window.desktopHost.checkForUpdates();
-      setUpdateInfo(result);
-      setUpdateStatus(result.message);
-    } catch (error) {
-      setUpdateInfo(null);
-      setUpdateStatus(error instanceof Error ? error.message : "Unable to check for updates.");
-    } finally {
-      setIsCheckingUpdates(false);
-    }
-  }
-
-  async function downloadAndInstallUpdate() {
-    if (!window.desktopHost?.downloadAndInstallUpdate) {
-      setUpdateStatus("Update installs are only available in the desktop app.");
-      return;
-    }
-
-    setIsInstallingUpdate(true);
-    setUpdateStatus("Downloading installer...");
-
-    try {
-      const result = await window.desktopHost.downloadAndInstallUpdate();
-      setUpdateStatus(result.message);
-    } catch (error) {
-      setUpdateStatus(error instanceof Error ? error.message : "Unable to download and install the update.");
-      setIsInstallingUpdate(false);
-    }
-  }
-
   function submitChallengeRating(mode: GameId, stars: number) {
     setChallengeRatings((current) => {
       const existing = current[mode] ?? { totalStars: 0, ratingCount: 0 };
@@ -2935,20 +2909,6 @@ export function App() {
       tone: "success",
       text: `${GAME_LIBRARY[mode].label} rated ${stars} star${stars === 1 ? "" : "s"}.`
     });
-  }
-
-  function clearChallengeRatings() {
-    if (Object.keys(challengeRatings).length === 0) {
-      setSettingsWarning("There are no saved ratings to clear.");
-      return;
-    }
-
-    if (!window.confirm("Clear all saved challenge ratings?")) {
-      return;
-    }
-
-    setChallengeRatings({});
-    setSettingsWarning("Challenge ratings cleared.");
   }
 
   function clearGameStats() {
@@ -3590,44 +3550,12 @@ export function App() {
                   role="tabpanel"
                   aria-labelledby="settings-tab-feedback"
                 >
-                  <div className="static-card settings-card feedback-settings-card">
-                    <strong>Feedback Form</strong>
-                    <input
-                      className="text-input"
-                      value={feedbackEndpoint}
-                      onChange={(event) => setFeedbackEndpoint(event.target.value)}
-                      placeholder={DEFAULT_FEEDBACK_ENDPOINT}
-                      aria-label="Feedback form endpoint"
-                    />
-                    <p className="settings-help">
-                      Connected to Forminit form {FORMINIT_FEEDBACK_FORM_ID}. Only Forminit and legacy Getform HTTPS endpoints are accepted.
-                    </p>
-                  </div>
                   <div className="static-card settings-card">
-                    <div className="settings-card-header">
-                      <div>
-                        <strong>Saved Ratings</strong>
-                        <p className="settings-help">
-                          {savedRatingCount} rating{savedRatingCount === 1 ? "" : "s"} saved across challenge cards.
-                        </p>
-                      </div>
-                      <button
-                        type="button"
-                        className="ghost-button"
-                        onClick={clearChallengeRatings}
-                        disabled={savedRatingCount === 0}
-                      >
-                        Clear Ratings
-                      </button>
-                    </div>
-                    <label className="check-row">
-                      <input
-                        type="checkbox"
-                        checked={showChallengeRatings}
-                        onChange={(event) => setShowChallengeRatings(event.target.checked)}
-                      />
-                      Show challenge ratings on cards and while playing
-                    </label>
+                    <strong>Feedback & Ratings</strong>
+                    <p className="settings-help">
+                      {savedRatingCount} rating{savedRatingCount === 1 ? "" : "s"} saved across challenge cards.
+                      Manage the feedback form endpoint and clear ratings in the Bible Challenge Admin Console.
+                    </p>
                   </div>
                 </div>
               ) : null}
@@ -3699,41 +3627,13 @@ export function App() {
                   </div>
 
                   <div className="static-card settings-card">
-                    <div className="settings-card-header">
-                      <strong>Custom Content</strong>
-                      <button type="button" className="secondary-button" onClick={importCustomContentPack}>
-                        Import Content Pack
-                      </button>
-                    </div>
-                    {customContentStatus ? <p className="settings-help">{customContentStatus}</p> : null}
-                    <div className="custom-content-list">
-                      {customContentPacks.length === 0 ? (
-                        <p className="settings-help">No imported custom content packs.</p>
-                      ) : (
-                        customContentPacks.map((pack) => {
-                          const roundCount = pack.games.reduce((total, customGame) => total + customGame.rounds.length, 0);
-                          return (
-                            <article
-                              key={pack.packId}
-                              className="custom-content-card"
-                              style={{ "--pack-accent": pack.accentColor } as CSSProperties}
-                            >
-                              <div>
-                                <span className="winner-card-label">{pack.packId}</span>
-                                <strong>{pack.packName}</strong>
-                                <p>
-                                  {pack.games.length} game{pack.games.length === 1 ? "" : "s"} · {roundCount} round
-                                  {roundCount === 1 ? "" : "s"}
-                                </p>
-                              </div>
-                              <button type="button" className="ghost-button" onClick={() => removeCustomContentPack(pack.packId)}>
-                                Remove
-                              </button>
-                            </article>
-                          );
-                        })
-                      )}
-                    </div>
+                    <strong>Custom Content</strong>
+                    <p className="settings-help">
+                      {customContentPacks.length === 0
+                        ? "No imported custom content packs."
+                        : `${customContentPacks.length} custom content pack${customContentPacks.length === 1 ? "" : "s"} loaded.`}{" "}
+                      Manage custom content packs in the Bible Challenge Admin Console.
+                    </p>
                   </div>
                 </div>
               ) : null}
@@ -3910,68 +3810,6 @@ export function App() {
                     formatAverageScore={formatAverageScore}
                     formatPercent={formatPercent}
                   />
-                </div>
-              ) : null}
-
-              {activeSettingsTab === "updates" ? (
-                <div
-                  id="settings-panel-updates"
-                  className="settings-panel"
-                  role="tabpanel"
-                  aria-labelledby="settings-tab-updates"
-                >
-                  <div className="static-card settings-card">
-                    <div className="settings-card-header">
-                      <div>
-                        <strong>App Updates</strong>
-                        <p className="settings-help">
-                          Installed version: {updateInfo?.currentVersion ?? "Check for updates to read the desktop version."}
-                        </p>
-                      </div>
-                      <button
-                        type="button"
-                        className="secondary-button"
-                        onClick={() => void checkForUpdates()}
-                        disabled={isCheckingUpdates || isInstallingUpdate}
-                      >
-                        {isCheckingUpdates ? "Checking..." : "Check For Updates"}
-                      </button>
-                    </div>
-
-                    {updateInfo ? (
-                      <div className="update-summary-grid">
-                        <span>
-                          Current <strong>{updateInfo.currentVersion}</strong>
-                        </span>
-                        <span>
-                          Latest <strong>{updateInfo.latestVersion}</strong>
-                        </span>
-                        <span>
-                          Installer <strong>{updateInfo.assetName ?? "Not available"}</strong>
-                        </span>
-                      </div>
-                    ) : null}
-
-                    {updateStatus ? <p className="settings-help">{updateStatus}</p> : null}
-
-                    <div className="audio-button-row">
-                      <button
-                        type="button"
-                        className="primary-button"
-                        onClick={() => void downloadAndInstallUpdate()}
-                        disabled={!updateInfo?.hasUpdate || isCheckingUpdates || isInstallingUpdate}
-                      >
-                        {isInstallingUpdate ? "Downloading..." : "Download And Install"}
-                      </button>
-                      <button
-                        type="button"
-                        className="ghost-button"
-                        onClick={() => void window.desktopHost?.openExternal(updateInfo?.releaseUrl ?? "https://github.com/mkunze8187-cmd/bible-challenge/releases")}
-                      >
-                        Open Releases
-                      </button>
-                    </div>
-                  </div>
                 </div>
               ) : null}
             </div>
@@ -4925,6 +4763,76 @@ export function App() {
                 onPass={() => handleAction(() => passPsalmReferenceFinder(sessionState), "pass")}
                 onContinue={() => handleAction(() => continueGame(sessionState))}
               />
+            ) : sessionState.gameId === "two-truths-and-a-lie" ? (
+              <TwoTruthsView
+                state={sessionState}
+                timerEnabled={timerEnabled}
+                timeRemaining={timeRemaining}
+                timerDurationSeconds={activeTimerSeconds}
+                isTimerExpired={timerEnabled && timeRemaining === 0}
+                onChoose={(statementIndex) => handleAction(() => selectTwoTruthsStatement(sessionState, statementIndex))}
+                onPass={() => handleAction(() => passTwoTruths(sessionState), "pass")}
+                onContinue={() => handleAction(() => continueGame(sessionState))}
+              />
+            ) : sessionState.gameId === "relay-verse-build" ? (
+              <RelayVerseBuildView
+                state={sessionState}
+                guessText={guessText}
+                timerEnabled={timerEnabled}
+                timeRemaining={timeRemaining}
+                timerDurationSeconds={activeTimerSeconds}
+                isTimerExpired={timerEnabled && timeRemaining === 0}
+                onGuessChange={setGuessText}
+                onSubmit={() => handleAction(() => submitRelayWord(sessionState, guessText))}
+                onSkipWord={() => handleAction(() => passRelayWord(sessionState), "pass")}
+                onContinue={() => handleAction(() => continueGame(sessionState))}
+              />
+            ) : sessionState.gameId === "first-letter-recall" ? (
+              <FirstLetterRecallView
+                state={sessionState}
+                guessText={guessText}
+                timerEnabled={timerEnabled}
+                timeRemaining={timeRemaining}
+                timerDurationSeconds={activeTimerSeconds}
+                isTimerExpired={timerEnabled && timeRemaining === 0}
+                onGuessChange={setGuessText}
+                onSubmit={() => handleAction(() => submitFirstLetterRecall(sessionState, guessText))}
+                onContinue={() => handleAction(() => continueGame(sessionState))}
+              />
+            ) : sessionState.gameId === "verse-typing-race" ? (
+              <VerseTypingRaceView
+                state={sessionState}
+                timerEnabled={timerEnabled}
+                timeRemaining={timeRemaining}
+                timerDurationSeconds={activeTimerSeconds}
+                isTimerExpired={timerEnabled && timeRemaining === 0}
+                onSubmitResult={(result) => handleAction(() => submitVerseTypingResult(sessionState, result))}
+                onContinue={() => handleAction(() => continueGame(sessionState))}
+              />
+            ) : sessionState.gameId === "word-ladder" ? (
+              <WordLadderView
+                state={sessionState}
+                guessText={guessText}
+                timerEnabled={timerEnabled}
+                timeRemaining={timeRemaining}
+                timerDurationSeconds={activeTimerSeconds}
+                isTimerExpired={timerEnabled && timeRemaining === 0}
+                onGuessChange={setGuessText}
+                onSubmit={() => handleAction(() => submitWordLadderStepWithDictionary(sessionState, guessText))}
+                onContinue={() => handleAction(() => continueGame(sessionState))}
+              />
+            ) : sessionState.gameId === "bible-anagrams" ? (
+              <BibleAnagramsView
+                state={sessionState}
+                timerEnabled={timerEnabled}
+                timeRemaining={timeRemaining}
+                timerDurationSeconds={activeTimerSeconds}
+                onMoveTile={(tileId, target) => handleAction(() => moveBibleAnagramTile(sessionState, tileId, target))}
+                onClear={() => handleAction(() => clearBibleAnagramAnswer(sessionState))}
+                onSubmit={() => handleAction(() => submitBibleAnagram(sessionState))}
+                onPass={() => handleAction(() => passBibleAnagram(sessionState), "pass")}
+                onContinue={() => handleAction(() => continueGame(sessionState))}
+              />
             ) : (
               <MissingWordView
                 state={sessionState}
@@ -5489,6 +5397,98 @@ function VerseScrambleView(props: {
             <span>{prompt.wasCorrect ? "Correct" : "Verse"}</span>
             <strong>{prompt.round.reference}</strong>
             <p>{prompt.round.verseText}</p>
+          </div>
+          <button type="button" className="primary-button" onClick={onContinue}>
+            {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Next Round"}
+          </button>
+        </>
+      )}
+    </section>
+  );
+}
+
+function BibleAnagramsView(props: {
+  state: BibleAnagramsState;
+  timerEnabled: boolean;
+  timeRemaining: number;
+  timerDurationSeconds: number;
+  onMoveTile: (tileId: string, target: "answer" | "bank") => void;
+  onClear: () => void;
+  onSubmit: () => void;
+  onPass: () => void;
+  onContinue: () => void;
+}) {
+  const { state, timerEnabled, timeRemaining, timerDurationSeconds, onMoveTile, onClear, onSubmit, onPass, onContinue } = props;
+  const prompt = state.currentPrompt;
+  const tileById = new Map(prompt.tiles.map((tile) => [tile.id, tile]));
+  const isResolved = prompt.phase === "resolved";
+  const showClue = prompt.round.difficulty !== "hard";
+
+  return (
+    <section className="panel panel-stage">
+      <div className="section-header">
+        <div>
+          <p className="eyebrow">Round {state.roundIndex + 1}</p>
+          <h2>{prompt.round.category}</h2>
+        </div>
+        <div className="header-status">
+          {!isResolved ? <TimerBadge isEnabled={timerEnabled} timeRemaining={timeRemaining} durationSeconds={timerDurationSeconds} /> : null}
+          <span className="pill pill-accent">{prompt.round.difficulty}</span>
+        </div>
+      </div>
+
+      <div className="chip-row compact-row">
+        <span className="pill pill-muted">Theme: {prompt.round.theme}</span>
+      </div>
+
+      {showClue ? <p>{prompt.round.clue}</p> : null}
+
+      {!isResolved ? (
+        <>
+          <div className="answer-drop">
+            {prompt.answerTileIds.length === 0 ? (
+              <span className="empty-answer">Build the answer here</span>
+            ) : (
+              prompt.answerTileIds.map((tileId) => {
+                const tile = tileById.get(tileId);
+                return tile ? (
+                  <button key={tile.id} type="button" className="word-tile answer-word" onClick={() => onMoveTile(tile.id, "bank")}>
+                    {tile.letter}
+                  </button>
+                ) : null;
+              })
+            )}
+          </div>
+
+          <div className="word-bank">
+            {prompt.bankTileIds.map((tileId) => {
+              const tile = tileById.get(tileId);
+              return tile ? (
+                <button key={tile.id} type="button" className="word-tile" onClick={() => onMoveTile(tile.id, "answer")}>
+                  {tile.letter}
+                </button>
+              ) : null;
+            })}
+          </div>
+
+          <div className="guess-zone">
+            <button type="button" className="primary-button" onClick={onSubmit}>
+              Submit Answer
+            </button>
+            <button type="button" className="ghost-button" onClick={onClear}>
+              Clear
+            </button>
+            <button type="button" className="secondary-button" onClick={onPass}>
+              Pass
+            </button>
+          </div>
+        </>
+      ) : (
+        <>
+          <div className={`answer-panel ${prompt.wasCorrect ? "answer-panel-correct" : ""}`}>
+            <span>{prompt.wasCorrect ? "Correct" : "Answer"}</span>
+            <strong>{prompt.round.answer}</strong>
+            <p>{prompt.round.teachingNote}</p>
           </div>
           <button type="button" className="primary-button" onClick={onContinue}>
             {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Next Round"}
@@ -6722,6 +6722,432 @@ function MissingWordView(props: {
           </button>
           <button type="button" className="secondary-button" onClick={onPass}>
             Pass
+          </button>
+        </div>
+      )}
+    </section>
+  );
+}
+
+function TwoTruthsView(props: {
+  state: TwoTruthsAndALieState;
+  timerEnabled: boolean;
+  timeRemaining: number;
+  timerDurationSeconds: number;
+  isTimerExpired: boolean;
+  onChoose: (statementIndex: number) => void;
+  onPass: () => void;
+  onContinue: () => void;
+}) {
+  const { state, timerEnabled, timeRemaining, timerDurationSeconds, isTimerExpired, onChoose, onPass, onContinue } = props;
+  const prompt = state.currentPrompt;
+  const isResolved = prompt.phase === "resolved";
+  const possiblePoints = prompt.eliminatedIndexes.length >= 3 ? 1 : 5 - prompt.eliminatedIndexes.length;
+  const lieStatement = prompt.statements.find((entry) => entry.originalIndex === prompt.round.lieIndex);
+
+  return (
+    <section className="panel panel-stage">
+      <div className="section-header">
+        <div>
+          <p className="eyebrow">Round {state.roundIndex + 1}</p>
+          <h2>{prompt.round.subject}</h2>
+        </div>
+        <div className="header-status">
+          {!isResolved ? <TimerBadge isEnabled={timerEnabled} timeRemaining={timeRemaining} durationSeconds={timerDurationSeconds} /> : null}
+          <span className="pill pill-accent">{possiblePoints} pts available</span>
+        </div>
+      </div>
+
+      <div className="chip-row compact-row">
+        <span className="pill pill-muted">{prompt.round.subjectType === "person" ? "Person" : "Event"}</span>
+        <span className="pill pill-muted">{prompt.round.theme}</span>
+        <span className="pill pill-muted">{prompt.round.difficulty}</span>
+      </div>
+
+      <p>Which statement is the lie?</p>
+
+      <div className="choice-grid">
+        {prompt.statements.map((statement) => {
+          const isEliminated = prompt.eliminatedIndexes.includes(statement.originalIndex);
+          return (
+            <button
+              key={statement.originalIndex}
+              type="button"
+              className={`choice-button ${isEliminated ? "choice-button-eliminated" : ""}`}
+              disabled={isTimerExpired || isResolved || isEliminated}
+              onClick={() => onChoose(statement.originalIndex)}
+            >
+              {statement.text}
+            </button>
+          );
+        })}
+      </div>
+
+      {isResolved ? (
+        <>
+          <div className={`answer-panel ${prompt.wasCorrect ? "answer-panel-correct" : ""}`}>
+            <span>The Lie</span>
+            <strong>{lieStatement?.text ?? prompt.round.statements[prompt.round.lieIndex]}</strong>
+            <p>{prompt.round.explanation} ({prompt.round.reference})</p>
+          </div>
+          <button type="button" className="primary-button" onClick={onContinue}>
+            {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Continue"}
+          </button>
+        </>
+      ) : (
+        <div className="guess-zone">
+          <button type="button" className="secondary-button" onClick={onPass}>
+            Pass
+          </button>
+        </div>
+      )}
+    </section>
+  );
+}
+
+function RelayVerseBuildView(props: {
+  state: RelayVerseBuildState;
+  guessText: string;
+  timerEnabled: boolean;
+  timeRemaining: number;
+  timerDurationSeconds: number;
+  isTimerExpired: boolean;
+  onGuessChange: (value: string) => void;
+  onSubmit: () => void;
+  onSkipWord: () => void;
+  onContinue: () => void;
+}) {
+  const {
+    state,
+    guessText,
+    timerEnabled,
+    timeRemaining,
+    timerDurationSeconds,
+    isTimerExpired,
+    onGuessChange,
+    onSubmit,
+    onSkipWord,
+    onContinue
+  } = props;
+  const prompt = state.currentPrompt;
+  const isResolved = prompt.phase === "resolved";
+  const displayText = prompt.words
+    .map((word, index) => (index < prompt.revealedCount ? word : "▬".repeat(Math.max(3, word.length))))
+    .join(" ");
+
+  return (
+    <section className="panel panel-stage">
+      <div className="section-header">
+        <div>
+          <p className="eyebrow">Round {state.roundIndex + 1}</p>
+          <h2>{prompt.round.reference}</h2>
+        </div>
+        <div className="header-status">
+          {!isResolved ? <TimerBadge isEnabled={timerEnabled} timeRemaining={timeRemaining} durationSeconds={timerDurationSeconds} /> : null}
+          <span className="pill pill-accent">{prompt.round.sourceTranslation}</span>
+        </div>
+      </div>
+
+      <div className="chip-row compact-row">
+        <span className="pill pill-muted">Theme: {prompt.round.theme}</span>
+        <span className="pill pill-muted">
+          {prompt.revealedCount} of {prompt.words.length} words
+        </span>
+      </div>
+
+      <blockquote className="verse-card">{displayText}</blockquote>
+
+      {isResolved ? (
+        <>
+          <div className={`answer-panel ${prompt.wasCorrect ? "answer-panel-correct" : ""}`}>
+            <span>Full Verse</span>
+            <strong>{prompt.round.verseText}</strong>
+            <p>{prompt.round.teachingNote}</p>
+          </div>
+          <button type="button" className="primary-button" onClick={onContinue}>
+            {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Continue"}
+          </button>
+        </>
+      ) : (
+        <div className="guess-zone">
+          <input
+            className="text-input"
+            value={guessText}
+            onChange={(event) => onGuessChange(event.target.value)}
+            onKeyDown={(event) => submitOnEnter(event, onSubmit, isTimerExpired)}
+            placeholder="Type the next word"
+            disabled={isTimerExpired}
+          />
+          <button type="button" className="primary-button" onClick={onSubmit} disabled={isTimerExpired}>
+            Submit Word
+          </button>
+          <button type="button" className="secondary-button" onClick={onSkipWord}>
+            Skip Word
+          </button>
+        </div>
+      )}
+    </section>
+  );
+}
+
+function FirstLetterRecallView(props: {
+  state: FirstLetterRecallState;
+  guessText: string;
+  timerEnabled: boolean;
+  timeRemaining: number;
+  timerDurationSeconds: number;
+  isTimerExpired: boolean;
+  onGuessChange: (value: string) => void;
+  onSubmit: () => void;
+  onContinue: () => void;
+}) {
+  const { state, guessText, timerEnabled, timeRemaining, timerDurationSeconds, isTimerExpired, onGuessChange, onSubmit, onContinue } = props;
+  const prompt = state.currentPrompt;
+  const isResolved = prompt.phase === "resolved";
+  const actualWords = prompt.round.verseText.trim().split(/\s+/).filter(Boolean);
+  const guessedWords = guessText.trim().split(/\s+/).filter(Boolean);
+
+  return (
+    <section className="panel panel-stage">
+      <div className="section-header">
+        <div>
+          <p className="eyebrow">Round {state.roundIndex + 1}</p>
+          <h2>{prompt.round.reference}</h2>
+        </div>
+        <div className="header-status">
+          {!isResolved ? <TimerBadge isEnabled={timerEnabled} timeRemaining={timeRemaining} durationSeconds={timerDurationSeconds} /> : null}
+          <span className="pill pill-accent">{prompt.round.sourceTranslation}</span>
+        </div>
+      </div>
+
+      <div className="chip-row compact-row">
+        <span className="pill pill-muted">Theme: {prompt.round.theme}</span>
+        <span className="pill pill-muted">{prompt.totalWordCount} words</span>
+      </div>
+
+      <blockquote className="verse-card verse-card-missing">{prompt.scaffold}</blockquote>
+
+      {isResolved ? (
+        <>
+          <div className={`answer-panel ${prompt.wasCorrect ? "answer-panel-correct" : ""}`}>
+            <span>Full Verse</span>
+            <strong>
+              {actualWords.map((word, index) => (
+                <span
+                  key={`${word}-${index}`}
+                  className={normalizeWordForDisplay(guessedWords[index]) === normalizeWordForDisplay(word) ? "word-correct" : "word-incorrect"}
+                >
+                  {word}{" "}
+                </span>
+              ))}
+            </strong>
+            <p>
+              {prompt.correctWordCount ?? 0} of {prompt.totalWordCount} words recalled. {prompt.round.teachingNote}
+            </p>
+          </div>
+          <button type="button" className="primary-button" onClick={onContinue}>
+            {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Continue"}
+          </button>
+        </>
+      ) : (
+        <div className="guess-zone">
+          <textarea
+            className="text-area"
+            rows={3}
+            value={guessText}
+            onChange={(event) => onGuessChange(event.target.value)}
+            onKeyDown={(event) => submitOnEnter(event, onSubmit, isTimerExpired)}
+            placeholder="Type the full verse from the scaffold above"
+            disabled={isTimerExpired}
+          />
+          <button type="button" className="primary-button" onClick={onSubmit} disabled={isTimerExpired}>
+            Submit Verse
+          </button>
+        </div>
+      )}
+    </section>
+  );
+}
+
+function normalizeWordForDisplay(value: string | undefined): string {
+  return (value ?? "").toLowerCase().replace(/[^a-z0-9]+/g, "");
+}
+
+function VerseTypingRaceView(props: {
+  state: VerseTypingRaceState;
+  timerEnabled: boolean;
+  timeRemaining: number;
+  timerDurationSeconds: number;
+  isTimerExpired: boolean;
+  onSubmitResult: (result: { typedText: string; elapsedMs: number }) => void;
+  onContinue: () => void;
+}) {
+  const { state, timerEnabled, timeRemaining, timerDurationSeconds, isTimerExpired, onSubmitResult, onContinue } = props;
+  const prompt = state.currentPrompt;
+  const isResolved = prompt.phase === "resolved";
+  const [typedText, setTypedText] = useState("");
+  const startedAtRef = useRef<number | null>(null);
+  const activeGuessKey = `${state.gameId}-${state.roundIndex}-${state.turnIndex}`;
+  const previousKeyRef = useRef(activeGuessKey);
+
+  if (previousKeyRef.current !== activeGuessKey) {
+    previousKeyRef.current = activeGuessKey;
+    startedAtRef.current = null;
+    if (typedText !== "") {
+      setTypedText("");
+    }
+  }
+
+  const verseText = prompt.round.verseText;
+
+  function handleChange(value: string) {
+    if (startedAtRef.current === null && value.length > 0) {
+      startedAtRef.current = Date.now();
+    }
+    setTypedText(value);
+  }
+
+  function handleFinish() {
+    const elapsedMs = startedAtRef.current ? Date.now() - startedAtRef.current : 1;
+    onSubmitResult({ typedText, elapsedMs });
+  }
+
+  return (
+    <section className="panel panel-stage">
+      <div className="section-header">
+        <div>
+          <p className="eyebrow">Round {state.roundIndex + 1}</p>
+          <h2>{prompt.round.reference}</h2>
+        </div>
+        <div className="header-status">
+          {!isResolved ? <TimerBadge isEnabled={timerEnabled} timeRemaining={timeRemaining} durationSeconds={timerDurationSeconds} /> : null}
+          <span className="pill pill-accent">{prompt.round.sourceTranslation}</span>
+        </div>
+      </div>
+
+      <div className="chip-row compact-row">
+        <span className="pill pill-muted">Theme: {prompt.round.theme}</span>
+      </div>
+
+      <blockquote className="verse-card">
+        {Array.from(verseText).map((character, index) => {
+          let className = "char-untyped";
+          if (index < typedText.length) {
+            className = typedText[index] === character ? "char-correct" : "char-incorrect";
+          }
+          return (
+            <span key={index} className={className}>
+              {character}
+            </span>
+          );
+        })}
+      </blockquote>
+
+      {isResolved ? (
+        <>
+          <div className={`answer-panel ${prompt.wasCorrect ? "answer-panel-correct" : ""}`}>
+            <span>Result</span>
+            <strong>
+              {prompt.lastResult ? `${Math.round(prompt.lastResult.wpm)} WPM · ${Math.round(prompt.lastResult.accuracy * 100)}% accuracy` : "Recorded"}
+            </strong>
+            <p>{prompt.round.teachingNote}</p>
+          </div>
+          <button type="button" className="primary-button" onClick={onContinue}>
+            {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Continue"}
+          </button>
+        </>
+      ) : (
+        <div className="guess-zone">
+          <textarea
+            className="text-area"
+            rows={3}
+            value={typedText}
+            onChange={(event) => handleChange(event.target.value)}
+            placeholder="Start typing the verse above"
+            disabled={isTimerExpired}
+          />
+          <button type="button" className="primary-button" onClick={handleFinish} disabled={isTimerExpired}>
+            Finish
+          </button>
+        </div>
+      )}
+    </section>
+  );
+}
+
+function WordLadderView(props: {
+  state: WordLadderState;
+  guessText: string;
+  timerEnabled: boolean;
+  timeRemaining: number;
+  timerDurationSeconds: number;
+  isTimerExpired: boolean;
+  onGuessChange: (value: string) => void;
+  onSubmit: () => void;
+  onContinue: () => void;
+}) {
+  const { state, guessText, timerEnabled, timeRemaining, timerDurationSeconds, isTimerExpired, onGuessChange, onSubmit, onContinue } = props;
+  const prompt = state.currentPrompt;
+  const isResolved = prompt.phase === "resolved";
+
+  return (
+    <section className="panel panel-stage">
+      <div className="section-header">
+        <div>
+          <p className="eyebrow">Round {state.roundIndex + 1}</p>
+          <h2>Word Ladder</h2>
+        </div>
+        <div className="header-status">
+          {!isResolved ? <TimerBadge isEnabled={timerEnabled} timeRemaining={timeRemaining} durationSeconds={timerDurationSeconds} /> : null}
+          <span className="pill pill-accent">{prompt.round.minSteps} steps to par</span>
+        </div>
+      </div>
+
+      <div className="chip-row compact-row">
+        <span className="pill pill-muted">{prompt.round.theme}</span>
+        <span className="pill pill-muted">{prompt.round.difficulty}</span>
+      </div>
+
+      <div className="chip-row compact-row">
+        <span className="pill pill-accent">{prompt.round.startWord.toUpperCase()}</span>
+        <span>{prompt.round.startFlavorText}</span>
+      </div>
+      <div className="chip-row compact-row">
+        <span className="pill pill-accent">{prompt.round.endWord.toUpperCase()}</span>
+        <span>{prompt.round.endFlavorText}</span>
+      </div>
+
+      <div className="chip-row compact-row">
+        {prompt.chain.map((word, index) => (
+          <span key={`${word}-${index}`} className="pill pill-muted">
+            {word.toUpperCase()}
+          </span>
+        ))}
+      </div>
+
+      {isResolved ? (
+        <>
+          <div className={`answer-panel ${prompt.wasCorrect ? "answer-panel-correct" : ""}`}>
+            <span>{prompt.wasCorrect ? "Ladder Solved" : "Ladder Revealed"}</span>
+            <strong>{prompt.round.revealPath.join(" → ").toUpperCase()}</strong>
+            <p>{prompt.round.teachingNote}</p>
+          </div>
+          <button type="button" className="primary-button" onClick={onContinue}>
+            {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Continue"}
+          </button>
+        </>
+      ) : (
+        <div className="guess-zone">
+          <input
+            className="text-input"
+            value={guessText}
+            onChange={(event) => onGuessChange(event.target.value)}
+            onKeyDown={(event) => submitOnEnter(event, onSubmit, isTimerExpired)}
+            placeholder={`Enter a ${prompt.round.wordLength}-letter word`}
+            disabled={isTimerExpired}
+          />
+          <button type="button" className="primary-button" onClick={onSubmit} disabled={isTimerExpired}>
+            Submit Word
           </button>
         </div>
       )}

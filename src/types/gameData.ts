@@ -37,7 +37,13 @@ export type GameId =
   | "wisdom-match"
   | "psalm-theme"
   | "proverb-categories"
-  | "psalm-reference-finder";
+  | "psalm-reference-finder"
+  | "two-truths-and-a-lie"
+  | "relay-verse-build"
+  | "first-letter-recall"
+  | "verse-typing-race"
+  | "word-ladder"
+  | "bible-anagrams";
 
 export interface FiveGuessesRound {
   id: string;
@@ -363,3 +369,84 @@ export interface PsalmReferenceFinderRound {
 }
 
 export type PsalmReferenceFinderPack = SessionPackBase<PsalmReferenceFinderRound>;
+
+export interface TwoTruthsAndALieRound {
+  id: string;
+  subject: string;
+  subjectType: "person" | "event";
+  statements: [string, string, string];
+  lieIndex: 0 | 1 | 2;
+  explanation: string;
+  reference: string;
+  theme: string;
+  difficulty: PsalmsProverbsDifficulty;
+  teachingNote: string;
+}
+
+export type TwoTruthsAndALiePack = SessionPackBase<TwoTruthsAndALieRound>;
+
+export interface RelayVerseBuildRound {
+  id: string;
+  reference: string;
+  sourceTranslation: "KJV";
+  theme: string;
+  verseText: string;
+  difficulty: PsalmsProverbsDifficulty;
+  teachingNote: string;
+}
+
+export type RelayVerseBuildPack = SessionPackBase<RelayVerseBuildRound>;
+
+export interface FirstLetterRecallRound {
+  id: string;
+  reference: string;
+  sourceTranslation: "KJV";
+  theme: string;
+  verseText: string;
+  difficulty: PsalmsProverbsDifficulty;
+  teachingNote: string;
+}
+
+export type FirstLetterRecallPack = SessionPackBase<FirstLetterRecallRound>;
+
+export interface VerseTypingRaceRound {
+  id: string;
+  reference: string;
+  sourceTranslation: "KJV";
+  theme: string;
+  verseText: string;
+  difficulty: PsalmsProverbsDifficulty;
+  teachingNote: string;
+}
+
+export type VerseTypingRacePack = SessionPackBase<VerseTypingRaceRound>;
+
+export interface WordLadderRound {
+  id: string;
+  startWord: string;
+  endWord: string;
+  wordLength: number;
+  minSteps: number;
+  revealPath: string[];
+  startFlavorText: string;
+  endFlavorText: string;
+  theme: string;
+  difficulty: PsalmsProverbsDifficulty;
+  teachingNote: string;
+}
+
+export type WordLadderPack = SessionPackBase<WordLadderRound>;
+
+export type BibleAnagramCategory = "Person" | "Place" | "Thing" | "Event";
+
+export interface BibleAnagramRound {
+  id: string;
+  answer: string;
+  category: BibleAnagramCategory;
+  clue: string;
+  theme: string;
+  difficulty: PsalmsProverbsDifficulty;
+  teachingNote: string;
+}
+
+export type BibleAnagramsPack = SessionPackBase<BibleAnagramRound>;

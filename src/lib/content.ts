@@ -1,9 +1,11 @@
 import Ajv2020 from "ajv/dist/2020";
 import type {
   BeforeOrAfterPack,
+  BibleAnagramsPack,
   BibleConnectionsPack,
   BibleTimelinePack,
   CompleteVersePack,
+  FirstLetterRecallPack,
   FiveGuessesPack,
   GameId,
   InitialsPack,
@@ -19,10 +21,14 @@ import type {
   PsalmReferenceFinderPack,
   PsalmThemePack,
   ReferenceRushPack,
+  RelayVerseBuildPack,
   ScripturePuzzlesPack,
+  TwoTruthsAndALiePack,
   VerseScramblePack,
+  VerseTypingRacePack,
   WisdomMatchPack,
   WhoSaidItPack,
+  WordLadderPack,
   FulfillmentFinderPack
 } from "../types/gameData";
 
@@ -55,6 +61,12 @@ export interface ContentPackByGame {
   "psalm-theme": PsalmThemePack;
   "proverb-categories": ProverbCategoriesPack;
   "psalm-reference-finder": PsalmReferenceFinderPack;
+  "two-truths-and-a-lie": TwoTruthsAndALiePack;
+  "relay-verse-build": RelayVerseBuildPack;
+  "first-letter-recall": FirstLetterRecallPack;
+  "verse-typing-race": VerseTypingRacePack;
+  "word-ladder": WordLadderPack;
+  "bible-anagrams": BibleAnagramsPack;
 }
 
 type LoaderMap = {
@@ -63,14 +75,6 @@ type LoaderMap = {
 type SchemaLoaderMap = Record<GameId, () => Promise<object>>;
 
 const contentCache: Partial<ContentPackByGame> = {};
-const SUPPORTED_CUSTOM_GAME_IDS = new Set<GameId>([
-  "complete-the-verse",
-  "wisdom-match",
-  "psalm-reference-finder",
-  "five-guesses",
-  "initials",
-  "scripture-puzzles"
-]);
 
 export interface CustomContentGame {
   gameId: string;
@@ -112,195 +116,184 @@ async function loadPair<T>(options: {
   return loadValidatedPack<T>(schemaModule.default, dataModule.default, options.label);
 }
 
-const loaders: LoaderMap = {
-  "five-guesses": () =>
-    loadPair<FiveGuessesPack>({
-      label: "Five Clues",
-      data: import("../data/five-guesses.json"),
-      schema: import("../data/schemas/five-guesses.schema.json")
-    }),
-  initials: () =>
-    loadPair<InitialsPack>({
-      label: "Bible Initials",
-      data: import("../data/initials.json"),
-      schema: import("../data/schemas/initials.schema.json")
-    }),
-  "scripture-puzzles": () =>
-    loadPair<ScripturePuzzlesPack>({
-      label: "Verse Reveal",
-      data: import("../data/scripture-puzzles.json"),
-      schema: import("../data/schemas/scripture-puzzles.schema.json")
-    }),
-  "bible-timeline": () =>
-    loadPair<BibleTimelinePack>({
-      label: "Bible Timeline",
-      data: import("../data/bible-timeline.json"),
-      schema: import("../data/schemas/bible-timeline.schema.json")
-    }),
-  "verse-scramble": () =>
-    loadPair<VerseScramblePack>({
-      label: "Verse Scramble",
-      data: import("../data/verse-scramble.json"),
-      schema: import("../data/schemas/verse-scramble.schema.json")
-    }),
-  "bible-connections": () =>
-    loadPair<BibleConnectionsPack>({
-      label: "Bible Connections",
-      data: import("../data/bible-connections.json"),
-      schema: import("../data/schemas/bible-connections.schema.json")
-    }),
-  "name-that-book": () =>
-    loadPair<NameThatBookPack>({
-      label: "Name That Book",
-      data: import("../data/name-that-book.json"),
-      schema: import("../data/schemas/name-that-book.schema.json")
-    }),
-  "before-or-after": () =>
-    loadPair<BeforeOrAfterPack>({
-      label: "Before Or After",
-      data: import("../data/before-or-after.json"),
-      schema: import("../data/schemas/before-or-after.schema.json")
-    }),
-  "reference-rush": () =>
-    loadPair<ReferenceRushPack>({
-      label: "Reference Rush",
-      data: import("../data/reference-rush.json"),
-      schema: import("../data/schemas/reference-rush.schema.json")
-    }),
-  "chapter-finder": () =>
-    loadPair<ChapterFinderPack>({
-      label: "Chapter Finder",
-      data: import("../data/chapter-finder.json"),
-      schema: import("../data/schemas/chapter-finder.schema.json")
-    }),
-  "who-said-it": () =>
-    loadPair<WhoSaidItPack>({
-      label: "Who Said It?",
-      data: import("../data/who-said-it.json"),
-      schema: import("../data/schemas/who-said-it.schema.json")
-    }),
-  "bible-books-relay": () =>
-    loadPair<BibleBooksRelayPack>({
-      label: "Bible Books Relay",
-      data: import("../data/bible-books-relay.json"),
-      schema: import("../data/schemas/bible-books-relay.schema.json")
-    }),
-  "missing-word": () =>
-    loadPair<MissingWordPack>({
-      label: "Missing Word",
-      data: import("../data/missing-word.json"),
-      schema: import("../data/schemas/missing-word.schema.json")
-    }),
-  "prophecy-match": () =>
-    loadPair<ProphecyMatchPack>({
-      label: "Prophecy Match Challenge",
-      data: import("../data/prophecy-match.json"),
-      schema: import("../data/schemas/prophecy-match.schema.json")
-    }),
-  "messiah-prophecy": () =>
-    loadPair<MessiahProphecyPack>({
-      label: "Messiah Prophecy Challenge",
-      data: import("../data/messiah-prophecy.json"),
-      schema: import("../data/schemas/messiah-prophecy.schema.json")
-    }),
-  "prophecy-clue-ladder": () =>
-    loadPair<ProphecyClueLadderPack>({
-      label: "Prophecy Clue Ladder",
-      data: import("../data/prophecy-clue-ladder.json"),
-      schema: import("../data/schemas/prophecy-clue-ladder.schema.json")
-    }),
-  "fulfillment-finder": () =>
-    loadPair<FulfillmentFinderPack>({
-      label: "Fulfillment Finder Challenge",
-      data: import("../data/fulfillment-finder.json"),
-      schema: import("../data/schemas/fulfillment-finder.schema.json")
-    }),
-  "prophecy-categories": () =>
-    loadPair<ProphecyCategoriesPack>({
-      label: "Prophecy Categories Challenge",
-      data: import("../data/prophecy-categories.json"),
-      schema: import("../data/schemas/prophecy-categories.schema.json")
-    }),
-  "complete-the-verse": () =>
-    loadPair<CompleteVersePack>({
-      label: "Complete the Verse Challenge",
-      data: import("../data/complete-the-verse.json"),
-      schema: import("../data/schemas/complete-the-verse.schema.json")
-    }),
-  "wisdom-match": () =>
-    loadPair<WisdomMatchPack>({
-      label: "Wisdom Match Challenge",
-      data: import("../data/wisdom-match.json"),
-      schema: import("../data/schemas/wisdom-match.schema.json")
-    }),
-  "psalm-theme": () =>
-    loadPair<PsalmThemePack>({
-      label: "Psalm Theme Challenge",
-      data: import("../data/psalm-theme.json"),
-      schema: import("../data/schemas/psalm-theme.schema.json")
-    }),
-  "proverb-categories": () =>
-    loadPair<ProverbCategoriesPack>({
-      label: "Proverb Categories Challenge",
-      data: import("../data/proverb-categories.json"),
-      schema: import("../data/schemas/proverb-categories.schema.json")
-    }),
-  "psalm-reference-finder": () =>
-    loadPair<PsalmReferenceFinderPack>({
-      label: "Psalm Reference Finder",
-      data: import("../data/psalm-reference-finder.json"),
-      schema: import("../data/schemas/psalm-reference-finder.schema.json")
-    })
+// Vite's import analysis requires each dynamic import() to have a literal, static
+// specifier, so the data/schema module paths below can't be built from a runtime
+// string. This table is the single source of truth for the pack label and the two
+// import() call sites; adding a game means adding one row here plus its matching
+// entry point below, instead of one hand-written closure per map.
+const PACK_LOADER_ENTRIES: {
+  [TGame in GameId]: {
+    label: string;
+    data: () => Promise<{ default: unknown }>;
+    schema: () => Promise<{ default: object }>;
+  };
+} = {
+  "five-guesses": {
+    label: "Five Clues",
+    data: () => import("../data/five-guesses.json"),
+    schema: () => import("../data/schemas/five-guesses.schema.json")
+  },
+  initials: {
+    label: "Bible Initials",
+    data: () => import("../data/initials.json"),
+    schema: () => import("../data/schemas/initials.schema.json")
+  },
+  "scripture-puzzles": {
+    label: "Verse Reveal",
+    data: () => import("../data/scripture-puzzles.json"),
+    schema: () => import("../data/schemas/scripture-puzzles.schema.json")
+  },
+  "bible-timeline": {
+    label: "Bible Timeline",
+    data: () => import("../data/bible-timeline.json"),
+    schema: () => import("../data/schemas/bible-timeline.schema.json")
+  },
+  "verse-scramble": {
+    label: "Verse Scramble",
+    data: () => import("../data/verse-scramble.json"),
+    schema: () => import("../data/schemas/verse-scramble.schema.json")
+  },
+  "bible-connections": {
+    label: "Bible Connections",
+    data: () => import("../data/bible-connections.json"),
+    schema: () => import("../data/schemas/bible-connections.schema.json")
+  },
+  "name-that-book": {
+    label: "Name That Book",
+    data: () => import("../data/name-that-book.json"),
+    schema: () => import("../data/schemas/name-that-book.schema.json")
+  },
+  "before-or-after": {
+    label: "Before Or After",
+    data: () => import("../data/before-or-after.json"),
+    schema: () => import("../data/schemas/before-or-after.schema.json")
+  },
+  "reference-rush": {
+    label: "Reference Rush",
+    data: () => import("../data/reference-rush.json"),
+    schema: () => import("../data/schemas/reference-rush.schema.json")
+  },
+  "chapter-finder": {
+    label: "Chapter Finder",
+    data: () => import("../data/chapter-finder.json"),
+    schema: () => import("../data/schemas/chapter-finder.schema.json")
+  },
+  "who-said-it": {
+    label: "Who Said It?",
+    data: () => import("../data/who-said-it.json"),
+    schema: () => import("../data/schemas/who-said-it.schema.json")
+  },
+  "bible-books-relay": {
+    label: "Bible Books Relay",
+    data: () => import("../data/bible-books-relay.json"),
+    schema: () => import("../data/schemas/bible-books-relay.schema.json")
+  },
+  "missing-word": {
+    label: "Missing Word",
+    data: () => import("../data/missing-word.json"),
+    schema: () => import("../data/schemas/missing-word.schema.json")
+  },
+  "prophecy-match": {
+    label: "Prophecy Match Challenge",
+    data: () => import("../data/prophecy-match.json"),
+    schema: () => import("../data/schemas/prophecy-match.schema.json")
+  },
+  "messiah-prophecy": {
+    label: "Messiah Prophecy Challenge",
+    data: () => import("../data/messiah-prophecy.json"),
+    schema: () => import("../data/schemas/messiah-prophecy.schema.json")
+  },
+  "prophecy-clue-ladder": {
+    label: "Prophecy Clue Ladder",
+    data: () => import("../data/prophecy-clue-ladder.json"),
+    schema: () => import("../data/schemas/prophecy-clue-ladder.schema.json")
+  },
+  "fulfillment-finder": {
+    label: "Fulfillment Finder Challenge",
+    data: () => import("../data/fulfillment-finder.json"),
+    schema: () => import("../data/schemas/fulfillment-finder.schema.json")
+  },
+  "prophecy-categories": {
+    label: "Prophecy Categories Challenge",
+    data: () => import("../data/prophecy-categories.json"),
+    schema: () => import("../data/schemas/prophecy-categories.schema.json")
+  },
+  "complete-the-verse": {
+    label: "Complete the Verse Challenge",
+    data: () => import("../data/complete-the-verse.json"),
+    schema: () => import("../data/schemas/complete-the-verse.schema.json")
+  },
+  "wisdom-match": {
+    label: "Wisdom Match Challenge",
+    data: () => import("../data/wisdom-match.json"),
+    schema: () => import("../data/schemas/wisdom-match.schema.json")
+  },
+  "psalm-theme": {
+    label: "Psalm Theme Challenge",
+    data: () => import("../data/psalm-theme.json"),
+    schema: () => import("../data/schemas/psalm-theme.schema.json")
+  },
+  "proverb-categories": {
+    label: "Proverb Categories Challenge",
+    data: () => import("../data/proverb-categories.json"),
+    schema: () => import("../data/schemas/proverb-categories.schema.json")
+  },
+  "psalm-reference-finder": {
+    label: "Psalm Reference Finder",
+    data: () => import("../data/psalm-reference-finder.json"),
+    schema: () => import("../data/schemas/psalm-reference-finder.schema.json")
+  },
+  "two-truths-and-a-lie": {
+    label: "Two Truths and a Lie",
+    data: () => import("../data/two-truths-and-a-lie.json"),
+    schema: () => import("../data/schemas/two-truths-and-a-lie.schema.json")
+  },
+  "relay-verse-build": {
+    label: "Relay Verse Build",
+    data: () => import("../data/relay-verse-build.json"),
+    schema: () => import("../data/schemas/relay-verse-build.schema.json")
+  },
+  "first-letter-recall": {
+    label: "First Letter Recall",
+    data: () => import("../data/first-letter-recall.json"),
+    schema: () => import("../data/schemas/first-letter-recall.schema.json")
+  },
+  "verse-typing-race": {
+    label: "Verse Typing Race",
+    data: () => import("../data/verse-typing-race.json"),
+    schema: () => import("../data/schemas/verse-typing-race.schema.json")
+  },
+  "word-ladder": {
+    label: "Word Ladder",
+    data: () => import("../data/word-ladder.json"),
+    schema: () => import("../data/schemas/word-ladder.schema.json")
+  },
+  "bible-anagrams": {
+    label: "Bible Anagrams",
+    data: () => import("../data/bible-anagrams.json"),
+    schema: () => import("../data/schemas/bible-anagrams.schema.json")
+  }
 };
 
-const schemaLoaders: SchemaLoaderMap = {
-  "five-guesses": () =>
-    import("../data/schemas/five-guesses.schema.json").then((module) => module.default),
-  initials: () =>
-    import("../data/schemas/initials.schema.json").then((module) => module.default),
-  "scripture-puzzles": () =>
-    import("../data/schemas/scripture-puzzles.schema.json").then((module) => module.default),
-  "bible-timeline": () =>
-    import("../data/schemas/bible-timeline.schema.json").then((module) => module.default),
-  "verse-scramble": () =>
-    import("../data/schemas/verse-scramble.schema.json").then((module) => module.default),
-  "bible-connections": () =>
-    import("../data/schemas/bible-connections.schema.json").then((module) => module.default),
-  "name-that-book": () =>
-    import("../data/schemas/name-that-book.schema.json").then((module) => module.default),
-  "before-or-after": () =>
-    import("../data/schemas/before-or-after.schema.json").then((module) => module.default),
-  "reference-rush": () =>
-    import("../data/schemas/reference-rush.schema.json").then((module) => module.default),
-  "chapter-finder": () =>
-    import("../data/schemas/chapter-finder.schema.json").then((module) => module.default),
-  "who-said-it": () =>
-    import("../data/schemas/who-said-it.schema.json").then((module) => module.default),
-  "bible-books-relay": () =>
-    import("../data/schemas/bible-books-relay.schema.json").then((module) => module.default),
-  "missing-word": () =>
-    import("../data/schemas/missing-word.schema.json").then((module) => module.default),
-  "prophecy-match": () =>
-    import("../data/schemas/prophecy-match.schema.json").then((module) => module.default),
-  "messiah-prophecy": () =>
-    import("../data/schemas/messiah-prophecy.schema.json").then((module) => module.default),
-  "prophecy-clue-ladder": () =>
-    import("../data/schemas/prophecy-clue-ladder.schema.json").then((module) => module.default),
-  "fulfillment-finder": () =>
-    import("../data/schemas/fulfillment-finder.schema.json").then((module) => module.default),
-  "prophecy-categories": () =>
-    import("../data/schemas/prophecy-categories.schema.json").then((module) => module.default),
-  "complete-the-verse": () =>
-    import("../data/schemas/complete-the-verse.schema.json").then((module) => module.default),
-  "wisdom-match": () =>
-    import("../data/schemas/wisdom-match.schema.json").then((module) => module.default),
-  "psalm-theme": () =>
-    import("../data/schemas/psalm-theme.schema.json").then((module) => module.default),
-  "proverb-categories": () =>
-    import("../data/schemas/proverb-categories.schema.json").then((module) => module.default),
-  "psalm-reference-finder": () =>
-    import("../data/schemas/psalm-reference-finder.schema.json").then((module) => module.default)
-};
+const loaders: LoaderMap = Object.fromEntries(
+  (Object.entries(PACK_LOADER_ENTRIES) as [GameId, (typeof PACK_LOADER_ENTRIES)[GameId]][]).map(
+    ([gameId, entry]) => [
+      gameId,
+      () => loadPair({ label: entry.label, data: entry.data(), schema: entry.schema() })
+    ]
+  )
+) as LoaderMap;
+
+// Custom content (runtime-imported JSON packs) is supported for every game — derived from
+// PACK_LOADER_ENTRIES rather than a separately hand-maintained list, so a newly added game
+// is automatically importable without a second place to remember to update.
+const SUPPORTED_CUSTOM_GAME_IDS = new Set<GameId>(Object.keys(PACK_LOADER_ENTRIES) as GameId[]);
+
+const schemaLoaders: SchemaLoaderMap = Object.fromEntries(
+  (Object.entries(PACK_LOADER_ENTRIES) as [GameId, (typeof PACK_LOADER_ENTRIES)[GameId]][]).map(
+    ([gameId, entry]) => [gameId, () => entry.schema().then((module) => module.default)]
+  )
+) as SchemaLoaderMap;
 
 function isGameId(value: unknown): value is GameId {
   return typeof value === "string" && value in loaders;
@@ -454,4 +447,34 @@ export async function loadGameContent<TGame extends GameId>(
   const mergedPack = customSessions.length > 0 ? { ...pack, sessions: [...customSessions, ...pack.sessions] } : pack;
   contentCache[gameId] = mergedPack as never;
   return mergedPack as ContentPackByGame[TGame];
+}
+
+// The Word Ladder dictionary is a flat curated word list, not a GameId round pack, so it
+// isn't shaped like ContentPackByGame/PACK_LOADER_ENTRIES above — it gets its own small
+// loader using the same import()+ajv validation mechanism.
+export interface WordLadderDictionaryFile {
+  $schema: string;
+  version: number;
+  words: string[];
+}
+
+let wordLadderDictionaryCache: ReadonlySet<string> | null = null;
+
+export async function loadWordLadderDictionary(): Promise<ReadonlySet<string>> {
+  if (wordLadderDictionaryCache) {
+    return wordLadderDictionaryCache;
+  }
+
+  const [dataModule, schemaModule] = await Promise.all([
+    import("../data/word-ladder-dictionary.json"),
+    import("../data/schemas/word-ladder-dictionary.schema.json")
+  ]);
+  const pack = loadValidatedPack<WordLadderDictionaryFile>(
+    schemaModule.default,
+    dataModule.default,
+    "Word Ladder Dictionary"
+  );
+  const dictionary = new Set(pack.words);
+  wordLadderDictionaryCache = dictionary;
+  return dictionary;
 }

@@ -1,10 +1,13 @@
 import { describe, expect, it } from "vitest";
 import {
+  scoreFirstLetterRecall,
   scoreFiveGuesses,
   scoreInitials,
   scoreProphecyRetry,
   scoreScriptureLetterGuess,
-  scoreScriptureSolve
+  scoreScriptureSolve,
+  scoreVerseTypingRace,
+  scoreWordLadder
 } from "../src/lib/scoring";
 
 describe("scoring", () => {
@@ -39,5 +42,39 @@ describe("scoring", () => {
     expect(scoreProphecyRetry(2)).toBe(3);
     expect(scoreProphecyRetry(3)).toBe(1);
     expect(scoreProphecyRetry(8)).toBe(1);
+  });
+
+  it("scores First Letter Recall proportionally out of ten", () => {
+    expect(scoreFirstLetterRecall(10, 10)).toBe(10);
+    expect(scoreFirstLetterRecall(5, 10)).toBe(5);
+    expect(scoreFirstLetterRecall(0, 10)).toBe(0);
+  });
+
+  it("rejects invalid First Letter Recall word counts", () => {
+    expect(() => scoreFirstLetterRecall(-1, 10)).toThrow("non-negative integer");
+    expect(() => scoreFirstLetterRecall(11, 10)).toThrow("cannot exceed");
+    expect(() => scoreFirstLetterRecall(0, 0)).toThrow("positive integer");
+  });
+
+  it("scores Verse Typing Race from WPM and accuracy", () => {
+    expect(scoreVerseTypingRace(40, 1)).toBe(40);
+    expect(scoreVerseTypingRace(40, 0.5)).toBe(20);
+    expect(scoreVerseTypingRace(0, 1)).toBe(0);
+  });
+
+  it("rejects invalid Verse Typing Race inputs", () => {
+    expect(() => scoreVerseTypingRace(-1, 1)).toThrow("non-negative number");
+    expect(() => scoreVerseTypingRace(40, 1.5)).toThrow("number from 0 to 1");
+  });
+
+  it("scores Word Ladder with a par-based floor of one", () => {
+    expect(scoreWordLadder(3, 3)).toBe(10);
+    expect(scoreWordLadder(5, 3)).toBe(8);
+    expect(scoreWordLadder(20, 3)).toBe(1);
+  });
+
+  it("rejects invalid Word Ladder step counts", () => {
+    expect(() => scoreWordLadder(0, 3)).toThrow("positive integer");
+    expect(() => scoreWordLadder(3, 0)).toThrow("positive integer");
   });
 });

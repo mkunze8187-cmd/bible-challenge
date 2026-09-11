@@ -1,0 +1,1013 @@
+{
+  "$schema": "https://example.local/schemas/bible-anagrams.schema.json",
+  "game": "bible-anagrams",
+  "version": 1,
+  "displayName": "Bible Anagrams",
+  "roundsPerSession": 10,
+  "sessions": [
+    {
+      "id": "ba-session-01",
+      "title": "Bible Anagrams Deck 1",
+      "theme": "Bible names, places, things, and events",
+      "rounds": [
+        {
+          "id": "ba-r001-moses",
+          "answer": "Moses",
+          "category": "Person",
+          "clue": "He led Israel out of Egypt.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "Review Moses (Exodus) before continuing."
+        },
+        {
+          "id": "ba-r002-noah",
+          "answer": "Noah",
+          "category": "Person",
+          "clue": "He built an ark before the flood.",
+          "theme": "Genesis",
+          "difficulty": "easy",
+          "teachingNote": "Review Noah (Genesis) before continuing."
+        },
+        {
+          "id": "ba-r003-david",
+          "answer": "David",
+          "category": "Person",
+          "clue": "He defeated Goliath with a sling.",
+          "theme": "1-2 Samuel",
+          "difficulty": "easy",
+          "teachingNote": "Review David (1-2 Samuel) before continuing."
+        },
+        {
+          "id": "ba-r004-solomon",
+          "answer": "Solomon",
+          "category": "Person",
+          "clue": "He asked God for wisdom and became a wise king.",
+          "theme": "1 Kings",
+          "difficulty": "easy",
+          "teachingNote": "Review Solomon (1 Kings) before continuing."
+        },
+        {
+          "id": "ba-r005-abraham",
+          "answer": "Abraham",
+          "category": "Person",
+          "clue": "God promised to make him the father of many nations.",
+          "theme": "Genesis",
+          "difficulty": "medium",
+          "teachingNote": "Review Abraham (Genesis) before continuing."
+        },
+        {
+          "id": "ba-r006-joseph",
+          "answer": "Joseph",
+          "category": "Person",
+          "clue": "His brothers sold him into slavery in Egypt.",
+          "theme": "Genesis",
+          "difficulty": "easy",
+          "teachingNote": "Review Joseph (Genesis) before continuing."
+        },
+        {
+          "id": "ba-r007-daniel",
+          "answer": "Daniel",
+          "category": "Person",
+          "clue": "He survived a night in a den of lions.",
+          "theme": "Daniel",
+          "difficulty": "easy",
+          "teachingNote": "Review Daniel (Daniel) before continuing."
+        },
+        {
+          "id": "ba-r008-jonah",
+          "answer": "Jonah",
+          "category": "Person",
+          "clue": "A great fish swallowed him for three days.",
+          "theme": "Jonah",
+          "difficulty": "easy",
+          "teachingNote": "Review Jonah (Jonah) before continuing."
+        },
+        {
+          "id": "ba-r009-samson",
+          "answer": "Samson",
+          "category": "Person",
+          "clue": "His strength was tied to his uncut hair.",
+          "theme": "Judges",
+          "difficulty": "medium",
+          "teachingNote": "Review Samson (Judges) before continuing."
+        },
+        {
+          "id": "ba-r010-elijah",
+          "answer": "Elijah",
+          "category": "Person",
+          "clue": "He faced the prophets of Baal on Mount Carmel.",
+          "theme": "1 Kings",
+          "difficulty": "medium",
+          "teachingNote": "Review Elijah (1 Kings) before continuing."
+        }
+      ]
+    },
+    {
+      "id": "ba-session-02",
+      "title": "Bible Anagrams Deck 2",
+      "theme": "Bible names, places, things, and events",
+      "rounds": [
+        {
+          "id": "ba-r011-elisha",
+          "answer": "Elisha",
+          "category": "Person",
+          "clue": "He received a double portion of his mentor's spirit.",
+          "theme": "2 Kings",
+          "difficulty": "hard",
+          "teachingNote": "Review Elisha (2 Kings) before continuing."
+        },
+        {
+          "id": "ba-r012-isaiah",
+          "answer": "Isaiah",
+          "category": "Person",
+          "clue": "A major prophet who foretold a coming Messiah.",
+          "theme": "Isaiah",
+          "difficulty": "medium",
+          "teachingNote": "Review Isaiah (Isaiah) before continuing."
+        },
+        {
+          "id": "ba-r013-jeremiah",
+          "answer": "Jeremiah",
+          "category": "Person",
+          "clue": "Known as the weeping prophet.",
+          "theme": "Jeremiah",
+          "difficulty": "medium",
+          "teachingNote": "Review Jeremiah (Jeremiah) before continuing."
+        },
+        {
+          "id": "ba-r014-ezekiel",
+          "answer": "Ezekiel",
+          "category": "Person",
+          "clue": "He saw a vision of a valley of dry bones.",
+          "theme": "Ezekiel",
+          "difficulty": "hard",
+          "teachingNote": "Review Ezekiel (Ezekiel) before continuing."
+        },
+        {
+          "id": "ba-r015-ruth",
+          "answer": "Ruth",
+          "category": "Person",
+          "clue": "A Moabite woman loyal to her mother-in-law Naomi.",
+          "theme": "Ruth",
+          "difficulty": "easy",
+          "teachingNote": "Review Ruth (Ruth) before continuing."
+        },
+        {
+          "id": "ba-r016-esther",
+          "answer": "Esther",
+          "category": "Person",
+          "clue": "A queen who risked her life to save her people.",
+          "theme": "Esther",
+          "difficulty": "easy",
+          "teachingNote": "Review Esther (Esther) before continuing."
+        },
+        {
+          "id": "ba-r017-deborah",
+          "answer": "Deborah",
+          "category": "Person",
+          "clue": "A judge and prophetess who led Israel to victory.",
+          "theme": "Judges",
+          "difficulty": "medium",
+          "teachingNote": "Review Deborah (Judges) before continuing."
+        },
+        {
+          "id": "ba-r018-gideon",
+          "answer": "Gideon",
+          "category": "Person",
+          "clue": "He defeated a large army with only three hundred men.",
+          "theme": "Judges",
+          "difficulty": "medium",
+          "teachingNote": "Review Gideon (Judges) before continuing."
+        },
+        {
+          "id": "ba-r019-joshua",
+          "answer": "Joshua",
+          "category": "Person",
+          "clue": "He led Israel into the Promised Land after Moses.",
+          "theme": "Joshua",
+          "difficulty": "easy",
+          "teachingNote": "Review Joshua (Joshua) before continuing."
+        },
+        {
+          "id": "ba-r020-samuel",
+          "answer": "Samuel",
+          "category": "Person",
+          "clue": "He anointed both Saul and David as king.",
+          "theme": "1 Samuel",
+          "difficulty": "medium",
+          "teachingNote": "Review Samuel (1 Samuel) before continuing."
+        }
+      ]
+    },
+    {
+      "id": "ba-session-03",
+      "title": "Bible Anagrams Deck 3",
+      "theme": "Bible names, places, things, and events",
+      "rounds": [
+        {
+          "id": "ba-r021-saul",
+          "answer": "Saul",
+          "category": "Person",
+          "clue": "Israel's first king.",
+          "theme": "1 Samuel",
+          "difficulty": "easy",
+          "teachingNote": "Review Saul (1 Samuel) before continuing."
+        },
+        {
+          "id": "ba-r022-jacob",
+          "answer": "Jacob",
+          "category": "Person",
+          "clue": "He wrestled with an angel and was renamed Israel.",
+          "theme": "Genesis",
+          "difficulty": "easy",
+          "teachingNote": "Review Jacob (Genesis) before continuing."
+        },
+        {
+          "id": "ba-r023-isaac",
+          "answer": "Isaac",
+          "category": "Person",
+          "clue": "Abraham's son, nearly offered as a sacrifice.",
+          "theme": "Genesis",
+          "difficulty": "easy",
+          "teachingNote": "Review Isaac (Genesis) before continuing."
+        },
+        {
+          "id": "ba-r024-adam",
+          "answer": "Adam",
+          "category": "Person",
+          "clue": "The first man, formed from the dust of the ground.",
+          "theme": "Genesis",
+          "difficulty": "easy",
+          "teachingNote": "Review Adam (Genesis) before continuing."
+        },
+        {
+          "id": "ba-r025-eve",
+          "answer": "Eve",
+          "category": "Person",
+          "clue": "The first woman, formed from Adam's rib.",
+          "theme": "Genesis",
+          "difficulty": "easy",
+          "teachingNote": "Review Eve (Genesis) before continuing."
+        },
+        {
+          "id": "ba-r026-cain",
+          "answer": "Cain",
+          "category": "Person",
+          "clue": "He killed his brother out of jealousy.",
+          "theme": "Genesis",
+          "difficulty": "medium",
+          "teachingNote": "Review Cain (Genesis) before continuing."
+        },
+        {
+          "id": "ba-r027-abel",
+          "answer": "Abel",
+          "category": "Person",
+          "clue": "A shepherd whose offering pleased God.",
+          "theme": "Genesis",
+          "difficulty": "medium",
+          "teachingNote": "Review Abel (Genesis) before continuing."
+        },
+        {
+          "id": "ba-r028-nehemiah",
+          "answer": "Nehemiah",
+          "category": "Person",
+          "clue": "He rebuilt the walls of Jerusalem.",
+          "theme": "Nehemiah",
+          "difficulty": "hard",
+          "teachingNote": "Review Nehemiah (Nehemiah) before continuing."
+        },
+        {
+          "id": "ba-r029-ezra",
+          "answer": "Ezra",
+          "category": "Person",
+          "clue": "A priest and scribe who taught the Law after the exile.",
+          "theme": "Ezra",
+          "difficulty": "hard",
+          "teachingNote": "Review Ezra (Ezra) before continuing."
+        },
+        {
+          "id": "ba-r030-job",
+          "answer": "Job",
+          "category": "Person",
+          "clue": "He endured great suffering but remained faithful.",
+          "theme": "Job",
+          "difficulty": "easy",
+          "teachingNote": "Review Job (Job) before continuing."
+        }
+      ]
+    },
+    {
+      "id": "ba-session-04",
+      "title": "Bible Anagrams Deck 4",
+      "theme": "Bible names, places, things, and events",
+      "rounds": [
+        {
+          "id": "ba-r031-peter",
+          "answer": "Peter",
+          "category": "Person",
+          "clue": "He denied knowing Jesus three times.",
+          "theme": "Gospels",
+          "difficulty": "easy",
+          "teachingNote": "Review Peter (Gospels) before continuing."
+        },
+        {
+          "id": "ba-r032-paul",
+          "answer": "Paul",
+          "category": "Person",
+          "clue": "Once a persecutor of Christians, later a leading apostle.",
+          "theme": "Acts",
+          "difficulty": "easy",
+          "teachingNote": "Review Paul (Acts) before continuing."
+        },
+        {
+          "id": "ba-r033-john",
+          "answer": "John",
+          "category": "Person",
+          "clue": "The apostle who wrote a Gospel and Revelation.",
+          "theme": "Gospels",
+          "difficulty": "easy",
+          "teachingNote": "Review John (Gospels) before continuing."
+        },
+        {
+          "id": "ba-r034-matthew",
+          "answer": "Matthew",
+          "category": "Person",
+          "clue": "A tax collector who became a Gospel writer.",
+          "theme": "Gospels",
+          "difficulty": "medium",
+          "teachingNote": "Review Matthew (Gospels) before continuing."
+        },
+        {
+          "id": "ba-r035-mark",
+          "answer": "Mark",
+          "category": "Person",
+          "clue": "He wrote the shortest of the four Gospels.",
+          "theme": "Gospels",
+          "difficulty": "medium",
+          "teachingNote": "Review Mark (Gospels) before continuing."
+        },
+        {
+          "id": "ba-r036-luke",
+          "answer": "Luke",
+          "category": "Person",
+          "clue": "A physician who wrote a Gospel and the book of Acts.",
+          "theme": "Gospels",
+          "difficulty": "medium",
+          "teachingNote": "Review Luke (Gospels) before continuing."
+        },
+        {
+          "id": "ba-r037-thomas",
+          "answer": "Thomas",
+          "category": "Person",
+          "clue": "An apostle remembered for doubting the resurrection.",
+          "theme": "Gospels",
+          "difficulty": "medium",
+          "teachingNote": "Review Thomas (Gospels) before continuing."
+        },
+        {
+          "id": "ba-r038-andrew",
+          "answer": "Andrew",
+          "category": "Person",
+          "clue": "Peter's brother and one of the twelve apostles.",
+          "theme": "Gospels",
+          "difficulty": "medium",
+          "teachingNote": "Review Andrew (Gospels) before continuing."
+        },
+        {
+          "id": "ba-r039-philip",
+          "answer": "Philip",
+          "category": "Person",
+          "clue": "An apostle who later explained Scripture to an Ethiopian official.",
+          "theme": "Gospels Acts",
+          "difficulty": "medium",
+          "teachingNote": "Review Philip (Gospels Acts) before continuing."
+        },
+        {
+          "id": "ba-r040-barnabas",
+          "answer": "Barnabas",
+          "category": "Person",
+          "clue": "He vouched for Paul before the apostles in Jerusalem.",
+          "theme": "Acts",
+          "difficulty": "hard",
+          "teachingNote": "Review Barnabas (Acts) before continuing."
+        }
+      ]
+    },
+    {
+      "id": "ba-session-05",
+      "title": "Bible Anagrams Deck 5",
+      "theme": "Bible names, places, things, and events",
+      "rounds": [
+        {
+          "id": "ba-r041-timothy",
+          "answer": "Timothy",
+          "category": "Person",
+          "clue": "A younger companion of Paul on his missionary journeys.",
+          "theme": "Acts",
+          "difficulty": "hard",
+          "teachingNote": "Review Timothy (Acts) before continuing."
+        },
+        {
+          "id": "ba-r042-stephen",
+          "answer": "Stephen",
+          "category": "Person",
+          "clue": "The first Christian martyr, stoned for his testimony.",
+          "theme": "Acts",
+          "difficulty": "medium",
+          "teachingNote": "Review Stephen (Acts) before continuing."
+        },
+        {
+          "id": "ba-r043-mary",
+          "answer": "Mary",
+          "category": "Person",
+          "clue": "The mother of Jesus.",
+          "theme": "Gospels",
+          "difficulty": "easy",
+          "teachingNote": "Review Mary (Gospels) before continuing."
+        },
+        {
+          "id": "ba-r044-martha",
+          "answer": "Martha",
+          "category": "Person",
+          "clue": "Sister of Mary and Lazarus, busy with hospitality.",
+          "theme": "Gospels",
+          "difficulty": "medium",
+          "teachingNote": "Review Martha (Gospels) before continuing."
+        },
+        {
+          "id": "ba-r045-lazarus",
+          "answer": "Lazarus",
+          "category": "Person",
+          "clue": "Jesus raised him from the dead after four days in the tomb.",
+          "theme": "Gospels",
+          "difficulty": "medium",
+          "teachingNote": "Review Lazarus (Gospels) before continuing."
+        },
+        {
+          "id": "ba-r046-zacchaeus",
+          "answer": "Zacchaeus",
+          "category": "Person",
+          "clue": "A short tax collector who climbed a tree to see Jesus.",
+          "theme": "Gospels",
+          "difficulty": "hard",
+          "teachingNote": "Review Zacchaeus (Gospels) before continuing."
+        },
+        {
+          "id": "ba-r047-nicodemus",
+          "answer": "Nicodemus",
+          "category": "Person",
+          "clue": "A Pharisee who came to Jesus by night.",
+          "theme": "Gospels",
+          "difficulty": "hard",
+          "teachingNote": "Review Nicodemus (Gospels) before continuing."
+        },
+        {
+          "id": "ba-r048-herod",
+          "answer": "Herod",
+          "category": "Person",
+          "clue": "A king who ordered the killing of infant boys in Bethlehem.",
+          "theme": "Gospels",
+          "difficulty": "medium",
+          "teachingNote": "Review Herod (Gospels) before continuing."
+        },
+        {
+          "id": "ba-r049-pilate",
+          "answer": "Pilate",
+          "category": "Person",
+          "clue": "The Roman governor who sentenced Jesus to be crucified.",
+          "theme": "Gospels",
+          "difficulty": "medium",
+          "teachingNote": "Review Pilate (Gospels) before continuing."
+        },
+        {
+          "id": "ba-r050-goliath",
+          "answer": "Goliath",
+          "category": "Person",
+          "clue": "A Philistine giant defeated by a young shepherd.",
+          "theme": "1 Samuel",
+          "difficulty": "medium",
+          "teachingNote": "Review Goliath (1 Samuel) before continuing."
+        }
+      ]
+    },
+    {
+      "id": "ba-session-06",
+      "title": "Bible Anagrams Deck 6",
+      "theme": "Bible names, places, things, and events",
+      "rounds": [
+        {
+          "id": "ba-r051-delilah",
+          "answer": "Delilah",
+          "category": "Person",
+          "clue": "She discovered the secret of Samson's strength.",
+          "theme": "Judges",
+          "difficulty": "medium",
+          "teachingNote": "Review Delilah (Judges) before continuing."
+        },
+        {
+          "id": "ba-r052-naomi",
+          "answer": "Naomi",
+          "category": "Person",
+          "clue": "Ruth's mother-in-law who returned to Bethlehem.",
+          "theme": "Ruth",
+          "difficulty": "medium",
+          "teachingNote": "Review Naomi (Ruth) before continuing."
+        },
+        {
+          "id": "ba-r053-boaz",
+          "answer": "Boaz",
+          "category": "Person",
+          "clue": "A kinsman-redeemer who married Ruth.",
+          "theme": "Ruth",
+          "difficulty": "medium",
+          "teachingNote": "Review Boaz (Ruth) before continuing."
+        },
+        {
+          "id": "ba-r054-eden",
+          "answer": "Eden",
+          "category": "Place",
+          "clue": "The garden where Adam and Eve first lived.",
+          "theme": "Genesis",
+          "difficulty": "easy",
+          "teachingNote": "Review Eden (Genesis) before continuing."
+        },
+        {
+          "id": "ba-r055-bethlehem",
+          "answer": "Bethlehem",
+          "category": "Place",
+          "clue": "The town where Jesus was born.",
+          "theme": "Gospels",
+          "difficulty": "easy",
+          "teachingNote": "Review Bethlehem (Gospels) before continuing."
+        },
+        {
+          "id": "ba-r056-nazareth",
+          "answer": "Nazareth",
+          "category": "Place",
+          "clue": "The town where Jesus grew up.",
+          "theme": "Gospels",
+          "difficulty": "easy",
+          "teachingNote": "Review Nazareth (Gospels) before continuing."
+        },
+        {
+          "id": "ba-r057-jerusalem",
+          "answer": "Jerusalem",
+          "category": "Place",
+          "clue": "The holy city with the temple at its center.",
+          "theme": "Bible geography",
+          "difficulty": "easy",
+          "teachingNote": "Review Jerusalem (Bible geography) before continuing."
+        },
+        {
+          "id": "ba-r058-egypt",
+          "answer": "Egypt",
+          "category": "Place",
+          "clue": "The land where the Israelites were enslaved.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "Review Egypt (Exodus) before continuing."
+        },
+        {
+          "id": "ba-r059-jericho",
+          "answer": "Jericho",
+          "category": "Place",
+          "clue": "Its walls fell after Israel marched around it seven times.",
+          "theme": "Joshua",
+          "difficulty": "medium",
+          "teachingNote": "Review Jericho (Joshua) before continuing."
+        },
+        {
+          "id": "ba-r060-babylon",
+          "answer": "Babylon",
+          "category": "Place",
+          "clue": "The empire that took Judah into exile.",
+          "theme": "2 Kings",
+          "difficulty": "medium",
+          "teachingNote": "Review Babylon (2 Kings) before continuing."
+        }
+      ]
+    },
+    {
+      "id": "ba-session-07",
+      "title": "Bible Anagrams Deck 7",
+      "theme": "Bible names, places, things, and events",
+      "rounds": [
+        {
+          "id": "ba-r061-sinai",
+          "answer": "Sinai",
+          "category": "Place",
+          "clue": "The mountain where Moses received the Ten Commandments.",
+          "theme": "Exodus",
+          "difficulty": "medium",
+          "teachingNote": "Review Sinai (Exodus) before continuing."
+        },
+        {
+          "id": "ba-r062-canaan",
+          "answer": "Canaan",
+          "category": "Place",
+          "clue": "The promised land given to Abraham's descendants.",
+          "theme": "Bible geography",
+          "difficulty": "medium",
+          "teachingNote": "Review Canaan (Bible geography) before continuing."
+        },
+        {
+          "id": "ba-r063-galilee",
+          "answer": "Galilee",
+          "category": "Place",
+          "clue": "A sea and region central to much of Jesus's ministry.",
+          "theme": "Gospels",
+          "difficulty": "medium",
+          "teachingNote": "Review Galilee (Gospels) before continuing."
+        },
+        {
+          "id": "ba-r064-damascus",
+          "answer": "Damascus",
+          "category": "Place",
+          "clue": "Saul was blinded on the road to this city.",
+          "theme": "Acts",
+          "difficulty": "medium",
+          "teachingNote": "Review Damascus (Acts) before continuing."
+        },
+        {
+          "id": "ba-r065-sodom",
+          "answer": "Sodom",
+          "category": "Place",
+          "clue": "A wicked city destroyed by fire and brimstone.",
+          "theme": "Genesis",
+          "difficulty": "medium",
+          "teachingNote": "Review Sodom (Genesis) before continuing."
+        },
+        {
+          "id": "ba-r066-nineveh",
+          "answer": "Nineveh",
+          "category": "Place",
+          "clue": "The city Jonah was sent to warn.",
+          "theme": "Jonah",
+          "difficulty": "medium",
+          "teachingNote": "Review Nineveh (Jonah) before continuing."
+        },
+        {
+          "id": "ba-r067-bethany",
+          "answer": "Bethany",
+          "category": "Place",
+          "clue": "The home village of Mary, Martha, and Lazarus.",
+          "theme": "Gospels",
+          "difficulty": "hard",
+          "teachingNote": "Review Bethany (Gospels) before continuing."
+        },
+        {
+          "id": "ba-r068-capernaum",
+          "answer": "Capernaum",
+          "category": "Place",
+          "clue": "A town by the Sea of Galilee where Jesus based His ministry.",
+          "theme": "Gospels",
+          "difficulty": "hard",
+          "teachingNote": "Review Capernaum (Gospels) before continuing."
+        },
+        {
+          "id": "ba-r069-corinth",
+          "answer": "Corinth",
+          "category": "Place",
+          "clue": "A Greek city Paul wrote two New Testament letters to.",
+          "theme": "Acts",
+          "difficulty": "hard",
+          "teachingNote": "Review Corinth (Acts) before continuing."
+        },
+        {
+          "id": "ba-r070-ephesus",
+          "answer": "Ephesus",
+          "category": "Place",
+          "clue": "A city known for its temple to Artemis, visited by Paul.",
+          "theme": "Acts",
+          "difficulty": "hard",
+          "teachingNote": "Review Ephesus (Acts) before continuing."
+        }
+      ]
+    },
+    {
+      "id": "ba-session-08",
+      "title": "Bible Anagrams Deck 8",
+      "theme": "Bible names, places, things, and events",
+      "rounds": [
+        {
+          "id": "ba-r071-patmos",
+          "answer": "Patmos",
+          "category": "Place",
+          "clue": "The island where John received his vision of Revelation.",
+          "theme": "Revelation",
+          "difficulty": "hard",
+          "teachingNote": "Review Patmos (Revelation) before continuing."
+        },
+        {
+          "id": "ba-r072-ark",
+          "answer": "Ark",
+          "category": "Thing",
+          "clue": "Noah built this to survive the flood.",
+          "theme": "Genesis",
+          "difficulty": "easy",
+          "teachingNote": "Review Ark (Genesis) before continuing."
+        },
+        {
+          "id": "ba-r073-manna",
+          "answer": "Manna",
+          "category": "Thing",
+          "clue": "Bread from heaven that fed Israel in the wilderness.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "Review Manna (Exodus) before continuing."
+        },
+        {
+          "id": "ba-r074-rainbow",
+          "answer": "Rainbow",
+          "category": "Thing",
+          "clue": "A sign of God's covenant after the flood.",
+          "theme": "Genesis",
+          "difficulty": "easy",
+          "teachingNote": "Review Rainbow (Genesis) before continuing."
+        },
+        {
+          "id": "ba-r075-cross",
+          "answer": "Cross",
+          "category": "Thing",
+          "clue": "The instrument on which Jesus was crucified.",
+          "theme": "Gospels",
+          "difficulty": "easy",
+          "teachingNote": "Review Cross (Gospels) before continuing."
+        },
+        {
+          "id": "ba-r076-manger",
+          "answer": "Manger",
+          "category": "Thing",
+          "clue": "The feeding trough where baby Jesus was laid.",
+          "theme": "Gospels",
+          "difficulty": "easy",
+          "teachingNote": "Review Manger (Gospels) before continuing."
+        },
+        {
+          "id": "ba-r077-tablets",
+          "answer": "Tablets",
+          "category": "Thing",
+          "clue": "Stone objects on which the Ten Commandments were written.",
+          "theme": "Exodus",
+          "difficulty": "medium",
+          "teachingNote": "Review Tablets (Exodus) before continuing."
+        },
+        {
+          "id": "ba-r078-sling",
+          "answer": "Sling",
+          "category": "Thing",
+          "clue": "David's weapon against Goliath.",
+          "theme": "1 Samuel",
+          "difficulty": "medium",
+          "teachingNote": "Review Sling (1 Samuel) before continuing."
+        },
+        {
+          "id": "ba-r079-robe",
+          "answer": "Robe",
+          "category": "Thing",
+          "clue": "A colorful gift from Jacob to his son Joseph.",
+          "theme": "Genesis",
+          "difficulty": "medium",
+          "teachingNote": "Review Robe (Genesis) before continuing."
+        },
+        {
+          "id": "ba-r080-staff",
+          "answer": "Staff",
+          "category": "Thing",
+          "clue": "Moses used this to part the Red Sea.",
+          "theme": "Exodus",
+          "difficulty": "medium",
+          "teachingNote": "Review Staff (Exodus) before continuing."
+        }
+      ]
+    },
+    {
+      "id": "ba-session-09",
+      "title": "Bible Anagrams Deck 9",
+      "theme": "Bible names, places, things, and events",
+      "rounds": [
+        {
+          "id": "ba-r081-wine",
+          "answer": "Wine",
+          "category": "Thing",
+          "clue": "What Jesus turned water into at a wedding in Cana.",
+          "theme": "Gospels",
+          "difficulty": "medium",
+          "teachingNote": "Review Wine (Gospels) before continuing."
+        },
+        {
+          "id": "ba-r082-bread",
+          "answer": "Bread",
+          "category": "Thing",
+          "clue": "Broken and shared by Jesus at the Last Supper.",
+          "theme": "Gospels",
+          "difficulty": "easy",
+          "teachingNote": "Review Bread (Gospels) before continuing."
+        },
+        {
+          "id": "ba-r083-trumpet",
+          "answer": "Trumpet",
+          "category": "Thing",
+          "clue": "Sounded by priests before the walls of Jericho fell.",
+          "theme": "Joshua",
+          "difficulty": "medium",
+          "teachingNote": "Review Trumpet (Joshua) before continuing."
+        },
+        {
+          "id": "ba-r084-fleece",
+          "answer": "Fleece",
+          "category": "Thing",
+          "clue": "Gideon used one to test God's will.",
+          "theme": "Judges",
+          "difficulty": "hard",
+          "teachingNote": "Review Fleece (Judges) before continuing."
+        },
+        {
+          "id": "ba-r085-ephod",
+          "answer": "Ephod",
+          "category": "Thing",
+          "clue": "A priestly garment worn by Aaron.",
+          "theme": "Exodus",
+          "difficulty": "hard",
+          "teachingNote": "Review Ephod (Exodus) before continuing."
+        },
+        {
+          "id": "ba-r086-scroll",
+          "answer": "Scroll",
+          "category": "Thing",
+          "clue": "An ancient rolled document used for Scripture.",
+          "theme": "Bible objects",
+          "difficulty": "medium",
+          "teachingNote": "Review Scroll (Bible objects) before continuing."
+        },
+        {
+          "id": "ba-r087-crown",
+          "answer": "Crown",
+          "category": "Thing",
+          "clue": "Made of thorns and placed on Jesus's head before His crucifixion.",
+          "theme": "Gospels",
+          "difficulty": "medium",
+          "teachingNote": "Review Crown (Gospels) before continuing."
+        },
+        {
+          "id": "ba-r088-net",
+          "answer": "Net",
+          "category": "Thing",
+          "clue": "A fishing tool the disciples left behind to follow Jesus.",
+          "theme": "Gospels",
+          "difficulty": "easy",
+          "teachingNote": "Review Net (Gospels) before continuing."
+        },
+        {
+          "id": "ba-r089-lamp",
+          "answer": "Lamp",
+          "category": "Thing",
+          "clue": "God's word is described as one for the psalmist's feet.",
+          "theme": "Psalms",
+          "difficulty": "medium",
+          "teachingNote": "Review Lamp (Psalms) before continuing."
+        },
+        {
+          "id": "ba-r090-flood",
+          "answer": "Flood",
+          "category": "Event",
+          "clue": "A worldwide judgment that only Noah's family survived.",
+          "theme": "Genesis",
+          "difficulty": "easy",
+          "teachingNote": "Review Flood (Genesis) before continuing."
+        }
+      ]
+    },
+    {
+      "id": "ba-session-10",
+      "title": "Bible Anagrams Deck 10",
+      "theme": "Bible names, places, things, and events",
+      "rounds": [
+        {
+          "id": "ba-r091-exodus",
+          "answer": "Exodus",
+          "category": "Event",
+          "clue": "Israel's departure from slavery in Egypt.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus (Exodus) before continuing."
+        },
+        {
+          "id": "ba-r092-passover",
+          "answer": "Passover",
+          "category": "Event",
+          "clue": "The night the angel of death passed over Israelite homes.",
+          "theme": "Exodus",
+          "difficulty": "medium",
+          "teachingNote": "Review Passover (Exodus) before continuing."
+        },
+        {
+          "id": "ba-r093-crucifixion",
+          "answer": "Crucifixion",
+          "category": "Event",
+          "clue": "The event in which Jesus died on the cross.",
+          "theme": "Gospels",
+          "difficulty": "medium",
+          "teachingNote": "Review Crucifixion (Gospels) before continuing."
+        },
+        {
+          "id": "ba-r094-resurrection",
+          "answer": "Resurrection",
+          "category": "Event",
+          "clue": "Jesus rising from the dead on the third day.",
+          "theme": "Gospels",
+          "difficulty": "medium",
+          "teachingNote": "Review Resurrection (Gospels) before continuing."
+        },
+        {
+          "id": "ba-r095-pentecost",
+          "answer": "Pentecost",
+          "category": "Event",
+          "clue": "The day the Holy Spirit came upon the early church.",
+          "theme": "Acts",
+          "difficulty": "hard",
+          "teachingNote": "Review Pentecost (Acts) before continuing."
+        },
+        {
+          "id": "ba-r096-transfiguration",
+          "answer": "Transfiguration",
+          "category": "Event",
+          "clue": "Jesus shone with glory before Peter, James, and John.",
+          "theme": "Gospels",
+          "difficulty": "hard",
+          "teachingNote": "Review Transfiguration (Gospels) before continuing."
+        },
+        {
+          "id": "ba-r097-baptism",
+          "answer": "Baptism",
+          "category": "Event",
+          "clue": "John performed this on Jesus in the Jordan River.",
+          "theme": "Gospels",
+          "difficulty": "easy",
+          "teachingNote": "Review Baptism (Gospels) before continuing."
+        },
+        {
+          "id": "ba-r098-ascension",
+          "answer": "Ascension",
+          "category": "Event",
+          "clue": "Jesus being taken up into heaven after His resurrection.",
+          "theme": "Acts",
+          "difficulty": "hard",
+          "teachingNote": "Review Ascension (Acts) before continuing."
+        },
+        {
+          "id": "ba-r099-nativity",
+          "answer": "Nativity",
+          "category": "Event",
+          "clue": "The birth of Jesus in Bethlehem.",
+          "theme": "Gospels",
+          "difficulty": "medium",
+          "teachingNote": "Review Nativity (Gospels) before continuing."
+        },
+        {
+          "id": "ba-r100-rapture",
+          "answer": "Rapture",
+          "category": "Event",
+          "clue": "Believers being caught up to meet the Lord, per 1 Thessalonians.",
+          "theme": "Bible teaching",
+          "difficulty": "hard",
+          "teachingNote": "Review Rapture (Bible teaching) before continuing."
+        }
+      ]
+    },
+    {
+      "id": "ba-session-11",
+      "title": "Bible Anagrams Deck 11",
+      "theme": "Bible names, places, things, and events",
+      "rounds": [
+        {
+          "id": "ba-r101-fall",
+          "answer": "Fall",
+          "category": "Event",
+          "clue": "Adam and Eve's disobedience that brought sin into the world.",
+          "theme": "Genesis",
+          "difficulty": "medium",
+          "teachingNote": "Review Fall (Genesis) before continuing."
+        },
+        {
+          "id": "ba-r102-judgment",
+          "answer": "Judgment",
+          "category": "Event",
+          "clue": "A future day when all will be held accountable before God.",
+          "theme": "Bible teaching",
+          "difficulty": "hard",
+          "teachingNote": "Review Judgment (Bible teaching) before continuing."
+        },
+        {
+          "id": "ba-r103-covenant",
+          "answer": "Covenant",
+          "category": "Event",
+          "clue": "A binding promise, such as the one God made with Abraham.",
+          "theme": "Bible teaching",
+          "difficulty": "hard",
+          "teachingNote": "Review Covenant (Bible teaching) before continuing."
+        }
+      ]
+    }
+  ]
+}

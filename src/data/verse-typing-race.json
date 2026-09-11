@@ -1,0 +1,3857 @@
+{
+  "$schema": "https://example.local/schemas/verse-typing-race.schema.json",
+  "game": "verse-typing-race",
+  "version": 1,
+  "displayName": "Verse Typing Race",
+  "roundsPerSession": 5,
+  "sessions": [
+    {
+      "id": "vtr-session-01",
+      "title": "Verse Typing Race Deck 1",
+      "theme": "Creation",
+      "rounds": [
+        {
+          "id": "vtr-r001-genesis-1-1",
+          "reference": "Genesis 1:1",
+          "sourceTranslation": "KJV",
+          "theme": "Creation",
+          "verseText": "In the beginning God created the heaven and the earth.",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 1:1 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r002-exodus-14-14",
+          "reference": "Exodus 14:14",
+          "sourceTranslation": "KJV",
+          "theme": "Deliverance",
+          "verseText": "The LORD shall fight for you, and ye shall hold your peace.",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 14:14 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r003-psalm-23-1",
+          "reference": "Psalm 23:1",
+          "sourceTranslation": "KJV",
+          "theme": "Provision",
+          "verseText": "The LORD is my shepherd; I shall not want.",
+          "difficulty": "easy",
+          "teachingNote": "Review Psalm 23:1 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r004-proverbs-3-5",
+          "reference": "Proverbs 3:5",
+          "sourceTranslation": "KJV",
+          "theme": "Trust",
+          "verseText": "Trust in the LORD with all thine heart; and lean not unto thine own understanding.",
+          "difficulty": "medium",
+          "teachingNote": "Review Proverbs 3:5 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r005-habakkuk-2-4",
+          "reference": "Habakkuk 2:4",
+          "sourceTranslation": "KJV",
+          "theme": "Faith",
+          "verseText": "Behold, his soul which is lifted up is not upright in him: but the just shall live by his faith.",
+          "difficulty": "easy",
+          "teachingNote": "Review Habakkuk 2:4 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-02",
+      "title": "Verse Typing Race Deck 2",
+      "theme": "Witness",
+      "rounds": [
+        {
+          "id": "vtr-r006-matthew-5-16",
+          "reference": "Matthew 5:16",
+          "sourceTranslation": "KJV",
+          "theme": "Witness",
+          "verseText": "Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven.",
+          "difficulty": "medium",
+          "teachingNote": "Review Matthew 5:16 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r007-matthew-11-28",
+          "reference": "Matthew 11:28",
+          "sourceTranslation": "KJV",
+          "theme": "Rest",
+          "verseText": "Come unto me, all ye that labour and are heavy laden, and I will give you rest.",
+          "difficulty": "hard",
+          "teachingNote": "Review Matthew 11:28 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r008-john-3-16",
+          "reference": "John 3:16",
+          "sourceTranslation": "KJV",
+          "theme": "Salvation",
+          "verseText": "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.",
+          "difficulty": "easy",
+          "teachingNote": "Review John 3:16 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r009-john-14-6",
+          "reference": "John 14:6",
+          "sourceTranslation": "KJV",
+          "theme": "Way",
+          "verseText": "Jesus saith unto him, I am the way, the truth, and the life: no man cometh unto the Father, but by me.",
+          "difficulty": "hard",
+          "teachingNote": "Review John 14:6 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r010-romans-8-28",
+          "reference": "Romans 8:28",
+          "sourceTranslation": "KJV",
+          "theme": "Purpose",
+          "verseText": "And we know that all things work together for good to them that love God, to them who are the called according to his purpose.",
+          "difficulty": "easy",
+          "teachingNote": "Review Romans 8:28 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-03",
+      "title": "Verse Typing Race Deck 3",
+      "theme": "Love",
+      "rounds": [
+        {
+          "id": "vtr-r011-1-corinthians-13-4",
+          "reference": "1 Corinthians 13:4",
+          "sourceTranslation": "KJV",
+          "theme": "Love",
+          "verseText": "Charity suffereth long, and is kind; charity envieth not; charity vaunteth not itself, is not puffed up,",
+          "difficulty": "hard",
+          "teachingNote": "Review 1 Corinthians 13:4 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r012-galatians-5-22",
+          "reference": "Galatians 5:22",
+          "sourceTranslation": "KJV",
+          "theme": "Character",
+          "verseText": "But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith,",
+          "difficulty": "easy",
+          "teachingNote": "Review Galatians 5:22 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r013-ephesians-2-8",
+          "reference": "Ephesians 2:8",
+          "sourceTranslation": "KJV",
+          "theme": "Grace",
+          "verseText": "For by grace are ye saved through faith; and that not of yourselves: it is the gift of God:",
+          "difficulty": "medium",
+          "teachingNote": "Review Ephesians 2:8 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r014-philippians-4-6",
+          "reference": "Philippians 4:6",
+          "sourceTranslation": "KJV",
+          "theme": "Prayer",
+          "verseText": "Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God.",
+          "difficulty": "hard",
+          "teachingNote": "Review Philippians 4:6 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r015-philippians-4-13",
+          "reference": "Philippians 4:13",
+          "sourceTranslation": "KJV",
+          "theme": "Strength",
+          "verseText": "I can do all things through Christ which strengtheneth me.",
+          "difficulty": "easy",
+          "teachingNote": "Review Philippians 4:13 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-04",
+      "title": "Verse Typing Race Deck 4",
+      "theme": "Care",
+      "rounds": [
+        {
+          "id": "vtr-r016-1-peter-5-7",
+          "reference": "1 Peter 5:7",
+          "sourceTranslation": "KJV",
+          "theme": "Care",
+          "verseText": "Casting all your care upon him; for he careth for you.",
+          "difficulty": "hard",
+          "teachingNote": "Review 1 Peter 5:7 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r017-john-11-2",
+          "reference": "John 11:2",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "(It was that Mary which anointed the Lord with ointment, and wiped his feet with her hair, whose brother Lazarus was sick.)",
+          "difficulty": "medium",
+          "teachingNote": "Review John 11:2 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r018-john-11-43",
+          "reference": "John 11:43",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And when he thus had spoken, he cried with a loud voice, Lazarus, come forth.",
+          "difficulty": "hard",
+          "teachingNote": "Review John 11:43 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r019-john-12-28",
+          "reference": "John 12:28",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Father, glorify thy name. Then came there a voice from heaven, saying, I have both glorified it, and will glorify it again.",
+          "difficulty": "easy",
+          "teachingNote": "Review John 12:28 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r020-john-13-20",
+          "reference": "John 13:20",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Verily, verily, I say unto you, He that receiveth whomsoever I send receiveth me; and he that receiveth me receiveth him that sent me.",
+          "difficulty": "medium",
+          "teachingNote": "Review John 13:20 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-05",
+      "title": "Verse Typing Race Deck 5",
+      "theme": "Faith",
+      "rounds": [
+        {
+          "id": "vtr-r021-john-14-29",
+          "reference": "John 14:29",
+          "sourceTranslation": "KJV",
+          "theme": "Faith",
+          "verseText": "And now I have told you before it come to pass, that, when it is come to pass, ye might believe.",
+          "difficulty": "hard",
+          "teachingNote": "Review John 14:29 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r022-john-16-22",
+          "reference": "John 16:22",
+          "sourceTranslation": "KJV",
+          "theme": "Joy",
+          "verseText": "And ye now therefore have sorrow: but I will see you again, and your heart shall rejoice, and your joy no man taketh from you.",
+          "difficulty": "easy",
+          "teachingNote": "Review John 16:22 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r023-john-18-9",
+          "reference": "John 18:9",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "That the saying might be fulfilled, which he spake, Of them which thou gavest me have I lost none.",
+          "difficulty": "medium",
+          "teachingNote": "Review John 18:9 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r024-john-19-14",
+          "reference": "John 19:14",
+          "sourceTranslation": "KJV",
+          "theme": "Kingdom",
+          "verseText": "And it was the preparation of the passover, and about the sixth hour: and he saith unto the Jews, Behold your King!",
+          "difficulty": "hard",
+          "teachingNote": "Review John 19:14 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r025-john-20-20",
+          "reference": "John 20:20",
+          "sourceTranslation": "KJV",
+          "theme": "Joy",
+          "verseText": "And when he had so said, he shewed unto them his hands and his side. Then were the disciples glad, when they saw the Lord.",
+          "difficulty": "easy",
+          "teachingNote": "Review John 20:20 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-06",
+      "title": "Verse Typing Race Deck 6",
+      "theme": "God's Character",
+      "rounds": [
+        {
+          "id": "vtr-r026-acts-2-34",
+          "reference": "Acts 2:34",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "For David is not ascended into the heavens: but he saith himself, The Lord said unto my Lord, Sit thou on my right hand,",
+          "difficulty": "hard",
+          "teachingNote": "Review Acts 2:34 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r027-acts-5-14",
+          "reference": "Acts 5:14",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And believers were the more added to the Lord, multitudes both of men and women.)",
+          "difficulty": "medium",
+          "teachingNote": "Review Acts 5:14 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r028-acts-13-38",
+          "reference": "Acts 13:38",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Be it known unto you therefore, men and brethren, that through this man is preached unto you the forgiveness of sins:",
+          "difficulty": "hard",
+          "teachingNote": "Review Acts 13:38 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r029-acts-16-6",
+          "reference": "Acts 16:6",
+          "sourceTranslation": "KJV",
+          "theme": "God's Word",
+          "verseText": "Now when they had gone throughout Phrygia and the region of Galatia, and were forbidden of the Holy Ghost to preach the word in Asia,",
+          "difficulty": "medium",
+          "teachingNote": "Review Acts 16:6 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r030-acts-17-9",
+          "reference": "Acts 17:9",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And when they had taken security of Jason, and of the other, they let them go.",
+          "difficulty": "hard",
+          "teachingNote": "Review Acts 17:9 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-07",
+      "title": "Verse Typing Race Deck 7",
+      "theme": "God's Character",
+      "rounds": [
+        {
+          "id": "vtr-r031-acts-22-16",
+          "reference": "Acts 22:16",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And now why tarriest thou? arise, and be baptized, and wash away thy sins, calling on the name of the Lord.",
+          "difficulty": "easy",
+          "teachingNote": "Review Acts 22:16 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r032-acts-23-34",
+          "reference": "Acts 23:34",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And when the governor had read the letter, he asked of what province he was. And when he understood that he was of Cilicia;",
+          "difficulty": "medium",
+          "teachingNote": "Review Acts 23:34 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r033-acts-28-9",
+          "reference": "Acts 28:9",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "So when this was done, others also, which had diseases in the island, came, and were healed:",
+          "difficulty": "medium",
+          "teachingNote": "Review Acts 28:9 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r034-romans-1-23",
+          "reference": "Romans 1:23",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And changed the glory of the uncorruptible God into an image made like to corruptible man, and to birds, and fourfooted beasts, and creeping things.",
+          "difficulty": "hard",
+          "teachingNote": "Review Romans 1:23 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r035-romans-11-5",
+          "reference": "Romans 11:5",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Even so then at this present time also there is a remnant according to the election of grace.",
+          "difficulty": "hard",
+          "teachingNote": "Review Romans 11:5 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-08",
+      "title": "Verse Typing Race Deck 8",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r036-romans-12-13",
+          "reference": "Romans 12:13",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Distributing to the necessity of saints; given to hospitality.",
+          "difficulty": "easy",
+          "teachingNote": "Review Romans 12:13 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r037-romans-14-23",
+          "reference": "Romans 14:23",
+          "sourceTranslation": "KJV",
+          "theme": "Faith",
+          "verseText": "And he that doubteth is damned if he eat, because he eateth not of faith: for whatsoever is not of faith is sin.",
+          "difficulty": "medium",
+          "teachingNote": "Review Romans 14:23 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r038-romans-16-11",
+          "reference": "Romans 16:11",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "Salute Herodion my kinsman. Greet them that be of the household of Narcissus, which are in the Lord.",
+          "difficulty": "hard",
+          "teachingNote": "Review Romans 16:11 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r039-1-corinthians-3-22",
+          "reference": "1 Corinthians 3:22",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Whether Paul, or Apollos, or Cephas, or the world, or life, or death, or things present, or things to come; all are your's;",
+          "difficulty": "medium",
+          "teachingNote": "Review 1 Corinthians 3:22 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r040-1-corinthians-6-10",
+          "reference": "1 Corinthians 6:10",
+          "sourceTranslation": "KJV",
+          "theme": "Kingdom",
+          "verseText": "Nor thieves, nor covetous, nor drunkards, nor revilers, nor extortioners, shall inherit the kingdom of God.",
+          "difficulty": "hard",
+          "teachingNote": "Review 1 Corinthians 6:10 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-09",
+      "title": "Verse Typing Race Deck 9",
+      "theme": "God's Character",
+      "rounds": [
+        {
+          "id": "vtr-r041-1-corinthians-11-11",
+          "reference": "1 Corinthians 11:11",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "Nevertheless neither is the man without the woman, neither the woman without the man, in the Lord.",
+          "difficulty": "hard",
+          "teachingNote": "Review 1 Corinthians 11:11 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r042-1-corinthians-12-19",
+          "reference": "1 Corinthians 12:19",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And if they were all one member, where were the body?",
+          "difficulty": "easy",
+          "teachingNote": "Review 1 Corinthians 12:19 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r043-1-corinthians-15-17",
+          "reference": "1 Corinthians 15:17",
+          "sourceTranslation": "KJV",
+          "theme": "Faith",
+          "verseText": "And if Christ be not raised, your faith is vain; ye are yet in your sins.",
+          "difficulty": "hard",
+          "teachingNote": "Review 1 Corinthians 15:17 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r044-2-corinthians-1-23",
+          "reference": "2 Corinthians 1:23",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "Moreover I call God for a record upon my soul, that to spare you I came not as yet unto Corinth.",
+          "difficulty": "medium",
+          "teachingNote": "Review 2 Corinthians 1:23 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r045-2-corinthians-4-10",
+          "reference": "2 Corinthians 4:10",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "Always bearing about in the body the dying of the Lord Jesus, that the life also of Jesus might be made manifest in our body.",
+          "difficulty": "hard",
+          "teachingNote": "Review 2 Corinthians 4:10 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-10",
+      "title": "Verse Typing Race Deck 10",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r046-2-corinthians-6-12",
+          "reference": "2 Corinthians 6:12",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Ye are not straitened in us, but ye are straitened in your own bowels.",
+          "difficulty": "easy",
+          "teachingNote": "Review 2 Corinthians 6:12 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r047-2-corinthians-11-17",
+          "reference": "2 Corinthians 11:17",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "That which I speak, I speak it not after the Lord, but as it were foolishly, in this confidence of boasting.",
+          "difficulty": "hard",
+          "teachingNote": "Review 2 Corinthians 11:17 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r048-galatians-1-1",
+          "reference": "Galatians 1:1",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "Paul, an apostle, (not of men, neither by man, but by Jesus Christ, and God the Father, who raised him from the dead;)",
+          "difficulty": "easy",
+          "teachingNote": "Review Galatians 1:1 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r049-galatians-3-3",
+          "reference": "Galatians 3:3",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Are ye so foolish? having begun in the Spirit, are ye now made perfect by the flesh?",
+          "difficulty": "medium",
+          "teachingNote": "Review Galatians 3:3 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r050-galatians-6-2",
+          "reference": "Galatians 6:2",
+          "sourceTranslation": "KJV",
+          "theme": "God's Word",
+          "verseText": "Bear ye one another's burdens, and so fulfil the law of Christ.",
+          "difficulty": "easy",
+          "teachingNote": "Review Galatians 6:2 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-11",
+      "title": "Verse Typing Race Deck 11",
+      "theme": "God's Character",
+      "rounds": [
+        {
+          "id": "vtr-r051-ephesians-4-1",
+          "reference": "Ephesians 4:1",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "I therefore, the prisoner of the Lord, beseech you that ye walk worthy of the vocation wherewith ye are called,",
+          "difficulty": "hard",
+          "teachingNote": "Review Ephesians 4:1 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r052-ephesians-5-19",
+          "reference": "Ephesians 5:19",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "Speaking to yourselves in psalms and hymns and spiritual songs, singing and making melody in your heart to the Lord;",
+          "difficulty": "easy",
+          "teachingNote": "Review Ephesians 5:19 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r053-philippians-1-2",
+          "reference": "Philippians 1:2",
+          "sourceTranslation": "KJV",
+          "theme": "Peace",
+          "verseText": "Grace be unto you, and peace, from God our Father, and from the Lord Jesus Christ.",
+          "difficulty": "medium",
+          "teachingNote": "Review Philippians 1:2 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r054-philippians-4-5",
+          "reference": "Philippians 4:5",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "Let your moderation be known unto all men. The Lord is at hand.",
+          "difficulty": "easy",
+          "teachingNote": "Review Philippians 4:5 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r055-colossians-1-28",
+          "reference": "Colossians 1:28",
+          "sourceTranslation": "KJV",
+          "theme": "Wisdom",
+          "verseText": "Whom we preach, warning every man, and teaching every man in all wisdom; that we may present every man perfect in Christ Jesus:",
+          "difficulty": "medium",
+          "teachingNote": "Review Colossians 1:28 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-12",
+      "title": "Verse Typing Race Deck 12",
+      "theme": "Love",
+      "rounds": [
+        {
+          "id": "vtr-r056-colossians-3-19",
+          "reference": "Colossians 3:19",
+          "sourceTranslation": "KJV",
+          "theme": "Love",
+          "verseText": "Husbands, love your wives, and be not bitter against them.",
+          "difficulty": "hard",
+          "teachingNote": "Review Colossians 3:19 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r057-1-thessalonians-2-12",
+          "reference": "1 Thessalonians 2:12",
+          "sourceTranslation": "KJV",
+          "theme": "Kingdom",
+          "verseText": "That ye would walk worthy of God, who hath called you unto his kingdom and glory.",
+          "difficulty": "easy",
+          "teachingNote": "Review 1 Thessalonians 2:12 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r058-1-thessalonians-5-7",
+          "reference": "1 Thessalonians 5:7",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "For they that sleep sleep in the night; and they that be drunken are drunken in the night.",
+          "difficulty": "medium",
+          "teachingNote": "Review 1 Thessalonians 5:7 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r059-2-thessalonians-2-15",
+          "reference": "2 Thessalonians 2:15",
+          "sourceTranslation": "KJV",
+          "theme": "God's Word",
+          "verseText": "Therefore, brethren, stand fast, and hold the traditions which ye have been taught, whether by word, or our epistle.",
+          "difficulty": "hard",
+          "teachingNote": "Review 2 Thessalonians 2:15 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r060-1-timothy-2-2",
+          "reference": "1 Timothy 2:2",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "For kings, and for all that are in authority; that we may lead a quiet and peaceable life in all godliness and honesty.",
+          "difficulty": "easy",
+          "teachingNote": "Review 1 Timothy 2:2 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-13",
+      "title": "Verse Typing Race Deck 13",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r061-1-timothy-4-15",
+          "reference": "1 Timothy 4:15",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Meditate upon these things; give thyself wholly to them; that thy profiting may appear to all.",
+          "difficulty": "medium",
+          "teachingNote": "Review 1 Timothy 4:15 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r062-1-timothy-6-19",
+          "reference": "1 Timothy 6:19",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Laying up in store for themselves a good foundation against the time to come, that they may lay hold on eternal life.",
+          "difficulty": "hard",
+          "teachingNote": "Review 1 Timothy 6:19 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r063-2-timothy-4-22",
+          "reference": "2 Timothy 4:22",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "The Lord Jesus Christ be with thy spirit. Grace be with you. Amen.",
+          "difficulty": "medium",
+          "teachingNote": "Review 2 Timothy 4:22 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r064-titus-3-11",
+          "reference": "Titus 3:11",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Knowing that he that is such is subverted, and sinneth, being condemned of himself.",
+          "difficulty": "hard",
+          "teachingNote": "Review Titus 3:11 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r065-hebrews-1-14",
+          "reference": "Hebrews 1:14",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Are they not all ministering spirits, sent forth to minister for them who shall be heirs of salvation?",
+          "difficulty": "easy",
+          "teachingNote": "Review Hebrews 1:14 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-14",
+      "title": "Verse Typing Race Deck 14",
+      "theme": "Peace",
+      "rounds": [
+        {
+          "id": "vtr-r066-hebrews-4-8",
+          "reference": "Hebrews 4:8",
+          "sourceTranslation": "KJV",
+          "theme": "Peace",
+          "verseText": "For if Jesus had given them rest, then would he not afterward have spoken of another day.",
+          "difficulty": "medium",
+          "teachingNote": "Review Hebrews 4:8 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r067-hebrews-7-1",
+          "reference": "Hebrews 7:1",
+          "sourceTranslation": "KJV",
+          "theme": "Kingdom",
+          "verseText": "For this Melchisedec, king of Salem, priest of the most high God, who met Abraham returning from the slaughter of the kings, and blessed him;",
+          "difficulty": "hard",
+          "teachingNote": "Review Hebrews 7:1 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r068-hebrews-10-23",
+          "reference": "Hebrews 10:23",
+          "sourceTranslation": "KJV",
+          "theme": "Faith",
+          "verseText": "Let us hold fast the profession of our faith without wavering; (for he is faithful that promised;)",
+          "difficulty": "medium",
+          "teachingNote": "Review Hebrews 10:23 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r069-hebrews-11-27",
+          "reference": "Hebrews 11:27",
+          "sourceTranslation": "KJV",
+          "theme": "Faith",
+          "verseText": "By faith he forsook Egypt, not fearing the wrath of the king: for he endured, as seeing him who is invisible.",
+          "difficulty": "hard",
+          "teachingNote": "Review Hebrews 11:27 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r070-hebrews-13-3",
+          "reference": "Hebrews 13:3",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Remember them that are in bonds, as bound with them; and them which suffer adversity, as being yourselves also in the body.",
+          "difficulty": "easy",
+          "teachingNote": "Review Hebrews 13:3 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-15",
+      "title": "Verse Typing Race Deck 15",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r071-james-1-24",
+          "reference": "James 1:24",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "For he beholdeth himself, and goeth his way, and straightway forgetteth what manner of man he was.",
+          "difficulty": "medium",
+          "teachingNote": "Review James 1:24 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r072-james-3-12",
+          "reference": "James 3:12",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Can the fig tree, my brethren, bear olive berries? either a vine, figs? so can no fountain both yield salt water and fresh.",
+          "difficulty": "hard",
+          "teachingNote": "Review James 3:12 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r073-1-peter-1-4",
+          "reference": "1 Peter 1:4",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "To an inheritance incorruptible, and undefiled, and that fadeth not away, reserved in heaven for you,",
+          "difficulty": "easy",
+          "teachingNote": "Review 1 Peter 1:4 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r074-2-peter-2-16",
+          "reference": "2 Peter 2:16",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "But was rebuked for his iniquity: the dumb ass speaking with man's voice forbad the madness of the prophet.",
+          "difficulty": "hard",
+          "teachingNote": "Review 2 Peter 2:16 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r075-1-john-4-1",
+          "reference": "1 John 4:1",
+          "sourceTranslation": "KJV",
+          "theme": "Faith",
+          "verseText": "Beloved, believe not every spirit, but try the spirits whether they are of God: because many false prophets are gone out into the world.",
+          "difficulty": "medium",
+          "teachingNote": "Review 1 John 4:1 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-16",
+      "title": "Verse Typing Race Deck 16",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r076-2-john-1-8",
+          "reference": "2 John 1:8",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Look to yourselves, that we lose not those things which we have wrought, but that we receive a full reward.",
+          "difficulty": "hard",
+          "teachingNote": "Review 2 John 1:8 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r077-revelation-1-6",
+          "reference": "Revelation 1:6",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And hath made us kings and priests unto God and his Father; to him be glory and dominion for ever and ever. Amen.",
+          "difficulty": "easy",
+          "teachingNote": "Review Revelation 1:6 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r078-revelation-3-19",
+          "reference": "Revelation 3:19",
+          "sourceTranslation": "KJV",
+          "theme": "Love",
+          "verseText": "As many as I love, I rebuke and chasten: be zealous therefore, and repent.",
+          "difficulty": "medium",
+          "teachingNote": "Review Revelation 3:19 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r079-genesis-11-26",
+          "reference": "Genesis 11:26",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And Terah lived seventy years, and begat Abram, Nahor, and Haran.",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 11:26 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r080-psalm-119-105",
+          "reference": "Psalm 119:105",
+          "sourceTranslation": "KJV",
+          "theme": "Guidance",
+          "verseText": "Thy word is a lamp unto my feet, and a light unto my path.",
+          "difficulty": "hard",
+          "teachingNote": "Review Psalm 119:105 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-17",
+      "title": "Verse Typing Race Deck 17",
+      "theme": "Peace",
+      "rounds": [
+        {
+          "id": "vtr-r081-matthew-5-9",
+          "reference": "Matthew 5:9",
+          "sourceTranslation": "KJV",
+          "theme": "Peace",
+          "verseText": "Blessed are the peacemakers: for they shall be called the children of God.",
+          "difficulty": "hard",
+          "teachingNote": "Review Matthew 5:9 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r082-matthew-6-21",
+          "reference": "Matthew 6:21",
+          "sourceTranslation": "KJV",
+          "theme": "Treasure",
+          "verseText": "For where your treasure is, there will your heart be also.",
+          "difficulty": "easy",
+          "teachingNote": "Review Matthew 6:21 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r083-luke-2-11",
+          "reference": "Luke 2:11",
+          "sourceTranslation": "KJV",
+          "theme": "Birth of Jesus",
+          "verseText": "For unto you is born this day in the city of David a Saviour, which is Christ the Lord.",
+          "difficulty": "hard",
+          "teachingNote": "Review Luke 2:11 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r084-john-1-1",
+          "reference": "John 1:1",
+          "sourceTranslation": "KJV",
+          "theme": "The Word",
+          "verseText": "In the beginning was the Word, and the Word was with God, and the Word was God.",
+          "difficulty": "easy",
+          "teachingNote": "Review John 1:1 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r085-romans-3-23",
+          "reference": "Romans 3:23",
+          "sourceTranslation": "KJV",
+          "theme": "Sin",
+          "verseText": "For all have sinned, and come short of the glory of God;",
+          "difficulty": "medium",
+          "teachingNote": "Review Romans 3:23 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-18",
+      "title": "Verse Typing Race Deck 18",
+      "theme": "Gift of God",
+      "rounds": [
+        {
+          "id": "vtr-r086-romans-6-23",
+          "reference": "Romans 6:23",
+          "sourceTranslation": "KJV",
+          "theme": "Gift of God",
+          "verseText": "For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord.",
+          "difficulty": "hard",
+          "teachingNote": "Review Romans 6:23 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r087-hebrews-11-1",
+          "reference": "Hebrews 11:1",
+          "sourceTranslation": "KJV",
+          "theme": "Faith",
+          "verseText": "Now faith is the substance of things hoped for, the evidence of things not seen.",
+          "difficulty": "hard",
+          "teachingNote": "Review Hebrews 11:1 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r088-1-john-4-8",
+          "reference": "1 John 4:8",
+          "sourceTranslation": "KJV",
+          "theme": "Love",
+          "verseText": "He that loveth not knoweth not God; for God is love.",
+          "difficulty": "medium",
+          "teachingNote": "Review 1 John 4:8 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r089-genesis-7-16",
+          "reference": "Genesis 7:16",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And they that went in, went in male and female of all flesh, as God had commanded him: and the Lord shut him in.",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 7:16 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r090-genesis-8-10",
+          "reference": "Genesis 8:10",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And he stayed yet other seven days; and again he sent forth the dove out of the ark;",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 8:10 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-19",
+      "title": "Verse Typing Race Deck 19",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r091-genesis-10-1",
+          "reference": "Genesis 10:1",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Now these are the generations of the sons of Noah, Shem, Ham, and Japheth: and unto them were sons born after the flood.",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 10:1 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r092-genesis-10-17",
+          "reference": "Genesis 10:17",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And the Hivite, and the Arkite, and the Sinite,",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 10:17 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r093-genesis-11-22",
+          "reference": "Genesis 11:22",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And Serug lived thirty years, and begat Nahor:",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 11:22 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r094-genesis-12-9",
+          "reference": "Genesis 12:9",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And Abram journeyed, going on still toward the south.",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 12:9 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r095-genesis-13-5",
+          "reference": "Genesis 13:5",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And Lot also, which went with Abram, had flocks, and herds, and tents.",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 13:5 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-20",
+      "title": "Verse Typing Race Deck 20",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r096-genesis-16-15",
+          "reference": "Genesis 16:15",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And Hagar bare Abram a son: and Abram called his son's name, which Hagar bare, Ishmael.",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 16:15 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r097-genesis-18-12",
+          "reference": "Genesis 18:12",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "Therefore Sarah laughed within herself, saying, After I am waxed old shall I have pleasure, my lord being old also?",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 18:12 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r098-genesis-19-23",
+          "reference": "Genesis 19:23",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "The sun was risen upon the earth when Lot entered into Zoar.",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 19:23 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r099-genesis-20-4",
+          "reference": "Genesis 20:4",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "But Abimelech had not come near her: and he said, Lord, wilt thou slay also a righteous nation?",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 20:4 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r100-genesis-21-29",
+          "reference": "Genesis 21:29",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And Abimelech said unto Abraham, What mean these seven ewe lambs which thou hast set by themselves?",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 21:29 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-21",
+      "title": "Verse Typing Race Deck 21",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r101-genesis-22-18",
+          "reference": "Genesis 22:18",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And in thy seed shall all the nations of the earth be blessed; because thou hast obeyed my voice.",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 22:18 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r102-genesis-23-18",
+          "reference": "Genesis 23:18",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Unto Abraham for a possession in the presence of the children of Heth, before all that went in at the gate of his city.",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 23:18 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r103-genesis-24-19",
+          "reference": "Genesis 24:19",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And when she had done giving him drink, she said, I will draw water for thy camels also, until they have done drinking.",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 24:19 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r104-genesis-24-39",
+          "reference": "Genesis 24:39",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And I said unto my master, Peradventure the woman will not follow me.",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 24:39 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r105-genesis-25-10",
+          "reference": "Genesis 25:10",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "The field which Abraham purchased of the sons of Heth: there was Abraham buried, and Sarah his wife.",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 25:10 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-22",
+      "title": "Verse Typing Race Deck 22",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r106-genesis-25-29",
+          "reference": "Genesis 25:29",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And Jacob sod pottage: and Esau came from the field, and he was faint:",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 25:29 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r107-genesis-26-17",
+          "reference": "Genesis 26:17",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And Isaac departed thence, and pitched his tent in the valley of Gerar, and dwelt there.",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 26:17 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r108-genesis-29-1",
+          "reference": "Genesis 29:1",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Then Jacob went on his journey, and came into the land of the people of the east.",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 29:1 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r109-genesis-29-20",
+          "reference": "Genesis 29:20",
+          "sourceTranslation": "KJV",
+          "theme": "Love",
+          "verseText": "And Jacob served seven years for Rachel; and they seemed unto him but a few days, for the love he had to her.",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 29:20 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r110-genesis-30-2",
+          "reference": "Genesis 30:2",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And Jacob's anger was kindled against Rachel: and he said, Am I in God's stead, who hath withheld from thee the fruit of the womb?",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 30:2 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-23",
+      "title": "Verse Typing Race Deck 23",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r111-genesis-30-21",
+          "reference": "Genesis 30:21",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And afterwards she bare a daughter, and called her name Dinah.",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 30:21 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r112-genesis-30-42",
+          "reference": "Genesis 30:42",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "But when the cattle were feeble, he put them not in: so the feebler were Laban's, and the stronger Jacob's.",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 30:42 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r113-genesis-31-17",
+          "reference": "Genesis 31:17",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Then Jacob rose up, and set his sons and his wives upon camels;",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 31:17 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r114-genesis-32-18",
+          "reference": "Genesis 32:18",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "Then thou shalt say, They be thy servant Jacob's; it is a present sent unto my lord Esau: and, behold, also he is behind us.",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 32:18 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r115-genesis-33-4",
+          "reference": "Genesis 33:4",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And Esau ran to meet him, and embraced him, and fell on his neck, and kissed him: and they wept.",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 33:4 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-24",
+      "title": "Verse Typing Race Deck 24",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r116-genesis-34-3",
+          "reference": "Genesis 34:3",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And his soul clave unto Dinah the daughter of Jacob, and he loved the damsel, and spake kindly unto the damsel.",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 34:3 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r117-genesis-34-20",
+          "reference": "Genesis 34:20",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And Hamor and Shechem his son came unto the gate of their city, and communed with the men of their city, saying,",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 34:20 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r118-genesis-35-9",
+          "reference": "Genesis 35:9",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And God appeared unto Jacob again, when he came out of Padanaram, and blessed him.",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 35:9 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r119-genesis-35-26",
+          "reference": "Genesis 35:26",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And the sons of Zilpah, Leah's handmaid: Gad, and Asher: these are the sons of Jacob, which were born to him in Padanaram.",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 35:26 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r120-genesis-36-15",
+          "reference": "Genesis 36:15",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "These were dukes of the sons of Esau: the sons of Eliphaz the firstborn son of Esau; duke Teman, duke Omar, duke Zepho, duke Kenaz,",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 36:15 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-25",
+      "title": "Verse Typing Race Deck 25",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r121-genesis-36-32",
+          "reference": "Genesis 36:32",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And Bela the son of Beor reigned in Edom: and the name of his city was Dinhabah.",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 36:32 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r122-genesis-37-11",
+          "reference": "Genesis 37:11",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And his brethren envied him; but his father observed the saying.",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 37:11 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r123-genesis-37-31",
+          "reference": "Genesis 37:31",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And they took Joseph's coat, and killed a kid of the goats, and dipped the coat in the blood;",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 37:31 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r124-genesis-38-15",
+          "reference": "Genesis 38:15",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "When Judah saw her, he thought her to be an harlot; because she had covered her face.",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 38:15 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r125-genesis-39-7",
+          "reference": "Genesis 39:7",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And it came to pass after these things, that his master's wife cast her eyes upon Joseph; and she said, Lie with me.",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 39:7 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-26",
+      "title": "Verse Typing Race Deck 26",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r126-genesis-40-2",
+          "reference": "Genesis 40:2",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And Pharaoh was wroth against two of his officers, against the chief of the butlers, and against the chief of the bakers.",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 40:2 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r127-genesis-40-21",
+          "reference": "Genesis 40:21",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And he restored the chief butler unto his butlership again; and he gave the cup into Pharaoh's hand:",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 40:21 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r128-genesis-41-16",
+          "reference": "Genesis 41:16",
+          "sourceTranslation": "KJV",
+          "theme": "Peace",
+          "verseText": "And Joseph answered Pharaoh, saying, It is not in me: God shall give Pharaoh an answer of peace.",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 41:16 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r129-genesis-41-49",
+          "reference": "Genesis 41:49",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And Joseph gathered corn as the sand of the sea, very much, until he left numbering; for it was without number.",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 41:49 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r130-genesis-42-10",
+          "reference": "Genesis 42:10",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And they said unto him, Nay, my lord, but to buy food are thy servants come.",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 42:10 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-27",
+      "title": "Verse Typing Race Deck 27",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r131-genesis-42-29",
+          "reference": "Genesis 42:29",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And they came unto Jacob their father unto the land of Canaan, and told him all that befell unto them; saying,",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 42:29 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r132-genesis-43-13",
+          "reference": "Genesis 43:13",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Take also your brother, and arise, go again unto the man:",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 43:13 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r133-genesis-44-21",
+          "reference": "Genesis 44:21",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And thou saidst unto thy servants, Bring him down unto me, that I may set mine eyes upon him.",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 44:21 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r134-genesis-45-5",
+          "reference": "Genesis 45:5",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "Now therefore be not grieved, nor angry with yourselves, that ye sold me hither: for God did send me before you to preserve life.",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 45:5 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r135-genesis-45-24",
+          "reference": "Genesis 45:24",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "So he sent his brethren away, and they departed: and he said unto them, See that ye fall not out by the way.",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 45:24 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-28",
+      "title": "Verse Typing Race Deck 28",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r136-genesis-46-13",
+          "reference": "Genesis 46:13",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And the sons of Issachar; Tola, and Phuvah, and Job, and Shimron.",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 46:13 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r137-genesis-47-25",
+          "reference": "Genesis 47:25",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And they said, Thou hast saved our lives: let us find grace in the sight of my lord, and we will be Pharaoh's servants.",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 47:25 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r138-genesis-49-13",
+          "reference": "Genesis 49:13",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Zebulun shall dwell at the haven of the sea; and he shall be for an haven of ships; and his border shall be unto Zidon.",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 49:13 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r139-genesis-49-32",
+          "reference": "Genesis 49:32",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "The purchase of the field and of the cave that is therein was from the children of Heth.",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 49:32 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r140-exodus-4-12",
+          "reference": "Exodus 4:12",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Now therefore go, and I will be with thy mouth, and teach thee what thou shalt say.",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 4:12 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-29",
+      "title": "Verse Typing Race Deck 29",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r141-exodus-6-19",
+          "reference": "Exodus 6:19",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And the sons of Merari; Mahali and Mushi: these are the families of Levi according to their generations.",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 6:19 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r142-exodus-7-6",
+          "reference": "Exodus 7:6",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And Moses and Aaron did as the Lord commanded them, so did they.",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 7:6 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r143-exodus-8-4",
+          "reference": "Exodus 8:4",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And the frogs shall come up both on thee, and upon thy people, and upon all thy servants.",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 8:4 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r144-exodus-8-30",
+          "reference": "Exodus 8:30",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And Moses went out from Pharaoh, and intreated the Lord.",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 8:30 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r145-exodus-9-17",
+          "reference": "Exodus 9:17",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "As yet exaltest thou thyself against my people, that thou wilt not let them go?",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 9:17 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-30",
+      "title": "Verse Typing Race Deck 30",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r146-exodus-10-4",
+          "reference": "Exodus 10:4",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Else, if thou refuse to let my people go, behold, to morrow will I bring the locusts into thy coast:",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 10:4 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r147-exodus-10-29",
+          "reference": "Exodus 10:29",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And Moses said, Thou hast spoken well, I will see thy face again no more.",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 10:29 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r148-exodus-12-44",
+          "reference": "Exodus 12:44",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "But every man's servant that is bought for money, when thou hast circumcised him, then shall he eat thereof.",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 12:44 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r149-exodus-15-12",
+          "reference": "Exodus 15:12",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Thou stretchedst out thy right hand, the earth swallowed them.",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 15:12 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r150-exodus-18-2",
+          "reference": "Exodus 18:2",
+          "sourceTranslation": "KJV",
+          "theme": "God's Word",
+          "verseText": "Then Jethro, Moses' father in law, took Zipporah, Moses' wife, after he had sent her back,",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 18:2 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-31",
+      "title": "Verse Typing Race Deck 31",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r151-exodus-19-15",
+          "reference": "Exodus 19:15",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And he said unto the people, Be ready against the third day: come not at your wives.",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 19:15 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r152-exodus-20-12",
+          "reference": "Exodus 20:12",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "Honour thy father and thy mother: that thy days may be long upon the land which the Lord thy God giveth thee.",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 20:12 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r153-exodus-21-9",
+          "reference": "Exodus 21:9",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And if he have betrothed her unto his son, he shall deal with her after the manner of daughters.",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 21:9 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r154-exodus-21-27",
+          "reference": "Exodus 21:27",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And if he smite out his manservant's tooth, or his maidservant's tooth; he shall let him go free for his tooth's sake.",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 21:27 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r155-exodus-22-13",
+          "reference": "Exodus 22:13",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "If it be torn in pieces, then let him bring it for witness, and he shall not make good that which was torn.",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 22:13 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-32",
+      "title": "Verse Typing Race Deck 32",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r156-exodus-25-5",
+          "reference": "Exodus 25:5",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And rams' skins dyed red, and badgers' skins, and shittim wood,",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 25:5 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r157-exodus-26-3",
+          "reference": "Exodus 26:3",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "The five curtains shall be coupled together one to another; and other five curtains shall be coupled one to another.",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 26:3 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r158-exodus-26-22",
+          "reference": "Exodus 26:22",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And for the sides of the tabernacle westward thou shalt make six boards.",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 26:22 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r159-exodus-28-5",
+          "reference": "Exodus 28:5",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And they shall take gold, and blue, and purple, and scarlet, and fine linen.",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 28:5 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r160-exodus-29-29",
+          "reference": "Exodus 29:29",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And the holy garments of Aaron shall be his sons' after him, to be anointed therein, and to be consecrated in them.",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 29:29 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-33",
+      "title": "Verse Typing Race Deck 33",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r161-exodus-30-1",
+          "reference": "Exodus 30:1",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And thou shalt make an altar to burn incense upon: of shittim wood shalt thou make it.",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 30:1 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r162-exodus-30-28",
+          "reference": "Exodus 30:28",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And the altar of burnt offering with all his vessels, and the laver and his foot.",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 30:28 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r163-exodus-31-9",
+          "reference": "Exodus 31:9",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And the altar of burnt offering with all his furniture, and the laver and his foot,",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 31:9 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r164-exodus-32-17",
+          "reference": "Exodus 32:17",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And when Joshua heard the noise of the people as they shouted, he said unto Moses, There is a noise of war in the camp.",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 32:17 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r165-exodus-34-33",
+          "reference": "Exodus 34:33",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And till Moses had done speaking with them, he put a vail on his face.",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 34:33 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-34",
+      "title": "Verse Typing Race Deck 34",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r166-exodus-35-16",
+          "reference": "Exodus 35:16",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "The altar of burnt offering, with his brasen grate, his staves, and all his vessels, the laver and his foot,",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 35:16 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r167-exodus-36-4",
+          "reference": "Exodus 36:4",
+          "sourceTranslation": "KJV",
+          "theme": "Wisdom",
+          "verseText": "And all the wise men, that wrought all the work of the sanctuary, came every man from his work which they made;",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 36:4 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r168-exodus-36-22",
+          "reference": "Exodus 36:22",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "One board had two tenons, equally distant one from another: thus did he make for all the boards of the tabernacle.",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 36:22 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r169-exodus-37-20",
+          "reference": "Exodus 37:20",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And in the candlestick were four bowls made like almonds, his knops, and his flowers:",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 37:20 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r170-exodus-38-9",
+          "reference": "Exodus 38:9",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And he made the court: on the south side southward the hangings of the court were of fine twined linen, an hundred cubits:",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 38:9 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-35",
+      "title": "Verse Typing Race Deck 35",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r171-exodus-39-36",
+          "reference": "Exodus 39:36",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "The table, and all the vessels thereof, and the shewbread,",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 39:36 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r172-exodus-40-11",
+          "reference": "Exodus 40:11",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And thou shalt anoint the laver and his foot, and sanctify it.",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 40:11 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r173-exodus-40-28",
+          "reference": "Exodus 40:28",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And he set up the hanging at the door of the tabernacle.",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 40:28 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r174-leviticus-4-32",
+          "reference": "Leviticus 4:32",
+          "sourceTranslation": "KJV",
+          "theme": "Mercy",
+          "verseText": "And if he bring a lamb for a sin offering, he shall bring it a female without blemish.",
+          "difficulty": "easy",
+          "teachingNote": "Review Leviticus 4:32 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r175-leviticus-8-3",
+          "reference": "Leviticus 8:3",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And gather thou all the congregation together unto the door of the tabernacle of the congregation.",
+          "difficulty": "easy",
+          "teachingNote": "Review Leviticus 8:3 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-36",
+      "title": "Verse Typing Race Deck 36",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r176-leviticus-8-22",
+          "reference": "Leviticus 8:22",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And he brought the other ram, the ram of consecration: and Aaron and his sons laid their hands upon the head of the ram.",
+          "difficulty": "medium",
+          "teachingNote": "Review Leviticus 8:22 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r177-leviticus-9-12",
+          "reference": "Leviticus 9:12",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And he slew the burnt offering; and Aaron's sons presented unto him the blood, which he sprinkled round about upon the altar.",
+          "difficulty": "hard",
+          "teachingNote": "Review Leviticus 9:12 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r178-leviticus-10-10",
+          "reference": "Leviticus 10:10",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And that ye may put difference between holy and unholy, and between unclean and clean;",
+          "difficulty": "easy",
+          "teachingNote": "Review Leviticus 10:10 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r179-leviticus-11-30",
+          "reference": "Leviticus 11:30",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And the ferret, and the chameleon, and the lizard, and the snail, and the mole.",
+          "difficulty": "hard",
+          "teachingNote": "Review Leviticus 11:30 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r180-leviticus-13-1",
+          "reference": "Leviticus 13:1",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And the Lord spake unto Moses and Aaron, saying,",
+          "difficulty": "easy",
+          "teachingNote": "Review Leviticus 13:1 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-37",
+      "title": "Verse Typing Race Deck 37",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r181-leviticus-13-48",
+          "reference": "Leviticus 13:48",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Whether it be in the warp, or woof; of linen, or of woollen; whether in a skin, or in any thing made of skin;",
+          "difficulty": "hard",
+          "teachingNote": "Review Leviticus 13:48 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r182-leviticus-15-27",
+          "reference": "Leviticus 15:27",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And whosoever toucheth those things shall be unclean, and shall wash his clothes, and bathe himself in water, and be unclean until the even.",
+          "difficulty": "easy",
+          "teachingNote": "Review Leviticus 15:27 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r183-leviticus-17-16",
+          "reference": "Leviticus 17:16",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "But if he wash them not, nor bathe his flesh; then he shall bear his iniquity.",
+          "difficulty": "hard",
+          "teachingNote": "Review Leviticus 17:16 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r184-leviticus-18-19",
+          "reference": "Leviticus 18:19",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Also thou shalt not approach unto a woman to uncover her nakedness, as long as she is put apart for her uncleanness.",
+          "difficulty": "easy",
+          "teachingNote": "Review Leviticus 18:19 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r185-leviticus-19-7",
+          "reference": "Leviticus 19:7",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And if it be eaten at all on the third day, it is abominable; it shall not be accepted.",
+          "difficulty": "medium",
+          "teachingNote": "Review Leviticus 19:7 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-38",
+      "title": "Verse Typing Race Deck 38",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r186-leviticus-19-27",
+          "reference": "Leviticus 19:27",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Ye shall not round the corners of your heads, neither shalt thou mar the corners of thy beard.",
+          "difficulty": "hard",
+          "teachingNote": "Review Leviticus 19:27 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r187-leviticus-21-5",
+          "reference": "Leviticus 21:5",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "They shall not make baldness upon their head, neither shall they shave off the corner of their beard, nor make any cuttings in their flesh.",
+          "difficulty": "medium",
+          "teachingNote": "Review Leviticus 21:5 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r188-leviticus-22-5",
+          "reference": "Leviticus 22:5",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Or whosoever toucheth any creeping thing, whereby he may be made unclean, or a man of whom he may take uncleanness, whatsoever uncleanness he hath;",
+          "difficulty": "hard",
+          "teachingNote": "Review Leviticus 22:5 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r189-leviticus-22-29",
+          "reference": "Leviticus 22:29",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And when ye will offer a sacrifice of thanksgiving unto the Lord, offer it at your own will.",
+          "difficulty": "easy",
+          "teachingNote": "Review Leviticus 22:29 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r190-leviticus-24-2",
+          "reference": "Leviticus 24:2",
+          "sourceTranslation": "KJV",
+          "theme": "Light",
+          "verseText": "Command the children of Israel, that they bring unto thee pure oil olive beaten for the light, to cause the lamps to burn continually.",
+          "difficulty": "hard",
+          "teachingNote": "Review Leviticus 24:2 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-39",
+      "title": "Verse Typing Race Deck 39",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r191-leviticus-25-20",
+          "reference": "Leviticus 25:20",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And if ye shall say, What shall we eat the seventh year? behold, we shall not sow, nor gather in our increase:",
+          "difficulty": "medium",
+          "teachingNote": "Review Leviticus 25:20 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r192-leviticus-26-24",
+          "reference": "Leviticus 26:24",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Then will I also walk contrary unto you, and will punish you yet seven times for your sins.",
+          "difficulty": "medium",
+          "teachingNote": "Review Leviticus 26:24 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r193-leviticus-27-25",
+          "reference": "Leviticus 27:25",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And all thy estimations shall be according to the shekel of the sanctuary: twenty gerahs shall be the shekel.",
+          "difficulty": "easy",
+          "teachingNote": "Review Leviticus 27:25 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r194-numbers-1-23",
+          "reference": "Numbers 1:23",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Those that were numbered of them, even of the tribe of Simeon, were fifty and nine thousand and three hundred.",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 1:23 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r195-numbers-1-52",
+          "reference": "Numbers 1:52",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And the children of Israel shall pitch their tents, every man by his own camp, and every man by his own standard, throughout their hosts.",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 1:52 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-40",
+      "title": "Verse Typing Race Deck 40",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r196-numbers-3-2",
+          "reference": "Numbers 3:2",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And these are the names of the sons of Aaron; Nadab the firstborn, and Abihu, Eleazar, and Ithamar.",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 3:2 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r197-numbers-3-23",
+          "reference": "Numbers 3:23",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "The families of the Gershonites shall pitch behind the tabernacle westward.",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 3:23 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r198-numbers-4-17",
+          "reference": "Numbers 4:17",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And the Lord spake unto Moses and unto Aaron saying,",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 4:17 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r199-numbers-4-42",
+          "reference": "Numbers 4:42",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And those that were numbered of the families of the sons of Merari, throughout their families, by the house of their fathers,",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 4:42 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r200-numbers-7-10",
+          "reference": "Numbers 7:10",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And the princes offered for dedicating of the altar in the day that it was anointed, even the princes offered their offering before the altar.",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 7:10 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-41",
+      "title": "Verse Typing Race Deck 41",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r201-numbers-7-48",
+          "reference": "Numbers 7:48",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "On the seventh day Elishama the son of Ammihud, prince of the children of Ephraim, offered:",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 7:48 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r202-numbers-7-68",
+          "reference": "Numbers 7:68",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "One golden spoon of ten shekels, full of incense:",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 7:68 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r203-numbers-10-5",
+          "reference": "Numbers 10:5",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "When ye blow an alarm, then the camps that lie on the east parts shall go forward.",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 10:5 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r204-numbers-10-23",
+          "reference": "Numbers 10:23",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And over the host of the tribe of the children of Manasseh was Gamaliel the son of Pedahzur.",
+          "difficulty": "easy",
+          "teachingNote": "Review Numbers 10:23 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r205-numbers-11-6",
+          "reference": "Numbers 11:6",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "But now our soul is dried away: there is nothing at all, beside this manna, before our eyes.",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 11:6 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-42",
+      "title": "Verse Typing Race Deck 42",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r206-numbers-11-30",
+          "reference": "Numbers 11:30",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And Moses gat him into the camp, he and the elders of Israel.",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 11:30 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r207-numbers-12-15",
+          "reference": "Numbers 12:15",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And Miriam was shut out from the camp seven days: and the people journeyed not till Miriam was brought in again.",
+          "difficulty": "easy",
+          "teachingNote": "Review Numbers 12:15 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r208-numbers-14-45",
+          "reference": "Numbers 14:45",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Then the Amalekites came down, and the Canaanites which dwelt in that hill, and smote them, and discomfited them, even unto Hormah.",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 14:45 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r209-numbers-15-21",
+          "reference": "Numbers 15:21",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "Of the first of your dough ye shall give unto the Lord an heave offering in your generations.",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 15:21 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r210-numbers-16-25",
+          "reference": "Numbers 16:25",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And Moses rose up and went unto Dathan and Abiram; and the elders of Israel followed him.",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 16:25 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-43",
+      "title": "Verse Typing Race Deck 43",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r211-numbers-16-50",
+          "reference": "Numbers 16:50",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And Aaron returned unto Moses unto the door of the tabernacle of the congregation: and the plague was stayed.",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 16:50 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r212-numbers-18-18",
+          "reference": "Numbers 18:18",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And the flesh of them shall be thine, as the wave breast and as the right shoulder are thine.",
+          "difficulty": "easy",
+          "teachingNote": "Review Numbers 18:18 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r213-numbers-19-15",
+          "reference": "Numbers 19:15",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And every open vessel, which hath no covering bound upon it, is unclean.",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 19:15 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r214-numbers-20-21",
+          "reference": "Numbers 20:21",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Thus Edom refused to give Israel passage through his border: wherefore Israel turned away from him.",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 20:21 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r215-numbers-21-32",
+          "reference": "Numbers 21:32",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And Moses sent to spy out Jaazer, and they took the villages thereof, and drove out the Amorites that were there.",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 21:32 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-44",
+      "title": "Verse Typing Race Deck 44",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r216-numbers-23-18",
+          "reference": "Numbers 23:18",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And he took up his parable, and said, Rise up, Balak, and hear; hearken unto me, thou son of Zippor:",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 23:18 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r217-numbers-25-1",
+          "reference": "Numbers 25:1",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And Israel abode in Shittim, and the people began to commit whoredom with the daughters of Moab.",
+          "difficulty": "easy",
+          "teachingNote": "Review Numbers 25:1 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r218-numbers-26-7",
+          "reference": "Numbers 26:7",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "These are the families of the Reubenites: and they that were numbered of them were forty and three thousand and seven hundred and thirty.",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 26:7 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r219-numbers-26-42",
+          "reference": "Numbers 26:42",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "These are the sons of Dan after their families: of Shuham, the family of the Shuhamites. These are the families of Dan after their families.",
+          "difficulty": "easy",
+          "teachingNote": "Review Numbers 26:42 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r220-numbers-26-61",
+          "reference": "Numbers 26:61",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And Nadab and Abihu died, when they offered strange fire before the Lord.",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 26:61 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-45",
+      "title": "Verse Typing Race Deck 45",
+      "theme": "God's Character",
+      "rounds": [
+        {
+          "id": "vtr-r221-numbers-27-23",
+          "reference": "Numbers 27:23",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And he laid his hands upon him, and gave him a charge, as the Lord commanded by the hand of Moses.",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 27:23 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r222-numbers-28-23",
+          "reference": "Numbers 28:23",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Ye shall offer these beside the burnt offering in the morning, which is for a continual burnt offering.",
+          "difficulty": "easy",
+          "teachingNote": "Review Numbers 28:23 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r223-numbers-29-10",
+          "reference": "Numbers 29:10",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "A several tenth deal for one lamb, throughout the seven lambs:",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 29:10 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r224-numbers-31-14",
+          "reference": "Numbers 31:14",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And Moses was wroth with the officers of the host, with the captains over thousands, and captains over hundreds, which came from the battle.",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 31:14 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r225-numbers-31-38",
+          "reference": "Numbers 31:38",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And the beeves were thirty and six thousand; of which the Lord'S tribute was threescore and twelve.",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 31:38 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-46",
+      "title": "Verse Typing Race Deck 46",
+      "theme": "God's Character",
+      "rounds": [
+        {
+          "id": "vtr-r226-numbers-32-7",
+          "reference": "Numbers 32:7",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And wherefore discourage ye the heart of the children of Israel from going over into the land which the Lord hath given them?",
+          "difficulty": "easy",
+          "teachingNote": "Review Numbers 32:7 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r227-numbers-32-26",
+          "reference": "Numbers 32:26",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Our little ones, our wives, our flocks, and all our cattle, shall be there in the cities of Gilead:",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 32:26 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r228-numbers-33-4",
+          "reference": "Numbers 33:4",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "For the Egyptians buried all their firstborn, which the Lord had smitten among them: upon their gods also the Lord executed judgments.",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 33:4 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r229-numbers-33-20",
+          "reference": "Numbers 33:20",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And they departed from Rimmonparez, and pitched in Libnah.",
+          "difficulty": "easy",
+          "teachingNote": "Review Numbers 33:20 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r230-numbers-33-36",
+          "reference": "Numbers 33:36",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And they removed from Eziongaber, and pitched in the wilderness of Zin, which is Kadesh.",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 33:36 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-47",
+      "title": "Verse Typing Race Deck 47",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r231-numbers-33-53",
+          "reference": "Numbers 33:53",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And ye shall dispossess the inhabitants of the land, and dwell therein: for I have given you the land to possess it.",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 33:53 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r232-numbers-34-20",
+          "reference": "Numbers 34:20",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And of the tribe of the children of Simeon, Shemuel the son of Ammihud.",
+          "difficulty": "easy",
+          "teachingNote": "Review Numbers 34:20 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r233-numbers-35-12",
+          "reference": "Numbers 35:12",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And they shall be unto you cities for refuge from the avenger; that the manslayer die not, until he stand before the congregation in judgment.",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 35:12 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r234-numbers-35-31",
+          "reference": "Numbers 35:31",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Moreover ye shall take no satisfaction for the life of a murderer, which is guilty of death: but he shall be surely put to death.",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 35:31 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r235-deuteronomy-1-12",
+          "reference": "Deuteronomy 1:12",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "How can I myself alone bear your cumbrance, and your burden, and your strife?",
+          "difficulty": "easy",
+          "teachingNote": "Review Deuteronomy 1:12 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-48",
+      "title": "Verse Typing Race Deck 48",
+      "theme": "God's Character",
+      "rounds": [
+        {
+          "id": "vtr-r236-deuteronomy-1-37",
+          "reference": "Deuteronomy 1:37",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "Also the Lord was angry with me for your sakes, saying, Thou also shalt not go in thither.",
+          "difficulty": "medium",
+          "teachingNote": "Review Deuteronomy 1:37 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r237-deuteronomy-2-16",
+          "reference": "Deuteronomy 2:16",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "So it came to pass, when all the men of war were consumed and dead from among the people,",
+          "difficulty": "hard",
+          "teachingNote": "Review Deuteronomy 2:16 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r238-deuteronomy-4-44",
+          "reference": "Deuteronomy 4:44",
+          "sourceTranslation": "KJV",
+          "theme": "God's Word",
+          "verseText": "And this is the law which Moses set before the children of Israel:",
+          "difficulty": "easy",
+          "teachingNote": "Review Deuteronomy 4:44 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r239-exodus-20-3",
+          "reference": "Exodus 20:3",
+          "sourceTranslation": "KJV",
+          "theme": "Commandments",
+          "verseText": "Thou shalt have no other gods before me.",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 20:3 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r240-deuteronomy-6-5",
+          "reference": "Deuteronomy 6:5",
+          "sourceTranslation": "KJV",
+          "theme": "Love God",
+          "verseText": "And thou shalt love the LORD thy God with all thine heart, and with all thy soul, and with all thy might.",
+          "difficulty": "easy",
+          "teachingNote": "Review Deuteronomy 6:5 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-49",
+      "title": "Verse Typing Race Deck 49",
+      "theme": "God's Character",
+      "rounds": [
+        {
+          "id": "vtr-r241-genesis-2-8",
+          "reference": "Genesis 2:8",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And the Lord God planted a garden eastward in Eden; and there he put the man whom he had formed.",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 2:8 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r242-genesis-4-1",
+          "reference": "Genesis 4:1",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And Adam knew Eve his wife; and she conceived, and bare Cain, and said, I have gotten a man from the Lord.",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 4:1 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r243-genesis-5-9",
+          "reference": "Genesis 5:9",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And Enos lived ninety years, and begat Cainan:",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 5:9 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r244-genesis-6-11",
+          "reference": "Genesis 6:11",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "The earth also was corrupt before God, and the earth was filled with violence.",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 6:11 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r245-genesis-8-3",
+          "reference": "Genesis 8:3",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And the waters returned from off the earth continually: and after the end of the hundred and fifty days the waters were abated.",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 8:3 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-50",
+      "title": "Verse Typing Race Deck 50",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r246-genesis-9-24",
+          "reference": "Genesis 9:24",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And Noah awoke from his wine, and knew what his younger son had done unto him.",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 9:24 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r247-genesis-10-29",
+          "reference": "Genesis 10:29",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And Ophir, and Havilah, and Jobab: all these were the sons of Joktan.",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 10:29 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r248-genesis-13-17",
+          "reference": "Genesis 13:17",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Arise, walk through the land in the length of it and in the breadth of it; for I will give it unto thee.",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 13:17 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r249-genesis-15-11",
+          "reference": "Genesis 15:11",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And when the fowls came down upon the carcases, Abram drove them away.",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 15:11 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r250-genesis-17-9",
+          "reference": "Genesis 17:9",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And God said unto Abraham, Thou shalt keep my covenant therefore, thou, and thy seed after thee in their generations.",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 17:9 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-51",
+      "title": "Verse Typing Race Deck 51",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r251-genesis-18-23",
+          "reference": "Genesis 18:23",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And Abraham drew near, and said, Wilt thou also destroy the righteous with the wicked?",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 18:23 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r252-genesis-19-36",
+          "reference": "Genesis 19:36",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Thus were both the daughters of Lot with child by their father.",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 19:36 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r253-genesis-21-21",
+          "reference": "Genesis 21:21",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And he dwelt in the wilderness of Paran: and his mother took him a wife out of the land of Egypt.",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 21:21 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r254-genesis-25-4",
+          "reference": "Genesis 25:4",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And the sons of Midian; Ephah, and Epher, and Hanoch, and Abidah, and Eldaah. All these were the children of Keturah.",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 25:4 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r255-genesis-26-11",
+          "reference": "Genesis 26:11",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And Abimelech charged all his people, saying, He that toucheth this man or his wife shall surely be put to death.",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 26:11 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-52",
+      "title": "Verse Typing Race Deck 52",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r256-genesis-27-14",
+          "reference": "Genesis 27:14",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And he went, and fetched, and brought them to his mother: and his mother made savoury meat, such as his father loved.",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 27:14 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r257-genesis-29-31",
+          "reference": "Genesis 29:31",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And when the Lord saw that Leah was hated, he opened her womb: but Rachel was barren.",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 29:31 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r258-genesis-30-34",
+          "reference": "Genesis 30:34",
+          "sourceTranslation": "KJV",
+          "theme": "God's Word",
+          "verseText": "And Laban said, Behold, I would it might be according to thy word.",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 30:34 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r259-genesis-31-28",
+          "reference": "Genesis 31:28",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And hast not suffered me to kiss my sons and my daughters? thou hast now done foolishly in so doing.",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 31:28 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r260-genesis-32-12",
+          "reference": "Genesis 32:12",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And thou saidst, I will surely do thee good, and make thy seed as the sand of the sea, which cannot be numbered for multitude.",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 32:12 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-53",
+      "title": "Verse Typing Race Deck 53",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r261-genesis-33-17",
+          "reference": "Genesis 33:17",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And Jacob journeyed to Succoth, and built him an house, and made booths for his cattle: therefore the name of the place is called Succoth.",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 33:17 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r262-genesis-36-9",
+          "reference": "Genesis 36:9",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And these are the generations of Esau the father of the Edomites in mount Seir:",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 36:9 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r263-genesis-38-6",
+          "reference": "Genesis 38:6",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And Judah took a wife for Er his firstborn, whose name was Tamar.",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 38:6 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r264-genesis-41-9",
+          "reference": "Genesis 41:9",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Then spake the chief butler unto Pharaoh, saying, I do remember my faults this day:",
+          "difficulty": "hard",
+          "teachingNote": "Review Genesis 41:9 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r265-genesis-46-7",
+          "reference": "Genesis 46:7",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "His sons, and his sons' sons with him, his daughters, and his sons' daughters, and all his seed brought he with him into Egypt.",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 46:7 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-54",
+      "title": "Verse Typing Race Deck 54",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r266-genesis-50-12",
+          "reference": "Genesis 50:12",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And his sons did unto him according as he commanded them:",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 50:12 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r267-exodus-2-4",
+          "reference": "Exodus 2:4",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And his sister stood afar off, to wit what would be done to him.",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 2:4 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r268-exodus-5-12",
+          "reference": "Exodus 5:12",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "So the people were scattered abroad throughout all the land of Egypt to gather stubble instead of straw.",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 5:12 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r269-exodus-6-29",
+          "reference": "Exodus 6:29",
+          "sourceTranslation": "KJV",
+          "theme": "Kingdom",
+          "verseText": "That the Lord spake unto Moses, saying, I am the Lord: speak thou unto Pharaoh king of Egypt all that I say unto thee.",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 6:29 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r270-exodus-8-18",
+          "reference": "Exodus 8:18",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And the magicians did so with their enchantments to bring forth lice, but they could not: so there were lice upon man, and upon beast.",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 8:18 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-55",
+      "title": "Verse Typing Race Deck 55",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r271-exodus-9-31",
+          "reference": "Exodus 9:31",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And the flax and the barley was smitten: for the barley was in the ear, and the flax was bolled.",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 9:31 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r272-exodus-15-6",
+          "reference": "Exodus 15:6",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "Thy right hand, O Lord, is become glorious in power: thy right hand, O Lord, hath dashed in pieces the enemy.",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 15:6 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r273-exodus-18-15",
+          "reference": "Exodus 18:15",
+          "sourceTranslation": "KJV",
+          "theme": "God's Word",
+          "verseText": "And Moses said unto his father in law, Because the people come unto me to enquire of God:",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 18:15 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r274-exodus-21-20",
+          "reference": "Exodus 21:20",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And if a man smite his servant, or his maid, with a rod, and he die under his hand; he shall be surely punished.",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 21:20 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r275-exodus-22-23",
+          "reference": "Exodus 22:23",
+          "sourceTranslation": "KJV",
+          "theme": "Wisdom",
+          "verseText": "If thou afflict them in any wise, and they cry at all unto me, I will surely hear their cry;",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 22:23 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-56",
+      "title": "Verse Typing Race Deck 56",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r276-exodus-26-16",
+          "reference": "Exodus 26:16",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Ten cubits shall be the length of a board, and a cubit and a half shall be the breadth of one board.",
+          "difficulty": "hard",
+          "teachingNote": "Review Exodus 26:16 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r277-exodus-27-15",
+          "reference": "Exodus 27:15",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And on the other side shall be hangings fifteen cubits: their pillars three, and their sockets three.",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 27:15 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r278-exodus-31-2",
+          "reference": "Exodus 31:2",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "See, I have called by name Bezaleel the son of Uri, the son of Hur, of the tribe of Judah:",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 31:2 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r279-exodus-32-33",
+          "reference": "Exodus 32:33",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And the Lord said unto Moses, Whosoever hath sinned against me, him will I blot out of my book.",
+          "difficulty": "medium",
+          "teachingNote": "Review Exodus 32:33 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r280-exodus-35-28",
+          "reference": "Exodus 35:28",
+          "sourceTranslation": "KJV",
+          "theme": "Light",
+          "verseText": "And spice, and oil for the light, and for the anointing oil, and for the sweet incense.",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 35:28 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-57",
+      "title": "Verse Typing Race Deck 57",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r281-exodus-39-11",
+          "reference": "Exodus 39:11",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And the second row, an emerald, a sapphire, and a diamond.",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 39:11 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r282-leviticus-1-1",
+          "reference": "Leviticus 1:1",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And the Lord called unto Moses, and spake unto him out of the tabernacle of the congregation, saying,",
+          "difficulty": "hard",
+          "teachingNote": "Review Leviticus 1:1 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r283-leviticus-6-14",
+          "reference": "Leviticus 6:14",
+          "sourceTranslation": "KJV",
+          "theme": "God's Word",
+          "verseText": "And this is the law of the meat offering: the sons of Aaron shall offer it before the Lord, before the altar.",
+          "difficulty": "medium",
+          "teachingNote": "Review Leviticus 6:14 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r284-leviticus-7-32",
+          "reference": "Leviticus 7:32",
+          "sourceTranslation": "KJV",
+          "theme": "Peace",
+          "verseText": "And the right shoulder shall ye give unto the priest for an heave offering of the sacrifices of your peace offerings.",
+          "difficulty": "hard",
+          "teachingNote": "Review Leviticus 7:32 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r285-leviticus-11-6",
+          "reference": "Leviticus 11:6",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And the hare, because he cheweth the cud, but divideth not the hoof; he is unclean unto you.",
+          "difficulty": "medium",
+          "teachingNote": "Review Leviticus 11:6 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-58",
+      "title": "Verse Typing Race Deck 58",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r286-leviticus-13-41",
+          "reference": "Leviticus 13:41",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And he that hath his hair fallen off from the part of his head toward his face, he is forehead bald: yet is he clean.",
+          "difficulty": "easy",
+          "teachingNote": "Review Leviticus 13:41 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r287-leviticus-18-29",
+          "reference": "Leviticus 18:29",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "For whosoever shall commit any of these abominations, even the souls that commit them shall be cut off from among their people.",
+          "difficulty": "medium",
+          "teachingNote": "Review Leviticus 18:29 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r288-leviticus-24-18",
+          "reference": "Leviticus 24:18",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And he that killeth a beast shall make it good; beast for beast.",
+          "difficulty": "hard",
+          "teachingNote": "Review Leviticus 24:18 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r289-leviticus-25-32",
+          "reference": "Leviticus 25:32",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Notwithstanding the cities of the Levites, and the houses of the cities of their possession, may the Levites redeem at any time.",
+          "difficulty": "easy",
+          "teachingNote": "Review Leviticus 25:32 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r290-leviticus-26-18",
+          "reference": "Leviticus 26:18",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And if ye will not yet for all this hearken unto me, then I will punish you seven times more for your sins.",
+          "difficulty": "medium",
+          "teachingNote": "Review Leviticus 26:18 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-59",
+      "title": "Verse Typing Race Deck 59",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r291-numbers-1-43",
+          "reference": "Numbers 1:43",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Those that were numbered of them, even of the tribe of Naphtali, were fifty and three thousand and four hundred.",
+          "difficulty": "easy",
+          "teachingNote": "Review Numbers 1:43 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r292-numbers-2-28",
+          "reference": "Numbers 2:28",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And his host, and those that were numbered of them, were forty and one thousand and five hundred.",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 2:28 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r293-numbers-7-22",
+          "reference": "Numbers 7:22",
+          "sourceTranslation": "KJV",
+          "theme": "Mercy",
+          "verseText": "One kid of the goats for a sin offering:",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 7:22 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r294-numbers-7-60",
+          "reference": "Numbers 7:60",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "On the ninth day Abidan the son of Gideoni, prince of the children of Benjamin, offered:",
+          "difficulty": "easy",
+          "teachingNote": "Review Numbers 7:60 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r295-numbers-8-13",
+          "reference": "Numbers 8:13",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And thou shalt set the Levites before Aaron, and before his sons, and offer them for an offering unto the Lord.",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 8:13 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-60",
+      "title": "Verse Typing Race Deck 60",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r296-numbers-10-17",
+          "reference": "Numbers 10:17",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And the tabernacle was taken down; and the sons of Gershon and the sons of Merari set forward, bearing the tabernacle.",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 10:17 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r297-numbers-13-11",
+          "reference": "Numbers 13:11",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Of the tribe of Joseph, namely, of the tribe of Manasseh, Gaddi the son of Susi.",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 13:11 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r298-numbers-14-20",
+          "reference": "Numbers 14:20",
+          "sourceTranslation": "KJV",
+          "theme": "God's Word",
+          "verseText": "And the Lord said, I have pardoned according to thy word:",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 14:20 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r299-numbers-15-12",
+          "reference": "Numbers 15:12",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "According to the number that ye shall prepare, so shall ye do to every one according to their number.",
+          "difficulty": "easy",
+          "teachingNote": "Review Numbers 15:12 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r300-numbers-23-30",
+          "reference": "Numbers 23:30",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And Balak did as Balaam had said, and offered a bullock and a ram on every altar.",
+          "difficulty": "easy",
+          "teachingNote": "Review Numbers 23:30 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-61",
+      "title": "Verse Typing Race Deck 61",
+      "theme": "God's Character",
+      "rounds": [
+        {
+          "id": "vtr-r301-numbers-26-1",
+          "reference": "Numbers 26:1",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And it came to pass after the plague, that the Lord spake unto Moses and unto Eleazar the son of Aaron the priest, saying,",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 26:1 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r302-numbers-26-36",
+          "reference": "Numbers 26:36",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And these are the sons of Shuthelah: of Eran, the family of the Eranites.",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 26:36 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r303-numbers-27-13",
+          "reference": "Numbers 27:13",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And when thou hast seen it, thou also shalt be gathered unto thy people, as Aaron thy brother was gathered.",
+          "difficulty": "easy",
+          "teachingNote": "Review Numbers 27:13 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r304-numbers-29-3",
+          "reference": "Numbers 29:3",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And their meat offering shall be of flour mingled with oil, three tenth deals for a bullock, and two tenth deals for a ram,",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 29:3 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r305-numbers-31-29",
+          "reference": "Numbers 31:29",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "Take it of their half, and give it unto Eleazar the priest, for an heave offering of the Lord.",
+          "difficulty": "easy",
+          "teachingNote": "Review Numbers 31:29 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-62",
+      "title": "Verse Typing Race Deck 62",
+      "theme": "God's Character",
+      "rounds": [
+        {
+          "id": "vtr-r306-numbers-32-20",
+          "reference": "Numbers 32:20",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And Moses said unto them, If ye will do this thing, if ye will go armed before the Lord to war,",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 32:20 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r307-numbers-33-14",
+          "reference": "Numbers 33:14",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And they removed from Alush, and encamped at Rephidim, where was no water for the people to drink.",
+          "difficulty": "hard",
+          "teachingNote": "Review Numbers 33:14 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r308-numbers-33-47",
+          "reference": "Numbers 33:47",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And they removed from Almondiblathaim, and pitched in the mountains of Abarim, before Nebo.",
+          "difficulty": "easy",
+          "teachingNote": "Review Numbers 33:47 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r309-numbers-35-1",
+          "reference": "Numbers 35:1",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And the Lord spake unto Moses in the plains of Moab by Jordan near Jericho, saying,",
+          "difficulty": "medium",
+          "teachingNote": "Review Numbers 35:1 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r310-deuteronomy-6-9",
+          "reference": "Deuteronomy 6:9",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And thou shalt write them upon the posts of thy house, and on thy gates.",
+          "difficulty": "easy",
+          "teachingNote": "Review Deuteronomy 6:9 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-63",
+      "title": "Verse Typing Race Deck 63",
+      "theme": "God's Character",
+      "rounds": [
+        {
+          "id": "vtr-r311-deuteronomy-8-5",
+          "reference": "Deuteronomy 8:5",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "Thou shalt also consider in thine heart, that, as a man chasteneth his son, so the Lord thy God chasteneth thee.",
+          "difficulty": "medium",
+          "teachingNote": "Review Deuteronomy 8:5 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r312-deuteronomy-14-1",
+          "reference": "Deuteronomy 14:1",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "Ye are the children of the Lord your God: ye shall not cut yourselves, nor make any baldness between your eyes for the dead.",
+          "difficulty": "medium",
+          "teachingNote": "Review Deuteronomy 14:1 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r313-deuteronomy-15-20",
+          "reference": "Deuteronomy 15:20",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "Thou shalt eat it before the Lord thy God year by year in the place which the Lord shall choose, thou and thy household.",
+          "difficulty": "hard",
+          "teachingNote": "Review Deuteronomy 15:20 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r314-deuteronomy-22-12",
+          "reference": "Deuteronomy 22:12",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Thou shalt make thee fringes upon the four quarters of thy vesture, wherewith thou coverest thyself.",
+          "difficulty": "hard",
+          "teachingNote": "Review Deuteronomy 22:12 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r315-deuteronomy-24-6",
+          "reference": "Deuteronomy 24:6",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "No man shall take the nether or the upper millstone to pledge: for he taketh a man's life to pledge.",
+          "difficulty": "easy",
+          "teachingNote": "Review Deuteronomy 24:6 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-64",
+      "title": "Verse Typing Race Deck 64",
+      "theme": "God's Character",
+      "rounds": [
+        {
+          "id": "vtr-r316-deuteronomy-32-9",
+          "reference": "Deuteronomy 32:9",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "For the Lord's portion is his people; Jacob is the lot of his inheritance.",
+          "difficulty": "hard",
+          "teachingNote": "Review Deuteronomy 32:9 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r317-deuteronomy-32-48",
+          "reference": "Deuteronomy 32:48",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And the Lord spake unto Moses that selfsame day, saying,",
+          "difficulty": "easy",
+          "teachingNote": "Review Deuteronomy 32:48 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r318-deuteronomy-34-10",
+          "reference": "Deuteronomy 34:10",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And there arose not a prophet since in Israel like unto Moses, whom the Lord knew face to face,",
+          "difficulty": "medium",
+          "teachingNote": "Review Deuteronomy 34:10 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r319-joshua-6-3",
+          "reference": "Joshua 6:3",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And ye shall compass the city, all ye men of war, and go round about the city once. Thus shalt thou do six days.",
+          "difficulty": "easy",
+          "teachingNote": "Review Joshua 6:3 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r320-joshua-16-9",
+          "reference": "Joshua 16:9",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And the separate cities for the children of Ephraim were among the inheritance of the children of Manasseh, all the cities with their villages.",
+          "difficulty": "easy",
+          "teachingNote": "Review Joshua 16:9 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-65",
+      "title": "Verse Typing Race Deck 65",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r321-joshua-19-14",
+          "reference": "Joshua 19:14",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And the border compasseth it on the north side to Hannathon: and the outgoings thereof are in the valley of Jiphthahel:",
+          "difficulty": "medium",
+          "teachingNote": "Review Joshua 19:14 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r322-joshua-24-16",
+          "reference": "Joshua 24:16",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And the people answered and said, God forbid that we should forsake the Lord, to serve other gods;",
+          "difficulty": "medium",
+          "teachingNote": "Review Joshua 24:16 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r323-judges-1-23",
+          "reference": "Judges 1:23",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And the house of Joseph sent to descry Bethel. (Now the name of the city before was Luz.)",
+          "difficulty": "hard",
+          "teachingNote": "Review Judges 1:23 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r324-judges-3-5",
+          "reference": "Judges 3:5",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And the children of Israel dwelt among the Canaanites, Hittites, and Amorites, and Perizzites, and Hivites, and Jebusites:",
+          "difficulty": "easy",
+          "teachingNote": "Review Judges 3:5 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r325-judges-5-2",
+          "reference": "Judges 5:2",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "Praise ye the Lord for the avenging of Israel, when the people willingly offered themselves.",
+          "difficulty": "medium",
+          "teachingNote": "Review Judges 5:2 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-66",
+      "title": "Verse Typing Race Deck 66",
+      "theme": "Kingdom",
+      "rounds": [
+        {
+          "id": "vtr-r326-judges-9-14",
+          "reference": "Judges 9:14",
+          "sourceTranslation": "KJV",
+          "theme": "Kingdom",
+          "verseText": "Then said all the trees unto the bramble, Come thou, and reign over us.",
+          "difficulty": "medium",
+          "teachingNote": "Review Judges 9:14 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r327-judges-11-28",
+          "reference": "Judges 11:28",
+          "sourceTranslation": "KJV",
+          "theme": "Kingdom",
+          "verseText": "Howbeit the king of the children of Ammon hearkened not unto the words of Jephthah which he sent him.",
+          "difficulty": "easy",
+          "teachingNote": "Review Judges 11:28 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r328-judges-13-25",
+          "reference": "Judges 13:25",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And the Spirit of the Lord began to move him at times in the camp of Dan between Zorah and Eshtaol.",
+          "difficulty": "medium",
+          "teachingNote": "Review Judges 13:25 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r329-1-samuel-1-17",
+          "reference": "1 Samuel 1:17",
+          "sourceTranslation": "KJV",
+          "theme": "Peace",
+          "verseText": "Then Eli answered and said, Go in peace: and the God of Israel grant thee thy petition that thou hast asked of him.",
+          "difficulty": "medium",
+          "teachingNote": "Review 1 Samuel 1:17 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r330-1-samuel-5-2",
+          "reference": "1 Samuel 5:2",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "When the Philistines took the ark of God, they brought it into the house of Dagon, and set it by Dagon.",
+          "difficulty": "easy",
+          "teachingNote": "Review 1 Samuel 5:2 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-67",
+      "title": "Verse Typing Race Deck 67",
+      "theme": "Kingdom",
+      "rounds": [
+        {
+          "id": "vtr-r331-1-samuel-8-9",
+          "reference": "1 Samuel 8:9",
+          "sourceTranslation": "KJV",
+          "theme": "Kingdom",
+          "verseText": "Now therefore hearken unto their voice: howbeit yet protest solemnly unto them, and shew them the manner of the king that shall reign over them.",
+          "difficulty": "medium",
+          "teachingNote": "Review 1 Samuel 8:9 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r332-1-samuel-10-15",
+          "reference": "1 Samuel 10:15",
+          "sourceTranslation": "KJV",
+          "theme": "Prayer",
+          "verseText": "And Saul's uncle said, Tell me, I pray thee, what Samuel said unto you.",
+          "difficulty": "hard",
+          "teachingNote": "Review 1 Samuel 10:15 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r333-1-samuel-12-24",
+          "reference": "1 Samuel 12:24",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "Only fear the Lord, and serve him in truth with all your heart: for consider how great things he hath done for you.",
+          "difficulty": "easy",
+          "teachingNote": "Review 1 Samuel 12:24 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r334-1-samuel-14-23",
+          "reference": "1 Samuel 14:23",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "So the Lord saved Israel that day: and the battle passed over unto Bethaven.",
+          "difficulty": "medium",
+          "teachingNote": "Review 1 Samuel 14:23 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r335-1-samuel-16-22",
+          "reference": "1 Samuel 16:22",
+          "sourceTranslation": "KJV",
+          "theme": "Prayer",
+          "verseText": "And Saul sent to Jesse, saying, Let David, I pray thee, stand before me; for he hath found favour in my sight.",
+          "difficulty": "easy",
+          "teachingNote": "Review 1 Samuel 16:22 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-68",
+      "title": "Verse Typing Race Deck 68",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r336-1-samuel-17-43",
+          "reference": "1 Samuel 17:43",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And the Philistine said unto David, Am I a dog, that thou comest to me with staves? And the Philistine cursed David by his gods.",
+          "difficulty": "medium",
+          "teachingNote": "Review 1 Samuel 17:43 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r337-1-samuel-23-1",
+          "reference": "1 Samuel 23:1",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Then they told David, saying, Behold, the Philistines fight against Keilah, and they rob the threshingfloors.",
+          "difficulty": "medium",
+          "teachingNote": "Review 1 Samuel 23:1 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r338-1-samuel-29-1",
+          "reference": "1 Samuel 29:1",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Now the Philistines gathered together all their armies to Aphek: and the Israelites pitched by a fountain which is in Jezreel.",
+          "difficulty": "medium",
+          "teachingNote": "Review 1 Samuel 29:1 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r339-2-samuel-3-15",
+          "reference": "2 Samuel 3:15",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And Ishbosheth sent, and took her from her husband, even from Phaltiel the son of Laish.",
+          "difficulty": "medium",
+          "teachingNote": "Review 2 Samuel 3:15 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r340-2-samuel-5-14",
+          "reference": "2 Samuel 5:14",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And these be the names of those that were born unto him in Jerusalem; Shammuah, and Shobab, and Nathan, and Solomon,",
+          "difficulty": "hard",
+          "teachingNote": "Review 2 Samuel 5:14 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-69",
+      "title": "Verse Typing Race Deck 69",
+      "theme": "Kingdom",
+      "rounds": [
+        {
+          "id": "vtr-r341-2-samuel-7-16",
+          "reference": "2 Samuel 7:16",
+          "sourceTranslation": "KJV",
+          "theme": "Kingdom",
+          "verseText": "And thine house and thy kingdom shall be established for ever before thee: thy throne shall be established for ever.",
+          "difficulty": "easy",
+          "teachingNote": "Review 2 Samuel 7:16 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r342-2-samuel-9-12",
+          "reference": "2 Samuel 9:12",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And Mephibosheth had a young son, whose name was Micha. And all that dwelt in the house of Ziba were servants unto Mephibosheth.",
+          "difficulty": "medium",
+          "teachingNote": "Review 2 Samuel 9:12 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r343-2-samuel-15-33",
+          "reference": "2 Samuel 15:33",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Unto whom David said, If thou passest on with me, then thou shalt be a burden unto me:",
+          "difficulty": "hard",
+          "teachingNote": "Review 2 Samuel 15:33 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r344-2-samuel-19-29",
+          "reference": "2 Samuel 19:29",
+          "sourceTranslation": "KJV",
+          "theme": "Kingdom",
+          "verseText": "And the king said unto him, Why speakest thou any more of thy matters? I have said, Thou and Ziba divide the land.",
+          "difficulty": "medium",
+          "teachingNote": "Review 2 Samuel 19:29 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r345-2-samuel-21-21",
+          "reference": "2 Samuel 21:21",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And when he defied Israel, Jonathan the son of Shimeah the brother of David slew him.",
+          "difficulty": "hard",
+          "teachingNote": "Review 2 Samuel 21:21 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-70",
+      "title": "Verse Typing Race Deck 70",
+      "theme": "God's Character",
+      "rounds": [
+        {
+          "id": "vtr-r346-2-samuel-22-32",
+          "reference": "2 Samuel 22:32",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "For who is God, save the Lord? and who is a rock, save our God?",
+          "difficulty": "easy",
+          "teachingNote": "Review 2 Samuel 22:32 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r347-2-samuel-23-23",
+          "reference": "2 Samuel 23:23",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "He was more honourable than the thirty, but he attained not to the first three. And David set him over his guard.",
+          "difficulty": "medium",
+          "teachingNote": "Review 2 Samuel 23:23 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r348-1-kings-2-1",
+          "reference": "1 Kings 2:1",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Now the days of David drew nigh that he should die; and he charged Solomon his son, saying,",
+          "difficulty": "easy",
+          "teachingNote": "Review 1 Kings 2:1 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r349-1-kings-4-28",
+          "reference": "1 Kings 4:28",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Barley also and straw for the horses and dromedaries brought they unto the place where the officers were, every man according to his charge.",
+          "difficulty": "hard",
+          "teachingNote": "Review 1 Kings 4:28 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r350-1-kings-7-34",
+          "reference": "1 Kings 7:34",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And there were four undersetters to the four corners of one base: and the undersetters were of the very base itself.",
+          "difficulty": "medium",
+          "teachingNote": "Review 1 Kings 7:34 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-71",
+      "title": "Verse Typing Race Deck 71",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r351-1-kings-11-16",
+          "reference": "1 Kings 11:16",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "(For six months did Joab remain there with all Israel, until he had cut off every male in Edom:)",
+          "difficulty": "medium",
+          "teachingNote": "Review 1 Kings 11:16 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r352-1-kings-12-17",
+          "reference": "1 Kings 12:17",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "But as for the children of Israel which dwelt in the cities of Judah, Rehoboam reigned over them.",
+          "difficulty": "hard",
+          "teachingNote": "Review 1 Kings 12:17 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r353-1-kings-16-30",
+          "reference": "1 Kings 16:30",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And Ahab the son of Omri did evil in the sight of the Lord above all that were before him.",
+          "difficulty": "hard",
+          "teachingNote": "Review 1 Kings 16:30 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r354-1-kings-18-16",
+          "reference": "1 Kings 18:16",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "So Obadiah went to meet Ahab, and told him: and Ahab went to meet Elijah.",
+          "difficulty": "easy",
+          "teachingNote": "Review 1 Kings 18:16 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r355-1-kings-22-40",
+          "reference": "1 Kings 22:40",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "So Ahab slept with his fathers; and Ahaziah his son reigned in his stead.",
+          "difficulty": "easy",
+          "teachingNote": "Review 1 Kings 22:40 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-72",
+      "title": "Verse Typing Race Deck 72",
+      "theme": "Kingdom",
+      "rounds": [
+        {
+          "id": "vtr-r356-2-kings-3-1",
+          "reference": "2 Kings 3:1",
+          "sourceTranslation": "KJV",
+          "theme": "Kingdom",
+          "verseText": "Now Jehoram the son of Ahab began to reign over Israel in Samaria the eighteenth year of Jehoshaphat king of Judah, and reigned twelve years.",
+          "difficulty": "medium",
+          "teachingNote": "Review 2 Kings 3:1 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r357-2-kings-4-21",
+          "reference": "2 Kings 4:21",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And she went up, and laid him on the bed of the man of God, and shut the door upon him, and went out.",
+          "difficulty": "hard",
+          "teachingNote": "Review 2 Kings 4:21 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r358-2-kings-8-22",
+          "reference": "2 Kings 8:22",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Yet Edom revolted from under the hand of Judah unto this day. Then Libnah revolted at the same time.",
+          "difficulty": "medium",
+          "teachingNote": "Review 2 Kings 8:22 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r359-2-kings-12-14",
+          "reference": "2 Kings 12:14",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "But they gave that to the workmen, and repaired therewith the house of the Lord.",
+          "difficulty": "easy",
+          "teachingNote": "Review 2 Kings 12:14 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r360-2-kings-14-17",
+          "reference": "2 Kings 14:17",
+          "sourceTranslation": "KJV",
+          "theme": "Kingdom",
+          "verseText": "And Amaziah the son of Joash king of Judah lived after the death of Jehoash son of Jehoahaz king of Israel fifteen years.",
+          "difficulty": "medium",
+          "teachingNote": "Review 2 Kings 14:17 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-73",
+      "title": "Verse Typing Race Deck 73",
+      "theme": "God's Character",
+      "rounds": [
+        {
+          "id": "vtr-r361-2-kings-17-18",
+          "reference": "2 Kings 17:18",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "Therefore the Lord was very angry with Israel, and removed them out of his sight: there was none left but the tribe of Judah only.",
+          "difficulty": "easy",
+          "teachingNote": "Review 2 Kings 17:18 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r362-2-kings-19-33",
+          "reference": "2 Kings 19:33",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "By the way that he came, by the same shall he return, and shall not come into this city, saith the Lord.",
+          "difficulty": "hard",
+          "teachingNote": "Review 2 Kings 19:33 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r363-2-kings-21-23",
+          "reference": "2 Kings 21:23",
+          "sourceTranslation": "KJV",
+          "theme": "Kingdom",
+          "verseText": "And the servants of Amon conspired against him, and slew the king in his own house.",
+          "difficulty": "easy",
+          "teachingNote": "Review 2 Kings 21:23 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r364-2-kings-24-4",
+          "reference": "2 Kings 24:4",
+          "sourceTranslation": "KJV",
+          "theme": "God's Character",
+          "verseText": "And also for the innocent blood that he shed: for he filled Jerusalem with innocent blood; which the Lord would not pardon.",
+          "difficulty": "medium",
+          "teachingNote": "Review 2 Kings 24:4 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r365-1-chronicles-1-6",
+          "reference": "1 Chronicles 1:6",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And the sons of Gomer; Ashchenaz, and Riphath, and Togarmah.",
+          "difficulty": "hard",
+          "teachingNote": "Review 1 Chronicles 1:6 and the full verse before continuing."
+        }
+      ]
+    },
+    {
+      "id": "vtr-session-74",
+      "title": "Verse Typing Race Deck 74",
+      "theme": "Scripture",
+      "rounds": [
+        {
+          "id": "vtr-r366-1-chronicles-2-31",
+          "reference": "1 Chronicles 2:31",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "And the sons of Appaim; Ishi. And the sons of Ishi; Sheshan. And the children of Sheshan; Ahlai.",
+          "difficulty": "medium",
+          "teachingNote": "Review 1 Chronicles 2:31 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r367-1-chronicles-3-12",
+          "reference": "1 Chronicles 3:12",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Amaziah his son, Azariah his son, Jotham his son,",
+          "difficulty": "hard",
+          "teachingNote": "Review 1 Chronicles 3:12 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r368-1-chronicles-4-24",
+          "reference": "1 Chronicles 4:24",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "The sons of Simeon were, Nemuel, and Jamin, Jarib, Zerah, and Shaul:",
+          "difficulty": "easy",
+          "teachingNote": "Review 1 Chronicles 4:24 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r369-1-chronicles-5-15",
+          "reference": "1 Chronicles 5:15",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Ahi the son of Abdiel, the son of Guni, chief of the house of their fathers.",
+          "difficulty": "medium",
+          "teachingNote": "Review 1 Chronicles 5:15 and the full verse before continuing."
+        },
+        {
+          "id": "vtr-r370-1-chronicles-6-27",
+          "reference": "1 Chronicles 6:27",
+          "sourceTranslation": "KJV",
+          "theme": "Scripture",
+          "verseText": "Eliab his son, Jeroham his son, Elkanah his son.",
+          "difficulty": "hard",
+          "teachingNote": "Review 1 Chronicles 6:27 and the full verse before continuing."
+        }
+      ]
+    }
+  ]
+}

@@ -2,13 +2,24 @@ import { describe, expect, it } from "vitest";
 import {
   continueGame,
   getCurrentActorLabel,
+  moveBibleAnagramTile,
+  passBibleAnagram,
+  passRelayWord,
   passScriptureTurn,
   selectBoardCard,
+  selectTwoTruthsStatement,
+  submitBibleAnagram,
   submitBoardGuess,
+  submitRelayWord,
   submitScriptureLetterGuess,
   submitScriptureSolve,
+  submitWordLadderStep,
+  type BibleAnagramsState,
   type FiveGuessesState,
-  type ScriptureState
+  type RelayVerseBuildState,
+  type ScriptureState,
+  type TwoTruthsAndALieState,
+  type WordLadderState
 } from "../src/lib/gameEngine";
 import type { PlayerStats } from "../src/lib/gameEngine";
 
@@ -31,7 +42,8 @@ function stats(): PlayerStats {
     chapterFinderCorrect: 0,
     whoSaidItCorrect: 0,
     booksRelayPerfectOrders: 0,
-    missingWordCorrect: 0
+    missingWordCorrect: 0,
+    wordLadderStepsCompleted: 0
   };
 }
 
@@ -138,6 +150,188 @@ function makeScriptureState(rounds = ["Faith", "Hope"]): ScriptureState {
   };
 }
 
+function makeTwoTruthsState(): TwoTruthsAndALieState {
+  const round = {
+    id: "ttl-test-1",
+    subject: "Test Subject",
+    subjectType: "person" as const,
+    statements: ["True one.", "True two.", "The lie."] as [string, string, string],
+    lieIndex: 2 as const,
+    explanation: "Explanation.",
+    reference: "Test 1:1",
+    theme: "Test",
+    difficulty: "easy" as const,
+    teachingNote: "Note."
+  };
+
+  return {
+    gameId: "two-truths-and-a-lie",
+    displayName: "Two Truths and a Lie",
+    sessionTitle: "Test",
+    sessionTheme: "Test",
+    participantMode: "individual",
+    participants: structuredClone(participants),
+    stats: {
+      "player-anna-1": stats(),
+      "player-ben-2": stats()
+    },
+    activityLog: [],
+    status: "in-progress",
+    turnIndex: 0,
+    totalPrompts: 1,
+    resolvedPrompts: 0,
+    roundIndex: 0,
+    rounds: [round],
+    currentPrompt: {
+      kind: "two-truths-and-a-lie",
+      round,
+      statements: round.statements.map((text, index) => ({ text, originalIndex: index as 0 | 1 | 2 })),
+      eliminatedIndexes: [],
+      selectedIndex: null,
+      phase: "active",
+      wasCorrect: null,
+      resolvedMessage: null
+    }
+  };
+}
+
+function makeRelayVerseBuildState(): RelayVerseBuildState {
+  const round = {
+    id: "rvb-test-1",
+    reference: "Test 1:1",
+    sourceTranslation: "KJV" as const,
+    theme: "Test",
+    verseText: "In the beginning God created",
+    difficulty: "easy" as const,
+    teachingNote: "Note."
+  };
+
+  return {
+    gameId: "relay-verse-build",
+    displayName: "Relay Verse Build",
+    sessionTitle: "Test",
+    sessionTheme: "Test",
+    participantMode: "individual",
+    participants: structuredClone(participants),
+    stats: {
+      "player-anna-1": stats(),
+      "player-ben-2": stats()
+    },
+    activityLog: [],
+    status: "in-progress",
+    turnIndex: 0,
+    totalPrompts: 1,
+    resolvedPrompts: 0,
+    roundIndex: 0,
+    rounds: [round],
+    currentPrompt: {
+      kind: "relay-verse-build",
+      round,
+      words: ["In", "the", "beginning", "God", "created"],
+      revealedCount: 0,
+      wrongAttemptsThisWord: 0,
+      totalWrongAttempts: 0,
+      phase: "active",
+      wasCorrect: null,
+      resolvedMessage: null
+    }
+  };
+}
+
+function makeWordLadderState(): WordLadderState {
+  const round = {
+    id: "wl-test-1",
+    startWord: "cat",
+    endWord: "dog",
+    wordLength: 3,
+    minSteps: 3,
+    revealPath: ["cat", "cot", "cog", "dog"],
+    startFlavorText: "Start",
+    endFlavorText: "End",
+    theme: "Test",
+    difficulty: "easy" as const,
+    teachingNote: "Note."
+  };
+
+  return {
+    gameId: "word-ladder",
+    displayName: "Word Ladder",
+    sessionTitle: "Test",
+    sessionTheme: "Test",
+    participantMode: "individual",
+    participants: structuredClone(participants),
+    stats: {
+      "player-anna-1": stats(),
+      "player-ben-2": stats()
+    },
+    activityLog: [],
+    status: "in-progress",
+    turnIndex: 0,
+    totalPrompts: 1,
+    resolvedPrompts: 0,
+    roundIndex: 0,
+    rounds: [round],
+    currentPrompt: {
+      kind: "word-ladder",
+      round,
+      chain: ["cat"],
+      totalMissCount: 0,
+      phase: "active",
+      wasCorrect: null,
+      resolvedMessage: null
+    }
+  };
+}
+
+function makeBibleAnagramsState(): BibleAnagramsState {
+  const round = {
+    id: "ba-test-1",
+    answer: "Noah",
+    category: "Person" as const,
+    clue: "He built an ark.",
+    theme: "Test",
+    difficulty: "easy" as const,
+    teachingNote: "Note."
+  };
+
+  const tiles = ["N", "O", "A", "H"].map((letter, index) => ({
+    id: `ba-test-1-letter-${index}`,
+    letter,
+    originalIndex: index
+  }));
+
+  return {
+    gameId: "bible-anagrams",
+    displayName: "Bible Anagrams",
+    sessionTitle: "Test",
+    sessionTheme: "Test",
+    participantMode: "individual",
+    participants: structuredClone(participants),
+    stats: {
+      "player-anna-1": stats(),
+      "player-ben-2": stats()
+    },
+    activityLog: [],
+    status: "in-progress",
+    turnIndex: 0,
+    totalPrompts: 1,
+    resolvedPrompts: 0,
+    roundIndex: 0,
+    rounds: [round],
+    currentPrompt: {
+      kind: "bible-anagrams",
+      round,
+      tiles,
+      bankTileIds: tiles.map((tile) => tile.id),
+      answerTileIds: [],
+      attemptedParticipantIds: [],
+      phase: "active",
+      wasCorrect: null,
+      resolvedMessage: null
+    }
+  };
+}
+
 describe("gameEngine transitions", () => {
   it("moves a Five Clues card into steal after the primary player exhausts clues", () => {
     let state = selectBoardCard(makeFiveGuessesState(), "card-1").nextState as FiveGuessesState;
@@ -214,5 +408,122 @@ describe("gameEngine transitions", () => {
 
     expect(state.status).toBe("completed");
     expect(state.resolvedPrompts).toBe(1);
+  });
+
+  it("resolves Two Truths and a Lie when the lie is picked and steps down score on misses", () => {
+    let state = makeTwoTruthsState();
+
+    state = selectTwoTruthsStatement(state, 0).nextState as TwoTruthsAndALieState;
+    expect(state.currentPrompt.phase).toBe("active");
+    expect(state.stats["player-anna-1"].incorrectAttempts).toBe(1);
+    expect(state.turnIndex).toBe(1);
+
+    state = selectTwoTruthsStatement(state, 2).nextState as TwoTruthsAndALieState;
+    expect(state.currentPrompt.phase).toBe("resolved");
+    expect(state.currentPrompt.wasCorrect).toBe(true);
+    expect(state.stats["player-ben-2"].totalScore).toBe(4);
+  });
+
+  it("keeps the same player on a Relay Verse Build miss and rotates turns on a correct word", () => {
+    let state = makeRelayVerseBuildState();
+
+    state = submitRelayWord(state, "wrong").nextState as RelayVerseBuildState;
+    expect(state.turnIndex).toBe(0);
+    expect(state.currentPrompt.wrongAttemptsThisWord).toBe(1);
+    expect(state.currentPrompt.revealedCount).toBe(0);
+
+    state = submitRelayWord(state, "In").nextState as RelayVerseBuildState;
+    expect(state.turnIndex).toBe(1);
+    expect(state.currentPrompt.revealedCount).toBe(1);
+    expect(state.currentPrompt.wrongAttemptsThisWord).toBe(0);
+  });
+
+  it("reveals the current word and passes the turn on Skip Word", () => {
+    let state = makeRelayVerseBuildState();
+
+    state = passRelayWord(state).nextState as RelayVerseBuildState;
+    expect(state.currentPrompt.revealedCount).toBe(1);
+    expect(state.currentPrompt.totalWrongAttempts).toBe(1);
+    expect(state.turnIndex).toBe(1);
+  });
+
+  it("scores a guess changing more than one letter as a miss, then accepts a valid step", () => {
+    let state = makeWordLadderState();
+    const dictionary = new Set(["cat", "cot", "cog", "dog", "bat"]);
+
+    state = submitWordLadderStep(state, "cog", dictionary).nextState as WordLadderState;
+    expect(state.currentPrompt.chain).toEqual(["cat"]);
+    expect(state.currentPrompt.totalMissCount).toBe(1);
+    expect(state.turnIndex).toBe(1);
+
+    state = submitWordLadderStep(state, "cot", dictionary).nextState as WordLadderState;
+    expect(state.currentPrompt.chain).toEqual(["cat", "cot"]);
+    expect(state.turnIndex).toBe(0);
+    expect(state.stats["player-ben-2"].wordLadderStepsCompleted).toBe(1);
+  });
+
+  it("throws when a Word Ladder guess repeats a word already in the chain", () => {
+    const state = makeWordLadderState();
+    const dictionary = new Set(["cat", "cot", "cog", "dog"]);
+
+    expect(() => submitWordLadderStep(state, "cat", dictionary)).toThrow();
+  });
+
+  it("abandons a stalled Word Ladder round after the miss cap and reveals a valid path", () => {
+    let state = makeWordLadderState();
+    const dictionary = new Set(["cat"]);
+
+    for (let miss = 0; miss < 6; miss += 1) {
+      state = submitWordLadderStep(state, "zzz", dictionary).nextState as WordLadderState;
+    }
+
+    expect(state.currentPrompt.phase).toBe("resolved");
+    expect(state.currentPrompt.wasCorrect).toBe(false);
+    expect(state.currentPrompt.resolvedMessage).toContain("cat");
+  });
+
+  it("solves a Bible Anagrams round when the correct letters are moved to the answer row", () => {
+    let state = makeBibleAnagramsState();
+
+    for (const letter of ["N", "O", "A", "H"]) {
+      const tile = state.currentPrompt.tiles.find((entry) => entry.letter === letter && state.currentPrompt.bankTileIds.includes(entry.id));
+      state = moveBibleAnagramTile(state, tile!.id, "answer").nextState as BibleAnagramsState;
+    }
+
+    expect(state.currentPrompt.answerTileIds).toHaveLength(4);
+    expect(state.currentPrompt.bankTileIds).toHaveLength(0);
+
+    state = submitBibleAnagram(state).nextState as BibleAnagramsState;
+
+    expect(state.currentPrompt.phase).toBe("resolved");
+    expect(state.currentPrompt.wasCorrect).toBe(true);
+    expect(state.stats["player-anna-1"].totalScore).toBe(10);
+  });
+
+  it("rejects an incorrect Bible Anagrams submission and passes the turn", () => {
+    let state = makeBibleAnagramsState();
+
+    // Move letters in the wrong order: H, A, O, N spells "HAON", not "NOAH"
+    for (const letter of ["H", "A", "O", "N"]) {
+      const tile = state.currentPrompt.tiles.find((entry) => entry.letter === letter && state.currentPrompt.bankTileIds.includes(entry.id));
+      state = moveBibleAnagramTile(state, tile!.id, "answer").nextState as BibleAnagramsState;
+    }
+
+    state = submitBibleAnagram(state).nextState as BibleAnagramsState;
+
+    expect(state.currentPrompt.phase).toBe("active");
+    expect(state.turnIndex).toBe(1);
+    expect(state.stats["player-anna-1"].incorrectAttempts).toBe(1);
+  });
+
+  it("reveals the answer on Bible Anagrams once all players have passed", () => {
+    let state = makeBibleAnagramsState();
+
+    state = passBibleAnagram(state).nextState as BibleAnagramsState;
+    expect(state.currentPrompt.phase).toBe("active");
+
+    state = passBibleAnagram(state).nextState as BibleAnagramsState;
+    expect(state.currentPrompt.phase).toBe("resolved");
+    expect(state.currentPrompt.wasCorrect).toBe(false);
   });
 });

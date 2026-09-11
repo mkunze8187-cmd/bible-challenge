@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/word-ladder-dictionary.schema.json",
+  "title": "Word Ladder Dictionary",
+  "description": "A flat, curated common-English-word list used to live-validate player-typed Word Ladder chain steps. Deliberately smaller than a full system dictionary so a family trivia night doesn't hit obscure valid words. Grouped by length at load time in code, not in this file.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "version",
+    "words"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "words": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z]{3,7}$"
+      }
+    }
+  }
+}

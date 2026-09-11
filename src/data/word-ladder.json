@@ -1,0 +1,3147 @@
+{
+  "$schema": "https://example.local/schemas/word-ladder.schema.json",
+  "game": "word-ladder",
+  "version": 1,
+  "displayName": "Word Ladder",
+  "roundsPerSession": 6,
+  "sessions": [
+    {
+      "id": "wl-session-01",
+      "title": "Word Ladder Deck 1",
+      "theme": "Word Ladder",
+      "rounds": [
+        {
+          "id": "wl-r001-sin-sad",
+          "startWord": "sin",
+          "endWord": "sad",
+          "wordLength": 3,
+          "minSteps": 3,
+          "revealPath": [
+            "sin",
+            "sip",
+            "sap",
+            "sad"
+          ],
+          "startFlavorText": "What separates humanity from God.",
+          "endFlavorText": "How the wages of sin leave a life.",
+          "theme": "Bible Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"sin\" into \"sad\"."
+        },
+        {
+          "id": "wl-r002-cat-dog",
+          "startWord": "cat",
+          "endWord": "dog",
+          "wordLength": 3,
+          "minSteps": 3,
+          "revealPath": [
+            "cat",
+            "cot",
+            "cog",
+            "dog"
+          ],
+          "startFlavorText": "One of the animals Noah gathered two by two.",
+          "endFlavorText": "Another animal Noah gathered two by two.",
+          "theme": "Bible Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"cat\" into \"dog\"."
+        },
+        {
+          "id": "wl-r003-hot-old",
+          "startWord": "hot",
+          "endWord": "old",
+          "wordLength": 3,
+          "minSteps": 6,
+          "revealPath": [
+            "hot",
+            "hit",
+            "hid",
+            "aid",
+            "add",
+            "odd",
+            "old"
+          ],
+          "startFlavorText": "Neither cold nor this, as Revelation warns.",
+          "endFlavorText": "What the covenant given at Sinai came to be called.",
+          "theme": "Bible Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"hot\" into \"old\"."
+        },
+        {
+          "id": "wl-r004-law-sin",
+          "startWord": "law",
+          "endWord": "sin",
+          "wordLength": 3,
+          "minSteps": 4,
+          "revealPath": [
+            "law",
+            "lap",
+            "lip",
+            "sip",
+            "sin"
+          ],
+          "startFlavorText": "What Moses received on Mount Sinai.",
+          "endFlavorText": "What the law reveals in every heart.",
+          "theme": "Bible Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"law\" into \"sin\"."
+        },
+        {
+          "id": "wl-r005-hope-love",
+          "startWord": "hope",
+          "endWord": "love",
+          "wordLength": 4,
+          "minSteps": 3,
+          "revealPath": [
+            "hope",
+            "cope",
+            "cove",
+            "love"
+          ],
+          "startFlavorText": "One of the three things that abide, per 1 Corinthians 13.",
+          "endFlavorText": "The greatest of the three that abide.",
+          "theme": "Bible Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"hope\" into \"love\"."
+        },
+        {
+          "id": "wl-r006-rock-sand",
+          "startWord": "rock",
+          "endWord": "sand",
+          "wordLength": 4,
+          "minSteps": 4,
+          "revealPath": [
+            "rock",
+            "rack",
+            "rank",
+            "sank",
+            "sand"
+          ],
+          "startFlavorText": "What the wise man built his house upon.",
+          "endFlavorText": "What the foolish man built his house upon.",
+          "theme": "Bible Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"rock\" into \"sand\"."
+        }
+      ]
+    },
+    {
+      "id": "wl-session-02",
+      "title": "Word Ladder Deck 2",
+      "theme": "Word Ladder",
+      "rounds": [
+        {
+          "id": "wl-r007-cold-warm",
+          "startWord": "cold",
+          "endWord": "warm",
+          "wordLength": 4,
+          "minSteps": 4,
+          "revealPath": [
+            "cold",
+            "cord",
+            "card",
+            "ward",
+            "warm"
+          ],
+          "startFlavorText": "Neither this nor hot, as Revelation warns.",
+          "endFlavorText": "A comfort promised to those who trust God.",
+          "theme": "Bible Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"cold\" into \"warm\"."
+        },
+        {
+          "id": "wl-r008-wise-kind",
+          "startWord": "wise",
+          "endWord": "kind",
+          "wordLength": 4,
+          "minSteps": 3,
+          "revealPath": [
+            "wise",
+            "wine",
+            "wind",
+            "kind"
+          ],
+          "startFlavorText": "What Solomon asked God to make him.",
+          "endFlavorText": "A fruit of the Spirit, per Galatians 5.",
+          "theme": "Bible Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"wise\" into \"kind\"."
+        },
+        {
+          "id": "wl-r009-give-take",
+          "startWord": "give",
+          "endWord": "take",
+          "wordLength": 4,
+          "minSteps": 4,
+          "revealPath": [
+            "give",
+            "gave",
+            "cave",
+            "cake",
+            "take"
+          ],
+          "startFlavorText": "What Jesus said is more blessed than receiving.",
+          "endFlavorText": "What the thief on the cross had done in his life.",
+          "theme": "Bible Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"give\" into \"take\"."
+        },
+        {
+          "id": "wl-r010-pun-bog",
+          "startWord": "pun",
+          "endWord": "bog",
+          "wordLength": 3,
+          "minSteps": 3,
+          "revealPath": [
+            "pun",
+            "bun",
+            "bug",
+            "bog"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"pun\" into \"bog\"."
+        },
+        {
+          "id": "wl-r011-day-ski",
+          "startWord": "day",
+          "endWord": "ski",
+          "wordLength": 3,
+          "minSteps": 3,
+          "revealPath": [
+            "day",
+            "say",
+            "sky",
+            "ski"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"day\" into \"ski\"."
+        },
+        {
+          "id": "wl-r012-giant-blink",
+          "startWord": "giant",
+          "endWord": "blink",
+          "wordLength": 5,
+          "minSteps": 6,
+          "revealPath": [
+            "giant",
+            "grant",
+            "grand",
+            "brand",
+            "bland",
+            "blank",
+            "blink"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"giant\" into \"blink\"."
+        }
+      ]
+    },
+    {
+      "id": "wl-session-03",
+      "title": "Word Ladder Deck 3",
+      "theme": "Word Ladder",
+      "rounds": [
+        {
+          "id": "wl-r013-barn-rode",
+          "startWord": "barn",
+          "endWord": "rode",
+          "wordLength": 4,
+          "minSteps": 5,
+          "revealPath": [
+            "barn",
+            "bare",
+            "care",
+            "core",
+            "code",
+            "rode"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"barn\" into \"rode\"."
+        },
+        {
+          "id": "wl-r014-nap-pea",
+          "startWord": "nap",
+          "endWord": "pea",
+          "wordLength": 3,
+          "minSteps": 5,
+          "revealPath": [
+            "nap",
+            "cap",
+            "can",
+            "pan",
+            "pen",
+            "pea"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"nap\" into \"pea\"."
+        },
+        {
+          "id": "wl-r015-cod-tar",
+          "startWord": "cod",
+          "endWord": "tar",
+          "wordLength": 3,
+          "minSteps": 4,
+          "revealPath": [
+            "cod",
+            "cob",
+            "cab",
+            "car",
+            "tar"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"cod\" into \"tar\"."
+        },
+        {
+          "id": "wl-r016-vast-hose",
+          "startWord": "vast",
+          "endWord": "hose",
+          "wordLength": 4,
+          "minSteps": 4,
+          "revealPath": [
+            "vast",
+            "cast",
+            "cost",
+            "host",
+            "hose"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"vast\" into \"hose\"."
+        },
+        {
+          "id": "wl-r017-mint-want",
+          "startWord": "mint",
+          "endWord": "want",
+          "wordLength": 4,
+          "minSteps": 4,
+          "revealPath": [
+            "mint",
+            "mind",
+            "wind",
+            "wand",
+            "want"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"mint\" into \"want\"."
+        },
+        {
+          "id": "wl-r018-give-kick",
+          "startWord": "give",
+          "endWord": "kick",
+          "wordLength": 4,
+          "minSteps": 6,
+          "revealPath": [
+            "give",
+            "dive",
+            "dine",
+            "pine",
+            "pink",
+            "pick",
+            "kick"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"give\" into \"kick\"."
+        }
+      ]
+    },
+    {
+      "id": "wl-session-04",
+      "title": "Word Ladder Deck 4",
+      "theme": "Word Ladder",
+      "rounds": [
+        {
+          "id": "wl-r019-node-pear",
+          "startWord": "node",
+          "endWord": "pear",
+          "wordLength": 4,
+          "minSteps": 7,
+          "revealPath": [
+            "node",
+            "none",
+            "bone",
+            "bond",
+            "bend",
+            "bead",
+            "bear",
+            "pear"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"node\" into \"pear\"."
+        },
+        {
+          "id": "wl-r020-hay-aim",
+          "startWord": "hay",
+          "endWord": "aim",
+          "wordLength": 3,
+          "minSteps": 3,
+          "revealPath": [
+            "hay",
+            "ham",
+            "him",
+            "aim"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"hay\" into \"aim\"."
+        },
+        {
+          "id": "wl-r021-best-foot",
+          "startWord": "best",
+          "endWord": "foot",
+          "wordLength": 4,
+          "minSteps": 4,
+          "revealPath": [
+            "best",
+            "beat",
+            "boat",
+            "boot",
+            "foot"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"best\" into \"foot\"."
+        },
+        {
+          "id": "wl-r022-lost-carp",
+          "startWord": "lost",
+          "endWord": "carp",
+          "wordLength": 4,
+          "minSteps": 4,
+          "revealPath": [
+            "lost",
+            "cost",
+            "cast",
+            "cart",
+            "carp"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"lost\" into \"carp\"."
+        },
+        {
+          "id": "wl-r023-gas-mug",
+          "startWord": "gas",
+          "endWord": "mug",
+          "wordLength": 3,
+          "minSteps": 5,
+          "revealPath": [
+            "gas",
+            "was",
+            "wag",
+            "bag",
+            "bug",
+            "mug"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"gas\" into \"mug\"."
+        },
+        {
+          "id": "wl-r024-west-boat",
+          "startWord": "west",
+          "endWord": "boat",
+          "wordLength": 4,
+          "minSteps": 3,
+          "revealPath": [
+            "west",
+            "best",
+            "beat",
+            "boat"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"west\" into \"boat\"."
+        }
+      ]
+    },
+    {
+      "id": "wl-session-05",
+      "title": "Word Ladder Deck 5",
+      "theme": "Word Ladder",
+      "rounds": [
+        {
+          "id": "wl-r025-seed-fade",
+          "startWord": "seed",
+          "endWord": "fade",
+          "wordLength": 4,
+          "minSteps": 6,
+          "revealPath": [
+            "seed",
+            "send",
+            "sand",
+            "sane",
+            "same",
+            "fame",
+            "fade"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"seed\" into \"fade\"."
+        },
+        {
+          "id": "wl-r026-more-join",
+          "startWord": "more",
+          "endWord": "join",
+          "wordLength": 4,
+          "minSteps": 4,
+          "revealPath": [
+            "more",
+            "core",
+            "corn",
+            "coin",
+            "join"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"more\" into \"join\"."
+        },
+        {
+          "id": "wl-r027-log-old",
+          "startWord": "log",
+          "endWord": "old",
+          "wordLength": 3,
+          "minSteps": 7,
+          "revealPath": [
+            "log",
+            "bog",
+            "big",
+            "bid",
+            "aid",
+            "add",
+            "odd",
+            "old"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"log\" into \"old\"."
+        },
+        {
+          "id": "wl-r028-loan-heel",
+          "startWord": "loan",
+          "endWord": "heel",
+          "wordLength": 4,
+          "minSteps": 5,
+          "revealPath": [
+            "loan",
+            "lean",
+            "lead",
+            "head",
+            "heal",
+            "heel"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"loan\" into \"heel\"."
+        },
+        {
+          "id": "wl-r029-air-got",
+          "startWord": "air",
+          "endWord": "got",
+          "wordLength": 3,
+          "minSteps": 5,
+          "revealPath": [
+            "air",
+            "aid",
+            "hid",
+            "hit",
+            "hot",
+            "got"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"air\" into \"got\"."
+        },
+        {
+          "id": "wl-r030-hug-mat",
+          "startWord": "hug",
+          "endWord": "mat",
+          "wordLength": 3,
+          "minSteps": 3,
+          "revealPath": [
+            "hug",
+            "hut",
+            "hat",
+            "mat"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"hug\" into \"mat\"."
+        }
+      ]
+    },
+    {
+      "id": "wl-session-06",
+      "title": "Word Ladder Deck 6",
+      "theme": "Word Ladder",
+      "rounds": [
+        {
+          "id": "wl-r031-bit-bob",
+          "startWord": "bit",
+          "endWord": "bob",
+          "wordLength": 3,
+          "minSteps": 3,
+          "revealPath": [
+            "bit",
+            "big",
+            "bog",
+            "bob"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"bit\" into \"bob\"."
+        },
+        {
+          "id": "wl-r032-her-nor",
+          "startWord": "her",
+          "endWord": "nor",
+          "wordLength": 3,
+          "minSteps": 6,
+          "revealPath": [
+            "her",
+            "hen",
+            "den",
+            "dew",
+            "new",
+            "now",
+            "nor"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"her\" into \"nor\"."
+        },
+        {
+          "id": "wl-r033-week-goat",
+          "startWord": "week",
+          "endWord": "goat",
+          "wordLength": 4,
+          "minSteps": 6,
+          "revealPath": [
+            "week",
+            "weak",
+            "wear",
+            "bear",
+            "beat",
+            "boat",
+            "goat"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"week\" into \"goat\"."
+        },
+        {
+          "id": "wl-r034-home-wood",
+          "startWord": "home",
+          "endWord": "wood",
+          "wordLength": 4,
+          "minSteps": 4,
+          "revealPath": [
+            "home",
+            "hole",
+            "hold",
+            "hood",
+            "wood"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"home\" into \"wood\"."
+        },
+        {
+          "id": "wl-r035-and-guy",
+          "startWord": "and",
+          "endWord": "guy",
+          "wordLength": 3,
+          "minSteps": 5,
+          "revealPath": [
+            "and",
+            "aid",
+            "bid",
+            "bud",
+            "buy",
+            "guy"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"and\" into \"guy\"."
+        },
+        {
+          "id": "wl-r036-help-sock",
+          "startWord": "help",
+          "endWord": "sock",
+          "wordLength": 4,
+          "minSteps": 7,
+          "revealPath": [
+            "help",
+            "held",
+            "hold",
+            "hood",
+            "hook",
+            "look",
+            "lock",
+            "sock"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"help\" into \"sock\"."
+        }
+      ]
+    },
+    {
+      "id": "wl-session-07",
+      "title": "Word Ladder Deck 7",
+      "theme": "Word Ladder",
+      "rounds": [
+        {
+          "id": "wl-r037-fog-bun",
+          "startWord": "fog",
+          "endWord": "bun",
+          "wordLength": 3,
+          "minSteps": 3,
+          "revealPath": [
+            "fog",
+            "bog",
+            "bug",
+            "bun"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"fog\" into \"bun\"."
+        },
+        {
+          "id": "wl-r038-slum-wine",
+          "startWord": "slum",
+          "endWord": "wine",
+          "wordLength": 4,
+          "minSteps": 7,
+          "revealPath": [
+            "slum",
+            "slim",
+            "slid",
+            "said",
+            "sand",
+            "wand",
+            "wind",
+            "wine"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"slum\" into \"wine\"."
+        },
+        {
+          "id": "wl-r039-plate-while",
+          "startWord": "plate",
+          "endWord": "while",
+          "wordLength": 5,
+          "minSteps": 6,
+          "revealPath": [
+            "plate",
+            "slate",
+            "state",
+            "stale",
+            "shale",
+            "whale",
+            "while"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"plate\" into \"while\"."
+        },
+        {
+          "id": "wl-r040-art-hat",
+          "startWord": "art",
+          "endWord": "hat",
+          "wordLength": 3,
+          "minSteps": 5,
+          "revealPath": [
+            "art",
+            "arm",
+            "aim",
+            "him",
+            "ham",
+            "hat"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"art\" into \"hat\"."
+        },
+        {
+          "id": "wl-r041-reed-boot",
+          "startWord": "reed",
+          "endWord": "boot",
+          "wordLength": 4,
+          "minSteps": 5,
+          "revealPath": [
+            "reed",
+            "read",
+            "bead",
+            "beat",
+            "boat",
+            "boot"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"reed\" into \"boot\"."
+        },
+        {
+          "id": "wl-r042-six-tea",
+          "startWord": "six",
+          "endWord": "tea",
+          "wordLength": 3,
+          "minSteps": 4,
+          "revealPath": [
+            "six",
+            "sin",
+            "tin",
+            "ten",
+            "tea"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"six\" into \"tea\"."
+        }
+      ]
+    },
+    {
+      "id": "wl-session-08",
+      "title": "Word Ladder Deck 8",
+      "theme": "Word Ladder",
+      "rounds": [
+        {
+          "id": "wl-r043-pad-wag",
+          "startWord": "pad",
+          "endWord": "wag",
+          "wordLength": 3,
+          "minSteps": 3,
+          "revealPath": [
+            "pad",
+            "bad",
+            "bag",
+            "wag"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"pad\" into \"wag\"."
+        },
+        {
+          "id": "wl-r044-holy-coin",
+          "startWord": "holy",
+          "endWord": "coin",
+          "wordLength": 4,
+          "minSteps": 5,
+          "revealPath": [
+            "holy",
+            "hold",
+            "cold",
+            "cord",
+            "corn",
+            "coin"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"holy\" into \"coin\"."
+        },
+        {
+          "id": "wl-r045-loaf-lore",
+          "startWord": "loaf",
+          "endWord": "lore",
+          "wordLength": 4,
+          "minSteps": 3,
+          "revealPath": [
+            "loaf",
+            "load",
+            "lord",
+            "lore"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"loaf\" into \"lore\"."
+        },
+        {
+          "id": "wl-r046-hurl-tend",
+          "startWord": "hurl",
+          "endWord": "tend",
+          "wordLength": 4,
+          "minSteps": 7,
+          "revealPath": [
+            "hurl",
+            "hull",
+            "hell",
+            "heal",
+            "head",
+            "bead",
+            "bend",
+            "tend"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"hurl\" into \"tend\"."
+        },
+        {
+          "id": "wl-r047-joy-cod",
+          "startWord": "joy",
+          "endWord": "cod",
+          "wordLength": 3,
+          "minSteps": 3,
+          "revealPath": [
+            "joy",
+            "job",
+            "cob",
+            "cod"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"joy\" into \"cod\"."
+        },
+        {
+          "id": "wl-r048-sick-feed",
+          "startWord": "sick",
+          "endWord": "feed",
+          "wordLength": 4,
+          "minSteps": 6,
+          "revealPath": [
+            "sick",
+            "sink",
+            "sank",
+            "sand",
+            "send",
+            "seed",
+            "feed"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"sick\" into \"feed\"."
+        }
+      ]
+    },
+    {
+      "id": "wl-session-09",
+      "title": "Word Ladder Deck 9",
+      "theme": "Word Ladder",
+      "rounds": [
+        {
+          "id": "wl-r049-bee-hot",
+          "startWord": "bee",
+          "endWord": "hot",
+          "wordLength": 3,
+          "minSteps": 4,
+          "revealPath": [
+            "bee",
+            "beg",
+            "bog",
+            "hog",
+            "hot"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"bee\" into \"hot\"."
+        },
+        {
+          "id": "wl-r050-poem-kiss",
+          "startWord": "poem",
+          "endWord": "kiss",
+          "wordLength": 4,
+          "minSteps": 6,
+          "revealPath": [
+            "poem",
+            "poet",
+            "post",
+            "most",
+            "mist",
+            "miss",
+            "kiss"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"poem\" into \"kiss\"."
+        },
+        {
+          "id": "wl-r051-kit-tip",
+          "startWord": "kit",
+          "endWord": "tip",
+          "wordLength": 3,
+          "minSteps": 3,
+          "revealPath": [
+            "kit",
+            "hit",
+            "hip",
+            "tip"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"kit\" into \"tip\"."
+        },
+        {
+          "id": "wl-r052-spar-chat",
+          "startWord": "spar",
+          "endWord": "chat",
+          "wordLength": 4,
+          "minSteps": 8,
+          "revealPath": [
+            "spar",
+            "spur",
+            "sour",
+            "soul",
+            "soil",
+            "coil",
+            "coal",
+            "coat",
+            "chat"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"spar\" into \"chat\"."
+        },
+        {
+          "id": "wl-r053-code-tear",
+          "startWord": "code",
+          "endWord": "tear",
+          "wordLength": 4,
+          "minSteps": 8,
+          "revealPath": [
+            "code",
+            "come",
+            "home",
+            "hole",
+            "hold",
+            "held",
+            "head",
+            "hear",
+            "tear"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"code\" into \"tear\"."
+        },
+        {
+          "id": "wl-r054-vow-fan",
+          "startWord": "vow",
+          "endWord": "fan",
+          "wordLength": 3,
+          "minSteps": 4,
+          "revealPath": [
+            "vow",
+            "cow",
+            "con",
+            "can",
+            "fan"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"vow\" into \"fan\"."
+        }
+      ]
+    },
+    {
+      "id": "wl-session-10",
+      "title": "Word Ladder Deck 10",
+      "theme": "Word Ladder",
+      "rounds": [
+        {
+          "id": "wl-r055-fat-kid",
+          "startWord": "fat",
+          "endWord": "kid",
+          "wordLength": 3,
+          "minSteps": 3,
+          "revealPath": [
+            "fat",
+            "fit",
+            "kit",
+            "kid"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"fat\" into \"kid\"."
+        },
+        {
+          "id": "wl-r056-gift-easy",
+          "startWord": "gift",
+          "endWord": "easy",
+          "wordLength": 4,
+          "minSteps": 5,
+          "revealPath": [
+            "gift",
+            "lift",
+            "list",
+            "last",
+            "east",
+            "easy"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"gift\" into \"easy\"."
+        },
+        {
+          "id": "wl-r057-sty-mat",
+          "startWord": "sty",
+          "endWord": "mat",
+          "wordLength": 3,
+          "minSteps": 3,
+          "revealPath": [
+            "sty",
+            "say",
+            "may",
+            "mat"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"sty\" into \"mat\"."
+        },
+        {
+          "id": "wl-r058-spin-blot",
+          "startWord": "spin",
+          "endWord": "blot",
+          "wordLength": 4,
+          "minSteps": 4,
+          "revealPath": [
+            "spin",
+            "spit",
+            "spot",
+            "slot",
+            "blot"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"spin\" into \"blot\"."
+        },
+        {
+          "id": "wl-r059-vow-gem",
+          "startWord": "vow",
+          "endWord": "gem",
+          "wordLength": 3,
+          "minSteps": 5,
+          "revealPath": [
+            "vow",
+            "cow",
+            "cot",
+            "got",
+            "get",
+            "gem"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"vow\" into \"gem\"."
+        },
+        {
+          "id": "wl-r060-fun-lap",
+          "startWord": "fun",
+          "endWord": "lap",
+          "wordLength": 3,
+          "minSteps": 4,
+          "revealPath": [
+            "fun",
+            "fan",
+            "can",
+            "cap",
+            "lap"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"fun\" into \"lap\"."
+        }
+      ]
+    },
+    {
+      "id": "wl-session-11",
+      "title": "Word Ladder Deck 11",
+      "theme": "Word Ladder",
+      "rounds": [
+        {
+          "id": "wl-r061-bag-mod",
+          "startWord": "bag",
+          "endWord": "mod",
+          "wordLength": 3,
+          "minSteps": 3,
+          "revealPath": [
+            "bag",
+            "bad",
+            "mad",
+            "mod"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"bag\" into \"mod\"."
+        },
+        {
+          "id": "wl-r062-whip-plus",
+          "startWord": "whip",
+          "endWord": "plus",
+          "wordLength": 4,
+          "minSteps": 6,
+          "revealPath": [
+            "whip",
+            "ship",
+            "slip",
+            "slim",
+            "slum",
+            "plum",
+            "plus"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"whip\" into \"plus\"."
+        },
+        {
+          "id": "wl-r063-coal-call",
+          "startWord": "coal",
+          "endWord": "call",
+          "wordLength": 4,
+          "minSteps": 5,
+          "revealPath": [
+            "coal",
+            "cool",
+            "tool",
+            "toll",
+            "tall",
+            "call"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"coal\" into \"call\"."
+        },
+        {
+          "id": "wl-r064-sub-oar",
+          "startWord": "sub",
+          "endWord": "oar",
+          "wordLength": 3,
+          "minSteps": 4,
+          "revealPath": [
+            "sub",
+            "cub",
+            "cab",
+            "car",
+            "oar"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"sub\" into \"oar\"."
+        },
+        {
+          "id": "wl-r065-than-salt",
+          "startWord": "than",
+          "endWord": "salt",
+          "wordLength": 4,
+          "minSteps": 8,
+          "revealPath": [
+            "than",
+            "that",
+            "chat",
+            "coat",
+            "cost",
+            "cast",
+            "mast",
+            "malt",
+            "salt"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"than\" into \"salt\"."
+        },
+        {
+          "id": "wl-r066-them-leaf",
+          "startWord": "them",
+          "endWord": "leaf",
+          "wordLength": 4,
+          "minSteps": 8,
+          "revealPath": [
+            "them",
+            "then",
+            "teen",
+            "seen",
+            "seed",
+            "deed",
+            "dead",
+            "lead",
+            "leaf"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"them\" into \"leaf\"."
+        }
+      ]
+    },
+    {
+      "id": "wl-session-12",
+      "title": "Word Ladder Deck 12",
+      "theme": "Word Ladder",
+      "rounds": [
+        {
+          "id": "wl-r067-hip-net",
+          "startWord": "hip",
+          "endWord": "net",
+          "wordLength": 3,
+          "minSteps": 4,
+          "revealPath": [
+            "hip",
+            "hit",
+            "bit",
+            "bet",
+            "net"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"hip\" into \"net\"."
+        },
+        {
+          "id": "wl-r068-pick-milk",
+          "startWord": "pick",
+          "endWord": "milk",
+          "wordLength": 4,
+          "minSteps": 3,
+          "revealPath": [
+            "pick",
+            "sick",
+            "silk",
+            "milk"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"pick\" into \"milk\"."
+        },
+        {
+          "id": "wl-r069-tab-hid",
+          "startWord": "tab",
+          "endWord": "hid",
+          "wordLength": 3,
+          "minSteps": 4,
+          "revealPath": [
+            "tab",
+            "tap",
+            "tip",
+            "hip",
+            "hid"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"tab\" into \"hid\"."
+        },
+        {
+          "id": "wl-r070-pea-dug",
+          "startWord": "pea",
+          "endWord": "dug",
+          "wordLength": 3,
+          "minSteps": 5,
+          "revealPath": [
+            "pea",
+            "pen",
+            "den",
+            "din",
+            "dig",
+            "dug"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"pea\" into \"dug\"."
+        },
+        {
+          "id": "wl-r071-wit-fun",
+          "startWord": "wit",
+          "endWord": "fun",
+          "wordLength": 3,
+          "minSteps": 3,
+          "revealPath": [
+            "wit",
+            "fit",
+            "fin",
+            "fun"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"wit\" into \"fun\"."
+        },
+        {
+          "id": "wl-r072-dear-font",
+          "startWord": "dear",
+          "endWord": "font",
+          "wordLength": 4,
+          "minSteps": 6,
+          "revealPath": [
+            "dear",
+            "bear",
+            "bead",
+            "bend",
+            "bond",
+            "fond",
+            "font"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"dear\" into \"font\"."
+        }
+      ]
+    },
+    {
+      "id": "wl-session-13",
+      "title": "Word Ladder Deck 13",
+      "theme": "Word Ladder",
+      "rounds": [
+        {
+          "id": "wl-r073-mill-menu",
+          "startWord": "mill",
+          "endWord": "menu",
+          "wordLength": 4,
+          "minSteps": 4,
+          "revealPath": [
+            "mill",
+            "mild",
+            "mind",
+            "mend",
+            "menu"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"mill\" into \"menu\"."
+        },
+        {
+          "id": "wl-r074-item-goat",
+          "startWord": "item",
+          "endWord": "goat",
+          "wordLength": 4,
+          "minSteps": 7,
+          "revealPath": [
+            "item",
+            "stem",
+            "seem",
+            "seam",
+            "beam",
+            "beat",
+            "boat",
+            "goat"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"item\" into \"goat\"."
+        },
+        {
+          "id": "wl-r075-lung-thin",
+          "startWord": "lung",
+          "endWord": "thin",
+          "wordLength": 4,
+          "minSteps": 8,
+          "revealPath": [
+            "lung",
+            "long",
+            "lone",
+            "lore",
+            "core",
+            "corn",
+            "coin",
+            "chin",
+            "thin"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"lung\" into \"thin\"."
+        },
+        {
+          "id": "wl-r076-rib-bet",
+          "startWord": "rib",
+          "endWord": "bet",
+          "wordLength": 3,
+          "minSteps": 4,
+          "revealPath": [
+            "rib",
+            "rid",
+            "bid",
+            "bed",
+            "bet"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"rib\" into \"bet\"."
+        },
+        {
+          "id": "wl-r077-two-jog",
+          "startWord": "two",
+          "endWord": "jog",
+          "wordLength": 3,
+          "minSteps": 4,
+          "revealPath": [
+            "two",
+            "too",
+            "toy",
+            "joy",
+            "jog"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"two\" into \"jog\"."
+        },
+        {
+          "id": "wl-r078-rang-said",
+          "startWord": "rang",
+          "endWord": "said",
+          "wordLength": 4,
+          "minSteps": 3,
+          "revealPath": [
+            "rang",
+            "sang",
+            "sand",
+            "said"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"rang\" into \"said\"."
+        }
+      ]
+    },
+    {
+      "id": "wl-session-14",
+      "title": "Word Ladder Deck 14",
+      "theme": "Word Ladder",
+      "rounds": [
+        {
+          "id": "wl-r079-who-cab",
+          "startWord": "who",
+          "endWord": "cab",
+          "wordLength": 3,
+          "minSteps": 5,
+          "revealPath": [
+            "who",
+            "why",
+            "way",
+            "wan",
+            "can",
+            "cab"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"who\" into \"cab\"."
+        },
+        {
+          "id": "wl-r080-pump-mask",
+          "startWord": "pump",
+          "endWord": "mask",
+          "wordLength": 4,
+          "minSteps": 8,
+          "revealPath": [
+            "pump",
+            "lump",
+            "lamp",
+            "camp",
+            "came",
+            "care",
+            "mare",
+            "mark",
+            "mask"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"pump\" into \"mask\"."
+        },
+        {
+          "id": "wl-r081-dub-toy",
+          "startWord": "dub",
+          "endWord": "toy",
+          "wordLength": 3,
+          "minSteps": 4,
+          "revealPath": [
+            "dub",
+            "sub",
+            "sob",
+            "soy",
+            "toy"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"dub\" into \"toy\"."
+        },
+        {
+          "id": "wl-r082-haze-chip",
+          "startWord": "haze",
+          "endWord": "chip",
+          "wordLength": 4,
+          "minSteps": 7,
+          "revealPath": [
+            "haze",
+            "hare",
+            "care",
+            "core",
+            "corn",
+            "coin",
+            "chin",
+            "chip"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"haze\" into \"chip\"."
+        },
+        {
+          "id": "wl-r083-cart-wise",
+          "startWord": "cart",
+          "endWord": "wise",
+          "wordLength": 4,
+          "minSteps": 4,
+          "revealPath": [
+            "cart",
+            "care",
+            "ware",
+            "wire",
+            "wise"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"cart\" into \"wise\"."
+        },
+        {
+          "id": "wl-r084-yarn-type",
+          "startWord": "yarn",
+          "endWord": "type",
+          "wordLength": 4,
+          "minSteps": 6,
+          "revealPath": [
+            "yarn",
+            "barn",
+            "bare",
+            "bake",
+            "take",
+            "tape",
+            "type"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"yarn\" into \"type\"."
+        }
+      ]
+    },
+    {
+      "id": "wl-session-15",
+      "title": "Word Ladder Deck 15",
+      "theme": "Word Ladder",
+      "rounds": [
+        {
+          "id": "wl-r085-very-tide",
+          "startWord": "very",
+          "endWord": "tide",
+          "wordLength": 4,
+          "minSteps": 6,
+          "revealPath": [
+            "very",
+            "verb",
+            "herb",
+            "here",
+            "hire",
+            "hide",
+            "tide"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"very\" into \"tide\"."
+        },
+        {
+          "id": "wl-r086-good-harm",
+          "startWord": "good",
+          "endWord": "harm",
+          "wordLength": 4,
+          "minSteps": 5,
+          "revealPath": [
+            "good",
+            "food",
+            "ford",
+            "form",
+            "farm",
+            "harm"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"good\" into \"harm\"."
+        },
+        {
+          "id": "wl-r087-fin-old",
+          "startWord": "fin",
+          "endWord": "old",
+          "wordLength": 3,
+          "minSteps": 6,
+          "revealPath": [
+            "fin",
+            "bin",
+            "bid",
+            "aid",
+            "add",
+            "odd",
+            "old"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"fin\" into \"old\"."
+        },
+        {
+          "id": "wl-r088-soap-vice",
+          "startWord": "soap",
+          "endWord": "vice",
+          "wordLength": 4,
+          "minSteps": 7,
+          "revealPath": [
+            "soap",
+            "soak",
+            "sock",
+            "rock",
+            "rack",
+            "race",
+            "rice",
+            "vice"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"soap\" into \"vice\"."
+        },
+        {
+          "id": "wl-r089-cool-loft",
+          "startWord": "cool",
+          "endWord": "loft",
+          "wordLength": 4,
+          "minSteps": 5,
+          "revealPath": [
+            "cool",
+            "coal",
+            "coat",
+            "cost",
+            "lost",
+            "loft"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"cool\" into \"loft\"."
+        },
+        {
+          "id": "wl-r090-wolf-boom",
+          "startWord": "wolf",
+          "endWord": "boom",
+          "wordLength": 4,
+          "minSteps": 6,
+          "revealPath": [
+            "wolf",
+            "golf",
+            "gold",
+            "bold",
+            "bolt",
+            "boot",
+            "boom"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"wolf\" into \"boom\"."
+        }
+      ]
+    },
+    {
+      "id": "wl-session-16",
+      "title": "Word Ladder Deck 16",
+      "theme": "Word Ladder",
+      "rounds": [
+        {
+          "id": "wl-r091-dusk-road",
+          "startWord": "dusk",
+          "endWord": "road",
+          "wordLength": 4,
+          "minSteps": 8,
+          "revealPath": [
+            "dusk",
+            "dust",
+            "just",
+            "jest",
+            "best",
+            "beat",
+            "bead",
+            "read",
+            "road"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"dusk\" into \"road\"."
+        },
+        {
+          "id": "wl-r092-was-rid",
+          "startWord": "was",
+          "endWord": "rid",
+          "wordLength": 3,
+          "minSteps": 4,
+          "revealPath": [
+            "was",
+            "wag",
+            "rag",
+            "rig",
+            "rid"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"was\" into \"rid\"."
+        },
+        {
+          "id": "wl-r093-dew-jog",
+          "startWord": "dew",
+          "endWord": "jog",
+          "wordLength": 3,
+          "minSteps": 5,
+          "revealPath": [
+            "dew",
+            "den",
+            "din",
+            "dig",
+            "dog",
+            "jog"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"dew\" into \"jog\"."
+        },
+        {
+          "id": "wl-r094-tuna-lamb",
+          "startWord": "tuna",
+          "endWord": "lamb",
+          "wordLength": 4,
+          "minSteps": 7,
+          "revealPath": [
+            "tuna",
+            "tune",
+            "dune",
+            "dine",
+            "dime",
+            "lime",
+            "limb",
+            "lamb"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"tuna\" into \"lamb\"."
+        },
+        {
+          "id": "wl-r095-put-wok",
+          "startWord": "put",
+          "endWord": "wok",
+          "wordLength": 3,
+          "minSteps": 5,
+          "revealPath": [
+            "put",
+            "cut",
+            "cot",
+            "con",
+            "won",
+            "wok"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"put\" into \"wok\"."
+        },
+        {
+          "id": "wl-r096-god-ray",
+          "startWord": "god",
+          "endWord": "ray",
+          "wordLength": 3,
+          "minSteps": 4,
+          "revealPath": [
+            "god",
+            "got",
+            "rot",
+            "rat",
+            "ray"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"god\" into \"ray\"."
+        }
+      ]
+    },
+    {
+      "id": "wl-session-17",
+      "title": "Word Ladder Deck 17",
+      "theme": "Word Ladder",
+      "rounds": [
+        {
+          "id": "wl-r097-yak-kin",
+          "startWord": "yak",
+          "endWord": "kin",
+          "wordLength": 3,
+          "minSteps": 5,
+          "revealPath": [
+            "yak",
+            "yam",
+            "dam",
+            "dim",
+            "din",
+            "kin"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"yak\" into \"kin\"."
+        },
+        {
+          "id": "wl-r098-quiz-sour",
+          "startWord": "quiz",
+          "endWord": "sour",
+          "wordLength": 4,
+          "minSteps": 8,
+          "revealPath": [
+            "quiz",
+            "quit",
+            "suit",
+            "spit",
+            "spin",
+            "span",
+            "spar",
+            "spur",
+            "sour"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"quiz\" into \"sour\"."
+        },
+        {
+          "id": "wl-r099-jump-bake",
+          "startWord": "jump",
+          "endWord": "bake",
+          "wordLength": 4,
+          "minSteps": 6,
+          "revealPath": [
+            "jump",
+            "lump",
+            "lamp",
+            "camp",
+            "came",
+            "cake",
+            "bake"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"jump\" into \"bake\"."
+        },
+        {
+          "id": "wl-r100-act-kin",
+          "startWord": "act",
+          "endWord": "kin",
+          "wordLength": 3,
+          "minSteps": 5,
+          "revealPath": [
+            "act",
+            "ant",
+            "and",
+            "aid",
+            "kid",
+            "kin"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"act\" into \"kin\"."
+        },
+        {
+          "id": "wl-r101-rid-paw",
+          "startWord": "rid",
+          "endWord": "paw",
+          "wordLength": 3,
+          "minSteps": 4,
+          "revealPath": [
+            "rid",
+            "bid",
+            "bad",
+            "pad",
+            "paw"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"rid\" into \"paw\"."
+        },
+        {
+          "id": "wl-r102-tin-yap",
+          "startWord": "tin",
+          "endWord": "yap",
+          "wordLength": 3,
+          "minSteps": 3,
+          "revealPath": [
+            "tin",
+            "tan",
+            "tap",
+            "yap"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"tin\" into \"yap\"."
+        }
+      ]
+    },
+    {
+      "id": "wl-session-18",
+      "title": "Word Ladder Deck 18",
+      "theme": "Word Ladder",
+      "rounds": [
+        {
+          "id": "wl-r103-base-boss",
+          "startWord": "base",
+          "endWord": "boss",
+          "wordLength": 4,
+          "minSteps": 6,
+          "revealPath": [
+            "base",
+            "case",
+            "cast",
+            "cost",
+            "lost",
+            "loss",
+            "boss"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"base\" into \"boss\"."
+        },
+        {
+          "id": "wl-r104-late-zero",
+          "startWord": "late",
+          "endWord": "zero",
+          "wordLength": 4,
+          "minSteps": 5,
+          "revealPath": [
+            "late",
+            "hate",
+            "hare",
+            "here",
+            "hero",
+            "zero"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"late\" into \"zero\"."
+        },
+        {
+          "id": "wl-r105-loss-left",
+          "startWord": "loss",
+          "endWord": "left",
+          "wordLength": 4,
+          "minSteps": 3,
+          "revealPath": [
+            "loss",
+            "lost",
+            "loft",
+            "left"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"loss\" into \"left\"."
+        },
+        {
+          "id": "wl-r106-wax-rig",
+          "startWord": "wax",
+          "endWord": "rig",
+          "wordLength": 3,
+          "minSteps": 3,
+          "revealPath": [
+            "wax",
+            "wag",
+            "rag",
+            "rig"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"wax\" into \"rig\"."
+        },
+        {
+          "id": "wl-r107-ant-sir",
+          "startWord": "ant",
+          "endWord": "sir",
+          "wordLength": 3,
+          "minSteps": 4,
+          "revealPath": [
+            "ant",
+            "and",
+            "aid",
+            "air",
+            "sir"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"ant\" into \"sir\"."
+        },
+        {
+          "id": "wl-r108-tea-lad",
+          "startWord": "tea",
+          "endWord": "lad",
+          "wordLength": 3,
+          "minSteps": 5,
+          "revealPath": [
+            "tea",
+            "pea",
+            "pen",
+            "pan",
+            "pad",
+            "lad"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"tea\" into \"lad\"."
+        }
+      ]
+    },
+    {
+      "id": "wl-session-19",
+      "title": "Word Ladder Deck 19",
+      "theme": "Word Ladder",
+      "rounds": [
+        {
+          "id": "wl-r109-wait-main",
+          "startWord": "wait",
+          "endWord": "main",
+          "wordLength": 4,
+          "minSteps": 3,
+          "revealPath": [
+            "wait",
+            "wail",
+            "mail",
+            "main"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"wait\" into \"main\"."
+        },
+        {
+          "id": "wl-r110-toll-find",
+          "startWord": "toll",
+          "endWord": "find",
+          "wordLength": 4,
+          "minSteps": 4,
+          "revealPath": [
+            "toll",
+            "told",
+            "fold",
+            "fond",
+            "find"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"toll\" into \"find\"."
+        },
+        {
+          "id": "wl-r111-doe-for",
+          "startWord": "doe",
+          "endWord": "for",
+          "wordLength": 3,
+          "minSteps": 3,
+          "revealPath": [
+            "doe",
+            "dog",
+            "fog",
+            "for"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"doe\" into \"for\"."
+        },
+        {
+          "id": "wl-r112-save-tidy",
+          "startWord": "save",
+          "endWord": "tidy",
+          "wordLength": 4,
+          "minSteps": 5,
+          "revealPath": [
+            "save",
+            "have",
+            "hive",
+            "hide",
+            "tide",
+            "tidy"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"save\" into \"tidy\"."
+        },
+        {
+          "id": "wl-r113-term-skin",
+          "startWord": "term",
+          "endWord": "skin",
+          "wordLength": 4,
+          "minSteps": 7,
+          "revealPath": [
+            "term",
+            "team",
+            "seam",
+            "slam",
+            "slap",
+            "slip",
+            "skip",
+            "skin"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"term\" into \"skin\"."
+        },
+        {
+          "id": "wl-r114-rich-real",
+          "startWord": "rich",
+          "endWord": "real",
+          "wordLength": 4,
+          "minSteps": 8,
+          "revealPath": [
+            "rich",
+            "rice",
+            "mice",
+            "mile",
+            "mill",
+            "hill",
+            "hell",
+            "heal",
+            "real"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"rich\" into \"real\"."
+        }
+      ]
+    },
+    {
+      "id": "wl-session-20",
+      "title": "Word Ladder Deck 20",
+      "theme": "Word Ladder",
+      "rounds": [
+        {
+          "id": "wl-r115-and-beg",
+          "startWord": "and",
+          "endWord": "beg",
+          "wordLength": 3,
+          "minSteps": 4,
+          "revealPath": [
+            "and",
+            "aid",
+            "bid",
+            "bed",
+            "beg"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"and\" into \"beg\"."
+        },
+        {
+          "id": "wl-r116-harp-dive",
+          "startWord": "harp",
+          "endWord": "dive",
+          "wordLength": 4,
+          "minSteps": 4,
+          "revealPath": [
+            "harp",
+            "hare",
+            "have",
+            "hive",
+            "dive"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"harp\" into \"dive\"."
+        },
+        {
+          "id": "wl-r117-map-cod",
+          "startWord": "map",
+          "endWord": "cod",
+          "wordLength": 3,
+          "minSteps": 3,
+          "revealPath": [
+            "map",
+            "cap",
+            "cop",
+            "cod"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"map\" into \"cod\"."
+        },
+        {
+          "id": "wl-r118-hay-bud",
+          "startWord": "hay",
+          "endWord": "bud",
+          "wordLength": 3,
+          "minSteps": 3,
+          "revealPath": [
+            "hay",
+            "bay",
+            "bad",
+            "bud"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"hay\" into \"bud\"."
+        },
+        {
+          "id": "wl-r119-seek-knit",
+          "startWord": "seek",
+          "endWord": "knit",
+          "wordLength": 4,
+          "minSteps": 8,
+          "revealPath": [
+            "seek",
+            "seem",
+            "stem",
+            "stew",
+            "stow",
+            "snow",
+            "know",
+            "knot",
+            "knit"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"seek\" into \"knit\"."
+        },
+        {
+          "id": "wl-r120-and-yam",
+          "startWord": "and",
+          "endWord": "yam",
+          "wordLength": 3,
+          "minSteps": 5,
+          "revealPath": [
+            "and",
+            "aid",
+            "aim",
+            "dim",
+            "dam",
+            "yam"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"and\" into \"yam\"."
+        }
+      ]
+    },
+    {
+      "id": "wl-session-21",
+      "title": "Word Ladder Deck 21",
+      "theme": "Word Ladder",
+      "rounds": [
+        {
+          "id": "wl-r121-dark-fail",
+          "startWord": "dark",
+          "endWord": "fail",
+          "wordLength": 4,
+          "minSteps": 6,
+          "revealPath": [
+            "dark",
+            "dare",
+            "dale",
+            "male",
+            "mall",
+            "fall",
+            "fail"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"dark\" into \"fail\"."
+        },
+        {
+          "id": "wl-r122-jog-bid",
+          "startWord": "jog",
+          "endWord": "bid",
+          "wordLength": 3,
+          "minSteps": 3,
+          "revealPath": [
+            "jog",
+            "bog",
+            "big",
+            "bid"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"jog\" into \"bid\"."
+        },
+        {
+          "id": "wl-r123-rot-dug",
+          "startWord": "rot",
+          "endWord": "dug",
+          "wordLength": 3,
+          "minSteps": 3,
+          "revealPath": [
+            "rot",
+            "dot",
+            "dog",
+            "dug"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"rot\" into \"dug\"."
+        },
+        {
+          "id": "wl-r124-sap-fig",
+          "startWord": "sap",
+          "endWord": "fig",
+          "wordLength": 3,
+          "minSteps": 4,
+          "revealPath": [
+            "sap",
+            "rap",
+            "rag",
+            "rig",
+            "fig"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"sap\" into \"fig\"."
+        },
+        {
+          "id": "wl-r125-paw-wig",
+          "startWord": "paw",
+          "endWord": "wig",
+          "wordLength": 3,
+          "minSteps": 4,
+          "revealPath": [
+            "paw",
+            "law",
+            "lag",
+            "wag",
+            "wig"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"paw\" into \"wig\"."
+        },
+        {
+          "id": "wl-r126-six-buy",
+          "startWord": "six",
+          "endWord": "buy",
+          "wordLength": 3,
+          "minSteps": 4,
+          "revealPath": [
+            "six",
+            "sin",
+            "bin",
+            "bun",
+            "buy"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"six\" into \"buy\"."
+        }
+      ]
+    },
+    {
+      "id": "wl-session-22",
+      "title": "Word Ladder Deck 22",
+      "theme": "Word Ladder",
+      "rounds": [
+        {
+          "id": "wl-r127-tune-film",
+          "startWord": "tune",
+          "endWord": "film",
+          "wordLength": 4,
+          "minSteps": 5,
+          "revealPath": [
+            "tune",
+            "dune",
+            "dine",
+            "fine",
+            "file",
+            "film"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"tune\" into \"film\"."
+        },
+        {
+          "id": "wl-r128-mum-big",
+          "startWord": "mum",
+          "endWord": "big",
+          "wordLength": 3,
+          "minSteps": 3,
+          "revealPath": [
+            "mum",
+            "mug",
+            "bug",
+            "big"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"mum\" into \"big\"."
+        },
+        {
+          "id": "wl-r129-den-law",
+          "startWord": "den",
+          "endWord": "law",
+          "wordLength": 3,
+          "minSteps": 4,
+          "revealPath": [
+            "den",
+            "dew",
+            "pew",
+            "paw",
+            "law"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"den\" into \"law\"."
+        },
+        {
+          "id": "wl-r130-art-bow",
+          "startWord": "art",
+          "endWord": "bow",
+          "wordLength": 3,
+          "minSteps": 7,
+          "revealPath": [
+            "art",
+            "ant",
+            "and",
+            "aid",
+            "bid",
+            "big",
+            "bog",
+            "bow"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"art\" into \"bow\"."
+        },
+        {
+          "id": "wl-r131-war-doe",
+          "startWord": "war",
+          "endWord": "doe",
+          "wordLength": 3,
+          "minSteps": 4,
+          "revealPath": [
+            "war",
+            "wan",
+            "won",
+            "woe",
+            "doe"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"war\" into \"doe\"."
+        },
+        {
+          "id": "wl-r132-gym-bin",
+          "startWord": "gym",
+          "endWord": "bin",
+          "wordLength": 3,
+          "minSteps": 4,
+          "revealPath": [
+            "gym",
+            "gum",
+            "gun",
+            "bun",
+            "bin"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"gym\" into \"bin\"."
+        }
+      ]
+    },
+    {
+      "id": "wl-session-23",
+      "title": "Word Ladder Deck 23",
+      "theme": "Word Ladder",
+      "rounds": [
+        {
+          "id": "wl-r133-son-sap",
+          "startWord": "son",
+          "endWord": "sap",
+          "wordLength": 3,
+          "minSteps": 3,
+          "revealPath": [
+            "son",
+            "sin",
+            "sip",
+            "sap"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"son\" into \"sap\"."
+        },
+        {
+          "id": "wl-r134-dump-vase",
+          "startWord": "dump",
+          "endWord": "vase",
+          "wordLength": 4,
+          "minSteps": 6,
+          "revealPath": [
+            "dump",
+            "lump",
+            "lamp",
+            "camp",
+            "came",
+            "case",
+            "vase"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"dump\" into \"vase\"."
+        },
+        {
+          "id": "wl-r135-hat-jug",
+          "startWord": "hat",
+          "endWord": "jug",
+          "wordLength": 3,
+          "minSteps": 3,
+          "revealPath": [
+            "hat",
+            "hut",
+            "hug",
+            "jug"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"hat\" into \"jug\"."
+        },
+        {
+          "id": "wl-r136-dam-pin",
+          "startWord": "dam",
+          "endWord": "pin",
+          "wordLength": 3,
+          "minSteps": 3,
+          "revealPath": [
+            "dam",
+            "dim",
+            "din",
+            "pin"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"dam\" into \"pin\"."
+        },
+        {
+          "id": "wl-r137-rot-war",
+          "startWord": "rot",
+          "endWord": "war",
+          "wordLength": 3,
+          "minSteps": 4,
+          "revealPath": [
+            "rot",
+            "cot",
+            "cat",
+            "car",
+            "war"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"rot\" into \"war\"."
+        },
+        {
+          "id": "wl-r138-wed-bog",
+          "startWord": "wed",
+          "endWord": "bog",
+          "wordLength": 3,
+          "minSteps": 3,
+          "revealPath": [
+            "wed",
+            "bed",
+            "beg",
+            "bog"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"wed\" into \"bog\"."
+        }
+      ]
+    },
+    {
+      "id": "wl-session-24",
+      "title": "Word Ladder Deck 24",
+      "theme": "Word Ladder",
+      "rounds": [
+        {
+          "id": "wl-r139-king-mint",
+          "startWord": "king",
+          "endWord": "mint",
+          "wordLength": 4,
+          "minSteps": 3,
+          "revealPath": [
+            "king",
+            "kind",
+            "mind",
+            "mint"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"king\" into \"mint\"."
+        },
+        {
+          "id": "wl-r140-shade-swell",
+          "startWord": "shade",
+          "endWord": "swell",
+          "wordLength": 5,
+          "minSteps": 4,
+          "revealPath": [
+            "shade",
+            "shale",
+            "shall",
+            "shell",
+            "swell"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"shade\" into \"swell\"."
+        },
+        {
+          "id": "wl-r141-stub-boar",
+          "startWord": "stub",
+          "endWord": "boar",
+          "wordLength": 4,
+          "minSteps": 7,
+          "revealPath": [
+            "stub",
+            "stab",
+            "slab",
+            "slam",
+            "seam",
+            "beam",
+            "bear",
+            "boar"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"stub\" into \"boar\"."
+        },
+        {
+          "id": "wl-r142-tend-firm",
+          "startWord": "tend",
+          "endWord": "firm",
+          "wordLength": 4,
+          "minSteps": 6,
+          "revealPath": [
+            "tend",
+            "bend",
+            "bind",
+            "find",
+            "fine",
+            "fire",
+            "firm"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"tend\" into \"firm\"."
+        },
+        {
+          "id": "wl-r143-sect-stud",
+          "startWord": "sect",
+          "endWord": "stud",
+          "wordLength": 4,
+          "minSteps": 7,
+          "revealPath": [
+            "sect",
+            "seat",
+            "seam",
+            "slam",
+            "slab",
+            "stab",
+            "stub",
+            "stud"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"sect\" into \"stud\"."
+        },
+        {
+          "id": "wl-r144-pat-fun",
+          "startWord": "pat",
+          "endWord": "fun",
+          "wordLength": 3,
+          "minSteps": 3,
+          "revealPath": [
+            "pat",
+            "fat",
+            "fan",
+            "fun"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"pat\" into \"fun\"."
+        }
+      ]
+    },
+    {
+      "id": "wl-session-25",
+      "title": "Word Ladder Deck 25",
+      "theme": "Word Ladder",
+      "rounds": [
+        {
+          "id": "wl-r145-folk-keen",
+          "startWord": "folk",
+          "endWord": "keen",
+          "wordLength": 4,
+          "minSteps": 8,
+          "revealPath": [
+            "folk",
+            "fold",
+            "bold",
+            "bond",
+            "bend",
+            "send",
+            "seed",
+            "seen",
+            "keen"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"folk\" into \"keen\"."
+        },
+        {
+          "id": "wl-r146-win-gas",
+          "startWord": "win",
+          "endWord": "gas",
+          "wordLength": 3,
+          "minSteps": 3,
+          "revealPath": [
+            "win",
+            "wan",
+            "was",
+            "gas"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"win\" into \"gas\"."
+        },
+        {
+          "id": "wl-r147-cob-ban",
+          "startWord": "cob",
+          "endWord": "ban",
+          "wordLength": 3,
+          "minSteps": 3,
+          "revealPath": [
+            "cob",
+            "cab",
+            "can",
+            "ban"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "easy",
+          "teachingNote": "Change one letter at a time to turn \"cob\" into \"ban\"."
+        },
+        {
+          "id": "wl-r148-word-polo",
+          "startWord": "word",
+          "endWord": "polo",
+          "wordLength": 4,
+          "minSteps": 6,
+          "revealPath": [
+            "word",
+            "cord",
+            "cold",
+            "hold",
+            "hole",
+            "pole",
+            "polo"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"word\" into \"polo\"."
+        },
+        {
+          "id": "wl-r149-two-kin",
+          "startWord": "two",
+          "endWord": "kin",
+          "wordLength": 3,
+          "minSteps": 4,
+          "revealPath": [
+            "two",
+            "too",
+            "ton",
+            "tin",
+            "kin"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "medium",
+          "teachingNote": "Change one letter at a time to turn \"two\" into \"kin\"."
+        },
+        {
+          "id": "wl-r150-stew-grey",
+          "startWord": "stew",
+          "endWord": "grey",
+          "wordLength": 4,
+          "minSteps": 6,
+          "revealPath": [
+            "stew",
+            "stow",
+            "slow",
+            "glow",
+            "grow",
+            "grew",
+            "grey"
+          ],
+          "startFlavorText": "A starting word for this ladder.",
+          "endFlavorText": "The target word for this ladder.",
+          "theme": "Word Ladder",
+          "difficulty": "hard",
+          "teachingNote": "Change one letter at a time to turn \"stew\" into \"grey\"."
+        }
+      ]
+    }
+  ]
+}

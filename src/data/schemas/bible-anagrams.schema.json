@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/bible-anagrams.schema.json",
+  "title": "Bible Anagrams Pack",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "game",
+    "version",
+    "displayName",
+    "roundsPerSession",
+    "sessions"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "game": {
+      "const": "bible-anagrams"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "displayName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "roundsPerSession": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "sessions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/session"
+      }
+    }
+  },
+  "$defs": {
+    "session": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "theme",
+        "rounds"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "theme": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rounds": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/round"
+          }
+        }
+      }
+    },
+    "round": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "answer",
+        "category",
+        "clue",
+        "theme",
+        "difficulty",
+        "teachingNote"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "answer": {
+          "type": "string",
+          "pattern": "^[A-Za-z]+( [A-Za-z]+)*$"
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "Person",
+            "Place",
+            "Thing",
+            "Event"
+          ]
+        },
+        "clue": {
+          "type": "string",
+          "minLength": 1
+        },
+        "theme": {
+          "type": "string",
+          "minLength": 1
+        },
+        "difficulty": {
+          "type": "string",
+          "enum": [
+            "easy",
+            "medium",
+            "hard"
+          ]
+        },
+        "teachingNote": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

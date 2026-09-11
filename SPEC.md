@@ -2,11 +2,13 @@
 
 ## 1. Scope
 
-This repository defines content and rules for three hosted party games:
+This repository defines content and rules for the hosted party games shipped in the desktop app. Three original board/turn games have a full functional specification in this document:
 
 1. `Five Clues`
 2. `Bible Initials`
 3. `Verse Reveal`
+
+The app has since grown to 28 games total. The other 25 are specified at reference depth only, in [Section 9](#9-additional-games-reference), rather than with full state-machine and tie-breaker detail — see that section for why, and for where their authoritative behavior actually lives (`GAME_LIBRARY` and the round-creation/action functions in `src/lib/gameEngine.ts`).
 
 The repository is intentionally content-driven. New sessions should be added by extending JSON files under `src/data/` without changing TypeScript.
 
@@ -438,3 +440,59 @@ Example local licensed shape:
 - Adding new sessions should not require changing union types or switch statements.
 - Scoring helpers in `src/lib/scoring.ts` should remain pure functions.
 - Application code that consumes these files should fail fast on invalid content rather than silently skipping broken rounds.
+
+## 9. Additional Games (Reference)
+
+Sections 3–5 above are full functional specifications written before the app grew past its original three games. They cover round state transitions, scoring formulas, and tie-breakers in detail, and that detail is verified against the runtime.
+
+The 19 games below were added later. This section documents them at reference depth only — display copy, file locations, and JSON round shape — rather than duplicating full state-machine and scoring specs for each one. Two reasons:
+
+- Their real behavior (turn order, scoring, steal/reveal rules) lives in `src/lib/gameEngine.ts`, in the `GAME_LIBRARY` table and each game's `create*Prompt` / `submit*` / `pass*` functions. Restating that logic here in prose would create a second copy that can drift from the code.
+- Unlike Sections 3–5, this section is not meant to be an independent authoring contract; treat `gameEngine.ts` and the matching schema under `src/data/schemas/` as authoritative, and this table as a map to find them.
+
+Every game listed here follows the same content rules as Sections 2 and 6: JSON lives under `src/data/<game-id>.json`, its schema lives under `src/data/schemas/<game-id>.schema.json`, sessions/rounds need unique ids, required text fields may not be empty, and `npm run check:data` validates all of it. Each round also carries `difficulty` and `teachingNote` fields not present in the original three games' rounds.
+
+| Game ID | Label | Summary | Rounds per game | Round JSON fields (beyond `id`) |
+|---|---|---|---|---|
+| `bible-timeline` | Bible Timeline | Arrange Bible events in chronological order before submitting the full timeline. A full correct order scores 10 points. | 5 | `prompt`, `events`, `difficulty`, `teachingNote` |
+| `verse-scramble` | Verse Scramble | Rebuild a short KJV verse from scrambled word tiles. | 5 | `reference`, `referenceAliases`, `sourceTranslation`, `theme`, `verseText`, `difficulty`, `teachingNote` |
+| `bible-connections` | Bible Connections | Find four connected sets of four Bible terms from a shuffled sixteen-tile board. Each correct group scores 5 points. | 3 | `title`, `groups`, `difficulty`, `teachingNote` |
+| `name-that-book` | Name That Book | Guess the Bible book from a five-clue ladder with one-point steal attempts. Earlier clues score more points. | 10 | `book`, `testament`, `category`, `aliases`, `clues`, `difficulty`, `teachingNote` |
+| `before-or-after` | Before Or After | Choose which of two Bible events happened first. Each correct answer scores 3 points. | 15 | `leftEvent`, `rightEvent`, `earlierEvent`, `explanation`, `theme`, `difficulty`, `teachingNote` |
+| `reference-rush` | Reference Rush | Read a KJV verse and name its scripture reference before the round moves on. A correct reference scores 5 points. | 10 | `reference`, `referenceAliases`, `sourceTranslation`, `theme`, `verseText`, `difficulty`, `teachingNote` |
+| `chapter-finder` | Chapter Finder | Identify the Bible book and chapter for a prompt, event, quote, person, or theme. A correct answer scores 5 points. | 10 | `prompt`, `answerBook`, `answerChapter`, `aliases`, `theme`, `clue`, `difficulty`, `teachingNote` |
+| `who-said-it` | Who Said It? | Identify the speaker of a recognizable KJV Bible quote or statement. A correct speaker scores 5 points. | 10 | `quote`, `speaker`, `speakerAliases`, `reference`, `context`, `sourceTranslation`, `theme`, `difficulty`, `teachingNote` |
+| `bible-books-relay` | Bible Books Relay | Arrange shuffled Bible book tiles into canonical order. A perfect order scores 10 points. | 5 | `title`, `section`, `books`, `difficulty`, `teachingNote` |
+| `missing-word` | Missing Word | Fill in one to three missing words from a KJV verse. More missing words score more points. | 10 | `reference`, `sourceTranslation`, `theme`, `verseText`, `missingWords`, `acceptedAnswers`, `difficulty`, `teachingNote` |
+| `prophecy-match` | Prophecy Match Challenge | Match Old Testament prophecy cards with New Testament fulfillment cards. | 5 pairs | `title`, `theme`, `prophecyReference`, `prophecySummary`, `prophecyTextShort`, `fulfillmentReference`, `fulfillmentSummary`, `fulfillmentTextShort`, `answerKey`, `difficulty`, `teachingNote` |
+| `messiah-prophecy` | Messiah Prophecy Challenge | Identify the messianic fulfillment, event, person, or theme tied to a prophecy. Wrong choices disappear and scoring steps down. | 10 | `title`, `theme`, `prophecyReference`, `prophecyTextShort`, `prompt`, `correctAnswer`, `choices`, `fulfillmentReference`, `fulfillmentSummary`, `difficulty`, `teachingNote` |
+| `prophecy-clue-ladder` | Prophecy Clue Ladder | Name the prophecy theme, reference, fulfillment, person, or event from five clues. Each miss or timer expiry reveals the next clue. | 10 | `title`, `theme`, `answer`, `acceptedAnswers`, `reference`, `fulfillmentReference`, `clues`, `difficulty`, `teachingNote` |
+| `fulfillment-finder` | Fulfillment Finder Challenge | Choose the Old Testament prophecy connected to a New Testament fulfillment. Wrong prophecy references are disabled. | 10 | `title`, `theme`, `fulfillmentReference`, `fulfillmentSummary`, `fulfillmentText`, `prompt`, `correctProphecyReference`, `correctProphecySummary`, `choices`, `difficulty`, `teachingNote` |
+| `prophecy-categories` | Prophecy Categories Challenge | Sort prophecy cards into five reference-based categories. One fifteen-card sorting board per game. | 1 board | `title`, `theme`, `categories`, `cards`, `difficulty`, `teachingNote` |
+| `complete-the-verse` | Complete the Verse Challenge | Complete a well-known KJV verse from Psalms or Proverbs from four endings. Wrong endings disappear and scoring steps down. | 10 | `title`, `book`, `reference`, `verseStart`, `correctEnding`, `choices`, `theme`, `difficulty`, `teachingNote` |
+| `wisdom-match` | Wisdom Match Challenge | Match a Proverbs excerpt to its wisdom theme. Wrong themes disappear and scoring steps down. | 10 | `title`, `reference`, `verseTextShort`, `correctTheme`, `choices`, `difficulty`, `teachingNote` |
+| `psalm-theme` | Psalm Theme Challenge | Identify the major theme of a short Psalm excerpt. Wrong themes disappear and scoring steps down. | 10 | `title`, `reference`, `excerpt`, `correctTheme`, `choices`, `difficulty`, `teachingNote` |
+| `proverb-categories` | Proverb Categories Challenge | Sort Proverbs cards into five wisdom categories. One sorting board per game. | 1 board | `title`, `theme`, `categories`, `cards`, `difficulty`, `teachingNote` |
+| `psalm-reference-finder` | Psalm Reference Finder | Choose the correct Psalm reference for a familiar KJV phrase. Wrong references disappear and scoring steps down. | 10 | `title`, `excerpt`, `correctReference`, `choices`, `theme`, `difficulty`, `teachingNote` |
+| `two-truths-and-a-lie` | Two Truths and a Lie | Spot the false statement among three about a Bible figure or event. Wrong picks disappear and scoring steps down. | 10 | `subject`, `subjectType`, `statements`, `lieIndex`, `explanation`, `reference`, `theme`, `difficulty`, `teachingNote` |
+| `relay-verse-build` | Relay Verse Build | Take turns typing one word at a time to rebuild a hidden KJV verse. A miss keeps the same player guessing; Skip Word reveals that word and passes the turn. | 5 | `reference`, `sourceTranslation`, `theme`, `verseText`, `difficulty`, `teachingNote` |
+| `first-letter-recall` | First Letter Recall | Recall a full KJV verse from its first-letter scaffold, typed in one attempt. Score is proportional to words recalled correctly. | 10 | `reference`, `sourceTranslation`, `theme`, `verseText`, `difficulty`, `teachingNote` |
+| `verse-typing-race` | Verse Typing Race | Type a short KJV verse as fast and accurately as you can. Score is based on words-per-minute and accuracy. | 5 | `reference`, `sourceTranslation`, `theme`, `verseText`, `difficulty`, `teachingNote` |
+| `word-ladder` | Word Ladder | Change one letter at a time to turn the start word into the end word, taking turns submitting the next valid word. Any dictionary-valid path counts, not just one authored solution. | 6 | `startWord`, `endWord`, `wordLength`, `minSteps`, `revealPath`, `startFlavorText`, `endFlavorText`, `theme`, `difficulty`, `teachingNote` |
+| `bible-anagrams` | Bible Anagrams | Unscramble letter tiles to name a Bible person, place, thing, or event. Easy/medium rounds show a clue; hard rounds do not. | 10 | `answer`, `category`, `clue`, `theme`, `difficulty`, `teachingNote` |
+
+Notes:
+
+- "Rounds per game" reflects the random-selection count the desktop app draws from the full content pool at runtime (see the `*_ROUNDS_PER_GAME` / `*_PER_GAME` constants in `gameEngine.ts`), the same way Section 1 describes for the original three games — it is not a constraint on how many rounds a content file may contain.
+- Current starter-session counts vary by file: `prophecy-match`, `messiah-prophecy`, `prophecy-clue-ladder`, and `fulfillment-finder` ship 5 sessions each; `name-that-book` ships 7; `complete-the-verse`, `wisdom-match`, `psalm-theme`, `proverb-categories`, and `psalm-reference-finder` ship 1 each; `two-truths-and-a-lie` ships 8; `bible-anagrams` ships 11; `word-ladder` ships 25; `first-letter-recall` ships 59; `verse-typing-race` ships 74; `relay-verse-build` ships 119; every other game in this table ships 25. These counts will change as content is authored — treat them as a snapshot, not a constraint.
+- Import support for custom content packs (Section "Manual Content Authoring" workflows) currently covers `five-guesses`, `initials`, `scripture-puzzles`, `complete-the-verse`, `wisdom-match`, and `psalm-reference-finder` — see `SUPPORTED_CUSTOM_GAME_IDS` in `src/lib/content.ts`. The remaining games in this table are not yet importable as custom content.
+
+### Word Ladder's dictionary asset
+
+Unlike every other game, `word-ladder` depends on a second, non-round-pack content file: `src/data/word-ladder-dictionary.json` (schema: `src/data/schemas/word-ladder-dictionary.schema.json`) — a flat, curated list of common English words (3-7 letters) used to live-validate player-typed chain steps. It is loaded via a dedicated one-off loader (`loadWordLadderDictionary` in `src/lib/content.ts`), not through the `PACK_LOADER_ENTRIES`/`ContentPackByGame` machinery every other game uses, since it isn't shaped like a `GameId` round pack. `submitWordLadderStep` is also the one action function in `gameEngine.ts` that takes an extra parameter (the loaded dictionary) beyond `(state, ...)`, because the dictionary is too large to embed in `SessionState` (which must stay cloneable via `structuredClone`).
+
+Each `word-ladder` round also carries a `revealPath` field — one valid, BFS-verified shortest path from `startWord` to `endWord`, computed once at content-generation time (`scripts/generate-word-ladder-data.mjs`) and shown only if a round is abandoned after too many misses. It is never used to validate player guesses; any dictionary-valid one-letter-at-a-time path counts as correct.
+
+### Content generation scripts
+
+Starter content for `two-truths-and-a-lie`, `relay-verse-build`, `first-letter-recall`, `verse-typing-race`, `word-ladder`, and the Word Ladder dictionary is produced by dedicated Node scripts under `scripts/` (`generate-two-truths-data.mjs`, `generate-relay-verse-build-data.mjs`, `generate-first-letter-recall-data.mjs`, `generate-verse-typing-race-data.mjs`, `generate-word-ladder-data.mjs`, `generate-word-ladder-dictionary.mjs`), following the same pattern as `scripts/generate-prophecy-games.mjs`. Notably, the three verse-based games draw their verse text from `scripts/shared-verse-pool.mjs`, which harvests already-shipped, already-validated KJV verses out of `scripture-puzzles.json`/`missing-word.json`/`reference-rush.json`/`verse-scramble.json` (deduplicated by reference) rather than re-transcribing verse text — this avoids introducing new transcription-accuracy risk for a scripture app. Re-run the relevant generator script and `npm run check:data` after editing any of these games' source lists.

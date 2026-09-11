@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/two-truths-and-a-lie.schema.json",
+  "title": "Two Truths And A Lie Pack",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "game",
+    "version",
+    "displayName",
+    "roundsPerSession",
+    "sessions"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "game": {
+      "const": "two-truths-and-a-lie"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "displayName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "roundsPerSession": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "sessions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/session"
+      }
+    }
+  },
+  "$defs": {
+    "session": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "theme",
+        "rounds"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "theme": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rounds": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/round"
+          }
+        }
+      }
+    },
+    "round": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "subject",
+        "subjectType",
+        "statements",
+        "lieIndex",
+        "explanation",
+        "reference",
+        "theme",
+        "difficulty",
+        "teachingNote"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "subject": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subjectType": {
+          "type": "string",
+          "enum": [
+            "person",
+            "event"
+          ]
+        },
+        "statements": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "lieIndex": {
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2
+          ]
+        },
+        "explanation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reference": {
+          "type": "string",
+          "minLength": 1
+        },
+        "theme": {
+          "type": "string",
+          "minLength": 1
+        },
+        "difficulty": {
+          "type": "string",
+          "enum": [
+            "easy",
+            "medium",
+            "hard"
+          ]
+        },
+        "teachingNote": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

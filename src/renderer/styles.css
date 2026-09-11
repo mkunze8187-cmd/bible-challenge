@@ -2381,6 +2381,28 @@ textarea {
   text-decoration: line-through;
 }
 
+.char-untyped {
+  opacity: 0.55;
+}
+
+.char-correct {
+  color: #8de6b0;
+}
+
+.char-incorrect {
+  color: #ff9c9c;
+  text-decoration: underline;
+}
+
+.word-correct {
+  color: inherit;
+}
+
+.word-incorrect {
+  color: #b3261e;
+  text-decoration: line-through;
+}
+
 .prophecy-clue-grid {
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
