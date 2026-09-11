@@ -1,6 +1,6 @@
 {
   "name": "bible-challenge",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": true,
   "description": "Windows desktop app for scripture recall, Bible knowledge, and learning challenge modes.",
   "author": "Michael Kunze",
