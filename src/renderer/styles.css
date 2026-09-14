@@ -289,6 +289,30 @@ textarea {
   color: #f9f2e8;
 }
 
+.word-ladder-rung {
+  gap: 6px;
+}
+
+.word-ladder-rung-remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(78, 58, 44, 0.18);
+  color: inherit;
+  font-size: 0.78rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.word-ladder-rung-remove:hover {
+  background: rgba(78, 58, 44, 0.32);
+}
+
 .flash {
   padding: 12px 16px;
   border-radius: 16px;
@@ -1484,7 +1508,8 @@ textarea {
 .setup-modal,
 .info-modal,
 .host-controls-modal,
-.study-note-modal {
+.study-note-modal,
+.help-modal {
   width: min(720px, 100%);
   max-height: min(680px, calc(100vh - 36px));
   overflow: auto;
@@ -1500,8 +1525,44 @@ textarea {
 }
 
 .host-controls-modal,
-.study-note-modal {
+.study-note-modal,
+.help-modal {
   width: min(620px, 100%);
+}
+
+.help-modal-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.help-modal-tab {
+  flex: 0 0 auto;
+  min-height: 38px;
+  border: 1px solid rgba(78, 58, 44, 0.24);
+  border-radius: 999px;
+  background: rgba(255, 252, 245, 0.7);
+  color: #34241c;
+  padding: 7px 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.help-modal-tab-active {
+  background: linear-gradient(135deg, var(--primary-2) 0%, var(--primary) 100%);
+  color: #f9f2e8;
+  border-color: transparent;
+}
+
+.help-modal-body p {
+  margin: 0 0 10px;
+  line-height: 1.4;
+}
+
+.help-modal-body p:last-child {
+  margin-bottom: 0;
 }
 
 .host-control-grid {

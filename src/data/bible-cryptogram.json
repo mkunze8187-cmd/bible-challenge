@@ -1,0 +1,588 @@
+{
+  "$schema": "https://example.local/schemas/bible-cryptogram.schema.json",
+  "game": "bible-cryptogram",
+  "version": 1,
+  "displayName": "Bible Cryptogram",
+  "roundsPerSession": 25,
+  "sessions": [
+    {
+      "id": "bc-session-01",
+      "title": "Bible Cryptogram Deck 1",
+      "theme": "Bible names, phrases, and short verses",
+      "rounds": [
+        {
+          "id": "bc-r001-exodus-3-14",
+          "reference": "Exodus 3:14",
+          "sourceTranslation": "KJV",
+          "theme": "God's names",
+          "verseText": "I AM THAT I AM",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 3:14 (God's names) before continuing."
+        },
+        {
+          "id": "bc-r002-1-samuel-17-45",
+          "reference": "1 Samuel 17:45",
+          "sourceTranslation": "KJV",
+          "theme": "David and Goliath",
+          "verseText": "THE LORD OF HOSTS",
+          "difficulty": "easy",
+          "teachingNote": "Review 1 Samuel 17:45 (David and Goliath) before continuing."
+        },
+        {
+          "id": "bc-r003-john-1-29",
+          "reference": "John 1:29",
+          "sourceTranslation": "KJV",
+          "theme": "Titles of Jesus",
+          "verseText": "THE LAMB OF GOD",
+          "difficulty": "easy",
+          "teachingNote": "Review John 1:29 (Titles of Jesus) before continuing."
+        },
+        {
+          "id": "bc-r004-john-10-11",
+          "reference": "John 10:11",
+          "sourceTranslation": "KJV",
+          "theme": "Titles of Jesus",
+          "verseText": "THE GOOD SHEPHERD",
+          "difficulty": "easy",
+          "teachingNote": "Review John 10:11 (Titles of Jesus) before continuing."
+        },
+        {
+          "id": "bc-r005-isaiah-9-6",
+          "reference": "Isaiah 9:6",
+          "sourceTranslation": "KJV",
+          "theme": "Titles of Jesus",
+          "verseText": "THE PRINCE OF PEACE",
+          "difficulty": "easy",
+          "teachingNote": "Review Isaiah 9:6 (Titles of Jesus) before continuing."
+        },
+        {
+          "id": "bc-r006-1-samuel-16-13",
+          "reference": "1 Samuel 16:13",
+          "sourceTranslation": "KJV",
+          "theme": "Kings of Israel",
+          "verseText": "KING DAVID",
+          "difficulty": "easy",
+          "teachingNote": "Review 1 Samuel 16:13 (Kings of Israel) before continuing."
+        },
+        {
+          "id": "bc-r007-1-kings-3-12",
+          "reference": "1 Kings 3:12",
+          "sourceTranslation": "KJV",
+          "theme": "Kings of Israel",
+          "verseText": "KING SOLOMON",
+          "difficulty": "easy",
+          "teachingNote": "Review 1 Kings 3:12 (Kings of Israel) before continuing."
+        },
+        {
+          "id": "bc-r008-matthew-2-1",
+          "reference": "Matthew 2:1",
+          "sourceTranslation": "KJV",
+          "theme": "Kings of Israel",
+          "verseText": "KING HEROD",
+          "difficulty": "easy",
+          "teachingNote": "Review Matthew 2:1 (Kings of Israel) before continuing."
+        },
+        {
+          "id": "bc-r009-revelation-19-16",
+          "reference": "Revelation 19:16",
+          "sourceTranslation": "KJV",
+          "theme": "Titles of Jesus",
+          "verseText": "KING OF KINGS",
+          "difficulty": "easy",
+          "teachingNote": "Review Revelation 19:16 (Titles of Jesus) before continuing."
+        },
+        {
+          "id": "bc-r010-john-8-12",
+          "reference": "John 8:12",
+          "sourceTranslation": "KJV",
+          "theme": "Titles of Jesus",
+          "verseText": "THE LIGHT OF THE WORLD",
+          "difficulty": "easy",
+          "teachingNote": "Review John 8:12 (Titles of Jesus) before continuing."
+        },
+        {
+          "id": "bc-r011-john-14-6",
+          "reference": "John 14:6",
+          "sourceTranslation": "KJV",
+          "theme": "Titles of Jesus",
+          "verseText": "THE WAY THE TRUTH THE LIFE",
+          "difficulty": "easy",
+          "teachingNote": "Review John 14:6 (Titles of Jesus) before continuing."
+        },
+        {
+          "id": "bc-r012-john-6-35",
+          "reference": "John 6:35",
+          "sourceTranslation": "KJV",
+          "theme": "Titles of Jesus",
+          "verseText": "THE BREAD OF LIFE",
+          "difficulty": "easy",
+          "teachingNote": "Review John 6:35 (Titles of Jesus) before continuing."
+        },
+        {
+          "id": "bc-r013-genesis-1-1",
+          "reference": "Genesis 1:1",
+          "sourceTranslation": "KJV",
+          "theme": "Creation",
+          "verseText": "GOD CREATED THE HEAVEN",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 1:1 (Creation) before continuing."
+        },
+        {
+          "id": "bc-r014-genesis-6-9",
+          "reference": "Genesis 6:9",
+          "sourceTranslation": "KJV",
+          "theme": "The flood",
+          "verseText": "NOAH AND THE ARK",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 6:9 (The flood) before continuing."
+        },
+        {
+          "id": "bc-r015-exodus-14-21",
+          "reference": "Exodus 14:21",
+          "sourceTranslation": "KJV",
+          "theme": "The exodus",
+          "verseText": "MOSES AND THE RED SEA",
+          "difficulty": "easy",
+          "teachingNote": "Review Exodus 14:21 (The exodus) before continuing."
+        },
+        {
+          "id": "bc-r016-daniel-6-16",
+          "reference": "Daniel 6:16",
+          "sourceTranslation": "KJV",
+          "theme": "Daniel",
+          "verseText": "DANIEL IN THE LIONS DEN",
+          "difficulty": "easy",
+          "teachingNote": "Review Daniel 6:16 (Daniel) before continuing."
+        },
+        {
+          "id": "bc-r017-jonah-1-17",
+          "reference": "Jonah 1:17",
+          "sourceTranslation": "KJV",
+          "theme": "Jonah",
+          "verseText": "JONAH AND THE GREAT FISH",
+          "difficulty": "easy",
+          "teachingNote": "Review Jonah 1:17 (Jonah) before continuing."
+        },
+        {
+          "id": "bc-r018-judges-16-19",
+          "reference": "Judges 16:19",
+          "sourceTranslation": "KJV",
+          "theme": "Judges",
+          "verseText": "SAMSON AND DELILAH",
+          "difficulty": "easy",
+          "teachingNote": "Review Judges 16:19 (Judges) before continuing."
+        },
+        {
+          "id": "bc-r019-ruth-1-16",
+          "reference": "Ruth 1:16",
+          "sourceTranslation": "KJV",
+          "theme": "Ruth",
+          "verseText": "RUTH AND NAOMI",
+          "difficulty": "easy",
+          "teachingNote": "Review Ruth 1:16 (Ruth) before continuing."
+        },
+        {
+          "id": "bc-r020-esther-4-14",
+          "reference": "Esther 4:14",
+          "sourceTranslation": "KJV",
+          "theme": "Esther",
+          "verseText": "QUEEN ESTHER",
+          "difficulty": "easy",
+          "teachingNote": "Review Esther 4:14 (Esther) before continuing."
+        },
+        {
+          "id": "bc-r021-luke-2-7",
+          "reference": "Luke 2:7",
+          "sourceTranslation": "KJV",
+          "theme": "The nativity",
+          "verseText": "THE BIRTH OF JESUS",
+          "difficulty": "easy",
+          "teachingNote": "Review Luke 2:7 (The nativity) before continuing."
+        },
+        {
+          "id": "bc-r022-matthew-28-6",
+          "reference": "Matthew 28:6",
+          "sourceTranslation": "KJV",
+          "theme": "The resurrection",
+          "verseText": "HE IS RISEN",
+          "difficulty": "easy",
+          "teachingNote": "Review Matthew 28:6 (The resurrection) before continuing."
+        },
+        {
+          "id": "bc-r023-acts-9-3",
+          "reference": "Acts 9:3",
+          "sourceTranslation": "KJV",
+          "theme": "Paul's conversion",
+          "verseText": "SAUL OF TARSUS",
+          "difficulty": "easy",
+          "teachingNote": "Review Acts 9:3 (Paul's conversion) before continuing."
+        },
+        {
+          "id": "bc-r024-genesis-37-28",
+          "reference": "Genesis 37:28",
+          "sourceTranslation": "KJV",
+          "theme": "Joseph",
+          "verseText": "JOSEPH AND HIS BROTHERS",
+          "difficulty": "easy",
+          "teachingNote": "Review Genesis 37:28 (Joseph) before continuing."
+        },
+        {
+          "id": "bc-r025-1-kings-18-38",
+          "reference": "1 Kings 18:38",
+          "sourceTranslation": "KJV",
+          "theme": "Elijah",
+          "verseText": "ELIJAH THE PROPHET",
+          "difficulty": "easy",
+          "teachingNote": "Review 1 Kings 18:38 (Elijah) before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bc-session-02",
+      "title": "Bible Cryptogram Deck 2",
+      "theme": "Bible names, phrases, and short verses",
+      "rounds": [
+        {
+          "id": "bc-r026-genesis-1-3",
+          "reference": "Genesis 1:3",
+          "sourceTranslation": "KJV",
+          "theme": "Creation",
+          "verseText": "AND GOD SAID LET THERE BE LIGHT",
+          "difficulty": "medium",
+          "teachingNote": "Review Genesis 1:3 (Creation) before continuing."
+        },
+        {
+          "id": "bc-r027-joshua-1-9",
+          "reference": "Joshua 1:9",
+          "sourceTranslation": "KJV",
+          "theme": "Courage",
+          "verseText": "BE STRONG AND OF A GOOD COURAGE",
+          "difficulty": "medium",
+          "teachingNote": "Review Joshua 1:9 (Courage) before continuing."
+        },
+        {
+          "id": "bc-r028-psalm-23-1",
+          "reference": "Psalm 23:1",
+          "sourceTranslation": "KJV",
+          "theme": "God's provision",
+          "verseText": "THE LORD IS MY SHEPHERD I SHALL NOT WANT",
+          "difficulty": "medium",
+          "teachingNote": "Review Psalm 23:1 (God's provision) before continuing."
+        },
+        {
+          "id": "bc-r029-psalm-46-1",
+          "reference": "Psalm 46:1",
+          "sourceTranslation": "KJV",
+          "theme": "God's protection",
+          "verseText": "GOD IS OUR REFUGE AND STRENGTH",
+          "difficulty": "medium",
+          "teachingNote": "Review Psalm 46:1 (God's protection) before continuing."
+        },
+        {
+          "id": "bc-r030-proverbs-3-5",
+          "reference": "Proverbs 3:5",
+          "sourceTranslation": "KJV",
+          "theme": "Trust in God",
+          "verseText": "TRUST IN THE LORD WITH ALL THINE HEART",
+          "difficulty": "medium",
+          "teachingNote": "Review Proverbs 3:5 (Trust in God) before continuing."
+        },
+        {
+          "id": "bc-r031-isaiah-40-31",
+          "reference": "Isaiah 40:31",
+          "sourceTranslation": "KJV",
+          "theme": "Renewed strength",
+          "verseText": "THEY SHALL MOUNT UP WITH WINGS AS EAGLES",
+          "difficulty": "medium",
+          "teachingNote": "Review Isaiah 40:31 (Renewed strength) before continuing."
+        },
+        {
+          "id": "bc-r032-jeremiah-29-11",
+          "reference": "Jeremiah 29:11",
+          "sourceTranslation": "KJV",
+          "theme": "God's plans",
+          "verseText": "I KNOW THE THOUGHTS THAT I THINK TOWARD YOU",
+          "difficulty": "medium",
+          "teachingNote": "Review Jeremiah 29:11 (God's plans) before continuing."
+        },
+        {
+          "id": "bc-r033-matthew-5-9",
+          "reference": "Matthew 5:9",
+          "sourceTranslation": "KJV",
+          "theme": "The beatitudes",
+          "verseText": "BLESSED ARE THE PEACEMAKERS",
+          "difficulty": "medium",
+          "teachingNote": "Review Matthew 5:9 (The beatitudes) before continuing."
+        },
+        {
+          "id": "bc-r034-matthew-6-33",
+          "reference": "Matthew 6:33",
+          "sourceTranslation": "KJV",
+          "theme": "Seeking God first",
+          "verseText": "SEEK YE FIRST THE KINGDOM OF GOD",
+          "difficulty": "medium",
+          "teachingNote": "Review Matthew 6:33 (Seeking God first) before continuing."
+        },
+        {
+          "id": "bc-r035-matthew-11-28",
+          "reference": "Matthew 11:28",
+          "sourceTranslation": "KJV",
+          "theme": "Rest in Christ",
+          "verseText": "COME UNTO ME ALL YE THAT LABOUR",
+          "difficulty": "medium",
+          "teachingNote": "Review Matthew 11:28 (Rest in Christ) before continuing."
+        },
+        {
+          "id": "bc-r036-mark-12-30",
+          "reference": "Mark 12:30",
+          "sourceTranslation": "KJV",
+          "theme": "The greatest commandment",
+          "verseText": "THOU SHALT LOVE THE LORD THY GOD",
+          "difficulty": "medium",
+          "teachingNote": "Review Mark 12:30 (The greatest commandment) before continuing."
+        },
+        {
+          "id": "bc-r037-john-3-16",
+          "reference": "John 3:16",
+          "sourceTranslation": "KJV",
+          "theme": "God's love",
+          "verseText": "FOR GOD SO LOVED THE WORLD",
+          "difficulty": "medium",
+          "teachingNote": "Review John 3:16 (God's love) before continuing."
+        },
+        {
+          "id": "bc-r038-john-13-34",
+          "reference": "John 13:34",
+          "sourceTranslation": "KJV",
+          "theme": "Love one another",
+          "verseText": "A NEW COMMANDMENT I GIVE UNTO YOU",
+          "difficulty": "medium",
+          "teachingNote": "Review John 13:34 (Love one another) before continuing."
+        },
+        {
+          "id": "bc-r039-romans-8-28",
+          "reference": "Romans 8:28",
+          "sourceTranslation": "KJV",
+          "theme": "God's purpose",
+          "verseText": "ALL THINGS WORK TOGETHER FOR GOOD",
+          "difficulty": "medium",
+          "teachingNote": "Review Romans 8:28 (God's purpose) before continuing."
+        },
+        {
+          "id": "bc-r040-romans-10-9",
+          "reference": "Romans 10:9",
+          "sourceTranslation": "KJV",
+          "theme": "Salvation",
+          "verseText": "CONFESS WITH THY MOUTH THE LORD JESUS",
+          "difficulty": "medium",
+          "teachingNote": "Review Romans 10:9 (Salvation) before continuing."
+        },
+        {
+          "id": "bc-r041-1-corinthians-13-13",
+          "reference": "1 Corinthians 13:13",
+          "sourceTranslation": "KJV",
+          "theme": "Faith hope love",
+          "verseText": "NOW ABIDETH FAITH HOPE CHARITY THESE THREE",
+          "difficulty": "medium",
+          "teachingNote": "Review 1 Corinthians 13:13 (Faith hope love) before continuing."
+        },
+        {
+          "id": "bc-r042-2-corinthians-5-17",
+          "reference": "2 Corinthians 5:17",
+          "sourceTranslation": "KJV",
+          "theme": "New creation",
+          "verseText": "IF ANY MAN BE IN CHRIST HE IS A NEW CREATURE",
+          "difficulty": "medium",
+          "teachingNote": "Review 2 Corinthians 5:17 (New creation) before continuing."
+        },
+        {
+          "id": "bc-r043-galatians-5-22",
+          "reference": "Galatians 5:22",
+          "sourceTranslation": "KJV",
+          "theme": "Fruit of the Spirit",
+          "verseText": "THE FRUIT OF THE SPIRIT IS LOVE JOY PEACE",
+          "difficulty": "medium",
+          "teachingNote": "Review Galatians 5:22 (Fruit of the Spirit) before continuing."
+        },
+        {
+          "id": "bc-r044-ephesians-2-8",
+          "reference": "Ephesians 2:8",
+          "sourceTranslation": "KJV",
+          "theme": "Grace and faith",
+          "verseText": "BY GRACE ARE YE SAVED THROUGH FAITH",
+          "difficulty": "medium",
+          "teachingNote": "Review Ephesians 2:8 (Grace and faith) before continuing."
+        },
+        {
+          "id": "bc-r045-philippians-4-13",
+          "reference": "Philippians 4:13",
+          "sourceTranslation": "KJV",
+          "theme": "Strength in Christ",
+          "verseText": "I CAN DO ALL THINGS THROUGH CHRIST",
+          "difficulty": "medium",
+          "teachingNote": "Review Philippians 4:13 (Strength in Christ) before continuing."
+        },
+        {
+          "id": "bc-r046-philippians-4-6",
+          "reference": "Philippians 4:6",
+          "sourceTranslation": "KJV",
+          "theme": "Anxiety and prayer",
+          "verseText": "BE CAREFUL FOR NOTHING BUT IN EVERY THING BY PRAYER",
+          "difficulty": "medium",
+          "teachingNote": "Review Philippians 4:6 (Anxiety and prayer) before continuing."
+        },
+        {
+          "id": "bc-r047-colossians-3-23",
+          "reference": "Colossians 3:23",
+          "sourceTranslation": "KJV",
+          "theme": "Working for the Lord",
+          "verseText": "WHATSOEVER YE DO DO IT HEARTILY AS TO THE LORD",
+          "difficulty": "medium",
+          "teachingNote": "Review Colossians 3:23 (Working for the Lord) before continuing."
+        },
+        {
+          "id": "bc-r048-2-timothy-1-7",
+          "reference": "2 Timothy 1:7",
+          "sourceTranslation": "KJV",
+          "theme": "Power and love",
+          "verseText": "GOD HATH NOT GIVEN US THE SPIRIT OF FEAR",
+          "difficulty": "medium",
+          "teachingNote": "Review 2 Timothy 1:7 (Power and love) before continuing."
+        },
+        {
+          "id": "bc-r049-hebrews-11-1",
+          "reference": "Hebrews 11:1",
+          "sourceTranslation": "KJV",
+          "theme": "Faith",
+          "verseText": "FAITH IS THE SUBSTANCE OF THINGS HOPED FOR",
+          "difficulty": "medium",
+          "teachingNote": "Review Hebrews 11:1 (Faith) before continuing."
+        },
+        {
+          "id": "bc-r050-james-1-17",
+          "reference": "James 1:17",
+          "sourceTranslation": "KJV",
+          "theme": "Good gifts",
+          "verseText": "EVERY GOOD GIFT AND EVERY PERFECT GIFT IS FROM ABOVE",
+          "difficulty": "medium",
+          "teachingNote": "Review James 1:17 (Good gifts) before continuing."
+        }
+      ]
+    },
+    {
+      "id": "bc-session-03",
+      "title": "Bible Cryptogram Deck 3",
+      "theme": "Bible names, phrases, and short verses",
+      "rounds": [
+        {
+          "id": "bc-r051-1-peter-5-7",
+          "reference": "1 Peter 5:7",
+          "sourceTranslation": "KJV",
+          "theme": "Casting cares on God",
+          "verseText": "CASTING ALL YOUR CARE UPON HIM FOR HE CARETH FOR YOU",
+          "difficulty": "medium",
+          "teachingNote": "Review 1 Peter 5:7 (Casting cares on God) before continuing."
+        },
+        {
+          "id": "bc-r052-1-john-4-8",
+          "reference": "1 John 4:8",
+          "sourceTranslation": "KJV",
+          "theme": "God is love",
+          "verseText": "HE THAT LOVETH NOT KNOWETH NOT GOD FOR GOD IS LOVE",
+          "difficulty": "medium",
+          "teachingNote": "Review 1 John 4:8 (God is love) before continuing."
+        },
+        {
+          "id": "bc-r053-psalm-100-1-2",
+          "reference": "Psalm 100:1-2",
+          "sourceTranslation": "KJV",
+          "theme": "Praise and thanksgiving",
+          "verseText": "MAKE A JOYFUL NOISE UNTO THE LORD ALL YE LANDS SERVE THE LORD WITH GLADNESS COME BEFORE HIS PRESENCE WITH SINGING",
+          "difficulty": "hard",
+          "teachingNote": "Review Psalm 100:1-2 (Praise and thanksgiving) before continuing."
+        },
+        {
+          "id": "bc-r054-isaiah-40-28-29",
+          "reference": "Isaiah 40:28-29",
+          "sourceTranslation": "KJV",
+          "theme": "God's everlasting strength",
+          "verseText": "THE EVERLASTING GOD THE LORD FAINTETH NOT NEITHER IS WEARY HE GIVETH POWER TO THE FAINT AND TO THEM THAT HAVE NO MIGHT HE INCREASETH STRENGTH",
+          "difficulty": "hard",
+          "teachingNote": "Review Isaiah 40:28-29 (God's everlasting strength) before continuing."
+        },
+        {
+          "id": "bc-r055-joshua-24-15",
+          "reference": "Joshua 24:15",
+          "sourceTranslation": "KJV",
+          "theme": "Choosing to serve God",
+          "verseText": "CHOOSE YOU THIS DAY WHOM YE WILL SERVE BUT AS FOR ME AND MY HOUSE WE WILL SERVE THE LORD",
+          "difficulty": "hard",
+          "teachingNote": "Review Joshua 24:15 (Choosing to serve God) before continuing."
+        },
+        {
+          "id": "bc-r056-romans-12-1-2",
+          "reference": "Romans 12:1-2",
+          "sourceTranslation": "KJV",
+          "theme": "Living sacrifice",
+          "verseText": "PRESENT YOUR BODIES A LIVING SACRIFICE HOLY ACCEPTABLE UNTO GOD AND BE NOT CONFORMED TO THIS WORLD BUT BE YE TRANSFORMED",
+          "difficulty": "hard",
+          "teachingNote": "Review Romans 12:1-2 (Living sacrifice) before continuing."
+        },
+        {
+          "id": "bc-r057-micah-6-8",
+          "reference": "Micah 6:8",
+          "sourceTranslation": "KJV",
+          "theme": "What God requires",
+          "verseText": "HE HATH SHEWED THEE O MAN WHAT IS GOOD AND WHAT DOTH THE LORD REQUIRE OF THEE BUT TO DO JUSTLY AND TO LOVE MERCY",
+          "difficulty": "hard",
+          "teachingNote": "Review Micah 6:8 (What God requires) before continuing."
+        },
+        {
+          "id": "bc-r058-psalm-121-1-2",
+          "reference": "Psalm 121:1-2",
+          "sourceTranslation": "KJV",
+          "theme": "Help from the Lord",
+          "verseText": "I WILL LIFT UP MINE EYES UNTO THE HILLS FROM WHENCE COMETH MY HELP MY HELP COMETH FROM THE LORD",
+          "difficulty": "hard",
+          "teachingNote": "Review Psalm 121:1-2 (Help from the Lord) before continuing."
+        },
+        {
+          "id": "bc-r059-deuteronomy-31-6",
+          "reference": "Deuteronomy 31:6",
+          "sourceTranslation": "KJV",
+          "theme": "Courage and God's presence",
+          "verseText": "BE STRONG AND OF A GOOD COURAGE FEAR NOT NOR BE AFRAID FOR THE LORD THY GOD HE IT IS THAT DOTH GO WITH THEE",
+          "difficulty": "hard",
+          "teachingNote": "Review Deuteronomy 31:6 (Courage and God's presence) before continuing."
+        },
+        {
+          "id": "bc-r060-matthew-28-19-20",
+          "reference": "Matthew 28:19-20",
+          "sourceTranslation": "KJV",
+          "theme": "The great commission",
+          "verseText": "GO YE THEREFORE AND TEACH ALL NATIONS BAPTIZING THEM IN THE NAME OF THE FATHER AND OF THE SON AND OF THE HOLY GHOST",
+          "difficulty": "hard",
+          "teachingNote": "Review Matthew 28:19-20 (The great commission) before continuing."
+        },
+        {
+          "id": "bc-r061-ephesians-6-11-12",
+          "reference": "Ephesians 6:11-12",
+          "sourceTranslation": "KJV",
+          "theme": "The armor of God",
+          "verseText": "PUT ON THE WHOLE ARMOUR OF GOD THAT YE MAY BE ABLE TO STAND AGAINST THE WILES OF THE DEVIL",
+          "difficulty": "hard",
+          "teachingNote": "Review Ephesians 6:11-12 (The armor of God) before continuing."
+        },
+        {
+          "id": "bc-r062-isaiah-53-5",
+          "reference": "Isaiah 53:5",
+          "sourceTranslation": "KJV",
+          "theme": "The suffering servant",
+          "verseText": "HE WAS WOUNDED FOR OUR TRANSGRESSIONS HE WAS BRUISED FOR OUR INIQUITIES THE CHASTISEMENT OF OUR PEACE WAS UPON HIM",
+          "difficulty": "hard",
+          "teachingNote": "Review Isaiah 53:5 (The suffering servant) before continuing."
+        }
+      ]
+    }
+  ]
+}

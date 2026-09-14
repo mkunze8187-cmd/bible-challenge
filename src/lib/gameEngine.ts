@@ -1,6 +1,5 @@
 import { loadGameContent, loadWordLadderDictionary } from "./content";
 import {
-  scoreFirstLetterRecall,
   scoreInitials,
   scoreProphecyRetry,
   scoreScriptureLetterGuess,
@@ -36,10 +35,10 @@ import type {
   BibleAnagramRound,
   BibleConnectionsRound,
   BibleBooksRelayRound,
+  BibleCryptogramRound,
   BibleTimelineRound,
   ChapterFinderRound,
   CompleteVerseRound,
-  FirstLetterRecallRound,
   FulfillmentFinderRound,
   GameId,
   InitialsRound,
@@ -505,21 +504,6 @@ export interface RelayVerseBuildState extends RoundSessionBase<RelayVerseBuildRo
   gameId: "relay-verse-build";
 }
 
-export interface FirstLetterRecallPrompt {
-  kind: "first-letter-recall";
-  round: FirstLetterRecallRound;
-  scaffold: string;
-  phase: "active" | "resolved";
-  wasCorrect: boolean | null;
-  correctWordCount: number | null;
-  totalWordCount: number;
-  resolvedMessage: string | null;
-}
-
-export interface FirstLetterRecallState extends RoundSessionBase<FirstLetterRecallRound, FirstLetterRecallPrompt> {
-  gameId: "first-letter-recall";
-}
-
 export interface VerseTypingRaceResult {
   participantId: string;
   wpm: number;
@@ -544,7 +528,7 @@ export interface WordLadderPrompt {
   kind: "word-ladder";
   round: WordLadderRound;
   chain: string[];
-  totalMissCount: number;
+  startTurnIndex: number;
   phase: "active" | "resolved";
   wasCorrect: boolean | null;
   resolvedMessage: string | null;
@@ -576,6 +560,25 @@ export interface BibleAnagramsState extends RoundSessionBase<BibleAnagramRound, 
   gameId: "bible-anagrams";
 }
 
+export interface BibleCryptogramPrompt {
+  kind: "bible-cryptogram";
+  round: BibleCryptogramRound;
+  // Maps each real lowercase letter to the cipher letter that stands in for it in the
+  // displayed puzzle (a derangement — no letter maps to itself). Generated fresh per
+  // prompt, not stored in content, the same way Bible Anagrams shuffles its tile order
+  // and Word Ladder validates against a runtime dictionary rather than authored data.
+  cipherMap: Record<string, string>;
+  attemptedLetters: string[];
+  phase: "letter" | "solve";
+  isComplete: boolean;
+  winnerParticipantId: string | null;
+  completedReason: "solved" | "fully-revealed" | null;
+}
+
+export interface BibleCryptogramState extends RoundSessionBase<BibleCryptogramRound, BibleCryptogramPrompt> {
+  gameId: "bible-cryptogram";
+}
+
 export type SessionState =
   | FiveGuessesState
   | InitialsState
@@ -602,10 +605,10 @@ export type SessionState =
   | PsalmReferenceFinderState
   | TwoTruthsAndALieState
   | RelayVerseBuildState
-  | FirstLetterRecallState
   | VerseTypingRaceState
   | WordLadderState
-  | BibleAnagramsState;
+  | BibleAnagramsState
+  | BibleCryptogramState;
 
 export const GAME_LIBRARY: Record<
   GameId,
@@ -766,12 +769,6 @@ export const GAME_LIBRARY: Record<
     setupPrompt: "Five random KJV verse rounds are selected. A miss doesn't pass the turn, but Skip Word does.",
     accent: "#3f6b45"
   },
-  "first-letter-recall": {
-    label: "First Letter Recall",
-    shortDescription: "Recall a full KJV verse from its first-letter scaffold.",
-    setupPrompt: "Ten random KJV verse rounds are selected. Score is based on words recalled correctly.",
-    accent: "#75512e"
-  },
   "verse-typing-race": {
     label: "Verse Typing Race",
     shortDescription: "Type a KJV verse as fast and accurately as you can.",
@@ -789,6 +786,12 @@ export const GAME_LIBRARY: Record<
     shortDescription: "Unscramble the letters to name a Bible person, place, thing, or event.",
     setupPrompt: "Ten random anagram rounds are selected. Easy and medium rounds show a clue; hard rounds do not.",
     accent: "#8a5c24"
+  },
+  "bible-cryptogram": {
+    label: "Bible Cryptogram",
+    shortDescription: "Crack a letter-substitution cipher to reveal a Bible name, phrase, or short verse.",
+    setupPrompt: "A fresh random cipher is generated for each round. Guess a letter to reveal every occurrence, or solve the whole puzzle at once.",
+    accent: "#5d3567"
   }
 };
 
@@ -813,10 +816,10 @@ const PSALMS_PROVERBS_MULTIPLE_CHOICE_ROUNDS_PER_GAME = 10;
 const PROVERB_CATEGORIES_ROUNDS_PER_GAME = 1;
 const TWO_TRUTHS_AND_A_LIE_ROUNDS_PER_GAME = 10;
 const RELAY_VERSE_BUILD_ROUNDS_PER_GAME = 5;
-const FIRST_LETTER_RECALL_ROUNDS_PER_GAME = 10;
 const VERSE_TYPING_RACE_ROUNDS_PER_GAME = 5;
 const WORD_LADDER_ROUNDS_PER_GAME = 6;
 const BIBLE_ANAGRAMS_ROUNDS_PER_GAME = 10;
+const BIBLE_CRYPTOGRAM_ROUNDS_PER_GAME = 5;
 const DEFAULT_PARTICIPANT_COLORS = ["#2f6f5f", "#8a5c24", "#69436d", "#285f73", "#9b4a36", "#5c6f2a"];
 
 function createPlayerStats(): PlayerStats {
@@ -1086,10 +1089,10 @@ function getRoundNumber(state: SessionState): number {
     state.gameId === "psalm-reference-finder" ||
     state.gameId === "two-truths-and-a-lie" ||
     state.gameId === "relay-verse-build" ||
-    state.gameId === "first-letter-recall" ||
     state.gameId === "verse-typing-race" ||
     state.gameId === "word-ladder" ||
-    state.gameId === "bible-anagrams"
+    state.gameId === "bible-anagrams" ||
+    state.gameId === "bible-cryptogram"
   ) {
     return "roundIndex" in state ? state.roundIndex + 1 : Math.max(1, state.resolvedPrompts + 1);
   }
@@ -1184,6 +1187,64 @@ function createScripturePrompt(round: ScripturePuzzleRound): ScripturePrompt {
     winnerParticipantId: null,
     completedReason: null
   };
+}
+
+const ALPHABET = "abcdefghijklmnopqrstuvwxyz".split("");
+
+// Builds a random derangement of the alphabet (a full permutation where no letter maps
+// to itself) to use as a cryptogram's substitution cipher. Repeatedly shuffles until no
+// fixed points remain rather than using a more elaborate derangement algorithm — with 26
+// letters a shuffle satisfies "no fixed points" the overwhelming majority of the time, so
+// a few retries is simpler and just as correct as a dedicated algorithm.
+function buildCipherMap(): Record<string, string> {
+  let shuffled = shuffle(ALPHABET);
+  let attempts = 0;
+
+  while (shuffled.some((letter, index) => letter === ALPHABET[index]) && attempts < 100) {
+    shuffled = shuffle(ALPHABET);
+    attempts += 1;
+  }
+
+  const map: Record<string, string> = {};
+  ALPHABET.forEach((letter, index) => {
+    map[letter] = shuffled[index];
+  });
+
+  return map;
+}
+
+function createBibleCryptogramPrompt(round: BibleCryptogramRound): BibleCryptogramPrompt {
+  return {
+    kind: "bible-cryptogram",
+    round,
+    cipherMap: buildCipherMap(),
+    attemptedLetters: [],
+    phase: "letter",
+    isComplete: false,
+    winnerParticipantId: null,
+    completedReason: null
+  };
+}
+
+export function buildCryptogramBoard(text: string, cipherMap: Record<string, string>, attemptedLetters: string[]): string {
+  const attempted = new Set(attemptedLetters.map((entry) => entry.toLowerCase()));
+
+  return Array.from(text)
+    .map((character) => {
+      if (!/[a-z]/i.test(character)) {
+        return character;
+      }
+
+      const lower = character.toLowerCase();
+      const cipherLetter = cipherMap[lower] ?? lower;
+
+      if (!attempted.has(lower)) {
+        return character === lower ? cipherLetter : cipherLetter.toUpperCase();
+      }
+
+      return character;
+    })
+    .join("");
 }
 
 async function createInitialsBoard(
@@ -1570,32 +1631,6 @@ function createRelayVerseBuildPrompt(round: RelayVerseBuildRound): RelayVerseBui
   };
 }
 
-function buildFirstLetterScaffold(verseText: string): string {
-  return splitVerseWords(verseText)
-    .map((word) => {
-      const firstLetterMatch = word.match(/[A-Za-z]/);
-      if (!firstLetterMatch) {
-        return word;
-      }
-
-      return word[0].toUpperCase() + word.slice(1).replace(/[A-Za-z]/g, "");
-    })
-    .join(" ");
-}
-
-function createFirstLetterRecallPrompt(round: FirstLetterRecallRound): FirstLetterRecallPrompt {
-  return {
-    kind: "first-letter-recall",
-    round,
-    scaffold: buildFirstLetterScaffold(round.verseText),
-    phase: "active",
-    wasCorrect: null,
-    correctWordCount: null,
-    totalWordCount: splitVerseWords(round.verseText).length,
-    resolvedMessage: null
-  };
-}
-
 function createVerseTypingRacePrompt(round: VerseTypingRaceRound): VerseTypingRacePrompt {
   return {
     kind: "verse-typing-race",
@@ -1608,12 +1643,12 @@ function createVerseTypingRacePrompt(round: VerseTypingRaceRound): VerseTypingRa
   };
 }
 
-function createWordLadderPrompt(round: WordLadderRound): WordLadderPrompt {
+function createWordLadderPrompt(round: WordLadderRound, startTurnIndex: number): WordLadderPrompt {
   return {
     kind: "word-ladder",
     round,
     chain: [round.startWord],
-    totalMissCount: 0,
+    startTurnIndex,
     phase: "active",
     wasCorrect: null,
     resolvedMessage: null
@@ -2529,40 +2564,6 @@ export async function createSessionState(config: SessionConfig): Promise<Session
     };
   }
 
-  if (config.gameId === "first-letter-recall") {
-    const pack = await loadContent("first-letter-recall");
-    const rounds = pickRounds(
-      pack.sessions.flatMap((session) => session.rounds),
-      FIRST_LETTER_RECALL_ROUNDS_PER_GAME,
-      "First Letter Recall"
-    );
-
-    return {
-      gameId: "first-letter-recall",
-      displayName: GAME_LIBRARY["first-letter-recall"].label,
-      sessionTitle: "Random First Letter Recall Deck",
-      sessionTheme: "Ten KJV verses to recall from their first-letter scaffold.",
-      participantMode: config.participantMode,
-      participants,
-      stats,
-      activityLog: [
-        {
-          id: "start-1",
-          tone: "info",
-          text: "First Letter Recall is live. Type the full verse from the scaffold.",
-          roundNumber: 1
-        }
-      ],
-      status: "in-progress",
-      turnIndex: 0,
-      totalPrompts: rounds.length,
-      resolvedPrompts: 0,
-      roundIndex: 0,
-      rounds,
-      currentPrompt: createFirstLetterRecallPrompt(rounds[0])
-    };
-  }
-
   if (config.gameId === "verse-typing-race") {
     const pack = await loadContent("verse-typing-race");
     const rounds = pickRounds(
@@ -2627,7 +2628,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       resolvedPrompts: 0,
       roundIndex: 0,
       rounds,
-      currentPrompt: createWordLadderPrompt(rounds[0])
+      currentPrompt: createWordLadderPrompt(rounds[0], 0)
     };
   }
 
@@ -2662,6 +2663,40 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       roundIndex: 0,
       rounds,
       currentPrompt: createBibleAnagramPrompt(rounds[0])
+    };
+  }
+
+  if (config.gameId === "bible-cryptogram") {
+    const pack = await loadContent("bible-cryptogram");
+    const rounds = pickRounds(
+      pack.sessions.flatMap((session) => session.rounds),
+      BIBLE_CRYPTOGRAM_ROUNDS_PER_GAME,
+      "Bible Cryptogram"
+    );
+
+    return {
+      gameId: "bible-cryptogram",
+      displayName: GAME_LIBRARY["bible-cryptogram"].label,
+      sessionTitle: "Random Bible Cryptogram Deck",
+      sessionTheme: "Crack the cipher to reveal a Bible name, phrase, or short verse.",
+      participantMode: config.participantMode,
+      participants,
+      stats,
+      activityLog: [
+        {
+          id: "start-1",
+          tone: "info",
+          text: "Bible Cryptogram is live. Guess a letter or attempt a full solve.",
+          roundNumber: 1
+        }
+      ],
+      status: "in-progress",
+      turnIndex: 0,
+      totalPrompts: rounds.length,
+      resolvedPrompts: 0,
+      roundIndex: 0,
+      rounds,
+      currentPrompt: createBibleCryptogramPrompt(rounds[0])
     };
   }
 
@@ -2732,10 +2767,10 @@ export function getCurrentActorLabel(state: SessionState): string {
     state.gameId === "psalm-reference-finder" ||
     state.gameId === "two-truths-and-a-lie" ||
     state.gameId === "relay-verse-build" ||
-    state.gameId === "first-letter-recall" ||
     state.gameId === "verse-typing-race" ||
     state.gameId === "word-ladder" ||
-    state.gameId === "bible-anagrams"
+    state.gameId === "bible-anagrams" ||
+    state.gameId === "bible-cryptogram"
   ) {
     const participant = state.participants[state.turnIndex];
     return getParticipantDisplayLabel(state.participantMode, participant);
@@ -3006,6 +3041,25 @@ export function continueGame(state: SessionState): ActionResult {
     return addActivity(nextState, "info", `Round ${nextState.roundIndex + 1} is ready.`);
   }
 
+  if (nextState.gameId === "bible-cryptogram") {
+    if (!nextState.currentPrompt.isComplete) {
+      throw new Error("Finish the cryptogram round before continuing.");
+    }
+
+    nextState.resolvedPrompts += 1;
+
+    if (nextState.roundIndex + 1 >= nextState.rounds.length) {
+      nextState.status = "completed";
+
+      return addActivity(nextState, "info", `${nextState.sessionTitle} is complete. Final standings are ready.`);
+    }
+
+    nextState.roundIndex += 1;
+    nextState.currentPrompt = createBibleCryptogramPrompt(nextState.rounds[nextState.roundIndex]);
+
+    return addActivity(nextState, "info", `Round ${nextState.roundIndex + 1} is ready.`);
+  }
+
   if (nextState.gameId === "bible-timeline") {
     if (nextState.currentPrompt.phase !== "resolved") {
       throw new Error("Resolve the timeline round before continuing.");
@@ -3185,13 +3239,6 @@ export function continueGame(state: SessionState): ActionResult {
     return advanceLinearRound(nextState, (round) => createRelayVerseBuildPrompt(round as RelayVerseBuildRound));
   }
 
-  if (nextState.gameId === "first-letter-recall") {
-    if (nextState.currentPrompt.phase !== "resolved") {
-      throw new Error("Resolve the current verse before continuing.");
-    }
-
-    return advanceLinearRound(nextState, (round) => createFirstLetterRecallPrompt(round as FirstLetterRecallRound));
-  }
 
   if (nextState.gameId === "verse-typing-race") {
     if (nextState.currentPrompt.phase !== "resolved") {
@@ -3206,7 +3253,7 @@ export function continueGame(state: SessionState): ActionResult {
       throw new Error("Resolve the current ladder before continuing.");
     }
 
-    return advanceLinearRound(nextState, (round) => createWordLadderPrompt(round as WordLadderRound));
+    return advanceLinearRound(nextState, (round) => createWordLadderPrompt(round as WordLadderRound, nextState.turnIndex));
   }
 
   if (nextState.gameId === "bible-anagrams") {
@@ -3375,6 +3422,156 @@ export function submitScriptureSolve(
 export function passScriptureTurn(state: SessionState): ActionResult {
   if (state.gameId !== "scripture-puzzles") {
     throw new Error("Scripture pass is only available in Verse Reveal.");
+  }
+
+  if (state.currentPrompt.isComplete) {
+    throw new Error("Continue to the next round before passing again.");
+  }
+
+  const nextState = structuredClone(state);
+  const actorIndex = nextState.turnIndex;
+  const actorLabel = getCurrentActorLabel(nextState);
+
+  consumeTurn(nextState.participants, actorIndex);
+  nextState.turnIndex = nextIndex(nextState.participants.length, actorIndex);
+  nextState.currentPrompt.phase = "letter";
+
+  return addActivity(nextState, "info", `${actorLabel} passed. ${getCurrentActorLabel(nextState)} is up.`);
+}
+
+export function submitBibleCryptogramLetterGuess(state: SessionState, letterGuess: string): ActionResult {
+  if (state.gameId !== "bible-cryptogram") {
+    throw new Error("Letter guesses are only available in Bible Cryptogram.");
+  }
+
+  if (state.currentPrompt.isComplete) {
+    throw new Error("Continue to the next round before guessing again.");
+  }
+
+  if (state.currentPrompt.phase !== "letter") {
+    throw new Error("Solve or pass before guessing another letter.");
+  }
+
+  const normalizedLetter = letterGuess.trim().toLowerCase();
+
+  if (!/^[a-z]$/.test(normalizedLetter)) {
+    throw new Error("Enter exactly one letter from A to Z.");
+  }
+
+  const nextState = structuredClone(state);
+  const actorIndex = nextState.turnIndex;
+  const stats = getParticipantStats(nextState, actorIndex);
+  const actorLabel = getCurrentActorLabel(nextState);
+  const text = nextState.currentPrompt.round.verseText;
+
+  if (nextState.currentPrompt.attemptedLetters.includes(normalizedLetter)) {
+    nextState.currentPrompt.phase = "solve";
+
+    return addActivity(
+      nextState,
+      "info",
+      `${actorLabel} repeated "${normalizedLetter.toUpperCase()}". No new letters were revealed. Solve or pass.`
+    );
+  }
+
+  nextState.currentPrompt.attemptedLetters.push(normalizedLetter);
+
+  const matches = countLetterOccurrences(text, normalizedLetter);
+
+  if (matches === 0) {
+    stats.incorrectAttempts += 1;
+    nextState.currentPrompt.phase = "solve";
+
+    return addActivity(
+      nextState,
+      "warning",
+      `${actorLabel} guessed "${normalizedLetter.toUpperCase()}". That letter isn't in the puzzle. Solve or pass.`
+    );
+  }
+
+  const points = scoreScriptureLetterGuess(matches);
+  const remainingLetters = countRemainingLetters(text, nextState.currentPrompt.attemptedLetters);
+
+  stats.totalScore += points;
+  stats.letterRevealPoints += points;
+
+  if (remainingLetters === 0) {
+    nextState.currentPrompt.isComplete = true;
+    nextState.currentPrompt.completedReason = "fully-revealed";
+
+    return addActivity(
+      nextState,
+      "success",
+      `${actorLabel} revealed the final ${matches} letter${matches === 1 ? "" : "s"}. The puzzle is fully revealed.`
+    );
+  }
+
+  nextState.currentPrompt.phase = "solve";
+
+  return addActivity(
+    nextState,
+    "success",
+    `${actorLabel} revealed ${matches} letter${matches === 1 ? "" : "s"} and scored ${points} point${points === 1 ? "" : "s"}. Solve or pass.`
+  );
+}
+
+export function submitBibleCryptogramSolve(state: SessionState, solutionGuess: string): ActionResult {
+  if (state.gameId !== "bible-cryptogram") {
+    throw new Error("Full solves are only available in Bible Cryptogram.");
+  }
+
+  if (state.currentPrompt.isComplete) {
+    throw new Error("Continue to the next round before solving again.");
+  }
+
+  if (state.currentPrompt.phase !== "solve") {
+    throw new Error("Guess a letter before attempting to solve the puzzle.");
+  }
+
+  const trimmedGuess = solutionGuess.trim();
+
+  if (!trimmedGuess) {
+    throw new Error("Enter the solved text before submitting a solve.");
+  }
+
+  const nextState = structuredClone(state);
+  const actorIndex = nextState.turnIndex;
+  const actor = nextState.participants[actorIndex];
+  const stats = getParticipantStats(nextState, actorIndex);
+  const actorLabel = getCurrentActorLabel(nextState);
+  const text = nextState.currentPrompt.round.verseText;
+
+  consumeTurn(nextState.participants, actorIndex);
+  nextState.turnIndex = nextIndex(nextState.participants.length, actorIndex);
+
+  if (normalizeText(trimmedGuess) !== normalizeText(text)) {
+    stats.incorrectAttempts += 1;
+    nextState.currentPrompt.phase = "letter";
+
+    return addActivity(nextState, "warning", `${actorLabel} attempted a full solve, but the puzzle remains open.`);
+  }
+
+  const remainingLetters = countRemainingLetters(text, nextState.currentPrompt.attemptedLetters);
+  const points = scoreScriptureSolve(remainingLetters);
+
+  stats.totalScore += points;
+  stats.roundWins += 1;
+  stats.correctFullSolves += 1;
+  stats.hiddenLetterSolveBonus += remainingLetters;
+  nextState.currentPrompt.isComplete = true;
+  nextState.currentPrompt.winnerParticipantId = actor.id;
+  nextState.currentPrompt.completedReason = "solved";
+
+  return addActivity(
+    nextState,
+    "success",
+    `${actorLabel} solved the full puzzle for ${points} points, including ${remainingLetters} hidden-letter bonus point${remainingLetters === 1 ? "" : "s"}.`
+  );
+}
+
+export function passBibleCryptogramTurn(state: SessionState): ActionResult {
+  if (state.gameId !== "bible-cryptogram") {
+    throw new Error("Passing is only available in Bible Cryptogram.");
   }
 
   if (state.currentPrompt.isComplete) {
@@ -4097,55 +4294,6 @@ export function passRelayWord(state: SessionState): ActionResult {
   return addActivity(nextState, "info", `${actorLabel} skipped "${skippedWord}". ${getCurrentActorLabel(nextState)} is up.`);
 }
 
-export function submitFirstLetterRecall(state: SessionState, guessText: string): ActionResult {
-  if (state.gameId !== "first-letter-recall") {
-    throw new Error("First Letter Recall submissions are only available in First Letter Recall.");
-  }
-
-  if (state.currentPrompt.phase !== "active") {
-    throw new Error("Continue to the next verse before submitting again.");
-  }
-
-  const nextState = structuredClone(state);
-  const prompt = nextState.currentPrompt;
-  const actorIndex = nextState.turnIndex;
-  const actorLabel = getCurrentActorLabel(nextState);
-  const stats = getParticipantStats(nextState, actorIndex);
-  const actualWords = splitVerseWords(prompt.round.verseText);
-  const guessedWords = splitVerseWords(guessText);
-  const correctWordCount = actualWords.reduce(
-    (count, actualWord, index) => (normalizeWord(guessedWords[index] ?? "") === normalizeWord(actualWord) ? count + 1 : count),
-    0
-  );
-  const points = scoreFirstLetterRecall(correctWordCount, actualWords.length);
-
-  consumeTurn(nextState.participants, actorIndex);
-  nextState.turnIndex = nextIndex(nextState.participants.length, actorIndex);
-  stats.totalScore += points;
-  prompt.correctWordCount = correctWordCount;
-
-  if (correctWordCount >= actualWords.length) {
-    stats.correctFullSolves += 1;
-    stats.roundWins += 1;
-    prompt.wasCorrect = true;
-    resolveRoundState(nextState, `${actorLabel} recalled the verse perfectly for ${points} points.`);
-    return addActivity(nextState, "success", nextState.currentPrompt.resolvedMessage ?? "Verse recalled.");
-  }
-
-  if (correctWordCount / actualWords.length >= 0.8) {
-    stats.roundWins += 1;
-  } else {
-    stats.incorrectAttempts += 1;
-  }
-
-  prompt.wasCorrect = false;
-  resolveRoundState(
-    nextState,
-    `${actorLabel} recalled ${correctWordCount} of ${actualWords.length} words for ${points} points.`
-  );
-  return addActivity(nextState, correctWordCount / actualWords.length >= 0.8 ? "success" : "warning", nextState.currentPrompt.resolvedMessage ?? "Verse scored.");
-}
-
 export function submitVerseTypingResult(
   state: SessionState,
   result: { typedText: string; elapsedMs: number }
@@ -4257,13 +4405,15 @@ export function submitWordLadderStep(state: SessionState, guess: string, diction
     throw new Error(`Word must be ${lastWord.length} letters long.`);
   }
 
-  const missCap = nextState.participants.length * 3;
+  // Unlike other games' turn-based rounds, a single player/team keeps this ladder for the
+  // whole round: the turn only advances via an explicit Pass (passWordLadderTurn) or the
+  // whole-round timer expiring — never automatically on a correct or incorrect guess. This
+  // is deliberate: the ladder is not locked to one path, so a wrong guess is just a wrong
+  // attempt at the *next* rung, not a forfeited turn.
   const isValidStep = hammingDistanceOne(normalizedGuess, lastWord) && dictionary.has(normalizedGuess);
 
   if (isValidStep) {
     prompt.chain.push(normalizedGuess);
-    consumeTurn(nextState.participants, actorIndex);
-    nextState.turnIndex = nextIndex(nextState.participants.length, actorIndex);
 
     if (normalizedGuess === prompt.round.endWord) {
       const stats = getParticipantStats(nextState, actorIndex);
@@ -4271,6 +4421,7 @@ export function submitWordLadderStep(state: SessionState, guess: string, diction
       const points = scoreWordLadder(stepsTaken, prompt.round.minSteps);
       stats.totalScore += points;
       stats.roundWins += 1;
+      consumeTurn(nextState.participants, actorIndex);
       prompt.wasCorrect = true;
       resolveRoundState(nextState, `${actorLabel} completed the ladder in ${stepsTaken} steps for ${points} points.`);
       return addActivity(nextState, "success", nextState.currentPrompt.resolvedMessage ?? "Ladder completed.");
@@ -4278,25 +4429,80 @@ export function submitWordLadderStep(state: SessionState, guess: string, diction
 
     const nextStats = getParticipantStats(nextState, actorIndex);
     nextStats.wordLadderStepsCompleted += 1;
-    return addActivity(nextState, "success", `${actorLabel} added "${normalizedGuess}". ${getCurrentActorLabel(nextState)} is up.`);
+    return addActivity(nextState, "success", `${actorLabel} added "${normalizedGuess}".`);
   }
 
   const stats = getParticipantStats(nextState, actorIndex);
   stats.incorrectAttempts += 1;
-  prompt.totalMissCount += 1;
+  return addActivity(nextState, "warning", `${actorLabel} tried "${normalizedGuess}" — not a valid next word. Try again.`);
+}
+
+export function removeLastWordLadderRung(state: SessionState): ActionResult {
+  if (state.gameId !== "word-ladder") {
+    throw new Error("Ladder rungs can only be removed in Word Ladder.");
+  }
+
+  if (state.currentPrompt.phase !== "active") {
+    throw new Error("Continue to the next ladder before editing it.");
+  }
+
+  const nextState = structuredClone(state);
+  const prompt = nextState.currentPrompt;
+
+  if (prompt.chain.length <= 1) {
+    throw new Error("The starting word can't be removed.");
+  }
+
+  const removedWord = prompt.chain.pop();
+  return addActivity(nextState, "info", `Removed "${removedWord}" from the ladder.`);
+}
+
+export function passWordLadderTurn(state: SessionState): ActionResult {
+  if (state.gameId !== "word-ladder") {
+    throw new Error("Passing is only available in Word Ladder.");
+  }
+
+  if (state.currentPrompt.phase !== "active") {
+    throw new Error("Continue to the next ladder before passing.");
+  }
+
+  const nextState = structuredClone(state);
+  const prompt = nextState.currentPrompt;
+  const actorIndex = nextState.turnIndex;
+  const actorLabel = getCurrentActorLabel(nextState);
+
   consumeTurn(nextState.participants, actorIndex);
   nextState.turnIndex = nextIndex(nextState.participants.length, actorIndex);
 
-  if (prompt.totalMissCount >= missCap) {
+  if (nextState.turnIndex === prompt.startTurnIndex || nextState.participants.length <= 1) {
+    // Every participant has now had a chance at this ladder (or there's only one to begin
+    // with) — stealing further would just cycle back to someone who already passed, so the
+    // round ends and the path is revealed rather than looping forever.
     prompt.wasCorrect = false;
-    resolveRoundState(
-      nextState,
-      `The chain stalled. One valid path was ${prompt.round.revealPath.join(" → ")}.`
-    );
+    resolveRoundState(nextState, `Nobody solved the ladder. One valid path was ${prompt.round.revealPath.join(" → ")}.`);
     return addActivity(nextState, "warning", nextState.currentPrompt.resolvedMessage ?? "Ladder revealed.");
   }
 
-  return addActivity(nextState, "warning", `${actorLabel} missed. ${getCurrentActorLabel(nextState)} is up.`);
+  return addActivity(nextState, "info", `${actorLabel} passed. ${getCurrentActorLabel(nextState)} can steal.`);
+}
+
+export function resolveWordLadderOnTimer(state: SessionState): ActionResult {
+  if (state.gameId !== "word-ladder") {
+    throw new Error("Word Ladder's timer resolution only applies to Word Ladder.");
+  }
+
+  if (state.currentPrompt.phase !== "active") {
+    throw new Error("The ladder is already resolved.");
+  }
+
+  // The round timer covers the whole ladder, not a single rung or a single participant's
+  // turn — when it expires, the round ends outright (no further stealing), unlike an
+  // explicit Pass which hands the same still-live ladder to the next participant.
+  const nextState = structuredClone(state);
+  const prompt = nextState.currentPrompt;
+  prompt.wasCorrect = false;
+  resolveRoundState(nextState, `Time's up. One valid path was ${prompt.round.revealPath.join(" → ")}.`);
+  return addActivity(nextState, "warning", nextState.currentPrompt.resolvedMessage ?? "Ladder revealed.");
 }
 
 export function moveBibleAnagramTile(state: SessionState, tileId: string, target: "answer" | "bank"): ActionResult {
@@ -5794,5 +6000,9 @@ export function getUniqueWinner(state: SessionState): Standing | null {
 
 export function getScriptureRemainingLetters(state: ScriptureState): number {
   return countRemainingLetters(getScriptureText(state.currentPrompt.round), state.currentPrompt.attemptedLetters);
+}
+
+export function getBibleCryptogramRemainingLetters(state: BibleCryptogramState): number {
+  return countRemainingLetters(state.currentPrompt.round.verseText, state.currentPrompt.attemptedLetters);
 }
 

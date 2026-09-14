@@ -3,9 +3,9 @@ import type {
   BeforeOrAfterPack,
   BibleAnagramsPack,
   BibleConnectionsPack,
+  BibleCryptogramPack,
   BibleTimelinePack,
   CompleteVersePack,
-  FirstLetterRecallPack,
   FiveGuessesPack,
   GameId,
   InitialsPack,
@@ -63,10 +63,10 @@ export interface ContentPackByGame {
   "psalm-reference-finder": PsalmReferenceFinderPack;
   "two-truths-and-a-lie": TwoTruthsAndALiePack;
   "relay-verse-build": RelayVerseBuildPack;
-  "first-letter-recall": FirstLetterRecallPack;
   "verse-typing-race": VerseTypingRacePack;
   "word-ladder": WordLadderPack;
   "bible-anagrams": BibleAnagramsPack;
+  "bible-cryptogram": BibleCryptogramPack;
 }
 
 type LoaderMap = {
@@ -253,11 +253,6 @@ const PACK_LOADER_ENTRIES: {
     data: () => import("../data/relay-verse-build.json"),
     schema: () => import("../data/schemas/relay-verse-build.schema.json")
   },
-  "first-letter-recall": {
-    label: "First Letter Recall",
-    data: () => import("../data/first-letter-recall.json"),
-    schema: () => import("../data/schemas/first-letter-recall.schema.json")
-  },
   "verse-typing-race": {
     label: "Verse Typing Race",
     data: () => import("../data/verse-typing-race.json"),
@@ -272,6 +267,11 @@ const PACK_LOADER_ENTRIES: {
     label: "Bible Anagrams",
     data: () => import("../data/bible-anagrams.json"),
     schema: () => import("../data/schemas/bible-anagrams.schema.json")
+  },
+  "bible-cryptogram": {
+    label: "Bible Cryptogram",
+    data: () => import("../data/bible-cryptogram.json"),
+    schema: () => import("../data/schemas/bible-cryptogram.schema.json")
   }
 };
 

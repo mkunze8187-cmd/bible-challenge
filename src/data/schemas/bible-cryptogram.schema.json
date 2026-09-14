@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.local/schemas/first-letter-recall.schema.json",
-  "title": "First Letter Recall Pack",
+  "$id": "https://example.local/schemas/bible-cryptogram.schema.json",
+  "title": "Bible Cryptogram Pack",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -17,7 +17,7 @@
       "type": "string"
     },
     "game": {
-      "const": "first-letter-recall"
+      "const": "bible-cryptogram"
     },
     "version": {
       "type": "integer",

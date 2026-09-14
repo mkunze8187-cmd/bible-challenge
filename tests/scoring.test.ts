@@ -1,6 +1,5 @@
 import { describe, expect, it } from "vitest";
 import {
-  scoreFirstLetterRecall,
   scoreFiveGuesses,
   scoreInitials,
   scoreProphecyRetry,
@@ -42,18 +41,6 @@ describe("scoring", () => {
     expect(scoreProphecyRetry(2)).toBe(3);
     expect(scoreProphecyRetry(3)).toBe(1);
     expect(scoreProphecyRetry(8)).toBe(1);
-  });
-
-  it("scores First Letter Recall proportionally out of ten", () => {
-    expect(scoreFirstLetterRecall(10, 10)).toBe(10);
-    expect(scoreFirstLetterRecall(5, 10)).toBe(5);
-    expect(scoreFirstLetterRecall(0, 10)).toBe(0);
-  });
-
-  it("rejects invalid First Letter Recall word counts", () => {
-    expect(() => scoreFirstLetterRecall(-1, 10)).toThrow("non-negative integer");
-    expect(() => scoreFirstLetterRecall(11, 10)).toThrow("cannot exceed");
-    expect(() => scoreFirstLetterRecall(0, 0)).toThrow("positive integer");
   });
 
   it("scores Verse Typing Race from WPM and accuracy", () => {

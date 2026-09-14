@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState, type CSSProperties, type KeyboardEvent as ReactKeyboardEvent } from "react";
 import bibleChallengeLogo from "./assets/bible-challenge-logo.svg";
 import { EventHomeControls } from "./components/EventHomeControls";
+import { HelpModal } from "./components/HelpModal";
 import { RatingModal } from "./components/RatingModal";
-import { StatsCardList } from "./components/StatsCardList";
+import { APP_HELP_CONTENT, GAME_HELP_CONTENT } from "./helpContent";
 import {
   AudioManager,
   DEFAULT_AUDIO_SETTINGS,
@@ -19,6 +20,7 @@ import {
 import {
   GAME_LIBRARY,
   answerBeforeOrAfter,
+  buildCryptogramBoard,
   buildMissingWordVerse,
   buildScriptureBoard,
   clearBibleAnagramAnswer,
@@ -26,6 +28,7 @@ import {
   continueGame,
   createSessionState,
   getBoardProgressLabel,
+  getBibleCryptogramRemainingLetters,
   getScriptureRemainingLetters,
   getStandings,
   getUniqueWinner,
@@ -36,6 +39,7 @@ import {
   passBeforeOrAfter,
   passBibleAnagram,
   passBibleBooksRelay,
+  passBibleCryptogramTurn,
   passBoardGuess,
   passChapterFinder,
   passCompleteVerse,
@@ -58,6 +62,9 @@ import {
   passVerseScramble,
   passWisdomMatch,
   passWhoSaidIt,
+  passWordLadderTurn,
+  removeLastWordLadderRung,
+  resolveWordLadderOnTimer,
   revealTimelineRound,
   selectBoardCard,
   selectProphecyCategory,
@@ -67,12 +74,13 @@ import {
   selectProverbCategoryCard,
   selectTwoTruthsStatement,
   submitBibleAnagram,
+  submitBibleCryptogramLetterGuess,
+  submitBibleCryptogramSolve,
   submitCompleteVerseChoice,
   submitBibleBooksRelay,
   submitBoardGuess,
   submitChapterFinderGuess,
   submitConnectionGroup,
-  submitFirstLetterRecall,
   submitFulfillmentFinderChoice,
   submitMessiahProphecyChoice,
   submitMissingWordGuess,
@@ -100,10 +108,10 @@ import {
   type BibleAnagramsState,
   type BibleBooksRelayState,
   type BibleConnectionsState,
+  type BibleCryptogramState,
   type BibleTimelineState,
   type ChapterFinderState,
   type CompleteVerseState,
-  type FirstLetterRecallState,
   type FulfillmentFinderState,
   type FiveGuessesState,
   type GameId,
@@ -147,7 +155,7 @@ interface FlashMessage {
 }
 
 type AppTheme = "classic" | "forest" | "ocean" | "plum" | "dawn" | "meadow" | "ruby";
-type SettingsTab = "appearance" | "players" | "timers" | "audio" | "feedback" | "content" | "event" | "stats";
+type SettingsTab = "appearance" | "players" | "timers" | "audio" | "feedback" | "content" | "event";
 type TimerPreset = "off" | "beginner" | "standard" | "advanced" | "expert" | "custom";
 type DisplayMode = "normal" | "projector";
 type ContentPackId =
@@ -172,9 +180,8 @@ interface FeedbackDraft {
 interface PersistedAppSettings {
   colorTheme: AppTheme;
   participantMode: ParticipantMode;
-  playerNames: string[];
-  playerColors: string[];
-  teams: TeamSetup[];
+  // playerNames/playerColors/teams are deliberately NOT persisted — every launch
+  // starts from a single default "Player 1," never restoring a previous roster.
   timerEnabled: boolean;
   challengeTimerSeconds: Record<GameId, number>;
   useVerseSecondsPerWord: boolean;
@@ -196,7 +203,7 @@ interface PersistedAppSettings {
 const PARTICIPANT_COLORS = ["#2f6f5f", "#8a5c24", "#69436d", "#285f73", "#9b4a36", "#5c6f2a"];
 const CONNECTION_GROUP_COLORS = ["#2f6f5f", "#8a5c24", "#69436d", "#285f73"];
 const PROPHECY_MATCH_COLOR_COUNT = 5;
-const DEFAULT_PLAYER_NAMES = ["Player One"];
+const DEFAULT_PLAYER_NAMES = ["Player 1"];
 const DEFAULT_PLAYER_COLORS = [PARTICIPANT_COLORS[0]];
 const APP_THEMES: AppTheme[] = ["classic", "forest", "ocean", "plum", "dawn", "meadow", "ruby"];
 const SETTINGS_TABS: { id: SettingsTab; label: string }[] = [
@@ -206,8 +213,7 @@ const SETTINGS_TABS: { id: SettingsTab; label: string }[] = [
   { id: "audio", label: "Audio" },
   { id: "feedback", label: "Feedback" },
   { id: "content", label: "Content" },
-  { id: "event", label: "Event" },
-  { id: "stats", label: "Stats" }
+  { id: "event", label: "Event" }
 ];
 const DEFAULT_TEAMS: TeamSetup[] = [
   {
@@ -258,10 +264,10 @@ const GAME_CONTENT_PACKS: Record<GameId, ContentPackId[]> = {
   "psalm-reference-finder": ["psalms-proverbs", "scripture"],
   "two-truths-and-a-lie": ["core"],
   "relay-verse-build": ["scripture"],
-  "first-letter-recall": ["scripture"],
   "verse-typing-race": ["scripture"],
   "word-ladder": ["core"],
-  "bible-anagrams": ["core"]
+  "bible-anagrams": ["core"],
+  "bible-cryptogram": ["scripture"]
 };
 const DEFAULT_CHALLENGE_TIMER_SECONDS: Record<GameId, number> = {
   "five-guesses": 30,
@@ -289,10 +295,10 @@ const DEFAULT_CHALLENGE_TIMER_SECONDS: Record<GameId, number> = {
   "psalm-reference-finder": 35,
   "two-truths-and-a-lie": 35,
   "relay-verse-build": 30,
-  "first-letter-recall": 90,
   "verse-typing-race": 60,
   "word-ladder": 30,
-  "bible-anagrams": 30
+  "bible-anagrams": 30,
+  "bible-cryptogram": 60
 };
 const DEFAULT_VERSE_SCRAMBLE_SECONDS_PER_WORD = 6;
 const DIFFICULTY_FILTERS: Array<{ id: DifficultyFilter; label: string }> = [
@@ -322,8 +328,8 @@ const VERSE_TIMER_GAMES = new Set<GameId>([
   "psalm-theme",
   "psalm-reference-finder",
   "relay-verse-build",
-  "first-letter-recall",
-  "verse-typing-race"
+  "verse-typing-race",
+  "bible-cryptogram"
 ]);
 const QUICK_CHOICE_TIMER_GAMES = new Set<GameId>([
   "before-or-after",
@@ -347,7 +353,7 @@ function getActiveGuessKey(state: SessionState | null): string | null {
     return null;
   }
 
-  if (state.gameId === "scripture-puzzles") {
+  if (state.gameId === "scripture-puzzles" || state.gameId === "bible-cryptogram") {
     return state.currentPrompt.isComplete
       ? null
       : `${state.gameId}-${state.roundIndex}-${state.turnIndex}-${state.currentPrompt.phase}-${state.currentPrompt.attemptedLetters.join("")}`;
@@ -369,12 +375,17 @@ function getActiveGuessKey(state: SessionState | null): string | null {
     state.gameId === "psalm-theme" ||
     state.gameId === "psalm-reference-finder" ||
     state.gameId === "two-truths-and-a-lie" ||
-    state.gameId === "first-letter-recall" ||
     state.gameId === "verse-typing-race" ||
-    state.gameId === "word-ladder" ||
     state.gameId === "bible-anagrams"
   ) {
     return state.currentPrompt.phase === "active" ? `${state.gameId}-${state.roundIndex}-${state.turnIndex}` : null;
+  }
+
+  if (state.gameId === "word-ladder") {
+    // Deliberately NOT turn-scoped (no "-turnIndex" suffix): the whole round shares one
+    // timer, so the countdown must not reset just because a guess or Pass moved turnIndex —
+    // only starting a new ladder (roundIndex change) resets it.
+    return state.currentPrompt.phase === "active" ? `${state.gameId}-${state.roundIndex}` : null;
   }
 
   if (state.gameId === "relay-verse-build") {
@@ -444,7 +455,7 @@ function getRoundStartKey(state: SessionState | null): string | null {
     return state.currentPrompt.phase === "resolved" ? null : `${state.sessionTitle}-${state.currentPrompt.cardId}`;
   }
 
-  if (state.gameId === "scripture-puzzles") {
+  if (state.gameId === "scripture-puzzles" || state.gameId === "bible-cryptogram") {
     return state.currentPrompt.isComplete ? null : `${state.sessionTitle}-${state.roundIndex}`;
   }
 
@@ -542,10 +553,10 @@ function getCurrentParticipantId(state: SessionState): string | null {
     state.gameId === "psalm-reference-finder" ||
     state.gameId === "two-truths-and-a-lie" ||
     state.gameId === "relay-verse-build" ||
-    state.gameId === "first-letter-recall" ||
     state.gameId === "verse-typing-race" ||
     state.gameId === "word-ladder" ||
-    state.gameId === "bible-anagrams"
+    state.gameId === "bible-anagrams" ||
+    state.gameId === "bible-cryptogram"
   ) {
     return state.participants[state.turnIndex]?.id ?? null;
   }
@@ -1215,41 +1226,6 @@ function recordGameStarted(
   };
 }
 
-function formatPercent(numerator: number, denominator: number): string {
-  if (denominator <= 0) {
-    return "0%";
-  }
-
-  return `${Math.round((numerator / denominator) * 100)}%`;
-}
-
-function formatAverageScore(stats: GamePlayStats): string {
-  if (stats.completedPlays <= 0) {
-    return "0";
-  }
-
-  return (stats.totalScore / stats.completedPlays).toFixed(1);
-}
-
-function formatLastPlayed(value: string | null): string {
-  if (!value) {
-    return "Never";
-  }
-
-  const date = new Date(value);
-
-  if (Number.isNaN(date.getTime())) {
-    return "Unknown";
-  }
-
-  return date.toLocaleString(undefined, {
-    month: "short",
-    day: "numeric",
-    hour: "numeric",
-    minute: "2-digit"
-  });
-}
-
 function forceResolveForHost(state: SessionState): ActionResult {
   const nextState = structuredClone(state);
   const message = "Host revealed the answer.";
@@ -1353,38 +1329,6 @@ function cleanGameIdList(value: unknown): GameId[] {
     seen.add(entry);
     return true;
   });
-}
-
-function cleanStringList(value: unknown, fallback: string[]): string[] {
-  if (!Array.isArray(value)) {
-    return fallback;
-  }
-
-  const cleaned = value.filter((entry): entry is string => typeof entry === "string");
-  return cleaned.length > 0 ? cleaned : fallback;
-}
-
-function cleanTeams(value: unknown): TeamSetup[] {
-  if (!Array.isArray(value)) {
-    return DEFAULT_TEAMS;
-  }
-
-  const cleaned = value
-    .map((entry, index): TeamSetup | null => {
-      if (!entry || typeof entry !== "object") {
-        return null;
-      }
-
-      const team = entry as Partial<TeamSetup>;
-      return {
-        teamName: typeof team.teamName === "string" && team.teamName.trim() ? team.teamName : `Team ${index + 1}`,
-        members: cleanStringList(team.members, ["New Member"]),
-        color: typeof team.color === "string" ? team.color : getNextParticipantColor(index)
-      };
-    })
-    .filter((entry): entry is TeamSetup => entry !== null);
-
-  return cleaned.length > 0 ? cleaned : DEFAULT_TEAMS;
 }
 
 function cleanSavedEventDefinitions(value: unknown): SavedEventDefinition[] {
@@ -1611,9 +1555,6 @@ function cleanAppSettings(value: unknown): Partial<PersistedAppSettings> {
   return {
     colorTheme: APP_THEMES.includes(input.colorTheme as AppTheme) ? input.colorTheme : "classic",
     participantMode: input.participantMode === "teams" ? "teams" : "individual",
-    playerNames: cleanStringList(input.playerNames, DEFAULT_PLAYER_NAMES),
-    playerColors: cleanStringList(input.playerColors, DEFAULT_PLAYER_COLORS),
-    teams: cleanTeams(input.teams),
     timerEnabled: typeof input.timerEnabled === "boolean" ? input.timerEnabled : true,
     challengeTimerSeconds: timers,
     useVerseSecondsPerWord:
@@ -1642,6 +1583,11 @@ function cleanAppSettings(value: unknown): Partial<PersistedAppSettings> {
 
 export function App() {
   const [gameId, setGameId] = useState<GameId>("five-guesses");
+  // gameId itself always holds a valid GameId (used for timer/setup lookups before any
+  // card has ever been picked), but the home screen should not visually highlight any
+  // card as "active" until the player has actually chosen one — hasChosenGame tracks
+  // that separately rather than making gameId nullable everywhere it's read.
+  const [hasChosenGame, setHasChosenGame] = useState(false);
   const [isSetupOpen, setIsSetupOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [infoGameId, setInfoGameId] = useState<GameId | null>(null);
@@ -1696,6 +1642,8 @@ export function App() {
   const [sessionState, setSessionState] = useState<SessionState | null>(null);
   const [lastUndoState, setLastUndoState] = useState<SessionState | null>(null);
   const [isHostControlsOpen, setIsHostControlsOpen] = useState(false);
+  const [isGameHelpOpen, setIsGameHelpOpen] = useState(false);
+  const [isAppHelpOpen, setIsAppHelpOpen] = useState(false);
   const [isTimerPaused, setIsTimerPaused] = useState(false);
   const [manualScoreInput, setManualScoreInput] = useState("");
   const [dismissedStudyNoteKey, setDismissedStudyNoteKey] = useState<string | null>(null);
@@ -1703,6 +1651,8 @@ export function App() {
   const [wordLadderDictionary, setWordLadderDictionary] = useState<ReadonlySet<string> | null>(null);
   const [scriptureLetter, setScriptureLetter] = useState("");
   const [scriptureSolveText, setScriptureSolveText] = useState("");
+  const [cryptogramLetter, setCryptogramLetter] = useState("");
+  const [cryptogramSolveText, setCryptogramSolveText] = useState("");
   const [flashMessage, setFlashMessage] = useState<FlashMessage>({
     tone: "info",
     text: "Choose a game, choose player mode, then start."
@@ -1808,15 +1758,9 @@ export function App() {
         if (cleaned.participantMode) {
           setParticipantMode(cleaned.participantMode);
         }
-        if (cleaned.playerNames) {
-          setPlayerNames(cleaned.playerNames);
-        }
-        if (cleaned.playerColors) {
-          setPlayerColors(cleaned.playerColors);
-        }
-        if (cleaned.teams) {
-          setTeams(cleaned.teams);
-        }
+        // playerNames/playerColors/teams are deliberately NOT restored here — every
+        // launch starts from the in-memory defaults (a single "Player 1") regardless
+        // of what was set up last session, per the app's player-persistence policy.
         if (typeof cleaned.timerEnabled === "boolean") {
           setTimerEnabled(cleaned.timerEnabled);
         }
@@ -1892,9 +1836,6 @@ export function App() {
     const settings: PersistedAppSettings = {
       colorTheme,
       participantMode,
-      playerNames,
-      playerColors,
-      teams,
       timerEnabled,
       challengeTimerSeconds,
       useVerseSecondsPerWord,
@@ -1937,13 +1878,10 @@ export function App() {
     displayMode,
     hasLoadedAppSettings,
     participantMode,
-    playerColors,
-    playerNames,
     savedEventDefinitions,
     selectedEventGameIds,
     showChallengeRatings,
     showStudyNotes,
-    teams,
     timerEnabled,
     timerPreset,
     useVerseSecondsPerWord,
@@ -2098,6 +2036,11 @@ export function App() {
     } else if (sessionState.gameId === "prophecy-clue-ladder") {
       handleAction(() => revealProphecyClueOnTimer(sessionState), null);
       didAutoPass = true;
+    } else if (sessionState.gameId === "word-ladder") {
+      // Resolves the whole ladder outright rather than passing to the next participant —
+      // the round timer covers the entire ladder, so expiry ends it, it doesn't hand off a
+      // fresh clock the way passWordLadderTurn's explicit steal does.
+      handleAction(() => resolveWordLadderOnTimer(sessionState), null);
     }
 
     if (didAutoPass) {
@@ -2406,6 +2349,7 @@ export function App() {
     }
 
     setGameId(mode);
+    setHasChosenGame(true);
     setIsSetupOpen(true);
   }
 
@@ -2911,22 +2855,6 @@ export function App() {
     });
   }
 
-  function clearGameStats() {
-    if (Object.keys(gameStats).length === 0) {
-      setSettingsWarning("There are no play statistics to clear.");
-      return;
-    }
-
-    if (!window.confirm("Clear all saved play statistics?")) {
-      return;
-    }
-
-    setGameStats({});
-    setRecordedStatsChallengeIds([]);
-    setSessionMisses({});
-    setSettingsWarning("Play statistics cleared.");
-  }
-
   function updatePlayerName(index: number, value: string) {
     setPlayerNames((current) => current.map((name, currentIndex) => (currentIndex === index ? value : name)));
   }
@@ -3059,18 +2987,6 @@ export function App() {
     (total, rating) => total + (rating?.ratingCount ?? 0),
     0
   );
-  const totalRecordedPlays = Object.values(gameStats).reduce((total, stats) => total + (stats?.totalPlays ?? 0), 0);
-  const totalRecordedMisses = Object.values(gameStats).reduce(
-    (total, stats) => total + (stats?.totalMissedPrompts ?? 0),
-    0
-  );
-  const totalCompletedPlays = Object.values(gameStats).reduce(
-    (total, stats) => total + (stats?.completedPlays ?? 0),
-    0
-  );
-  const statsRows = ALL_GAME_IDS.map((mode) => ({ mode, stats: gameStats[mode] }))
-    .filter((entry): entry is { mode: GameId; stats: GamePlayStats } => Boolean(entry.stats))
-    .sort((left, right) => right.stats.totalPlays - left.stats.totalPlays || GAME_LIBRARY[left.mode].label.localeCompare(GAME_LIBRARY[right.mode].label));
   const customGameIds = Array.from(
     new Set(customContentPacks.flatMap((pack) => pack.games.map((customGame) => customGame.gameType)))
   );
@@ -3136,6 +3052,9 @@ export function App() {
           >
             Feedback
           </button>
+          <button type="button" className="ghost-button" onClick={() => setIsAppHelpOpen(true)}>
+            Help
+          </button>
           <button type="button" className="ghost-button" onClick={() => setIsSettingsOpen(true)}>
             Settings
           </button>
@@ -3150,6 +3069,16 @@ export function App() {
           )}
         </div>
       </header>
+
+      {isAppHelpOpen ? (
+        <HelpModal
+          titleId="app-help-title"
+          title="Bible Challenge Help"
+          eyebrow="Application Help"
+          tabs={APP_HELP_CONTENT.tabs}
+          onClose={() => setIsAppHelpOpen(false)}
+        />
+      ) : null}
 
       {isSettingsOpen ? (
         <div className="modal-backdrop" role="presentation">
@@ -3776,42 +3705,6 @@ export function App() {
                   </div>
                 </div>
               ) : null}
-
-              {activeSettingsTab === "stats" ? (
-                <div
-                  id="settings-panel-stats"
-                  className="settings-panel"
-                  role="tabpanel"
-                  aria-labelledby="settings-tab-stats"
-                >
-                  <div className="static-card settings-card">
-                    <div className="settings-card-header">
-                      <div>
-                        <strong>Play Statistics</strong>
-                        <p className="settings-help">
-                          {totalRecordedPlays} started · {totalCompletedPlays} completed · {totalRecordedMisses} missed prompt
-                          {totalRecordedMisses === 1 ? "" : "s"} recorded.
-                        </p>
-                      </div>
-                      <button
-                        type="button"
-                        className="ghost-button"
-                        onClick={clearGameStats}
-                        disabled={totalRecordedPlays === 0}
-                      >
-                        Clear Stats
-                      </button>
-                    </div>
-                  </div>
-
-                  <StatsCardList
-                    rows={statsRows}
-                    formatLastPlayed={formatLastPlayed}
-                    formatAverageScore={formatAverageScore}
-                    formatPercent={formatPercent}
-                  />
-                </div>
-              ) : null}
             </div>
           </section>
         </div>
@@ -4027,7 +3920,7 @@ export function App() {
                 return (
                   <article
                     key={mode}
-                    className={`mode-card ${gameId === mode ? "mode-card-active" : ""} ${
+                    className={`mode-card ${hasChosenGame && gameId === mode ? "mode-card-active" : ""} ${
                       isEventUnavailable ? "mode-card-disabled" : ""
                     } ${hasBeenPlayed ? "mode-card-played" : ""}`}
                     style={{ "--card-accent": cardAccent } as CSSProperties}
@@ -4199,6 +4092,9 @@ export function App() {
                   <span className="pill pill-rating">{getRatingHeadingLabel(challengeRatings[sessionState.gameId])}</span>
                 ) : null}
               </div>
+              <button type="button" className="secondary-button" onClick={() => setIsGameHelpOpen(true)}>
+                Help
+              </button>
               <button type="button" className="secondary-button" onClick={() => setIsHostControlsOpen(true)}>
                 Host Controls
               </button>
@@ -4298,6 +4194,16 @@ export function App() {
                 </div>
               </section>
             </div>
+          ) : null}
+
+          {isGameHelpOpen ? (
+            <HelpModal
+              titleId="game-help-title"
+              title={GAME_LIBRARY[sessionState.gameId].label}
+              eyebrow="Game Help"
+              tabs={GAME_HELP_CONTENT[sessionState.gameId].tabs}
+              onClose={() => setIsGameHelpOpen(false)}
+            />
           ) : null}
 
           {shouldShowStudyNote && studyNoteContent ? (
@@ -4787,18 +4693,6 @@ export function App() {
                 onSkipWord={() => handleAction(() => passRelayWord(sessionState), "pass")}
                 onContinue={() => handleAction(() => continueGame(sessionState))}
               />
-            ) : sessionState.gameId === "first-letter-recall" ? (
-              <FirstLetterRecallView
-                state={sessionState}
-                guessText={guessText}
-                timerEnabled={timerEnabled}
-                timeRemaining={timeRemaining}
-                timerDurationSeconds={activeTimerSeconds}
-                isTimerExpired={timerEnabled && timeRemaining === 0}
-                onGuessChange={setGuessText}
-                onSubmit={() => handleAction(() => submitFirstLetterRecall(sessionState, guessText))}
-                onContinue={() => handleAction(() => continueGame(sessionState))}
-              />
             ) : sessionState.gameId === "verse-typing-race" ? (
               <VerseTypingRaceView
                 state={sessionState}
@@ -4819,6 +4713,8 @@ export function App() {
                 isTimerExpired={timerEnabled && timeRemaining === 0}
                 onGuessChange={setGuessText}
                 onSubmit={() => handleAction(() => submitWordLadderStepWithDictionary(sessionState, guessText))}
+                onRemoveLastRung={() => handleAction(() => removeLastWordLadderRung(sessionState))}
+                onPass={() => handleAction(() => passWordLadderTurn(sessionState))}
                 onContinue={() => handleAction(() => continueGame(sessionState))}
               />
             ) : sessionState.gameId === "bible-anagrams" ? (
@@ -4831,6 +4727,22 @@ export function App() {
                 onClear={() => handleAction(() => clearBibleAnagramAnswer(sessionState))}
                 onSubmit={() => handleAction(() => submitBibleAnagram(sessionState))}
                 onPass={() => handleAction(() => passBibleAnagram(sessionState), "pass")}
+                onContinue={() => handleAction(() => continueGame(sessionState))}
+              />
+            ) : sessionState.gameId === "bible-cryptogram" ? (
+              <BibleCryptogramView
+                state={sessionState}
+                cryptogramLetter={cryptogramLetter}
+                cryptogramSolveText={cryptogramSolveText}
+                timerEnabled={timerEnabled}
+                timeRemaining={timeRemaining}
+                timerDurationSeconds={activeTimerSeconds}
+                isTimerExpired={timerEnabled && timeRemaining === 0}
+                onCryptogramLetterChange={setCryptogramLetter}
+                onCryptogramSolveChange={setCryptogramSolveText}
+                onSubmitLetter={() => handleAction(() => submitBibleCryptogramLetterGuess(sessionState, cryptogramLetter))}
+                onSubmitSolve={() => handleAction(() => submitBibleCryptogramSolve(sessionState, cryptogramSolveText))}
+                onPass={() => handleAction(() => passBibleCryptogramTurn(sessionState), "pass")}
                 onContinue={() => handleAction(() => continueGame(sessionState))}
               />
             ) : (
@@ -5209,6 +5121,123 @@ function ScriptureView(props: {
                 onChange={(event) => onScriptureSolveChange(event.target.value)}
                 onKeyDown={(event) => submitOnEnter(event, onSubmitSolve, isTimerExpired)}
                 placeholder="Enter the full verse text"
+                disabled={isTimerExpired}
+              />
+              <div className="guess-zone">
+                <button type="button" className="primary-button" onClick={onSubmitSolve} disabled={isTimerExpired}>
+                  Submit Solve
+                </button>
+                <button type="button" className="secondary-button" onClick={onPass}>
+                  Pass
+                </button>
+              </div>
+            </div>
+          )}
+        </>
+      ) : (
+        <>
+          <div className="answer-panel">{state.currentPrompt.round.verseText}</div>
+          <button type="button" className="primary-button" onClick={onContinue}>
+            {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Next Round"}
+          </button>
+        </>
+      )}
+    </section>
+  );
+}
+
+function BibleCryptogramView(props: {
+  state: BibleCryptogramState;
+  cryptogramLetter: string;
+  cryptogramSolveText: string;
+  timerEnabled: boolean;
+  timeRemaining: number;
+  timerDurationSeconds: number;
+  isTimerExpired: boolean;
+  onCryptogramLetterChange: (value: string) => void;
+  onCryptogramSolveChange: (value: string) => void;
+  onSubmitLetter: () => void;
+  onSubmitSolve: () => void;
+  onPass: () => void;
+  onContinue: () => void;
+}) {
+  const {
+    state,
+    cryptogramLetter,
+    cryptogramSolveText,
+    timerEnabled,
+    timeRemaining,
+    timerDurationSeconds,
+    isTimerExpired,
+    onCryptogramLetterChange,
+    onCryptogramSolveChange,
+    onSubmitLetter,
+    onSubmitSolve,
+    onPass,
+    onContinue
+  } = props;
+
+  const isResolved = state.currentPrompt.isComplete;
+
+  return (
+    <section className="panel panel-stage">
+      <div className="section-header">
+        <div>
+          <p className="eyebrow">Round {state.roundIndex + 1}</p>
+          <h2>{state.currentPrompt.round.reference}</h2>
+        </div>
+        <div className="header-status">
+          {!isResolved ? (
+            <TimerBadge isEnabled={timerEnabled} timeRemaining={timeRemaining} durationSeconds={timerDurationSeconds} />
+          ) : null}
+          <span className="pill pill-accent">{state.currentPrompt.round.sourceTranslation}</span>
+        </div>
+      </div>
+
+      <div className="chip-row compact-row">
+        <span className="pill pill-muted">Theme: {state.currentPrompt.round.theme}</span>
+      </div>
+
+      <div className="scripture-screen">
+        {buildCryptogramBoard(state.currentPrompt.round.verseText, state.currentPrompt.cipherMap, state.currentPrompt.attemptedLetters)}
+      </div>
+
+      <div className="chip-row">
+        <span className="pill pill-muted">Remaining hidden letters: {getBibleCryptogramRemainingLetters(state)}</span>
+        <span className="pill pill-muted">
+          Solved letters:{" "}
+          {state.currentPrompt.attemptedLetters.length > 0
+            ? state.currentPrompt.attemptedLetters.join(", ").toUpperCase()
+            : "none"}
+        </span>
+      </div>
+
+      {!isResolved ? (
+        <>
+          {state.currentPrompt.phase === "letter" ? (
+            <div className="guess-zone">
+              <input
+                className="text-input"
+                maxLength={1}
+                value={cryptogramLetter}
+                onChange={(event) => onCryptogramLetterChange(event.target.value)}
+                onKeyDown={(event) => submitOnEnter(event, onSubmitLetter, isTimerExpired)}
+                placeholder="A-Z"
+                disabled={isTimerExpired}
+              />
+              <button type="button" className="primary-button" onClick={onSubmitLetter} disabled={isTimerExpired}>
+                Submit Letter
+              </button>
+            </div>
+          ) : (
+            <div className="solve-zone">
+              <textarea
+                className="text-area"
+                rows={2}
+                value={cryptogramSolveText}
+                onChange={(event) => onCryptogramSolveChange(event.target.value)}
+                onKeyDown={(event) => submitOnEnter(event, onSubmitSolve, isTimerExpired)}
+                placeholder="Enter the fully solved text"
                 disabled={isTimerExpired}
               />
               <div className="guess-zone">
@@ -6890,89 +6919,6 @@ function RelayVerseBuildView(props: {
   );
 }
 
-function FirstLetterRecallView(props: {
-  state: FirstLetterRecallState;
-  guessText: string;
-  timerEnabled: boolean;
-  timeRemaining: number;
-  timerDurationSeconds: number;
-  isTimerExpired: boolean;
-  onGuessChange: (value: string) => void;
-  onSubmit: () => void;
-  onContinue: () => void;
-}) {
-  const { state, guessText, timerEnabled, timeRemaining, timerDurationSeconds, isTimerExpired, onGuessChange, onSubmit, onContinue } = props;
-  const prompt = state.currentPrompt;
-  const isResolved = prompt.phase === "resolved";
-  const actualWords = prompt.round.verseText.trim().split(/\s+/).filter(Boolean);
-  const guessedWords = guessText.trim().split(/\s+/).filter(Boolean);
-
-  return (
-    <section className="panel panel-stage">
-      <div className="section-header">
-        <div>
-          <p className="eyebrow">Round {state.roundIndex + 1}</p>
-          <h2>{prompt.round.reference}</h2>
-        </div>
-        <div className="header-status">
-          {!isResolved ? <TimerBadge isEnabled={timerEnabled} timeRemaining={timeRemaining} durationSeconds={timerDurationSeconds} /> : null}
-          <span className="pill pill-accent">{prompt.round.sourceTranslation}</span>
-        </div>
-      </div>
-
-      <div className="chip-row compact-row">
-        <span className="pill pill-muted">Theme: {prompt.round.theme}</span>
-        <span className="pill pill-muted">{prompt.totalWordCount} words</span>
-      </div>
-
-      <blockquote className="verse-card verse-card-missing">{prompt.scaffold}</blockquote>
-
-      {isResolved ? (
-        <>
-          <div className={`answer-panel ${prompt.wasCorrect ? "answer-panel-correct" : ""}`}>
-            <span>Full Verse</span>
-            <strong>
-              {actualWords.map((word, index) => (
-                <span
-                  key={`${word}-${index}`}
-                  className={normalizeWordForDisplay(guessedWords[index]) === normalizeWordForDisplay(word) ? "word-correct" : "word-incorrect"}
-                >
-                  {word}{" "}
-                </span>
-              ))}
-            </strong>
-            <p>
-              {prompt.correctWordCount ?? 0} of {prompt.totalWordCount} words recalled. {prompt.round.teachingNote}
-            </p>
-          </div>
-          <button type="button" className="primary-button" onClick={onContinue}>
-            {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Continue"}
-          </button>
-        </>
-      ) : (
-        <div className="guess-zone">
-          <textarea
-            className="text-area"
-            rows={3}
-            value={guessText}
-            onChange={(event) => onGuessChange(event.target.value)}
-            onKeyDown={(event) => submitOnEnter(event, onSubmit, isTimerExpired)}
-            placeholder="Type the full verse from the scaffold above"
-            disabled={isTimerExpired}
-          />
-          <button type="button" className="primary-button" onClick={onSubmit} disabled={isTimerExpired}>
-            Submit Verse
-          </button>
-        </div>
-      )}
-    </section>
-  );
-}
-
-function normalizeWordForDisplay(value: string | undefined): string {
-  return (value ?? "").toLowerCase().replace(/[^a-z0-9]+/g, "");
-}
-
 function VerseTypingRaceView(props: {
   state: VerseTypingRaceState;
   timerEnabled: boolean;
@@ -7084,11 +7030,26 @@ function WordLadderView(props: {
   isTimerExpired: boolean;
   onGuessChange: (value: string) => void;
   onSubmit: () => void;
+  onRemoveLastRung: () => void;
+  onPass: () => void;
   onContinue: () => void;
 }) {
-  const { state, guessText, timerEnabled, timeRemaining, timerDurationSeconds, isTimerExpired, onGuessChange, onSubmit, onContinue } = props;
+  const {
+    state,
+    guessText,
+    timerEnabled,
+    timeRemaining,
+    timerDurationSeconds,
+    isTimerExpired,
+    onGuessChange,
+    onSubmit,
+    onRemoveLastRung,
+    onPass,
+    onContinue
+  } = props;
   const prompt = state.currentPrompt;
   const isResolved = prompt.phase === "resolved";
+  const canRemoveRung = prompt.chain.length > 1;
 
   return (
     <section className="panel panel-stage">
@@ -7118,11 +7079,27 @@ function WordLadderView(props: {
       </div>
 
       <div className="chip-row compact-row">
-        {prompt.chain.map((word, index) => (
-          <span key={`${word}-${index}`} className="pill pill-muted">
-            {word.toUpperCase()}
-          </span>
-        ))}
+        {prompt.chain.map((word, index) => {
+          const isLastRung = index === prompt.chain.length - 1;
+          const isStartWord = index === 0;
+
+          return (
+            <span key={`${word}-${index}`} className="pill pill-muted word-ladder-rung">
+              {word.toUpperCase()}
+              {!isResolved && isLastRung && !isStartWord ? (
+                <button
+                  type="button"
+                  className="word-ladder-rung-remove"
+                  onClick={onRemoveLastRung}
+                  aria-label={`Remove "${word}" from the ladder`}
+                  title="Remove this rung"
+                >
+                  ×
+                </button>
+              ) : null}
+            </span>
+          );
+        })}
       </div>
 
       {isResolved ? (
@@ -7148,6 +7125,12 @@ function WordLadderView(props: {
           />
           <button type="button" className="primary-button" onClick={onSubmit} disabled={isTimerExpired}>
             Submit Word
+          </button>
+          <button type="button" className="secondary-button" onClick={onRemoveLastRung} disabled={!canRemoveRung}>
+            Undo Last Rung
+          </button>
+          <button type="button" className="secondary-button" onClick={onPass}>
+            Pass to Next
           </button>
         </div>
       )}

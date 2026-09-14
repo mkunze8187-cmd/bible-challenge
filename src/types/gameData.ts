@@ -40,10 +40,10 @@ export type GameId =
   | "psalm-reference-finder"
   | "two-truths-and-a-lie"
   | "relay-verse-build"
-  | "first-letter-recall"
   | "verse-typing-race"
   | "word-ladder"
-  | "bible-anagrams";
+  | "bible-anagrams"
+  | "bible-cryptogram";
 
 export interface FiveGuessesRound {
   id: string;
@@ -397,18 +397,6 @@ export interface RelayVerseBuildRound {
 
 export type RelayVerseBuildPack = SessionPackBase<RelayVerseBuildRound>;
 
-export interface FirstLetterRecallRound {
-  id: string;
-  reference: string;
-  sourceTranslation: "KJV";
-  theme: string;
-  verseText: string;
-  difficulty: PsalmsProverbsDifficulty;
-  teachingNote: string;
-}
-
-export type FirstLetterRecallPack = SessionPackBase<FirstLetterRecallRound>;
-
 export interface VerseTypingRaceRound {
   id: string;
   reference: string;
@@ -450,3 +438,15 @@ export interface BibleAnagramRound {
 }
 
 export type BibleAnagramsPack = SessionPackBase<BibleAnagramRound>;
+
+export interface BibleCryptogramRound {
+  id: string;
+  reference: string;
+  sourceTranslation: "KJV";
+  theme: string;
+  verseText: string;
+  difficulty: PsalmsProverbsDifficulty;
+  teachingNote: string;
+}
+
+export type BibleCryptogramPack = SessionPackBase<BibleCryptogramRound>;

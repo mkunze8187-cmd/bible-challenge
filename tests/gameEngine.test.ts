@@ -4,17 +4,23 @@ import {
   getCurrentActorLabel,
   moveBibleAnagramTile,
   passBibleAnagram,
+  passBibleCryptogramTurn,
   passRelayWord,
   passScriptureTurn,
+  passWordLadderTurn,
+  removeLastWordLadderRung,
   selectBoardCard,
   selectTwoTruthsStatement,
   submitBibleAnagram,
+  submitBibleCryptogramLetterGuess,
+  submitBibleCryptogramSolve,
   submitBoardGuess,
   submitRelayWord,
   submitScriptureLetterGuess,
   submitScriptureSolve,
   submitWordLadderStep,
   type BibleAnagramsState,
+  type BibleCryptogramState,
   type FiveGuessesState,
   type RelayVerseBuildState,
   type ScriptureState,
@@ -275,7 +281,7 @@ function makeWordLadderState(): WordLadderState {
       kind: "word-ladder",
       round,
       chain: ["cat"],
-      totalMissCount: 0,
+      startTurnIndex: 0,
       phase: "active",
       wasCorrect: null,
       resolvedMessage: null
@@ -328,6 +334,57 @@ function makeBibleAnagramsState(): BibleAnagramsState {
       phase: "active",
       wasCorrect: null,
       resolvedMessage: null
+    }
+  };
+}
+
+function makeBibleCryptogramState(verseText = "CAT"): BibleCryptogramState {
+  const round = {
+    id: "bc-test-1",
+    reference: "Test 1:1",
+    sourceTranslation: "KJV" as const,
+    theme: "Test",
+    verseText,
+    difficulty: "easy" as const,
+    teachingNote: "Note."
+  };
+
+  // A fixed, deterministic cipher map for testing — every real letter maps to a
+  // different real letter, shifted by one (a->b, b->c, ... z->a), so no letter maps to
+  // itself and the mapping is easy to reason about in assertions.
+  const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+  const cipherMap: Record<string, string> = {};
+  alphabet.forEach((letter, index) => {
+    cipherMap[letter] = alphabet[(index + 1) % alphabet.length];
+  });
+
+  return {
+    gameId: "bible-cryptogram",
+    displayName: "Bible Cryptogram",
+    sessionTitle: "Test",
+    sessionTheme: "Test",
+    participantMode: "individual",
+    participants: structuredClone(participants),
+    stats: {
+      "player-anna-1": stats(),
+      "player-ben-2": stats()
+    },
+    activityLog: [],
+    status: "in-progress",
+    turnIndex: 0,
+    totalPrompts: 1,
+    resolvedPrompts: 0,
+    roundIndex: 0,
+    rounds: [round],
+    currentPrompt: {
+      kind: "bible-cryptogram",
+      round,
+      cipherMap,
+      attemptedLetters: [],
+      phase: "letter",
+      isComplete: false,
+      winnerParticipantId: null,
+      completedReason: null
     }
   };
 }
@@ -410,6 +467,61 @@ describe("gameEngine transitions", () => {
     expect(state.resolvedPrompts).toBe(1);
   });
 
+  it("records Bible Cryptogram letter points and requires solve or pass before another letter", () => {
+    let state = makeBibleCryptogramState("CAT");
+
+    state = submitBibleCryptogramLetterGuess(state, "c").nextState as BibleCryptogramState;
+
+    expect(state.currentPrompt.phase).toBe("solve");
+    expect(state.currentPrompt.attemptedLetters).toEqual(["c"]);
+    expect(state.stats["player-anna-1"].totalScore).toBe(1);
+    expect(state.stats["player-anna-1"].letterRevealPoints).toBe(1);
+    expect(() => submitBibleCryptogramLetterGuess(state, "a")).toThrow("Solve or pass");
+  });
+
+  it("does not lock guesses to the cipher and reveals every occurrence of a correctly guessed letter", () => {
+    let state = makeBibleCryptogramState("CAT");
+
+    // "z" isn't in "CAT" at all, so it must miss regardless of what the cipher maps it to
+    // — guesses are checked against the real plaintext, never against the cipher mapping.
+    state = submitBibleCryptogramLetterGuess(state, "z").nextState as BibleCryptogramState;
+    expect(state.currentPrompt.attemptedLetters).toEqual(["z"]);
+    expect(state.stats["player-anna-1"].incorrectAttempts).toBe(1);
+  });
+
+  it("rotates Bible Cryptogram turns on pass and records incorrect solve attempts", () => {
+    let state = makeBibleCryptogramState("CAT");
+
+    state = submitBibleCryptogramLetterGuess(state, "z").nextState as BibleCryptogramState;
+    state = passBibleCryptogramTurn(state).nextState as BibleCryptogramState;
+
+    expect(state.currentPrompt.phase).toBe("letter");
+    expect(state.turnIndex).toBe(1);
+    expect(state.participants[0].turnCounter).toBe(1);
+
+    state = submitBibleCryptogramLetterGuess(state, "c").nextState as BibleCryptogramState;
+    state = submitBibleCryptogramSolve(state, "wrong").nextState as BibleCryptogramState;
+
+    expect(state.turnIndex).toBe(0);
+    expect(state.stats["player-ben-2"].incorrectAttempts).toBe(1);
+    expect(state.participants[1].turnCounter).toBe(1);
+  });
+
+  it("marks the Bible Cryptogram game completed after continuing from the final solved round", () => {
+    let state = makeBibleCryptogramState("CAT");
+
+    state = submitBibleCryptogramLetterGuess(state, "c").nextState as BibleCryptogramState;
+    state = submitBibleCryptogramSolve(state, "CAT").nextState as BibleCryptogramState;
+    expect(state.currentPrompt.isComplete).toBe(true);
+    expect(state.currentPrompt.winnerParticipantId).toBe("player-anna-1");
+    expect(state.stats["player-anna-1"].correctFullSolves).toBe(1);
+
+    state = continueGame(state).nextState as BibleCryptogramState;
+
+    expect(state.status).toBe("completed");
+    expect(state.resolvedPrompts).toBe(1);
+  });
+
   it("resolves Two Truths and a Lie when the lie is picked and steps down score on misses", () => {
     let state = makeTwoTruthsState();
 
@@ -447,19 +559,19 @@ describe("gameEngine transitions", () => {
     expect(state.turnIndex).toBe(1);
   });
 
-  it("scores a guess changing more than one letter as a miss, then accepts a valid step", () => {
+  it("scores a guess changing more than one letter as a miss without passing the turn, then accepts a valid step", () => {
     let state = makeWordLadderState();
     const dictionary = new Set(["cat", "cot", "cog", "dog", "bat"]);
 
     state = submitWordLadderStep(state, "cog", dictionary).nextState as WordLadderState;
     expect(state.currentPrompt.chain).toEqual(["cat"]);
-    expect(state.currentPrompt.totalMissCount).toBe(1);
-    expect(state.turnIndex).toBe(1);
+    expect(state.turnIndex).toBe(0);
+    expect(state.stats["player-anna-1"].incorrectAttempts).toBe(1);
 
     state = submitWordLadderStep(state, "cot", dictionary).nextState as WordLadderState;
     expect(state.currentPrompt.chain).toEqual(["cat", "cot"]);
     expect(state.turnIndex).toBe(0);
-    expect(state.stats["player-ben-2"].wordLadderStepsCompleted).toBe(1);
+    expect(state.stats["player-anna-1"].wordLadderStepsCompleted).toBe(1);
   });
 
   it("throws when a Word Ladder guess repeats a word already in the chain", () => {
@@ -469,7 +581,7 @@ describe("gameEngine transitions", () => {
     expect(() => submitWordLadderStep(state, "cat", dictionary)).toThrow();
   });
 
-  it("abandons a stalled Word Ladder round after the miss cap and reveals a valid path", () => {
+  it("keeps the same player on unlimited Word Ladder misses until they pass", () => {
     let state = makeWordLadderState();
     const dictionary = new Set(["cat"]);
 
@@ -477,6 +589,44 @@ describe("gameEngine transitions", () => {
       state = submitWordLadderStep(state, "zzz", dictionary).nextState as WordLadderState;
     }
 
+    expect(state.currentPrompt.phase).toBe("active");
+    expect(state.turnIndex).toBe(0);
+    expect(state.stats["player-anna-1"].incorrectAttempts).toBe(6);
+  });
+
+  it("removes the last rung from a Word Ladder chain but never the starting word", () => {
+    let state = makeWordLadderState();
+    const dictionary = new Set(["cat", "cot"]);
+
+    state = submitWordLadderStep(state, "cot", dictionary).nextState as WordLadderState;
+    expect(state.currentPrompt.chain).toEqual(["cat", "cot"]);
+
+    state = removeLastWordLadderRung(state).nextState as WordLadderState;
+    expect(state.currentPrompt.chain).toEqual(["cat"]);
+
+    expect(() => removeLastWordLadderRung(state)).toThrow("starting word");
+  });
+
+  it("passes the Word Ladder turn to the next participant without resetting the chain", () => {
+    let state = makeWordLadderState();
+    const dictionary = new Set(["cat", "cot"]);
+
+    state = submitWordLadderStep(state, "cot", dictionary).nextState as WordLadderState;
+    state = passWordLadderTurn(state).nextState as WordLadderState;
+
+    expect(state.turnIndex).toBe(1);
+    expect(state.currentPrompt.phase).toBe("active");
+    expect(state.currentPrompt.chain).toEqual(["cat", "cot"]);
+  });
+
+  it("reveals the path once every participant has passed on a stalled Word Ladder round", () => {
+    let state = makeWordLadderState();
+
+    state = passWordLadderTurn(state).nextState as WordLadderState;
+    expect(state.currentPrompt.phase).toBe("active");
+    expect(state.turnIndex).toBe(1);
+
+    state = passWordLadderTurn(state).nextState as WordLadderState;
     expect(state.currentPrompt.phase).toBe("resolved");
     expect(state.currentPrompt.wasCorrect).toBe(false);
     expect(state.currentPrompt.resolvedMessage).toContain("cat");

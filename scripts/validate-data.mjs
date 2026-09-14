@@ -33,10 +33,10 @@ const files = [
   { fileName: "psalm-reference-finder.json", game: "psalm-reference-finder" },
   { fileName: "two-truths-and-a-lie.json", game: "two-truths-and-a-lie" },
   { fileName: "relay-verse-build.json", game: "relay-verse-build" },
-  { fileName: "first-letter-recall.json", game: "first-letter-recall" },
   { fileName: "verse-typing-race.json", game: "verse-typing-race" },
   { fileName: "word-ladder.json", game: "word-ladder" },
-  { fileName: "bible-anagrams.json", game: "bible-anagrams" }
+  { fileName: "bible-anagrams.json", game: "bible-anagrams" },
+  { fileName: "bible-cryptogram.json", game: "bible-cryptogram" }
 ];
 
 const failures = [];
@@ -714,8 +714,18 @@ function validateRelayVerseBuild(pack) {
   validateVerseRound(pack, "relay-verse-build.json", "rvb-");
 }
 
-function validateFirstLetterRecall(pack) {
-  validateVerseRound(pack, "first-letter-recall.json", "flr-");
+function validateBibleCryptogram(pack) {
+  validateVerseRound(pack, "bible-cryptogram.json", "bc-");
+
+  // Cryptogram content deliberately spans short names (easy) through longer verse-like
+  // text (hard), not one fixed length like the other verse-round games — so instead of a
+  // word-count band, just guard against a degenerate entry with too few distinct letters
+  // to make a real substitution puzzle.
+  const rounds = getAllRounds(pack);
+  rounds.forEach((round) => {
+    const distinctLetters = new Set(round.verseText.toLowerCase().replace(/[^a-z]/g, "").split(""));
+    ensure(distinctLetters.size >= 4, `${round.id}: verseText needs at least 4 distinct letters to form a cryptogram.`);
+  });
 }
 
 function validateVerseTypingRace(pack) {
@@ -1067,9 +1077,6 @@ for (const { fileName, game } of files) {
   } else if (fileName === "relay-verse-build.json") {
     validatePack(pack, game, fileName);
     validateRelayVerseBuild(pack);
-  } else if (fileName === "first-letter-recall.json") {
-    validatePack(pack, game, fileName);
-    validateFirstLetterRecall(pack);
   } else if (fileName === "verse-typing-race.json") {
     validatePack(pack, game, fileName);
     validateVerseTypingRace(pack);
@@ -1079,6 +1086,9 @@ for (const { fileName, game } of files) {
   } else if (fileName === "bible-anagrams.json") {
     validatePack(pack, game, fileName);
     validateBibleAnagrams(pack);
+  } else if (fileName === "bible-cryptogram.json") {
+    validatePack(pack, game, fileName);
+    validateBibleCryptogram(pack);
   }
 }
 
@@ -1088,7 +1098,7 @@ validateWordLadderDictionary(wordLadderDictionaryPack);
 const gameEngineSource = await readFile(path.resolve(__dirname, "../src/lib/gameEngine.ts"), "utf8");
 const appSource = await readFile(path.resolve(__dirname, "../src/renderer/App.tsx"), "utf8");
 const styleSource = await readFile(path.resolve(__dirname, "../src/renderer/styles.css"), "utf8");
-const newGames = ["bible-anagrams"];
+const newGames = ["bible-anagrams", "bible-cryptogram"];
 
 newGames.forEach((game) => {
   ensure(gameEngineSource.includes(`"${game}"`), `${game}: missing from game engine library or state handling.`);

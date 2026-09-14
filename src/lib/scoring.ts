@@ -34,22 +34,6 @@ export function scoreProphecyRetry(wrongGuessCount: number): number {
   return wrongGuessCount >= 3 ? 1 : 5 - wrongGuessCount;
 }
 
-export function scoreFirstLetterRecall(correctWordCount: number, totalWordCount: number): number {
-  if (!Number.isInteger(correctWordCount) || correctWordCount < 0) {
-    throw new Error("correctWordCount must be a non-negative integer.");
-  }
-
-  if (!Number.isInteger(totalWordCount) || totalWordCount <= 0) {
-    throw new Error("totalWordCount must be a positive integer.");
-  }
-
-  if (correctWordCount > totalWordCount) {
-    throw new Error("correctWordCount cannot exceed totalWordCount.");
-  }
-
-  return Math.round((correctWordCount / totalWordCount) * 10);
-}
-
 export function scoreVerseTypingRace(wpm: number, accuracy: number): number {
   if (!Number.isFinite(wpm) || wpm < 0) {
     throw new Error("wpm must be a non-negative number.");
