@@ -381,7 +381,6 @@ function makeBibleCryptogramState(verseText = "CAT"): BibleCryptogramState {
       round,
       cipherMap,
       attemptedLetters: [],
-      phase: "letter",
       isComplete: false,
       winnerParticipantId: null,
       completedReason: null
@@ -467,16 +466,20 @@ describe("gameEngine transitions", () => {
     expect(state.resolvedPrompts).toBe(1);
   });
 
-  it("records Bible Cryptogram letter points and requires solve or pass before another letter", () => {
+  it("records Bible Cryptogram letter points and allows guessing more letters without solving or passing", () => {
     let state = makeBibleCryptogramState("CAT");
 
     state = submitBibleCryptogramLetterGuess(state, "c").nextState as BibleCryptogramState;
 
-    expect(state.currentPrompt.phase).toBe("solve");
     expect(state.currentPrompt.attemptedLetters).toEqual(["c"]);
     expect(state.stats["player-anna-1"].totalScore).toBe(1);
     expect(state.stats["player-anna-1"].letterRevealPoints).toBe(1);
-    expect(() => submitBibleCryptogramLetterGuess(state, "a")).toThrow("Solve or pass");
+
+    // Unlike Verse Reveal, a letter guess never forces a solve-or-pass before the next one
+    // — the same player can keep filling in letters freely.
+    state = submitBibleCryptogramLetterGuess(state, "a").nextState as BibleCryptogramState;
+    expect(state.currentPrompt.attemptedLetters).toEqual(["c", "a"]);
+    expect(state.turnIndex).toBe(0);
   });
 
   it("does not lock guesses to the cipher and reveals every occurrence of a correctly guessed letter", () => {
@@ -495,7 +498,6 @@ describe("gameEngine transitions", () => {
     state = submitBibleCryptogramLetterGuess(state, "z").nextState as BibleCryptogramState;
     state = passBibleCryptogramTurn(state).nextState as BibleCryptogramState;
 
-    expect(state.currentPrompt.phase).toBe("letter");
     expect(state.turnIndex).toBe(1);
     expect(state.participants[0].turnCounter).toBe(1);
 

@@ -734,9 +734,10 @@ export const GAME_HELP_CONTENT: Record<GameId, GameHelpContent> = {
         label: "How to Play",
         body: [
           "A Bible name, phrase, or short verse is shown with every letter substituted by a different letter, using a fresh random cipher each round.",
-          "Pick a cipher letter and guess which real letter it stands for. A correct guess reveals every occurrence of that letter throughout the puzzle at once.",
-          "An incorrect guess reveals nothing. You can also attempt to solve the whole puzzle at once for a bigger bonus.",
-          "Turns rotate automatically after each letter guess or solve attempt."
+          "A grid lists every cipher letter that appears in the puzzle. Type your guess for the real letter next to any cipher letter you want to try.",
+          "A correct guess reveals every occurrence of that letter throughout the puzzle at once, and its row is marked solved. An incorrect guess reveals nothing.",
+          "You can guess as many letters as you want, in any order, on your turn — there's no need to solve or pass between guesses.",
+          "You can also attempt to solve the whole puzzle at once for a bigger bonus. A wrong full-solve attempt passes the turn to the next player or team; a correct one wins the round."
         ]
       },
       {
@@ -745,7 +746,7 @@ export const GAME_HELP_CONTENT: Record<GameId, GameHelpContent> = {
         body: [
           "Each correct letter guess scores 1 point for every currently hidden letter it reveals.",
           "A correct full solve scores 10 points plus 1 point for every letter still hidden at that moment — so solving early is worth more.",
-          "An incorrect letter guess or an incorrect full solve scores 0."
+          "An incorrect letter guess scores 0 and doesn't cost you your turn. An incorrect full solve also scores 0, but does pass the turn to the next player or team."
         ]
       },
       {

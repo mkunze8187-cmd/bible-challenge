@@ -569,7 +569,11 @@ export interface BibleCryptogramPrompt {
   // and Word Ladder validates against a runtime dictionary rather than authored data.
   cipherMap: Record<string, string>;
   attemptedLetters: string[];
-  phase: "letter" | "solve";
+  // Unlike Verse Reveal (which this mechanic is otherwise adapted from), Cryptogram does
+  // not force a single-letter-guess-then-solve-or-pass rhythm — the active player/team can
+  // fill in as many letters as they want, in any order, and attempt a solve whenever they
+  // choose, matching how a real paper cryptogram is solved. There is deliberately no
+  // "phase" field gating which action is available.
   isComplete: boolean;
   winnerParticipantId: string | null;
   completedReason: "solved" | "fully-revealed" | null;
@@ -1219,7 +1223,6 @@ function createBibleCryptogramPrompt(round: BibleCryptogramRound): BibleCryptogr
     round,
     cipherMap: buildCipherMap(),
     attemptedLetters: [],
-    phase: "letter",
     isComplete: false,
     winnerParticipantId: null,
     completedReason: null
@@ -3448,10 +3451,6 @@ export function submitBibleCryptogramLetterGuess(state: SessionState, letterGues
     throw new Error("Continue to the next round before guessing again.");
   }
 
-  if (state.currentPrompt.phase !== "letter") {
-    throw new Error("Solve or pass before guessing another letter.");
-  }
-
   const normalizedLetter = letterGuess.trim().toLowerCase();
 
   if (!/^[a-z]$/.test(normalizedLetter)) {
@@ -3464,13 +3463,15 @@ export function submitBibleCryptogramLetterGuess(state: SessionState, letterGues
   const actorLabel = getCurrentActorLabel(nextState);
   const text = nextState.currentPrompt.round.verseText;
 
+  // Unlike Verse Reveal, a letter guess here never ends the active player/team's turn —
+  // they can fill in any number of cipher letters, in any order, the way a real paper
+  // cryptogram is solved. Only a solve attempt (right or wrong) or an explicit pass moves
+  // to the next participant.
   if (nextState.currentPrompt.attemptedLetters.includes(normalizedLetter)) {
-    nextState.currentPrompt.phase = "solve";
-
     return addActivity(
       nextState,
       "info",
-      `${actorLabel} repeated "${normalizedLetter.toUpperCase()}". No new letters were revealed. Solve or pass.`
+      `${actorLabel} repeated "${normalizedLetter.toUpperCase()}". No new letters were revealed.`
     );
   }
 
@@ -3480,13 +3481,8 @@ export function submitBibleCryptogramLetterGuess(state: SessionState, letterGues
 
   if (matches === 0) {
     stats.incorrectAttempts += 1;
-    nextState.currentPrompt.phase = "solve";
 
-    return addActivity(
-      nextState,
-      "warning",
-      `${actorLabel} guessed "${normalizedLetter.toUpperCase()}". That letter isn't in the puzzle. Solve or pass.`
-    );
+    return addActivity(nextState, "warning", `${actorLabel} guessed "${normalizedLetter.toUpperCase()}". That letter isn't in the puzzle.`);
   }
 
   const points = scoreScriptureLetterGuess(matches);
@@ -3506,12 +3502,10 @@ export function submitBibleCryptogramLetterGuess(state: SessionState, letterGues
     );
   }
 
-  nextState.currentPrompt.phase = "solve";
-
   return addActivity(
     nextState,
     "success",
-    `${actorLabel} revealed ${matches} letter${matches === 1 ? "" : "s"} and scored ${points} point${points === 1 ? "" : "s"}. Solve or pass.`
+    `${actorLabel} revealed ${matches} letter${matches === 1 ? "" : "s"} and scored ${points} point${points === 1 ? "" : "s"}.`
   );
 }
 
@@ -3522,10 +3516,6 @@ export function submitBibleCryptogramSolve(state: SessionState, solutionGuess: s
 
   if (state.currentPrompt.isComplete) {
     throw new Error("Continue to the next round before solving again.");
-  }
-
-  if (state.currentPrompt.phase !== "solve") {
-    throw new Error("Guess a letter before attempting to solve the puzzle.");
   }
 
   const trimmedGuess = solutionGuess.trim();
@@ -3546,9 +3536,8 @@ export function submitBibleCryptogramSolve(state: SessionState, solutionGuess: s
 
   if (normalizeText(trimmedGuess) !== normalizeText(text)) {
     stats.incorrectAttempts += 1;
-    nextState.currentPrompt.phase = "letter";
 
-    return addActivity(nextState, "warning", `${actorLabel} attempted a full solve, but the puzzle remains open.`);
+    return addActivity(nextState, "warning", `${actorLabel} attempted a full solve, but the puzzle remains open. ${getCurrentActorLabel(nextState)} is up.`);
   }
 
   const remainingLetters = countRemainingLetters(text, nextState.currentPrompt.attemptedLetters);
@@ -3584,7 +3573,6 @@ export function passBibleCryptogramTurn(state: SessionState): ActionResult {
 
   consumeTurn(nextState.participants, actorIndex);
   nextState.turnIndex = nextIndex(nextState.participants.length, actorIndex);
-  nextState.currentPrompt.phase = "letter";
 
   return addActivity(nextState, "info", `${actorLabel} passed. ${getCurrentActorLabel(nextState)} is up.`);
 }

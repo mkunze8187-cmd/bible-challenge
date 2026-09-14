@@ -57,6 +57,7 @@ declare global {
       };
       exitApp: () => Promise<void>;
       openExternal: (url: string) => Promise<void>;
+      getAppVersion: () => Promise<string>;
       getAppSettings: () => Promise<unknown>;
       saveAppSettings: (settings: unknown) => Promise<unknown>;
       listCustomContentPacks: () => Promise<unknown>;

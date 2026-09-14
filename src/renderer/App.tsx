@@ -155,7 +155,7 @@ interface FlashMessage {
 }
 
 type AppTheme = "classic" | "forest" | "ocean" | "plum" | "dawn" | "meadow" | "ruby";
-type SettingsTab = "appearance" | "players" | "timers" | "audio" | "feedback" | "content" | "event";
+type SettingsTab = "appearance" | "players" | "timers" | "audio" | "feedback" | "content" | "event" | "about";
 type TimerPreset = "off" | "beginner" | "standard" | "advanced" | "expert" | "custom";
 type DisplayMode = "normal" | "projector";
 type ContentPackId =
@@ -213,7 +213,8 @@ const SETTINGS_TABS: { id: SettingsTab; label: string }[] = [
   { id: "audio", label: "Audio" },
   { id: "feedback", label: "Feedback" },
   { id: "content", label: "Content" },
-  { id: "event", label: "Event" }
+  { id: "event", label: "Event" },
+  { id: "about", label: "About" }
 ];
 const DEFAULT_TEAMS: TeamSetup[] = [
   {
@@ -353,10 +354,16 @@ function getActiveGuessKey(state: SessionState | null): string | null {
     return null;
   }
 
-  if (state.gameId === "scripture-puzzles" || state.gameId === "bible-cryptogram") {
+  if (state.gameId === "scripture-puzzles") {
     return state.currentPrompt.isComplete
       ? null
       : `${state.gameId}-${state.roundIndex}-${state.turnIndex}-${state.currentPrompt.phase}-${state.currentPrompt.attemptedLetters.join("")}`;
+  }
+
+  if (state.gameId === "bible-cryptogram") {
+    return state.currentPrompt.isComplete
+      ? null
+      : `${state.gameId}-${state.roundIndex}-${state.turnIndex}-${state.currentPrompt.attemptedLetters.join("")}`;
   }
 
   if (
@@ -595,7 +602,11 @@ function getCurrentTurnMemberName(state: SessionState, participantId: string): s
     return null;
   }
 
-  if (state.gameId !== "scripture-puzzles" && state.currentPrompt?.phase === "primary") {
+  if (
+    state.gameId !== "scripture-puzzles" &&
+    state.gameId !== "bible-cryptogram" &&
+    state.currentPrompt?.phase === "primary"
+  ) {
     const participant = state.participants[state.currentPrompt.primaryParticipantIndex];
     return participant?.id === participantId ? state.currentPrompt.primaryMemberName : null;
   }
@@ -1598,6 +1609,7 @@ export function App() {
   const [teams, setTeams] = useState<TeamSetup[]>(DEFAULT_TEAMS);
   const [colorTheme, setColorTheme] = useState<AppTheme>("classic");
   const [activeSettingsTab, setActiveSettingsTab] = useState<SettingsTab>("appearance");
+  const [appVersion, setAppVersion] = useState<string | null>(null);
   const [timerEnabled, setTimerEnabled] = useState(true);
   const [timerPreset, setTimerPreset] = useState<TimerPreset>("standard");
   const [challengeTimerSeconds, setChallengeTimerSeconds] =
@@ -1651,7 +1663,6 @@ export function App() {
   const [wordLadderDictionary, setWordLadderDictionary] = useState<ReadonlySet<string> | null>(null);
   const [scriptureLetter, setScriptureLetter] = useState("");
   const [scriptureSolveText, setScriptureSolveText] = useState("");
-  const [cryptogramLetter, setCryptogramLetter] = useState("");
   const [cryptogramSolveText, setCryptogramSolveText] = useState("");
   const [flashMessage, setFlashMessage] = useState<FlashMessage>({
     tone: "info",
@@ -1704,6 +1715,34 @@ export function App() {
     }
 
     void loadCustomContent();
+
+    return () => {
+      isCancelled = true;
+    };
+  }, []);
+
+  useEffect(() => {
+    let isCancelled = false;
+
+    async function loadAppVersion() {
+      if (!window.desktopHost?.getAppVersion) {
+        return;
+      }
+
+      try {
+        const version = await window.desktopHost.getAppVersion();
+
+        if (!isCancelled) {
+          setAppVersion(version);
+        }
+      } catch {
+        if (!isCancelled) {
+          setAppVersion(null);
+        }
+      }
+    }
+
+    void loadAppVersion();
 
     return () => {
       isCancelled = true;
@@ -3705,6 +3744,31 @@ export function App() {
                   </div>
                 </div>
               ) : null}
+
+              {activeSettingsTab === "about" ? (
+                <div
+                  id="settings-panel-about"
+                  className="settings-panel"
+                  role="tabpanel"
+                  aria-labelledby="settings-tab-about"
+                >
+                  <div className="static-card settings-card">
+                    <strong>Bible Challenge</strong>
+                    <div className="about-detail-grid">
+                      <span>Version</span>
+                      <span>{appVersion ?? "Unknown"}</span>
+                      <span>Platform</span>
+                      <span>{window.desktopHost?.platform ?? "Unknown"}</span>
+                      <span>Electron</span>
+                      <span>{window.desktopHost?.versions.electron ?? "Unknown"}</span>
+                    </div>
+                    <p className="settings-help">
+                      Include the version number above when reporting an issue through the Feedback tab or by
+                      email — it helps confirm exactly which build you're testing.
+                    </p>
+                  </div>
+                </div>
+              ) : null}
             </div>
           </section>
         </div>
@@ -4732,15 +4796,13 @@ export function App() {
             ) : sessionState.gameId === "bible-cryptogram" ? (
               <BibleCryptogramView
                 state={sessionState}
-                cryptogramLetter={cryptogramLetter}
                 cryptogramSolveText={cryptogramSolveText}
                 timerEnabled={timerEnabled}
                 timeRemaining={timeRemaining}
                 timerDurationSeconds={activeTimerSeconds}
                 isTimerExpired={timerEnabled && timeRemaining === 0}
-                onCryptogramLetterChange={setCryptogramLetter}
                 onCryptogramSolveChange={setCryptogramSolveText}
-                onSubmitLetter={() => handleAction(() => submitBibleCryptogramLetterGuess(sessionState, cryptogramLetter))}
+                onSubmitLetter={(letterGuess) => handleAction(() => submitBibleCryptogramLetterGuess(sessionState, letterGuess))}
                 onSubmitSolve={() => handleAction(() => submitBibleCryptogramSolve(sessionState, cryptogramSolveText))}
                 onPass={() => handleAction(() => passBibleCryptogramTurn(sessionState), "pass")}
                 onContinue={() => handleAction(() => continueGame(sessionState))}
@@ -5146,30 +5208,61 @@ function ScriptureView(props: {
   );
 }
 
+function CryptogramLetterRow(props: {
+  cipherLetter: string;
+  isSolved: boolean;
+  isDisabled: boolean;
+  onSubmitLetter: (letterGuess: string) => void;
+}) {
+  const { cipherLetter, isSolved, isDisabled, onSubmitLetter } = props;
+  const [guess, setGuess] = useState("");
+
+  function submit() {
+    if (!guess.trim()) {
+      return;
+    }
+
+    onSubmitLetter(guess);
+    setGuess("");
+  }
+
+  return (
+    <div className={`cryptogram-letter-row ${isSolved ? "cryptogram-letter-row-solved" : ""}`}>
+      <span className="cryptogram-cipher-letter">{cipherLetter.toUpperCase()}</span>
+      <input
+        className="text-input cryptogram-letter-input"
+        maxLength={1}
+        value={isSolved ? "" : guess}
+        onChange={(event) => setGuess(event.target.value)}
+        onKeyDown={(event) => submitOnEnter(event, submit, isDisabled || isSolved)}
+        placeholder={isSolved ? "✓" : "?"}
+        disabled={isDisabled || isSolved}
+        aria-label={`Guess the real letter for cipher letter ${cipherLetter.toUpperCase()}`}
+      />
+    </div>
+  );
+}
+
 function BibleCryptogramView(props: {
   state: BibleCryptogramState;
-  cryptogramLetter: string;
   cryptogramSolveText: string;
   timerEnabled: boolean;
   timeRemaining: number;
   timerDurationSeconds: number;
   isTimerExpired: boolean;
-  onCryptogramLetterChange: (value: string) => void;
   onCryptogramSolveChange: (value: string) => void;
-  onSubmitLetter: () => void;
+  onSubmitLetter: (letterGuess: string) => void;
   onSubmitSolve: () => void;
   onPass: () => void;
   onContinue: () => void;
 }) {
   const {
     state,
-    cryptogramLetter,
     cryptogramSolveText,
     timerEnabled,
     timeRemaining,
     timerDurationSeconds,
     isTimerExpired,
-    onCryptogramLetterChange,
     onCryptogramSolveChange,
     onSubmitLetter,
     onSubmitSolve,
@@ -5178,6 +5271,26 @@ function BibleCryptogramView(props: {
   } = props;
 
   const isResolved = state.currentPrompt.isComplete;
+  const prompt = state.currentPrompt;
+
+  // The cipher letters that actually appear in this puzzle, in the order they first show
+  // up left to right — not the full alphabet, so the grid only asks about symbols that
+  // matter for this round.
+  const cipherLettersInPuzzle: string[] = [];
+  const seenCipherLetters = new Set<string>();
+  for (const character of prompt.round.verseText.toLowerCase()) {
+    if (!/[a-z]/.test(character)) {
+      continue;
+    }
+
+    const cipherLetter = prompt.cipherMap[character] ?? character;
+    if (!seenCipherLetters.has(cipherLetter)) {
+      seenCipherLetters.add(cipherLetter);
+      cipherLettersInPuzzle.push(cipherLetter);
+    }
+  }
+
+  const solvedCipherLetters = new Set(prompt.attemptedLetters.map((letter) => prompt.cipherMap[letter] ?? letter));
 
   return (
     <section className="panel panel-stage">
@@ -5202,54 +5315,48 @@ function BibleCryptogramView(props: {
         {buildCryptogramBoard(state.currentPrompt.round.verseText, state.currentPrompt.cipherMap, state.currentPrompt.attemptedLetters)}
       </div>
 
+      <p className="cryptogram-answer-label">Your solved answer so far</p>
+      <div className="scripture-screen cryptogram-answer-screen">
+        {buildScriptureBoard(state.currentPrompt.round.verseText, state.currentPrompt.attemptedLetters)}
+      </div>
+
       <div className="chip-row">
         <span className="pill pill-muted">Remaining hidden letters: {getBibleCryptogramRemainingLetters(state)}</span>
-        <span className="pill pill-muted">
-          Solved letters:{" "}
-          {state.currentPrompt.attemptedLetters.length > 0
-            ? state.currentPrompt.attemptedLetters.join(", ").toUpperCase()
-            : "none"}
-        </span>
       </div>
 
       {!isResolved ? (
         <>
-          {state.currentPrompt.phase === "letter" ? (
-            <div className="guess-zone">
-              <input
-                className="text-input"
-                maxLength={1}
-                value={cryptogramLetter}
-                onChange={(event) => onCryptogramLetterChange(event.target.value)}
-                onKeyDown={(event) => submitOnEnter(event, onSubmitLetter, isTimerExpired)}
-                placeholder="A-Z"
-                disabled={isTimerExpired}
+          <div className="cryptogram-letter-grid">
+            {cipherLettersInPuzzle.map((cipherLetter) => (
+              <CryptogramLetterRow
+                key={cipherLetter}
+                cipherLetter={cipherLetter}
+                isSolved={solvedCipherLetters.has(cipherLetter)}
+                isDisabled={isTimerExpired}
+                onSubmitLetter={onSubmitLetter}
               />
-              <button type="button" className="primary-button" onClick={onSubmitLetter} disabled={isTimerExpired}>
-                Submit Letter
+            ))}
+          </div>
+
+          <div className="solve-zone">
+            <textarea
+              className="text-area"
+              rows={2}
+              value={cryptogramSolveText}
+              onChange={(event) => onCryptogramSolveChange(event.target.value)}
+              onKeyDown={(event) => submitOnEnter(event, onSubmitSolve, isTimerExpired)}
+              placeholder="Enter the fully solved text"
+              disabled={isTimerExpired}
+            />
+            <div className="guess-zone">
+              <button type="button" className="primary-button" onClick={onSubmitSolve} disabled={isTimerExpired}>
+                Submit Solve
+              </button>
+              <button type="button" className="secondary-button" onClick={onPass}>
+                Pass
               </button>
             </div>
-          ) : (
-            <div className="solve-zone">
-              <textarea
-                className="text-area"
-                rows={2}
-                value={cryptogramSolveText}
-                onChange={(event) => onCryptogramSolveChange(event.target.value)}
-                onKeyDown={(event) => submitOnEnter(event, onSubmitSolve, isTimerExpired)}
-                placeholder="Enter the fully solved text"
-                disabled={isTimerExpired}
-              />
-              <div className="guess-zone">
-                <button type="button" className="primary-button" onClick={onSubmitSolve} disabled={isTimerExpired}>
-                  Submit Solve
-                </button>
-                <button type="button" className="secondary-button" onClick={onPass}>
-                  Pass
-                </button>
-              </div>
-            </div>
-          )}
+          </div>
         </>
       ) : (
         <>

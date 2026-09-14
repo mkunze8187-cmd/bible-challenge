@@ -9,6 +9,7 @@ contextBridge.exposeInMainWorld("desktopHost", {
   },
   exitApp: () => ipcRenderer.invoke("app:exit"),
   openExternal: (url) => ipcRenderer.invoke("app:open-external", url),
+  getAppVersion: () => ipcRenderer.invoke("app:get-version"),
   getAppSettings: () => ipcRenderer.invoke("app:get-settings"),
   saveAppSettings: (settings) => ipcRenderer.invoke("app:save-settings", settings),
   listCustomContentPacks: () => ipcRenderer.invoke("custom-content:list"),

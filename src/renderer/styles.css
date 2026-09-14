@@ -371,6 +371,12 @@ textarea {
 
 .panel-wide {
   grid-column: span 1;
+  /* Lets .mode-grid below claim the panel's remaining height and scroll on its own
+     (see .mode-grid's overflow-y) instead of being silently clipped by .panel's
+     overflow: hidden once the game list grows taller than the window. */
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
 }
 
 .panel-stage {
@@ -445,6 +451,17 @@ textarea {
 
 .mode-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+  /* The panel around this grid clips overflow for its rounded corners (see .panel), but
+     that also silently cuts off any game cards that don't fit the window height — a real
+     bug hit once the game count grew past what fit on screen (see e.g. Bible Cryptogram,
+     added as the 29th game, going invisible on shorter windows). .panel-wide is a flex
+     column so this grid can claim the remaining height and scroll on its own, keeping
+     every game reachable regardless of window size or how many exist.  */
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 4px;
+  align-content: start;
 }
 
 .content-pack-tabs {
@@ -804,6 +821,18 @@ textarea {
   margin: 0;
   color: #5d4c42;
   font-size: 0.9rem;
+}
+
+.about-detail-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 12px;
+  font-size: 0.92rem;
+}
+
+.about-detail-grid span:nth-child(odd) {
+  color: #6b5a4c;
+  font-weight: 700;
 }
 
 .timer-grid,
@@ -1378,6 +1407,58 @@ textarea {
   margin-bottom: 8px;
   max-height: 120px;
   overflow-y: auto;
+}
+
+.cryptogram-answer-label {
+  margin: 0 0 4px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #6b5a4c;
+}
+
+.cryptogram-answer-screen {
+  background: rgba(84, 52, 95, 0.08);
+  color: #34203d;
+  max-height: 90px;
+}
+
+.cryptogram-letter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(52px, 1fr));
+  gap: 8px;
+  margin-bottom: 10px;
+  max-height: 220px;
+  overflow-y: auto;
+  padding: 4px 4px 4px 0;
+}
+
+.cryptogram-letter-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 4px;
+  border-radius: 12px;
+  border: 1px solid rgba(78, 58, 44, 0.16);
+  background: rgba(255, 252, 245, 0.7);
+}
+
+.cryptogram-letter-row-solved {
+  border-color: rgba(43, 105, 88, 0.4);
+  background: rgba(43, 105, 88, 0.12);
+}
+
+.cryptogram-cipher-letter {
+  font-family: "Cascadia Code", Consolas, monospace;
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+
+.cryptogram-letter-input {
+  width: 100%;
+  padding: 4px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .prompt-banner {

@@ -244,6 +244,10 @@ ipcMain.handle("app:open-external", async (_event, url) => {
   await shell.openExternal(url);
 });
 
+ipcMain.handle("app:get-version", () => {
+  return app.getVersion();
+});
+
 ipcMain.handle("app:get-settings", async () => {
   return readAppSettings();
 });
