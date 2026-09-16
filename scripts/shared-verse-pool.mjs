@@ -1,6 +1,7 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { buildVerseStudyNote } from "./verse-study-notes.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -30,15 +31,22 @@ export async function loadSharedVersePool() {
         }
 
         if (!pool.has(reference)) {
+          const generatedTeachingNote = buildVerseStudyNote({
+            reference,
+            verseText,
+            theme: typeof round.theme === "string" && round.theme.trim() ? round.theme.trim() : "Scripture"
+          });
+
           pool.set(reference, {
             reference,
             verseText: verseText.trim(),
             theme: typeof round.theme === "string" && round.theme.trim() ? round.theme.trim() : "Scripture",
             difficulty: round.difficulty === "easy" || round.difficulty === "medium" || round.difficulty === "hard" ? round.difficulty : "medium",
             teachingNote:
-              typeof round.teachingNote === "string" && round.teachingNote.trim()
+              generatedTeachingNote ||
+              (typeof round.teachingNote === "string" && round.teachingNote.trim()
                 ? round.teachingNote.trim()
-                : `Review ${reference} before continuing.`,
+                : `Review ${reference} before continuing.`),
             wordCount: verseText.trim().split(/\s+/).filter(Boolean).length
           });
         }

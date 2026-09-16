@@ -1,0 +1,233 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/scripture-puzzles.schema.json",
+  "title": "Verse Reveal Session Pack",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "game",
+    "version",
+    "displayName",
+    "roundsPerSession",
+    "sessions"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "game": {
+      "const": "scripture-puzzles"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "displayName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "roundsPerSession": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "sessions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/session"
+      }
+    }
+  },
+  "$defs": {
+    "session": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "theme",
+        "rounds"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "theme": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rounds": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/round"
+          }
+        }
+      }
+    },
+    "round": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "reference",
+        "referenceAliases",
+        "sourceTranslation",
+        "theme",
+        "contextClue",
+        "contentMode",
+        "difficulty",
+        "teachingNote"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "reference": {
+          "type": "string",
+          "minLength": 1
+        },
+        "referenceAliases": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "sourceTranslation": {
+          "enum": [
+            "KJV",
+            "NIV"
+          ]
+        },
+        "theme": {
+          "type": "string",
+          "minLength": 1
+        },
+        "contextClue": {
+          "type": "string",
+          "minLength": 1
+        },
+        "contentMode": {
+          "enum": [
+            "placeholder",
+            "public-domain-text",
+            "licensed-text"
+          ]
+        },
+        "placeholderText": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "verseText": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "solutionAliases": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "difficulty": {
+          "type": "string",
+          "enum": [
+            "easy",
+            "medium",
+            "hard"
+          ]
+        },
+        "teachingNote": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "contentMode": {
+                "const": "public-domain-text"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "verseText",
+              "solutionAliases"
+            ],
+            "properties": {
+              "verseText": {
+                "type": "string",
+                "minLength": 1
+              },
+              "solutionAliases": {
+                "type": "array",
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "contentMode": {
+                "const": "placeholder"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "placeholderText"
+            ],
+            "properties": {
+              "verseText": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "contentMode": {
+                "const": "licensed-text"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "verseText",
+              "solutionAliases"
+            ],
+            "properties": {
+              "verseText": {
+                "type": "string",
+                "minLength": 1
+              },
+              "solutionAliases": {
+                "type": "array",
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

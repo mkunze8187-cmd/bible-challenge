@@ -1,6 +1,7 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { buildBibleAnagramStudyNote } from "./structured-study-notes.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -133,7 +134,7 @@ const rounds = subjects.map((entry, index) => ({
   clue: entry.clue,
   theme: entry.theme,
   difficulty: entry.difficulty,
-  teachingNote: `Review ${entry.answer} (${entry.theme}) before continuing.`
+  teachingNote: buildBibleAnagramStudyNote(entry).teachingNote
 }));
 
 const sessions = [];

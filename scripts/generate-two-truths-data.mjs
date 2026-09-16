@@ -981,7 +981,7 @@ const rounds = subjects.map((entry, index) => ({
   reference: entry.reference,
   theme: entry.theme,
   difficulty: index % 3 === 0 ? "hard" : index % 2 === 0 ? "medium" : "easy",
-  teachingNote: `Review ${entry.subject} (${entry.reference}) before continuing.`
+  teachingNote: entry.explanation
 }));
 
 const sessions = [];

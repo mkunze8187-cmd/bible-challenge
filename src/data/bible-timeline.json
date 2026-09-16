@@ -52,7 +52,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these early Genesis events in order. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these early Genesis events in order. The timeline runs from Creation, with Fall in Eden, Cain kills Abel, Noah builds the ark, Tower of Babel in between, to Abram called. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Creation through Abram called"
         },
         {
           "id": "bt-r002",
@@ -96,7 +97,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Arrange these Abraham and Isaac events. and how it connects to the Bible before continuing."
+          "teachingNote": "Arrange these Abraham and Isaac events. The timeline runs from Abram enters Canaan, with Lot separates from Abram, Isaac is promised, Sodom and Gomorrah judged, Isaac is born in between, to Isaac is offered. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Abram enters Canaan through Isaac is offered"
         },
         {
           "id": "bt-r003",
@@ -140,7 +142,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Arrange these Jacob and Joseph events. and how it connects to the Bible before continuing."
+          "teachingNote": "Arrange these Jacob and Joseph events. The timeline runs from Jacob receives blessing, with Jacob dreams at Bethel, Jacob marries Leah and Rachel, Joseph receives dreams, Joseph is sold in between, to Israel moves to Egypt. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Jacob receives blessing through Israel moves to Egypt"
         },
         {
           "id": "bt-r004",
@@ -184,7 +187,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Arrange these Exodus events. and how it connects to the Bible before continuing."
+          "teachingNote": "Arrange these Exodus events. The timeline runs from Moses at the burning bush, with Plagues in Egypt, Passover night, Red Sea crossing, Law given at Sinai in between, to Golden calf incident. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Moses at the burning bush through Golden calf incident"
         },
         {
           "id": "bt-r005",
@@ -228,7 +232,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Place these wilderness events in order. and how it connects to the Bible before continuing."
+          "teachingNote": "Place these wilderness events in order. The timeline runs from Manna is given, with Water from the rock, Spies enter Canaan, Korah rebels, Bronze serpent lifted in between, to Moses views Canaan. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Manna is given through Moses views Canaan"
         }
       ]
     },
@@ -279,7 +284,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these conquest events in order. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these conquest events in order. The timeline runs from Joshua leads Israel, with Jordan River crossing, Jericho falls, Achan's sin discovered, Ai is defeated in between, to Land is divided. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Joshua leads Israel through Land is divided"
         },
         {
           "id": "bt-r007",
@@ -323,7 +329,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Arrange these Judges-era events. and how it connects to the Bible before continuing."
+          "teachingNote": "Arrange these Judges-era events. The timeline runs from Othniel delivers Israel, with Ehud defeats Eglon, Deborah judges Israel, Gideon defeats Midian, Jephthah leads Israel in between, to Samson defeats Philistines. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Othniel delivers Israel through Samson defeats Philistines"
         },
         {
           "id": "bt-r008",
@@ -367,7 +374,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Place these events around Ruth and Samuel. and how it connects to the Bible before continuing."
+          "teachingNote": "Place these events around Ruth and Samuel. The timeline runs from Ruth meets Boaz, with Obed is born, Hannah prays for a son, Samuel is called, Ark is captured in between, to Israel asks for a king. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Ruth meets Boaz through Israel asks for a king"
         },
         {
           "id": "bt-r009",
@@ -411,7 +419,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Arrange these Saul and David events. and how it connects to the Bible before continuing."
+          "teachingNote": "Arrange these Saul and David events. The timeline runs from Saul becomes king, with David is anointed, David defeats Goliath, David spares Saul, Saul dies at Gilboa in between, to David becomes king over Judah. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Saul becomes king through David becomes king over Judah"
         },
         {
           "id": "bt-r010",
@@ -455,7 +464,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these events from David's reign in order. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these events from David's reign in order. The timeline runs from David captures Jerusalem, with Ark brought to Jerusalem, Promise made to David, David sins with Bathsheba, Absalom rebels in between, to Solomon is named successor. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "David captures Jerusalem through Solomon is named successor"
         }
       ]
     },
@@ -506,7 +516,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Arrange these Solomon events. and how it connects to the Bible before continuing."
+          "teachingNote": "Arrange these Solomon events. The timeline runs from Solomon asks for wisdom, with Temple construction begins, Temple is dedicated, Queen of Sheba visits, Solomon turns from the Lord in between, to Solomon dies. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Solomon asks for wisdom through Solomon dies"
         },
         {
           "id": "bt-r012",
@@ -550,7 +561,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Place these divided kingdom events. and how it connects to the Bible before continuing."
+          "teachingNote": "Place these divided kingdom events. The timeline runs from Rehoboam rejects counsel, with Kingdom divides, Jeroboam sets golden calves, Asa reforms Judah, Omri rules Israel in between, to Ahab marries Jezebel. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Rehoboam rejects counsel through Ahab marries Jezebel"
         },
         {
           "id": "bt-r013",
@@ -594,7 +606,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Arrange these Elijah events. and how it connects to the Bible before continuing."
+          "teachingNote": "Arrange these Elijah events. The timeline runs from Elijah announces drought, with Ravens feed Elijah, Widow's son is raised, Carmel contest, Elijah flees to Horeb in between, to Elijah taken up. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Elijah announces drought through Elijah taken up"
         },
         {
           "id": "bt-r014",
@@ -638,7 +651,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Elisha events in order. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Elisha events in order. The timeline runs from Elisha receives Elijah's mantle, with Waters of Jericho healed, Widow's oil multiplied, Shunammite's son raised, Naaman healed in between, to Aramean army blinded. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Elisha receives Elijah's mantle through Aramean army blinded"
         },
         {
           "id": "bt-r015",
@@ -682,7 +696,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Arrange these Assyrian-period events. and how it connects to the Bible before continuing."
+          "teachingNote": "Arrange these Assyrian-period events. The timeline runs from Jonah sent to Nineveh, with Amos warns Israel, Hosea warns Israel, Isaiah sees the Lord, Samaria falls in between, to Sennacherib threatens Jerusalem. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Jonah sent to Nineveh through Sennacherib threatens Jerusalem"
         }
       ]
     },
@@ -733,7 +748,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Place these late Judah events. and how it connects to the Bible before continuing."
+          "teachingNote": "Place these late Judah events. The timeline runs from Hezekiah reforms Judah, with Manasseh reigns, Josiah finds the law, Jeremiah begins ministry, First Babylonian deportation in between, to Jerusalem falls. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Hezekiah reforms Judah through Jerusalem falls"
         },
         {
           "id": "bt-r017",
@@ -777,7 +793,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Arrange these exile events. and how it connects to the Bible before continuing."
+          "teachingNote": "Arrange these exile events. The timeline runs from Daniel taken to Babylon, with Fiery furnace, Ezekiel sees visions, Nebuchadnezzar humbled, Handwriting on the wall in between, to Daniel in the lions' den. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Daniel taken to Babylon through Daniel in the lions' den"
         },
         {
           "id": "bt-r018",
@@ -821,7 +838,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these return-from-exile events in order. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these return-from-exile events in order. The timeline runs from Cyrus decrees return, with Temple foundation laid, Temple rebuilding resumes, Temple completed, Ezra arrives in between, to Nehemiah rebuilds wall. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Cyrus decrees return through Nehemiah rebuilds wall"
         },
         {
           "id": "bt-r019",
@@ -865,7 +883,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Arrange these events leading into the Gospels. and how it connects to the Bible before continuing."
+          "teachingNote": "Arrange these events leading into the Gospels. The timeline runs from Persian period ends, with Greek rule begins, Roman rule in Judea, Gabriel visits Zacharias, Gabriel visits Mary in between, to Jesus is born. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Persian period ends through Jesus is born"
         },
         {
           "id": "bt-r020",
@@ -909,7 +928,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these early Gospel events in order. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these early Gospel events in order. The timeline runs from John the Baptist preaches, with Jesus is baptized, Jesus is tempted, First disciples called, Water turned to wine in between, to Sermon on the Mount. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "John the Baptist preaches through Sermon on the Mount"
         }
       ]
     },
@@ -960,7 +980,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Arrange these ministry events. and how it connects to the Bible before continuing."
+          "teachingNote": "Arrange these ministry events. The timeline runs from Nobleman's son healed, with Paralytic lowered through roof, Storm is calmed, Jairus's daughter raised, Five thousand fed in between, to Jesus walks on water. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Nobleman's son healed through Jesus walks on water"
         },
         {
           "id": "bt-r022",
@@ -1004,7 +1025,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Place these later Gospel events. and how it connects to the Bible before continuing."
+          "teachingNote": "Place these later Gospel events. The timeline runs from Peter confesses Christ, with Transfiguration, Seventy sent out, Lazarus raised, Triumphal entry in between, to Temple cleansed. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Peter confesses Christ through Temple cleansed"
         },
         {
           "id": "bt-r023",
@@ -1048,7 +1070,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Passion Week events in order. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Passion Week events in order. The timeline runs from Last Supper, with Gethsemane prayer, Jesus before Pilate, Crucifixion, Burial in between, to Resurrection. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Last Supper through Resurrection"
         },
         {
           "id": "bt-r024",
@@ -1092,7 +1115,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Arrange these Acts events. and how it connects to the Bible before continuing."
+          "teachingNote": "Arrange these Acts events. The timeline runs from Ascension, with Pentecost, Lame man healed at temple, Stephen is martyred, Saul is converted in between, to Cornelius hears Peter. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Ascension through Cornelius hears Peter"
         },
         {
           "id": "bt-r025",
@@ -1136,7 +1160,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Place these Paul events in order. and how it connects to the Bible before continuing."
+          "teachingNote": "Place these Paul events in order. The timeline runs from Paul and Barnabas sent, with Jerusalem Council, Lydia believes, Paul preaches in Athens, Paul arrested in Jerusalem in between, to Paul reaches Rome. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Paul and Barnabas sent through Paul reaches Rome"
         }
       ]
     },
@@ -1181,7 +1206,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from Creation through Flood covers the earth. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Creation through Flood covers the earth. The timeline runs from Creation, with Fall in Eden, Cain kills Abel, Noah builds the ark in between, to Flood covers the earth. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Creation through Flood covers the earth"
         },
         {
           "id": "bt-r027",
@@ -1219,7 +1245,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from Fall in Eden through Tower of Babel. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Fall in Eden through Tower of Babel. The timeline runs from Fall in Eden, with Cain kills Abel, Noah builds the ark, Flood covers the earth in between, to Tower of Babel. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Fall in Eden through Tower of Babel"
         },
         {
           "id": "bt-r028",
@@ -1257,7 +1284,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from Cain kills Abel through Abram leaves Haran. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Cain kills Abel through Abram leaves Haran. The timeline runs from Cain kills Abel, with Noah builds the ark, Flood covers the earth, Tower of Babel in between, to Abram leaves Haran. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Cain kills Abel through Abram leaves Haran"
         },
         {
           "id": "bt-r029",
@@ -1295,7 +1323,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from Noah builds the ark through Isaac is born. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Noah builds the ark through Isaac is born. The timeline runs from Noah builds the ark, with Flood covers the earth, Tower of Babel, Abram leaves Haran in between, to Isaac is born. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Noah builds the ark through Isaac is born"
         },
         {
           "id": "bt-r030",
@@ -1333,7 +1362,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from Flood covers the earth through Jacob receives the blessing. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Flood covers the earth through Jacob receives the blessing. The timeline runs from Flood covers the earth, with Tower of Babel, Abram leaves Haran, Isaac is born in between, to Jacob receives the blessing. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Flood covers the earth through Jacob receives the blessing"
         }
       ]
     },
@@ -1378,7 +1408,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from Tower of Babel through Joseph is sold by his brothers. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Tower of Babel through Joseph is sold by his brothers. The timeline runs from Tower of Babel, with Abram leaves Haran, Isaac is born, Jacob receives the blessing in between, to Joseph is sold by his brothers. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Tower of Babel through Joseph is sold by his brothers"
         },
         {
           "id": "bt-r032",
@@ -1416,7 +1447,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from Abram leaves Haran through Israel moves to Egypt. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Abram leaves Haran through Israel moves to Egypt. The timeline runs from Abram leaves Haran, with Isaac is born, Jacob receives the blessing, Joseph is sold by his brothers in between, to Israel moves to Egypt. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Abram leaves Haran through Israel moves to Egypt"
         },
         {
           "id": "bt-r033",
@@ -1454,7 +1486,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from Isaac is born through Moses is born. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Isaac is born through Moses is born. The timeline runs from Isaac is born, with Jacob receives the blessing, Joseph is sold by his brothers, Israel moves to Egypt in between, to Moses is born. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Isaac is born through Moses is born"
         },
         {
           "id": "bt-r034",
@@ -1492,7 +1525,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from Jacob receives the blessing through Moses sees the burning bush. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Jacob receives the blessing through Moses sees the burning bush. The timeline runs from Jacob receives the blessing, with Joseph is sold by his brothers, Israel moves to Egypt, Moses is born in between, to Moses sees the burning bush. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Jacob receives the blessing through Moses sees the burning bush"
         },
         {
           "id": "bt-r035",
@@ -1530,7 +1564,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from Joseph is sold by his brothers through Plagues strike Egypt. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Joseph is sold by his brothers through Plagues strike Egypt. The timeline runs from Joseph is sold by his brothers, with Israel moves to Egypt, Moses is born, Moses sees the burning bush in between, to Plagues strike Egypt. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Joseph is sold by his brothers through Plagues strike Egypt"
         }
       ]
     },
@@ -1575,7 +1610,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from Israel moves to Egypt through The Passover night. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Israel moves to Egypt through The Passover night. The timeline runs from Israel moves to Egypt, with Moses is born, Moses sees the burning bush, Plagues strike Egypt in between, to The Passover night. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Israel moves to Egypt through The Passover night"
         },
         {
           "id": "bt-r037",
@@ -1613,7 +1649,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from Moses is born through The Red Sea crossing. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Moses is born through The Red Sea crossing. The timeline runs from Moses is born, with Moses sees the burning bush, Plagues strike Egypt, The Passover night in between, to The Red Sea crossing. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Moses is born through The Red Sea crossing"
         },
         {
           "id": "bt-r038",
@@ -1651,7 +1688,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from Moses sees the burning bush through The law is given at Sinai. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Moses sees the burning bush through The law is given at Sinai. The timeline runs from Moses sees the burning bush, with Plagues strike Egypt, The Passover night, The Red Sea crossing in between, to The law is given at Sinai. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Moses sees the burning bush through The law is given at Sinai"
         },
         {
           "id": "bt-r039",
@@ -1689,7 +1727,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from Plagues strike Egypt through The tabernacle is built. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Plagues strike Egypt through The tabernacle is built. The timeline runs from Plagues strike Egypt, with The Passover night, The Red Sea crossing, The law is given at Sinai in between, to The tabernacle is built. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Plagues strike Egypt through The tabernacle is built"
         },
         {
           "id": "bt-r040",
@@ -1727,7 +1766,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from The Passover night through The spies enter Canaan. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from The Passover night through The spies enter Canaan. The timeline runs from The Passover night, with The Red Sea crossing, The law is given at Sinai, The tabernacle is built in between, to The spies enter Canaan. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "The Passover night through The spies enter Canaan"
         }
       ]
     },
@@ -1772,7 +1812,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from The Red Sea crossing through Joshua leads Israel. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from The Red Sea crossing through Joshua leads Israel. The timeline runs from The Red Sea crossing, with The law is given at Sinai, The tabernacle is built, The spies enter Canaan in between, to Joshua leads Israel. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "The Red Sea crossing through Joshua leads Israel"
         },
         {
           "id": "bt-r042",
@@ -1810,7 +1851,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from The law is given at Sinai through The Jordan River crossing. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from The law is given at Sinai through The Jordan River crossing. The timeline runs from The law is given at Sinai, with The tabernacle is built, The spies enter Canaan, Joshua leads Israel in between, to The Jordan River crossing. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "The law is given at Sinai through The Jordan River crossing"
         },
         {
           "id": "bt-r043",
@@ -1848,7 +1890,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from The tabernacle is built through Jericho falls. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from The tabernacle is built through Jericho falls. The timeline runs from The tabernacle is built, with The spies enter Canaan, Joshua leads Israel, The Jordan River crossing in between, to Jericho falls. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "The tabernacle is built through Jericho falls"
         },
         {
           "id": "bt-r044",
@@ -1886,7 +1929,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from The spies enter Canaan through Deborah judges Israel. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from The spies enter Canaan through Deborah judges Israel. The timeline runs from The spies enter Canaan, with Joshua leads Israel, The Jordan River crossing, Jericho falls in between, to Deborah judges Israel. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "The spies enter Canaan through Deborah judges Israel"
         },
         {
           "id": "bt-r045",
@@ -1924,7 +1968,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from Joshua leads Israel through Gideon defeats Midian. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Joshua leads Israel through Gideon defeats Midian. The timeline runs from Joshua leads Israel, with The Jordan River crossing, Jericho falls, Deborah judges Israel in between, to Gideon defeats Midian. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Joshua leads Israel through Gideon defeats Midian"
         }
       ]
     },
@@ -1969,7 +2014,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from The Jordan River crossing through Samson fights the Philistines. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from The Jordan River crossing through Samson fights the Philistines. The timeline runs from The Jordan River crossing, with Jericho falls, Deborah judges Israel, Gideon defeats Midian in between, to Samson fights the Philistines. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "The Jordan River crossing through Samson fights the Philistines"
         },
         {
           "id": "bt-r047",
@@ -2007,7 +2053,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from Jericho falls through Ruth meets Boaz. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Jericho falls through Ruth meets Boaz. The timeline runs from Jericho falls, with Deborah judges Israel, Gideon defeats Midian, Samson fights the Philistines in between, to Ruth meets Boaz. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Jericho falls through Ruth meets Boaz"
         },
         {
           "id": "bt-r048",
@@ -2045,7 +2092,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from Deborah judges Israel through Samuel is called. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Deborah judges Israel through Samuel is called. The timeline runs from Deborah judges Israel, with Gideon defeats Midian, Samson fights the Philistines, Ruth meets Boaz in between, to Samuel is called. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Deborah judges Israel through Samuel is called"
         },
         {
           "id": "bt-r049",
@@ -2083,7 +2131,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from Gideon defeats Midian through Saul becomes king. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Gideon defeats Midian through Saul becomes king. The timeline runs from Gideon defeats Midian, with Samson fights the Philistines, Ruth meets Boaz, Samuel is called in between, to Saul becomes king. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Gideon defeats Midian through Saul becomes king"
         },
         {
           "id": "bt-r050",
@@ -2121,7 +2170,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from Samson fights the Philistines through David defeats Goliath. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Samson fights the Philistines through David defeats Goliath. The timeline runs from Samson fights the Philistines, with Ruth meets Boaz, Samuel is called, Saul becomes king in between, to David defeats Goliath. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Samson fights the Philistines through David defeats Goliath"
         }
       ]
     },
@@ -2166,7 +2216,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from Ruth meets Boaz through David becomes king. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Ruth meets Boaz through David becomes king. The timeline runs from Ruth meets Boaz, with Samuel is called, Saul becomes king, David defeats Goliath in between, to David becomes king. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Ruth meets Boaz through David becomes king"
         },
         {
           "id": "bt-r052",
@@ -2204,7 +2255,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from Samuel is called through Solomon asks for wisdom. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Samuel is called through Solomon asks for wisdom. The timeline runs from Samuel is called, with Saul becomes king, David defeats Goliath, David becomes king in between, to Solomon asks for wisdom. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Samuel is called through Solomon asks for wisdom"
         },
         {
           "id": "bt-r053",
@@ -2242,7 +2294,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from Saul becomes king through Solomon builds the temple. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Saul becomes king through Solomon builds the temple. The timeline runs from Saul becomes king, with David defeats Goliath, David becomes king, Solomon asks for wisdom in between, to Solomon builds the temple. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Saul becomes king through Solomon builds the temple"
         },
         {
           "id": "bt-r054",
@@ -2280,7 +2333,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from David defeats Goliath through The kingdom divides. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from David defeats Goliath through The kingdom divides. The timeline runs from David defeats Goliath, with David becomes king, Solomon asks for wisdom, Solomon builds the temple in between, to The kingdom divides. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "David defeats Goliath through The kingdom divides"
         },
         {
           "id": "bt-r055",
@@ -2318,7 +2372,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from David becomes king through Elijah confronts Baal's prophets. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from David becomes king through Elijah confronts Baal's prophets. The timeline runs from David becomes king, with Solomon asks for wisdom, Solomon builds the temple, The kingdom divides in between, to Elijah confronts Baal's prophets. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "David becomes king through Elijah confronts Baal's prophets"
         }
       ]
     },
@@ -2363,7 +2418,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from Solomon asks for wisdom through Elisha receives Elijah's mantle. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Solomon asks for wisdom through Elisha receives Elijah's mantle. The timeline runs from Solomon asks for wisdom, with Solomon builds the temple, The kingdom divides, Elijah confronts Baal's prophets in between, to Elisha receives Elijah's mantle. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Solomon asks for wisdom through Elisha receives Elijah's mantle"
         },
         {
           "id": "bt-r057",
@@ -2401,7 +2457,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from Solomon builds the temple through Jonah preaches to Nineveh. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Solomon builds the temple through Jonah preaches to Nineveh. The timeline runs from Solomon builds the temple, with The kingdom divides, Elijah confronts Baal's prophets, Elisha receives Elijah's mantle in between, to Jonah preaches to Nineveh. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Solomon builds the temple through Jonah preaches to Nineveh"
         },
         {
           "id": "bt-r058",
@@ -2439,7 +2496,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from The kingdom divides through Isaiah sees the Lord. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from The kingdom divides through Isaiah sees the Lord. The timeline runs from The kingdom divides, with Elijah confronts Baal's prophets, Elisha receives Elijah's mantle, Jonah preaches to Nineveh in between, to Isaiah sees the Lord. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "The kingdom divides through Isaiah sees the Lord"
         },
         {
           "id": "bt-r059",
@@ -2477,7 +2535,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from Elijah confronts Baal's prophets through Samaria falls to Assyria. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Elijah confronts Baal's prophets through Samaria falls to Assyria. The timeline runs from Elijah confronts Baal's prophets, with Elisha receives Elijah's mantle, Jonah preaches to Nineveh, Isaiah sees the Lord in between, to Samaria falls to Assyria. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Elijah confronts Baal's prophets through Samaria falls to Assyria"
         },
         {
           "id": "bt-r060",
@@ -2515,7 +2574,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from Elisha receives Elijah's mantle through Josiah finds the book of the law. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Elisha receives Elijah's mantle through Josiah finds the book of the law. The timeline runs from Elisha receives Elijah's mantle, with Jonah preaches to Nineveh, Isaiah sees the Lord, Samaria falls to Assyria in between, to Josiah finds the book of the law. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Elisha receives Elijah's mantle through Josiah finds the book of the law"
         }
       ]
     },
@@ -2560,7 +2620,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from Jonah preaches to Nineveh through Jeremiah warns Judah. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Jonah preaches to Nineveh through Jeremiah warns Judah. The timeline runs from Jonah preaches to Nineveh, with Isaiah sees the Lord, Samaria falls to Assyria, Josiah finds the book of the law in between, to Jeremiah warns Judah. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Jonah preaches to Nineveh through Jeremiah warns Judah"
         },
         {
           "id": "bt-r062",
@@ -2598,7 +2659,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from Isaiah sees the Lord through Jerusalem falls to Babylon. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Isaiah sees the Lord through Jerusalem falls to Babylon. The timeline runs from Isaiah sees the Lord, with Samaria falls to Assyria, Josiah finds the book of the law, Jeremiah warns Judah in between, to Jerusalem falls to Babylon. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Isaiah sees the Lord through Jerusalem falls to Babylon"
         },
         {
           "id": "bt-r063",
@@ -2636,7 +2698,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from Samaria falls to Assyria through Daniel serves in Babylon. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Samaria falls to Assyria through Daniel serves in Babylon. The timeline runs from Samaria falls to Assyria, with Josiah finds the book of the law, Jeremiah warns Judah, Jerusalem falls to Babylon in between, to Daniel serves in Babylon. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Samaria falls to Assyria through Daniel serves in Babylon"
         },
         {
           "id": "bt-r064",
@@ -2674,7 +2737,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from Josiah finds the book of the law through The fiery furnace. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Josiah finds the book of the law through The fiery furnace. The timeline runs from Josiah finds the book of the law, with Jeremiah warns Judah, Jerusalem falls to Babylon, Daniel serves in Babylon in between, to The fiery furnace. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Josiah finds the book of the law through The fiery furnace"
         },
         {
           "id": "bt-r065",
@@ -2712,7 +2776,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from Jeremiah warns Judah through Daniel in the lions' den. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Jeremiah warns Judah through Daniel in the lions' den. The timeline runs from Jeremiah warns Judah, with Jerusalem falls to Babylon, Daniel serves in Babylon, The fiery furnace in between, to Daniel in the lions' den. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Jeremiah warns Judah through Daniel in the lions' den"
         }
       ]
     },
@@ -2757,7 +2822,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from Jerusalem falls to Babylon through Cyrus permits the return. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Jerusalem falls to Babylon through Cyrus permits the return. The timeline runs from Jerusalem falls to Babylon, with Daniel serves in Babylon, The fiery furnace, Daniel in the lions' den in between, to Cyrus permits the return. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Jerusalem falls to Babylon through Cyrus permits the return"
         },
         {
           "id": "bt-r067",
@@ -2795,7 +2861,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from Daniel serves in Babylon through The second temple is completed. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Daniel serves in Babylon through The second temple is completed. The timeline runs from Daniel serves in Babylon, with The fiery furnace, Daniel in the lions' den, Cyrus permits the return in between, to The second temple is completed. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Daniel serves in Babylon through The second temple is completed"
         },
         {
           "id": "bt-r068",
@@ -2833,7 +2900,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from The fiery furnace through Ezra teaches the law. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from The fiery furnace through Ezra teaches the law. The timeline runs from The fiery furnace, with Daniel in the lions' den, Cyrus permits the return, The second temple is completed in between, to Ezra teaches the law. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "The fiery furnace through Ezra teaches the law"
         },
         {
           "id": "bt-r069",
@@ -2871,7 +2939,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from Daniel in the lions' den through Nehemiah rebuilds Jerusalem's wall. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Daniel in the lions' den through Nehemiah rebuilds Jerusalem's wall. The timeline runs from Daniel in the lions' den, with Cyrus permits the return, The second temple is completed, Ezra teaches the law in between, to Nehemiah rebuilds Jerusalem's wall. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Daniel in the lions' den through Nehemiah rebuilds Jerusalem's wall"
         },
         {
           "id": "bt-r070",
@@ -2909,7 +2978,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from Cyrus permits the return through Gabriel visits Zacharias. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Cyrus permits the return through Gabriel visits Zacharias. The timeline runs from Cyrus permits the return, with The second temple is completed, Ezra teaches the law, Nehemiah rebuilds Jerusalem's wall in between, to Gabriel visits Zacharias. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Cyrus permits the return through Gabriel visits Zacharias"
         }
       ]
     },
@@ -2954,7 +3024,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from The second temple is completed through Gabriel visits Mary. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from The second temple is completed through Gabriel visits Mary. The timeline runs from The second temple is completed, with Ezra teaches the law, Nehemiah rebuilds Jerusalem's wall, Gabriel visits Zacharias in between, to Gabriel visits Mary. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "The second temple is completed through Gabriel visits Mary"
         },
         {
           "id": "bt-r072",
@@ -2992,7 +3063,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from Ezra teaches the law through Jesus is born. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Ezra teaches the law through Jesus is born. The timeline runs from Ezra teaches the law, with Nehemiah rebuilds Jerusalem's wall, Gabriel visits Zacharias, Gabriel visits Mary in between, to Jesus is born. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Ezra teaches the law through Jesus is born"
         },
         {
           "id": "bt-r073",
@@ -3030,7 +3102,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from Nehemiah rebuilds Jerusalem's wall through John the Baptist preaches. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Nehemiah rebuilds Jerusalem's wall through John the Baptist preaches. The timeline runs from Nehemiah rebuilds Jerusalem's wall, with Gabriel visits Zacharias, Gabriel visits Mary, Jesus is born in between, to John the Baptist preaches. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Nehemiah rebuilds Jerusalem's wall through John the Baptist preaches"
         },
         {
           "id": "bt-r074",
@@ -3068,7 +3141,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from Gabriel visits Zacharias through Jesus is baptized. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Gabriel visits Zacharias through Jesus is baptized. The timeline runs from Gabriel visits Zacharias, with Gabriel visits Mary, Jesus is born, John the Baptist preaches in between, to Jesus is baptized. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Gabriel visits Zacharias through Jesus is baptized"
         },
         {
           "id": "bt-r075",
@@ -3106,7 +3180,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from Gabriel visits Mary through Jesus is tempted. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Gabriel visits Mary through Jesus is tempted. The timeline runs from Gabriel visits Mary, with Jesus is born, John the Baptist preaches, Jesus is baptized in between, to Jesus is tempted. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Gabriel visits Mary through Jesus is tempted"
         }
       ]
     },
@@ -3151,7 +3226,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from Jesus is born through Jesus calls the first disciples. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Jesus is born through Jesus calls the first disciples. The timeline runs from Jesus is born, with John the Baptist preaches, Jesus is baptized, Jesus is tempted in between, to Jesus calls the first disciples. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Jesus is born through Jesus calls the first disciples"
         },
         {
           "id": "bt-r077",
@@ -3189,7 +3265,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from John the Baptist preaches through Sermon on the Mount. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from John the Baptist preaches through Sermon on the Mount. The timeline runs from John the Baptist preaches, with Jesus is baptized, Jesus is tempted, Jesus calls the first disciples in between, to Sermon on the Mount. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "John the Baptist preaches through Sermon on the Mount"
         },
         {
           "id": "bt-r078",
@@ -3227,7 +3304,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from Jesus is baptized through Jesus calms the storm. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Jesus is baptized through Jesus calms the storm. The timeline runs from Jesus is baptized, with Jesus is tempted, Jesus calls the first disciples, Sermon on the Mount in between, to Jesus calms the storm. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Jesus is baptized through Jesus calms the storm"
         },
         {
           "id": "bt-r079",
@@ -3265,7 +3343,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from Jesus is tempted through Jesus feeds the five thousand. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Jesus is tempted through Jesus feeds the five thousand. The timeline runs from Jesus is tempted, with Jesus calls the first disciples, Sermon on the Mount, Jesus calms the storm in between, to Jesus feeds the five thousand. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Jesus is tempted through Jesus feeds the five thousand"
         },
         {
           "id": "bt-r080",
@@ -3303,7 +3382,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from Jesus calls the first disciples through Peter confesses Christ. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Jesus calls the first disciples through Peter confesses Christ. The timeline runs from Jesus calls the first disciples, with Sermon on the Mount, Jesus calms the storm, Jesus feeds the five thousand in between, to Peter confesses Christ. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Jesus calls the first disciples through Peter confesses Christ"
         }
       ]
     },
@@ -3348,7 +3428,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from Sermon on the Mount through The transfiguration. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Sermon on the Mount through The transfiguration. The timeline runs from Sermon on the Mount, with Jesus calms the storm, Jesus feeds the five thousand, Peter confesses Christ in between, to The transfiguration. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Sermon on the Mount through The transfiguration"
         },
         {
           "id": "bt-r082",
@@ -3386,7 +3467,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from Jesus calms the storm through Lazarus is raised. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Jesus calms the storm through Lazarus is raised. The timeline runs from Jesus calms the storm, with Jesus feeds the five thousand, Peter confesses Christ, The transfiguration in between, to Lazarus is raised. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Jesus calms the storm through Lazarus is raised"
         },
         {
           "id": "bt-r083",
@@ -3424,7 +3506,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from Jesus feeds the five thousand through The triumphal entry. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Jesus feeds the five thousand through The triumphal entry. The timeline runs from Jesus feeds the five thousand, with Peter confesses Christ, The transfiguration, Lazarus is raised in between, to The triumphal entry. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Jesus feeds the five thousand through The triumphal entry"
         },
         {
           "id": "bt-r084",
@@ -3462,7 +3545,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from Peter confesses Christ through The Last Supper. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Peter confesses Christ through The Last Supper. The timeline runs from Peter confesses Christ, with The transfiguration, Lazarus is raised, The triumphal entry in between, to The Last Supper. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Peter confesses Christ through The Last Supper"
         },
         {
           "id": "bt-r085",
@@ -3500,7 +3584,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from The transfiguration through Jesus prays in Gethsemane. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from The transfiguration through Jesus prays in Gethsemane. The timeline runs from The transfiguration, with Lazarus is raised, The triumphal entry, The Last Supper in between, to Jesus prays in Gethsemane. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "The transfiguration through Jesus prays in Gethsemane"
         }
       ]
     },
@@ -3545,7 +3630,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from Lazarus is raised through The crucifixion. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Lazarus is raised through The crucifixion. The timeline runs from Lazarus is raised, with The triumphal entry, The Last Supper, Jesus prays in Gethsemane in between, to The crucifixion. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Lazarus is raised through The crucifixion"
         },
         {
           "id": "bt-r087",
@@ -3583,7 +3669,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from The triumphal entry through The resurrection. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from The triumphal entry through The resurrection. The timeline runs from The triumphal entry, with The Last Supper, Jesus prays in Gethsemane, The crucifixion in between, to The resurrection. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "The triumphal entry through The resurrection"
         },
         {
           "id": "bt-r088",
@@ -3621,7 +3708,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from The Last Supper through The ascension. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from The Last Supper through The ascension. The timeline runs from The Last Supper, with Jesus prays in Gethsemane, The crucifixion, The resurrection in between, to The ascension. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "The Last Supper through The ascension"
         },
         {
           "id": "bt-r089",
@@ -3659,7 +3747,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from Jesus prays in Gethsemane through Pentecost. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Jesus prays in Gethsemane through Pentecost. The timeline runs from Jesus prays in Gethsemane, with The crucifixion, The resurrection, The ascension in between, to Pentecost. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Jesus prays in Gethsemane through Pentecost"
         },
         {
           "id": "bt-r090",
@@ -3697,7 +3786,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from The crucifixion through Stephen is martyred. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from The crucifixion through Stephen is martyred. The timeline runs from The crucifixion, with The resurrection, The ascension, Pentecost in between, to Stephen is martyred. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "The crucifixion through Stephen is martyred"
         }
       ]
     },
@@ -3742,7 +3832,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from The resurrection through Saul is converted. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from The resurrection through Saul is converted. The timeline runs from The resurrection, with The ascension, Pentecost, Stephen is martyred in between, to Saul is converted. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "The resurrection through Saul is converted"
         },
         {
           "id": "bt-r092",
@@ -3780,7 +3871,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from The ascension through Cornelius hears Peter. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from The ascension through Cornelius hears Peter. The timeline runs from The ascension, with Pentecost, Stephen is martyred, Saul is converted in between, to Cornelius hears Peter. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "The ascension through Cornelius hears Peter"
         },
         {
           "id": "bt-r093",
@@ -3818,7 +3910,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from Pentecost through The Jerusalem Council. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Pentecost through The Jerusalem Council. The timeline runs from Pentecost, with Stephen is martyred, Saul is converted, Cornelius hears Peter in between, to The Jerusalem Council. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Pentecost through The Jerusalem Council"
         },
         {
           "id": "bt-r094",
@@ -3856,7 +3949,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from Stephen is martyred through Paul preaches in Athens. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Stephen is martyred through Paul preaches in Athens. The timeline runs from Stephen is martyred, with Saul is converted, Cornelius hears Peter, The Jerusalem Council in between, to Paul preaches in Athens. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Stephen is martyred through Paul preaches in Athens"
         },
         {
           "id": "bt-r095",
@@ -3894,7 +3988,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from Saul is converted through Paul is arrested in Jerusalem. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Saul is converted through Paul is arrested in Jerusalem. The timeline runs from Saul is converted, with Cornelius hears Peter, The Jerusalem Council, Paul preaches in Athens in between, to Paul is arrested in Jerusalem. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Saul is converted through Paul is arrested in Jerusalem"
         }
       ]
     },
@@ -3939,7 +4034,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from Cornelius hears Peter through Paul reaches Rome. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Cornelius hears Peter through Paul reaches Rome. The timeline runs from Cornelius hears Peter, with The Jerusalem Council, Paul preaches in Athens, Paul is arrested in Jerusalem in between, to Paul reaches Rome. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Cornelius hears Peter through Paul reaches Rome"
         },
         {
           "id": "bt-r097",
@@ -3977,7 +4073,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from The Jerusalem Council through John receives Revelation. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from The Jerusalem Council through John receives Revelation. The timeline runs from The Jerusalem Council, with Paul preaches in Athens, Paul is arrested in Jerusalem, Paul reaches Rome in between, to John receives Revelation. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "The Jerusalem Council through John receives Revelation"
         },
         {
           "id": "bt-r098",
@@ -4021,7 +4118,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from Creation through Tower of Babel. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Creation through Tower of Babel. The timeline runs from Creation, with Fall in Eden, Cain kills Abel, Noah builds the ark, Flood covers the earth in between, to Tower of Babel. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Creation through Tower of Babel"
         },
         {
           "id": "bt-r099",
@@ -4065,7 +4163,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from Fall in Eden through Abram leaves Haran. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Fall in Eden through Abram leaves Haran. The timeline runs from Fall in Eden, with Cain kills Abel, Noah builds the ark, Flood covers the earth, Tower of Babel in between, to Abram leaves Haran. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Fall in Eden through Abram leaves Haran"
         },
         {
           "id": "bt-r100",
@@ -4109,7 +4208,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from Cain kills Abel through Isaac is born. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Cain kills Abel through Isaac is born. The timeline runs from Cain kills Abel, with Noah builds the ark, Flood covers the earth, Tower of Babel, Abram leaves Haran in between, to Isaac is born. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Cain kills Abel through Isaac is born"
         }
       ]
     },
@@ -4160,7 +4260,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from Noah builds the ark through Jacob receives the blessing. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Noah builds the ark through Jacob receives the blessing. The timeline runs from Noah builds the ark, with Flood covers the earth, Tower of Babel, Abram leaves Haran, Isaac is born in between, to Jacob receives the blessing. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Noah builds the ark through Jacob receives the blessing"
         },
         {
           "id": "bt-r102",
@@ -4204,7 +4305,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from Flood covers the earth through Joseph is sold by his brothers. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Flood covers the earth through Joseph is sold by his brothers. The timeline runs from Flood covers the earth, with Tower of Babel, Abram leaves Haran, Isaac is born, Jacob receives the blessing in between, to Joseph is sold by his brothers. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Flood covers the earth through Joseph is sold by his brothers"
         },
         {
           "id": "bt-r103",
@@ -4248,7 +4350,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from Tower of Babel through Israel moves to Egypt. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Tower of Babel through Israel moves to Egypt. The timeline runs from Tower of Babel, with Abram leaves Haran, Isaac is born, Jacob receives the blessing, Joseph is sold by his brothers in between, to Israel moves to Egypt. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Tower of Babel through Israel moves to Egypt"
         },
         {
           "id": "bt-r104",
@@ -4292,7 +4395,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from Abram leaves Haran through Moses is born. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Abram leaves Haran through Moses is born. The timeline runs from Abram leaves Haran, with Isaac is born, Jacob receives the blessing, Joseph is sold by his brothers, Israel moves to Egypt in between, to Moses is born. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Abram leaves Haran through Moses is born"
         },
         {
           "id": "bt-r105",
@@ -4336,7 +4440,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from Isaac is born through Moses sees the burning bush. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Isaac is born through Moses sees the burning bush. The timeline runs from Isaac is born, with Jacob receives the blessing, Joseph is sold by his brothers, Israel moves to Egypt, Moses is born in between, to Moses sees the burning bush. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Isaac is born through Moses sees the burning bush"
         }
       ]
     },
@@ -4387,7 +4492,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from Jacob receives the blessing through Plagues strike Egypt. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Jacob receives the blessing through Plagues strike Egypt. The timeline runs from Jacob receives the blessing, with Joseph is sold by his brothers, Israel moves to Egypt, Moses is born, Moses sees the burning bush in between, to Plagues strike Egypt. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Jacob receives the blessing through Plagues strike Egypt"
         },
         {
           "id": "bt-r107",
@@ -4431,7 +4537,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from Joseph is sold by his brothers through The Passover night. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Joseph is sold by his brothers through The Passover night. The timeline runs from Joseph is sold by his brothers, with Israel moves to Egypt, Moses is born, Moses sees the burning bush, Plagues strike Egypt in between, to The Passover night. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Joseph is sold by his brothers through The Passover night"
         },
         {
           "id": "bt-r108",
@@ -4475,7 +4582,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from Israel moves to Egypt through The Red Sea crossing. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Israel moves to Egypt through The Red Sea crossing. The timeline runs from Israel moves to Egypt, with Moses is born, Moses sees the burning bush, Plagues strike Egypt, The Passover night in between, to The Red Sea crossing. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Israel moves to Egypt through The Red Sea crossing"
         },
         {
           "id": "bt-r109",
@@ -4519,7 +4627,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from Moses is born through The law is given at Sinai. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Moses is born through The law is given at Sinai. The timeline runs from Moses is born, with Moses sees the burning bush, Plagues strike Egypt, The Passover night, The Red Sea crossing in between, to The law is given at Sinai. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Moses is born through The law is given at Sinai"
         },
         {
           "id": "bt-r110",
@@ -4563,7 +4672,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from Moses sees the burning bush through The tabernacle is built. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Moses sees the burning bush through The tabernacle is built. The timeline runs from Moses sees the burning bush, with Plagues strike Egypt, The Passover night, The Red Sea crossing, The law is given at Sinai in between, to The tabernacle is built. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Moses sees the burning bush through The tabernacle is built"
         }
       ]
     },
@@ -4614,7 +4724,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from Plagues strike Egypt through The spies enter Canaan. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Plagues strike Egypt through The spies enter Canaan. The timeline runs from Plagues strike Egypt, with The Passover night, The Red Sea crossing, The law is given at Sinai, The tabernacle is built in between, to The spies enter Canaan. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Plagues strike Egypt through The spies enter Canaan"
         },
         {
           "id": "bt-r112",
@@ -4658,7 +4769,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from The Passover night through Joshua leads Israel. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from The Passover night through Joshua leads Israel. The timeline runs from The Passover night, with The Red Sea crossing, The law is given at Sinai, The tabernacle is built, The spies enter Canaan in between, to Joshua leads Israel. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "The Passover night through Joshua leads Israel"
         },
         {
           "id": "bt-r113",
@@ -4702,7 +4814,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from The Red Sea crossing through The Jordan River crossing. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from The Red Sea crossing through The Jordan River crossing. The timeline runs from The Red Sea crossing, with The law is given at Sinai, The tabernacle is built, The spies enter Canaan, Joshua leads Israel in between, to The Jordan River crossing. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "The Red Sea crossing through The Jordan River crossing"
         },
         {
           "id": "bt-r114",
@@ -4746,7 +4859,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from The law is given at Sinai through Jericho falls. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from The law is given at Sinai through Jericho falls. The timeline runs from The law is given at Sinai, with The tabernacle is built, The spies enter Canaan, Joshua leads Israel, The Jordan River crossing in between, to Jericho falls. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "The law is given at Sinai through Jericho falls"
         },
         {
           "id": "bt-r115",
@@ -4790,7 +4904,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from The tabernacle is built through Deborah judges Israel. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from The tabernacle is built through Deborah judges Israel. The timeline runs from The tabernacle is built, with The spies enter Canaan, Joshua leads Israel, The Jordan River crossing, Jericho falls in between, to Deborah judges Israel. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "The tabernacle is built through Deborah judges Israel"
         }
       ]
     },
@@ -4841,7 +4956,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from The spies enter Canaan through Gideon defeats Midian. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from The spies enter Canaan through Gideon defeats Midian. The timeline runs from The spies enter Canaan, with Joshua leads Israel, The Jordan River crossing, Jericho falls, Deborah judges Israel in between, to Gideon defeats Midian. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "The spies enter Canaan through Gideon defeats Midian"
         },
         {
           "id": "bt-r117",
@@ -4885,7 +5001,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from Joshua leads Israel through Samson fights the Philistines. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Joshua leads Israel through Samson fights the Philistines. The timeline runs from Joshua leads Israel, with The Jordan River crossing, Jericho falls, Deborah judges Israel, Gideon defeats Midian in between, to Samson fights the Philistines. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Joshua leads Israel through Samson fights the Philistines"
         },
         {
           "id": "bt-r118",
@@ -4929,7 +5046,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from The Jordan River crossing through Ruth meets Boaz. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from The Jordan River crossing through Ruth meets Boaz. The timeline runs from The Jordan River crossing, with Jericho falls, Deborah judges Israel, Gideon defeats Midian, Samson fights the Philistines in between, to Ruth meets Boaz. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "The Jordan River crossing through Ruth meets Boaz"
         },
         {
           "id": "bt-r119",
@@ -4973,7 +5091,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from Jericho falls through Samuel is called. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Jericho falls through Samuel is called. The timeline runs from Jericho falls, with Deborah judges Israel, Gideon defeats Midian, Samson fights the Philistines, Ruth meets Boaz in between, to Samuel is called. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Jericho falls through Samuel is called"
         },
         {
           "id": "bt-r120",
@@ -5017,7 +5136,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from Deborah judges Israel through Saul becomes king. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Deborah judges Israel through Saul becomes king. The timeline runs from Deborah judges Israel, with Gideon defeats Midian, Samson fights the Philistines, Ruth meets Boaz, Samuel is called in between, to Saul becomes king. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Deborah judges Israel through Saul becomes king"
         }
       ]
     },
@@ -5068,7 +5188,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from Gideon defeats Midian through David defeats Goliath. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Gideon defeats Midian through David defeats Goliath. The timeline runs from Gideon defeats Midian, with Samson fights the Philistines, Ruth meets Boaz, Samuel is called, Saul becomes king in between, to David defeats Goliath. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Gideon defeats Midian through David defeats Goliath"
         },
         {
           "id": "bt-r122",
@@ -5112,7 +5233,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from Samson fights the Philistines through David becomes king. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Samson fights the Philistines through David becomes king. The timeline runs from Samson fights the Philistines, with Ruth meets Boaz, Samuel is called, Saul becomes king, David defeats Goliath in between, to David becomes king. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Samson fights the Philistines through David becomes king"
         },
         {
           "id": "bt-r123",
@@ -5156,7 +5278,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Put these Bible events in order, from Ruth meets Boaz through Solomon asks for wisdom. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Ruth meets Boaz through Solomon asks for wisdom. The timeline runs from Ruth meets Boaz, with Samuel is called, Saul becomes king, David defeats Goliath, David becomes king in between, to Solomon asks for wisdom. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Ruth meets Boaz through Solomon asks for wisdom"
         },
         {
           "id": "bt-r124",
@@ -5200,7 +5323,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Put these Bible events in order, from Samuel is called through Solomon builds the temple. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Samuel is called through Solomon builds the temple. The timeline runs from Samuel is called, with Saul becomes king, David defeats Goliath, David becomes king, Solomon asks for wisdom in between, to Solomon builds the temple. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Samuel is called through Solomon builds the temple"
         },
         {
           "id": "bt-r125",
@@ -5244,7 +5368,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Put these Bible events in order, from Saul becomes king through The kingdom divides. and how it connects to the Bible before continuing."
+          "teachingNote": "Put these Bible events in order, from Saul becomes king through The kingdom divides. The timeline runs from Saul becomes king, with David defeats Goliath, David becomes king, Solomon asks for wisdom, Solomon builds the temple in between, to The kingdom divides. That ordered sequence is the reason the round resolves this way.",
+          "scriptureReference": "Saul becomes king through The kingdom divides"
         }
       ]
     }

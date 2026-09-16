@@ -27,7 +27,8 @@
             "Its title is Genesis."
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Genesis and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis is the answer because it is a Old Testament book in the Law section. It opens the Bible and is followed by Exodus, and its clues point to creation, the patriarchs, and Joseph.",
+          "scriptureReference": "Genesis"
         },
         {
           "id": "ntb-r02",
@@ -46,7 +47,8 @@
             "Its title is Exodus."
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Exodus and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus is the answer because it is a Old Testament book in the Law section. It is placed after Genesis and before Leviticus in the Protestant Bible order, and its clues point to Israel's rescue from Egypt and the covenant at Sinai.",
+          "scriptureReference": "Exodus"
         },
         {
           "id": "ntb-r03",
@@ -65,7 +67,8 @@
             "Its title is Leviticus."
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Leviticus and how it connects to the Bible before continuing."
+          "teachingNote": "Leviticus is the answer because it is a Old Testament book in the Law section. It is placed after Exodus and before Numbers in the Protestant Bible order, and its clues point to priests, sacrifices, holiness, and worship.",
+          "scriptureReference": "Leviticus"
         },
         {
           "id": "ntb-r04",
@@ -84,7 +87,8 @@
             "Its title is Numbers."
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Numbers and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers is the answer because it is a Old Testament book in the Law section. It is placed after Leviticus and before Deuteronomy in the Protestant Bible order, and its clues point to wilderness travel, censuses, rebellion, and preparation.",
+          "scriptureReference": "Numbers"
         },
         {
           "id": "ntb-r05",
@@ -103,7 +107,8 @@
             "Its title is Deuteronomy."
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Deuteronomy and how it connects to the Bible before continuing."
+          "teachingNote": "Deuteronomy is the answer because it is a Old Testament book in the Law section. It is placed after Numbers and before Joshua in the Protestant Bible order, and its clues point to Moses renewing the covenant before Canaan.",
+          "scriptureReference": "Deuteronomy"
         },
         {
           "id": "ntb-r06",
@@ -122,7 +127,8 @@
             "Its title is Joshua."
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Joshua and how it connects to the Bible before continuing."
+          "teachingNote": "Joshua is the answer because it is a Old Testament book in the History section. It is placed after Deuteronomy and before Judges in the Protestant Bible order, and its clues point to entering and dividing the promised land.",
+          "scriptureReference": "Joshua"
         },
         {
           "id": "ntb-r07",
@@ -141,7 +147,8 @@
             "Its title is Judges."
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Judges and how it connects to the Bible before continuing."
+          "teachingNote": "Judges is the answer because it is a Old Testament book in the History section. It is placed after Joshua and before Ruth in the Protestant Bible order, and its clues point to Israel's cycles of sin, oppression, and rescue.",
+          "scriptureReference": "Judges"
         },
         {
           "id": "ntb-r08",
@@ -159,7 +166,8 @@
             "Its title is Ruth."
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Ruth and how it connects to the Bible before continuing."
+          "teachingNote": "Ruth is the answer because it is a Old Testament book in the History section. It is placed after Judges and before 1 Samuel in the Protestant Bible order, and its clues point to loyalty, Boaz, and David's family line.",
+          "scriptureReference": "Ruth"
         },
         {
           "id": "ntb-r09",
@@ -179,7 +187,8 @@
             "Its title is 1 Samuel."
           ],
           "difficulty": "hard",
-          "teachingNote": "Review 1 Samuel and how it connects to the Bible before continuing."
+          "teachingNote": "1 Samuel is the answer because it is a Old Testament book in the History section. It is placed after Ruth and before 2 Samuel in the Protestant Bible order, and its clues point to Samuel, Saul, and David's rise.",
+          "scriptureReference": "1 Samuel"
         },
         {
           "id": "ntb-r10",
@@ -199,7 +208,8 @@
             "Its title is 2 Samuel."
           ],
           "difficulty": "easy",
-          "teachingNote": "Review 2 Samuel and how it connects to the Bible before continuing."
+          "teachingNote": "2 Samuel is the answer because it is a Old Testament book in the History section. It is placed after 1 Samuel and before 1 Kings in the Protestant Bible order, and its clues point to David's reign over Israel.",
+          "scriptureReference": "2 Samuel"
         }
       ]
     },
@@ -226,7 +236,8 @@
             "Its title is 1 Kings."
           ],
           "difficulty": "medium",
-          "teachingNote": "Review 1 Kings and how it connects to the Bible before continuing."
+          "teachingNote": "1 Kings is the answer because it is a Old Testament book in the History section. It is placed after 2 Samuel and before 2 Kings in the Protestant Bible order, and its clues point to Solomon, the divided kingdom, and Elijah.",
+          "scriptureReference": "1 Kings"
         },
         {
           "id": "ntb-r12",
@@ -246,7 +257,8 @@
             "Its title is 2 Kings."
           ],
           "difficulty": "hard",
-          "teachingNote": "Review 2 Kings and how it connects to the Bible before continuing."
+          "teachingNote": "2 Kings is the answer because it is a Old Testament book in the History section. It is placed after 1 Kings and before 1 Chronicles in the Protestant Bible order, and its clues point to the decline and exile of Israel and Judah.",
+          "scriptureReference": "2 Kings"
         },
         {
           "id": "ntb-r13",
@@ -266,7 +278,8 @@
             "Its title is 1 Chronicles."
           ],
           "difficulty": "easy",
-          "teachingNote": "Review 1 Chronicles and how it connects to the Bible before continuing."
+          "teachingNote": "1 Chronicles is the answer because it is a Old Testament book in the History section. It is placed after 2 Kings and before 2 Chronicles in the Protestant Bible order, and its clues point to genealogies and David's kingdom.",
+          "scriptureReference": "1 Chronicles"
         },
         {
           "id": "ntb-r14",
@@ -286,7 +299,8 @@
             "Its title is 2 Chronicles."
           ],
           "difficulty": "medium",
-          "teachingNote": "Review 2 Chronicles and how it connects to the Bible before continuing."
+          "teachingNote": "2 Chronicles is the answer because it is a Old Testament book in the History section. It is placed after 1 Chronicles and before Ezra in the Protestant Bible order, and its clues point to Judah's kings and temple history.",
+          "scriptureReference": "2 Chronicles"
         },
         {
           "id": "ntb-r15",
@@ -304,7 +318,8 @@
             "Its title is Ezra."
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Ezra and how it connects to the Bible before continuing."
+          "teachingNote": "Ezra is the answer because it is a Old Testament book in the History section. It is placed after 2 Chronicles and before Nehemiah in the Protestant Bible order, and its clues point to return from exile and rebuilding the temple.",
+          "scriptureReference": "Ezra"
         },
         {
           "id": "ntb-r16",
@@ -323,7 +338,8 @@
             "Its title is Nehemiah."
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Nehemiah and how it connects to the Bible before continuing."
+          "teachingNote": "Nehemiah is the answer because it is a Old Testament book in the History section. It is placed after Ezra and before Esther in the Protestant Bible order, and its clues point to rebuilding Jerusalem's wall.",
+          "scriptureReference": "Nehemiah"
         },
         {
           "id": "ntb-r17",
@@ -342,7 +358,8 @@
             "Its title is Esther."
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Esther and how it connects to the Bible before continuing."
+          "teachingNote": "Esther is the answer because it is a Old Testament book in the History section. It is placed after Nehemiah and before Job in the Protestant Bible order, and its clues point to a queen preserving her people in Persia.",
+          "scriptureReference": "Esther"
         },
         {
           "id": "ntb-r18",
@@ -360,7 +377,8 @@
             "Its title is Job."
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Job and how it connects to the Bible before continuing."
+          "teachingNote": "Job is the answer because it is a Old Testament book in the Wisdom section. It is placed after Esther and before Psalms in the Protestant Bible order, and its clues point to suffering, faith, and God's wisdom.",
+          "scriptureReference": "Job"
         },
         {
           "id": "ntb-r19",
@@ -380,7 +398,8 @@
             "Its title is Psalms."
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Psalms and how it connects to the Bible before continuing."
+          "teachingNote": "Psalms is the answer because it is a Old Testament book in the Wisdom section. It is placed after Job and before Proverbs in the Protestant Bible order, and its clues point to songs, prayers, lament, and praise.",
+          "scriptureReference": "Psalms"
         },
         {
           "id": "ntb-r20",
@@ -399,7 +418,8 @@
             "Its title is Proverbs."
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Proverbs and how it connects to the Bible before continuing."
+          "teachingNote": "Proverbs is the answer because it is a Old Testament book in the Wisdom section. It is placed after Psalms and before Ecclesiastes in the Protestant Bible order, and its clues point to practical wisdom and the fear of the Lord.",
+          "scriptureReference": "Proverbs"
         }
       ]
     },
@@ -425,7 +445,8 @@
             "Its title is Ecclesiastes."
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Ecclesiastes and how it connects to the Bible before continuing."
+          "teachingNote": "Ecclesiastes is the answer because it is a Old Testament book in the Wisdom section. It is placed after Proverbs and before Song of Solomon in the Protestant Bible order, and its clues point to life's vanity and the search for meaning.",
+          "scriptureReference": "Ecclesiastes"
         },
         {
           "id": "ntb-r22",
@@ -446,7 +467,8 @@
             "Its title is Song of Solomon."
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Song of Solomon and how it connects to the Bible before continuing."
+          "teachingNote": "Song of Solomon is the answer because it is a Old Testament book in the Wisdom section. It is placed after Ecclesiastes and before Isaiah in the Protestant Bible order, and its clues point to poetic love and devotion.",
+          "scriptureReference": "Song of Solomon"
         },
         {
           "id": "ntb-r23",
@@ -465,7 +487,8 @@
             "Its title is Isaiah."
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Isaiah and how it connects to the Bible before continuing."
+          "teachingNote": "Isaiah is the answer because it is a Old Testament book in the Major Prophets section. It is placed after Song of Solomon and before Jeremiah in the Protestant Bible order, and its clues point to judgment, comfort, and the servant of the Lord.",
+          "scriptureReference": "Isaiah"
         },
         {
           "id": "ntb-r24",
@@ -484,7 +507,8 @@
             "Its title is Jeremiah."
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Jeremiah and how it connects to the Bible before continuing."
+          "teachingNote": "Jeremiah is the answer because it is a Old Testament book in the Major Prophets section. It is placed after Isaiah and before Lamentations in the Protestant Bible order, and its clues point to warnings before Jerusalem's fall.",
+          "scriptureReference": "Jeremiah"
         },
         {
           "id": "ntb-r25",
@@ -503,7 +527,8 @@
             "Its title is Lamentations."
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Lamentations and how it connects to the Bible before continuing."
+          "teachingNote": "Lamentations is the answer because it is a Old Testament book in the Major Prophets section. It is placed after Jeremiah and before Ezekiel in the Protestant Bible order, and its clues point to grief over fallen Jerusalem.",
+          "scriptureReference": "Lamentations"
         },
         {
           "id": "ntb-r26",
@@ -522,7 +547,8 @@
             "Its title is Ezekiel."
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Ezekiel and how it connects to the Bible before continuing."
+          "teachingNote": "Ezekiel is the answer because it is a Old Testament book in the Major Prophets section. It is placed after Lamentations and before Daniel in the Protestant Bible order, and its clues point to exile visions, judgment, and restoration.",
+          "scriptureReference": "Ezekiel"
         },
         {
           "id": "ntb-r27",
@@ -541,7 +567,8 @@
             "Its title is Daniel."
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Daniel and how it connects to the Bible before continuing."
+          "teachingNote": "Daniel is the answer because it is a Old Testament book in the Major Prophets section. It is placed after Ezekiel and before Hosea in the Protestant Bible order, and its clues point to faithfulness in exile and kingdom visions.",
+          "scriptureReference": "Daniel"
         },
         {
           "id": "ntb-r28",
@@ -560,7 +587,8 @@
             "Its title is Hosea."
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Hosea and how it connects to the Bible before continuing."
+          "teachingNote": "Hosea is the answer because it is a Old Testament book in the Minor Prophets section. It is placed after Daniel and before Joel in the Protestant Bible order, and its clues point to covenant love pictured through marriage.",
+          "scriptureReference": "Hosea"
         },
         {
           "id": "ntb-r29",
@@ -578,7 +606,8 @@
             "Its title is Joel."
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Joel and how it connects to the Bible before continuing."
+          "teachingNote": "Joel is the answer because it is a Old Testament book in the Minor Prophets section. It is placed after Hosea and before Amos in the Protestant Bible order, and its clues point to locust judgment and the day of the Lord.",
+          "scriptureReference": "Joel"
         },
         {
           "id": "ntb-r30",
@@ -596,7 +625,8 @@
             "Its title is Amos."
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Amos and how it connects to the Bible before continuing."
+          "teachingNote": "Amos is the answer because it is a Old Testament book in the Minor Prophets section. It is placed after Joel and before Obadiah in the Protestant Bible order, and its clues point to justice and judgment on Israel.",
+          "scriptureReference": "Amos"
         }
       ]
     },
@@ -622,7 +652,8 @@
             "Its title is Obadiah."
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Obadiah and how it connects to the Bible before continuing."
+          "teachingNote": "Obadiah is the answer because it is a Old Testament book in the Minor Prophets section. It is placed after Amos and before Jonah in the Protestant Bible order, and its clues point to judgment against Edom.",
+          "scriptureReference": "Obadiah"
         },
         {
           "id": "ntb-r32",
@@ -640,7 +671,8 @@
             "Its title is Jonah."
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Jonah and how it connects to the Bible before continuing."
+          "teachingNote": "Jonah is the answer because it is a Old Testament book in the Minor Prophets section. It is placed after Obadiah and before Micah in the Protestant Bible order, and its clues point to a reluctant prophet sent to Nineveh.",
+          "scriptureReference": "Jonah"
         },
         {
           "id": "ntb-r33",
@@ -659,7 +691,8 @@
             "Its title is Micah."
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Micah and how it connects to the Bible before continuing."
+          "teachingNote": "Micah is the answer because it is a Old Testament book in the Minor Prophets section. It is placed after Jonah and before Nahum in the Protestant Bible order, and its clues point to justice, mercy, and Bethlehem hope.",
+          "scriptureReference": "Micah"
         },
         {
           "id": "ntb-r34",
@@ -678,7 +711,8 @@
             "Its title is Nahum."
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Nahum and how it connects to the Bible before continuing."
+          "teachingNote": "Nahum is the answer because it is a Old Testament book in the Minor Prophets section. It is placed after Micah and before Habakkuk in the Protestant Bible order, and its clues point to Nineveh's coming fall.",
+          "scriptureReference": "Nahum"
         },
         {
           "id": "ntb-r35",
@@ -697,7 +731,8 @@
             "Its title is Habakkuk."
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Habakkuk and how it connects to the Bible before continuing."
+          "teachingNote": "Habakkuk is the answer because it is a Old Testament book in the Minor Prophets section. It is placed after Nahum and before Zephaniah in the Protestant Bible order, and its clues point to faith while asking hard questions.",
+          "scriptureReference": "Habakkuk"
         },
         {
           "id": "ntb-r36",
@@ -716,7 +751,8 @@
             "Its title is Zephaniah."
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Zephaniah and how it connects to the Bible before continuing."
+          "teachingNote": "Zephaniah is the answer because it is a Old Testament book in the Minor Prophets section. It is placed after Habakkuk and before Haggai in the Protestant Bible order, and its clues point to the day of the Lord and a purified remnant.",
+          "scriptureReference": "Zephaniah"
         },
         {
           "id": "ntb-r37",
@@ -735,7 +771,8 @@
             "Its title is Haggai."
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Haggai and how it connects to the Bible before continuing."
+          "teachingNote": "Haggai is the answer because it is a Old Testament book in the Minor Prophets section. It is placed after Zephaniah and before Zechariah in the Protestant Bible order, and its clues point to calling the returned people to rebuild the temple.",
+          "scriptureReference": "Haggai"
         },
         {
           "id": "ntb-r38",
@@ -754,7 +791,8 @@
             "Its title is Zechariah."
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Zechariah and how it connects to the Bible before continuing."
+          "teachingNote": "Zechariah is the answer because it is a Old Testament book in the Minor Prophets section. It is placed after Haggai and before Malachi in the Protestant Bible order, and its clues point to visions of restoration and messianic hope.",
+          "scriptureReference": "Zechariah"
         },
         {
           "id": "ntb-r39",
@@ -773,7 +811,8 @@
             "Its title is Malachi."
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Malachi and how it connects to the Bible before continuing."
+          "teachingNote": "Malachi is the answer because it is a Old Testament book in the Minor Prophets section. It is placed after Zechariah and before Matthew in the Protestant Bible order, and its clues point to rebuke, covenant faithfulness, and Elijah's promise.",
+          "scriptureReference": "Malachi"
         },
         {
           "id": "ntb-r40",
@@ -792,7 +831,8 @@
             "Its title is Matthew."
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Matthew and how it connects to the Bible before continuing."
+          "teachingNote": "Matthew is the answer because it is a New Testament book in the Gospels section. It is placed after Malachi and before Mark in the Protestant Bible order, and its clues point to Jesus as Messiah and King.",
+          "scriptureReference": "Matthew"
         }
       ]
     },
@@ -818,7 +858,8 @@
             "Its title is Mark."
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Mark and how it connects to the Bible before continuing."
+          "teachingNote": "Mark is the answer because it is a New Testament book in the Gospels section. It is placed after Matthew and before Luke in the Protestant Bible order, and its clues point to the active ministry and suffering servant.",
+          "scriptureReference": "Mark"
         },
         {
           "id": "ntb-r42",
@@ -837,7 +878,8 @@
             "Its title is Luke."
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Luke and how it connects to the Bible before continuing."
+          "teachingNote": "Luke is the answer because it is a New Testament book in the Gospels section. It is placed after Mark and before John in the Protestant Bible order, and its clues point to Jesus' compassion and orderly account.",
+          "scriptureReference": "Luke"
         },
         {
           "id": "ntb-r43",
@@ -856,7 +898,8 @@
             "Its title is John."
           ],
           "difficulty": "easy",
-          "teachingNote": "Review John and how it connects to the Bible before continuing."
+          "teachingNote": "John is the answer because it is a New Testament book in the Gospels section. It is placed after Luke and before Acts in the Protestant Bible order, and its clues point to signs showing Jesus as the Son of God.",
+          "scriptureReference": "John"
         },
         {
           "id": "ntb-r44",
@@ -874,7 +917,8 @@
             "Its title is Acts."
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Acts and how it connects to the Bible before continuing."
+          "teachingNote": "Acts is the answer because it is a New Testament book in the History section. It is placed after John and before Romans in the Protestant Bible order, and its clues point to the Spirit, apostles, and spread of the church.",
+          "scriptureReference": "Acts"
         },
         {
           "id": "ntb-r45",
@@ -893,7 +937,8 @@
             "Its title is Romans."
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Romans and how it connects to the Bible before continuing."
+          "teachingNote": "Romans is the answer because it is a New Testament book in the Pauline Letters section. It is placed after Acts and before 1 Corinthians in the Protestant Bible order, and its clues point to sin, grace, faith, and righteousness.",
+          "scriptureReference": "Romans"
         },
         {
           "id": "ntb-r46",
@@ -913,7 +958,8 @@
             "Its title is 1 Corinthians."
           ],
           "difficulty": "easy",
-          "teachingNote": "Review 1 Corinthians and how it connects to the Bible before continuing."
+          "teachingNote": "1 Corinthians is the answer because it is a New Testament book in the Pauline Letters section. It is placed after Romans and before 2 Corinthians in the Protestant Bible order, and its clues point to church problems, gifts, love, and resurrection.",
+          "scriptureReference": "1 Corinthians"
         },
         {
           "id": "ntb-r47",
@@ -933,7 +979,8 @@
             "Its title is 2 Corinthians."
           ],
           "difficulty": "medium",
-          "teachingNote": "Review 2 Corinthians and how it connects to the Bible before continuing."
+          "teachingNote": "2 Corinthians is the answer because it is a New Testament book in the Pauline Letters section. It is placed after 1 Corinthians and before Galatians in the Protestant Bible order, and its clues point to Paul's ministry, suffering, and generosity.",
+          "scriptureReference": "2 Corinthians"
         },
         {
           "id": "ntb-r48",
@@ -952,7 +999,8 @@
             "Its title is Galatians."
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Galatians and how it connects to the Bible before continuing."
+          "teachingNote": "Galatians is the answer because it is a New Testament book in the Pauline Letters section. It is placed after 2 Corinthians and before Ephesians in the Protestant Bible order, and its clues point to freedom in Christ and justification by faith.",
+          "scriptureReference": "Galatians"
         },
         {
           "id": "ntb-r49",
@@ -971,7 +1019,8 @@
             "Its title is Ephesians."
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Ephesians and how it connects to the Bible before continuing."
+          "teachingNote": "Ephesians is the answer because it is a New Testament book in the Pauline Letters section. It is placed after Galatians and before Philippians in the Protestant Bible order, and its clues point to the church, unity, grace, and spiritual armor.",
+          "scriptureReference": "Ephesians"
         },
         {
           "id": "ntb-r50",
@@ -990,7 +1039,8 @@
             "Its title is Philippians."
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Philippians and how it connects to the Bible before continuing."
+          "teachingNote": "Philippians is the answer because it is a New Testament book in the Pauline Letters section. It is placed after Ephesians and before Colossians in the Protestant Bible order, and its clues point to joy, humility, and partnership in the gospel.",
+          "scriptureReference": "Philippians"
         }
       ]
     },
@@ -1016,7 +1066,8 @@
             "Its title is Colossians."
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Colossians and how it connects to the Bible before continuing."
+          "teachingNote": "Colossians is the answer because it is a New Testament book in the Pauline Letters section. It is placed after Philippians and before 1 Thessalonians in the Protestant Bible order, and its clues point to Christ's supremacy and new life.",
+          "scriptureReference": "Colossians"
         },
         {
           "id": "ntb-r52",
@@ -1036,7 +1087,8 @@
             "Its title is 1 Thessalonians."
           ],
           "difficulty": "easy",
-          "teachingNote": "Review 1 Thessalonians and how it connects to the Bible before continuing."
+          "teachingNote": "1 Thessalonians is the answer because it is a New Testament book in the Pauline Letters section. It is placed after Colossians and before 2 Thessalonians in the Protestant Bible order, and its clues point to encouragement, holiness, and Christ's return.",
+          "scriptureReference": "1 Thessalonians"
         },
         {
           "id": "ntb-r53",
@@ -1056,7 +1108,8 @@
             "Its title is 2 Thessalonians."
           ],
           "difficulty": "medium",
-          "teachingNote": "Review 2 Thessalonians and how it connects to the Bible before continuing."
+          "teachingNote": "2 Thessalonians is the answer because it is a New Testament book in the Pauline Letters section. It is placed after 1 Thessalonians and before 1 Timothy in the Protestant Bible order, and its clues point to steadiness while awaiting the Lord.",
+          "scriptureReference": "2 Thessalonians"
         },
         {
           "id": "ntb-r54",
@@ -1076,7 +1129,8 @@
             "Its title is 1 Timothy."
           ],
           "difficulty": "hard",
-          "teachingNote": "Review 1 Timothy and how it connects to the Bible before continuing."
+          "teachingNote": "1 Timothy is the answer because it is a New Testament book in the Pauline Letters section. It is placed after 2 Thessalonians and before 2 Timothy in the Protestant Bible order, and its clues point to church order and pastoral instruction.",
+          "scriptureReference": "1 Timothy"
         },
         {
           "id": "ntb-r55",
@@ -1096,7 +1150,8 @@
             "Its title is 2 Timothy."
           ],
           "difficulty": "easy",
-          "teachingNote": "Review 2 Timothy and how it connects to the Bible before continuing."
+          "teachingNote": "2 Timothy is the answer because it is a New Testament book in the Pauline Letters section. It is placed after 1 Timothy and before Titus in the Protestant Bible order, and its clues point to endurance and faithfulness in ministry.",
+          "scriptureReference": "2 Timothy"
         },
         {
           "id": "ntb-r56",
@@ -1114,7 +1169,8 @@
             "Its title is Titus."
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Titus and how it connects to the Bible before continuing."
+          "teachingNote": "Titus is the answer because it is a New Testament book in the Pauline Letters section. It is placed after 2 Timothy and before Philemon in the Protestant Bible order, and its clues point to appointing elders and teaching sound doctrine.",
+          "scriptureReference": "Titus"
         },
         {
           "id": "ntb-r57",
@@ -1133,7 +1189,8 @@
             "Its title is Philemon."
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Philemon and how it connects to the Bible before continuing."
+          "teachingNote": "Philemon is the answer because it is a New Testament book in the Pauline Letters section. It is placed after Titus and before Hebrews in the Protestant Bible order, and its clues point to appeal for Onesimus and gospel reconciliation.",
+          "scriptureReference": "Philemon"
         },
         {
           "id": "ntb-r58",
@@ -1152,7 +1209,8 @@
             "Its title is Hebrews."
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Hebrews and how it connects to the Bible before continuing."
+          "teachingNote": "Hebrews is the answer because it is a New Testament book in the General Letters section. It is placed after Philemon and before James in the Protestant Bible order, and its clues point to Christ's superiority and persevering faith.",
+          "scriptureReference": "Hebrews"
         },
         {
           "id": "ntb-r59",
@@ -1171,7 +1229,8 @@
             "Its title is James."
           ],
           "difficulty": "medium",
-          "teachingNote": "Review James and how it connects to the Bible before continuing."
+          "teachingNote": "James is the answer because it is a New Testament book in the General Letters section. It is placed after Hebrews and before 1 Peter in the Protestant Bible order, and its clues point to practical faith shown through works.",
+          "scriptureReference": "James"
         },
         {
           "id": "ntb-r60",
@@ -1191,7 +1250,8 @@
             "Its title is 1 Peter."
           ],
           "difficulty": "hard",
-          "teachingNote": "Review 1 Peter and how it connects to the Bible before continuing."
+          "teachingNote": "1 Peter is the answer because it is a New Testament book in the General Letters section. It is placed after James and before 2 Peter in the Protestant Bible order, and its clues point to hope and endurance in suffering.",
+          "scriptureReference": "1 Peter"
         }
       ]
     },
@@ -1218,7 +1278,8 @@
             "Its title is 2 Peter."
           ],
           "difficulty": "easy",
-          "teachingNote": "Review 2 Peter and how it connects to the Bible before continuing."
+          "teachingNote": "2 Peter is the answer because it is a New Testament book in the General Letters section. It is placed after 1 Peter and before 1 John in the Protestant Bible order, and its clues point to growth, warning, and the day of the Lord.",
+          "scriptureReference": "2 Peter"
         },
         {
           "id": "ntb-r62",
@@ -1238,7 +1299,8 @@
             "Its title is 1 John."
           ],
           "difficulty": "medium",
-          "teachingNote": "Review 1 John and how it connects to the Bible before continuing."
+          "teachingNote": "1 John is the answer because it is a New Testament book in the General Letters section. It is placed after 2 Peter and before 2 John in the Protestant Bible order, and its clues point to love, truth, and assurance.",
+          "scriptureReference": "1 John"
         },
         {
           "id": "ntb-r63",
@@ -1258,7 +1320,8 @@
             "Its title is 2 John."
           ],
           "difficulty": "hard",
-          "teachingNote": "Review 2 John and how it connects to the Bible before continuing."
+          "teachingNote": "2 John is the answer because it is a New Testament book in the General Letters section. It is placed after 1 John and before 3 John in the Protestant Bible order, and its clues point to truth, love, and warning against deceivers.",
+          "scriptureReference": "2 John"
         },
         {
           "id": "ntb-r64",
@@ -1278,7 +1341,8 @@
             "Its title is 3 John."
           ],
           "difficulty": "easy",
-          "teachingNote": "Review 3 John and how it connects to the Bible before continuing."
+          "teachingNote": "3 John is the answer because it is a New Testament book in the General Letters section. It is placed after 2 John and before Jude in the Protestant Bible order, and its clues point to hospitality, truth, and church leadership.",
+          "scriptureReference": "3 John"
         },
         {
           "id": "ntb-r65",
@@ -1296,7 +1360,8 @@
             "Its title is Jude."
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Jude and how it connects to the Bible before continuing."
+          "teachingNote": "Jude is the answer because it is a New Testament book in the General Letters section. It is placed after 3 John and before Revelation in the Protestant Bible order, and its clues point to contending for the faith.",
+          "scriptureReference": "Jude"
         },
         {
           "id": "ntb-r66",
@@ -1315,7 +1380,8 @@
             "Its title is Revelation."
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Revelation and how it connects to the Bible before continuing."
+          "teachingNote": "Revelation is the answer because it is a New Testament book in the Prophecy section. It closes the Bible and follows Jude, and its clues point to visions, judgment, worship, and final victory.",
+          "scriptureReference": "Revelation"
         }
       ]
     }

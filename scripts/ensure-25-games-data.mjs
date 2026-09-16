@@ -3,6 +3,9 @@ import { existsSync } from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { buildEventStudyNote } from "./bible-event-study-notes.mjs";
+import { buildBibleConnectionsStudyNote, buildBooksRelayStudyNote, buildTimelineStudyNote } from "./structured-study-notes.mjs";
+import { buildVerseStudyNote } from "./verse-study-notes.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -620,14 +623,20 @@ function mergeRounds(existingRounds, generatedRounds, keyFor, target) {
 
 function buildReferenceRush(existingPack, flatVerses) {
   const target = existingPack.roundsPerSession * 25;
-  const generated = pickVerseCandidates(flatVerses, target, 0).map((verse, index) => ({
-    id: `rr-auto-r${String(index + 1).padStart(3, "0")}`,
-    reference: referenceFor(verse),
-    referenceAliases: aliasesForReference(referenceFor(verse)),
-    sourceTranslation: "KJV",
-    theme: themeForText(verse.text),
-    verseText: verse.text
-  }));
+  const generated = pickVerseCandidates(flatVerses, target, 0).map((verse, index) => {
+    const reference = referenceFor(verse);
+    const theme = themeForText(verse.text);
+
+    return {
+      id: `rr-auto-r${String(index + 1).padStart(3, "0")}`,
+      reference,
+      referenceAliases: aliasesForReference(reference),
+      sourceTranslation: "KJV",
+      theme,
+      verseText: verse.text,
+      teachingNote: buildVerseStudyNote({ reference, theme, verseText: verse.text })
+    };
+  });
   const rounds = mergeRounds(compactExistingRounds(existingPack), generated, (round) => normalizeLoose(round.reference), target)
     .map((round, index) => ({ ...round, id: `rr-r${String(index + 1).padStart(3, "0")}` }));
 
@@ -639,17 +648,23 @@ function buildReferenceRush(existingPack, flatVerses) {
 
 function buildScripturePuzzles(existingPack, flatVerses) {
   const target = existingPack.roundsPerSession * 25;
-  const generated = pickVerseCandidates(flatVerses, target, 250).map((verse, index) => ({
-    id: `sp-auto-r${String(index + 1).padStart(3, "0")}`,
-    reference: referenceFor(verse),
-    referenceAliases: aliasesForReference(referenceFor(verse)),
-    sourceTranslation: "KJV",
-    theme: themeForText(verse.text),
-    contextClue: `A KJV verse connected with ${themeForText(verse.text).toLowerCase()} in ${verse.book}.`,
-    contentMode: "public-domain-text",
-    verseText: verse.text,
-    solutionAliases: [verse.text]
-  }));
+  const generated = pickVerseCandidates(flatVerses, target, 250).map((verse, index) => {
+    const reference = referenceFor(verse);
+    const theme = themeForText(verse.text);
+
+    return {
+      id: `sp-auto-r${String(index + 1).padStart(3, "0")}`,
+      reference,
+      referenceAliases: aliasesForReference(reference),
+      sourceTranslation: "KJV",
+      theme,
+      contextClue: `A KJV verse connected with ${theme.toLowerCase()} in ${verse.book}.`,
+      contentMode: "public-domain-text",
+      verseText: verse.text,
+      solutionAliases: [verse.text],
+      teachingNote: buildVerseStudyNote({ reference, theme, verseText: verse.text })
+    };
+  });
   const rounds = mergeRounds(
     compactExistingRounds(existingPack),
     generated,
@@ -665,15 +680,21 @@ function buildScripturePuzzles(existingPack, flatVerses) {
 
 function buildChapterFinder(existingPack, flatVerses) {
   const target = existingPack.roundsPerSession * 25;
-  const generated = pickVerseCandidates(flatVerses, target, 75).map((verse, index) => ({
-    id: `cf-auto-r${String(index + 1).padStart(3, "0")}`,
-    prompt: `${CHAPTER_PROMPTS[index % CHAPTER_PROMPTS.length]} "${verse.text}"`,
-    answerBook: verse.book,
-    answerChapter: verse.chapter,
-    aliases: aliasesForChapter(verse.book, verse.chapter),
-    theme: sectionForBook(verse.book),
-    clue: `This line appears in ${verse.book}.`
-  }));
+  const generated = pickVerseCandidates(flatVerses, target, 75).map((verse, index) => {
+    const prompt = `${CHAPTER_PROMPTS[index % CHAPTER_PROMPTS.length]} "${verse.text}"`;
+
+    return {
+      id: `cf-auto-r${String(index + 1).padStart(3, "0")}`,
+      prompt,
+      answerBook: verse.book,
+      answerChapter: verse.chapter,
+      scriptureReference: `${verse.book} ${verse.chapter}`,
+      aliases: aliasesForChapter(verse.book, verse.chapter),
+      theme: sectionForBook(verse.book),
+      clue: `This line appears in ${verse.book}.`,
+      teachingNote: `${verse.book} ${verse.chapter} is the chapter that contains "${prompt.replace(/[.?!]+$/g, "")}." This line appears in ${verse.book}. The prompt's specific wording is the detail that points to this chapter.`
+    };
+  });
   const rounds = mergeRounds(
     compactExistingRounds(existingPack),
     generated,
@@ -715,7 +736,12 @@ function buildMissingWord(existingPack, flatVerses) {
       theme: themeForText(verse.text),
       verseText: verse.text,
       missingWords: [missingWord],
-      acceptedAnswers: [missingWord]
+      acceptedAnswers: [missingWord],
+      teachingNote: buildVerseStudyNote({
+        reference: referenceFor(verse),
+        theme: themeForText(verse.text),
+        verseText: verse.text
+      })
     });
 
     if (generated.length >= target) break;
@@ -785,7 +811,8 @@ function extractSpeakerRounds(flatVerses) {
         reference: referenceFor(verse),
         context: `${speaker} spoke in ${referenceFor(verse)}.`,
         sourceTranslation: "KJV",
-        theme: themeForText(quote)
+        theme: themeForText(quote),
+        teachingNote: `${referenceFor(verse)} identifies ${speaker} as the speaker of "${quote}" ${speaker} spoke in ${referenceFor(verse)}. That context is why ${speaker} is the correct answer.`
       });
       break;
     }
@@ -824,13 +851,15 @@ function buildBeforeOrAfter(existingPack) {
       usedPairs.add(pairKey);
 
       const flip = generated.length % 2 === 1;
+      const explanation = buildEventStudyNote(earlier, later);
       generated.push({
         id: `boa-auto-r${String(generated.length + 1).padStart(3, "0")}`,
         leftEvent: flip ? later : earlier,
         rightEvent: flip ? earlier : later,
         earlierEvent: flip ? "right" : "left",
-        explanation: `${earlier} comes earlier in the biblical sequence than ${later}.`,
-        theme: "Bible event order"
+        explanation,
+        theme: "Bible event order",
+        teachingNote: explanation
       });
     }
   }
@@ -855,7 +884,7 @@ function buildTimeline(existingPack) {
   for (let size = 5; size <= 8 && generated.length < target; size += 1) {
     for (let start = 0; start + size <= ORDERED_EVENTS.length && generated.length < target; start += 1) {
       const labels = ORDERED_EVENTS.slice(start, start + size);
-      generated.push({
+      const round = {
         id: `bt-auto-r${String(generated.length + 1).padStart(3, "0")}`,
         prompt: `Put these Bible events in order, from ${labels[0]} through ${labels[labels.length - 1]}.`,
         events: labels.map((label, index) => ({
@@ -864,7 +893,8 @@ function buildTimeline(existingPack) {
           order: index + 1,
           clue: "Bible chronology"
         }))
-      });
+      };
+      generated.push({ ...round, ...buildTimelineStudyNote(round) });
     }
   }
 
@@ -922,6 +952,7 @@ function buildConnections(existingPack) {
               items
             }))
           });
+          Object.assign(generated.at(-1), buildBibleConnectionsStudyNote(generated.at(-1)));
         }
       }
     }
@@ -934,6 +965,7 @@ function buildConnections(existingPack) {
     target
   ).map((round, index) => ({
     ...round,
+    ...buildBibleConnectionsStudyNote(round),
     id: `bc-r${String(index + 1).padStart(3, "0")}`,
     groups: round.groups.map((group, groupIndex) => ({
       ...group,
@@ -954,12 +986,13 @@ function buildBooksRelay(existingPack) {
   for (let size = 5; size <= 10 && generated.length < target; size += 1) {
     for (let start = 0; start + size <= CANON_BOOK_NAMES.length && generated.length < target; start += 1) {
       const books = CANON_BOOK_NAMES.slice(start, start + size);
-      generated.push({
+      const round = {
         id: `bbr-auto-r${String(generated.length + 1).padStart(3, "0")}`,
         title: `${sectionForBook(books[0])} Relay ${generated.length + 1}`,
         section: `${books[0]} through ${books[books.length - 1]}`,
         books
-      });
+      };
+      generated.push({ ...round, ...buildBooksRelayStudyNote(round) });
     }
   }
 

@@ -1,6 +1,7 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import {
   continueGame,
+  createSessionState,
   getCurrentActorLabel,
   moveBibleAnagramTile,
   passBibleAnagram,
@@ -9,6 +10,8 @@ import {
   passScriptureTurn,
   passWordLadderTurn,
   removeLastWordLadderRung,
+  reorderBibleBook,
+  reorderTimelineEvent,
   selectBoardCard,
   selectTwoTruthsStatement,
   submitBibleAnagram,
@@ -20,11 +23,15 @@ import {
   submitScriptureSolve,
   submitWordLadderStep,
   type BibleAnagramsState,
+  type BibleBooksRelayState,
   type BibleCryptogramState,
+  type BibleTimelineState,
+  type BeforeOrAfterState,
   type FiveGuessesState,
   type RelayVerseBuildState,
   type ScriptureState,
   type TwoTruthsAndALieState,
+  type WhoSaidItState,
   type WordLadderState
 } from "../src/lib/gameEngine";
 import type { PlayerStats } from "../src/lib/gameEngine";
@@ -380,10 +387,136 @@ function makeBibleCryptogramState(verseText = "CAT"): BibleCryptogramState {
       kind: "bible-cryptogram",
       round,
       cipherMap,
-      attemptedLetters: [],
+      cipherGuesses: {},
       isComplete: false,
       winnerParticipantId: null,
       completedReason: null
+    }
+  };
+}
+
+function makeBibleTimelineState(): BibleTimelineState {
+  const events = [
+    { id: "event-a", label: "Creation", order: 1 },
+    { id: "event-b", label: "Exodus", order: 2 },
+    { id: "event-c", label: "Exile", order: 3 },
+    { id: "event-d", label: "Resurrection", order: 4 }
+  ];
+  const round = { id: "bt-test-1", prompt: "Put these in order", events };
+
+  return {
+    gameId: "bible-timeline",
+    displayName: "Bible Timeline",
+    sessionTitle: "Test",
+    sessionTheme: "Test",
+    participantMode: "individual",
+    participants: structuredClone(participants),
+    stats: {
+      "player-anna-1": stats(),
+      "player-ben-2": stats()
+    },
+    activityLog: [],
+    status: "in-progress",
+    turnIndex: 0,
+    totalPrompts: 1,
+    resolvedPrompts: 0,
+    roundIndex: 0,
+    rounds: [round],
+    currentPrompt: {
+      kind: "bible-timeline",
+      round,
+      // Shuffled relative to `order` so a reorder actually has to move something.
+      arrangedEventIds: ["event-d", "event-a", "event-c", "event-b"],
+      attemptedParticipantIds: [],
+      phase: "active",
+      wasCorrect: null,
+      resolvedMessage: null
+    }
+  };
+}
+
+function makeBibleBooksRelayState(): BibleBooksRelayState {
+  const books = ["Genesis", "Exodus", "Leviticus", "Numbers"];
+  const round = { id: "bbr-test-1", title: "Order the books", section: "Pentateuch", books };
+
+  return {
+    gameId: "bible-books-relay",
+    displayName: "Bible Books Relay",
+    sessionTitle: "Test",
+    sessionTheme: "Test",
+    participantMode: "individual",
+    participants: structuredClone(participants),
+    stats: {
+      "player-anna-1": stats(),
+      "player-ben-2": stats()
+    },
+    activityLog: [],
+    status: "in-progress",
+    turnIndex: 0,
+    totalPrompts: 1,
+    resolvedPrompts: 0,
+    roundIndex: 0,
+    rounds: [round],
+    currentPrompt: {
+      kind: "bible-books-relay",
+      round,
+      arrangedBooks: ["Numbers", "Genesis", "Leviticus", "Exodus"],
+      attemptedParticipantIds: [],
+      phase: "active",
+      wasCorrect: null,
+      resolvedMessage: null
+    }
+  };
+}
+
+function makeResolvedBeforeOrAfterState(): BeforeOrAfterState {
+  const rounds = [
+    {
+      id: "boa-test-1",
+      leftEvent: "Creation",
+      rightEvent: "Flood",
+      earlierEvent: "left" as const,
+      explanation: "Creation comes before the flood.",
+      theme: "Test",
+      teachingNote: "Creation comes before the flood."
+    },
+    {
+      id: "boa-test-2",
+      leftEvent: "Exodus",
+      rightEvent: "Resurrection",
+      earlierEvent: "left" as const,
+      explanation: "The Exodus comes before the resurrection.",
+      theme: "Test",
+      teachingNote: "The Exodus comes before the resurrection."
+    }
+  ];
+
+  return {
+    gameId: "before-or-after",
+    displayName: "Before or After",
+    sessionTitle: "Test",
+    sessionTheme: "Test",
+    participantMode: "individual",
+    participants: structuredClone(participants),
+    stats: {
+      "player-anna-1": stats(),
+      "player-ben-2": stats()
+    },
+    activityLog: [],
+    status: "in-progress",
+    turnIndex: 0,
+    totalPrompts: 2,
+    resolvedPrompts: 0,
+    roundIndex: 0,
+    rounds,
+    currentPrompt: {
+      kind: "before-or-after",
+      round: rounds[0],
+      attemptedParticipantIds: [],
+      selectedAnswer: "left",
+      phase: "resolved",
+      wasCorrect: true,
+      resolvedMessage: "Correct."
     }
   };
 }
@@ -466,42 +599,64 @@ describe("gameEngine transitions", () => {
     expect(state.resolvedPrompts).toBe(1);
   });
 
-  it("records Bible Cryptogram letter points and allows guessing more letters without solving or passing", () => {
+  it("records Bible Cryptogram letter points and allows mapping more cipher letters without solving or passing", () => {
     let state = makeBibleCryptogramState("CAT");
 
-    state = submitBibleCryptogramLetterGuess(state, "c").nextState as BibleCryptogramState;
+    // The test cipher map shifts every real letter forward by one, so "CAT" is displayed
+    // as "DBU" — cipher letter "d" decodes to real letter "c".
+    state = submitBibleCryptogramLetterGuess(state, "d", "c").nextState as BibleCryptogramState;
 
-    expect(state.currentPrompt.attemptedLetters).toEqual(["c"]);
+    expect(state.currentPrompt.cipherGuesses).toEqual({ d: "c" });
     expect(state.stats["player-anna-1"].totalScore).toBe(1);
     expect(state.stats["player-anna-1"].letterRevealPoints).toBe(1);
 
     // Unlike Verse Reveal, a letter guess never forces a solve-or-pass before the next one
-    // — the same player can keep filling in letters freely.
-    state = submitBibleCryptogramLetterGuess(state, "a").nextState as BibleCryptogramState;
-    expect(state.currentPrompt.attemptedLetters).toEqual(["c", "a"]);
+    // — the same player can keep filling in cipher letters freely.
+    state = submitBibleCryptogramLetterGuess(state, "b", "a").nextState as BibleCryptogramState;
+    expect(state.currentPrompt.cipherGuesses).toEqual({ d: "c", b: "a" });
     expect(state.turnIndex).toBe(0);
   });
 
-  it("does not lock guesses to the cipher and reveals every occurrence of a correctly guessed letter", () => {
+  it("only fills the solve-so-far board for the one cipher letter guessed, and only when correct", () => {
     let state = makeBibleCryptogramState("CAT");
 
-    // "z" isn't in "CAT" at all, so it must miss regardless of what the cipher maps it to
-    // — guesses are checked against the real plaintext, never against the cipher mapping.
-    state = submitBibleCryptogramLetterGuess(state, "z").nextState as BibleCryptogramState;
-    expect(state.currentPrompt.attemptedLetters).toEqual(["z"]);
+    // "c" is not what cipher letter "d" decodes to (the real answer is "c" for "d"; here
+    // we guess the wrong real letter), so it must miss and not affect any other box.
+    state = submitBibleCryptogramLetterGuess(state, "d", "z").nextState as BibleCryptogramState;
+    expect(state.currentPrompt.cipherGuesses).toEqual({ d: "z" });
     expect(state.stats["player-anna-1"].incorrectAttempts).toBe(1);
+    expect(state.stats["player-anna-1"].totalScore).toBe(0);
+  });
+
+  it("blocks reusing a real letter that's already guessed for a different cipher letter", () => {
+    let state = makeBibleCryptogramState("CAT");
+
+    state = submitBibleCryptogramLetterGuess(state, "d", "c").nextState as BibleCryptogramState;
+
+    expect(() => submitBibleCryptogramLetterGuess(state, "b", "c")).toThrow("already your guess");
+  });
+
+  it("lets a player freely edit their own guess for a cipher letter", () => {
+    let state = makeBibleCryptogramState("CAT");
+
+    state = submitBibleCryptogramLetterGuess(state, "d", "z").nextState as BibleCryptogramState;
+    expect(state.currentPrompt.cipherGuesses.d).toBe("z");
+
+    state = submitBibleCryptogramLetterGuess(state, "d", "c").nextState as BibleCryptogramState;
+    expect(state.currentPrompt.cipherGuesses.d).toBe("c");
+    expect(state.stats["player-anna-1"].totalScore).toBe(1);
   });
 
   it("rotates Bible Cryptogram turns on pass and records incorrect solve attempts", () => {
     let state = makeBibleCryptogramState("CAT");
 
-    state = submitBibleCryptogramLetterGuess(state, "z").nextState as BibleCryptogramState;
+    state = submitBibleCryptogramLetterGuess(state, "d", "z").nextState as BibleCryptogramState;
     state = passBibleCryptogramTurn(state).nextState as BibleCryptogramState;
 
     expect(state.turnIndex).toBe(1);
     expect(state.participants[0].turnCounter).toBe(1);
 
-    state = submitBibleCryptogramLetterGuess(state, "c").nextState as BibleCryptogramState;
+    state = submitBibleCryptogramLetterGuess(state, "d", "c").nextState as BibleCryptogramState;
     state = submitBibleCryptogramSolve(state, "wrong").nextState as BibleCryptogramState;
 
     expect(state.turnIndex).toBe(0);
@@ -512,7 +667,7 @@ describe("gameEngine transitions", () => {
   it("marks the Bible Cryptogram game completed after continuing from the final solved round", () => {
     let state = makeBibleCryptogramState("CAT");
 
-    state = submitBibleCryptogramLetterGuess(state, "c").nextState as BibleCryptogramState;
+    state = submitBibleCryptogramLetterGuess(state, "d", "c").nextState as BibleCryptogramState;
     state = submitBibleCryptogramSolve(state, "CAT").nextState as BibleCryptogramState;
     expect(state.currentPrompt.isComplete).toBe(true);
     expect(state.currentPrompt.winnerParticipantId).toBe("player-anna-1");
@@ -522,6 +677,83 @@ describe("gameEngine transitions", () => {
 
     expect(state.status).toBe("completed");
     expect(state.resolvedPrompts).toBe(1);
+  });
+
+  it("moves a Bible Timeline card directly to a dropped-on slot in one step", () => {
+    let state = makeBibleTimelineState();
+
+    expect(state.currentPrompt.arrangedEventIds).toEqual(["event-d", "event-a", "event-c", "event-b"]);
+
+    // Drag "event-d" (index 0) onto the slot currently held by "event-b" (index 3) — a
+    // single drop spanning three positions, not three separate arrow-key steps.
+    state = reorderTimelineEvent(state, "event-d", 3).nextState as BibleTimelineState;
+
+    expect(state.currentPrompt.arrangedEventIds).toEqual(["event-a", "event-c", "event-b", "event-d"]);
+  });
+
+  it("leaves the Bible Timeline order unchanged when dropped back on its own slot", () => {
+    let state = makeBibleTimelineState();
+
+    state = reorderTimelineEvent(state, "event-a", 1).nextState as BibleTimelineState;
+
+    expect(state.currentPrompt.arrangedEventIds).toEqual(["event-d", "event-a", "event-c", "event-b"]);
+  });
+
+  it("moves a Bible Books Relay tile directly to a dropped-on slot in one step", () => {
+    let state = makeBibleBooksRelayState();
+
+    expect(state.currentPrompt.arrangedBooks).toEqual(["Numbers", "Genesis", "Leviticus", "Exodus"]);
+
+    state = reorderBibleBook(state, "Numbers", 3).nextState as BibleBooksRelayState;
+
+    expect(state.currentPrompt.arrangedBooks).toEqual(["Genesis", "Leviticus", "Exodus", "Numbers"]);
+  });
+
+  it("uses multiple choice for easier Who Said It rounds", async () => {
+    const state = (await createSessionState({
+      gameId: "who-said-it",
+      participantMode: "individual",
+      difficulty: "easy",
+      individualNames: ["Anna", "Ben"]
+    })) as WhoSaidItState;
+
+    expect(state.currentPrompt.round.difficulty).toBe("easy");
+    expect(state.currentPrompt.choices).toContain(state.currentPrompt.round.speaker);
+    expect(state.currentPrompt.choices?.length).toBeGreaterThan(1);
+  });
+
+  it("keeps hard Who Said It rounds as typed answers", async () => {
+    const state = (await createSessionState({
+      gameId: "who-said-it",
+      participantMode: "individual",
+      difficulty: "hard",
+      individualNames: ["Anna", "Ben"]
+    })) as WhoSaidItState;
+
+    expect(state.currentPrompt.round.difficulty).toBe("hard");
+    expect(state.currentPrompt.choices).toBeNull();
+  });
+
+  it("randomizes Before or After left/right display while preserving the correct side", () => {
+    const randomSpy = vi.spyOn(Math, "random");
+
+    try {
+      randomSpy.mockReturnValueOnce(0.25);
+      let state = continueGame(makeResolvedBeforeOrAfterState()).nextState as BeforeOrAfterState;
+      expect(state.currentPrompt.round.leftEvent).toBe("Resurrection");
+      expect(state.currentPrompt.round.rightEvent).toBe("Exodus");
+      expect(state.currentPrompt.round.earlierEvent).toBe("right");
+      expect(state.rounds[1].leftEvent).toBe("Exodus");
+      expect(state.rounds[1].earlierEvent).toBe("left");
+
+      randomSpy.mockReturnValueOnce(0.75);
+      state = continueGame(makeResolvedBeforeOrAfterState()).nextState as BeforeOrAfterState;
+      expect(state.currentPrompt.round.leftEvent).toBe("Exodus");
+      expect(state.currentPrompt.round.rightEvent).toBe("Resurrection");
+      expect(state.currentPrompt.round.earlierEvent).toBe("left");
+    } finally {
+      randomSpy.mockRestore();
+    }
   });
 
   it("resolves Two Truths and a Lie when the lie is picked and steps down score on misses", () => {

@@ -56,6 +56,12 @@ function isNonEmptyString(value) {
   return typeof value === "string" && value.trim().length > 0;
 }
 
+function validateOptionalString(value, message) {
+  if (value != null) {
+    ensure(isNonEmptyString(value), message);
+  }
+}
+
 function normalizeAlias(value) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 }
@@ -194,6 +200,7 @@ function validateFiveGuesses(pack) {
     session.rounds.forEach((round) => {
       ensure(isNonEmptyString(round.category), `${round.id}: category is required.`);
       ensure(isNonEmptyString(round.answer), `${round.id}: answer is required.`);
+      validateOptionalString(round.scriptureReference, `${round.id}: scriptureReference must be non-empty when present.`);
       ensure(Array.isArray(round.aliases) && round.aliases.length >= 1, `${round.id}: at least one alias is required.`);
       ensure(
         Array.isArray(round.clues) && round.clues.length >= 5 && round.clues.length <= 20,
@@ -219,6 +226,7 @@ function validateInitials(pack) {
       ensure(isNonEmptyString(round.initials), `${round.id}: initials are required.`);
       ensure(/^[A-Z]\.[A-Z]\.$/.test(round.initials), `${round.id}: initials must be exactly two letter initials like A.B.`);
       ensure(isNonEmptyString(round.answer), `${round.id}: answer is required.`);
+      validateOptionalString(round.scriptureReference, `${round.id}: scriptureReference must be non-empty when present.`);
       ensure(
         Array.isArray(round.hints) && round.hints.length >= 6 && round.hints.length <= 20,
         `${round.id}: hints must contain between 6 and 20 entries.`
@@ -273,6 +281,7 @@ function validateBibleTimeline(pack) {
   pack.sessions.forEach((session) => {
     session.rounds.forEach((round) => {
       ensure(isNonEmptyString(round.prompt), `${round.id}: prompt is required.`);
+      validateOptionalString(round.scriptureReference, `${round.id}: scriptureReference must be non-empty when present.`);
       ensure(
         Array.isArray(round.events) && round.events.length >= 5 && round.events.length <= 8,
         `${round.id}: events must contain between 5 and 8 entries.`
@@ -320,6 +329,7 @@ function validateBibleConnections(pack) {
   pack.sessions.forEach((session) => {
     session.rounds.forEach((round) => {
       ensure(isNonEmptyString(round.title), `${round.id}: title is required.`);
+      validateOptionalString(round.scriptureReference, `${round.id}: scriptureReference must be non-empty when present.`);
       ensure(Array.isArray(round.groups) && round.groups.length === 4, `${round.id}: must contain exactly 4 groups.`);
 
       if (!Array.isArray(round.groups)) {
@@ -359,6 +369,7 @@ function validateNameThatBook(pack) {
       ensure(isNonEmptyString(round.book), `${round.id}: book is required.`);
       ensure(round.testament === "Old Testament" || round.testament === "New Testament", `${round.id}: invalid testament.`);
       ensure(isNonEmptyString(round.category), `${round.id}: category is required.`);
+      validateOptionalString(round.scriptureReference, `${round.id}: scriptureReference must be non-empty when present.`);
       ensure(Array.isArray(round.aliases) && round.aliases.length >= 1, `${round.id}: aliases are required.`);
       ensure(Array.isArray(round.clues) && round.clues.length === 5, `${round.id}: must contain exactly 5 clues.`);
 
@@ -437,6 +448,7 @@ function validateChapterFinder(pack) {
       ensure(isNonEmptyString(round.prompt), `${round.id}: prompt is required.`);
       ensure(isNonEmptyString(round.answerBook), `${round.id}: answerBook is required.`);
       ensure(Number.isInteger(round.answerChapter) && round.answerChapter >= 1, `${round.id}: answerChapter must be an integer >= 1.`);
+      validateOptionalString(round.scriptureReference, `${round.id}: scriptureReference must be non-empty when present.`);
       ensure(Array.isArray(round.aliases) && round.aliases.length >= 2, `${round.id}: aliases are required.`);
       ensure(isNonEmptyString(round.theme), `${round.id}: theme is required.`);
       if (round.clue != null) {
@@ -486,6 +498,7 @@ function validateBibleBooksRelay(pack) {
     session.rounds.forEach((round) => {
       ensure(isNonEmptyString(round.title), `${round.id}: title is required.`);
       ensure(isNonEmptyString(round.section), `${round.id}: section is required.`);
+      validateOptionalString(round.scriptureReference, `${round.id}: scriptureReference must be non-empty when present.`);
       ensure(
         Array.isArray(round.books) && round.books.length >= 5 && round.books.length <= 10,
         `${round.id}: books must contain between 5 and 10 entries.`
@@ -679,6 +692,7 @@ function validateBibleAnagrams(pack) {
     ["answer", "clue", "theme", "teachingNote"].forEach((field) =>
       ensure(isNonEmptyString(round[field]), `${round.id}: ${field} is required.`)
     );
+    validateOptionalString(round.scriptureReference, `${round.id}: scriptureReference must be non-empty when present.`);
     ensure(
       ["Person", "Place", "Thing", "Event"].includes(round.category),
       `${round.id}: category must be Person, Place, Thing, or Event.`
@@ -763,6 +777,7 @@ function validateWordLadder(pack) {
     ["startWord", "endWord", "startFlavorText", "endFlavorText", "theme", "teachingNote"].forEach((field) =>
       ensure(isNonEmptyString(round[field]), `${round.id}: ${field} is required.`)
     );
+    validateOptionalString(round.scriptureReference, `${round.id}: scriptureReference must be non-empty when present.`);
     ensure(/^[a-z]+$/.test(round.startWord), `${round.id}: startWord must be lowercase letters only.`);
     ensure(/^[a-z]+$/.test(round.endWord), `${round.id}: endWord must be lowercase letters only.`);
     ensure(round.startWord.length === round.endWord.length, `${round.id}: startWord and endWord must be the same length.`);

@@ -49,6 +49,7 @@ export interface FiveGuessesRound {
   id: string;
   category: string;
   answer: string;
+  scriptureReference?: string;
   aliases: string[];
   clues: string[];
 }
@@ -60,8 +61,11 @@ export interface InitialsRound {
   category: string;
   initials: string;
   answer: string;
+  scriptureReference?: string;
   aliases: string[];
   hints: string[];
+  difficulty: PsalmsProverbsDifficulty;
+  teachingNote: string;
 }
 
 export type InitialsPack = SessionPackBase<InitialsRound>;
@@ -93,6 +97,7 @@ export interface TimelineEvent {
 export interface BibleTimelineRound {
   id: string;
   prompt: string;
+  scriptureReference?: string;
   events: TimelineEvent[];
 }
 
@@ -118,7 +123,10 @@ export interface ConnectionGroup {
 export interface BibleConnectionsRound {
   id: string;
   title: string;
+  scriptureReference?: string;
   groups: ConnectionGroup[];
+  difficulty: PsalmsProverbsDifficulty;
+  teachingNote: string;
 }
 
 export type BibleConnectionsPack = SessionPackBase<BibleConnectionsRound>;
@@ -128,8 +136,11 @@ export interface NameThatBookRound {
   book: string;
   testament: "Old Testament" | "New Testament";
   category: string;
+  scriptureReference?: string;
   aliases: string[];
   clues: string[];
+  difficulty: PsalmsProverbsDifficulty;
+  teachingNote: string;
 }
 
 export type NameThatBookPack = SessionPackBase<NameThatBookRound>;
@@ -161,6 +172,7 @@ export interface ChapterFinderRound {
   prompt: string;
   answerBook: string;
   answerChapter: number;
+  scriptureReference?: string;
   aliases: string[];
   theme: string;
   clue?: string;
@@ -177,6 +189,8 @@ export interface WhoSaidItRound {
   context: string;
   sourceTranslation: "KJV";
   theme: string;
+  difficulty: PsalmsProverbsDifficulty;
+  teachingNote: string;
 }
 
 export type WhoSaidItPack = SessionPackBase<WhoSaidItRound>;
@@ -185,6 +199,7 @@ export interface BibleBooksRelayRound {
   id: string;
   title: string;
   section: string;
+  scriptureReference?: string;
   books: string[];
 }
 
@@ -289,8 +304,11 @@ export interface ProphecyCategoriesRound {
   id: string;
   title: string;
   theme: string;
+  scriptureReference?: string;
   categories: string[];
   cards: ProphecyCategoryCard[];
+  difficulty: ProphecyDifficulty;
+  teachingNote: string;
 }
 
 export type ProphecyCategoriesPack = SessionPackBase<ProphecyCategoriesRound>;
@@ -351,8 +369,11 @@ export interface ProverbCategoriesRound {
   id: string;
   title: string;
   theme: string;
+  scriptureReference?: string;
   categories: string[];
   cards: ProverbCategoryCard[];
+  difficulty: PsalmsProverbsDifficulty;
+  teachingNote: string;
 }
 
 export type ProverbCategoriesPack = SessionPackBase<ProverbCategoriesRound>;
@@ -420,6 +441,7 @@ export interface WordLadderRound {
   endFlavorText: string;
   theme: string;
   difficulty: PsalmsProverbsDifficulty;
+  scriptureReference?: string;
   teachingNote: string;
 }
 
@@ -434,6 +456,7 @@ export interface BibleAnagramRound {
   clue: string;
   theme: string;
   difficulty: PsalmsProverbsDifficulty;
+  scriptureReference?: string;
   teachingNote: string;
 }
 

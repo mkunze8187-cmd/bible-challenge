@@ -22,7 +22,8 @@
             "Deuteronomy"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Pentateuch and how it connects to the Bible before continuing."
+          "teachingNote": "Pentateuch asks players to arrange 5 Bible books in canonical order from Genesis through Deuteronomy. The sequence \"Genesis, Exodus, Leviticus, Numbers, Deuteronomy\" is the detail to learn.",
+          "scriptureReference": "Genesis through Deuteronomy"
         },
         {
           "id": "bbr-r002",
@@ -36,7 +37,8 @@
             "Acts"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Gospels And Acts and how it connects to the Bible before continuing."
+          "teachingNote": "Gospels And Acts asks players to arrange 5 Bible books in canonical order from Matthew through Acts. The sequence \"Matthew, Mark, Luke, John, Acts\" is the detail to learn.",
+          "scriptureReference": "Matthew through Acts"
         },
         {
           "id": "bbr-r003",
@@ -55,7 +57,8 @@
             "1 Timothy"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Early Pauline Epistles and how it connects to the Bible before continuing."
+          "teachingNote": "Early Pauline Epistles asks players to arrange 10 Bible books in canonical order from Romans through 1 Timothy. The sequence \"Romans, 1 Corinthians, 2 Corinthians, Galatians, Ephesians, Philippians, Colossians, 1 Thessalonians, 2 Thessalonians, 1 Timothy\" is the detail to learn.",
+          "scriptureReference": "Romans through 1 Timothy"
         },
         {
           "id": "bbr-r004",
@@ -74,7 +77,8 @@
             "Haggai"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Minor Prophets Opening Run and how it connects to the Bible before continuing."
+          "teachingNote": "Minor Prophets Opening Run asks players to arrange 10 Bible books in canonical order from Hosea through Haggai. The sequence \"Hosea, Joel, Amos, Obadiah, Jonah, Micah, Nahum, Habakkuk, Zephaniah, Haggai\" is the detail to learn.",
+          "scriptureReference": "Hosea through Haggai"
         },
         {
           "id": "bbr-r005",
@@ -93,7 +97,8 @@
             "Daniel"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Wisdom And Major Prophets and how it connects to the Bible before continuing."
+          "teachingNote": "Wisdom And Major Prophets asks players to arrange 10 Bible books in canonical order from Job through Daniel. The sequence \"Job, Psalms, Proverbs, Ecclesiastes, Song of Solomon, Isaiah, Jeremiah, Lamentations, Ezekiel, Daniel\" is the detail to learn.",
+          "scriptureReference": "Job through Daniel"
         }
       ]
     },
@@ -118,7 +123,8 @@
             "Revelation"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review General Epistles and how it connects to the Bible before continuing."
+          "teachingNote": "General Epistles asks players to arrange 9 Bible books in canonical order from Hebrews through Revelation. The sequence \"Hebrews, James, 1 Peter, 2 Peter, 1 John, 2 John, 3 John, Jude, Revelation\" is the detail to learn.",
+          "scriptureReference": "Hebrews through Revelation"
         },
         {
           "id": "bbr-r007",
@@ -137,7 +143,8 @@
             "Ezra"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Historical Books and how it connects to the Bible before continuing."
+          "teachingNote": "Historical Books asks players to arrange 10 Bible books in canonical order from Joshua through Ezra. The sequence \"Joshua, Judges, Ruth, 1 Samuel, 2 Samuel, 1 Kings, 2 Kings, 1 Chronicles, 2 Chronicles, Ezra\" is the detail to learn.",
+          "scriptureReference": "Joshua through Ezra"
         },
         {
           "id": "bbr-r008",
@@ -155,7 +162,8 @@
             "Revelation"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Whole Bible Starter and how it connects to the Bible before continuing."
+          "teachingNote": "Whole Bible Starter asks players to arrange 9 Bible books in canonical order from Genesis through Revelation. The sequence \"Genesis, Joshua, Psalms, Isaiah, Matthew, Acts, Romans, Hebrews, Revelation\" is the detail to learn.",
+          "scriptureReference": "Genesis through Revelation"
         },
         {
           "id": "bbr-r009",
@@ -172,7 +180,8 @@
             "Colossians"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review New Testament Middle and how it connects to the Bible before continuing."
+          "teachingNote": "New Testament Middle asks players to arrange 8 Bible books in canonical order from Acts through Colossians. The sequence \"Acts, Romans, 1 Corinthians, 2 Corinthians, Galatians, Ephesians, Philippians, Colossians\" is the detail to learn.",
+          "scriptureReference": "Acts through Colossians"
         },
         {
           "id": "bbr-r010",
@@ -188,7 +197,8 @@
             "Malachi"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Minor Prophets Closing Run and how it connects to the Bible before continuing."
+          "teachingNote": "Minor Prophets Closing Run asks players to arrange 7 Bible books in canonical order from Micah through Malachi. The sequence \"Micah, Nahum, Habakkuk, Zephaniah, Haggai, Zechariah, Malachi\" is the detail to learn.",
+          "scriptureReference": "Micah through Malachi"
         }
       ]
     },
@@ -211,7 +221,8 @@
             "Proverbs"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Captivity To Restoration and how it connects to the Bible before continuing."
+          "teachingNote": "Captivity To Restoration asks players to arrange 7 Bible books in canonical order from 2 Chronicles through Proverbs. The sequence \"2 Chronicles, Ezra, Nehemiah, Esther, Job, Psalms, Proverbs\" is the detail to learn.",
+          "scriptureReference": "2 Chronicles through Proverbs"
         },
         {
           "id": "bbr-r012",
@@ -230,7 +241,8 @@
             "Revelation"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Whole Bible Finish and how it connects to the Bible before continuing."
+          "teachingNote": "Whole Bible Finish asks players to arrange 10 Bible books in canonical order from Daniel through Revelation. The sequence \"Daniel, Jonah, Malachi, Matthew, John, Acts, Romans, James, Jude, Revelation\" is the detail to learn.",
+          "scriptureReference": "Daniel through Revelation"
         },
         {
           "id": "bbr-r013",
@@ -244,7 +256,8 @@
             "Joshua"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Law Relay 2 and how it connects to the Bible before continuing."
+          "teachingNote": "Law Relay 2 asks players to arrange 5 Bible books in canonical order from Exodus through Joshua. The sequence \"Exodus, Leviticus, Numbers, Deuteronomy, Joshua\" is the detail to learn.",
+          "scriptureReference": "Exodus through Joshua"
         },
         {
           "id": "bbr-r014",
@@ -258,7 +271,8 @@
             "Judges"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Law Relay 3 and how it connects to the Bible before continuing."
+          "teachingNote": "Law Relay 3 asks players to arrange 5 Bible books in canonical order from Leviticus through Judges. The sequence \"Leviticus, Numbers, Deuteronomy, Joshua, Judges\" is the detail to learn.",
+          "scriptureReference": "Leviticus through Judges"
         },
         {
           "id": "bbr-r015",
@@ -272,7 +286,8 @@
             "Ruth"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Law Relay 4 and how it connects to the Bible before continuing."
+          "teachingNote": "Law Relay 4 asks players to arrange 5 Bible books in canonical order from Numbers through Ruth. The sequence \"Numbers, Deuteronomy, Joshua, Judges, Ruth\" is the detail to learn.",
+          "scriptureReference": "Numbers through Ruth"
         }
       ]
     },
@@ -293,7 +308,8 @@
             "1 Samuel"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Law Relay 5 and how it connects to the Bible before continuing."
+          "teachingNote": "Law Relay 5 asks players to arrange 5 Bible books in canonical order from Deuteronomy through 1 Samuel. The sequence \"Deuteronomy, Joshua, Judges, Ruth, 1 Samuel\" is the detail to learn.",
+          "scriptureReference": "Deuteronomy through 1 Samuel"
         },
         {
           "id": "bbr-r017",
@@ -307,7 +323,8 @@
             "2 Samuel"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review History Relay 6 and how it connects to the Bible before continuing."
+          "teachingNote": "History Relay 6 asks players to arrange 5 Bible books in canonical order from Joshua through 2 Samuel. The sequence \"Joshua, Judges, Ruth, 1 Samuel, 2 Samuel\" is the detail to learn.",
+          "scriptureReference": "Joshua through 2 Samuel"
         },
         {
           "id": "bbr-r018",
@@ -321,7 +338,8 @@
             "1 Kings"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review History Relay 7 and how it connects to the Bible before continuing."
+          "teachingNote": "History Relay 7 asks players to arrange 5 Bible books in canonical order from Judges through 1 Kings. The sequence \"Judges, Ruth, 1 Samuel, 2 Samuel, 1 Kings\" is the detail to learn.",
+          "scriptureReference": "Judges through 1 Kings"
         },
         {
           "id": "bbr-r019",
@@ -335,7 +353,8 @@
             "2 Kings"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review History Relay 8 and how it connects to the Bible before continuing."
+          "teachingNote": "History Relay 8 asks players to arrange 5 Bible books in canonical order from Ruth through 2 Kings. The sequence \"Ruth, 1 Samuel, 2 Samuel, 1 Kings, 2 Kings\" is the detail to learn.",
+          "scriptureReference": "Ruth through 2 Kings"
         },
         {
           "id": "bbr-r020",
@@ -349,7 +368,8 @@
             "1 Chronicles"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review History Relay 9 and how it connects to the Bible before continuing."
+          "teachingNote": "History Relay 9 asks players to arrange 5 Bible books in canonical order from 1 Samuel through 1 Chronicles. The sequence \"1 Samuel, 2 Samuel, 1 Kings, 2 Kings, 1 Chronicles\" is the detail to learn.",
+          "scriptureReference": "1 Samuel through 1 Chronicles"
         }
       ]
     },
@@ -370,7 +390,8 @@
             "2 Chronicles"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review History Relay 10 and how it connects to the Bible before continuing."
+          "teachingNote": "History Relay 10 asks players to arrange 5 Bible books in canonical order from 2 Samuel through 2 Chronicles. The sequence \"2 Samuel, 1 Kings, 2 Kings, 1 Chronicles, 2 Chronicles\" is the detail to learn.",
+          "scriptureReference": "2 Samuel through 2 Chronicles"
         },
         {
           "id": "bbr-r022",
@@ -384,7 +405,8 @@
             "Ezra"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review History Relay 11 and how it connects to the Bible before continuing."
+          "teachingNote": "History Relay 11 asks players to arrange 5 Bible books in canonical order from 1 Kings through Ezra. The sequence \"1 Kings, 2 Kings, 1 Chronicles, 2 Chronicles, Ezra\" is the detail to learn.",
+          "scriptureReference": "1 Kings through Ezra"
         },
         {
           "id": "bbr-r023",
@@ -398,7 +420,8 @@
             "Nehemiah"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review History Relay 12 and how it connects to the Bible before continuing."
+          "teachingNote": "History Relay 12 asks players to arrange 5 Bible books in canonical order from 2 Kings through Nehemiah. The sequence \"2 Kings, 1 Chronicles, 2 Chronicles, Ezra, Nehemiah\" is the detail to learn.",
+          "scriptureReference": "2 Kings through Nehemiah"
         },
         {
           "id": "bbr-r024",
@@ -412,7 +435,8 @@
             "Esther"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review History Relay 13 and how it connects to the Bible before continuing."
+          "teachingNote": "History Relay 13 asks players to arrange 5 Bible books in canonical order from 1 Chronicles through Esther. The sequence \"1 Chronicles, 2 Chronicles, Ezra, Nehemiah, Esther\" is the detail to learn.",
+          "scriptureReference": "1 Chronicles through Esther"
         },
         {
           "id": "bbr-r025",
@@ -426,7 +450,8 @@
             "Job"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review History Relay 14 and how it connects to the Bible before continuing."
+          "teachingNote": "History Relay 14 asks players to arrange 5 Bible books in canonical order from 2 Chronicles through Job. The sequence \"2 Chronicles, Ezra, Nehemiah, Esther, Job\" is the detail to learn.",
+          "scriptureReference": "2 Chronicles through Job"
         }
       ]
     },
@@ -447,7 +472,8 @@
             "Psalms"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review History Relay 15 and how it connects to the Bible before continuing."
+          "teachingNote": "History Relay 15 asks players to arrange 5 Bible books in canonical order from Ezra through Psalms. The sequence \"Ezra, Nehemiah, Esther, Job, Psalms\" is the detail to learn.",
+          "scriptureReference": "Ezra through Psalms"
         },
         {
           "id": "bbr-r027",
@@ -461,7 +487,8 @@
             "Proverbs"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review History Relay 16 and how it connects to the Bible before continuing."
+          "teachingNote": "History Relay 16 asks players to arrange 5 Bible books in canonical order from Nehemiah through Proverbs. The sequence \"Nehemiah, Esther, Job, Psalms, Proverbs\" is the detail to learn.",
+          "scriptureReference": "Nehemiah through Proverbs"
         },
         {
           "id": "bbr-r028",
@@ -475,7 +502,8 @@
             "Ecclesiastes"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review History Relay 17 and how it connects to the Bible before continuing."
+          "teachingNote": "History Relay 17 asks players to arrange 5 Bible books in canonical order from Esther through Ecclesiastes. The sequence \"Esther, Job, Psalms, Proverbs, Ecclesiastes\" is the detail to learn.",
+          "scriptureReference": "Esther through Ecclesiastes"
         },
         {
           "id": "bbr-r029",
@@ -489,7 +517,8 @@
             "Song of Solomon"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Wisdom Relay 18 and how it connects to the Bible before continuing."
+          "teachingNote": "Wisdom Relay 18 asks players to arrange 5 Bible books in canonical order from Job through Song of Solomon. The sequence \"Job, Psalms, Proverbs, Ecclesiastes, Song of Solomon\" is the detail to learn.",
+          "scriptureReference": "Job through Song of Solomon"
         },
         {
           "id": "bbr-r030",
@@ -503,7 +532,8 @@
             "Isaiah"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Wisdom Relay 19 and how it connects to the Bible before continuing."
+          "teachingNote": "Wisdom Relay 19 asks players to arrange 5 Bible books in canonical order from Psalms through Isaiah. The sequence \"Psalms, Proverbs, Ecclesiastes, Song of Solomon, Isaiah\" is the detail to learn.",
+          "scriptureReference": "Psalms through Isaiah"
         }
       ]
     },
@@ -524,7 +554,8 @@
             "Jeremiah"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Wisdom Relay 20 and how it connects to the Bible before continuing."
+          "teachingNote": "Wisdom Relay 20 asks players to arrange 5 Bible books in canonical order from Proverbs through Jeremiah. The sequence \"Proverbs, Ecclesiastes, Song of Solomon, Isaiah, Jeremiah\" is the detail to learn.",
+          "scriptureReference": "Proverbs through Jeremiah"
         },
         {
           "id": "bbr-r032",
@@ -538,7 +569,8 @@
             "Lamentations"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Wisdom Relay 21 and how it connects to the Bible before continuing."
+          "teachingNote": "Wisdom Relay 21 asks players to arrange 5 Bible books in canonical order from Ecclesiastes through Lamentations. The sequence \"Ecclesiastes, Song of Solomon, Isaiah, Jeremiah, Lamentations\" is the detail to learn.",
+          "scriptureReference": "Ecclesiastes through Lamentations"
         },
         {
           "id": "bbr-r033",
@@ -552,7 +584,8 @@
             "Ezekiel"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Wisdom Relay 22 and how it connects to the Bible before continuing."
+          "teachingNote": "Wisdom Relay 22 asks players to arrange 5 Bible books in canonical order from Song of Solomon through Ezekiel. The sequence \"Song of Solomon, Isaiah, Jeremiah, Lamentations, Ezekiel\" is the detail to learn.",
+          "scriptureReference": "Song of Solomon through Ezekiel"
         },
         {
           "id": "bbr-r034",
@@ -566,7 +599,8 @@
             "Daniel"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Major Prophets Relay 23 and how it connects to the Bible before continuing."
+          "teachingNote": "Major Prophets Relay 23 asks players to arrange 5 Bible books in canonical order from Isaiah through Daniel. The sequence \"Isaiah, Jeremiah, Lamentations, Ezekiel, Daniel\" is the detail to learn.",
+          "scriptureReference": "Isaiah through Daniel"
         },
         {
           "id": "bbr-r035",
@@ -580,7 +614,8 @@
             "Hosea"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Major Prophets Relay 24 and how it connects to the Bible before continuing."
+          "teachingNote": "Major Prophets Relay 24 asks players to arrange 5 Bible books in canonical order from Jeremiah through Hosea. The sequence \"Jeremiah, Lamentations, Ezekiel, Daniel, Hosea\" is the detail to learn.",
+          "scriptureReference": "Jeremiah through Hosea"
         }
       ]
     },
@@ -601,7 +636,8 @@
             "Joel"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Major Prophets Relay 25 and how it connects to the Bible before continuing."
+          "teachingNote": "Major Prophets Relay 25 asks players to arrange 5 Bible books in canonical order from Lamentations through Joel. The sequence \"Lamentations, Ezekiel, Daniel, Hosea, Joel\" is the detail to learn.",
+          "scriptureReference": "Lamentations through Joel"
         },
         {
           "id": "bbr-r037",
@@ -615,7 +651,8 @@
             "Amos"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Major Prophets Relay 26 and how it connects to the Bible before continuing."
+          "teachingNote": "Major Prophets Relay 26 asks players to arrange 5 Bible books in canonical order from Ezekiel through Amos. The sequence \"Ezekiel, Daniel, Hosea, Joel, Amos\" is the detail to learn.",
+          "scriptureReference": "Ezekiel through Amos"
         },
         {
           "id": "bbr-r038",
@@ -629,7 +666,8 @@
             "Obadiah"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Major Prophets Relay 27 and how it connects to the Bible before continuing."
+          "teachingNote": "Major Prophets Relay 27 asks players to arrange 5 Bible books in canonical order from Daniel through Obadiah. The sequence \"Daniel, Hosea, Joel, Amos, Obadiah\" is the detail to learn.",
+          "scriptureReference": "Daniel through Obadiah"
         },
         {
           "id": "bbr-r039",
@@ -643,7 +681,8 @@
             "Jonah"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Minor Prophets Relay 28 and how it connects to the Bible before continuing."
+          "teachingNote": "Minor Prophets Relay 28 asks players to arrange 5 Bible books in canonical order from Hosea through Jonah. The sequence \"Hosea, Joel, Amos, Obadiah, Jonah\" is the detail to learn.",
+          "scriptureReference": "Hosea through Jonah"
         },
         {
           "id": "bbr-r040",
@@ -657,7 +696,8 @@
             "Micah"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Minor Prophets Relay 29 and how it connects to the Bible before continuing."
+          "teachingNote": "Minor Prophets Relay 29 asks players to arrange 5 Bible books in canonical order from Joel through Micah. The sequence \"Joel, Amos, Obadiah, Jonah, Micah\" is the detail to learn.",
+          "scriptureReference": "Joel through Micah"
         }
       ]
     },
@@ -678,7 +718,8 @@
             "Nahum"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Minor Prophets Relay 30 and how it connects to the Bible before continuing."
+          "teachingNote": "Minor Prophets Relay 30 asks players to arrange 5 Bible books in canonical order from Amos through Nahum. The sequence \"Amos, Obadiah, Jonah, Micah, Nahum\" is the detail to learn.",
+          "scriptureReference": "Amos through Nahum"
         },
         {
           "id": "bbr-r042",
@@ -692,7 +733,8 @@
             "Habakkuk"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Minor Prophets Relay 31 and how it connects to the Bible before continuing."
+          "teachingNote": "Minor Prophets Relay 31 asks players to arrange 5 Bible books in canonical order from Obadiah through Habakkuk. The sequence \"Obadiah, Jonah, Micah, Nahum, Habakkuk\" is the detail to learn.",
+          "scriptureReference": "Obadiah through Habakkuk"
         },
         {
           "id": "bbr-r043",
@@ -706,7 +748,8 @@
             "Zephaniah"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Minor Prophets Relay 32 and how it connects to the Bible before continuing."
+          "teachingNote": "Minor Prophets Relay 32 asks players to arrange 5 Bible books in canonical order from Jonah through Zephaniah. The sequence \"Jonah, Micah, Nahum, Habakkuk, Zephaniah\" is the detail to learn.",
+          "scriptureReference": "Jonah through Zephaniah"
         },
         {
           "id": "bbr-r044",
@@ -720,7 +763,8 @@
             "Haggai"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Minor Prophets Relay 33 and how it connects to the Bible before continuing."
+          "teachingNote": "Minor Prophets Relay 33 asks players to arrange 5 Bible books in canonical order from Micah through Haggai. The sequence \"Micah, Nahum, Habakkuk, Zephaniah, Haggai\" is the detail to learn.",
+          "scriptureReference": "Micah through Haggai"
         },
         {
           "id": "bbr-r045",
@@ -734,7 +778,8 @@
             "Zechariah"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Minor Prophets Relay 34 and how it connects to the Bible before continuing."
+          "teachingNote": "Minor Prophets Relay 34 asks players to arrange 5 Bible books in canonical order from Nahum through Zechariah. The sequence \"Nahum, Habakkuk, Zephaniah, Haggai, Zechariah\" is the detail to learn.",
+          "scriptureReference": "Nahum through Zechariah"
         }
       ]
     },
@@ -755,7 +800,8 @@
             "Malachi"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Minor Prophets Relay 35 and how it connects to the Bible before continuing."
+          "teachingNote": "Minor Prophets Relay 35 asks players to arrange 5 Bible books in canonical order from Habakkuk through Malachi. The sequence \"Habakkuk, Zephaniah, Haggai, Zechariah, Malachi\" is the detail to learn.",
+          "scriptureReference": "Habakkuk through Malachi"
         },
         {
           "id": "bbr-r047",
@@ -769,7 +815,8 @@
             "Matthew"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Minor Prophets Relay 36 and how it connects to the Bible before continuing."
+          "teachingNote": "Minor Prophets Relay 36 asks players to arrange 5 Bible books in canonical order from Zephaniah through Matthew. The sequence \"Zephaniah, Haggai, Zechariah, Malachi, Matthew\" is the detail to learn.",
+          "scriptureReference": "Zephaniah through Matthew"
         },
         {
           "id": "bbr-r048",
@@ -783,7 +830,8 @@
             "Mark"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Minor Prophets Relay 37 and how it connects to the Bible before continuing."
+          "teachingNote": "Minor Prophets Relay 37 asks players to arrange 5 Bible books in canonical order from Haggai through Mark. The sequence \"Haggai, Zechariah, Malachi, Matthew, Mark\" is the detail to learn.",
+          "scriptureReference": "Haggai through Mark"
         },
         {
           "id": "bbr-r049",
@@ -797,7 +845,8 @@
             "Luke"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Minor Prophets Relay 38 and how it connects to the Bible before continuing."
+          "teachingNote": "Minor Prophets Relay 38 asks players to arrange 5 Bible books in canonical order from Zechariah through Luke. The sequence \"Zechariah, Malachi, Matthew, Mark, Luke\" is the detail to learn.",
+          "scriptureReference": "Zechariah through Luke"
         },
         {
           "id": "bbr-r050",
@@ -811,7 +860,8 @@
             "John"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Minor Prophets Relay 39 and how it connects to the Bible before continuing."
+          "teachingNote": "Minor Prophets Relay 39 asks players to arrange 5 Bible books in canonical order from Malachi through John. The sequence \"Malachi, Matthew, Mark, Luke, John\" is the detail to learn.",
+          "scriptureReference": "Malachi through John"
         }
       ]
     },
@@ -832,7 +882,8 @@
             "Romans"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Gospels Relay 41 and how it connects to the Bible before continuing."
+          "teachingNote": "Gospels Relay 41 asks players to arrange 5 Bible books in canonical order from Mark through Romans. The sequence \"Mark, Luke, John, Acts, Romans\" is the detail to learn.",
+          "scriptureReference": "Mark through Romans"
         },
         {
           "id": "bbr-r052",
@@ -846,7 +897,8 @@
             "1 Corinthians"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Gospels Relay 42 and how it connects to the Bible before continuing."
+          "teachingNote": "Gospels Relay 42 asks players to arrange 5 Bible books in canonical order from Luke through 1 Corinthians. The sequence \"Luke, John, Acts, Romans, 1 Corinthians\" is the detail to learn.",
+          "scriptureReference": "Luke through 1 Corinthians"
         },
         {
           "id": "bbr-r053",
@@ -860,7 +912,8 @@
             "2 Corinthians"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Gospels Relay 43 and how it connects to the Bible before continuing."
+          "teachingNote": "Gospels Relay 43 asks players to arrange 5 Bible books in canonical order from John through 2 Corinthians. The sequence \"John, Acts, Romans, 1 Corinthians, 2 Corinthians\" is the detail to learn.",
+          "scriptureReference": "John through 2 Corinthians"
         },
         {
           "id": "bbr-r054",
@@ -874,7 +927,8 @@
             "Galatians"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Church History Relay 44 and how it connects to the Bible before continuing."
+          "teachingNote": "Church History Relay 44 asks players to arrange 5 Bible books in canonical order from Acts through Galatians. The sequence \"Acts, Romans, 1 Corinthians, 2 Corinthians, Galatians\" is the detail to learn.",
+          "scriptureReference": "Acts through Galatians"
         },
         {
           "id": "bbr-r055",
@@ -888,7 +942,8 @@
             "Ephesians"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Letters Relay 45 and how it connects to the Bible before continuing."
+          "teachingNote": "Letters Relay 45 asks players to arrange 5 Bible books in canonical order from Romans through Ephesians. The sequence \"Romans, 1 Corinthians, 2 Corinthians, Galatians, Ephesians\" is the detail to learn.",
+          "scriptureReference": "Romans through Ephesians"
         }
       ]
     },
@@ -909,7 +964,8 @@
             "Philippians"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Letters Relay 46 and how it connects to the Bible before continuing."
+          "teachingNote": "Letters Relay 46 asks players to arrange 5 Bible books in canonical order from 1 Corinthians through Philippians. The sequence \"1 Corinthians, 2 Corinthians, Galatians, Ephesians, Philippians\" is the detail to learn.",
+          "scriptureReference": "1 Corinthians through Philippians"
         },
         {
           "id": "bbr-r057",
@@ -923,7 +979,8 @@
             "Colossians"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Letters Relay 47 and how it connects to the Bible before continuing."
+          "teachingNote": "Letters Relay 47 asks players to arrange 5 Bible books in canonical order from 2 Corinthians through Colossians. The sequence \"2 Corinthians, Galatians, Ephesians, Philippians, Colossians\" is the detail to learn.",
+          "scriptureReference": "2 Corinthians through Colossians"
         },
         {
           "id": "bbr-r058",
@@ -937,7 +994,8 @@
             "1 Thessalonians"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Letters Relay 48 and how it connects to the Bible before continuing."
+          "teachingNote": "Letters Relay 48 asks players to arrange 5 Bible books in canonical order from Galatians through 1 Thessalonians. The sequence \"Galatians, Ephesians, Philippians, Colossians, 1 Thessalonians\" is the detail to learn.",
+          "scriptureReference": "Galatians through 1 Thessalonians"
         },
         {
           "id": "bbr-r059",
@@ -951,7 +1009,8 @@
             "2 Thessalonians"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Letters Relay 49 and how it connects to the Bible before continuing."
+          "teachingNote": "Letters Relay 49 asks players to arrange 5 Bible books in canonical order from Ephesians through 2 Thessalonians. The sequence \"Ephesians, Philippians, Colossians, 1 Thessalonians, 2 Thessalonians\" is the detail to learn.",
+          "scriptureReference": "Ephesians through 2 Thessalonians"
         },
         {
           "id": "bbr-r060",
@@ -965,7 +1024,8 @@
             "1 Timothy"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Letters Relay 50 and how it connects to the Bible before continuing."
+          "teachingNote": "Letters Relay 50 asks players to arrange 5 Bible books in canonical order from Philippians through 1 Timothy. The sequence \"Philippians, Colossians, 1 Thessalonians, 2 Thessalonians, 1 Timothy\" is the detail to learn.",
+          "scriptureReference": "Philippians through 1 Timothy"
         }
       ]
     },
@@ -986,7 +1046,8 @@
             "2 Timothy"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Letters Relay 51 and how it connects to the Bible before continuing."
+          "teachingNote": "Letters Relay 51 asks players to arrange 5 Bible books in canonical order from Colossians through 2 Timothy. The sequence \"Colossians, 1 Thessalonians, 2 Thessalonians, 1 Timothy, 2 Timothy\" is the detail to learn.",
+          "scriptureReference": "Colossians through 2 Timothy"
         },
         {
           "id": "bbr-r062",
@@ -1000,7 +1061,8 @@
             "Titus"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Letters Relay 52 and how it connects to the Bible before continuing."
+          "teachingNote": "Letters Relay 52 asks players to arrange 5 Bible books in canonical order from 1 Thessalonians through Titus. The sequence \"1 Thessalonians, 2 Thessalonians, 1 Timothy, 2 Timothy, Titus\" is the detail to learn.",
+          "scriptureReference": "1 Thessalonians through Titus"
         },
         {
           "id": "bbr-r063",
@@ -1014,7 +1076,8 @@
             "Philemon"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Letters Relay 53 and how it connects to the Bible before continuing."
+          "teachingNote": "Letters Relay 53 asks players to arrange 5 Bible books in canonical order from 2 Thessalonians through Philemon. The sequence \"2 Thessalonians, 1 Timothy, 2 Timothy, Titus, Philemon\" is the detail to learn.",
+          "scriptureReference": "2 Thessalonians through Philemon"
         },
         {
           "id": "bbr-r064",
@@ -1028,7 +1091,8 @@
             "Hebrews"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Letters Relay 54 and how it connects to the Bible before continuing."
+          "teachingNote": "Letters Relay 54 asks players to arrange 5 Bible books in canonical order from 1 Timothy through Hebrews. The sequence \"1 Timothy, 2 Timothy, Titus, Philemon, Hebrews\" is the detail to learn.",
+          "scriptureReference": "1 Timothy through Hebrews"
         },
         {
           "id": "bbr-r065",
@@ -1042,7 +1106,8 @@
             "James"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Letters Relay 55 and how it connects to the Bible before continuing."
+          "teachingNote": "Letters Relay 55 asks players to arrange 5 Bible books in canonical order from 2 Timothy through James. The sequence \"2 Timothy, Titus, Philemon, Hebrews, James\" is the detail to learn.",
+          "scriptureReference": "2 Timothy through James"
         }
       ]
     },
@@ -1063,7 +1128,8 @@
             "1 Peter"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Letters Relay 56 and how it connects to the Bible before continuing."
+          "teachingNote": "Letters Relay 56 asks players to arrange 5 Bible books in canonical order from Titus through 1 Peter. The sequence \"Titus, Philemon, Hebrews, James, 1 Peter\" is the detail to learn.",
+          "scriptureReference": "Titus through 1 Peter"
         },
         {
           "id": "bbr-r067",
@@ -1077,7 +1143,8 @@
             "2 Peter"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Letters Relay 57 and how it connects to the Bible before continuing."
+          "teachingNote": "Letters Relay 57 asks players to arrange 5 Bible books in canonical order from Philemon through 2 Peter. The sequence \"Philemon, Hebrews, James, 1 Peter, 2 Peter\" is the detail to learn.",
+          "scriptureReference": "Philemon through 2 Peter"
         },
         {
           "id": "bbr-r068",
@@ -1091,7 +1158,8 @@
             "1 John"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Letters Relay 58 and how it connects to the Bible before continuing."
+          "teachingNote": "Letters Relay 58 asks players to arrange 5 Bible books in canonical order from Hebrews through 1 John. The sequence \"Hebrews, James, 1 Peter, 2 Peter, 1 John\" is the detail to learn.",
+          "scriptureReference": "Hebrews through 1 John"
         },
         {
           "id": "bbr-r069",
@@ -1105,7 +1173,8 @@
             "2 John"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Letters Relay 59 and how it connects to the Bible before continuing."
+          "teachingNote": "Letters Relay 59 asks players to arrange 5 Bible books in canonical order from James through 2 John. The sequence \"James, 1 Peter, 2 Peter, 1 John, 2 John\" is the detail to learn.",
+          "scriptureReference": "James through 2 John"
         },
         {
           "id": "bbr-r070",
@@ -1119,7 +1188,8 @@
             "3 John"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Letters Relay 60 and how it connects to the Bible before continuing."
+          "teachingNote": "Letters Relay 60 asks players to arrange 5 Bible books in canonical order from 1 Peter through 3 John. The sequence \"1 Peter, 2 Peter, 1 John, 2 John, 3 John\" is the detail to learn.",
+          "scriptureReference": "1 Peter through 3 John"
         }
       ]
     },
@@ -1140,7 +1210,8 @@
             "Jude"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Letters Relay 61 and how it connects to the Bible before continuing."
+          "teachingNote": "Letters Relay 61 asks players to arrange 5 Bible books in canonical order from 2 Peter through Jude. The sequence \"2 Peter, 1 John, 2 John, 3 John, Jude\" is the detail to learn.",
+          "scriptureReference": "2 Peter through Jude"
         },
         {
           "id": "bbr-r072",
@@ -1154,7 +1225,8 @@
             "Revelation"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Letters Relay 62 and how it connects to the Bible before continuing."
+          "teachingNote": "Letters Relay 62 asks players to arrange 5 Bible books in canonical order from 1 John through Revelation. The sequence \"1 John, 2 John, 3 John, Jude, Revelation\" is the detail to learn.",
+          "scriptureReference": "1 John through Revelation"
         },
         {
           "id": "bbr-r073",
@@ -1169,7 +1241,8 @@
             "Joshua"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Law Relay 63 and how it connects to the Bible before continuing."
+          "teachingNote": "Law Relay 63 asks players to arrange 6 Bible books in canonical order from Genesis through Joshua. The sequence \"Genesis, Exodus, Leviticus, Numbers, Deuteronomy, Joshua\" is the detail to learn.",
+          "scriptureReference": "Genesis through Joshua"
         },
         {
           "id": "bbr-r074",
@@ -1184,7 +1257,8 @@
             "Judges"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Law Relay 64 and how it connects to the Bible before continuing."
+          "teachingNote": "Law Relay 64 asks players to arrange 6 Bible books in canonical order from Exodus through Judges. The sequence \"Exodus, Leviticus, Numbers, Deuteronomy, Joshua, Judges\" is the detail to learn.",
+          "scriptureReference": "Exodus through Judges"
         },
         {
           "id": "bbr-r075",
@@ -1199,7 +1273,8 @@
             "Ruth"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Law Relay 65 and how it connects to the Bible before continuing."
+          "teachingNote": "Law Relay 65 asks players to arrange 6 Bible books in canonical order from Leviticus through Ruth. The sequence \"Leviticus, Numbers, Deuteronomy, Joshua, Judges, Ruth\" is the detail to learn.",
+          "scriptureReference": "Leviticus through Ruth"
         }
       ]
     },
@@ -1221,7 +1296,8 @@
             "1 Samuel"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Law Relay 66 and how it connects to the Bible before continuing."
+          "teachingNote": "Law Relay 66 asks players to arrange 6 Bible books in canonical order from Numbers through 1 Samuel. The sequence \"Numbers, Deuteronomy, Joshua, Judges, Ruth, 1 Samuel\" is the detail to learn.",
+          "scriptureReference": "Numbers through 1 Samuel"
         },
         {
           "id": "bbr-r077",
@@ -1236,7 +1312,8 @@
             "2 Samuel"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Law Relay 67 and how it connects to the Bible before continuing."
+          "teachingNote": "Law Relay 67 asks players to arrange 6 Bible books in canonical order from Deuteronomy through 2 Samuel. The sequence \"Deuteronomy, Joshua, Judges, Ruth, 1 Samuel, 2 Samuel\" is the detail to learn.",
+          "scriptureReference": "Deuteronomy through 2 Samuel"
         },
         {
           "id": "bbr-r078",
@@ -1251,7 +1328,8 @@
             "1 Kings"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review History Relay 68 and how it connects to the Bible before continuing."
+          "teachingNote": "History Relay 68 asks players to arrange 6 Bible books in canonical order from Joshua through 1 Kings. The sequence \"Joshua, Judges, Ruth, 1 Samuel, 2 Samuel, 1 Kings\" is the detail to learn.",
+          "scriptureReference": "Joshua through 1 Kings"
         },
         {
           "id": "bbr-r079",
@@ -1266,7 +1344,8 @@
             "2 Kings"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review History Relay 69 and how it connects to the Bible before continuing."
+          "teachingNote": "History Relay 69 asks players to arrange 6 Bible books in canonical order from Judges through 2 Kings. The sequence \"Judges, Ruth, 1 Samuel, 2 Samuel, 1 Kings, 2 Kings\" is the detail to learn.",
+          "scriptureReference": "Judges through 2 Kings"
         },
         {
           "id": "bbr-r080",
@@ -1281,7 +1360,8 @@
             "1 Chronicles"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review History Relay 70 and how it connects to the Bible before continuing."
+          "teachingNote": "History Relay 70 asks players to arrange 6 Bible books in canonical order from Ruth through 1 Chronicles. The sequence \"Ruth, 1 Samuel, 2 Samuel, 1 Kings, 2 Kings, 1 Chronicles\" is the detail to learn.",
+          "scriptureReference": "Ruth through 1 Chronicles"
         }
       ]
     },
@@ -1303,7 +1383,8 @@
             "2 Chronicles"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review History Relay 71 and how it connects to the Bible before continuing."
+          "teachingNote": "History Relay 71 asks players to arrange 6 Bible books in canonical order from 1 Samuel through 2 Chronicles. The sequence \"1 Samuel, 2 Samuel, 1 Kings, 2 Kings, 1 Chronicles, 2 Chronicles\" is the detail to learn.",
+          "scriptureReference": "1 Samuel through 2 Chronicles"
         },
         {
           "id": "bbr-r082",
@@ -1318,7 +1399,8 @@
             "Ezra"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review History Relay 72 and how it connects to the Bible before continuing."
+          "teachingNote": "History Relay 72 asks players to arrange 6 Bible books in canonical order from 2 Samuel through Ezra. The sequence \"2 Samuel, 1 Kings, 2 Kings, 1 Chronicles, 2 Chronicles, Ezra\" is the detail to learn.",
+          "scriptureReference": "2 Samuel through Ezra"
         },
         {
           "id": "bbr-r083",
@@ -1333,7 +1415,8 @@
             "Nehemiah"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review History Relay 73 and how it connects to the Bible before continuing."
+          "teachingNote": "History Relay 73 asks players to arrange 6 Bible books in canonical order from 1 Kings through Nehemiah. The sequence \"1 Kings, 2 Kings, 1 Chronicles, 2 Chronicles, Ezra, Nehemiah\" is the detail to learn.",
+          "scriptureReference": "1 Kings through Nehemiah"
         },
         {
           "id": "bbr-r084",
@@ -1348,7 +1431,8 @@
             "Esther"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review History Relay 74 and how it connects to the Bible before continuing."
+          "teachingNote": "History Relay 74 asks players to arrange 6 Bible books in canonical order from 2 Kings through Esther. The sequence \"2 Kings, 1 Chronicles, 2 Chronicles, Ezra, Nehemiah, Esther\" is the detail to learn.",
+          "scriptureReference": "2 Kings through Esther"
         },
         {
           "id": "bbr-r085",
@@ -1363,7 +1447,8 @@
             "Job"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review History Relay 75 and how it connects to the Bible before continuing."
+          "teachingNote": "History Relay 75 asks players to arrange 6 Bible books in canonical order from 1 Chronicles through Job. The sequence \"1 Chronicles, 2 Chronicles, Ezra, Nehemiah, Esther, Job\" is the detail to learn.",
+          "scriptureReference": "1 Chronicles through Job"
         }
       ]
     },
@@ -1385,7 +1470,8 @@
             "Psalms"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review History Relay 76 and how it connects to the Bible before continuing."
+          "teachingNote": "History Relay 76 asks players to arrange 6 Bible books in canonical order from 2 Chronicles through Psalms. The sequence \"2 Chronicles, Ezra, Nehemiah, Esther, Job, Psalms\" is the detail to learn.",
+          "scriptureReference": "2 Chronicles through Psalms"
         },
         {
           "id": "bbr-r087",
@@ -1400,7 +1486,8 @@
             "Proverbs"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review History Relay 77 and how it connects to the Bible before continuing."
+          "teachingNote": "History Relay 77 asks players to arrange 6 Bible books in canonical order from Ezra through Proverbs. The sequence \"Ezra, Nehemiah, Esther, Job, Psalms, Proverbs\" is the detail to learn.",
+          "scriptureReference": "Ezra through Proverbs"
         },
         {
           "id": "bbr-r088",
@@ -1415,7 +1502,8 @@
             "Ecclesiastes"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review History Relay 78 and how it connects to the Bible before continuing."
+          "teachingNote": "History Relay 78 asks players to arrange 6 Bible books in canonical order from Nehemiah through Ecclesiastes. The sequence \"Nehemiah, Esther, Job, Psalms, Proverbs, Ecclesiastes\" is the detail to learn.",
+          "scriptureReference": "Nehemiah through Ecclesiastes"
         },
         {
           "id": "bbr-r089",
@@ -1430,7 +1518,8 @@
             "Song of Solomon"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review History Relay 79 and how it connects to the Bible before continuing."
+          "teachingNote": "History Relay 79 asks players to arrange 6 Bible books in canonical order from Esther through Song of Solomon. The sequence \"Esther, Job, Psalms, Proverbs, Ecclesiastes, Song of Solomon\" is the detail to learn.",
+          "scriptureReference": "Esther through Song of Solomon"
         },
         {
           "id": "bbr-r090",
@@ -1445,7 +1534,8 @@
             "Isaiah"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Wisdom Relay 80 and how it connects to the Bible before continuing."
+          "teachingNote": "Wisdom Relay 80 asks players to arrange 6 Bible books in canonical order from Job through Isaiah. The sequence \"Job, Psalms, Proverbs, Ecclesiastes, Song of Solomon, Isaiah\" is the detail to learn.",
+          "scriptureReference": "Job through Isaiah"
         }
       ]
     },
@@ -1467,7 +1557,8 @@
             "Jeremiah"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Wisdom Relay 81 and how it connects to the Bible before continuing."
+          "teachingNote": "Wisdom Relay 81 asks players to arrange 6 Bible books in canonical order from Psalms through Jeremiah. The sequence \"Psalms, Proverbs, Ecclesiastes, Song of Solomon, Isaiah, Jeremiah\" is the detail to learn.",
+          "scriptureReference": "Psalms through Jeremiah"
         },
         {
           "id": "bbr-r092",
@@ -1482,7 +1573,8 @@
             "Lamentations"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Wisdom Relay 82 and how it connects to the Bible before continuing."
+          "teachingNote": "Wisdom Relay 82 asks players to arrange 6 Bible books in canonical order from Proverbs through Lamentations. The sequence \"Proverbs, Ecclesiastes, Song of Solomon, Isaiah, Jeremiah, Lamentations\" is the detail to learn.",
+          "scriptureReference": "Proverbs through Lamentations"
         },
         {
           "id": "bbr-r093",
@@ -1497,7 +1589,8 @@
             "Ezekiel"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Wisdom Relay 83 and how it connects to the Bible before continuing."
+          "teachingNote": "Wisdom Relay 83 asks players to arrange 6 Bible books in canonical order from Ecclesiastes through Ezekiel. The sequence \"Ecclesiastes, Song of Solomon, Isaiah, Jeremiah, Lamentations, Ezekiel\" is the detail to learn.",
+          "scriptureReference": "Ecclesiastes through Ezekiel"
         },
         {
           "id": "bbr-r094",
@@ -1512,7 +1605,8 @@
             "Daniel"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Wisdom Relay 84 and how it connects to the Bible before continuing."
+          "teachingNote": "Wisdom Relay 84 asks players to arrange 6 Bible books in canonical order from Song of Solomon through Daniel. The sequence \"Song of Solomon, Isaiah, Jeremiah, Lamentations, Ezekiel, Daniel\" is the detail to learn.",
+          "scriptureReference": "Song of Solomon through Daniel"
         },
         {
           "id": "bbr-r095",
@@ -1527,7 +1621,8 @@
             "Hosea"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Major Prophets Relay 85 and how it connects to the Bible before continuing."
+          "teachingNote": "Major Prophets Relay 85 asks players to arrange 6 Bible books in canonical order from Isaiah through Hosea. The sequence \"Isaiah, Jeremiah, Lamentations, Ezekiel, Daniel, Hosea\" is the detail to learn.",
+          "scriptureReference": "Isaiah through Hosea"
         }
       ]
     },
@@ -1549,7 +1644,8 @@
             "Joel"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Major Prophets Relay 86 and how it connects to the Bible before continuing."
+          "teachingNote": "Major Prophets Relay 86 asks players to arrange 6 Bible books in canonical order from Jeremiah through Joel. The sequence \"Jeremiah, Lamentations, Ezekiel, Daniel, Hosea, Joel\" is the detail to learn.",
+          "scriptureReference": "Jeremiah through Joel"
         },
         {
           "id": "bbr-r097",
@@ -1564,7 +1660,8 @@
             "Amos"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Major Prophets Relay 87 and how it connects to the Bible before continuing."
+          "teachingNote": "Major Prophets Relay 87 asks players to arrange 6 Bible books in canonical order from Lamentations through Amos. The sequence \"Lamentations, Ezekiel, Daniel, Hosea, Joel, Amos\" is the detail to learn.",
+          "scriptureReference": "Lamentations through Amos"
         },
         {
           "id": "bbr-r098",
@@ -1579,7 +1676,8 @@
             "Obadiah"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Major Prophets Relay 88 and how it connects to the Bible before continuing."
+          "teachingNote": "Major Prophets Relay 88 asks players to arrange 6 Bible books in canonical order from Ezekiel through Obadiah. The sequence \"Ezekiel, Daniel, Hosea, Joel, Amos, Obadiah\" is the detail to learn.",
+          "scriptureReference": "Ezekiel through Obadiah"
         },
         {
           "id": "bbr-r099",
@@ -1594,7 +1692,8 @@
             "Jonah"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Major Prophets Relay 89 and how it connects to the Bible before continuing."
+          "teachingNote": "Major Prophets Relay 89 asks players to arrange 6 Bible books in canonical order from Daniel through Jonah. The sequence \"Daniel, Hosea, Joel, Amos, Obadiah, Jonah\" is the detail to learn.",
+          "scriptureReference": "Daniel through Jonah"
         },
         {
           "id": "bbr-r100",
@@ -1609,7 +1708,8 @@
             "Micah"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Minor Prophets Relay 90 and how it connects to the Bible before continuing."
+          "teachingNote": "Minor Prophets Relay 90 asks players to arrange 6 Bible books in canonical order from Hosea through Micah. The sequence \"Hosea, Joel, Amos, Obadiah, Jonah, Micah\" is the detail to learn.",
+          "scriptureReference": "Hosea through Micah"
         }
       ]
     },
@@ -1631,7 +1731,8 @@
             "Nahum"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Minor Prophets Relay 91 and how it connects to the Bible before continuing."
+          "teachingNote": "Minor Prophets Relay 91 asks players to arrange 6 Bible books in canonical order from Joel through Nahum. The sequence \"Joel, Amos, Obadiah, Jonah, Micah, Nahum\" is the detail to learn.",
+          "scriptureReference": "Joel through Nahum"
         },
         {
           "id": "bbr-r102",
@@ -1646,7 +1747,8 @@
             "Habakkuk"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Minor Prophets Relay 92 and how it connects to the Bible before continuing."
+          "teachingNote": "Minor Prophets Relay 92 asks players to arrange 6 Bible books in canonical order from Amos through Habakkuk. The sequence \"Amos, Obadiah, Jonah, Micah, Nahum, Habakkuk\" is the detail to learn.",
+          "scriptureReference": "Amos through Habakkuk"
         },
         {
           "id": "bbr-r103",
@@ -1661,7 +1763,8 @@
             "Zephaniah"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Minor Prophets Relay 93 and how it connects to the Bible before continuing."
+          "teachingNote": "Minor Prophets Relay 93 asks players to arrange 6 Bible books in canonical order from Obadiah through Zephaniah. The sequence \"Obadiah, Jonah, Micah, Nahum, Habakkuk, Zephaniah\" is the detail to learn.",
+          "scriptureReference": "Obadiah through Zephaniah"
         },
         {
           "id": "bbr-r104",
@@ -1676,7 +1779,8 @@
             "Haggai"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Minor Prophets Relay 94 and how it connects to the Bible before continuing."
+          "teachingNote": "Minor Prophets Relay 94 asks players to arrange 6 Bible books in canonical order from Jonah through Haggai. The sequence \"Jonah, Micah, Nahum, Habakkuk, Zephaniah, Haggai\" is the detail to learn.",
+          "scriptureReference": "Jonah through Haggai"
         },
         {
           "id": "bbr-r105",
@@ -1691,7 +1795,8 @@
             "Zechariah"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Minor Prophets Relay 95 and how it connects to the Bible before continuing."
+          "teachingNote": "Minor Prophets Relay 95 asks players to arrange 6 Bible books in canonical order from Micah through Zechariah. The sequence \"Micah, Nahum, Habakkuk, Zephaniah, Haggai, Zechariah\" is the detail to learn.",
+          "scriptureReference": "Micah through Zechariah"
         }
       ]
     },
@@ -1713,7 +1818,8 @@
             "Malachi"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Minor Prophets Relay 96 and how it connects to the Bible before continuing."
+          "teachingNote": "Minor Prophets Relay 96 asks players to arrange 6 Bible books in canonical order from Nahum through Malachi. The sequence \"Nahum, Habakkuk, Zephaniah, Haggai, Zechariah, Malachi\" is the detail to learn.",
+          "scriptureReference": "Nahum through Malachi"
         },
         {
           "id": "bbr-r107",
@@ -1728,7 +1834,8 @@
             "Matthew"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Minor Prophets Relay 97 and how it connects to the Bible before continuing."
+          "teachingNote": "Minor Prophets Relay 97 asks players to arrange 6 Bible books in canonical order from Habakkuk through Matthew. The sequence \"Habakkuk, Zephaniah, Haggai, Zechariah, Malachi, Matthew\" is the detail to learn.",
+          "scriptureReference": "Habakkuk through Matthew"
         },
         {
           "id": "bbr-r108",
@@ -1743,7 +1850,8 @@
             "Mark"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Minor Prophets Relay 98 and how it connects to the Bible before continuing."
+          "teachingNote": "Minor Prophets Relay 98 asks players to arrange 6 Bible books in canonical order from Zephaniah through Mark. The sequence \"Zephaniah, Haggai, Zechariah, Malachi, Matthew, Mark\" is the detail to learn.",
+          "scriptureReference": "Zephaniah through Mark"
         },
         {
           "id": "bbr-r109",
@@ -1758,7 +1866,8 @@
             "Luke"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Minor Prophets Relay 99 and how it connects to the Bible before continuing."
+          "teachingNote": "Minor Prophets Relay 99 asks players to arrange 6 Bible books in canonical order from Haggai through Luke. The sequence \"Haggai, Zechariah, Malachi, Matthew, Mark, Luke\" is the detail to learn.",
+          "scriptureReference": "Haggai through Luke"
         },
         {
           "id": "bbr-r110",
@@ -1773,7 +1882,8 @@
             "John"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Minor Prophets Relay 100 and how it connects to the Bible before continuing."
+          "teachingNote": "Minor Prophets Relay 100 asks players to arrange 6 Bible books in canonical order from Zechariah through John. The sequence \"Zechariah, Malachi, Matthew, Mark, Luke, John\" is the detail to learn.",
+          "scriptureReference": "Zechariah through John"
         }
       ]
     },
@@ -1795,7 +1905,8 @@
             "Acts"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Minor Prophets Relay 101 and how it connects to the Bible before continuing."
+          "teachingNote": "Minor Prophets Relay 101 asks players to arrange 6 Bible books in canonical order from Malachi through Acts. The sequence \"Malachi, Matthew, Mark, Luke, John, Acts\" is the detail to learn.",
+          "scriptureReference": "Malachi through Acts"
         },
         {
           "id": "bbr-r112",
@@ -1810,7 +1921,8 @@
             "Romans"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Gospels Relay 102 and how it connects to the Bible before continuing."
+          "teachingNote": "Gospels Relay 102 asks players to arrange 6 Bible books in canonical order from Matthew through Romans. The sequence \"Matthew, Mark, Luke, John, Acts, Romans\" is the detail to learn.",
+          "scriptureReference": "Matthew through Romans"
         },
         {
           "id": "bbr-r113",
@@ -1825,7 +1937,8 @@
             "1 Corinthians"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Gospels Relay 103 and how it connects to the Bible before continuing."
+          "teachingNote": "Gospels Relay 103 asks players to arrange 6 Bible books in canonical order from Mark through 1 Corinthians. The sequence \"Mark, Luke, John, Acts, Romans, 1 Corinthians\" is the detail to learn.",
+          "scriptureReference": "Mark through 1 Corinthians"
         },
         {
           "id": "bbr-r114",
@@ -1840,7 +1953,8 @@
             "2 Corinthians"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Gospels Relay 104 and how it connects to the Bible before continuing."
+          "teachingNote": "Gospels Relay 104 asks players to arrange 6 Bible books in canonical order from Luke through 2 Corinthians. The sequence \"Luke, John, Acts, Romans, 1 Corinthians, 2 Corinthians\" is the detail to learn.",
+          "scriptureReference": "Luke through 2 Corinthians"
         },
         {
           "id": "bbr-r115",
@@ -1855,7 +1969,8 @@
             "Galatians"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Gospels Relay 105 and how it connects to the Bible before continuing."
+          "teachingNote": "Gospels Relay 105 asks players to arrange 6 Bible books in canonical order from John through Galatians. The sequence \"John, Acts, Romans, 1 Corinthians, 2 Corinthians, Galatians\" is the detail to learn.",
+          "scriptureReference": "John through Galatians"
         }
       ]
     },
@@ -1877,7 +1992,8 @@
             "Ephesians"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Church History Relay 106 and how it connects to the Bible before continuing."
+          "teachingNote": "Church History Relay 106 asks players to arrange 6 Bible books in canonical order from Acts through Ephesians. The sequence \"Acts, Romans, 1 Corinthians, 2 Corinthians, Galatians, Ephesians\" is the detail to learn.",
+          "scriptureReference": "Acts through Ephesians"
         },
         {
           "id": "bbr-r117",
@@ -1892,7 +2008,8 @@
             "Philippians"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Letters Relay 107 and how it connects to the Bible before continuing."
+          "teachingNote": "Letters Relay 107 asks players to arrange 6 Bible books in canonical order from Romans through Philippians. The sequence \"Romans, 1 Corinthians, 2 Corinthians, Galatians, Ephesians, Philippians\" is the detail to learn.",
+          "scriptureReference": "Romans through Philippians"
         },
         {
           "id": "bbr-r118",
@@ -1907,7 +2024,8 @@
             "Colossians"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Letters Relay 108 and how it connects to the Bible before continuing."
+          "teachingNote": "Letters Relay 108 asks players to arrange 6 Bible books in canonical order from 1 Corinthians through Colossians. The sequence \"1 Corinthians, 2 Corinthians, Galatians, Ephesians, Philippians, Colossians\" is the detail to learn.",
+          "scriptureReference": "1 Corinthians through Colossians"
         },
         {
           "id": "bbr-r119",
@@ -1922,7 +2040,8 @@
             "1 Thessalonians"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Letters Relay 109 and how it connects to the Bible before continuing."
+          "teachingNote": "Letters Relay 109 asks players to arrange 6 Bible books in canonical order from 2 Corinthians through 1 Thessalonians. The sequence \"2 Corinthians, Galatians, Ephesians, Philippians, Colossians, 1 Thessalonians\" is the detail to learn.",
+          "scriptureReference": "2 Corinthians through 1 Thessalonians"
         },
         {
           "id": "bbr-r120",
@@ -1937,7 +2056,8 @@
             "2 Thessalonians"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Letters Relay 110 and how it connects to the Bible before continuing."
+          "teachingNote": "Letters Relay 110 asks players to arrange 6 Bible books in canonical order from Galatians through 2 Thessalonians. The sequence \"Galatians, Ephesians, Philippians, Colossians, 1 Thessalonians, 2 Thessalonians\" is the detail to learn.",
+          "scriptureReference": "Galatians through 2 Thessalonians"
         }
       ]
     },
@@ -1959,7 +2079,8 @@
             "1 Timothy"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Letters Relay 111 and how it connects to the Bible before continuing."
+          "teachingNote": "Letters Relay 111 asks players to arrange 6 Bible books in canonical order from Ephesians through 1 Timothy. The sequence \"Ephesians, Philippians, Colossians, 1 Thessalonians, 2 Thessalonians, 1 Timothy\" is the detail to learn.",
+          "scriptureReference": "Ephesians through 1 Timothy"
         },
         {
           "id": "bbr-r122",
@@ -1974,7 +2095,8 @@
             "2 Timothy"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Letters Relay 112 and how it connects to the Bible before continuing."
+          "teachingNote": "Letters Relay 112 asks players to arrange 6 Bible books in canonical order from Philippians through 2 Timothy. The sequence \"Philippians, Colossians, 1 Thessalonians, 2 Thessalonians, 1 Timothy, 2 Timothy\" is the detail to learn.",
+          "scriptureReference": "Philippians through 2 Timothy"
         },
         {
           "id": "bbr-r123",
@@ -1989,7 +2111,8 @@
             "Titus"
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Letters Relay 113 and how it connects to the Bible before continuing."
+          "teachingNote": "Letters Relay 113 asks players to arrange 6 Bible books in canonical order from Colossians through Titus. The sequence \"Colossians, 1 Thessalonians, 2 Thessalonians, 1 Timothy, 2 Timothy, Titus\" is the detail to learn.",
+          "scriptureReference": "Colossians through Titus"
         },
         {
           "id": "bbr-r124",
@@ -2004,7 +2127,8 @@
             "Philemon"
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Letters Relay 114 and how it connects to the Bible before continuing."
+          "teachingNote": "Letters Relay 114 asks players to arrange 6 Bible books in canonical order from 1 Thessalonians through Philemon. The sequence \"1 Thessalonians, 2 Thessalonians, 1 Timothy, 2 Timothy, Titus, Philemon\" is the detail to learn.",
+          "scriptureReference": "1 Thessalonians through Philemon"
         },
         {
           "id": "bbr-r125",
@@ -2019,7 +2143,8 @@
             "Hebrews"
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Letters Relay 115 and how it connects to the Bible before continuing."
+          "teachingNote": "Letters Relay 115 asks players to arrange 6 Bible books in canonical order from 2 Thessalonians through Hebrews. The sequence \"2 Thessalonians, 1 Timothy, 2 Timothy, Titus, Philemon, Hebrews\" is the detail to learn.",
+          "scriptureReference": "2 Thessalonians through Hebrews"
         }
       ]
     }

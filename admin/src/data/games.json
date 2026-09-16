@@ -1,0 +1,178 @@
+{
+  "games": [
+    {
+      "gameId": "five-guesses",
+      "label": "Five Clues",
+      "shortDescription": "A five-category board with five value cards per category and steal attempts.",
+      "schemaFile": "five-guesses.schema.json"
+    },
+    {
+      "gameId": "initials",
+      "label": "Bible Initials",
+      "shortDescription": "A random twenty-five-card board with initials first, then six live clues.",
+      "schemaFile": "initials.schema.json"
+    },
+    {
+      "gameId": "scripture-puzzles",
+      "label": "Verse Reveal",
+      "shortDescription": "Turn-based random scripture rounds with letter scoring and full-solve bonuses.",
+      "schemaFile": "scripture-puzzles.schema.json"
+    },
+    {
+      "gameId": "bible-timeline",
+      "label": "Bible Timeline",
+      "shortDescription": "Arrange Bible events in chronological order before submitting the full timeline.",
+      "schemaFile": "bible-timeline.schema.json"
+    },
+    {
+      "gameId": "verse-scramble",
+      "label": "Verse Scramble",
+      "shortDescription": "Rebuild a short KJV verse from scrambled word tiles.",
+      "schemaFile": "verse-scramble.schema.json"
+    },
+    {
+      "gameId": "bible-connections",
+      "label": "Bible Connections",
+      "shortDescription": "Find four connected sets of four Bible terms from a shuffled sixteen-tile board.",
+      "schemaFile": "bible-connections.schema.json"
+    },
+    {
+      "gameId": "name-that-book",
+      "label": "Name That Book",
+      "shortDescription": "Guess the Bible book from a five-clue ladder with one-point steal attempts.",
+      "schemaFile": "name-that-book.schema.json"
+    },
+    {
+      "gameId": "before-or-after",
+      "label": "Before Or After",
+      "shortDescription": "Choose which of two Bible events happened first.",
+      "schemaFile": "before-or-after.schema.json"
+    },
+    {
+      "gameId": "reference-rush",
+      "label": "Reference Rush",
+      "shortDescription": "Read a KJV verse and name its scripture reference before the round moves on.",
+      "schemaFile": "reference-rush.schema.json"
+    },
+    {
+      "gameId": "chapter-finder",
+      "label": "Chapter Finder",
+      "shortDescription": "Identify the Bible book and chapter for a prompt, event, quote, person, or theme.",
+      "schemaFile": "chapter-finder.schema.json"
+    },
+    {
+      "gameId": "who-said-it",
+      "label": "Who Said It?",
+      "shortDescription": "Identify the speaker of a recognizable KJV Bible quote or statement.",
+      "schemaFile": "who-said-it.schema.json"
+    },
+    {
+      "gameId": "bible-books-relay",
+      "label": "Bible Books Relay",
+      "shortDescription": "Arrange shuffled Bible book tiles into canonical order.",
+      "schemaFile": "bible-books-relay.schema.json"
+    },
+    {
+      "gameId": "missing-word",
+      "label": "Missing Word",
+      "shortDescription": "Fill in one to three missing words from a KJV verse.",
+      "schemaFile": "missing-word.schema.json"
+    },
+    {
+      "gameId": "prophecy-match",
+      "label": "Prophecy Match Challenge",
+      "shortDescription": "Match Old Testament prophecy cards with New Testament fulfillment cards.",
+      "schemaFile": "prophecy-match.schema.json"
+    },
+    {
+      "gameId": "messiah-prophecy",
+      "label": "Messiah Prophecy Challenge",
+      "shortDescription": "Identify the messianic fulfillment, event, person, or theme tied to a prophecy.",
+      "schemaFile": "messiah-prophecy.schema.json"
+    },
+    {
+      "gameId": "prophecy-clue-ladder",
+      "label": "Prophecy Clue Ladder",
+      "shortDescription": "Name the prophecy theme, reference, fulfillment, person, or event from five clues.",
+      "schemaFile": "prophecy-clue-ladder.schema.json"
+    },
+    {
+      "gameId": "fulfillment-finder",
+      "label": "Fulfillment Finder Challenge",
+      "shortDescription": "Choose the Old Testament prophecy connected to a New Testament fulfillment.",
+      "schemaFile": "fulfillment-finder.schema.json"
+    },
+    {
+      "gameId": "prophecy-categories",
+      "label": "Prophecy Categories Challenge",
+      "shortDescription": "Sort prophecy cards into five reference-based categories.",
+      "schemaFile": "prophecy-categories.schema.json"
+    },
+    {
+      "gameId": "complete-the-verse",
+      "label": "Complete the Verse Challenge",
+      "shortDescription": "Complete a well-known KJV verse from Psalms or Proverbs from four endings.",
+      "schemaFile": "complete-the-verse.schema.json"
+    },
+    {
+      "gameId": "wisdom-match",
+      "label": "Wisdom Match Challenge",
+      "shortDescription": "Match a Proverbs excerpt to its wisdom theme.",
+      "schemaFile": "wisdom-match.schema.json"
+    },
+    {
+      "gameId": "psalm-theme",
+      "label": "Psalm Theme Challenge",
+      "shortDescription": "Identify the major theme of a short Psalm excerpt.",
+      "schemaFile": "psalm-theme.schema.json"
+    },
+    {
+      "gameId": "proverb-categories",
+      "label": "Proverb Categories Challenge",
+      "shortDescription": "Sort Proverbs cards into five wisdom categories.",
+      "schemaFile": "proverb-categories.schema.json"
+    },
+    {
+      "gameId": "psalm-reference-finder",
+      "label": "Psalm Reference Finder",
+      "shortDescription": "Choose the correct Psalm reference for a familiar KJV phrase.",
+      "schemaFile": "psalm-reference-finder.schema.json"
+    },
+    {
+      "gameId": "two-truths-and-a-lie",
+      "label": "Two Truths and a Lie",
+      "shortDescription": "Spot the false statement among three about a Bible figure or event.",
+      "schemaFile": "two-truths-and-a-lie.schema.json"
+    },
+    {
+      "gameId": "relay-verse-build",
+      "label": "Relay Verse Build",
+      "shortDescription": "Take turns typing one word at a time to rebuild a hidden KJV verse.",
+      "schemaFile": "relay-verse-build.schema.json"
+    },
+    {
+      "gameId": "verse-typing-race",
+      "label": "Verse Typing Race",
+      "shortDescription": "Type a KJV verse as fast and accurately as you can.",
+      "schemaFile": "verse-typing-race.schema.json"
+    },
+    {
+      "gameId": "word-ladder",
+      "label": "Word Ladder",
+      "shortDescription": "Change one letter at a time to turn the start word into the end word.",
+      "schemaFile": "word-ladder.schema.json"
+    },
+    {
+      "gameId": "bible-anagrams",
+      "label": "Bible Anagrams",
+      "shortDescription": "Unscramble the letters to name a Bible person, place, thing, or event.",
+      "schemaFile": "bible-anagrams.schema.json"
+    },
+    {
+      "gameId": "bible-cryptogram",
+      "label": "Bible Cryptogram",
+      "shortDescription": "Crack a letter-substitution cipher to reveal a Bible name, phrase, or short verse.",
+      "schemaFile": "bible-cryptogram.schema.json"
+    }
+  ]
+}

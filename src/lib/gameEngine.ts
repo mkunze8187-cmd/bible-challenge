@@ -272,6 +272,7 @@ export interface ChapterFinderState extends RoundSessionBase<ChapterFinderRound,
 export interface WhoSaidItPrompt {
   kind: "who-said-it";
   round: WhoSaidItRound;
+  choices: string[] | null;
   attemptedParticipantIds: string[];
   phase: "active" | "resolved";
   wasCorrect: boolean | null;
@@ -568,7 +569,13 @@ export interface BibleCryptogramPrompt {
   // prompt, not stored in content, the same way Bible Anagrams shuffles its tile order
   // and Word Ladder validates against a runtime dictionary rather than authored data.
   cipherMap: Record<string, string>;
-  attemptedLetters: string[];
+  // The player's working substitution key: cipher letter -> the real letter they think it
+  // decodes to. Like a real paper cryptogram, this is a guess at the mapping itself, not a
+  // guess that a letter appears somewhere — so it only ever touches the one cipher symbol
+  // it was entered for, stays editable (retyping a box just replaces its entry), and the
+  // original cipher board never changes; only the solved-so-far board reflects it, and
+  // only where the guess happens to be correct.
+  cipherGuesses: Record<string, string>;
   // Unlike Verse Reveal (which this mechanic is otherwise adapted from), Cryptogram does
   // not force a single-letter-guess-then-solve-or-pass rhythm — the active player/team can
   // fill in as many letters as they want, in any order, and attempt a solve whenever they
@@ -1222,16 +1229,17 @@ function createBibleCryptogramPrompt(round: BibleCryptogramRound): BibleCryptogr
     kind: "bible-cryptogram",
     round,
     cipherMap: buildCipherMap(),
-    attemptedLetters: [],
+    cipherGuesses: {},
     isComplete: false,
     winnerParticipantId: null,
     completedReason: null
   };
 }
 
-export function buildCryptogramBoard(text: string, cipherMap: Record<string, string>, attemptedLetters: string[]): string {
-  const attempted = new Set(attemptedLetters.map((entry) => entry.toLowerCase()));
-
+// The encrypted board always shows the cipher text as-is — like a real paper cryptogram,
+// filling in a guess updates the solved-so-far board below it (see
+// buildCryptogramSolvedBoard), never the puzzle itself.
+export function buildCryptogramBoard(text: string, cipherMap: Record<string, string>): string {
   return Array.from(text)
     .map((character) => {
       if (!/[a-z]/i.test(character)) {
@@ -1241,42 +1249,82 @@ export function buildCryptogramBoard(text: string, cipherMap: Record<string, str
       const lower = character.toLowerCase();
       const cipherLetter = cipherMap[lower] ?? lower;
 
-      if (!attempted.has(lower)) {
-        return character === lower ? cipherLetter : cipherLetter.toUpperCase();
-      }
-
-      return character;
+      return character === lower ? cipherLetter : cipherLetter.toUpperCase();
     })
     .join("");
+}
+
+export interface CryptogramSolvedCharacter {
+  character: string;
+  // "literal" is punctuation/spacing shown as-is; "blank" is a letter space with no guess
+  // yet for its cipher letter; "correct"/"incorrect" show the player's guessed letter,
+  // styled to say whether it actually matches the round's cipher map.
+  status: "literal" | "blank" | "correct" | "incorrect";
+}
+
+// Builds the solve-so-far board from the player's cipher-letter -> real-letter guesses.
+// Every guess shows up here — right or wrong — the way a real pencil-filled cryptogram
+// shows whatever you last wrote in, whether or not it turns out to be correct; only an
+// unguessed cipher letter stays blank.
+export function buildCryptogramSolvedBoard(
+  text: string,
+  cipherMap: Record<string, string>,
+  cipherGuesses: Record<string, string>
+): CryptogramSolvedCharacter[] {
+  return Array.from(text).map((character) => {
+    if (!/[a-z]/i.test(character)) {
+      return { character, status: "literal" as const };
+    }
+
+    const lower = character.toLowerCase();
+    const cipherLetter = cipherMap[lower] ?? lower;
+    const guess = cipherGuesses[cipherLetter];
+
+    if (!guess) {
+      return { character: "_", status: "blank" as const };
+    }
+
+    const isCorrect = guess.toLowerCase() === lower;
+    const displayedGuess = character === lower ? guess.toLowerCase() : guess.toUpperCase();
+
+    return { character: displayedGuess, status: isCorrect ? ("correct" as const) : ("incorrect" as const) };
+  });
 }
 
 async function createInitialsBoard(
   difficulty: DifficultyFilter | undefined,
   customOnly = false
-): Promise<InitialsBoardCard[]> {
+): Promise<{ boardCards: InitialsBoardCard[]; usedFallbackDifficulty: boolean }> {
   const pack = await loadGameContent("initials", { customOnly });
-  const allRounds = filterRoundsByDifficulty(
-    pack.sessions.flatMap((session) =>
-      session.rounds.map((round) => ({
-        ...round,
-        theme: session.theme,
-        sourceSessionTitle: session.title,
-        cluePoolSize: round.hints.length,
-        hints: pickRandomSubset(round.hints, INITIALS_CLUES_PER_CARD)
-      }))
-    ),
-    difficulty,
-    "Bible Initials"
+  const decoratedRounds = pack.sessions.flatMap((session) =>
+    session.rounds.map((round) => ({
+      ...round,
+      theme: session.theme,
+      sourceSessionTitle: session.title,
+      cluePoolSize: round.hints.length,
+      hints: pickRandomSubset(round.hints, INITIALS_CLUES_PER_CARD)
+    }))
   );
-  const pool = pickUniqueInitialsRounds(allRounds, BOARD_CARD_COUNT);
 
-  return pool.map((round, index) => ({
+  // A full board needs 25 cards with distinct initials, but the library only carries a
+  // handful of rounds per difficulty tier — nowhere near enough to fill a board on its
+  // own. Rather than blocking the game entirely whenever the global difficulty filter
+  // isn't "Mixed" (as every other game's filter does), fall back to the full library so
+  // Initials still opens; the caller surfaces that fallback in the activity log.
+  const filteredRounds = filterRoundsByDifficulty(decoratedRounds, difficulty, "Bible Initials");
+  const hasEnoughForFilteredBoard = new Set(filteredRounds.map((round) => round.initials)).size >= BOARD_CARD_COUNT;
+  const usedFallbackDifficulty = Boolean(difficulty) && difficulty !== "mixed" && !hasEnoughForFilteredBoard;
+  const pool = pickUniqueInitialsRounds(usedFallbackDifficulty ? decoratedRounds : filteredRounds, BOARD_CARD_COUNT);
+
+  const boardCards = pool.map((round, index) => ({
     id: round.id,
     round,
     pickNumber: index + 1,
-    status: "available",
+    status: "available" as const,
     winnerParticipantId: null
   }));
+
+  return { boardCards, usedFallbackDifficulty };
 }
 
 function pickGameRounds<T>(rounds: T[], count: number, gameName: string, difficulty?: DifficultyFilter): T[] {
@@ -1368,9 +1416,19 @@ function createNameThatBookPrompt(round: NameThatBookRound, state: Pick<SessionB
 }
 
 function createBeforeOrAfterPrompt(round: BeforeOrAfterRound): BeforeOrAfterPrompt {
+  const shouldSwap = Math.random() < 0.5;
+  const displayRound = shouldSwap
+    ? {
+        ...round,
+        leftEvent: round.rightEvent,
+        rightEvent: round.leftEvent,
+        earlierEvent: round.earlierEvent === "left" ? ("right" as const) : ("left" as const)
+      }
+    : round;
+
   return {
     kind: "before-or-after",
-    round,
+    round: displayRound,
     attemptedParticipantIds: [],
     selectedAnswer: null,
     phase: "active",
@@ -1401,10 +1459,17 @@ function createChapterFinderPrompt(round: ChapterFinderRound): ChapterFinderProm
   };
 }
 
-function createWhoSaidItPrompt(round: WhoSaidItRound): WhoSaidItPrompt {
+function createWhoSaidItPrompt(round: WhoSaidItRound, speakerPool: string[] = []): WhoSaidItPrompt {
+  const distractors = speakerPool.filter((speaker) => normalizeText(speaker) !== normalizeText(round.speaker));
+  const choices =
+    round.difficulty === "hard"
+      ? null
+      : shuffle(Array.from(new Set([round.speaker, ...shuffle(distractors).slice(0, 3)])));
+
   return {
     kind: "who-said-it",
     round,
+    choices,
     attemptedParticipantIds: [],
     phase: "active",
     wasCorrect: null,
@@ -1790,7 +1855,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
   }
 
   if (config.gameId === "initials") {
-    const boardCards = await createInitialsBoard(config.difficulty, customOnly);
+    const { boardCards, usedFallbackDifficulty } = await createInitialsBoard(config.difficulty, customOnly);
 
     return {
       gameId: "initials",
@@ -1804,7 +1869,9 @@ export async function createSessionState(config: SessionConfig): Promise<Session
         {
           id: "start-1",
           tone: "info",
-          text: "Bible Initials random board is ready. The active player chooses any available card.",
+          text: usedFallbackDifficulty
+            ? "Bible Initials random board is ready. This board always draws from the full library — a full 25-card board needs more unique initials than one difficulty tier has. The active player chooses any available card."
+            : "Bible Initials random board is ready. The active player chooses any available card.",
           roundNumber: 1
         }
       ],
@@ -2088,7 +2155,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       resolvedPrompts: 0,
       roundIndex: 0,
       rounds,
-      currentPrompt: createWhoSaidItPrompt(rounds[0])
+      currentPrompt: createWhoSaidItPrompt(rounds[0], rounds.map((round) => round.speaker))
     };
   }
 
@@ -3126,7 +3193,9 @@ export function continueGame(state: SessionState): ActionResult {
       throw new Error("Resolve the speaker round before continuing.");
     }
 
-    return advanceLinearRound(nextState, (round) => createWhoSaidItPrompt(round as WhoSaidItRound));
+    return advanceLinearRound(nextState, (round) =>
+      createWhoSaidItPrompt(round as WhoSaidItRound, nextState.rounds.map((entry) => entry.speaker))
+    );
   }
 
   if (nextState.gameId === "bible-books-relay") {
@@ -3442,7 +3511,14 @@ export function passScriptureTurn(state: SessionState): ActionResult {
   return addActivity(nextState, "info", `${actorLabel} passed. ${getCurrentActorLabel(nextState)} is up.`);
 }
 
-export function submitBibleCryptogramLetterGuess(state: SessionState, letterGuess: string): ActionResult {
+// True when `realLetter` is what `cipherLetter` actually decodes to per the round's
+// cipher map — i.e. the mapping the player is trying to reconstruct, not just whether the
+// letter appears in the puzzle somewhere.
+function isCorrectCipherGuess(cipherMap: Record<string, string>, cipherLetter: string, realLetter: string): boolean {
+  return cipherMap[realLetter] === cipherLetter;
+}
+
+export function submitBibleCryptogramLetterGuess(state: SessionState, cipherLetter: string, realLetterGuess: string): ActionResult {
   if (state.gameId !== "bible-cryptogram") {
     throw new Error("Letter guesses are only available in Bible Cryptogram.");
   }
@@ -3451,9 +3527,10 @@ export function submitBibleCryptogramLetterGuess(state: SessionState, letterGues
     throw new Error("Continue to the next round before guessing again.");
   }
 
-  const normalizedLetter = letterGuess.trim().toLowerCase();
+  const normalizedCipherLetter = cipherLetter.trim().toLowerCase();
+  const normalizedGuess = realLetterGuess.trim().toLowerCase();
 
-  if (!/^[a-z]$/.test(normalizedLetter)) {
+  if (!/^[a-z]$/.test(normalizedCipherLetter) || !/^[a-z]$/.test(normalizedGuess)) {
     throw new Error("Enter exactly one letter from A to Z.");
   }
 
@@ -3461,35 +3538,60 @@ export function submitBibleCryptogramLetterGuess(state: SessionState, letterGues
   const actorIndex = nextState.turnIndex;
   const stats = getParticipantStats(nextState, actorIndex);
   const actorLabel = getCurrentActorLabel(nextState);
-  const text = nextState.currentPrompt.round.verseText;
+  const prompt = nextState.currentPrompt;
+  const cipherMap = prompt.cipherMap;
 
-  // Unlike Verse Reveal, a letter guess here never ends the active player/team's turn —
-  // they can fill in any number of cipher letters, in any order, the way a real paper
-  // cryptogram is solved. Only a solve attempt (right or wrong) or an explicit pass moves
-  // to the next participant.
-  if (nextState.currentPrompt.attemptedLetters.includes(normalizedLetter)) {
-    return addActivity(
-      nextState,
-      "info",
-      `${actorLabel} repeated "${normalizedLetter.toUpperCase()}". No new letters were revealed.`
+  const previousGuessForLetter = prompt.cipherGuesses[normalizedCipherLetter];
+
+  if (previousGuessForLetter === normalizedGuess) {
+    return addActivity(nextState, "info", `${actorLabel} entered the same guess again. Nothing changed.`);
+  }
+
+  // Like a real paper cryptogram, one real letter can only stand for one cipher letter at
+  // a time — reusing a real letter that's already assigned elsewhere would make the
+  // solve-so-far board ambiguous, so it's rejected instead of silently overwriting the
+  // other box. The player is still free to fix their own earlier guess for this cipher
+  // letter by typing over it.
+  const conflictingCipherLetter = Object.entries(prompt.cipherGuesses).find(
+    ([existingCipherLetter, existingGuess]) => existingGuess === normalizedGuess && existingCipherLetter !== normalizedCipherLetter
+  )?.[0];
+
+  if (conflictingCipherLetter) {
+    throw new Error(
+      `"${normalizedGuess.toUpperCase()}" is already your guess for cipher letter "${conflictingCipherLetter.toUpperCase()}". Clear that guess first if you want to move it here.`
     );
   }
 
-  nextState.currentPrompt.attemptedLetters.push(normalizedLetter);
+  const wasCorrectBefore = previousGuessForLetter != null && isCorrectCipherGuess(cipherMap, normalizedCipherLetter, previousGuessForLetter);
+  const isCorrectNow = isCorrectCipherGuess(cipherMap, normalizedCipherLetter, normalizedGuess);
 
-  const matches = countLetterOccurrences(text, normalizedLetter);
+  prompt.cipherGuesses[normalizedCipherLetter] = normalizedGuess;
 
-  if (matches === 0) {
+  if (!isCorrectNow) {
     stats.incorrectAttempts += 1;
 
-    return addActivity(nextState, "warning", `${actorLabel} guessed "${normalizedLetter.toUpperCase()}". That letter isn't in the puzzle.`);
+    return addActivity(
+      nextState,
+      "warning",
+      `${actorLabel} guessed "${normalizedGuess.toUpperCase()}" for cipher letter "${normalizedCipherLetter.toUpperCase()}". That's not right.`
+    );
   }
 
+  // Only score the first time this cipher letter's guess becomes correct, so editing a
+  // guess back and forth can't farm points.
+  if (wasCorrectBefore) {
+    return addActivity(nextState, "info", `${actorLabel} re-confirmed cipher letter "${normalizedCipherLetter.toUpperCase()}".`);
+  }
+
+  // The guess is correct here, so counting occurrences of the real letter in the plaintext
+  // is the same as counting occurrences of the cipher letter in the puzzle text.
+  const matches = countLetterOccurrences(prompt.round.verseText, normalizedGuess);
   const points = scoreScriptureLetterGuess(matches);
-  const remainingLetters = countRemainingLetters(text, nextState.currentPrompt.attemptedLetters);
 
   stats.totalScore += points;
   stats.letterRevealPoints += points;
+
+  const remainingLetters = getBibleCryptogramRemainingLetters(nextState as BibleCryptogramState);
 
   if (remainingLetters === 0) {
     nextState.currentPrompt.isComplete = true;
@@ -3498,14 +3600,14 @@ export function submitBibleCryptogramLetterGuess(state: SessionState, letterGues
     return addActivity(
       nextState,
       "success",
-      `${actorLabel} revealed the final ${matches} letter${matches === 1 ? "" : "s"}. The puzzle is fully revealed.`
+      `${actorLabel} correctly mapped the final cipher letter. The puzzle is fully revealed.`
     );
   }
 
   return addActivity(
     nextState,
     "success",
-    `${actorLabel} revealed ${matches} letter${matches === 1 ? "" : "s"} and scored ${points} point${points === 1 ? "" : "s"}.`
+    `${actorLabel} correctly mapped cipher letter "${normalizedCipherLetter.toUpperCase()}" to "${normalizedGuess.toUpperCase()}" and scored ${points} point${points === 1 ? "" : "s"}.`
   );
 }
 
@@ -3540,7 +3642,7 @@ export function submitBibleCryptogramSolve(state: SessionState, solutionGuess: s
     return addActivity(nextState, "warning", `${actorLabel} attempted a full solve, but the puzzle remains open. ${getCurrentActorLabel(nextState)} is up.`);
   }
 
-  const remainingLetters = countRemainingLetters(text, nextState.currentPrompt.attemptedLetters);
+  const remainingLetters = getBibleCryptogramRemainingLetters(nextState as BibleCryptogramState);
   const points = scoreScriptureSolve(remainingLetters);
 
   stats.totalScore += points;
@@ -4953,6 +5055,34 @@ export function moveTimelineEvent(
   return addActivity(nextState, "info", "Timeline order updated.");
 }
 
+// The arrow buttons only ever swap one adjacent pair at a time (moveTimelineEvent above);
+// dragging a card can move it several slots in one gesture, so this repositions it
+// directly rather than replaying single-step swaps against state that wouldn't actually
+// update between calls in the same synchronous drop handler.
+export function reorderTimelineEvent(state: SessionState, eventId: string, targetIndex: number): ActionResult {
+  if (state.gameId !== "bible-timeline") {
+    throw new Error("Timeline controls are only available in Bible Timeline.");
+  }
+
+  if (state.currentPrompt.phase !== "active") {
+    throw new Error("Continue to the next round before moving events.");
+  }
+
+  const nextState = structuredClone(state);
+  const ids = nextState.currentPrompt.arrangedEventIds;
+  const fromIndex = ids.indexOf(eventId);
+  const clampedTargetIndex = Math.max(0, Math.min(targetIndex, ids.length - 1));
+
+  if (fromIndex < 0 || fromIndex === clampedTargetIndex) {
+    return addActivity(nextState, "info", "Timeline order unchanged.");
+  }
+
+  const [moved] = ids.splice(fromIndex, 1);
+  ids.splice(clampedTargetIndex, 0, moved);
+
+  return addActivity(nextState, "info", "Timeline order updated.");
+}
+
 export function submitTimelineOrder(state: SessionState): ActionResult {
   if (state.gameId !== "bible-timeline") {
     throw new Error("Timeline submit is only available in Bible Timeline.");
@@ -5785,6 +5915,33 @@ export function moveBibleBook(
   return addActivity(nextState, "info", "Book order updated.");
 }
 
+// See reorderTimelineEvent — same reasoning: a drag gesture can move a tile several slots
+// in one drop, so this repositions it directly instead of replaying moveBibleBook's
+// single-step swap against state that wouldn't update between calls in one drop handler.
+export function reorderBibleBook(state: SessionState, book: string, targetIndex: number): ActionResult {
+  if (state.gameId !== "bible-books-relay") {
+    throw new Error("Book relay controls are only available in Bible Books Relay.");
+  }
+
+  if (state.currentPrompt.phase !== "active") {
+    throw new Error("Continue to the next round before moving books.");
+  }
+
+  const nextState = structuredClone(state);
+  const books = nextState.currentPrompt.arrangedBooks;
+  const fromIndex = books.indexOf(book);
+  const clampedTargetIndex = Math.max(0, Math.min(targetIndex, books.length - 1));
+
+  if (fromIndex < 0 || fromIndex === clampedTargetIndex) {
+    return addActivity(nextState, "info", "Book order unchanged.");
+  }
+
+  const [moved] = books.splice(fromIndex, 1);
+  books.splice(clampedTargetIndex, 0, moved);
+
+  return addActivity(nextState, "info", "Book order updated.");
+}
+
 export function submitBibleBooksRelay(state: SessionState): ActionResult {
   if (state.gameId !== "bible-books-relay") {
     throw new Error("Book relay submit is only available in Bible Books Relay.");
@@ -5991,6 +6148,15 @@ export function getScriptureRemainingLetters(state: ScriptureState): number {
 }
 
 export function getBibleCryptogramRemainingLetters(state: BibleCryptogramState): number {
-  return countRemainingLetters(state.currentPrompt.round.verseText, state.currentPrompt.attemptedLetters);
-}
+  const { cipherMap, cipherGuesses } = state.currentPrompt;
+  // A letter space counts as revealed only once its cipher letter has a *correct* guess —
+  // an incorrect guess still shows on the solve-so-far board (see buildCryptogramSolvedBoard)
+  // but doesn't actually solve that letter, so it stays counted as remaining here.
+  const correctlyGuessedRealLetters = new Set(
+    Object.entries(cipherGuesses)
+      .filter(([cipherLetter, guess]) => isCorrectCipherGuess(cipherMap, cipherLetter, guess))
+      .map(([, guess]) => guess)
+  );
 
+  return countRemainingLetters(state.currentPrompt.round.verseText, Array.from(correctlyGuessedRealLetters));
+}

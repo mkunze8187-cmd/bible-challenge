@@ -1,6 +1,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { buildVerseStudyNote } from "./verse-study-notes.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -401,6 +402,7 @@ fiveGuesses.sessions.push(
         id: `fg-auto-r${(index + 1).toString().padStart(3, "0")}`,
         category: section,
         answer: reference,
+        scriptureReference: reference,
         aliases: aliasesFor(entry),
         clues: [
           `This answer is a KJV scripture reference from the ${entry.testament}.`,
@@ -408,7 +410,8 @@ fiveGuesses.sessions.push(
           `The verse is in chapter ${entry.chapter}.`,
           `Theme clue: ${theme}.`,
           `The verse begins, "${quoteIntro(entry.text)}..."`
-        ]
+        ],
+        teachingNote: buildVerseStudyNote({ reference, theme, verseText: entry.text })
       };
     })
   )
@@ -431,6 +434,7 @@ initials.sessions.push(
         category: "Scripture Reference",
         initials: getInitials(referenceWords),
         answer: reference,
+        scriptureReference: reference,
         aliases: aliasesFor(entry),
         hints: [
           "These initials point to a KJV scripture reference.",
@@ -439,7 +443,8 @@ initials.sessions.push(
           `The chapter number is ${entry.chapter}.`,
           `The verse contains about ${wordCount(entry.text)} words.`,
           `The verse begins, "${quoteIntro(entry.text)}..."`
-        ]
+        ],
+        teachingNote: buildVerseStudyNote({ reference, theme: themeForText(entry.text), verseText: entry.text })
       };
     })
   )
@@ -454,17 +459,19 @@ scripturePuzzles.sessions.push(
     "Generated KJV verse reveal rounds",
     scriptureEntries.map((entry, index) => {
       const reference = referenceFor(entry);
+      const theme = themeForText(entry.text);
 
       return {
         id: `sp-auto-r${(index + 1).toString().padStart(3, "0")}`,
         reference,
         referenceAliases: aliasesFor(entry),
         sourceTranslation: "KJV",
-        theme: themeForText(entry.text),
+        theme,
         contextClue: contextFor(entry),
         contentMode: "public-domain-text",
         verseText: entry.text,
-        solutionAliases: [entry.text]
+        solutionAliases: [entry.text],
+        teachingNote: buildVerseStudyNote({ reference, theme, verseText: entry.text })
       };
     })
   )

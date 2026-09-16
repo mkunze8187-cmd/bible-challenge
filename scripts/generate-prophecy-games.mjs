@@ -1,6 +1,7 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { buildCategoryBoardStudyNote } from "./structured-study-notes.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -689,8 +690,14 @@ function buildCategorySessions() {
           id: `pc-${String(sessionIndex + 1).padStart(3, "0")}`,
           title: `Prophecy Category Board ${String(sessionIndex + 1).padStart(2, "0")}`,
           theme: "Reference-based prophecy categories",
+          difficulty: difficulty(sessionIndex),
           categories,
-          cards
+          cards,
+          ...buildCategoryBoardStudyNote({
+            title: `Prophecy Category Board ${String(sessionIndex + 1).padStart(2, "0")}`,
+            categories,
+            cards
+          })
         }
       ]
     });
@@ -806,6 +813,9 @@ const packs = [
         id: text,
         title: text,
         theme: text,
+        difficulty,
+        scriptureReference: text,
+        teachingNote: text,
         categories: { type: "array", minItems: 5, maxItems: 5, uniqueItems: true, items: text },
         cards: {
           type: "array",
@@ -827,7 +837,7 @@ const packs = [
           }
         }
       },
-      ["id", "title", "theme", "categories", "cards"]
+      ["id", "title", "theme", "categories", "cards", "difficulty", "teachingNote"]
     )
   ]
 ];

@@ -22,7 +22,7 @@
           "theme": "Creation",
           "verseText": "In the beginning God created the heaven and the earth.",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 1:1 and the full verse before continuing."
+          "teachingNote": "Genesis 1:1 grounds God as Creator in the words \"In the beginning God created the heaven and the earth.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r002",
@@ -36,7 +36,7 @@
           "theme": "Commandments",
           "verseText": "Thou shalt have no other gods before me.",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 20:3 and the full verse before continuing."
+          "teachingNote": "Exodus 20:3 grounds commandments in the words \"Thou shalt have no other gods before me.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r003",
@@ -50,7 +50,7 @@
           "theme": "Blessing",
           "verseText": "The LORD bless thee, and keep thee:",
           "difficulty": "hard",
-          "teachingNote": "Review Numbers 6:24 and the full verse before continuing."
+          "teachingNote": "Numbers 6:24 grounds blessing in the words \"The LORD bless thee, and keep thee.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r004",
@@ -64,7 +64,7 @@
           "theme": "Love God",
           "verseText": "And thou shalt love the LORD thy God with all thine heart, and with all thy soul, and with all thy might.",
           "difficulty": "easy",
-          "teachingNote": "Review Deuteronomy 6:5 and the full verse before continuing."
+          "teachingNote": "Deuteronomy 6:5 grounds love god in the words \"Thou shalt love the LORD thy God with all thine heart, and with all thy soul.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r005",
@@ -78,7 +78,7 @@
           "theme": "Provision",
           "verseText": "The LORD is my shepherd; I shall not want.",
           "difficulty": "medium",
-          "teachingNote": "Review Psalm 23:1 and the full verse before continuing."
+          "teachingNote": "Psalm 23:1 grounds God's provision in the words \"The LORD is my shepherd.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r006",
@@ -92,7 +92,7 @@
           "theme": "Guidance",
           "verseText": "Thy word is a lamp unto my feet, and a light unto my path.",
           "difficulty": "hard",
-          "teachingNote": "Review Psalm 119:105 and the full verse before continuing."
+          "teachingNote": "Psalm 119:105 grounds guidance in the words \"Thy word is a lamp unto my feet, and a light unto my path.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r007",
@@ -106,7 +106,7 @@
           "theme": "Trust",
           "verseText": "Trust in the LORD with all thine heart; and lean not unto thine own understanding.",
           "difficulty": "easy",
-          "teachingNote": "Review Proverbs 3:5 and the full verse before continuing."
+          "teachingNote": "Proverbs 3:5 grounds trust in the Lord in the words \"Trust in the LORD with all thine heart.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r008",
@@ -120,7 +120,7 @@
           "theme": "Faithfulness",
           "verseText": "He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?",
           "difficulty": "medium",
-          "teachingNote": "Review Micah 6:8 and the full verse before continuing."
+          "teachingNote": "Micah 6:8 grounds faithfulness in the words \"He hath shewed thee, O man, what is good.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r009",
@@ -134,7 +134,7 @@
           "theme": "Beatitudes",
           "verseText": "Blessed are the peacemakers: for they shall be called the children of God.",
           "difficulty": "hard",
-          "teachingNote": "Review Matthew 5:9 and the full verse before continuing."
+          "teachingNote": "Matthew 5:9 grounds beatitudes in the words \"For they shall be called the children of God.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r010",
@@ -148,7 +148,7 @@
           "theme": "Treasure",
           "verseText": "For where your treasure is, there will your heart be also.",
           "difficulty": "easy",
-          "teachingNote": "Review Matthew 6:21 and the full verse before continuing."
+          "teachingNote": "Matthew 6:21 grounds treasure in the words \"For where your treasure is, there will your heart be also.\" That phrase is the textual detail to connect back to the answer."
         }
       ]
     },
@@ -169,7 +169,7 @@
           "theme": "Rest",
           "verseText": "Come unto me, all ye that labour and are heavy laden, and I will give you rest.",
           "difficulty": "medium",
-          "teachingNote": "Review Matthew 11:28 and the full verse before continuing."
+          "teachingNote": "Matthew 11:28 grounds rest offered by Christ in the words \"Come unto me, all ye that labour and are heavy laden, and I will give you.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r012",
@@ -183,7 +183,7 @@
           "theme": "Birth of Jesus",
           "verseText": "For unto you is born this day in the city of David a Saviour, which is Christ the Lord.",
           "difficulty": "hard",
-          "teachingNote": "Review Luke 2:11 and the full verse before continuing."
+          "teachingNote": "Luke 2:11 grounds birth of jesus in the words \"For unto you is born this day in the city of David a Saviour, which is.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r013",
@@ -197,7 +197,7 @@
           "theme": "The Word",
           "verseText": "In the beginning was the Word, and the Word was with God, and the Word was God.",
           "difficulty": "easy",
-          "teachingNote": "Review John 1:1 and the full verse before continuing."
+          "teachingNote": "John 1:1 grounds the word in the words \"In the beginning was the Word, and the Word was with God, and the Word was.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r014",
@@ -211,7 +211,7 @@
           "theme": "Salvation",
           "verseText": "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.",
           "difficulty": "medium",
-          "teachingNote": "Review John 3:16 and the full verse before continuing."
+          "teachingNote": "John 3:16 grounds salvation through Christ in the words \"For God so loved the world, that he gave his only begotten Son, that whosoever believeth.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r015",
@@ -225,7 +225,7 @@
           "theme": "Compassion",
           "verseText": "Jesus wept.",
           "difficulty": "hard",
-          "teachingNote": "Review John 11:35 and the full verse before continuing."
+          "teachingNote": "John 11:35 grounds compassion in the words \"Jesus wept.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r016",
@@ -239,7 +239,7 @@
           "theme": "Sin",
           "verseText": "For all have sinned, and come short of the glory of God;",
           "difficulty": "easy",
-          "teachingNote": "Review Romans 3:23 and the full verse before continuing."
+          "teachingNote": "Romans 3:23 grounds sin in the words \"For all have sinned, and come short of the glory of God.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r017",
@@ -253,7 +253,7 @@
           "theme": "Gift of God",
           "verseText": "For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord.",
           "difficulty": "medium",
-          "teachingNote": "Review Romans 6:23 and the full verse before continuing."
+          "teachingNote": "Romans 6:23 grounds gift of god in the words \"For the wages of sin is death.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r018",
@@ -267,7 +267,7 @@
           "theme": "Grace",
           "verseText": "For by grace are ye saved through faith; and that not of yourselves: it is the gift of God:",
           "difficulty": "hard",
-          "teachingNote": "Review Ephesians 2:8 and the full verse before continuing."
+          "teachingNote": "Ephesians 2:8 grounds salvation by grace in the words \"For by grace are ye saved through faith.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r019",
@@ -281,7 +281,7 @@
           "theme": "Strength",
           "verseText": "I can do all things through Christ which strengtheneth me.",
           "difficulty": "easy",
-          "teachingNote": "Review Philippians 4:13 and the full verse before continuing."
+          "teachingNote": "Philippians 4:13 grounds strength that comes from the Lord in the words \"I can do all things through Christ which strengtheneth me.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r020",
@@ -295,7 +295,7 @@
           "theme": "Faith",
           "verseText": "Now faith is the substance of things hoped for, the evidence of things not seen.",
           "difficulty": "medium",
-          "teachingNote": "Review Hebrews 11:1 and the full verse before continuing."
+          "teachingNote": "Hebrews 11:1 grounds faith that trusts God's word in the words \"Now faith is the substance of things hoped for, the evidence of things not seen.\" That phrase is the textual detail to connect back to the answer."
         }
       ]
     },
@@ -319,7 +319,7 @@
           "theme": "God's Character",
           "verseText": "And the Lord God planted a garden eastward in Eden; and there he put the man whom he had formed.",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 2:8 and the full verse before continuing."
+          "teachingNote": "Genesis 2:8 grounds god's character in the words \"The Lord God planted a garden eastward in Eden.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r022",
@@ -336,7 +336,7 @@
           "theme": "God's Character",
           "verseText": "And Adam knew Eve his wife; and she conceived, and bare Cain, and said, I have gotten a man from the Lord.",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 4:1 and the full verse before continuing."
+          "teachingNote": "Genesis 4:1 grounds god's character in the words \"Adam knew Eve his wife.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r023",
@@ -353,7 +353,7 @@
           "theme": "Scripture",
           "verseText": "And Enos lived ninety years, and begat Cainan:",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 5:9 and the full verse before continuing."
+          "teachingNote": "Genesis 5:9 grounds the verse's own wording in the words \"Enos lived ninety years, and begat Cainan.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r024",
@@ -370,7 +370,7 @@
           "theme": "God's Character",
           "verseText": "The earth also was corrupt before God, and the earth was filled with violence.",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 6:11 and the full verse before continuing."
+          "teachingNote": "Genesis 6:11 grounds god's character in the words \"The earth also was corrupt before God, and the earth was filled with violence.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r025",
@@ -387,7 +387,7 @@
           "theme": "Scripture",
           "verseText": "And the waters returned from off the earth continually: and after the end of the hundred and fifty days the waters were abated.",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 8:3 and the full verse before continuing."
+          "teachingNote": "Genesis 8:3 grounds the verse's own wording in the words \"The waters returned from off the earth continually.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r026",
@@ -404,7 +404,7 @@
           "theme": "Scripture",
           "verseText": "And Noah awoke from his wine, and knew what his younger son had done unto him.",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 9:24 and the full verse before continuing."
+          "teachingNote": "Genesis 9:24 grounds the verse's own wording in the words \"Noah awoke from his wine, and knew what his younger son had done unto him.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r027",
@@ -421,7 +421,7 @@
           "theme": "Scripture",
           "verseText": "And Ophir, and Havilah, and Jobab: all these were the sons of Joktan.",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 10:29 and the full verse before continuing."
+          "teachingNote": "Genesis 10:29 grounds the verse's own wording in the words \"Ophir, and Havilah, and Jobab.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r028",
@@ -438,7 +438,7 @@
           "theme": "God's Character",
           "verseText": "Now the Lord had said unto Abram, Get thee out of thy country, and from thy kindred, and from thy father's house, unto a land that I will shew thee:",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 12:1 and the full verse before continuing."
+          "teachingNote": "Genesis 12:1 grounds god's character in the words \"Now the Lord had said unto Abram, Get thee out of thy country, and from thy.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r029",
@@ -455,7 +455,7 @@
           "theme": "Scripture",
           "verseText": "Arise, walk through the land in the length of it and in the breadth of it; for I will give it unto thee.",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 13:17 and the full verse before continuing."
+          "teachingNote": "Genesis 13:17 grounds the verse's own wording in the words \"Arise, walk through the land in the length of it and in the breadth of it.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r030",
@@ -472,7 +472,7 @@
           "theme": "Scripture",
           "verseText": "And when the fowls came down upon the carcases, Abram drove them away.",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 15:11 and the full verse before continuing."
+          "teachingNote": "Genesis 15:11 grounds the verse's own wording in the words \"When the fowls came down upon the carcases, Abram drove them away.\" That phrase is the textual detail to connect back to the answer."
         }
       ]
     },
@@ -496,7 +496,7 @@
           "theme": "God's Character",
           "verseText": "And God said unto Abraham, Thou shalt keep my covenant therefore, thou, and thy seed after thee in their generations.",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 17:9 and the full verse before continuing."
+          "teachingNote": "Genesis 17:9 grounds god's character in the words \"God said unto Abraham, Thou shalt keep my covenant therefore, thou, and thy seed after thee.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r032",
@@ -513,7 +513,7 @@
           "theme": "Scripture",
           "verseText": "And Abraham drew near, and said, Wilt thou also destroy the righteous with the wicked?",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 18:23 and the full verse before continuing."
+          "teachingNote": "Genesis 18:23 grounds the verse's own wording in the words \"Abraham drew near, and said, Wilt thou also destroy the righteous with the wicked.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r033",
@@ -530,7 +530,7 @@
           "theme": "Scripture",
           "verseText": "Thus were both the daughters of Lot with child by their father.",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 19:36 and the full verse before continuing."
+          "teachingNote": "Genesis 19:36 grounds the verse's own wording in the words \"Thus were both the daughters of Lot with child by their father.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r034",
@@ -547,7 +547,7 @@
           "theme": "Scripture",
           "verseText": "And he dwelt in the wilderness of Paran: and his mother took him a wife out of the land of Egypt.",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 21:21 and the full verse before continuing."
+          "teachingNote": "Genesis 21:21 grounds the verse's own wording in the words \"He dwelt in the wilderness of Paran.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r035",
@@ -564,7 +564,7 @@
           "theme": "Scripture",
           "verseText": "I am a stranger and a sojourner with you: give me a possession of a buryingplace with you, that I may bury my dead out of my sight.",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 23:4 and the full verse before continuing."
+          "teachingNote": "Genesis 23:4 grounds the verse's own wording in the words \"I am a stranger and a sojourner with you.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r036",
@@ -581,7 +581,7 @@
           "theme": "Scripture",
           "verseText": "And the man came into the house: and he ungirded his camels, and gave straw and provender for the camels, and water to wash his feet, and the men's feet that were with him.",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 24:32 and the full verse before continuing."
+          "teachingNote": "Genesis 24:32 grounds the verse's own wording in the words \"The man came into the house.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r037",
@@ -598,7 +598,7 @@
           "theme": "Scripture",
           "verseText": "And the sons of Midian; Ephah, and Epher, and Hanoch, and Abidah, and Eldaah. All these were the children of Keturah.",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 25:4 and the full verse before continuing."
+          "teachingNote": "Genesis 25:4 grounds the verse's own wording in the words \"Ephah, and Epher, and Hanoch, and Abidah, and Eldaah.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r038",
@@ -615,7 +615,7 @@
           "theme": "Scripture",
           "verseText": "And Abimelech charged all his people, saying, He that toucheth this man or his wife shall surely be put to death.",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 26:11 and the full verse before continuing."
+          "teachingNote": "Genesis 26:11 grounds the verse's own wording in the words \"Abimelech charged all his people, saying, He that toucheth this man or his wife shall surely.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r039",
@@ -632,7 +632,7 @@
           "theme": "Scripture",
           "verseText": "And he went, and fetched, and brought them to his mother: and his mother made savoury meat, such as his father loved.",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 27:14 and the full verse before continuing."
+          "teachingNote": "Genesis 27:14 grounds the verse's own wording in the words \"He went, and fetched, and brought them to his mother.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r040",
@@ -649,7 +649,7 @@
           "theme": "God's Character",
           "verseText": "And he was afraid, and said, How dreadful is this place! this is none other but the house of God, and this is the gate of heaven.",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 28:17 and the full verse before continuing."
+          "teachingNote": "Genesis 28:17 grounds god's character in the words \"He was afraid, and said, How dreadful is this place.\" That phrase is the textual detail to connect back to the answer."
         }
       ]
     },
@@ -673,7 +673,7 @@
           "theme": "God's Character",
           "verseText": "And when the Lord saw that Leah was hated, he opened her womb: but Rachel was barren.",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 29:31 and the full verse before continuing."
+          "teachingNote": "Genesis 29:31 grounds god's character in the words \"When the Lord saw that Leah was hated, he opened her womb.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r042",
@@ -690,7 +690,7 @@
           "theme": "God's Word",
           "verseText": "And Laban said, Behold, I would it might be according to thy word.",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 30:34 and the full verse before continuing."
+          "teachingNote": "Genesis 30:34 grounds god's word in the words \"Laban said, Behold, I would it might be according to thy word.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r043",
@@ -707,7 +707,7 @@
           "theme": "Scripture",
           "verseText": "And hast not suffered me to kiss my sons and my daughters? thou hast now done foolishly in so doing.",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 31:28 and the full verse before continuing."
+          "teachingNote": "Genesis 31:28 grounds the verse's own wording in the words \"Hast not suffered me to kiss my sons and my daughters.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r044",
@@ -724,7 +724,7 @@
           "theme": "Scripture",
           "verseText": "And thou saidst, I will surely do thee good, and make thy seed as the sand of the sea, which cannot be numbered for multitude.",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 32:12 and the full verse before continuing."
+          "teachingNote": "Genesis 32:12 grounds the verse's own wording in the words \"Thou saidst, I will surely do thee good, and make thy seed as the sand of.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r045",
@@ -741,7 +741,7 @@
           "theme": "Scripture",
           "verseText": "And Jacob journeyed to Succoth, and built him an house, and made booths for his cattle: therefore the name of the place is called Succoth.",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 33:17 and the full verse before continuing."
+          "teachingNote": "Genesis 33:17 grounds the verse's own wording in the words \"Jacob journeyed to Succoth, and built him an house, and made booths for his cattle.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r046",
@@ -758,7 +758,7 @@
           "theme": "Scripture",
           "verseText": "Then Jacob said unto his household, and to all that were with him, Put away the strange gods that are among you, and be clean, and change your garments:",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 35:2 and the full verse before continuing."
+          "teachingNote": "Genesis 35:2 grounds the verse's own wording in the words \"Then Jacob said unto his household, and to all that were with him, Put away the.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r047",
@@ -775,7 +775,7 @@
           "theme": "Scripture",
           "verseText": "And these are the generations of Esau the father of the Edomites in mount Seir:",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 36:9 and the full verse before continuing."
+          "teachingNote": "Genesis 36:9 grounds the verse's own wording in the words \"These are the generations of Esau the father of the Edomites in mount Seir.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r048",
@@ -792,7 +792,7 @@
           "theme": "Scripture",
           "verseText": "Now Israel loved Joseph more than all his children, because he was the son of his old age: and he made him a coat of many colours.",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 37:3 and the full verse before continuing."
+          "teachingNote": "Genesis 37:3 grounds the verse's own wording in the words \"Now Israel loved Joseph more than all his children, because he was the son of his.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r049",
@@ -809,7 +809,7 @@
           "theme": "Scripture",
           "verseText": "And Judah took a wife for Er his firstborn, whose name was Tamar.",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 38:6 and the full verse before continuing."
+          "teachingNote": "Genesis 38:6 grounds the verse's own wording in the words \"Judah took a wife for Er his firstborn, whose name was Tamar.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r050",
@@ -826,7 +826,7 @@
           "theme": "Scripture",
           "verseText": "And it came to pass, when his master heard the words of his wife, which she spake unto him, saying, After this manner did thy servant to me; that his wrath was kindled.",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 39:19 and the full verse before continuing."
+          "teachingNote": "Genesis 39:19 grounds the verse's own wording in the words \"It came to pass, when his master heard the words of his wife, which she spake.\" That phrase is the textual detail to connect back to the answer."
         }
       ]
     },
@@ -850,7 +850,7 @@
           "theme": "Scripture",
           "verseText": "Then spake the chief butler unto Pharaoh, saying, I do remember my faults this day:",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 41:9 and the full verse before continuing."
+          "teachingNote": "Genesis 41:9 grounds the verse's own wording in the words \"Then spake the chief butler unto Pharaoh, saying, I do remember my faults this day.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r052",
@@ -867,7 +867,7 @@
           "theme": "Scripture",
           "verseText": "And Pharaoh took off his ring from his hand, and put it upon Joseph's hand, and arrayed him in vestures of fine linen, and put a gold chain about his neck;",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 41:42 and the full verse before continuing."
+          "teachingNote": "Genesis 41:42 grounds the verse's own wording in the words \"Pharaoh took off his ring from his hand, and put it upon Joseph's hand, and arrayed.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r053",
@@ -884,7 +884,7 @@
           "theme": "Mercy",
           "verseText": "And Reuben answered them, saying, Spake I not unto you, saying, Do not sin against the child; and ye would not hear? therefore, behold, also his blood is required.",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 42:22 and the full verse before continuing."
+          "teachingNote": "Genesis 42:22 grounds mercy in the words \"Reuben answered them, saying, Spake I not unto you, saying, Do not sin against the child.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r054",
@@ -901,7 +901,7 @@
           "theme": "Scripture",
           "verseText": "And when Joseph came home, they brought him the present which was in their hand into the house, and bowed themselves to him to the earth.",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 43:26 and the full verse before continuing."
+          "teachingNote": "Genesis 43:26 grounds the verse's own wording in the words \"When Joseph came home, they brought him the present which was in their hand into the.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r055",
@@ -918,7 +918,7 @@
           "theme": "Scripture",
           "verseText": "For thy servant became surety for the lad unto my father, saying, If I bring him not unto thee, then I shall bear the blame to my father for ever.",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 44:32 and the full verse before continuing."
+          "teachingNote": "Genesis 44:32 grounds the verse's own wording in the words \"For thy servant became surety for the lad unto my father, saying, If I bring him.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r056",
@@ -935,7 +935,7 @@
           "theme": "Scripture",
           "verseText": "His sons, and his sons' sons with him, his daughters, and his sons' daughters, and all his seed brought he with him into Egypt.",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 46:7 and the full verse before continuing."
+          "teachingNote": "Genesis 46:7 grounds the verse's own wording in the words \"His sons, and his sons' sons with him, his daughters, and his sons' daughters, and all.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r057",
@@ -952,7 +952,7 @@
           "theme": "Scripture",
           "verseText": "And there was no bread in all the land; for the famine was very sore, so that the land of Egypt and all the land of Canaan fainted by reason of the famine.",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 47:13 and the full verse before continuing."
+          "teachingNote": "Genesis 47:13 grounds the verse's own wording in the words \"There was no bread in all the land.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r058",
@@ -969,7 +969,7 @@
           "theme": "Scripture",
           "verseText": "Cursed be their anger, for it was fierce; and their wrath, for it was cruel: I will divide them in Jacob, and scatter them in Israel.",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 49:7 and the full verse before continuing."
+          "teachingNote": "Genesis 49:7 grounds the verse's own wording in the words \"Cursed be their anger, for it was fierce.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r059",
@@ -986,7 +986,7 @@
           "theme": "Scripture",
           "verseText": "And his sons did unto him according as he commanded them:",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 50:12 and the full verse before continuing."
+          "teachingNote": "Genesis 50:12 grounds the verse's own wording in the words \"His sons did unto him according as he commanded them.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r060",
@@ -1003,7 +1003,7 @@
           "theme": "Scripture",
           "verseText": "And his sister stood afar off, to wit what would be done to him.",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 2:4 and the full verse before continuing."
+          "teachingNote": "Exodus 2:4 grounds the verse's own wording in the words \"His sister stood afar off, to wit what would be done to him.\" That phrase is the textual detail to connect back to the answer."
         }
       ]
     },
@@ -1027,7 +1027,7 @@
           "theme": "Scripture",
           "verseText": "And he said, Cast it on the ground. And he cast it on the ground, and it became a serpent; and Moses fled from before it.",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 4:3 and the full verse before continuing."
+          "teachingNote": "Exodus 4:3 grounds the verse's own wording in the words \"He said, Cast it on the ground.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r062",
@@ -1044,7 +1044,7 @@
           "theme": "Scripture",
           "verseText": "So the people were scattered abroad throughout all the land of Egypt to gather stubble instead of straw.",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 5:12 and the full verse before continuing."
+          "teachingNote": "Exodus 5:12 grounds the verse's own wording in the words \"So the people were scattered abroad throughout all the land of Egypt to gather stubble instead.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r063",
@@ -1061,7 +1061,7 @@
           "theme": "Kingdom",
           "verseText": "That the Lord spake unto Moses, saying, I am the Lord: speak thou unto Pharaoh king of Egypt all that I say unto thee.",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 6:29 and the full verse before continuing."
+          "teachingNote": "Exodus 6:29 grounds God's kingdom purposes in the words \"That the Lord spake unto Moses, saying, I am the Lord.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r064",
@@ -1078,7 +1078,7 @@
           "theme": "Scripture",
           "verseText": "And the magicians did so with their enchantments to bring forth lice, but they could not: so there were lice upon man, and upon beast.",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 8:18 and the full verse before continuing."
+          "teachingNote": "Exodus 8:18 grounds the verse's own wording in the words \"The magicians did so with their enchantments to bring forth lice, but they could not.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r065",
@@ -1095,7 +1095,7 @@
           "theme": "Scripture",
           "verseText": "And the flax and the barley was smitten: for the barley was in the ear, and the flax was bolled.",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 9:31 and the full verse before continuing."
+          "teachingNote": "Exodus 9:31 grounds the verse's own wording in the words \"The flax and the barley was smitten.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r066",
@@ -1112,7 +1112,7 @@
           "theme": "Scripture",
           "verseText": "And they shall take of the blood, and strike it on the two side posts and on the upper door post of the houses, wherein they shall eat it.",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 12:7 and the full verse before continuing."
+          "teachingNote": "Exodus 12:7 grounds the verse's own wording in the words \"They shall take of the blood, and strike it on the two side posts and on.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r067",
@@ -1129,7 +1129,7 @@
           "theme": "Scripture",
           "verseText": "Unleavened bread shall be eaten seven days; and there shall no leavened bread be seen with thee, neither shall there be leaven seen with thee in all thy quarters.",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 13:7 and the full verse before continuing."
+          "teachingNote": "Exodus 13:7 grounds the verse's own wording in the words \"Unleavened bread shall be eaten seven days.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r068",
@@ -1146,7 +1146,7 @@
           "theme": "God's Character",
           "verseText": "Thy right hand, O Lord, is become glorious in power: thy right hand, O Lord, hath dashed in pieces the enemy.",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 15:6 and the full verse before continuing."
+          "teachingNote": "Exodus 15:6 grounds god's character in the words \"Thy right hand, O Lord, is become glorious in power.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r069",
@@ -1163,7 +1163,7 @@
           "theme": "God's Character",
           "verseText": "And Moses said, Eat that to day; for to day is a sabbath unto the Lord: to day ye shall not find it in the field.",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 16:25 and the full verse before continuing."
+          "teachingNote": "Exodus 16:25 grounds god's character in the words \"Moses said, Eat that to day.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r070",
@@ -1180,7 +1180,7 @@
           "theme": "God's Word",
           "verseText": "And Moses said unto his father in law, Because the people come unto me to enquire of God:",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 18:15 and the full verse before continuing."
+          "teachingNote": "Exodus 18:15 grounds god's word in the words \"Moses said unto his father in law, Because the people come unto me to enquire of.\" That phrase is the textual detail to connect back to the answer."
         }
       ]
     },
@@ -1204,7 +1204,7 @@
           "theme": "Scripture",
           "verseText": "And if a man smite his servant, or his maid, with a rod, and he die under his hand; he shall be surely punished.",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 21:20 and the full verse before continuing."
+          "teachingNote": "Exodus 21:20 grounds the verse's own wording in the words \"If a man smite his servant, or his maid, with a rod, and he die under.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r072",
@@ -1221,7 +1221,7 @@
           "theme": "Wisdom",
           "verseText": "If thou afflict them in any wise, and they cry at all unto me, I will surely hear their cry;",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 22:23 and the full verse before continuing."
+          "teachingNote": "Exodus 22:23 grounds wisdom asked from God in the words \"If thou afflict them in any wise, and they cry at all unto me, I will.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r073",
@@ -1238,7 +1238,7 @@
           "theme": "Scripture",
           "verseText": "I will not drive them out from before thee in one year; lest the land become desolate, and the beast of the field multiply against thee.",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 23:29 and the full verse before continuing."
+          "teachingNote": "Exodus 23:29 grounds the verse's own wording in the words \"I will not drive them out from before thee in one year.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r074",
@@ -1255,7 +1255,7 @@
           "theme": "Mercy",
           "verseText": "And thou shalt make a mercy seat of pure gold: two cubits and a half shall be the length thereof, and a cubit and a half the breadth thereof.",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 25:17 and the full verse before continuing."
+          "teachingNote": "Exodus 25:17 grounds mercy in the words \"Thou shalt make a mercy seat of pure gold.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r075",
@@ -1272,7 +1272,7 @@
           "theme": "Scripture",
           "verseText": "Ten cubits shall be the length of a board, and a cubit and a half shall be the breadth of one board.",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 26:16 and the full verse before continuing."
+          "teachingNote": "Exodus 26:16 grounds the verse's own wording in the words \"Ten cubits shall be the length of a board, and a cubit and a half shall.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r076",
@@ -1289,7 +1289,7 @@
           "theme": "Scripture",
           "verseText": "And on the other side shall be hangings fifteen cubits: their pillars three, and their sockets three.",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 27:15 and the full verse before continuing."
+          "teachingNote": "Exodus 27:15 grounds the verse's own wording in the words \"On the other side shall be hangings fifteen cubits.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r077",
@@ -1306,7 +1306,7 @@
           "theme": "Scripture",
           "verseText": "And thou shalt put them upon Aaron thy brother, and his sons with him; and shalt anoint them, and consecrate them, and sanctify them, that they may minister unto me in the priest's office.",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 28:41 and the full verse before continuing."
+          "teachingNote": "Exodus 28:41 grounds the verse's own wording in the words \"Thou shalt put them upon Aaron thy brother, and his sons with him.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r078",
@@ -1323,7 +1323,7 @@
           "theme": "Scripture",
           "verseText": "And with the one lamb a tenth deal of flour mingled with the fourth part of an hin of beaten oil; and the fourth part of an hin of wine for a drink offering.",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 29:40 and the full verse before continuing."
+          "teachingNote": "Exodus 29:40 grounds the verse's own wording in the words \"With the one lamb a tenth deal of flour mingled with the fourth part of an.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r079",
@@ -1340,7 +1340,7 @@
           "theme": "Scripture",
           "verseText": "See, I have called by name Bezaleel the son of Uri, the son of Hur, of the tribe of Judah:",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 31:2 and the full verse before continuing."
+          "teachingNote": "Exodus 31:2 grounds the verse's own wording in the words \"See, I have called by name Bezaleel the son of Uri, the son of Hur, of.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r080",
@@ -1357,7 +1357,7 @@
           "theme": "God's Character",
           "verseText": "And the Lord said unto Moses, Whosoever hath sinned against me, him will I blot out of my book.",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 32:33 and the full verse before continuing."
+          "teachingNote": "Exodus 32:33 grounds god's character in the words \"The Lord said unto Moses, Whosoever hath sinned against me, him will I blot out of.\" That phrase is the textual detail to connect back to the answer."
         }
       ]
     },
@@ -1381,7 +1381,7 @@
           "theme": "God's Character",
           "verseText": "The first of the firstfruits of thy land thou shalt bring unto the house of the Lord thy God. Thou shalt not seethe a kid in his mother's milk.",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 34:26 and the full verse before continuing."
+          "teachingNote": "Exodus 34:26 grounds god's character in the words \"The first of the firstfruits of thy land thou shalt bring unto the house of the.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r082",
@@ -1398,7 +1398,7 @@
           "theme": "Light",
           "verseText": "And spice, and oil for the light, and for the anointing oil, and for the sweet incense.",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 35:28 and the full verse before continuing."
+          "teachingNote": "Exodus 35:28 grounds Christ as light in the words \"Spice, and oil for the light, and for the anointing oil, and for the sweet incense.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r083",
@@ -1415,7 +1415,7 @@
           "theme": "Scripture",
           "verseText": "And five bars for the boards of the other side of the tabernacle, and five bars for the boards of the tabernacle for the sides westward.",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 36:32 and the full verse before continuing."
+          "teachingNote": "Exodus 36:32 grounds the verse's own wording in the words \"Five bars for the boards of the other side of the tabernacle, and five bars for.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r084",
@@ -1432,7 +1432,7 @@
           "theme": "Scripture",
           "verseText": "And he made all the vessels of the altar, the pots, and the shovels, and the basons, and the fleshhooks, and the firepans: all the vessels thereof made he of brass.",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 38:3 and the full verse before continuing."
+          "teachingNote": "Exodus 38:3 grounds the verse's own wording in the words \"He made all the vessels of the altar, the pots, and the shovels, and the basons.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r085",
@@ -1449,7 +1449,7 @@
           "theme": "Scripture",
           "verseText": "And the second row, an emerald, a sapphire, and a diamond.",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 39:11 and the full verse before continuing."
+          "teachingNote": "Exodus 39:11 grounds the verse's own wording in the words \"The second row, an emerald, a sapphire, and a diamond.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r086",
@@ -1466,7 +1466,7 @@
           "theme": "Scripture",
           "verseText": "And thou shalt set the altar of gold for the incense before the ark of the testimony, and put the hanging of the door to the tabernacle.",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 40:5 and the full verse before continuing."
+          "teachingNote": "Exodus 40:5 grounds the verse's own wording in the words \"Thou shalt set the altar of gold for the incense before the ark of the testimony.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r087",
@@ -1483,7 +1483,7 @@
           "theme": "God's Character",
           "verseText": "And the Lord called unto Moses, and spake unto him out of the tabernacle of the congregation, saying,",
           "difficulty": "hard",
-          "teachingNote": "Review Leviticus 1:1 and the full verse before continuing."
+          "teachingNote": "Leviticus 1:1 grounds god's character in the words \"The Lord called unto Moses, and spake unto him out of the tabernacle of the congregation.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r088",
@@ -1500,7 +1500,7 @@
           "theme": "Scripture",
           "verseText": "And the two kidneys, and the fat that is upon them, which is by the flanks, and the caul above the liver, with the kidneys, it shall he take away.",
           "difficulty": "easy",
-          "teachingNote": "Review Leviticus 3:15 and the full verse before continuing."
+          "teachingNote": "Leviticus 3:15 grounds the verse's own wording in the words \"The two kidneys, and the fat that is upon them, which is by the flanks, and.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r089",
@@ -1517,7 +1517,7 @@
           "theme": "God's Word",
           "verseText": "And this is the law of the meat offering: the sons of Aaron shall offer it before the Lord, before the altar.",
           "difficulty": "medium",
-          "teachingNote": "Review Leviticus 6:14 and the full verse before continuing."
+          "teachingNote": "Leviticus 6:14 grounds god's word in the words \"This is the law of the meat offering.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r090",
@@ -1534,7 +1534,7 @@
           "theme": "Peace",
           "verseText": "And the right shoulder shall ye give unto the priest for an heave offering of the sacrifices of your peace offerings.",
           "difficulty": "hard",
-          "teachingNote": "Review Leviticus 7:32 and the full verse before continuing."
+          "teachingNote": "Leviticus 7:32 grounds peace in the words \"The right shoulder shall ye give unto the priest for an heave offering of the sacrifices.\" That phrase is the textual detail to connect back to the answer."
         }
       ]
     },
@@ -1558,7 +1558,7 @@
           "theme": "Peace",
           "verseText": "Also a bullock and a ram for peace offerings, to sacrifice before the Lord; and a meat offering mingled with oil: for to day the Lord will appear unto you.",
           "difficulty": "easy",
-          "teachingNote": "Review Leviticus 9:4 and the full verse before continuing."
+          "teachingNote": "Leviticus 9:4 grounds peace in the words \"Also a bullock and a ram for peace offerings, to sacrifice before the Lord.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r092",
@@ -1575,7 +1575,7 @@
           "theme": "Scripture",
           "verseText": "And the hare, because he cheweth the cud, but divideth not the hoof; he is unclean unto you.",
           "difficulty": "medium",
-          "teachingNote": "Review Leviticus 11:6 and the full verse before continuing."
+          "teachingNote": "Leviticus 11:6 grounds the verse's own wording in the words \"The hare, because he cheweth the cud, but divideth not the hoof.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r093",
@@ -1592,7 +1592,7 @@
           "theme": "God's Character",
           "verseText": "For I am the Lord that bringeth you up out of the land of Egypt, to be your God: ye shall therefore be holy, for I am holy.",
           "difficulty": "hard",
-          "teachingNote": "Review Leviticus 11:45 and the full verse before continuing."
+          "teachingNote": "Leviticus 11:45 grounds god's character in the words \"For I am the Lord that bringeth you up out of the land of Egypt, to.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r094",
@@ -1609,7 +1609,7 @@
           "theme": "Scripture",
           "verseText": "And he that hath his hair fallen off from the part of his head toward his face, he is forehead bald: yet is he clean.",
           "difficulty": "easy",
-          "teachingNote": "Review Leviticus 13:41 and the full verse before continuing."
+          "teachingNote": "Leviticus 13:41 grounds the verse's own wording in the words \"He that hath his hair fallen off from the part of his head toward his face.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r095",
@@ -1626,7 +1626,7 @@
           "theme": "Scripture",
           "verseText": "And he shall look on the plague, and, behold, if the plague be in the walls of the house with hollow strakes, greenish or reddish, which in sight are lower than the wall;",
           "difficulty": "medium",
-          "teachingNote": "Review Leviticus 14:37 and the full verse before continuing."
+          "teachingNote": "Leviticus 14:37 grounds the verse's own wording in the words \"He shall look on the plague, and, behold, if the plague be in the walls of.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r096",
@@ -1643,7 +1643,7 @@
           "theme": "Scripture",
           "verseText": "And if a woman have an issue, and her issue in her flesh be blood, she shall be put apart seven days: and whosoever toucheth her shall be unclean until the even.",
           "difficulty": "hard",
-          "teachingNote": "Review Leviticus 15:19 and the full verse before continuing."
+          "teachingNote": "Leviticus 15:19 grounds the verse's own wording in the words \"If a woman have an issue, and her issue in her flesh be blood, she shall.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r097",
@@ -1660,7 +1660,7 @@
           "theme": "Scripture",
           "verseText": "What man soever there be of the house of Israel, that killeth an ox, or lamb, or goat, in the camp, or that killeth it out of the camp,",
           "difficulty": "easy",
-          "teachingNote": "Review Leviticus 17:3 and the full verse before continuing."
+          "teachingNote": "Leviticus 17:3 grounds the verse's own wording in the words \"What man soever there be of the house of Israel, that killeth an ox, or lamb.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r098",
@@ -1677,7 +1677,7 @@
           "theme": "Scripture",
           "verseText": "For whosoever shall commit any of these abominations, even the souls that commit them shall be cut off from among their people.",
           "difficulty": "medium",
-          "teachingNote": "Review Leviticus 18:29 and the full verse before continuing."
+          "teachingNote": "Leviticus 18:29 grounds the verse's own wording in the words \"For whosoever shall commit any of these abominations, even the souls that commit them shall be.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r099",
@@ -1694,7 +1694,7 @@
           "theme": "Scripture",
           "verseText": "And if the people of the land do any ways hide their eyes from the man, when he giveth of his seed unto Molech, and kill him not:",
           "difficulty": "hard",
-          "teachingNote": "Review Leviticus 20:4 and the full verse before continuing."
+          "teachingNote": "Leviticus 20:4 grounds the verse's own wording in the words \"If the people of the land do any ways hide their eyes from the man, when.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r100",
@@ -1711,7 +1711,7 @@
           "theme": "Scripture",
           "verseText": "For whatsoever man he be that hath a blemish, he shall not approach: a blind man, or a lame, or he that hath a flat nose, or any thing superfluous,",
           "difficulty": "easy",
-          "teachingNote": "Review Leviticus 21:18 and the full verse before continuing."
+          "teachingNote": "Leviticus 21:18 grounds the verse's own wording in the words \"For whatsoever man he be that hath a blemish, he shall not approach.\" That phrase is the textual detail to connect back to the answer."
         }
       ]
     },
@@ -1735,7 +1735,7 @@
           "theme": "God's Character",
           "verseText": "But ye shall offer an offering made by fire unto the Lord seven days: in the seventh day is an holy convocation: ye shall do no servile work therein.",
           "difficulty": "medium",
-          "teachingNote": "Review Leviticus 23:8 and the full verse before continuing."
+          "teachingNote": "Leviticus 23:8 grounds god's character in the words \"Ye shall offer an offering made by fire unto the Lord seven days.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r102",
@@ -1752,7 +1752,7 @@
           "theme": "Scripture",
           "verseText": "And he that killeth a beast shall make it good; beast for beast.",
           "difficulty": "hard",
-          "teachingNote": "Review Leviticus 24:18 and the full verse before continuing."
+          "teachingNote": "Leviticus 24:18 grounds the verse's own wording in the words \"He that killeth a beast shall make it good.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r103",
@@ -1769,7 +1769,7 @@
           "theme": "Scripture",
           "verseText": "Notwithstanding the cities of the Levites, and the houses of the cities of their possession, may the Levites redeem at any time.",
           "difficulty": "easy",
-          "teachingNote": "Review Leviticus 25:32 and the full verse before continuing."
+          "teachingNote": "Leviticus 25:32 grounds the verse's own wording in the words \"Notwithstanding the cities of the Levites, and the houses of the cities of their possession, may.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r104",
@@ -1786,7 +1786,7 @@
           "theme": "Scripture",
           "verseText": "And if ye will not yet for all this hearken unto me, then I will punish you seven times more for your sins.",
           "difficulty": "medium",
-          "teachingNote": "Review Leviticus 26:18 and the full verse before continuing."
+          "teachingNote": "Leviticus 26:18 grounds the verse's own wording in the words \"If ye will not yet for all this hearken unto me, then I will punish you.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r105",
@@ -1803,7 +1803,7 @@
           "theme": "Scripture",
           "verseText": "And if he that sanctified it will redeem his house, then he shall add the fifth part of the money of thy estimation unto it, and it shall be his.",
           "difficulty": "hard",
-          "teachingNote": "Review Leviticus 27:15 and the full verse before continuing."
+          "teachingNote": "Leviticus 27:15 grounds the verse's own wording in the words \"If he that sanctified it will redeem his house, then he shall add the fifth part.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r106",
@@ -1820,7 +1820,7 @@
           "theme": "Scripture",
           "verseText": "Those that were numbered of them, even of the tribe of Naphtali, were fifty and three thousand and four hundred.",
           "difficulty": "easy",
-          "teachingNote": "Review Numbers 1:43 and the full verse before continuing."
+          "teachingNote": "Numbers 1:43 grounds the verse's own wording in the words \"Those that were numbered of them, even of the tribe of Naphtali, were fifty and three.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r107",
@@ -1837,7 +1837,7 @@
           "theme": "Scripture",
           "verseText": "And his host, and those that were numbered of them, were forty and one thousand and five hundred.",
           "difficulty": "medium",
-          "teachingNote": "Review Numbers 2:28 and the full verse before continuing."
+          "teachingNote": "Numbers 2:28 grounds the verse's own wording in the words \"His host, and those that were numbered of them, were forty and one thousand and five.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r108",
@@ -1854,7 +1854,7 @@
           "theme": "Scripture",
           "verseText": "And the chief of the house of the father of the families of Merari was Zuriel the son of Abihail: these shall pitch on the side of the tabernacle northward.",
           "difficulty": "hard",
-          "teachingNote": "Review Numbers 3:35 and the full verse before continuing."
+          "teachingNote": "Numbers 3:35 grounds the verse's own wording in the words \"The chief of the house of the father of the families of Merari was Zuriel the.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r109",
@@ -1871,7 +1871,7 @@
           "theme": "Scripture",
           "verseText": "And Moses and Aaron and the chief of the congregation numbered the sons of the Kohathites after their families, and after the house of their fathers,",
           "difficulty": "easy",
-          "teachingNote": "Review Numbers 4:34 and the full verse before continuing."
+          "teachingNote": "Numbers 4:34 grounds the verse's own wording in the words \"Moses and Aaron and the chief of the congregation numbered the sons of the Kohathites after.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r110",
@@ -1888,7 +1888,7 @@
           "theme": "God's Character",
           "verseText": "Speak unto the children of Israel, and say unto them, When either man or woman shall separate themselves to vow a vow of a Nazarite, to separate themselves unto the Lord:",
           "difficulty": "medium",
-          "teachingNote": "Review Numbers 6:2 and the full verse before continuing."
+          "teachingNote": "Numbers 6:2 grounds god's character in the words \"Speak unto the children of Israel, and say unto them, When either man or woman shall.\" That phrase is the textual detail to connect back to the answer."
         }
       ]
     },
@@ -1912,7 +1912,7 @@
           "theme": "Mercy",
           "verseText": "One kid of the goats for a sin offering:",
           "difficulty": "hard",
-          "teachingNote": "Review Numbers 7:22 and the full verse before continuing."
+          "teachingNote": "Numbers 7:22 grounds mercy in the words \"One kid of the goats for a sin offering.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r112",
@@ -1929,7 +1929,7 @@
           "theme": "Scripture",
           "verseText": "On the ninth day Abidan the son of Gideoni, prince of the children of Benjamin, offered:",
           "difficulty": "easy",
-          "teachingNote": "Review Numbers 7:60 and the full verse before continuing."
+          "teachingNote": "Numbers 7:60 grounds the verse's own wording in the words \"On the ninth day Abidan the son of Gideoni, prince of the children of Benjamin, offered.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r113",
@@ -1946,7 +1946,7 @@
           "theme": "God's Character",
           "verseText": "And thou shalt set the Levites before Aaron, and before his sons, and offer them for an offering unto the Lord.",
           "difficulty": "medium",
-          "teachingNote": "Review Numbers 8:13 and the full verse before continuing."
+          "teachingNote": "Numbers 8:13 grounds god's character in the words \"Thou shalt set the Levites before Aaron, and before his sons, and offer them for an.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r114",
@@ -1963,7 +1963,7 @@
           "theme": "Scripture",
           "verseText": "And the tabernacle was taken down; and the sons of Gershon and the sons of Merari set forward, bearing the tabernacle.",
           "difficulty": "hard",
-          "teachingNote": "Review Numbers 10:17 and the full verse before continuing."
+          "teachingNote": "Numbers 10:17 grounds the verse's own wording in the words \"The tabernacle was taken down.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r115",
@@ -1980,7 +1980,7 @@
           "theme": "Scripture",
           "verseText": "Shall the flocks and the herds be slain for them, to suffice them? or shall all the fish of the sea be gathered together for them, to suffice them?",
           "difficulty": "easy",
-          "teachingNote": "Review Numbers 11:22 and the full verse before continuing."
+          "teachingNote": "Numbers 11:22 grounds the verse's own wording in the words \"Shall the flocks and the herds be slain for them, to suffice them.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r116",
@@ -1997,7 +1997,7 @@
           "theme": "Scripture",
           "verseText": "Of the tribe of Joseph, namely, of the tribe of Manasseh, Gaddi the son of Susi.",
           "difficulty": "medium",
-          "teachingNote": "Review Numbers 13:11 and the full verse before continuing."
+          "teachingNote": "Numbers 13:11 grounds the verse's own wording in the words \"Of the tribe of Joseph, namely, of the tribe of Manasseh, Gaddi the son of Susi.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r117",
@@ -2014,7 +2014,7 @@
           "theme": "God's Word",
           "verseText": "And the Lord said, I have pardoned according to thy word:",
           "difficulty": "hard",
-          "teachingNote": "Review Numbers 14:20 and the full verse before continuing."
+          "teachingNote": "Numbers 14:20 grounds god's word in the words \"The Lord said, I have pardoned according to thy word.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r118",
@@ -2031,7 +2031,7 @@
           "theme": "Scripture",
           "verseText": "According to the number that ye shall prepare, so shall ye do to every one according to their number.",
           "difficulty": "easy",
-          "teachingNote": "Review Numbers 15:12 and the full verse before continuing."
+          "teachingNote": "Numbers 15:12 grounds the verse's own wording in the words \"According to the number that ye shall prepare, so shall ye do to every one according.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r119",
@@ -2048,7 +2048,7 @@
           "theme": "Scripture",
           "verseText": "And they took every man his censer, and put fire in them, and laid incense thereon, and stood in the door of the tabernacle of the congregation with Moses and Aaron.",
           "difficulty": "medium",
-          "teachingNote": "Review Numbers 16:18 and the full verse before continuing."
+          "teachingNote": "Numbers 16:18 grounds the verse's own wording in the words \"They took every man his censer, and put fire in them, and laid incense thereon, and.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r120",
@@ -2065,7 +2065,7 @@
           "theme": "Scripture",
           "verseText": "And ye shall keep the charge of the sanctuary, and the charge of the altar: that there be no wrath any more upon the children of Israel.",
           "difficulty": "hard",
-          "teachingNote": "Review Numbers 18:5 and the full verse before continuing."
+          "teachingNote": "Numbers 18:5 grounds the verse's own wording in the words \"Ye shall keep the charge of the sanctuary, and the charge of the altar.\" That phrase is the textual detail to connect back to the answer."
         }
       ]
     },
@@ -2089,7 +2089,7 @@
           "theme": "Scripture",
           "verseText": "And Moses lifted up his hand, and with his rod he smote the rock twice: and the water came out abundantly, and the congregation drank, and their beasts also.",
           "difficulty": "easy",
-          "teachingNote": "Review Numbers 20:11 and the full verse before continuing."
+          "teachingNote": "Numbers 20:11 grounds the verse's own wording in the words \"Moses lifted up his hand, and with his rod he smote the rock twice.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r122",
@@ -2106,7 +2106,7 @@
           "theme": "Kingdom",
           "verseText": "For Heshbon was the city of Sihon the king of the Amorites, who had fought against the former king of Moab, and taken all his land out of his hand, even unto Arnon.",
           "difficulty": "medium",
-          "teachingNote": "Review Numbers 21:26 and the full verse before continuing."
+          "teachingNote": "Numbers 21:26 grounds God's kingdom purposes in the words \"For Heshbon was the city of Sihon the king of the Amorites, who had fought against.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r123",
@@ -2123,7 +2123,7 @@
           "theme": "Scripture",
           "verseText": "And the ass saw me, and turned from me these three times: unless she had turned from me, surely now also I had slain thee, and saved her alive.",
           "difficulty": "hard",
-          "teachingNote": "Review Numbers 22:33 and the full verse before continuing."
+          "teachingNote": "Numbers 22:33 grounds the verse's own wording in the words \"The ass saw me, and turned from me these three times.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r124",
@@ -2140,7 +2140,7 @@
           "theme": "Scripture",
           "verseText": "And Balak did as Balaam had said, and offered a bullock and a ram on every altar.",
           "difficulty": "easy",
-          "teachingNote": "Review Numbers 23:30 and the full verse before continuing."
+          "teachingNote": "Numbers 23:30 grounds the verse's own wording in the words \"Balak did as Balaam had said, and offered a bullock and a ram on every altar.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r125",
@@ -2157,7 +2157,7 @@
           "theme": "God's Character",
           "verseText": "And it came to pass after the plague, that the Lord spake unto Moses and unto Eleazar the son of Aaron the priest, saying,",
           "difficulty": "medium",
-          "teachingNote": "Review Numbers 26:1 and the full verse before continuing."
+          "teachingNote": "Numbers 26:1 grounds god's character in the words \"It came to pass after the plague, that the Lord spake unto Moses and unto Eleazar.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r126",
@@ -2174,7 +2174,7 @@
           "theme": "Scripture",
           "verseText": "And these are the sons of Shuthelah: of Eran, the family of the Eranites.",
           "difficulty": "hard",
-          "teachingNote": "Review Numbers 26:36 and the full verse before continuing."
+          "teachingNote": "Numbers 26:36 grounds the verse's own wording in the words \"These are the sons of Shuthelah.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r127",
@@ -2191,7 +2191,7 @@
           "theme": "Scripture",
           "verseText": "And when thou hast seen it, thou also shalt be gathered unto thy people, as Aaron thy brother was gathered.",
           "difficulty": "easy",
-          "teachingNote": "Review Numbers 27:13 and the full verse before continuing."
+          "teachingNote": "Numbers 27:13 grounds the verse's own wording in the words \"When thou hast seen it, thou also shalt be gathered unto thy people, as Aaron thy.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r128",
@@ -2208,7 +2208,7 @@
           "theme": "Scripture",
           "verseText": "And their meat offering shall be of flour mingled with oil, three tenth deals for a bullock, and two tenth deals for a ram,",
           "difficulty": "medium",
-          "teachingNote": "Review Numbers 29:3 and the full verse before continuing."
+          "teachingNote": "Numbers 29:3 grounds the verse's own wording in the words \"Their meat offering shall be of flour mingled with oil, three tenth deals for a bullock.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r129",
@@ -2225,7 +2225,7 @@
           "theme": "Scripture",
           "verseText": "Their meat offering and their drink offerings for the bullock, for the ram, and for the lambs, shall be according to their number, after the manner:",
           "difficulty": "hard",
-          "teachingNote": "Review Numbers 29:37 and the full verse before continuing."
+          "teachingNote": "Numbers 29:37 grounds the verse's own wording in the words \"Their meat offering and their drink offerings for the bullock, for the ram, and for the.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r130",
@@ -2242,7 +2242,7 @@
           "theme": "God's Character",
           "verseText": "Take it of their half, and give it unto Eleazar the priest, for an heave offering of the Lord.",
           "difficulty": "easy",
-          "teachingNote": "Review Numbers 31:29 and the full verse before continuing."
+          "teachingNote": "Numbers 31:29 grounds god's character in the words \"Take it of their half, and give it unto Eleazar the priest, for an heave offering.\" That phrase is the textual detail to connect back to the answer."
         }
       ]
     },
@@ -2266,7 +2266,7 @@
           "theme": "God's Character",
           "verseText": "And Moses said unto them, If ye will do this thing, if ye will go armed before the Lord to war,",
           "difficulty": "medium",
-          "teachingNote": "Review Numbers 32:20 and the full verse before continuing."
+          "teachingNote": "Numbers 32:20 grounds god's character in the words \"Moses said unto them, If ye will do this thing, if ye will go armed before.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r132",
@@ -2283,7 +2283,7 @@
           "theme": "Scripture",
           "verseText": "And they removed from Alush, and encamped at Rephidim, where was no water for the people to drink.",
           "difficulty": "hard",
-          "teachingNote": "Review Numbers 33:14 and the full verse before continuing."
+          "teachingNote": "Numbers 33:14 grounds the verse's own wording in the words \"They removed from Alush, and encamped at Rephidim, where was no water for the people to.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r133",
@@ -2300,7 +2300,7 @@
           "theme": "Scripture",
           "verseText": "And they removed from Almondiblathaim, and pitched in the mountains of Abarim, before Nebo.",
           "difficulty": "easy",
-          "teachingNote": "Review Numbers 33:47 and the full verse before continuing."
+          "teachingNote": "Numbers 33:47 grounds the verse's own wording in the words \"They removed from Almondiblathaim, and pitched in the mountains of Abarim, before Nebo.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r134",
@@ -2317,7 +2317,7 @@
           "theme": "God's Character",
           "verseText": "And the Lord spake unto Moses in the plains of Moab by Jordan near Jericho, saying,",
           "difficulty": "medium",
-          "teachingNote": "Review Numbers 35:1 and the full verse before continuing."
+          "teachingNote": "Numbers 35:1 grounds god's character in the words \"The Lord spake unto Moses in the plains of Moab by Jordan near Jericho, saying.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r135",
@@ -2334,7 +2334,7 @@
           "theme": "Kingdom",
           "verseText": "After he had slain Sihon the king of the Amorites, which dwelt in Heshbon, and Og the king of Bashan, which dwelt at Astaroth in Edrei:",
           "difficulty": "hard",
-          "teachingNote": "Review Deuteronomy 1:4 and the full verse before continuing."
+          "teachingNote": "Deuteronomy 1:4 grounds God's kingdom purposes in the words \"After he had slain Sihon the king of the Amorites, which dwelt in Heshbon, and Og.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r136",
@@ -2351,7 +2351,7 @@
           "theme": "Scripture",
           "verseText": "Meddle not with them; for I will not give you of their land, no, not so much as a foot breadth; because I have given mount Seir unto Esau for a possession.",
           "difficulty": "easy",
-          "teachingNote": "Review Deuteronomy 2:5 and the full verse before continuing."
+          "teachingNote": "Deuteronomy 2:5 grounds the verse's own wording in the words \"For I will not give you of their land, no, not so much as a foot.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r137",
@@ -2368,7 +2368,7 @@
           "theme": "Scripture",
           "verseText": "But your wives, and your little ones, and your cattle, (for I know that ye have much cattle,) shall abide in your cities which I have given you;",
           "difficulty": "medium",
-          "teachingNote": "Review Deuteronomy 3:19 and the full verse before continuing."
+          "teachingNote": "Deuteronomy 3:19 grounds the verse's own wording in the words \"Your wives, and your little ones, and your cattle, (for I know that ye have much.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r138",
@@ -2385,7 +2385,7 @@
           "theme": "Scripture",
           "verseText": "And because he loved thy fathers, therefore he chose their seed after them, and brought thee out in his sight with his mighty power out of Egypt;",
           "difficulty": "hard",
-          "teachingNote": "Review Deuteronomy 4:37 and the full verse before continuing."
+          "teachingNote": "Deuteronomy 4:37 grounds the verse's own wording in the words \"Because he loved thy fathers, therefore he chose their seed after them, and brought thee out.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r139",
@@ -2402,7 +2402,7 @@
           "theme": "Scripture",
           "verseText": "And thou shalt write them upon the posts of thy house, and on thy gates.",
           "difficulty": "easy",
-          "teachingNote": "Review Deuteronomy 6:9 and the full verse before continuing."
+          "teachingNote": "Deuteronomy 6:9 grounds the verse's own wording in the words \"Thou shalt write them upon the posts of thy house, and on thy gates.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r140",
@@ -2419,7 +2419,7 @@
           "theme": "God's Character",
           "verseText": "Thou shalt also consider in thine heart, that, as a man chasteneth his son, so the Lord thy God chasteneth thee.",
           "difficulty": "medium",
-          "teachingNote": "Review Deuteronomy 8:5 and the full verse before continuing."
+          "teachingNote": "Deuteronomy 8:5 grounds god's character in the words \"Thou shalt also consider in thine heart, that, as a man chasteneth his son, so the.\" That phrase is the textual detail to connect back to the answer."
         }
       ]
     },
@@ -2443,7 +2443,7 @@
           "theme": "God's Character",
           "verseText": "And I turned myself and came down from the mount, and put the tables in the ark which I had made; and there they be, as the Lord commanded me.",
           "difficulty": "hard",
-          "teachingNote": "Review Deuteronomy 10:5 and the full verse before continuing."
+          "teachingNote": "Deuteronomy 10:5 grounds god's character in the words \"I turned myself and came down from the mount, and put the tables in the ark.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r142",
@@ -2460,7 +2460,7 @@
           "theme": "Scripture",
           "verseText": "Every place whereon the soles of your feet shall tread shall be yours: from the wilderness and Lebanon, from the river, the river Euphrates, even unto the uttermost sea shall your coast be.",
           "difficulty": "easy",
-          "teachingNote": "Review Deuteronomy 11:24 and the full verse before continuing."
+          "teachingNote": "Deuteronomy 11:24 grounds the verse's own wording in the words \"Every place whereon the soles of your feet shall tread shall be yours.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r143",
@@ -2477,7 +2477,7 @@
           "theme": "God's Character",
           "verseText": "Ye are the children of the Lord your God: ye shall not cut yourselves, nor make any baldness between your eyes for the dead.",
           "difficulty": "medium",
-          "teachingNote": "Review Deuteronomy 14:1 and the full verse before continuing."
+          "teachingNote": "Deuteronomy 14:1 grounds god's character in the words \"Ye are the children of the Lord your God.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r144",
@@ -2494,7 +2494,7 @@
           "theme": "God's Character",
           "verseText": "Thou shalt eat it before the Lord thy God year by year in the place which the Lord shall choose, thou and thy household.",
           "difficulty": "hard",
-          "teachingNote": "Review Deuteronomy 15:20 and the full verse before continuing."
+          "teachingNote": "Deuteronomy 15:20 grounds god's character in the words \"Thou shalt eat it before the Lord thy God year by year in the place which.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r145",
@@ -2511,7 +2511,7 @@
           "theme": "God's Character",
           "verseText": "And if a Levite come from any of thy gates out of all Israel, where he sojourned, and come with all the desire of his mind unto the place which the Lord shall choose;",
           "difficulty": "easy",
-          "teachingNote": "Review Deuteronomy 18:6 and the full verse before continuing."
+          "teachingNote": "Deuteronomy 18:6 grounds god's character in the words \"If a Levite come from any of thy gates out of all Israel, where he sojourned.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r146",
@@ -2528,7 +2528,7 @@
           "theme": "Scripture",
           "verseText": "And what man is there that hath betrothed a wife, and hath not taken her? let him go and return unto his house, lest he die in the battle, and another man take her.",
           "difficulty": "medium",
-          "teachingNote": "Review Deuteronomy 20:7 and the full verse before continuing."
+          "teachingNote": "Deuteronomy 20:7 grounds the verse's own wording in the words \"What man is there that hath betrothed a wife, and hath not taken her.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r147",
@@ -2545,7 +2545,7 @@
           "theme": "Scripture",
           "verseText": "Thou shalt make thee fringes upon the four quarters of thy vesture, wherewith thou coverest thyself.",
           "difficulty": "hard",
-          "teachingNote": "Review Deuteronomy 22:12 and the full verse before continuing."
+          "teachingNote": "Deuteronomy 22:12 grounds the verse's own wording in the words \"Thou shalt make thee fringes upon the four quarters of thy vesture, wherewith thou coverest thyself.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r148",
@@ -2562,7 +2562,7 @@
           "theme": "Scripture",
           "verseText": "No man shall take the nether or the upper millstone to pledge: for he taketh a man's life to pledge.",
           "difficulty": "easy",
-          "teachingNote": "Review Deuteronomy 24:6 and the full verse before continuing."
+          "teachingNote": "Deuteronomy 24:6 grounds the verse's own wording in the words \"No man shall take the nether or the upper millstone to pledge.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r149",
@@ -2579,7 +2579,7 @@
           "theme": "Joy",
           "verseText": "And thou shalt rejoice in every good thing which the Lord thy God hath given unto thee, and unto thine house, thou, and the Levite, and the stranger that is among you.",
           "difficulty": "medium",
-          "teachingNote": "Review Deuteronomy 26:11 and the full verse before continuing."
+          "teachingNote": "Deuteronomy 26:11 grounds joy in the words \"Thou shalt rejoice in every good thing which the Lord thy God hath given unto thee.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r150",
@@ -2596,7 +2596,7 @@
           "theme": "God's Character",
           "verseText": "The Lord shall cause thine enemies that rise up against thee to be smitten before thy face: they shall come out against thee one way, and flee before thee seven ways.",
           "difficulty": "hard",
-          "teachingNote": "Review Deuteronomy 28:7 and the full verse before continuing."
+          "teachingNote": "Deuteronomy 28:7 grounds god's character in the words \"The Lord shall cause thine enemies that rise up against thee to be smitten before thy.\" That phrase is the textual detail to connect back to the answer."
         }
       ]
     },
@@ -2620,7 +2620,7 @@
           "theme": "God's Word",
           "verseText": "Also every sickness, and every plague, which is not written in the book of this law, them will the Lord bring upon thee, until thou be destroyed.",
           "difficulty": "easy",
-          "teachingNote": "Review Deuteronomy 28:61 and the full verse before continuing."
+          "teachingNote": "Deuteronomy 28:61 grounds god's word in the words \"Also every sickness, and every plague, which is not written in the book of this law.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r152",
@@ -2637,7 +2637,7 @@
           "theme": "Scripture",
           "verseText": "It is not in heaven, that thou shouldest say, Who shall go up for us to heaven, and bring it unto us, that we may hear it, and do it?",
           "difficulty": "medium",
-          "teachingNote": "Review Deuteronomy 30:12 and the full verse before continuing."
+          "teachingNote": "Deuteronomy 30:12 grounds the verse's own wording in the words \"It is not in heaven, that thou shouldest say, Who shall go up for us to.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r153",
@@ -2654,7 +2654,7 @@
           "theme": "God's Character",
           "verseText": "For the Lord's portion is his people; Jacob is the lot of his inheritance.",
           "difficulty": "hard",
-          "teachingNote": "Review Deuteronomy 32:9 and the full verse before continuing."
+          "teachingNote": "Deuteronomy 32:9 grounds god's character in the words \"For the Lord's portion is his people.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r154",
@@ -2671,7 +2671,7 @@
           "theme": "God's Character",
           "verseText": "And the Lord spake unto Moses that selfsame day, saying,",
           "difficulty": "easy",
-          "teachingNote": "Review Deuteronomy 32:48 and the full verse before continuing."
+          "teachingNote": "Deuteronomy 32:48 grounds god's character in the words \"The Lord spake unto Moses that selfsame day, saying.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r155",
@@ -2688,7 +2688,7 @@
           "theme": "God's Character",
           "verseText": "And there arose not a prophet since in Israel like unto Moses, whom the Lord knew face to face,",
           "difficulty": "medium",
-          "teachingNote": "Review Deuteronomy 34:10 and the full verse before continuing."
+          "teachingNote": "Deuteronomy 34:10 grounds god's character in the words \"There arose not a prophet since in Israel like unto Moses, whom the Lord knew face.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r156",
@@ -2705,7 +2705,7 @@
           "theme": "Scripture",
           "verseText": "And Joshua spake unto the priests, saying, Take up the ark of the covenant, and pass over before the people. And they took up the ark of the covenant, and went before the people.",
           "difficulty": "hard",
-          "teachingNote": "Review Joshua 3:6 and the full verse before continuing."
+          "teachingNote": "Joshua 3:6 grounds the verse's own wording in the words \"Joshua spake unto the priests, saying, Take up the ark of the covenant, and pass over.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r157",
@@ -2722,7 +2722,7 @@
           "theme": "Scripture",
           "verseText": "And ye shall compass the city, all ye men of war, and go round about the city once. Thus shalt thou do six days.",
           "difficulty": "easy",
-          "teachingNote": "Review Joshua 6:3 and the full verse before continuing."
+          "teachingNote": "Joshua 6:3 grounds the verse's own wording in the words \"Ye shall compass the city, all ye men of war, and go round about the city.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r158",
@@ -2739,7 +2739,7 @@
           "theme": "Scripture",
           "verseText": "And all the people that were in Ai were called together to pursue after them: and they pursued after Joshua, and were drawn away from the city.",
           "difficulty": "medium",
-          "teachingNote": "Review Joshua 8:16 and the full verse before continuing."
+          "teachingNote": "Joshua 8:16 grounds the verse's own wording in the words \"All the people that were in Ai were called together to pursue after them.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r159",
@@ -2756,7 +2756,7 @@
           "theme": "God's Character",
           "verseText": "And Joshua made them that day hewers of wood and drawers of water for the congregation, and for the altar of the Lord, even unto this day, in the place which he should choose.",
           "difficulty": "hard",
-          "teachingNote": "Review Joshua 9:27 and the full verse before continuing."
+          "teachingNote": "Joshua 9:27 grounds god's character in the words \"Joshua made them that day hewers of wood and drawers of water for the congregation, and.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r160",
@@ -2773,7 +2773,7 @@
           "theme": "Kingdom",
           "verseText": "And Joshua at that time turned back, and took Hazor, and smote the king thereof with the sword: for Hazor beforetime was the head of all those kingdoms.",
           "difficulty": "easy",
-          "teachingNote": "Review Joshua 11:10 and the full verse before continuing."
+          "teachingNote": "Joshua 11:10 grounds God's kingdom purposes in the words \"Joshua at that time turned back, and took Hazor, and smote the king thereof with the.\" That phrase is the textual detail to connect back to the answer."
         }
       ]
     },
@@ -2797,7 +2797,7 @@
           "theme": "Scripture",
           "verseText": "From Aroer, that is upon the bank of the river Arnon, and the city that is in the midst of the river, and all the plain of Medeba unto Dibon;",
           "difficulty": "medium",
-          "teachingNote": "Review Joshua 13:9 and the full verse before continuing."
+          "teachingNote": "Joshua 13:9 grounds the verse's own wording in the words \"From Aroer, that is upon the bank of the river Arnon, and the city that is.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r162",
@@ -2814,7 +2814,7 @@
           "theme": "Scripture",
           "verseText": "And the border went up to Bethhogla, and passed along by the north of Betharabah; and the border went up to the stone of Bohan the son of Reuben:",
           "difficulty": "hard",
-          "teachingNote": "Review Joshua 15:6 and the full verse before continuing."
+          "teachingNote": "Joshua 15:6 grounds the verse's own wording in the words \"The border went up to Bethhogla, and passed along by the north of Betharabah.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r163",
@@ -2831,7 +2831,7 @@
           "theme": "Scripture",
           "verseText": "And the separate cities for the children of Ephraim were among the inheritance of the children of Manasseh, all the cities with their villages.",
           "difficulty": "easy",
-          "teachingNote": "Review Joshua 16:9 and the full verse before continuing."
+          "teachingNote": "Joshua 16:9 grounds the verse's own wording in the words \"The separate cities for the children of Ephraim were among the inheritance of the children of.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r164",
@@ -2848,7 +2848,7 @@
           "theme": "Scripture",
           "verseText": "And the border compasseth it on the north side to Hannathon: and the outgoings thereof are in the valley of Jiphthahel:",
           "difficulty": "medium",
-          "teachingNote": "Review Joshua 19:14 and the full verse before continuing."
+          "teachingNote": "Joshua 19:14 grounds the verse's own wording in the words \"The border compasseth it on the north side to Hannathon.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r165",
@@ -2865,7 +2865,7 @@
           "theme": "Scripture",
           "verseText": "The children of Merari by their families had out of the tribe of Reuben, and out of the tribe of Gad, and out of the tribe of Zebulun, twelve cities.",
           "difficulty": "hard",
-          "teachingNote": "Review Joshua 21:7 and the full verse before continuing."
+          "teachingNote": "Joshua 21:7 grounds the verse's own wording in the words \"The children of Merari by their families had out of the tribe of Reuben, and out.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r166",
@@ -2882,7 +2882,7 @@
           "theme": "Scripture",
           "verseText": "So all the cities for the children of Merari by their families, which were remaining of the families of the Levites, were by their lot twelve cities.",
           "difficulty": "easy",
-          "teachingNote": "Review Joshua 21:40 and the full verse before continuing."
+          "teachingNote": "Joshua 21:40 grounds the verse's own wording in the words \"So all the cities for the children of Merari by their families, which were remaining of.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r167",
@@ -2899,7 +2899,7 @@
           "theme": "God's Character",
           "verseText": "And the people answered and said, God forbid that we should forsake the Lord, to serve other gods;",
           "difficulty": "medium",
-          "teachingNote": "Review Joshua 24:16 and the full verse before continuing."
+          "teachingNote": "Joshua 24:16 grounds god's character in the words \"The people answered and said, God forbid that we should forsake the Lord, to serve other.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r168",
@@ -2916,7 +2916,7 @@
           "theme": "Scripture",
           "verseText": "And the house of Joseph sent to descry Bethel. (Now the name of the city before was Luz.)",
           "difficulty": "hard",
-          "teachingNote": "Review Judges 1:23 and the full verse before continuing."
+          "teachingNote": "Judges 1:23 grounds the verse's own wording in the words \"The house of Joseph sent to descry Bethel.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r169",
@@ -2933,7 +2933,7 @@
           "theme": "Scripture",
           "verseText": "And the children of Israel dwelt among the Canaanites, Hittites, and Amorites, and Perizzites, and Hivites, and Jebusites:",
           "difficulty": "easy",
-          "teachingNote": "Review Judges 3:5 and the full verse before continuing."
+          "teachingNote": "Judges 3:5 grounds the verse's own wording in the words \"The children of Israel dwelt among the Canaanites, Hittites, and Amorites, and Perizzites, and Hivites, and.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r170",
@@ -2950,7 +2950,7 @@
           "theme": "God's Character",
           "verseText": "Praise ye the Lord for the avenging of Israel, when the people willingly offered themselves.",
           "difficulty": "medium",
-          "teachingNote": "Review Judges 5:2 and the full verse before continuing."
+          "teachingNote": "Judges 5:2 grounds god's character in the words \"Praise ye the Lord for the avenging of Israel, when the people willingly offered themselves.\" That phrase is the textual detail to connect back to the answer."
         }
       ]
     },
@@ -2974,7 +2974,7 @@
           "theme": "Scripture",
           "verseText": "And I delivered you out of the hand of the Egyptians, and out of the hand of all that oppressed you, and drave them out from before you, and gave you their land;",
           "difficulty": "hard",
-          "teachingNote": "Review Judges 6:9 and the full verse before continuing."
+          "teachingNote": "Judges 6:9 grounds the verse's own wording in the words \"I delivered you out of the hand of the Egyptians, and out of the hand of.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r172",
@@ -2991,7 +2991,7 @@
           "theme": "Scripture",
           "verseText": "And he went up thence to Penuel, and spake unto them likewise: and the men of Penuel answered him as the men of Succoth had answered him.",
           "difficulty": "easy",
-          "teachingNote": "Review Judges 8:8 and the full verse before continuing."
+          "teachingNote": "Judges 8:8 grounds the verse's own wording in the words \"He went up thence to Penuel, and spake unto them likewise.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r173",
@@ -3008,7 +3008,7 @@
           "theme": "Kingdom",
           "verseText": "Then said all the trees unto the bramble, Come thou, and reign over us.",
           "difficulty": "medium",
-          "teachingNote": "Review Judges 9:14 and the full verse before continuing."
+          "teachingNote": "Judges 9:14 grounds God's kingdom purposes in the words \"Then said all the trees unto the bramble, Come thou, and reign over us.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r174",
@@ -3025,7 +3025,7 @@
           "theme": "Scripture",
           "verseText": "And he had thirty sons that rode on thirty ass colts, and they had thirty cities, which are called Havothjair unto this day, which are in the land of Gilead.",
           "difficulty": "hard",
-          "teachingNote": "Review Judges 10:4 and the full verse before continuing."
+          "teachingNote": "Judges 10:4 grounds the verse's own wording in the words \"He had thirty sons that rode on thirty ass colts, and they had thirty cities, which.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r175",
@@ -3042,7 +3042,7 @@
           "theme": "Kingdom",
           "verseText": "Howbeit the king of the children of Ammon hearkened not unto the words of Jephthah which he sent him.",
           "difficulty": "easy",
-          "teachingNote": "Review Judges 11:28 and the full verse before continuing."
+          "teachingNote": "Judges 11:28 grounds God's kingdom purposes in the words \"Howbeit the king of the children of Ammon hearkened not unto the words of Jephthah which.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r176",
@@ -3059,7 +3059,7 @@
           "theme": "God's Character",
           "verseText": "And the Spirit of the Lord began to move him at times in the camp of Dan between Zorah and Eshtaol.",
           "difficulty": "medium",
-          "teachingNote": "Review Judges 13:25 and the full verse before continuing."
+          "teachingNote": "Judges 13:25 grounds god's character in the words \"The Spirit of the Lord began to move him at times in the camp of Dan.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r177",
@@ -3076,7 +3076,7 @@
           "theme": "Scripture",
           "verseText": "And Samson said unto the lad that held him by the hand, Suffer me that I may feel the pillars whereupon the house standeth, that I may lean upon them.",
           "difficulty": "hard",
-          "teachingNote": "Review Judges 16:26 and the full verse before continuing."
+          "teachingNote": "Judges 16:26 grounds the verse's own wording in the words \"Samson said unto the lad that held him by the hand, Suffer me that I may.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r178",
@@ -3093,7 +3093,7 @@
           "theme": "Scripture",
           "verseText": "And he said unto his servant, Come, and let us draw near to one of these places to lodge all night, in Gibeah, or in Ramah.",
           "difficulty": "easy",
-          "teachingNote": "Review Judges 19:13 and the full verse before continuing."
+          "teachingNote": "Judges 19:13 grounds the verse's own wording in the words \"He said unto his servant, Come, and let us draw near to one of these places.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r179",
@@ -3110,7 +3110,7 @@
           "theme": "God's Character",
           "verseText": "And the Lord smote Benjamin before Israel: and the children of Israel destroyed of the Benjamites that day twenty and five thousand and an hundred men: all these drew the sword.",
           "difficulty": "medium",
-          "teachingNote": "Review Judges 20:35 and the full verse before continuing."
+          "teachingNote": "Judges 20:35 grounds god's character in the words \"The Lord smote Benjamin before Israel.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r180",
@@ -3125,7 +3125,7 @@
           "theme": "God's Word",
           "verseText": "And Naomi said unto her two daughters in law, Go, return each to her mother's house: the Lord deal kindly with you, as ye have dealt with the dead, and with me.",
           "difficulty": "hard",
-          "teachingNote": "Review Ruth 1:8 and the full verse before continuing."
+          "teachingNote": "Ruth 1:8 grounds god's word in the words \"Naomi said unto her two daughters in law, Go, return each to her mother's house.\" That phrase is the textual detail to connect back to the answer."
         }
       ]
     },
@@ -3147,7 +3147,7 @@
           "theme": "Scripture",
           "verseText": "And she lay at his feet until the morning: and she rose up before one could know another. And he said, Let it not be known that a woman came into the floor.",
           "difficulty": "easy",
-          "teachingNote": "Review Ruth 3:14 and the full verse before continuing."
+          "teachingNote": "Ruth 3:14 grounds the verse's own wording in the words \"She lay at his feet until the morning.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r182",
@@ -3164,7 +3164,7 @@
           "theme": "Peace",
           "verseText": "Then Eli answered and said, Go in peace: and the God of Israel grant thee thy petition that thou hast asked of him.",
           "difficulty": "medium",
-          "teachingNote": "Review 1 Samuel 1:17 and the full verse before continuing."
+          "teachingNote": "1 Samuel 1:17 grounds peace in the words \"Then Eli answered and said, Go in peace.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r183",
@@ -3181,7 +3181,7 @@
           "theme": "God's Word",
           "verseText": "And the child Samuel ministered unto the Lord before Eli. And the word of the Lord was precious in those days; there was no open vision.",
           "difficulty": "hard",
-          "teachingNote": "Review 1 Samuel 3:1 and the full verse before continuing."
+          "teachingNote": "1 Samuel 3:1 grounds god's word in the words \"The child Samuel ministered unto the Lord before Eli.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r184",
@@ -3198,7 +3198,7 @@
           "theme": "God's Character",
           "verseText": "When the Philistines took the ark of God, they brought it into the house of Dagon, and set it by Dagon.",
           "difficulty": "easy",
-          "teachingNote": "Review 1 Samuel 5:2 and the full verse before continuing."
+          "teachingNote": "1 Samuel 5:2 grounds god's character in the words \"When the Philistines took the ark of God, they brought it into the house of Dagon.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r185",
@@ -3215,7 +3215,7 @@
           "theme": "Kingdom",
           "verseText": "Now therefore hearken unto their voice: howbeit yet protest solemnly unto them, and shew them the manner of the king that shall reign over them.",
           "difficulty": "medium",
-          "teachingNote": "Review 1 Samuel 8:9 and the full verse before continuing."
+          "teachingNote": "1 Samuel 8:9 grounds God's kingdom purposes in the words \"Now therefore hearken unto their voice.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r186",
@@ -3232,7 +3232,7 @@
           "theme": "Prayer",
           "verseText": "And Saul's uncle said, Tell me, I pray thee, what Samuel said unto you.",
           "difficulty": "hard",
-          "teachingNote": "Review 1 Samuel 10:15 and the full verse before continuing."
+          "teachingNote": "1 Samuel 10:15 grounds prayerful dependence in the words \"Saul's uncle said, Tell me, I pray thee, what Samuel said unto you.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r187",
@@ -3249,7 +3249,7 @@
           "theme": "God's Character",
           "verseText": "Only fear the Lord, and serve him in truth with all your heart: for consider how great things he hath done for you.",
           "difficulty": "easy",
-          "teachingNote": "Review 1 Samuel 12:24 and the full verse before continuing."
+          "teachingNote": "1 Samuel 12:24 grounds god's character in the words \"Only fear the Lord, and serve him in truth with all your heart.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r188",
@@ -3266,7 +3266,7 @@
           "theme": "God's Character",
           "verseText": "So the Lord saved Israel that day: and the battle passed over unto Bethaven.",
           "difficulty": "medium",
-          "teachingNote": "Review 1 Samuel 14:23 and the full verse before continuing."
+          "teachingNote": "1 Samuel 14:23 grounds god's character in the words \"So the Lord saved Israel that day.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r189",
@@ -3283,7 +3283,7 @@
           "theme": "God's Character",
           "verseText": "Then Samuel said unto Saul, Stay, and I will tell thee what the Lord hath said to me this night. And he said unto him, Say on.",
           "difficulty": "hard",
-          "teachingNote": "Review 1 Samuel 15:16 and the full verse before continuing."
+          "teachingNote": "1 Samuel 15:16 grounds god's character in the words \"Then Samuel said unto Saul, Stay, and I will tell thee what the Lord hath said.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r190",
@@ -3300,7 +3300,7 @@
           "theme": "Prayer",
           "verseText": "And Saul sent to Jesse, saying, Let David, I pray thee, stand before me; for he hath found favour in my sight.",
           "difficulty": "easy",
-          "teachingNote": "Review 1 Samuel 16:22 and the full verse before continuing."
+          "teachingNote": "1 Samuel 16:22 grounds prayerful dependence in the words \"Saul sent to Jesse, saying, Let David, I pray thee, stand before me.\" That phrase is the textual detail to connect back to the answer."
         }
       ]
     },
@@ -3324,7 +3324,7 @@
           "theme": "Scripture",
           "verseText": "And the Philistine said unto David, Am I a dog, that thou comest to me with staves? And the Philistine cursed David by his gods.",
           "difficulty": "medium",
-          "teachingNote": "Review 1 Samuel 17:43 and the full verse before continuing."
+          "teachingNote": "1 Samuel 17:43 grounds the verse's own wording in the words \"The Philistine said unto David, Am I a dog, that thou comest to me with staves.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r192",
@@ -3341,7 +3341,7 @@
           "theme": "Scripture",
           "verseText": "And Jonathan called David, and Jonathan shewed him all those things. And Jonathan brought David to Saul, and he was in his presence, as in times past.",
           "difficulty": "hard",
-          "teachingNote": "Review 1 Samuel 19:7 and the full verse before continuing."
+          "teachingNote": "1 Samuel 19:7 grounds the verse's own wording in the words \"Jonathan called David, and Jonathan shewed him all those things.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r193",
@@ -3358,7 +3358,7 @@
           "theme": "Kingdom",
           "verseText": "For as long as the son of Jesse liveth upon the ground, thou shalt not be established, nor thy kingdom. Wherefore now send and fetch him unto me, for he shall surely die.",
           "difficulty": "easy",
-          "teachingNote": "Review 1 Samuel 20:31 and the full verse before continuing."
+          "teachingNote": "1 Samuel 20:31 grounds God's kingdom purposes in the words \"For as long as the son of Jesse liveth upon the ground, thou shalt not be.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r194",
@@ -3375,7 +3375,7 @@
           "theme": "Scripture",
           "verseText": "Then they told David, saying, Behold, the Philistines fight against Keilah, and they rob the threshingfloors.",
           "difficulty": "medium",
-          "teachingNote": "Review 1 Samuel 23:1 and the full verse before continuing."
+          "teachingNote": "1 Samuel 23:1 grounds the verse's own wording in the words \"Then they told David, saying, Behold, the Philistines fight against Keilah, and they rob the threshingfloors.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r195",
@@ -3392,7 +3392,7 @@
           "theme": "God's Character",
           "verseText": "And thou hast shewed this day how that thou hast dealt well with me: forasmuch as when the Lord had delivered me into thine hand, thou killedst me not.",
           "difficulty": "hard",
-          "teachingNote": "Review 1 Samuel 24:18 and the full verse before continuing."
+          "teachingNote": "1 Samuel 24:18 grounds god's character in the words \"Thou hast shewed this day how that thou hast dealt well with me.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r196",
@@ -3409,7 +3409,7 @@
           "theme": "Scripture",
           "verseText": "Then Saul arose, and went down to the wilderness of Ziph, having three thousand chosen men of Israel with him, to seek David in the wilderness of Ziph.",
           "difficulty": "easy",
-          "teachingNote": "Review 1 Samuel 26:2 and the full verse before continuing."
+          "teachingNote": "1 Samuel 26:2 grounds the verse's own wording in the words \"Then Saul arose, and went down to the wilderness of Ziph, having three thousand chosen men.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r197",
@@ -3426,7 +3426,7 @@
           "theme": "Scripture",
           "verseText": "Now the Philistines gathered together all their armies to Aphek: and the Israelites pitched by a fountain which is in Jezreel.",
           "difficulty": "medium",
-          "teachingNote": "Review 1 Samuel 29:1 and the full verse before continuing."
+          "teachingNote": "1 Samuel 29:1 grounds the verse's own wording in the words \"Now the Philistines gathered together all their armies to Aphek.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r198",
@@ -3443,7 +3443,7 @@
           "theme": "Scripture",
           "verseText": "And it came to pass on the morrow, when the Philistines came to strip the slain, that they found Saul and his three sons fallen in mount Gilboa.",
           "difficulty": "hard",
-          "teachingNote": "Review 1 Samuel 31:8 and the full verse before continuing."
+          "teachingNote": "1 Samuel 31:8 grounds the verse's own wording in the words \"It came to pass on the morrow, when the Philistines came to strip the slain, that.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r199",
@@ -3460,7 +3460,7 @@
           "theme": "Kingdom",
           "verseText": "Therefore now let your hands be strengthened, and be ye valiant: for your master Saul is dead, and also the house of Judah have anointed me king over them.",
           "difficulty": "easy",
-          "teachingNote": "Review 2 Samuel 2:7 and the full verse before continuing."
+          "teachingNote": "2 Samuel 2:7 grounds God's kingdom purposes in the words \"Therefore now let your hands be strengthened, and be ye valiant.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r200",
@@ -3477,7 +3477,7 @@
           "theme": "Scripture",
           "verseText": "And Ishbosheth sent, and took her from her husband, even from Phaltiel the son of Laish.",
           "difficulty": "medium",
-          "teachingNote": "Review 2 Samuel 3:15 and the full verse before continuing."
+          "teachingNote": "2 Samuel 3:15 grounds the verse's own wording in the words \"Ishbosheth sent, and took her from her husband, even from Phaltiel the son of Laish.\" That phrase is the textual detail to connect back to the answer."
         }
       ]
     },
@@ -3501,7 +3501,7 @@
           "theme": "Scripture",
           "verseText": "And these be the names of those that were born unto him in Jerusalem; Shammuah, and Shobab, and Nathan, and Solomon,",
           "difficulty": "hard",
-          "teachingNote": "Review 2 Samuel 5:14 and the full verse before continuing."
+          "teachingNote": "2 Samuel 5:14 grounds the verse's own wording in the words \"These be the names of those that were born unto him in Jerusalem.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r202",
@@ -3518,7 +3518,7 @@
           "theme": "Kingdom",
           "verseText": "And thine house and thy kingdom shall be established for ever before thee: thy throne shall be established for ever.",
           "difficulty": "easy",
-          "teachingNote": "Review 2 Samuel 7:16 and the full verse before continuing."
+          "teachingNote": "2 Samuel 7:16 grounds God's kingdom purposes in the words \"Thine house and thy kingdom shall be established for ever before thee.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r203",
@@ -3535,7 +3535,7 @@
           "theme": "Scripture",
           "verseText": "And Mephibosheth had a young son, whose name was Micha. And all that dwelt in the house of Ziba were servants unto Mephibosheth.",
           "difficulty": "medium",
-          "teachingNote": "Review 2 Samuel 9:12 and the full verse before continuing."
+          "teachingNote": "2 Samuel 9:12 grounds the verse's own wording in the words \"Mephibosheth had a young son, whose name was Micha.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r204",
@@ -3552,7 +3552,7 @@
           "theme": "Kingdom",
           "verseText": "And the shooters shot from off the wall upon thy servants; and some of the king's servants be dead, and thy servant Uriah the Hittite is dead also.",
           "difficulty": "hard",
-          "teachingNote": "Review 2 Samuel 11:24 and the full verse before continuing."
+          "teachingNote": "2 Samuel 11:24 grounds God's kingdom purposes in the words \"The shooters shot from off the wall upon thy servants.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r205",
@@ -3569,7 +3569,7 @@
           "theme": "Scripture",
           "verseText": "And she answered him, Nay, my brother, do not force me; for no such thing ought to be done in Israel: do not thou this folly.",
           "difficulty": "easy",
-          "teachingNote": "Review 2 Samuel 13:12 and the full verse before continuing."
+          "teachingNote": "2 Samuel 13:12 grounds the verse's own wording in the words \"She answered him, Nay, my brother, do not force me.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r206",
@@ -3586,7 +3586,7 @@
           "theme": "Kingdom",
           "verseText": "For the king will hear, to deliver his handmaid out of the hand of the man that would destroy me and my son together out of the inheritance of God.",
           "difficulty": "medium",
-          "teachingNote": "Review 2 Samuel 14:16 and the full verse before continuing."
+          "teachingNote": "2 Samuel 14:16 grounds God's kingdom purposes in the words \"For the king will hear, to deliver his handmaid out of the hand of the man.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r207",
@@ -3603,7 +3603,7 @@
           "theme": "Scripture",
           "verseText": "Unto whom David said, If thou passest on with me, then thou shalt be a burden unto me:",
           "difficulty": "hard",
-          "teachingNote": "Review 2 Samuel 15:33 and the full verse before continuing."
+          "teachingNote": "2 Samuel 15:33 grounds the verse's own wording in the words \"Unto whom David said, If thou passest on with me, then thou shalt be a burden.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r208",
@@ -3620,7 +3620,7 @@
           "theme": "Kingdom",
           "verseText": "And the king said unto them, What seemeth you best I will do. And the king stood by the gate side, and all the people came out by hundreds and by thousands.",
           "difficulty": "easy",
-          "teachingNote": "Review 2 Samuel 18:4 and the full verse before continuing."
+          "teachingNote": "2 Samuel 18:4 grounds God's kingdom purposes in the words \"The king said unto them, What seemeth you best I will do.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r209",
@@ -3637,7 +3637,7 @@
           "theme": "Kingdom",
           "verseText": "And the king said unto him, Why speakest thou any more of thy matters? I have said, Thou and Ziba divide the land.",
           "difficulty": "medium",
-          "teachingNote": "Review 2 Samuel 19:29 and the full verse before continuing."
+          "teachingNote": "2 Samuel 19:29 grounds God's kingdom purposes in the words \"The king said unto him, Why speakest thou any more of thy matters.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r210",
@@ -3654,7 +3654,7 @@
           "theme": "Scripture",
           "verseText": "And when he defied Israel, Jonathan the son of Shimeah the brother of David slew him.",
           "difficulty": "hard",
-          "teachingNote": "Review 2 Samuel 21:21 and the full verse before continuing."
+          "teachingNote": "2 Samuel 21:21 grounds the verse's own wording in the words \"When he defied Israel, Jonathan the son of Shimeah the brother of David slew him.\" That phrase is the textual detail to connect back to the answer."
         }
       ]
     },
@@ -3678,7 +3678,7 @@
           "theme": "God's Character",
           "verseText": "For who is God, save the Lord? and who is a rock, save our God?",
           "difficulty": "easy",
-          "teachingNote": "Review 2 Samuel 22:32 and the full verse before continuing."
+          "teachingNote": "2 Samuel 22:32 grounds god's character in the words \"For who is God, save the Lord.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r212",
@@ -3695,7 +3695,7 @@
           "theme": "Scripture",
           "verseText": "He was more honourable than the thirty, but he attained not to the first three. And David set him over his guard.",
           "difficulty": "medium",
-          "teachingNote": "Review 2 Samuel 23:23 and the full verse before continuing."
+          "teachingNote": "2 Samuel 23:23 grounds the verse's own wording in the words \"He was more honourable than the thirty, but he attained not to the first three.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r213",
@@ -3712,7 +3712,7 @@
           "theme": "Kingdom",
           "verseText": "Wherefore Nathan spake unto Bathsheba the mother of Solomon, saying, Hast thou not heard that Adonijah the son of Haggith doth reign, and David our lord knoweth it not?",
           "difficulty": "hard",
-          "teachingNote": "Review 1 Kings 1:11 and the full verse before continuing."
+          "teachingNote": "1 Kings 1:11 grounds God's kingdom purposes in the words \"Wherefore Nathan spake unto Bathsheba the mother of Solomon, saying, Hast thou not heard that Adonijah.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r214",
@@ -3729,7 +3729,7 @@
           "theme": "Scripture",
           "verseText": "Now the days of David drew nigh that he should die; and he charged Solomon his son, saying,",
           "difficulty": "easy",
-          "teachingNote": "Review 1 Kings 2:1 and the full verse before continuing."
+          "teachingNote": "1 Kings 2:1 grounds the verse's own wording in the words \"Now the days of David drew nigh that he should die.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r215",
@@ -3746,7 +3746,7 @@
           "theme": "Wisdom",
           "verseText": "Give therefore thy servant an understanding heart to judge thy people, that I may discern between good and bad: for who is able to judge this thy so great a people?",
           "difficulty": "medium",
-          "teachingNote": "Review 1 Kings 3:9 and the full verse before continuing."
+          "teachingNote": "1 Kings 3:9 grounds wisdom asked from God in the words \"Give therefore thy servant an understanding heart to judge thy people, that I may discern between.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r216",
@@ -3763,7 +3763,7 @@
           "theme": "Scripture",
           "verseText": "Barley also and straw for the horses and dromedaries brought they unto the place where the officers were, every man according to his charge.",
           "difficulty": "hard",
-          "teachingNote": "Review 1 Kings 4:28 and the full verse before continuing."
+          "teachingNote": "1 Kings 4:28 grounds the verse's own wording in the words \"Barley also and straw for the horses and dromedaries brought they unto the place where the.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r217",
@@ -3780,7 +3780,7 @@
           "theme": "Scripture",
           "verseText": "And the whole house he overlaid with gold, until he had finished all the house: also the whole altar that was by the oracle he overlaid with gold.",
           "difficulty": "easy",
-          "teachingNote": "Review 1 Kings 6:22 and the full verse before continuing."
+          "teachingNote": "1 Kings 6:22 grounds the verse's own wording in the words \"The whole house he overlaid with gold, until he had finished all the house.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r218",
@@ -3797,7 +3797,7 @@
           "theme": "Scripture",
           "verseText": "And there were four undersetters to the four corners of one base: and the undersetters were of the very base itself.",
           "difficulty": "medium",
-          "teachingNote": "Review 1 Kings 7:34 and the full verse before continuing."
+          "teachingNote": "1 Kings 7:34 grounds the verse's own wording in the words \"There were four undersetters to the four corners of one base.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r219",
@@ -3814,7 +3814,7 @@
           "theme": "Scripture",
           "verseText": "Then hear thou in heaven, and do, and judge thy servants, condemning the wicked, to bring his way upon his head; and justifying the righteous, to give him according to his righteousness.",
           "difficulty": "hard",
-          "teachingNote": "Review 1 Kings 8:32 and the full verse before continuing."
+          "teachingNote": "1 Kings 8:32 grounds the verse's own wording in the words \"Then hear thou in heaven, and do, and judge thy servants, condemning the wicked, to bring.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r220",
@@ -3831,7 +3831,7 @@
           "theme": "God's Character",
           "verseText": "And when the queen of Sheba heard of the fame of Solomon concerning the name of the Lord, she came to prove him with hard questions.",
           "difficulty": "easy",
-          "teachingNote": "Review 1 Kings 10:1 and the full verse before continuing."
+          "teachingNote": "1 Kings 10:1 grounds god's character in the words \"When the queen of Sheba heard of the fame of Solomon concerning the name of the.\" That phrase is the textual detail to connect back to the answer."
         }
       ]
     },
@@ -3855,7 +3855,7 @@
           "theme": "Scripture",
           "verseText": "(For six months did Joab remain there with all Israel, until he had cut off every male in Edom:)",
           "difficulty": "medium",
-          "teachingNote": "Review 1 Kings 11:16 and the full verse before continuing."
+          "teachingNote": "1 Kings 11:16 grounds the verse's own wording in the words \"(For six months did Joab remain there with all Israel, until he had cut off every.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r222",
@@ -3872,7 +3872,7 @@
           "theme": "Scripture",
           "verseText": "But as for the children of Israel which dwelt in the cities of Judah, Rehoboam reigned over them.",
           "difficulty": "hard",
-          "teachingNote": "Review 1 Kings 12:17 and the full verse before continuing."
+          "teachingNote": "1 Kings 12:17 grounds the verse's own wording in the words \"As for the children of Israel which dwelt in the cities of Judah, Rehoboam reigned over.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r223",
@@ -3889,7 +3889,7 @@
           "theme": "Scripture",
           "verseText": "But hast done evil above all that were before thee: for thou hast gone and made thee other gods, and molten images, to provoke me to anger, and hast cast me behind thy back:",
           "difficulty": "easy",
-          "teachingNote": "Review 1 Kings 14:9 and the full verse before continuing."
+          "teachingNote": "1 Kings 14:9 grounds the verse's own wording in the words \"Hast done evil above all that were before thee.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r224",
@@ -3906,7 +3906,7 @@
           "theme": "Kingdom",
           "verseText": "And Baasha king of Israel went up against Judah, and built Ramah, that he might not suffer any to go out or come in to Asa king of Judah.",
           "difficulty": "medium",
-          "teachingNote": "Review 1 Kings 15:17 and the full verse before continuing."
+          "teachingNote": "1 Kings 15:17 grounds God's kingdom purposes in the words \"Baasha king of Israel went up against Judah, and built Ramah, that he might not suffer.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r225",
@@ -3923,7 +3923,7 @@
           "theme": "God's Character",
           "verseText": "And Ahab the son of Omri did evil in the sight of the Lord above all that were before him.",
           "difficulty": "hard",
-          "teachingNote": "Review 1 Kings 16:30 and the full verse before continuing."
+          "teachingNote": "1 Kings 16:30 grounds god's character in the words \"Ahab the son of Omri did evil in the sight of the Lord above all that.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r226",
@@ -3940,7 +3940,7 @@
           "theme": "Scripture",
           "verseText": "So Obadiah went to meet Ahab, and told him: and Ahab went to meet Elijah.",
           "difficulty": "easy",
-          "teachingNote": "Review 1 Kings 18:16 and the full verse before continuing."
+          "teachingNote": "1 Kings 18:16 grounds the verse's own wording in the words \"So Obadiah went to meet Ahab, and told him.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r227",
@@ -3957,7 +3957,7 @@
           "theme": "Scripture",
           "verseText": "Yet I have left me seven thousand in Israel, all the knees which have not bowed unto Baal, and every mouth which hath not kissed him.",
           "difficulty": "medium",
-          "teachingNote": "Review 1 Kings 19:18 and the full verse before continuing."
+          "teachingNote": "1 Kings 19:18 grounds the verse's own wording in the words \"Yet I have left me seven thousand in Israel, all the knees which have not bowed.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r228",
@@ -3974,7 +3974,7 @@
           "theme": "God's Character",
           "verseText": "And Ahab said to Elijah, Hast thou found me, O mine enemy? And he answered, I have found thee: because thou hast sold thyself to work evil in the sight of the Lord.",
           "difficulty": "hard",
-          "teachingNote": "Review 1 Kings 21:20 and the full verse before continuing."
+          "teachingNote": "1 Kings 21:20 grounds god's character in the words \"Ahab said to Elijah, Hast thou found me, O mine enemy.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r229",
@@ -3991,7 +3991,7 @@
           "theme": "Scripture",
           "verseText": "So Ahab slept with his fathers; and Ahaziah his son reigned in his stead.",
           "difficulty": "easy",
-          "teachingNote": "Review 1 Kings 22:40 and the full verse before continuing."
+          "teachingNote": "1 Kings 22:40 grounds the verse's own wording in the words \"So Ahab slept with his fathers.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r230",
@@ -4008,7 +4008,7 @@
           "theme": "Kingdom",
           "verseText": "Now Jehoram the son of Ahab began to reign over Israel in Samaria the eighteenth year of Jehoshaphat king of Judah, and reigned twelve years.",
           "difficulty": "medium",
-          "teachingNote": "Review 2 Kings 3:1 and the full verse before continuing."
+          "teachingNote": "2 Kings 3:1 grounds God's kingdom purposes in the words \"Now Jehoram the son of Ahab began to reign over Israel in Samaria the eighteenth year.\" That phrase is the textual detail to connect back to the answer."
         }
       ]
     },
@@ -4032,7 +4032,7 @@
           "theme": "God's Character",
           "verseText": "And she went up, and laid him on the bed of the man of God, and shut the door upon him, and went out.",
           "difficulty": "hard",
-          "teachingNote": "Review 2 Kings 4:21 and the full verse before continuing."
+          "teachingNote": "2 Kings 4:21 grounds god's character in the words \"She went up, and laid him on the bed of the man of God, and shut.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r232",
@@ -4049,7 +4049,7 @@
           "theme": "Kingdom",
           "verseText": "And the man of God sent unto the king of Israel, saying, Beware that thou pass not such a place; for thither the Syrians are come down.",
           "difficulty": "easy",
-          "teachingNote": "Review 2 Kings 6:9 and the full verse before continuing."
+          "teachingNote": "2 Kings 6:9 grounds God's kingdom purposes in the words \"The man of God sent unto the king of Israel, saying, Beware that thou pass not.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r233",
@@ -4066,7 +4066,7 @@
           "theme": "Scripture",
           "verseText": "Yet Edom revolted from under the hand of Judah unto this day. Then Libnah revolted at the same time.",
           "difficulty": "medium",
-          "teachingNote": "Review 2 Kings 8:22 and the full verse before continuing."
+          "teachingNote": "2 Kings 8:22 grounds the verse's own wording in the words \"Yet Edom revolted from under the hand of Judah unto this day.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r234",
@@ -4083,7 +4083,7 @@
           "theme": "Kingdom",
           "verseText": "And it came to pass, when the letter came to them, that they took the king's sons, and slew seventy persons, and put their heads in baskets, and sent him them to Jezreel.",
           "difficulty": "hard",
-          "teachingNote": "Review 2 Kings 10:7 and the full verse before continuing."
+          "teachingNote": "2 Kings 10:7 grounds God's kingdom purposes in the words \"It came to pass, when the letter came to them, that they took the king's sons.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r235",
@@ -4100,7 +4100,7 @@
           "theme": "God's Character",
           "verseText": "But they gave that to the workmen, and repaired therewith the house of the Lord.",
           "difficulty": "easy",
-          "teachingNote": "Review 2 Kings 12:14 and the full verse before continuing."
+          "teachingNote": "2 Kings 12:14 grounds god's character in the words \"They gave that to the workmen, and repaired therewith the house of the Lord.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r236",
@@ -4117,7 +4117,7 @@
           "theme": "Kingdom",
           "verseText": "And Amaziah the son of Joash king of Judah lived after the death of Jehoash son of Jehoahaz king of Israel fifteen years.",
           "difficulty": "medium",
-          "teachingNote": "Review 2 Kings 14:17 and the full verse before continuing."
+          "teachingNote": "2 Kings 14:17 grounds God's kingdom purposes in the words \"Amaziah the son of Joash king of Judah lived after the death of Jehoash son of.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r237",
@@ -4134,7 +4134,7 @@
           "theme": "Kingdom",
           "verseText": "In the two and fiftieth year of Azariah king of Judah Pekah the son of Remaliah began to reign over Israel in Samaria, and reigned twenty years.",
           "difficulty": "hard",
-          "teachingNote": "Review 2 Kings 15:27 and the full verse before continuing."
+          "teachingNote": "2 Kings 15:27 grounds God's kingdom purposes in the words \"In the two and fiftieth year of Azariah king of Judah Pekah the son of Remaliah.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r238",
@@ -4151,7 +4151,7 @@
           "theme": "God's Character",
           "verseText": "Therefore the Lord was very angry with Israel, and removed them out of his sight: there was none left but the tribe of Judah only.",
           "difficulty": "easy",
-          "teachingNote": "Review 2 Kings 17:18 and the full verse before continuing."
+          "teachingNote": "2 Kings 17:18 grounds god's character in the words \"Therefore the Lord was very angry with Israel, and removed them out of his sight.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r239",
@@ -4168,7 +4168,7 @@
           "theme": "Faith",
           "verseText": "Thou sayest, (but they are but vain words,) I have counsel and strength for the war. Now on whom dost thou trust, that thou rebellest against me?",
           "difficulty": "medium",
-          "teachingNote": "Review 2 Kings 18:20 and the full verse before continuing."
+          "teachingNote": "2 Kings 18:20 grounds faith that trusts God's word in the words \"Thou sayest, (but they are but vain words,) I have counsel and strength for the war.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r240",
@@ -4185,7 +4185,7 @@
           "theme": "God's Character",
           "verseText": "By the way that he came, by the same shall he return, and shall not come into this city, saith the Lord.",
           "difficulty": "hard",
-          "teachingNote": "Review 2 Kings 19:33 and the full verse before continuing."
+          "teachingNote": "2 Kings 19:33 grounds god's character in the words \"By the way that he came, by the same shall he return, and shall not come.\" That phrase is the textual detail to connect back to the answer."
         }
       ]
     },
@@ -4209,7 +4209,7 @@
           "theme": "Kingdom",
           "verseText": "And the servants of Amon conspired against him, and slew the king in his own house.",
           "difficulty": "easy",
-          "teachingNote": "Review 2 Kings 21:23 and the full verse before continuing."
+          "teachingNote": "2 Kings 21:23 grounds God's kingdom purposes in the words \"The servants of Amon conspired against him, and slew the king in his own house.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r242",
@@ -4226,7 +4226,7 @@
           "theme": "God's Character",
           "verseText": "And also for the innocent blood that he shed: for he filled Jerusalem with innocent blood; which the Lord would not pardon.",
           "difficulty": "medium",
-          "teachingNote": "Review 2 Kings 24:4 and the full verse before continuing."
+          "teachingNote": "2 Kings 24:4 grounds god's character in the words \"Also for the innocent blood that he shed.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r243",
@@ -4243,7 +4243,7 @@
           "theme": "Scripture",
           "verseText": "And the sons of Gomer; Ashchenaz, and Riphath, and Togarmah.",
           "difficulty": "hard",
-          "teachingNote": "Review 1 Chronicles 1:6 and the full verse before continuing."
+          "teachingNote": "1 Chronicles 1:6 grounds the verse's own wording in the words \"Ashchenaz, and Riphath, and Togarmah.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r244",
@@ -4260,7 +4260,7 @@
           "theme": "Scripture",
           "verseText": "And when Husham was dead, Hadad the son of Bedad, which smote Midian in the field of Moab, reigned in his stead: and the name of his city was Avith.",
           "difficulty": "easy",
-          "teachingNote": "Review 1 Chronicles 1:46 and the full verse before continuing."
+          "teachingNote": "1 Chronicles 1:46 grounds the verse's own wording in the words \"When Husham was dead, Hadad the son of Bedad, which smote Midian in the field of.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r245",
@@ -4277,7 +4277,7 @@
           "theme": "Scripture",
           "verseText": "And the sons of Appaim; Ishi. And the sons of Ishi; Sheshan. And the children of Sheshan; Ahlai.",
           "difficulty": "medium",
-          "teachingNote": "Review 1 Chronicles 2:31 and the full verse before continuing."
+          "teachingNote": "1 Chronicles 2:31 grounds the verse's own wording in the words \"And the sons of Ishi.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r246",
@@ -4294,7 +4294,7 @@
           "theme": "Scripture",
           "verseText": "Amaziah his son, Azariah his son, Jotham his son,",
           "difficulty": "hard",
-          "teachingNote": "Review 1 Chronicles 3:12 and the full verse before continuing."
+          "teachingNote": "1 Chronicles 3:12 grounds the verse's own wording in the words \"Amaziah his son, Azariah his son, Jotham his son.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r247",
@@ -4311,7 +4311,7 @@
           "theme": "Scripture",
           "verseText": "The sons of Simeon were, Nemuel, and Jamin, Jarib, Zerah, and Shaul:",
           "difficulty": "easy",
-          "teachingNote": "Review 1 Chronicles 4:24 and the full verse before continuing."
+          "teachingNote": "1 Chronicles 4:24 grounds the verse's own wording in the words \"The sons of Simeon were, Nemuel, and Jamin, Jarib, Zerah, and Shaul.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r248",
@@ -4328,7 +4328,7 @@
           "theme": "Scripture",
           "verseText": "Ahi the son of Abdiel, the son of Guni, chief of the house of their fathers.",
           "difficulty": "medium",
-          "teachingNote": "Review 1 Chronicles 5:15 and the full verse before continuing."
+          "teachingNote": "1 Chronicles 5:15 grounds the verse's own wording in the words \"Ahi the son of Abdiel, the son of Guni, chief of the house of their fathers.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r249",
@@ -4345,7 +4345,7 @@
           "theme": "Scripture",
           "verseText": "Eliab his son, Jeroham his son, Elkanah his son.",
           "difficulty": "hard",
-          "teachingNote": "Review 1 Chronicles 6:27 and the full verse before continuing."
+          "teachingNote": "1 Chronicles 6:27 grounds the verse's own wording in the words \"Eliab his son, Jeroham his son, Elkanah his son.\" That phrase is the textual detail to connect back to the answer."
         },
         {
           "id": "rr-r250",
@@ -4362,7 +4362,7 @@
           "theme": "Scripture",
           "verseText": "And the children of Israel gave to the Levites these cities with their suburbs.",
           "difficulty": "easy",
-          "teachingNote": "Review 1 Chronicles 6:64 and the full verse before continuing."
+          "teachingNote": "1 Chronicles 6:64 grounds the verse's own wording in the words \"The children of Israel gave to the Levites these cities with their suburbs.\" That phrase is the textual detail to connect back to the answer."
         }
       ]
     }

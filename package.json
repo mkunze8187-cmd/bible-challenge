@@ -1,18 +1,30 @@
 {
   "name": "bible-challenge",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "private": true,
+  "workspaces": [
+    "admin"
+  ],
   "description": "Windows desktop app for scripture recall, Bible knowledge, and learning challenge modes.",
   "author": "Michael Kunze",
   "main": "electron/main.js",
   "scripts": {
     "typecheck": "tsc -p .",
+    "typecheck:admin": "npm run typecheck --workspace bible-challenge-admin",
     "test": "vitest",
     "test:run": "vitest run",
+    "test:admin": "npm run test:run --workspace bible-challenge-admin",
     "build": "npm run check:data && npm run typecheck && vite build",
+    "build:admin": "npm run build --workspace bible-challenge-admin",
     "start": "npm run build && electron .",
     "package": "npm run build && electron-builder --win nsis",
-    "check:data": "node scripts/validate-data.mjs"
+    "check:data": "node scripts/validate-data.mjs",
+    "audit:study-notes": "node scripts/audit-study-notes.mjs",
+    "update:verse-study-notes": "node scripts/update-verse-study-notes.mjs",
+    "update:five-guesses-study-notes": "node scripts/update-five-guesses-study-notes.mjs",
+    "update:chapter-who-study-notes": "node scripts/update-chapter-finder-and-who-said-it-notes.mjs",
+    "update:initials-study-notes": "node scripts/update-initials-study-notes.mjs",
+    "update:structured-study-notes": "node scripts/update-structured-study-notes.mjs"
   },
   "build": {
     "appId": "com.personal.biblechallenge",

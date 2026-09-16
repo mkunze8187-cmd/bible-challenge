@@ -56,7 +56,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Connections Board 1 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 1 resolves by recognizing four Bible groupings: Books Of The Law (Genesis, Exodus, Leviticus, Numbers); Moses Family (Amram, Jochebed, Aaron, Miriam); Exodus Stops (Succoth, Marah, Elim, Rephidim); Offerings (Burnt, Grain, Peace, Sin). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Books Of The Law, Moses Family, Exodus Stops, and Offerings"
         },
         {
           "id": "bc-r002",
@@ -104,7 +105,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Connections Board 2 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 2 resolves by recognizing four Bible groupings: Return History Books (2 Chronicles, Ezra, Nehemiah, Esther); Twelve Apostles A (Peter, Andrew, James, John); Paul Travel Places (Corinth, Ephesus, Troas, Rome); Animals In Sacrifice (Bullock, Ram, Lamb, Turtledove). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Return History Books, Twelve Apostles A, Paul Travel Places, and Animals In Sacrifice"
         },
         {
           "id": "bc-r003",
@@ -152,7 +154,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Connections Board 3 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 3 resolves by recognizing four Bible groupings: Minor Prophets A (Hosea, Joel, Amos, Obadiah); High Priests (Eli, Abiathar, Zadok, Caiaphas); Judges Places (Ophrah, Timnah, Shiloh, Mizpah); More Revelation Churches (Sardis, Philadelphia, Laodicea, Patmos). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Minor Prophets A, High Priests, Judges Places, and More Revelation Churches"
         }
       ]
     },
@@ -207,7 +210,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Connections Board 4 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 4 resolves by recognizing four Bible groupings: Gospels (Matthew, Mark, Luke, John); Judges (Deborah, Gideon, Jephthah, Samson); Tabernacle Items (Ark, Altar, Lampstand, Veil); Miracles (Water to wine, Storm calmed, Lazarus raised, Blind man healed). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Gospels, Judges, Tabernacle Items, and Miracles"
         },
         {
           "id": "bc-r005",
@@ -255,7 +259,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Connections Board 5 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 5 resolves by recognizing four Bible groupings: Pastoral Letters (1 Timothy, 2 Timothy, Titus, Philemon); Twelve Apostles B (Philip, Bartholomew, Thomas, Matthew); Kingdom Capitals (Samaria, Damascus, Nineveh, Babylon); Offerings (Burnt, Grain, Peace, Sin). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Pastoral Letters, Twelve Apostles B, Kingdom Capitals, and Offerings"
         },
         {
           "id": "bc-r006",
@@ -303,7 +308,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Connections Board 6 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 6 resolves by recognizing four Bible groupings: Pentateuch People (Adam, Noah, Abraham, Moses); Foreign Rulers (Pharaoh, Nebuchadnezzar, Cyrus, Herod); Temple Furnishings (Sea, Lavers, Cherubim, Pillars); Animals In Sacrifice (Bullock, Ram, Lamb, Turtledove). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Pentateuch People, Foreign Rulers, Temple Furnishings, and Animals In Sacrifice"
         }
       ]
     },
@@ -358,7 +364,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Connections Board 7 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 7 resolves by recognizing four Bible groupings: Poetry Themes (Praise, Wisdom, Vanity, Love); United Monarchy (Saul, David, Solomon, Jonathan); Return Places (Jerusalem, Bethany, Emmaus, Nazareth); More Revelation Churches (Sardis, Philadelphia, Laodicea, Patmos). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Poetry Themes, United Monarchy, Return Places, and More Revelation Churches"
         },
         {
           "id": "bc-r008",
@@ -406,7 +413,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Connections Board 8 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 8 resolves by recognizing four Bible groupings: Early History Books (Joshua, Judges, Ruth, 1 Samuel); Twelve Apostles C (James son of Alphaeus, Thaddaeus, Simon the Zealot, Judas Iscariot); Armor Of God (Belt, Breastplate, Shield, Helmet); Miracles (Water to wine, Storm calmed, Lazarus raised, Blind man healed). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Early History Books, Twelve Apostles C, Armor Of God, and Miracles"
         },
         {
           "id": "bc-r009",
@@ -454,7 +462,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Connections Board 9 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 9 resolves by recognizing four Bible groupings: Wisdom Books (Job, Psalms, Proverbs, Ecclesiastes); Women Of Faith (Sarah, Rebekah, Hannah, Elizabeth); Jesus Ministry Places (Jordan River, Wilderness, Sea of Galilee, Mount of Olives); Offerings (Burnt, Grain, Peace, Sin). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Wisdom Books, Women Of Faith, Jesus Ministry Places, and Offerings"
         }
       ]
     },
@@ -509,7 +518,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Connections Board 10 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 10 resolves by recognizing four Bible groupings: Minor Prophets B (Jonah, Micah, Nahum, Habakkuk); Queens And Royal Women (Vashti, Bathsheba, Athaliah, Jezebel); Patriarch Places (Haran, Bethel, Hebron, Beersheba); Animals In Sacrifice (Bullock, Ram, Lamb, Turtledove). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Minor Prophets B, Queens And Royal Women, Patriarch Places, and Animals In Sacrifice"
         },
         {
           "id": "bc-r011",
@@ -557,7 +567,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Connections Board 11 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 11 resolves by recognizing four Bible groupings: Church Letters A (Romans, 1 Corinthians, 2 Corinthians, Galatians); Gospel Women (Mary Magdalene, Martha, Mary of Bethany, Joanna); Acts Places (Joppa, Antioch, Philippi, Athens); More Revelation Churches (Sardis, Philadelphia, Laodicea, Patmos). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Church Letters A, Gospel Women, Acts Places, and More Revelation Churches"
         },
         {
           "id": "bc-r012",
@@ -605,7 +616,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Connections Board 12 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 12 resolves by recognizing four Bible groupings: General Letters A (Hebrews, James, 1 Peter, 2 Peter); Prophets In Kings (Elijah, Elisha, Micaiah, Huldah); Conquest Places (Jordan, Jericho, Ai, Gibeon); Miracles (Water to wine, Storm calmed, Lazarus raised, Blind man healed). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "General Letters A, Prophets In Kings, Conquest Places, and Miracles"
         }
       ]
     },
@@ -660,7 +672,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Connections Board 13 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 13 resolves by recognizing four Bible groupings: Exodus Places (Egypt, Goshen, Sinai, Moab); Major Prophets As People (Isaiah, Jeremiah, Ezekiel, Daniel); Island Places (Patmos, Cyprus, Malta, Crete); Offerings (Burnt, Grain, Peace, Sin). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Exodus Places, Major Prophets As People, Island Places, and Offerings"
         },
         {
           "id": "bc-r014",
@@ -708,7 +721,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Connections Board 14 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 14 resolves by recognizing four Bible groupings: Prophet Books With One Chapter (Obadiah, Philemon, 2 John, 3 John); Acts Missionaries (Barnabas, Silas, Timothy, Luke); David Places (Bethlehem, Adullam, Ziklag, Jerusalem); Animals In Sacrifice (Bullock, Ram, Lamb, Turtledove). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Prophet Books With One Chapter, Acts Missionaries, David Places, and Animals In Sacrifice"
         },
         {
           "id": "bc-r015",
@@ -756,7 +770,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Connections Board 15 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 15 resolves by recognizing four Bible groupings: Kingdom History Books (2 Samuel, 1 Kings, 2 Kings, 1 Chronicles); Villains And Opponents (Goliath, Haman, Sanballat, Bar-Jesus); Priestly Items (Ephod, Breastplate, Urim, Thummim); More Revelation Churches (Sardis, Philadelphia, Laodicea, Patmos). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Kingdom History Books, Villains And Opponents, Priestly Items, and More Revelation Churches"
         }
       ]
     },
@@ -811,7 +826,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Connections Board 16 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 16 resolves by recognizing four Bible groupings: Major Prophets (Isaiah, Jeremiah, Lamentations, Ezekiel); Exile Faithful (Hananiah, Mishael, Azariah, Mordecai); Exile Places (Chebar, Susa, Persia, Media); Miracles (Water to wine, Storm calmed, Lazarus raised, Blind man healed). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Major Prophets, Exile Faithful, Exile Places, and Miracles"
         },
         {
           "id": "bc-r017",
@@ -859,7 +875,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Connections Board 17 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 17 resolves by recognizing four Bible groupings: Minor Prophets C (Zephaniah, Haggai, Zechariah, Malachi); Acts Converts (Lydia, Cornelius, Ethiopian eunuch, Dionysius); Gospel Objects (Loaves, Nets, Denarius, Alabaster box); Offerings (Burnt, Grain, Peace, Sin). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Minor Prophets C, Acts Converts, Gospel Objects, and Offerings"
         },
         {
           "id": "bc-r018",
@@ -907,7 +924,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Connections Board 18 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 18 resolves by recognizing four Bible groupings: Church Letters B (Ephesians, Philippians, Colossians, 1 Thessalonians); Patriarchs (Abraham, Isaac, Jacob, Joseph); Galilee Places (Capernaum, Cana, Nain, Bethsaida); Animals In Sacrifice (Bullock, Ram, Lamb, Turtledove). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Church Letters B, Patriarchs, Galilee Places, and Animals In Sacrifice"
         }
       ]
     },
@@ -962,7 +980,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Connections Board 19 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 19 resolves by recognizing four Bible groupings: John's Letters (1 John, 2 John, 3 John, Revelation); Return Leaders (Zerubbabel, Joshua, Ezra, Nehemiah); Garden And Early Places (Eden, Ararat, Babel, Ur); More Revelation Churches (Sardis, Philadelphia, Laodicea, Patmos). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "John's Letters, Return Leaders, Garden And Early Places, and More Revelation Churches"
         },
         {
           "id": "bc-r020",
@@ -1010,7 +1029,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Connections Board 20 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 20 resolves by recognizing four Bible groupings: Temple Books (Kings, Chronicles, Ezra, Haggai); Paul's Friends (Aquila, Priscilla, Epaphroditus, Tychicus); Passion Places (Upper Room, Gethsemane, Golgotha, Tomb); Miracles (Water to wine, Storm calmed, Lazarus raised, Blind man healed). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Temple Books, Paul's Friends, Passion Places, and Miracles"
         },
         {
           "id": "bc-r021",
@@ -1058,7 +1078,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Connections Board 21 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 21 resolves by recognizing four Bible groupings: Kingdom History Books (2 Samuel, 1 Kings, 2 Kings, 1 Chronicles); Exile Faithful (Hananiah, Mishael, Azariah, Mordecai); Jesus Ministry Places (Jordan River, Wilderness, Sea of Galilee, Mount of Olives); Faith Chapter Examples (Abel, Enoch, Rahab, Gideon). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Kingdom History Books, Exile Faithful, Jesus Ministry Places, and Faith Chapter Examples"
         }
       ]
     },
@@ -1113,7 +1134,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Connections Board 22 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 22 resolves by recognizing four Bible groupings: Major Prophets (Isaiah, Jeremiah, Lamentations, Ezekiel); Acts Converts (Lydia, Cornelius, Ethiopian eunuch, Dionysius); Patriarch Places (Haran, Bethel, Hebron, Beersheba); I Am Sayings (Bread of life, Light of the world, Good shepherd, True vine). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Major Prophets, Acts Converts, Patriarch Places, and I Am Sayings"
         },
         {
           "id": "bc-r023",
@@ -1161,7 +1183,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Connections Board 23 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 23 resolves by recognizing four Bible groupings: Minor Prophets C (Zephaniah, Haggai, Zechariah, Malachi); Patriarchs (Abraham, Isaac, Jacob, Joseph); Acts Places (Joppa, Antioch, Philippi, Athens); Fruits Of The Spirit A (Love, Joy, Peace, Longsuffering). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Minor Prophets C, Patriarchs, Acts Places, and Fruits Of The Spirit A"
         },
         {
           "id": "bc-r024",
@@ -1209,7 +1232,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Connections Board 24 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 24 resolves by recognizing four Bible groupings: Church Letters B (Ephesians, Philippians, Colossians, 1 Thessalonians); Return Leaders (Zerubbabel, Joshua, Ezra, Nehemiah); Conquest Places (Jordan, Jericho, Ai, Gibeon); New Jerusalem Images (Wall, Gates, River, Tree). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Church Letters B, Return Leaders, Conquest Places, and New Jerusalem Images"
         }
       ]
     },
@@ -1264,7 +1288,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Connections Board 25 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 25 resolves by recognizing four Bible groupings: John's Letters (1 John, 2 John, 3 John, Revelation); Paul's Friends (Aquila, Priscilla, Epaphroditus, Tychicus); Island Places (Patmos, Cyprus, Malta, Crete); Faith Chapter Examples (Abel, Enoch, Rahab, Gideon). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "John's Letters, Paul's Friends, Island Places, and Faith Chapter Examples"
         },
         {
           "id": "bc-r026",
@@ -1312,7 +1337,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Connections Board 26 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 26 resolves by recognizing four Bible groupings: Temple Books (Kings, Chronicles, Ezra, Haggai); Moses Family (Amram, Jochebed, Aaron, Miriam); David Places (Bethlehem, Adullam, Ziklag, Jerusalem); I Am Sayings (Bread of life, Light of the world, Good shepherd, True vine). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Temple Books, Moses Family, David Places, and I Am Sayings"
         },
         {
           "id": "bc-r027",
@@ -1360,7 +1386,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Connections Board 27 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 27 resolves by recognizing four Bible groupings: Books Of The Law (Genesis, Exodus, Leviticus, Numbers); Twelve Apostles A (Peter, Andrew, James, John); Priestly Items (Ephod, Breastplate, Urim, Thummim); Fruits Of The Spirit A (Love, Joy, Peace, Longsuffering). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Books Of The Law, Twelve Apostles A, Priestly Items, and Fruits Of The Spirit A"
         }
       ]
     },
@@ -1415,7 +1442,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Connections Board 28 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 28 resolves by recognizing four Bible groupings: Return History Books (2 Chronicles, Ezra, Nehemiah, Esther); High Priests (Eli, Abiathar, Zadok, Caiaphas); Exile Places (Chebar, Susa, Persia, Media); New Jerusalem Images (Wall, Gates, River, Tree). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Return History Books, High Priests, Exile Places, and New Jerusalem Images"
         },
         {
           "id": "bc-r029",
@@ -1463,7 +1491,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Connections Board 29 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 29 resolves by recognizing four Bible groupings: Minor Prophets A (Hosea, Joel, Amos, Obadiah); Judges (Deborah, Gideon, Jephthah, Samson); Gospel Objects (Loaves, Nets, Denarius, Alabaster box); Prayer Postures (Kneeling, Standing, Lifting hands, Fasting). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Minor Prophets A, Judges, Gospel Objects, and Prayer Postures"
         },
         {
           "id": "bc-r030",
@@ -1511,7 +1540,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Connections Board 30 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 30 resolves by recognizing four Bible groupings: Gospels (Matthew, Mark, Luke, John); Twelve Apostles C (James son of Alphaeus, Thaddaeus, Simon the Zealot, Judas Iscariot); Galilee Places (Capernaum, Cana, Nain, Bethsaida); I Am Sayings (Bread of life, Light of the world, Good shepherd, True vine). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Gospels, Twelve Apostles C, Galilee Places, and I Am Sayings"
         }
       ]
     },
@@ -1566,7 +1596,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Connections Board 31 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 31 resolves by recognizing four Bible groupings: Pastoral Letters (1 Timothy, 2 Timothy, Titus, Philemon); Foreign Rulers (Pharaoh, Nebuchadnezzar, Cyrus, Herod); Garden And Early Places (Eden, Ararat, Babel, Ur); Fruits Of The Spirit A (Love, Joy, Peace, Longsuffering). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Pastoral Letters, Foreign Rulers, Garden And Early Places, and Fruits Of The Spirit A"
         },
         {
           "id": "bc-r032",
@@ -1614,7 +1645,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Connections Board 32 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 32 resolves by recognizing four Bible groupings: Pentateuch People (Adam, Noah, Abraham, Moses); United Monarchy (Saul, David, Solomon, Jonathan); Passion Places (Upper Room, Gethsemane, Golgotha, Tomb); New Jerusalem Images (Wall, Gates, River, Tree). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Pentateuch People, United Monarchy, Passion Places, and New Jerusalem Images"
         },
         {
           "id": "bc-r033",
@@ -1662,7 +1694,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Connections Board 33 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 33 resolves by recognizing four Bible groupings: Poetry Themes (Praise, Wisdom, Vanity, Love); Twelve Apostles C (James son of Alphaeus, Thaddaeus, Simon the Zealot, Judas Iscariot); Exodus Stops (Succoth, Marah, Elim, Rephidim); Faith Chapter Examples (Abel, Enoch, Rahab, Gideon). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Poetry Themes, Twelve Apostles C, Exodus Stops, and Faith Chapter Examples"
         }
       ]
     },
@@ -1717,7 +1750,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Connections Board 34 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 34 resolves by recognizing four Bible groupings: Early History Books (Joshua, Judges, Ruth, 1 Samuel); Women Of Faith (Sarah, Rebekah, Hannah, Elizabeth); Paul Travel Places (Corinth, Ephesus, Troas, Rome); I Am Sayings (Bread of life, Light of the world, Good shepherd, True vine). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Early History Books, Women Of Faith, Paul Travel Places, and I Am Sayings"
         },
         {
           "id": "bc-r035",
@@ -1765,7 +1799,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Connections Board 35 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 35 resolves by recognizing four Bible groupings: Wisdom Books (Job, Psalms, Proverbs, Ecclesiastes); Queens And Royal Women (Vashti, Bathsheba, Athaliah, Jezebel); Judges Places (Ophrah, Timnah, Shiloh, Mizpah); Fruits Of The Spirit A (Love, Joy, Peace, Longsuffering). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Wisdom Books, Queens And Royal Women, Judges Places, and Fruits Of The Spirit A"
         },
         {
           "id": "bc-r036",
@@ -1813,7 +1848,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Connections Board 36 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 36 resolves by recognizing four Bible groupings: Minor Prophets B (Jonah, Micah, Nahum, Habakkuk); Gospel Women (Mary Magdalene, Martha, Mary of Bethany, Joanna); Tabernacle Items (Ark, Altar, Lampstand, Veil); New Jerusalem Images (Wall, Gates, River, Tree). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Minor Prophets B, Gospel Women, Tabernacle Items, and New Jerusalem Images"
         }
       ]
     },
@@ -1868,7 +1904,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Connections Board 37 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 37 resolves by recognizing four Bible groupings: Church Letters A (Romans, 1 Corinthians, 2 Corinthians, Galatians); Prophets In Kings (Elijah, Elisha, Micaiah, Huldah); Kingdom Capitals (Samaria, Damascus, Nineveh, Babylon); Faith Chapter Examples (Abel, Enoch, Rahab, Gideon). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Church Letters A, Prophets In Kings, Kingdom Capitals, and Faith Chapter Examples"
         },
         {
           "id": "bc-r038",
@@ -1916,7 +1953,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Connections Board 38 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 38 resolves by recognizing four Bible groupings: General Letters A (Hebrews, James, 1 Peter, 2 Peter); Major Prophets As People (Isaiah, Jeremiah, Ezekiel, Daniel); Temple Furnishings (Sea, Lavers, Cherubim, Pillars); I Am Sayings (Bread of life, Light of the world, Good shepherd, True vine). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "General Letters A, Major Prophets As People, Temple Furnishings, and I Am Sayings"
         },
         {
           "id": "bc-r039",
@@ -1964,7 +2002,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Connections Board 39 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 39 resolves by recognizing four Bible groupings: Exodus Places (Egypt, Goshen, Sinai, Moab); Acts Missionaries (Barnabas, Silas, Timothy, Luke); Return Places (Jerusalem, Bethany, Emmaus, Nazareth); Fruits Of The Spirit A (Love, Joy, Peace, Longsuffering). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Exodus Places, Acts Missionaries, Return Places, and Fruits Of The Spirit A"
         }
       ]
     },
@@ -2019,7 +2058,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Connections Board 40 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 40 resolves by recognizing four Bible groupings: Prophet Books With One Chapter (Obadiah, Philemon, 2 John, 3 John); Villains And Opponents (Goliath, Haman, Sanballat, Bar-Jesus); Armor Of God (Belt, Breastplate, Shield, Helmet); New Jerusalem Images (Wall, Gates, River, Tree). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Prophet Books With One Chapter, Villains And Opponents, Armor Of God, and New Jerusalem Images"
         },
         {
           "id": "bc-r041",
@@ -2067,7 +2107,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Connections Board 41 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 41 resolves by recognizing four Bible groupings: Wisdom Books (Job, Psalms, Proverbs, Ecclesiastes); Gospel Women (Mary Magdalene, Martha, Mary of Bethany, Joanna); Gospel Objects (Loaves, Nets, Denarius, Alabaster box); Fruits Of The Spirit B (Gentleness, Goodness, Faith, Meekness). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Wisdom Books, Gospel Women, Gospel Objects, and Fruits Of The Spirit B"
         },
         {
           "id": "bc-r042",
@@ -2115,7 +2156,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Connections Board 42 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 42 resolves by recognizing four Bible groupings: Minor Prophets B (Jonah, Micah, Nahum, Habakkuk); Prophets In Kings (Elijah, Elisha, Micaiah, Huldah); Galilee Places (Capernaum, Cana, Nain, Bethsaida); Creation Days (Light, Firmament, Dry land, Lights). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Minor Prophets B, Prophets In Kings, Galilee Places, and Creation Days"
         }
       ]
     },
@@ -2170,7 +2212,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Connections Board 43 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 43 resolves by recognizing four Bible groupings: Church Letters A (Romans, 1 Corinthians, 2 Corinthians, Galatians); Major Prophets As People (Isaiah, Jeremiah, Ezekiel, Daniel); Garden And Early Places (Eden, Ararat, Babel, Ur); Prayer Postures (Kneeling, Standing, Lifting hands, Fasting). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Church Letters A, Major Prophets As People, Garden And Early Places, and Prayer Postures"
         },
         {
           "id": "bc-r044",
@@ -2218,7 +2261,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Connections Board 44 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 44 resolves by recognizing four Bible groupings: General Letters A (Hebrews, James, 1 Peter, 2 Peter); Acts Missionaries (Barnabas, Silas, Timothy, Luke); Passion Places (Upper Room, Gethsemane, Golgotha, Tomb); Spiritual Gifts (Prophecy, Teaching, Giving, Mercy). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "General Letters A, Acts Missionaries, Passion Places, and Spiritual Gifts"
         },
         {
           "id": "bc-r045",
@@ -2266,7 +2310,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Connections Board 45 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 45 resolves by recognizing four Bible groupings: Exodus Places (Egypt, Goshen, Sinai, Moab); Villains And Opponents (Goliath, Haman, Sanballat, Bar-Jesus); Exodus Stops (Succoth, Marah, Elim, Rephidim); Fruits Of The Spirit B (Gentleness, Goodness, Faith, Meekness). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Exodus Places, Villains And Opponents, Exodus Stops, and Fruits Of The Spirit B"
         }
       ]
     },
@@ -2321,7 +2366,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Connections Board 46 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 46 resolves by recognizing four Bible groupings: Prophet Books With One Chapter (Obadiah, Philemon, 2 John, 3 John); Exile Faithful (Hananiah, Mishael, Azariah, Mordecai); Paul Travel Places (Corinth, Ephesus, Troas, Rome); Creation Days (Light, Firmament, Dry land, Lights). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Prophet Books With One Chapter, Exile Faithful, Paul Travel Places, and Creation Days"
         },
         {
           "id": "bc-r047",
@@ -2369,7 +2415,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Connections Board 47 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 47 resolves by recognizing four Bible groupings: Kingdom History Books (2 Samuel, 1 Kings, 2 Kings, 1 Chronicles); Acts Converts (Lydia, Cornelius, Ethiopian eunuch, Dionysius); Judges Places (Ophrah, Timnah, Shiloh, Mizpah); Prayer Postures (Kneeling, Standing, Lifting hands, Fasting). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Kingdom History Books, Acts Converts, Judges Places, and Prayer Postures"
         },
         {
           "id": "bc-r048",
@@ -2417,7 +2464,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Connections Board 48 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 48 resolves by recognizing four Bible groupings: Major Prophets (Isaiah, Jeremiah, Lamentations, Ezekiel); Patriarchs (Abraham, Isaac, Jacob, Joseph); Tabernacle Items (Ark, Altar, Lampstand, Veil); Spiritual Gifts (Prophecy, Teaching, Giving, Mercy). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Major Prophets, Patriarchs, Tabernacle Items, and Spiritual Gifts"
         }
       ]
     },
@@ -2472,7 +2520,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Connections Board 49 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 49 resolves by recognizing four Bible groupings: Minor Prophets C (Zephaniah, Haggai, Zechariah, Malachi); Return Leaders (Zerubbabel, Joshua, Ezra, Nehemiah); Kingdom Capitals (Samaria, Damascus, Nineveh, Babylon); Fruits Of The Spirit B (Gentleness, Goodness, Faith, Meekness). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Minor Prophets C, Return Leaders, Kingdom Capitals, and Fruits Of The Spirit B"
         },
         {
           "id": "bc-r050",
@@ -2520,7 +2569,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Connections Board 50 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 50 resolves by recognizing four Bible groupings: Church Letters B (Ephesians, Philippians, Colossians, 1 Thessalonians); Paul's Friends (Aquila, Priscilla, Epaphroditus, Tychicus); Temple Furnishings (Sea, Lavers, Cherubim, Pillars); Creation Days (Light, Firmament, Dry land, Lights). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Church Letters B, Paul's Friends, Temple Furnishings, and Creation Days"
         },
         {
           "id": "bc-r051",
@@ -2568,7 +2618,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Connections Board 51 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 51 resolves by recognizing four Bible groupings: John's Letters (1 John, 2 John, 3 John, Revelation); Moses Family (Amram, Jochebed, Aaron, Miriam); Return Places (Jerusalem, Bethany, Emmaus, Nazareth); Prayer Postures (Kneeling, Standing, Lifting hands, Fasting). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "John's Letters, Moses Family, Return Places, and Prayer Postures"
         }
       ]
     },
@@ -2623,7 +2674,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Connections Board 52 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 52 resolves by recognizing four Bible groupings: Temple Books (Kings, Chronicles, Ezra, Haggai); Twelve Apostles A (Peter, Andrew, James, John); Armor Of God (Belt, Breastplate, Shield, Helmet); Spiritual Gifts (Prophecy, Teaching, Giving, Mercy). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Temple Books, Twelve Apostles A, Armor Of God, and Spiritual Gifts"
         },
         {
           "id": "bc-r053",
@@ -2671,7 +2723,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Connections Board 53 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 53 resolves by recognizing four Bible groupings: Books Of The Law (Genesis, Exodus, Leviticus, Numbers); High Priests (Eli, Abiathar, Zadok, Caiaphas); Jesus Ministry Places (Jordan River, Wilderness, Sea of Galilee, Mount of Olives); Fruits Of The Spirit B (Gentleness, Goodness, Faith, Meekness). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Books Of The Law, High Priests, Jesus Ministry Places, and Fruits Of The Spirit B"
         },
         {
           "id": "bc-r054",
@@ -2719,7 +2772,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Connections Board 54 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 54 resolves by recognizing four Bible groupings: Return History Books (2 Chronicles, Ezra, Nehemiah, Esther); Judges (Deborah, Gideon, Jephthah, Samson); Patriarch Places (Haran, Bethel, Hebron, Beersheba); Creation Days (Light, Firmament, Dry land, Lights). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Return History Books, Judges, Patriarch Places, and Creation Days"
         }
       ]
     },
@@ -2774,7 +2828,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Connections Board 55 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 55 resolves by recognizing four Bible groupings: Minor Prophets A (Hosea, Joel, Amos, Obadiah); Twelve Apostles B (Philip, Bartholomew, Thomas, Matthew); Acts Places (Joppa, Antioch, Philippi, Athens); Prayer Postures (Kneeling, Standing, Lifting hands, Fasting). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Minor Prophets A, Twelve Apostles B, Acts Places, and Prayer Postures"
         },
         {
           "id": "bc-r056",
@@ -2822,7 +2877,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Connections Board 56 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 56 resolves by recognizing four Bible groupings: Gospels (Matthew, Mark, Luke, John); Foreign Rulers (Pharaoh, Nebuchadnezzar, Cyrus, Herod); Conquest Places (Jordan, Jericho, Ai, Gibeon); Spiritual Gifts (Prophecy, Teaching, Giving, Mercy). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Gospels, Foreign Rulers, Conquest Places, and Spiritual Gifts"
         },
         {
           "id": "bc-r057",
@@ -2870,7 +2926,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Connections Board 57 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 57 resolves by recognizing four Bible groupings: Pastoral Letters (1 Timothy, 2 Timothy, Titus, Philemon); United Monarchy (Saul, David, Solomon, Jonathan); Island Places (Patmos, Cyprus, Malta, Crete); Fruits Of The Spirit B (Gentleness, Goodness, Faith, Meekness). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Pastoral Letters, United Monarchy, Island Places, and Fruits Of The Spirit B"
         }
       ]
     },
@@ -2925,7 +2982,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Connections Board 58 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 58 resolves by recognizing four Bible groupings: Pentateuch People (Adam, Noah, Abraham, Moses); Twelve Apostles C (James son of Alphaeus, Thaddaeus, Simon the Zealot, Judas Iscariot); David Places (Bethlehem, Adullam, Ziklag, Jerusalem); Creation Days (Light, Firmament, Dry land, Lights). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Pentateuch People, Twelve Apostles C, David Places, and Creation Days"
         },
         {
           "id": "bc-r059",
@@ -2973,7 +3031,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Connections Board 59 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 59 resolves by recognizing four Bible groupings: Poetry Themes (Praise, Wisdom, Vanity, Love); Women Of Faith (Sarah, Rebekah, Hannah, Elizabeth); Priestly Items (Ephod, Breastplate, Urim, Thummim); Prayer Postures (Kneeling, Standing, Lifting hands, Fasting). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Poetry Themes, Women Of Faith, Priestly Items, and Prayer Postures"
         },
         {
           "id": "bc-r060",
@@ -3021,7 +3080,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Connections Board 60 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 60 resolves by recognizing four Bible groupings: Early History Books (Joshua, Judges, Ruth, 1 Samuel); Queens And Royal Women (Vashti, Bathsheba, Athaliah, Jezebel); Exile Places (Chebar, Susa, Persia, Media); Spiritual Gifts (Prophecy, Teaching, Giving, Mercy). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Early History Books, Queens And Royal Women, Exile Places, and Spiritual Gifts"
         }
       ]
     },
@@ -3076,7 +3136,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Connections Board 1 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 1 resolves by recognizing four Bible groupings: Books Of The Law (Genesis, Exodus, Leviticus, Numbers); Early History Books (Joshua, Judges, Ruth, 1 Samuel); Kingdom History Books (2 Samuel, 1 Kings, 2 Kings, 1 Chronicles); Return History Books (2 Chronicles, Ezra, Nehemiah, Esther). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Books Of The Law, Early History Books, Kingdom History Books, and Return History Books"
         },
         {
           "id": "bc-r062",
@@ -3124,7 +3185,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Connections Board 2 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 2 resolves by recognizing four Bible groupings: Books Of The Law (Genesis, Exodus, Leviticus, Numbers); Early History Books (Joshua, Judges, Ruth, 1 Samuel); Kingdom History Books (2 Samuel, 1 Kings, 2 Kings, 1 Chronicles); Wisdom Books (Job, Psalms, Proverbs, Ecclesiastes). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Books Of The Law, Early History Books, Kingdom History Books, and Wisdom Books"
         },
         {
           "id": "bc-r063",
@@ -3172,7 +3234,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Connections Board 3 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 3 resolves by recognizing four Bible groupings: Books Of The Law (Genesis, Exodus, Leviticus, Numbers); Early History Books (Joshua, Judges, Ruth, 1 Samuel); Kingdom History Books (2 Samuel, 1 Kings, 2 Kings, 1 Chronicles); Major Prophets (Isaiah, Jeremiah, Lamentations, Ezekiel). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Books Of The Law, Early History Books, Kingdom History Books, and Major Prophets"
         }
       ]
     },
@@ -3227,7 +3290,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Connections Board 4 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 4 resolves by recognizing four Bible groupings: Books Of The Law (Genesis, Exodus, Leviticus, Numbers); Early History Books (Joshua, Judges, Ruth, 1 Samuel); Kingdom History Books (2 Samuel, 1 Kings, 2 Kings, 1 Chronicles); Minor Prophets A (Hosea, Joel, Amos, Obadiah). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Books Of The Law, Early History Books, Kingdom History Books, and Minor Prophets A"
         },
         {
           "id": "bc-r065",
@@ -3275,7 +3339,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Connections Board 5 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 5 resolves by recognizing four Bible groupings: Books Of The Law (Genesis, Exodus, Leviticus, Numbers); Early History Books (Joshua, Judges, Ruth, 1 Samuel); Kingdom History Books (2 Samuel, 1 Kings, 2 Kings, 1 Chronicles); Minor Prophets B (Jonah, Micah, Nahum, Habakkuk). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Books Of The Law, Early History Books, Kingdom History Books, and Minor Prophets B"
         },
         {
           "id": "bc-r066",
@@ -3323,7 +3388,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Connections Board 6 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 6 resolves by recognizing four Bible groupings: Books Of The Law (Genesis, Exodus, Leviticus, Numbers); Early History Books (Joshua, Judges, Ruth, 1 Samuel); Kingdom History Books (2 Samuel, 1 Kings, 2 Kings, 1 Chronicles); Minor Prophets C (Zephaniah, Haggai, Zechariah, Malachi). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Books Of The Law, Early History Books, Kingdom History Books, and Minor Prophets C"
         }
       ]
     },
@@ -3378,7 +3444,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Connections Board 7 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 7 resolves by recognizing four Bible groupings: Books Of The Law (Genesis, Exodus, Leviticus, Numbers); Early History Books (Joshua, Judges, Ruth, 1 Samuel); Kingdom History Books (2 Samuel, 1 Kings, 2 Kings, 1 Chronicles); Gospels (Matthew, Mark, Luke, John). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Books Of The Law, Early History Books, Kingdom History Books, and Gospels"
         },
         {
           "id": "bc-r068",
@@ -3426,7 +3493,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Connections Board 8 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 8 resolves by recognizing four Bible groupings: Books Of The Law (Genesis, Exodus, Leviticus, Numbers); Early History Books (Joshua, Judges, Ruth, 1 Samuel); Kingdom History Books (2 Samuel, 1 Kings, 2 Kings, 1 Chronicles); Church Letters A (Romans, 1 Corinthians, 2 Corinthians, Galatians). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Books Of The Law, Early History Books, Kingdom History Books, and Church Letters A"
         },
         {
           "id": "bc-r069",
@@ -3474,7 +3542,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Connections Board 9 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 9 resolves by recognizing four Bible groupings: Books Of The Law (Genesis, Exodus, Leviticus, Numbers); Early History Books (Joshua, Judges, Ruth, 1 Samuel); Kingdom History Books (2 Samuel, 1 Kings, 2 Kings, 1 Chronicles); Church Letters B (Ephesians, Philippians, Colossians, 1 Thessalonians). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Books Of The Law, Early History Books, Kingdom History Books, and Church Letters B"
         }
       ]
     },
@@ -3529,7 +3598,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Connections Board 10 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 10 resolves by recognizing four Bible groupings: Books Of The Law (Genesis, Exodus, Leviticus, Numbers); Early History Books (Joshua, Judges, Ruth, 1 Samuel); Kingdom History Books (2 Samuel, 1 Kings, 2 Kings, 1 Chronicles); Pastoral Letters (1 Timothy, 2 Timothy, Titus, Philemon). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Books Of The Law, Early History Books, Kingdom History Books, and Pastoral Letters"
         },
         {
           "id": "bc-r071",
@@ -3577,7 +3647,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Connections Board 11 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 11 resolves by recognizing four Bible groupings: Books Of The Law (Genesis, Exodus, Leviticus, Numbers); Early History Books (Joshua, Judges, Ruth, 1 Samuel); Kingdom History Books (2 Samuel, 1 Kings, 2 Kings, 1 Chronicles); General Letters A (Hebrews, James, 1 Peter, 2 Peter). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Books Of The Law, Early History Books, Kingdom History Books, and General Letters A"
         },
         {
           "id": "bc-r072",
@@ -3625,7 +3696,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Connections Board 12 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 12 resolves by recognizing four Bible groupings: Books Of The Law (Genesis, Exodus, Leviticus, Numbers); Early History Books (Joshua, Judges, Ruth, 1 Samuel); Kingdom History Books (2 Samuel, 1 Kings, 2 Kings, 1 Chronicles); John's Letters (1 John, 2 John, 3 John, Revelation). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Books Of The Law, Early History Books, Kingdom History Books, and John's Letters"
         }
       ]
     },
@@ -3680,7 +3752,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Connections Board 13 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 13 resolves by recognizing four Bible groupings: Books Of The Law (Genesis, Exodus, Leviticus, Numbers); Early History Books (Joshua, Judges, Ruth, 1 Samuel); Kingdom History Books (2 Samuel, 1 Kings, 2 Kings, 1 Chronicles); Patriarchs (Abraham, Isaac, Jacob, Joseph). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Books Of The Law, Early History Books, Kingdom History Books, and Patriarchs"
         },
         {
           "id": "bc-r074",
@@ -3728,7 +3801,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Connections Board 14 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 14 resolves by recognizing four Bible groupings: Books Of The Law (Genesis, Exodus, Leviticus, Numbers); Early History Books (Joshua, Judges, Ruth, 1 Samuel); Kingdom History Books (2 Samuel, 1 Kings, 2 Kings, 1 Chronicles); Moses Family (Amram, Jochebed, Aaron, Miriam). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Books Of The Law, Early History Books, Kingdom History Books, and Moses Family"
         },
         {
           "id": "bc-r075",
@@ -3776,7 +3850,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Connections Board 15 and how it connects to the Bible before continuing."
+          "teachingNote": "Connections Board 15 resolves by recognizing four Bible groupings: Books Of The Law (Genesis, Exodus, Leviticus, Numbers); Early History Books (Joshua, Judges, Ruth, 1 Samuel); Kingdom History Books (2 Samuel, 1 Kings, 2 Kings, 1 Chronicles); Judges (Deborah, Gideon, Jephthah, Samson). Those category labels explain why each item belongs with its set.",
+          "scriptureReference": "Books Of The Law, Early History Books, Kingdom History Books, and Judges"
         }
       ]
     }

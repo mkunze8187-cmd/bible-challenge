@@ -26,7 +26,8 @@
           "endFlavorText": "How the wages of sin leave a life.",
           "theme": "Bible Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"sin\" into \"sad\"."
+          "scriptureReference": "Romans 6:23",
+          "teachingNote": "Romans 6:23 explains why sin is serious: its wages are death, while God's gift is eternal life through Christ."
         },
         {
           "id": "wl-r002-cat-dog",
@@ -44,7 +45,8 @@
           "endFlavorText": "Another animal Noah gathered two by two.",
           "theme": "Bible Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"cat\" into \"dog\"."
+          "scriptureReference": "Genesis 7:8-9",
+          "teachingNote": "Genesis 7:8-9 says animals entered the ark by pairs; this ladder uses familiar animals as a wordplay reminder of that detail."
         },
         {
           "id": "wl-r003-hot-old",
@@ -65,7 +67,8 @@
           "endFlavorText": "What the covenant given at Sinai came to be called.",
           "theme": "Bible Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"hot\" into \"old\"."
+          "scriptureReference": "Revelation 3:15-16; Hebrews 8:13",
+          "teachingNote": "Revelation rebukes lukewarm faith as neither cold nor hot, while Hebrews contrasts the old covenant with the new."
         },
         {
           "id": "wl-r004-law-sin",
@@ -84,7 +87,8 @@
           "endFlavorText": "What the law reveals in every heart.",
           "theme": "Bible Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"law\" into \"sin\"."
+          "scriptureReference": "Exodus 20:1-17; Romans 7:7",
+          "teachingNote": "Exodus 20 gives the commandments, and Romans 7:7 says the law exposes sin by showing what God forbids."
         },
         {
           "id": "wl-r005-hope-love",
@@ -102,7 +106,8 @@
           "endFlavorText": "The greatest of the three that abide.",
           "theme": "Bible Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"hope\" into \"love\"."
+          "scriptureReference": "1 Corinthians 13:13",
+          "teachingNote": "1 Corinthians 13:13 names faith, hope, and love as abiding virtues, then says love is the greatest."
         },
         {
           "id": "wl-r006-rock-sand",
@@ -121,7 +126,8 @@
           "endFlavorText": "What the foolish man built his house upon.",
           "theme": "Bible Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"rock\" into \"sand\"."
+          "scriptureReference": "Matthew 7:24-27",
+          "teachingNote": "Jesus contrasts the wise builder on rock with the foolish builder on sand to picture hearing and doing His words."
         }
       ]
     },
@@ -147,7 +153,8 @@
           "endFlavorText": "A comfort promised to those who trust God.",
           "theme": "Bible Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"cold\" into \"warm\"."
+          "scriptureReference": "Revelation 3:15-16; James 2:16",
+          "teachingNote": "Revelation uses cold and hot to expose lukewarm faith; the word warm is only a loose comfort image, not the main biblical point."
         },
         {
           "id": "wl-r008-wise-kind",
@@ -165,7 +172,8 @@
           "endFlavorText": "A fruit of the Spirit, per Galatians 5.",
           "theme": "Bible Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"wise\" into \"kind\"."
+          "scriptureReference": "1 Kings 3:9-12; Galatians 5:22",
+          "teachingNote": "Solomon asked for an understanding heart, and Galatians 5:22 lists kindness among the Spirit's fruit."
         },
         {
           "id": "wl-r009-give-take",
@@ -184,7 +192,8 @@
           "endFlavorText": "What the thief on the cross had done in his life.",
           "theme": "Bible Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"give\" into \"take\"."
+          "scriptureReference": "Acts 20:35; Luke 23:41-43",
+          "teachingNote": "Acts preserves Jesus's saying that giving is more blessed, while the repentant criminal admits he deserved his punishment."
         },
         {
           "id": "wl-r010-pun-bog",
@@ -202,7 +211,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"pun\" into \"bog\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is pun -> bun -> bug -> bog, with one letter changing at each step."
         },
         {
           "id": "wl-r011-day-ski",
@@ -220,7 +229,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"day\" into \"ski\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is day -> say -> sky -> ski, with one letter changing at each step."
         },
         {
           "id": "wl-r012-giant-blink",
@@ -241,7 +250,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"giant\" into \"blink\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is giant -> grant -> grand -> brand -> bland -> blank -> blink, with one letter changing at each step."
         }
       ]
     },
@@ -268,7 +277,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"barn\" into \"rode\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is barn -> bare -> care -> core -> code -> rode, with one letter changing at each step."
         },
         {
           "id": "wl-r014-nap-pea",
@@ -288,7 +297,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"nap\" into \"pea\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is nap -> cap -> can -> pan -> pen -> pea, with one letter changing at each step."
         },
         {
           "id": "wl-r015-cod-tar",
@@ -307,7 +316,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"cod\" into \"tar\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is cod -> cob -> cab -> car -> tar, with one letter changing at each step."
         },
         {
           "id": "wl-r016-vast-hose",
@@ -326,7 +335,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"vast\" into \"hose\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is vast -> cast -> cost -> host -> hose, with one letter changing at each step."
         },
         {
           "id": "wl-r017-mint-want",
@@ -345,7 +354,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"mint\" into \"want\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is mint -> mind -> wind -> wand -> want, with one letter changing at each step."
         },
         {
           "id": "wl-r018-give-kick",
@@ -366,7 +375,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"give\" into \"kick\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is give -> dive -> dine -> pine -> pink -> pick -> kick, with one letter changing at each step."
         }
       ]
     },
@@ -395,7 +404,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"node\" into \"pear\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is node -> none -> bone -> bond -> bend -> bead -> bear -> pear, with one letter changing at each step."
         },
         {
           "id": "wl-r020-hay-aim",
@@ -413,7 +422,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"hay\" into \"aim\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is hay -> ham -> him -> aim, with one letter changing at each step."
         },
         {
           "id": "wl-r021-best-foot",
@@ -432,7 +441,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"best\" into \"foot\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is best -> beat -> boat -> boot -> foot, with one letter changing at each step."
         },
         {
           "id": "wl-r022-lost-carp",
@@ -451,7 +460,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"lost\" into \"carp\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is lost -> cost -> cast -> cart -> carp, with one letter changing at each step."
         },
         {
           "id": "wl-r023-gas-mug",
@@ -471,7 +480,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"gas\" into \"mug\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is gas -> was -> wag -> bag -> bug -> mug, with one letter changing at each step."
         },
         {
           "id": "wl-r024-west-boat",
@@ -489,7 +498,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"west\" into \"boat\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is west -> best -> beat -> boat, with one letter changing at each step."
         }
       ]
     },
@@ -517,7 +526,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"seed\" into \"fade\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is seed -> send -> sand -> sane -> same -> fame -> fade, with one letter changing at each step."
         },
         {
           "id": "wl-r026-more-join",
@@ -536,7 +545,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"more\" into \"join\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is more -> core -> corn -> coin -> join, with one letter changing at each step."
         },
         {
           "id": "wl-r027-log-old",
@@ -558,7 +567,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"log\" into \"old\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is log -> bog -> big -> bid -> aid -> add -> odd -> old, with one letter changing at each step."
         },
         {
           "id": "wl-r028-loan-heel",
@@ -578,7 +587,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"loan\" into \"heel\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is loan -> lean -> lead -> head -> heal -> heel, with one letter changing at each step."
         },
         {
           "id": "wl-r029-air-got",
@@ -598,7 +607,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"air\" into \"got\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is air -> aid -> hid -> hit -> hot -> got, with one letter changing at each step."
         },
         {
           "id": "wl-r030-hug-mat",
@@ -616,7 +625,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"hug\" into \"mat\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is hug -> hut -> hat -> mat, with one letter changing at each step."
         }
       ]
     },
@@ -641,7 +650,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"bit\" into \"bob\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is bit -> big -> bog -> bob, with one letter changing at each step."
         },
         {
           "id": "wl-r032-her-nor",
@@ -662,7 +671,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"her\" into \"nor\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is her -> hen -> den -> dew -> new -> now -> nor, with one letter changing at each step."
         },
         {
           "id": "wl-r033-week-goat",
@@ -683,7 +692,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"week\" into \"goat\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is week -> weak -> wear -> bear -> beat -> boat -> goat, with one letter changing at each step."
         },
         {
           "id": "wl-r034-home-wood",
@@ -702,7 +711,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"home\" into \"wood\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is home -> hole -> hold -> hood -> wood, with one letter changing at each step."
         },
         {
           "id": "wl-r035-and-guy",
@@ -722,7 +731,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"and\" into \"guy\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is and -> aid -> bid -> bud -> buy -> guy, with one letter changing at each step."
         },
         {
           "id": "wl-r036-help-sock",
@@ -744,7 +753,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"help\" into \"sock\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is help -> held -> hold -> hood -> hook -> look -> lock -> sock, with one letter changing at each step."
         }
       ]
     },
@@ -769,7 +778,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"fog\" into \"bun\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is fog -> bog -> bug -> bun, with one letter changing at each step."
         },
         {
           "id": "wl-r038-slum-wine",
@@ -791,7 +800,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"slum\" into \"wine\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is slum -> slim -> slid -> said -> sand -> wand -> wind -> wine, with one letter changing at each step."
         },
         {
           "id": "wl-r039-plate-while",
@@ -812,7 +821,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"plate\" into \"while\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is plate -> slate -> state -> stale -> shale -> whale -> while, with one letter changing at each step."
         },
         {
           "id": "wl-r040-art-hat",
@@ -832,7 +841,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"art\" into \"hat\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is art -> arm -> aim -> him -> ham -> hat, with one letter changing at each step."
         },
         {
           "id": "wl-r041-reed-boot",
@@ -852,7 +861,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"reed\" into \"boot\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is reed -> read -> bead -> beat -> boat -> boot, with one letter changing at each step."
         },
         {
           "id": "wl-r042-six-tea",
@@ -871,7 +880,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"six\" into \"tea\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is six -> sin -> tin -> ten -> tea, with one letter changing at each step."
         }
       ]
     },
@@ -896,7 +905,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"pad\" into \"wag\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is pad -> bad -> bag -> wag, with one letter changing at each step."
         },
         {
           "id": "wl-r044-holy-coin",
@@ -916,7 +925,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"holy\" into \"coin\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is holy -> hold -> cold -> cord -> corn -> coin, with one letter changing at each step."
         },
         {
           "id": "wl-r045-loaf-lore",
@@ -934,7 +943,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"loaf\" into \"lore\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is loaf -> load -> lord -> lore, with one letter changing at each step."
         },
         {
           "id": "wl-r046-hurl-tend",
@@ -956,7 +965,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"hurl\" into \"tend\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is hurl -> hull -> hell -> heal -> head -> bead -> bend -> tend, with one letter changing at each step."
         },
         {
           "id": "wl-r047-joy-cod",
@@ -974,7 +983,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"joy\" into \"cod\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is joy -> job -> cob -> cod, with one letter changing at each step."
         },
         {
           "id": "wl-r048-sick-feed",
@@ -995,7 +1004,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"sick\" into \"feed\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is sick -> sink -> sank -> sand -> send -> seed -> feed, with one letter changing at each step."
         }
       ]
     },
@@ -1021,7 +1030,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"bee\" into \"hot\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is bee -> beg -> bog -> hog -> hot, with one letter changing at each step."
         },
         {
           "id": "wl-r050-poem-kiss",
@@ -1042,7 +1051,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"poem\" into \"kiss\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is poem -> poet -> post -> most -> mist -> miss -> kiss, with one letter changing at each step."
         },
         {
           "id": "wl-r051-kit-tip",
@@ -1060,7 +1069,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"kit\" into \"tip\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is kit -> hit -> hip -> tip, with one letter changing at each step."
         },
         {
           "id": "wl-r052-spar-chat",
@@ -1083,7 +1092,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"spar\" into \"chat\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is spar -> spur -> sour -> soul -> soil -> coil -> coal -> coat -> chat, with one letter changing at each step."
         },
         {
           "id": "wl-r053-code-tear",
@@ -1106,7 +1115,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"code\" into \"tear\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is code -> come -> home -> hole -> hold -> held -> head -> hear -> tear, with one letter changing at each step."
         },
         {
           "id": "wl-r054-vow-fan",
@@ -1125,7 +1134,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"vow\" into \"fan\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is vow -> cow -> con -> can -> fan, with one letter changing at each step."
         }
       ]
     },
@@ -1150,7 +1159,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"fat\" into \"kid\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is fat -> fit -> kit -> kid, with one letter changing at each step."
         },
         {
           "id": "wl-r056-gift-easy",
@@ -1170,7 +1179,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"gift\" into \"easy\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is gift -> lift -> list -> last -> east -> easy, with one letter changing at each step."
         },
         {
           "id": "wl-r057-sty-mat",
@@ -1188,7 +1197,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"sty\" into \"mat\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is sty -> say -> may -> mat, with one letter changing at each step."
         },
         {
           "id": "wl-r058-spin-blot",
@@ -1207,7 +1216,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"spin\" into \"blot\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is spin -> spit -> spot -> slot -> blot, with one letter changing at each step."
         },
         {
           "id": "wl-r059-vow-gem",
@@ -1227,7 +1236,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"vow\" into \"gem\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is vow -> cow -> cot -> got -> get -> gem, with one letter changing at each step."
         },
         {
           "id": "wl-r060-fun-lap",
@@ -1246,7 +1255,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"fun\" into \"lap\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is fun -> fan -> can -> cap -> lap, with one letter changing at each step."
         }
       ]
     },
@@ -1271,7 +1280,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"bag\" into \"mod\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is bag -> bad -> mad -> mod, with one letter changing at each step."
         },
         {
           "id": "wl-r062-whip-plus",
@@ -1292,7 +1301,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"whip\" into \"plus\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is whip -> ship -> slip -> slim -> slum -> plum -> plus, with one letter changing at each step."
         },
         {
           "id": "wl-r063-coal-call",
@@ -1312,7 +1321,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"coal\" into \"call\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is coal -> cool -> tool -> toll -> tall -> call, with one letter changing at each step."
         },
         {
           "id": "wl-r064-sub-oar",
@@ -1331,7 +1340,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"sub\" into \"oar\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is sub -> cub -> cab -> car -> oar, with one letter changing at each step."
         },
         {
           "id": "wl-r065-than-salt",
@@ -1354,7 +1363,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"than\" into \"salt\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is than -> that -> chat -> coat -> cost -> cast -> mast -> malt -> salt, with one letter changing at each step."
         },
         {
           "id": "wl-r066-them-leaf",
@@ -1377,7 +1386,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"them\" into \"leaf\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is them -> then -> teen -> seen -> seed -> deed -> dead -> lead -> leaf, with one letter changing at each step."
         }
       ]
     },
@@ -1403,7 +1412,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"hip\" into \"net\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is hip -> hit -> bit -> bet -> net, with one letter changing at each step."
         },
         {
           "id": "wl-r068-pick-milk",
@@ -1421,7 +1430,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"pick\" into \"milk\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is pick -> sick -> silk -> milk, with one letter changing at each step."
         },
         {
           "id": "wl-r069-tab-hid",
@@ -1440,7 +1449,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"tab\" into \"hid\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is tab -> tap -> tip -> hip -> hid, with one letter changing at each step."
         },
         {
           "id": "wl-r070-pea-dug",
@@ -1460,7 +1469,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"pea\" into \"dug\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is pea -> pen -> den -> din -> dig -> dug, with one letter changing at each step."
         },
         {
           "id": "wl-r071-wit-fun",
@@ -1478,7 +1487,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"wit\" into \"fun\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is wit -> fit -> fin -> fun, with one letter changing at each step."
         },
         {
           "id": "wl-r072-dear-font",
@@ -1499,7 +1508,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"dear\" into \"font\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is dear -> bear -> bead -> bend -> bond -> fond -> font, with one letter changing at each step."
         }
       ]
     },
@@ -1525,7 +1534,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"mill\" into \"menu\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is mill -> mild -> mind -> mend -> menu, with one letter changing at each step."
         },
         {
           "id": "wl-r074-item-goat",
@@ -1547,7 +1556,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"item\" into \"goat\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is item -> stem -> seem -> seam -> beam -> beat -> boat -> goat, with one letter changing at each step."
         },
         {
           "id": "wl-r075-lung-thin",
@@ -1570,7 +1579,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"lung\" into \"thin\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is lung -> long -> lone -> lore -> core -> corn -> coin -> chin -> thin, with one letter changing at each step."
         },
         {
           "id": "wl-r076-rib-bet",
@@ -1589,7 +1598,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"rib\" into \"bet\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is rib -> rid -> bid -> bed -> bet, with one letter changing at each step."
         },
         {
           "id": "wl-r077-two-jog",
@@ -1608,7 +1617,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"two\" into \"jog\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is two -> too -> toy -> joy -> jog, with one letter changing at each step."
         },
         {
           "id": "wl-r078-rang-said",
@@ -1626,7 +1635,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"rang\" into \"said\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is rang -> sang -> sand -> said, with one letter changing at each step."
         }
       ]
     },
@@ -1653,7 +1662,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"who\" into \"cab\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is who -> why -> way -> wan -> can -> cab, with one letter changing at each step."
         },
         {
           "id": "wl-r080-pump-mask",
@@ -1676,7 +1685,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"pump\" into \"mask\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is pump -> lump -> lamp -> camp -> came -> care -> mare -> mark -> mask, with one letter changing at each step."
         },
         {
           "id": "wl-r081-dub-toy",
@@ -1695,7 +1704,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"dub\" into \"toy\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is dub -> sub -> sob -> soy -> toy, with one letter changing at each step."
         },
         {
           "id": "wl-r082-haze-chip",
@@ -1717,7 +1726,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"haze\" into \"chip\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is haze -> hare -> care -> core -> corn -> coin -> chin -> chip, with one letter changing at each step."
         },
         {
           "id": "wl-r083-cart-wise",
@@ -1736,7 +1745,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"cart\" into \"wise\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is cart -> care -> ware -> wire -> wise, with one letter changing at each step."
         },
         {
           "id": "wl-r084-yarn-type",
@@ -1757,7 +1766,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"yarn\" into \"type\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is yarn -> barn -> bare -> bake -> take -> tape -> type, with one letter changing at each step."
         }
       ]
     },
@@ -1785,7 +1794,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"very\" into \"tide\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is very -> verb -> herb -> here -> hire -> hide -> tide, with one letter changing at each step."
         },
         {
           "id": "wl-r086-good-harm",
@@ -1805,7 +1814,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"good\" into \"harm\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is good -> food -> ford -> form -> farm -> harm, with one letter changing at each step."
         },
         {
           "id": "wl-r087-fin-old",
@@ -1826,7 +1835,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"fin\" into \"old\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is fin -> bin -> bid -> aid -> add -> odd -> old, with one letter changing at each step."
         },
         {
           "id": "wl-r088-soap-vice",
@@ -1848,7 +1857,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"soap\" into \"vice\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is soap -> soak -> sock -> rock -> rack -> race -> rice -> vice, with one letter changing at each step."
         },
         {
           "id": "wl-r089-cool-loft",
@@ -1868,7 +1877,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"cool\" into \"loft\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is cool -> coal -> coat -> cost -> lost -> loft, with one letter changing at each step."
         },
         {
           "id": "wl-r090-wolf-boom",
@@ -1889,7 +1898,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"wolf\" into \"boom\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is wolf -> golf -> gold -> bold -> bolt -> boot -> boom, with one letter changing at each step."
         }
       ]
     },
@@ -1919,7 +1928,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"dusk\" into \"road\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is dusk -> dust -> just -> jest -> best -> beat -> bead -> read -> road, with one letter changing at each step."
         },
         {
           "id": "wl-r092-was-rid",
@@ -1938,7 +1947,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"was\" into \"rid\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is was -> wag -> rag -> rig -> rid, with one letter changing at each step."
         },
         {
           "id": "wl-r093-dew-jog",
@@ -1958,7 +1967,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"dew\" into \"jog\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is dew -> den -> din -> dig -> dog -> jog, with one letter changing at each step."
         },
         {
           "id": "wl-r094-tuna-lamb",
@@ -1980,7 +1989,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"tuna\" into \"lamb\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is tuna -> tune -> dune -> dine -> dime -> lime -> limb -> lamb, with one letter changing at each step."
         },
         {
           "id": "wl-r095-put-wok",
@@ -2000,7 +2009,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"put\" into \"wok\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is put -> cut -> cot -> con -> won -> wok, with one letter changing at each step."
         },
         {
           "id": "wl-r096-god-ray",
@@ -2019,7 +2028,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"god\" into \"ray\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is god -> got -> rot -> rat -> ray, with one letter changing at each step."
         }
       ]
     },
@@ -2046,7 +2055,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"yak\" into \"kin\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is yak -> yam -> dam -> dim -> din -> kin, with one letter changing at each step."
         },
         {
           "id": "wl-r098-quiz-sour",
@@ -2069,7 +2078,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"quiz\" into \"sour\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is quiz -> quit -> suit -> spit -> spin -> span -> spar -> spur -> sour, with one letter changing at each step."
         },
         {
           "id": "wl-r099-jump-bake",
@@ -2090,7 +2099,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"jump\" into \"bake\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is jump -> lump -> lamp -> camp -> came -> cake -> bake, with one letter changing at each step."
         },
         {
           "id": "wl-r100-act-kin",
@@ -2110,7 +2119,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"act\" into \"kin\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is act -> ant -> and -> aid -> kid -> kin, with one letter changing at each step."
         },
         {
           "id": "wl-r101-rid-paw",
@@ -2129,7 +2138,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"rid\" into \"paw\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is rid -> bid -> bad -> pad -> paw, with one letter changing at each step."
         },
         {
           "id": "wl-r102-tin-yap",
@@ -2147,7 +2156,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"tin\" into \"yap\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is tin -> tan -> tap -> yap, with one letter changing at each step."
         }
       ]
     },
@@ -2175,7 +2184,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"base\" into \"boss\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is base -> case -> cast -> cost -> lost -> loss -> boss, with one letter changing at each step."
         },
         {
           "id": "wl-r104-late-zero",
@@ -2195,7 +2204,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"late\" into \"zero\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is late -> hate -> hare -> here -> hero -> zero, with one letter changing at each step."
         },
         {
           "id": "wl-r105-loss-left",
@@ -2213,7 +2222,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"loss\" into \"left\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is loss -> lost -> loft -> left, with one letter changing at each step."
         },
         {
           "id": "wl-r106-wax-rig",
@@ -2231,7 +2240,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"wax\" into \"rig\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is wax -> wag -> rag -> rig, with one letter changing at each step."
         },
         {
           "id": "wl-r107-ant-sir",
@@ -2250,7 +2259,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"ant\" into \"sir\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is ant -> and -> aid -> air -> sir, with one letter changing at each step."
         },
         {
           "id": "wl-r108-tea-lad",
@@ -2270,7 +2279,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"tea\" into \"lad\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is tea -> pea -> pen -> pan -> pad -> lad, with one letter changing at each step."
         }
       ]
     },
@@ -2295,7 +2304,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"wait\" into \"main\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is wait -> wail -> mail -> main, with one letter changing at each step."
         },
         {
           "id": "wl-r110-toll-find",
@@ -2314,7 +2323,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"toll\" into \"find\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is toll -> told -> fold -> fond -> find, with one letter changing at each step."
         },
         {
           "id": "wl-r111-doe-for",
@@ -2332,7 +2341,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"doe\" into \"for\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is doe -> dog -> fog -> for, with one letter changing at each step."
         },
         {
           "id": "wl-r112-save-tidy",
@@ -2352,7 +2361,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"save\" into \"tidy\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is save -> have -> hive -> hide -> tide -> tidy, with one letter changing at each step."
         },
         {
           "id": "wl-r113-term-skin",
@@ -2374,7 +2383,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"term\" into \"skin\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is term -> team -> seam -> slam -> slap -> slip -> skip -> skin, with one letter changing at each step."
         },
         {
           "id": "wl-r114-rich-real",
@@ -2397,7 +2406,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"rich\" into \"real\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is rich -> rice -> mice -> mile -> mill -> hill -> hell -> heal -> real, with one letter changing at each step."
         }
       ]
     },
@@ -2423,7 +2432,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"and\" into \"beg\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is and -> aid -> bid -> bed -> beg, with one letter changing at each step."
         },
         {
           "id": "wl-r116-harp-dive",
@@ -2442,7 +2451,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"harp\" into \"dive\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is harp -> hare -> have -> hive -> dive, with one letter changing at each step."
         },
         {
           "id": "wl-r117-map-cod",
@@ -2460,7 +2469,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"map\" into \"cod\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is map -> cap -> cop -> cod, with one letter changing at each step."
         },
         {
           "id": "wl-r118-hay-bud",
@@ -2478,7 +2487,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"hay\" into \"bud\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is hay -> bay -> bad -> bud, with one letter changing at each step."
         },
         {
           "id": "wl-r119-seek-knit",
@@ -2501,7 +2510,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"seek\" into \"knit\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is seek -> seem -> stem -> stew -> stow -> snow -> know -> knot -> knit, with one letter changing at each step."
         },
         {
           "id": "wl-r120-and-yam",
@@ -2521,7 +2530,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"and\" into \"yam\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is and -> aid -> aim -> dim -> dam -> yam, with one letter changing at each step."
         }
       ]
     },
@@ -2549,7 +2558,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"dark\" into \"fail\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is dark -> dare -> dale -> male -> mall -> fall -> fail, with one letter changing at each step."
         },
         {
           "id": "wl-r122-jog-bid",
@@ -2567,7 +2576,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"jog\" into \"bid\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is jog -> bog -> big -> bid, with one letter changing at each step."
         },
         {
           "id": "wl-r123-rot-dug",
@@ -2585,7 +2594,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"rot\" into \"dug\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is rot -> dot -> dog -> dug, with one letter changing at each step."
         },
         {
           "id": "wl-r124-sap-fig",
@@ -2604,7 +2613,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"sap\" into \"fig\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is sap -> rap -> rag -> rig -> fig, with one letter changing at each step."
         },
         {
           "id": "wl-r125-paw-wig",
@@ -2623,7 +2632,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"paw\" into \"wig\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is paw -> law -> lag -> wag -> wig, with one letter changing at each step."
         },
         {
           "id": "wl-r126-six-buy",
@@ -2642,7 +2651,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"six\" into \"buy\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is six -> sin -> bin -> bun -> buy, with one letter changing at each step."
         }
       ]
     },
@@ -2669,7 +2678,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"tune\" into \"film\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is tune -> dune -> dine -> fine -> file -> film, with one letter changing at each step."
         },
         {
           "id": "wl-r128-mum-big",
@@ -2687,7 +2696,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"mum\" into \"big\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is mum -> mug -> bug -> big, with one letter changing at each step."
         },
         {
           "id": "wl-r129-den-law",
@@ -2706,7 +2715,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"den\" into \"law\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is den -> dew -> pew -> paw -> law, with one letter changing at each step."
         },
         {
           "id": "wl-r130-art-bow",
@@ -2728,7 +2737,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"art\" into \"bow\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is art -> ant -> and -> aid -> bid -> big -> bog -> bow, with one letter changing at each step."
         },
         {
           "id": "wl-r131-war-doe",
@@ -2747,7 +2756,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"war\" into \"doe\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is war -> wan -> won -> woe -> doe, with one letter changing at each step."
         },
         {
           "id": "wl-r132-gym-bin",
@@ -2766,7 +2775,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"gym\" into \"bin\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is gym -> gum -> gun -> bun -> bin, with one letter changing at each step."
         }
       ]
     },
@@ -2791,7 +2800,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"son\" into \"sap\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is son -> sin -> sip -> sap, with one letter changing at each step."
         },
         {
           "id": "wl-r134-dump-vase",
@@ -2812,7 +2821,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"dump\" into \"vase\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is dump -> lump -> lamp -> camp -> came -> case -> vase, with one letter changing at each step."
         },
         {
           "id": "wl-r135-hat-jug",
@@ -2830,7 +2839,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"hat\" into \"jug\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is hat -> hut -> hug -> jug, with one letter changing at each step."
         },
         {
           "id": "wl-r136-dam-pin",
@@ -2848,7 +2857,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"dam\" into \"pin\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is dam -> dim -> din -> pin, with one letter changing at each step."
         },
         {
           "id": "wl-r137-rot-war",
@@ -2867,7 +2876,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"rot\" into \"war\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is rot -> cot -> cat -> car -> war, with one letter changing at each step."
         },
         {
           "id": "wl-r138-wed-bog",
@@ -2885,7 +2894,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"wed\" into \"bog\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is wed -> bed -> beg -> bog, with one letter changing at each step."
         }
       ]
     },
@@ -2910,7 +2919,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"king\" into \"mint\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is king -> kind -> mind -> mint, with one letter changing at each step."
         },
         {
           "id": "wl-r140-shade-swell",
@@ -2929,7 +2938,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"shade\" into \"swell\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is shade -> shale -> shall -> shell -> swell, with one letter changing at each step."
         },
         {
           "id": "wl-r141-stub-boar",
@@ -2951,7 +2960,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"stub\" into \"boar\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is stub -> stab -> slab -> slam -> seam -> beam -> bear -> boar, with one letter changing at each step."
         },
         {
           "id": "wl-r142-tend-firm",
@@ -2972,7 +2981,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"tend\" into \"firm\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is tend -> bend -> bind -> find -> fine -> fire -> firm, with one letter changing at each step."
         },
         {
           "id": "wl-r143-sect-stud",
@@ -2994,7 +3003,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"sect\" into \"stud\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is sect -> seat -> seam -> slam -> slab -> stab -> stub -> stud, with one letter changing at each step."
         },
         {
           "id": "wl-r144-pat-fun",
@@ -3012,7 +3021,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"pat\" into \"fun\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is pat -> fat -> fan -> fun, with one letter changing at each step."
         }
       ]
     },
@@ -3042,7 +3051,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"folk\" into \"keen\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is folk -> fold -> bold -> bond -> bend -> send -> seed -> seen -> keen, with one letter changing at each step."
         },
         {
           "id": "wl-r146-win-gas",
@@ -3060,7 +3069,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"win\" into \"gas\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is win -> wan -> was -> gas, with one letter changing at each step."
         },
         {
           "id": "wl-r147-cob-ban",
@@ -3078,7 +3087,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "easy",
-          "teachingNote": "Change one letter at a time to turn \"cob\" into \"ban\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is cob -> cab -> can -> ban, with one letter changing at each step."
         },
         {
           "id": "wl-r148-word-polo",
@@ -3099,7 +3108,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"word\" into \"polo\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is word -> cord -> cold -> hold -> hole -> pole -> polo, with one letter changing at each step."
         },
         {
           "id": "wl-r149-two-kin",
@@ -3118,7 +3127,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "medium",
-          "teachingNote": "Change one letter at a time to turn \"two\" into \"kin\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is two -> too -> ton -> tin -> kin, with one letter changing at each step."
         },
         {
           "id": "wl-r150-stew-grey",
@@ -3139,7 +3148,7 @@
           "endFlavorText": "The target word for this ladder.",
           "theme": "Word Ladder",
           "difficulty": "hard",
-          "teachingNote": "Change one letter at a time to turn \"stew\" into \"grey\"."
+          "teachingNote": "This auto-generated ladder is wordplay practice rather than a scripture-reference round. The verified path is stew -> stow -> slow -> glow -> grow -> grew -> grey, with one letter changing at each step."
         }
       ]
     }

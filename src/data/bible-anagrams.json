@@ -17,7 +17,7 @@
           "clue": "He led Israel out of Egypt.",
           "theme": "Exodus",
           "difficulty": "easy",
-          "teachingNote": "Review Moses (Exodus) before continuing."
+          "teachingNote": "Moses is the person identified by the clue \"He led Israel out of Egypt.\" Review Exodus for the biblical setting behind that answer."
         },
         {
           "id": "ba-r002-noah",
@@ -26,7 +26,7 @@
           "clue": "He built an ark before the flood.",
           "theme": "Genesis",
           "difficulty": "easy",
-          "teachingNote": "Review Noah (Genesis) before continuing."
+          "teachingNote": "Noah is the person identified by the clue \"He built an ark before the flood.\" Review Genesis for the biblical setting behind that answer."
         },
         {
           "id": "ba-r003-david",
@@ -35,7 +35,7 @@
           "clue": "He defeated Goliath with a sling.",
           "theme": "1-2 Samuel",
           "difficulty": "easy",
-          "teachingNote": "Review David (1-2 Samuel) before continuing."
+          "teachingNote": "David is the person identified by the clue \"He defeated Goliath with a sling.\" Review 1-2 Samuel for the biblical setting behind that answer."
         },
         {
           "id": "ba-r004-solomon",
@@ -44,7 +44,7 @@
           "clue": "He asked God for wisdom and became a wise king.",
           "theme": "1 Kings",
           "difficulty": "easy",
-          "teachingNote": "Review Solomon (1 Kings) before continuing."
+          "teachingNote": "Solomon is the person identified by the clue \"He asked God for wisdom and became a wise king.\" Review 1 Kings for the biblical setting behind that answer."
         },
         {
           "id": "ba-r005-abraham",
@@ -53,7 +53,7 @@
           "clue": "God promised to make him the father of many nations.",
           "theme": "Genesis",
           "difficulty": "medium",
-          "teachingNote": "Review Abraham (Genesis) before continuing."
+          "teachingNote": "Abraham is the person identified by the clue \"God promised to make him the father of many nations.\" Review Genesis for the biblical setting behind that answer."
         },
         {
           "id": "ba-r006-joseph",
@@ -62,7 +62,7 @@
           "clue": "His brothers sold him into slavery in Egypt.",
           "theme": "Genesis",
           "difficulty": "easy",
-          "teachingNote": "Review Joseph (Genesis) before continuing."
+          "teachingNote": "Joseph is the person identified by the clue \"His brothers sold him into slavery in Egypt.\" Review Genesis for the biblical setting behind that answer."
         },
         {
           "id": "ba-r007-daniel",
@@ -71,7 +71,7 @@
           "clue": "He survived a night in a den of lions.",
           "theme": "Daniel",
           "difficulty": "easy",
-          "teachingNote": "Review Daniel (Daniel) before continuing."
+          "teachingNote": "Daniel is the person identified by the clue \"He survived a night in a den of lions.\" Review Daniel for the biblical setting behind that answer."
         },
         {
           "id": "ba-r008-jonah",
@@ -80,7 +80,7 @@
           "clue": "A great fish swallowed him for three days.",
           "theme": "Jonah",
           "difficulty": "easy",
-          "teachingNote": "Review Jonah (Jonah) before continuing."
+          "teachingNote": "Jonah is the person identified by the clue \"A great fish swallowed him for three days.\" Review Jonah for the biblical setting behind that answer."
         },
         {
           "id": "ba-r009-samson",
@@ -89,7 +89,7 @@
           "clue": "His strength was tied to his uncut hair.",
           "theme": "Judges",
           "difficulty": "medium",
-          "teachingNote": "Review Samson (Judges) before continuing."
+          "teachingNote": "Samson is the person identified by the clue \"His strength was tied to his uncut hair.\" Review Judges for the biblical setting behind that answer."
         },
         {
           "id": "ba-r010-elijah",
@@ -98,7 +98,7 @@
           "clue": "He faced the prophets of Baal on Mount Carmel.",
           "theme": "1 Kings",
           "difficulty": "medium",
-          "teachingNote": "Review Elijah (1 Kings) before continuing."
+          "teachingNote": "Elijah is the person identified by the clue \"He faced the prophets of Baal on Mount Carmel.\" Review 1 Kings for the biblical setting behind that answer."
         }
       ]
     },
@@ -114,7 +114,7 @@
           "clue": "He received a double portion of his mentor's spirit.",
           "theme": "2 Kings",
           "difficulty": "hard",
-          "teachingNote": "Review Elisha (2 Kings) before continuing."
+          "teachingNote": "Elisha is the person identified by the clue \"He received a double portion of his mentor's spirit.\" Review 2 Kings for the biblical setting behind that answer."
         },
         {
           "id": "ba-r012-isaiah",
@@ -123,7 +123,7 @@
           "clue": "A major prophet who foretold a coming Messiah.",
           "theme": "Isaiah",
           "difficulty": "medium",
-          "teachingNote": "Review Isaiah (Isaiah) before continuing."
+          "teachingNote": "Isaiah is the person identified by the clue \"A major prophet who foretold a coming Messiah.\" Review Isaiah for the biblical setting behind that answer."
         },
         {
           "id": "ba-r013-jeremiah",
@@ -132,7 +132,7 @@
           "clue": "Known as the weeping prophet.",
           "theme": "Jeremiah",
           "difficulty": "medium",
-          "teachingNote": "Review Jeremiah (Jeremiah) before continuing."
+          "teachingNote": "Jeremiah is the person identified by the clue \"Known as the weeping prophet.\" Review Jeremiah for the biblical setting behind that answer."
         },
         {
           "id": "ba-r014-ezekiel",
@@ -141,7 +141,7 @@
           "clue": "He saw a vision of a valley of dry bones.",
           "theme": "Ezekiel",
           "difficulty": "hard",
-          "teachingNote": "Review Ezekiel (Ezekiel) before continuing."
+          "teachingNote": "Ezekiel is the person identified by the clue \"He saw a vision of a valley of dry bones.\" Review Ezekiel for the biblical setting behind that answer."
         },
         {
           "id": "ba-r015-ruth",
@@ -150,7 +150,7 @@
           "clue": "A Moabite woman loyal to her mother-in-law Naomi.",
           "theme": "Ruth",
           "difficulty": "easy",
-          "teachingNote": "Review Ruth (Ruth) before continuing."
+          "teachingNote": "Ruth is the person identified by the clue \"A Moabite woman loyal to her mother-in-law Naomi.\" Review Ruth for the biblical setting behind that answer."
         },
         {
           "id": "ba-r016-esther",
@@ -159,7 +159,7 @@
           "clue": "A queen who risked her life to save her people.",
           "theme": "Esther",
           "difficulty": "easy",
-          "teachingNote": "Review Esther (Esther) before continuing."
+          "teachingNote": "Esther is the person identified by the clue \"A queen who risked her life to save her people.\" Review Esther for the biblical setting behind that answer."
         },
         {
           "id": "ba-r017-deborah",
@@ -168,7 +168,7 @@
           "clue": "A judge and prophetess who led Israel to victory.",
           "theme": "Judges",
           "difficulty": "medium",
-          "teachingNote": "Review Deborah (Judges) before continuing."
+          "teachingNote": "Deborah is the person identified by the clue \"A judge and prophetess who led Israel to victory.\" Review Judges for the biblical setting behind that answer."
         },
         {
           "id": "ba-r018-gideon",
@@ -177,7 +177,7 @@
           "clue": "He defeated a large army with only three hundred men.",
           "theme": "Judges",
           "difficulty": "medium",
-          "teachingNote": "Review Gideon (Judges) before continuing."
+          "teachingNote": "Gideon is the person identified by the clue \"He defeated a large army with only three hundred men.\" Review Judges for the biblical setting behind that answer."
         },
         {
           "id": "ba-r019-joshua",
@@ -186,7 +186,7 @@
           "clue": "He led Israel into the Promised Land after Moses.",
           "theme": "Joshua",
           "difficulty": "easy",
-          "teachingNote": "Review Joshua (Joshua) before continuing."
+          "teachingNote": "Joshua is the person identified by the clue \"He led Israel into the Promised Land after Moses.\" Review Joshua for the biblical setting behind that answer."
         },
         {
           "id": "ba-r020-samuel",
@@ -195,7 +195,7 @@
           "clue": "He anointed both Saul and David as king.",
           "theme": "1 Samuel",
           "difficulty": "medium",
-          "teachingNote": "Review Samuel (1 Samuel) before continuing."
+          "teachingNote": "Samuel is the person identified by the clue \"He anointed both Saul and David as king.\" Review 1 Samuel for the biblical setting behind that answer."
         }
       ]
     },
@@ -211,7 +211,7 @@
           "clue": "Israel's first king.",
           "theme": "1 Samuel",
           "difficulty": "easy",
-          "teachingNote": "Review Saul (1 Samuel) before continuing."
+          "teachingNote": "Saul is the person identified by the clue \"Israel's first king.\" Review 1 Samuel for the biblical setting behind that answer."
         },
         {
           "id": "ba-r022-jacob",
@@ -220,7 +220,7 @@
           "clue": "He wrestled with an angel and was renamed Israel.",
           "theme": "Genesis",
           "difficulty": "easy",
-          "teachingNote": "Review Jacob (Genesis) before continuing."
+          "teachingNote": "Jacob is the person identified by the clue \"He wrestled with an angel and was renamed Israel.\" Review Genesis for the biblical setting behind that answer."
         },
         {
           "id": "ba-r023-isaac",
@@ -229,7 +229,7 @@
           "clue": "Abraham's son, nearly offered as a sacrifice.",
           "theme": "Genesis",
           "difficulty": "easy",
-          "teachingNote": "Review Isaac (Genesis) before continuing."
+          "teachingNote": "Isaac is the person identified by the clue \"Abraham's son, nearly offered as a sacrifice.\" Review Genesis for the biblical setting behind that answer."
         },
         {
           "id": "ba-r024-adam",
@@ -238,7 +238,7 @@
           "clue": "The first man, formed from the dust of the ground.",
           "theme": "Genesis",
           "difficulty": "easy",
-          "teachingNote": "Review Adam (Genesis) before continuing."
+          "teachingNote": "Adam is the person identified by the clue \"The first man, formed from the dust of the ground.\" Review Genesis for the biblical setting behind that answer."
         },
         {
           "id": "ba-r025-eve",
@@ -247,7 +247,7 @@
           "clue": "The first woman, formed from Adam's rib.",
           "theme": "Genesis",
           "difficulty": "easy",
-          "teachingNote": "Review Eve (Genesis) before continuing."
+          "teachingNote": "Eve is the person identified by the clue \"The first woman, formed from Adam's rib.\" Review Genesis for the biblical setting behind that answer."
         },
         {
           "id": "ba-r026-cain",
@@ -256,7 +256,7 @@
           "clue": "He killed his brother out of jealousy.",
           "theme": "Genesis",
           "difficulty": "medium",
-          "teachingNote": "Review Cain (Genesis) before continuing."
+          "teachingNote": "Cain is the person identified by the clue \"He killed his brother out of jealousy.\" Review Genesis for the biblical setting behind that answer."
         },
         {
           "id": "ba-r027-abel",
@@ -265,7 +265,7 @@
           "clue": "A shepherd whose offering pleased God.",
           "theme": "Genesis",
           "difficulty": "medium",
-          "teachingNote": "Review Abel (Genesis) before continuing."
+          "teachingNote": "Abel is the person identified by the clue \"A shepherd whose offering pleased God.\" Review Genesis for the biblical setting behind that answer."
         },
         {
           "id": "ba-r028-nehemiah",
@@ -274,7 +274,7 @@
           "clue": "He rebuilt the walls of Jerusalem.",
           "theme": "Nehemiah",
           "difficulty": "hard",
-          "teachingNote": "Review Nehemiah (Nehemiah) before continuing."
+          "teachingNote": "Nehemiah is the person identified by the clue \"He rebuilt the walls of Jerusalem.\" Review Nehemiah for the biblical setting behind that answer."
         },
         {
           "id": "ba-r029-ezra",
@@ -283,7 +283,7 @@
           "clue": "A priest and scribe who taught the Law after the exile.",
           "theme": "Ezra",
           "difficulty": "hard",
-          "teachingNote": "Review Ezra (Ezra) before continuing."
+          "teachingNote": "Ezra is the person identified by the clue \"A priest and scribe who taught the Law after the exile.\" Review Ezra for the biblical setting behind that answer."
         },
         {
           "id": "ba-r030-job",
@@ -292,7 +292,7 @@
           "clue": "He endured great suffering but remained faithful.",
           "theme": "Job",
           "difficulty": "easy",
-          "teachingNote": "Review Job (Job) before continuing."
+          "teachingNote": "Job is the person identified by the clue \"He endured great suffering but remained faithful.\" Review Job for the biblical setting behind that answer."
         }
       ]
     },
@@ -308,7 +308,7 @@
           "clue": "He denied knowing Jesus three times.",
           "theme": "Gospels",
           "difficulty": "easy",
-          "teachingNote": "Review Peter (Gospels) before continuing."
+          "teachingNote": "Peter is the person identified by the clue \"He denied knowing Jesus three times.\" Review Gospels for the biblical setting behind that answer."
         },
         {
           "id": "ba-r032-paul",
@@ -317,7 +317,7 @@
           "clue": "Once a persecutor of Christians, later a leading apostle.",
           "theme": "Acts",
           "difficulty": "easy",
-          "teachingNote": "Review Paul (Acts) before continuing."
+          "teachingNote": "Paul is the person identified by the clue \"Once a persecutor of Christians, later a leading apostle.\" Review Acts for the biblical setting behind that answer."
         },
         {
           "id": "ba-r033-john",
@@ -326,7 +326,7 @@
           "clue": "The apostle who wrote a Gospel and Revelation.",
           "theme": "Gospels",
           "difficulty": "easy",
-          "teachingNote": "Review John (Gospels) before continuing."
+          "teachingNote": "John is the person identified by the clue \"The apostle who wrote a Gospel and Revelation.\" Review Gospels for the biblical setting behind that answer."
         },
         {
           "id": "ba-r034-matthew",
@@ -335,7 +335,7 @@
           "clue": "A tax collector who became a Gospel writer.",
           "theme": "Gospels",
           "difficulty": "medium",
-          "teachingNote": "Review Matthew (Gospels) before continuing."
+          "teachingNote": "Matthew is the person identified by the clue \"A tax collector who became a Gospel writer.\" Review Gospels for the biblical setting behind that answer."
         },
         {
           "id": "ba-r035-mark",
@@ -344,7 +344,7 @@
           "clue": "He wrote the shortest of the four Gospels.",
           "theme": "Gospels",
           "difficulty": "medium",
-          "teachingNote": "Review Mark (Gospels) before continuing."
+          "teachingNote": "Mark is the person identified by the clue \"He wrote the shortest of the four Gospels.\" Review Gospels for the biblical setting behind that answer."
         },
         {
           "id": "ba-r036-luke",
@@ -353,7 +353,7 @@
           "clue": "A physician who wrote a Gospel and the book of Acts.",
           "theme": "Gospels",
           "difficulty": "medium",
-          "teachingNote": "Review Luke (Gospels) before continuing."
+          "teachingNote": "Luke is the person identified by the clue \"A physician who wrote a Gospel and the book of Acts.\" Review Gospels for the biblical setting behind that answer."
         },
         {
           "id": "ba-r037-thomas",
@@ -362,7 +362,7 @@
           "clue": "An apostle remembered for doubting the resurrection.",
           "theme": "Gospels",
           "difficulty": "medium",
-          "teachingNote": "Review Thomas (Gospels) before continuing."
+          "teachingNote": "Thomas is the person identified by the clue \"An apostle remembered for doubting the resurrection.\" Review Gospels for the biblical setting behind that answer."
         },
         {
           "id": "ba-r038-andrew",
@@ -371,7 +371,7 @@
           "clue": "Peter's brother and one of the twelve apostles.",
           "theme": "Gospels",
           "difficulty": "medium",
-          "teachingNote": "Review Andrew (Gospels) before continuing."
+          "teachingNote": "Andrew is the person identified by the clue \"Peter's brother and one of the twelve apostles.\" Review Gospels for the biblical setting behind that answer."
         },
         {
           "id": "ba-r039-philip",
@@ -380,7 +380,7 @@
           "clue": "An apostle who later explained Scripture to an Ethiopian official.",
           "theme": "Gospels Acts",
           "difficulty": "medium",
-          "teachingNote": "Review Philip (Gospels Acts) before continuing."
+          "teachingNote": "Philip is the person identified by the clue \"An apostle who later explained Scripture to an Ethiopian official.\" Review Gospels Acts for the biblical setting behind that answer."
         },
         {
           "id": "ba-r040-barnabas",
@@ -389,7 +389,7 @@
           "clue": "He vouched for Paul before the apostles in Jerusalem.",
           "theme": "Acts",
           "difficulty": "hard",
-          "teachingNote": "Review Barnabas (Acts) before continuing."
+          "teachingNote": "Barnabas is the person identified by the clue \"He vouched for Paul before the apostles in Jerusalem.\" Review Acts for the biblical setting behind that answer."
         }
       ]
     },
@@ -405,7 +405,7 @@
           "clue": "A younger companion of Paul on his missionary journeys.",
           "theme": "Acts",
           "difficulty": "hard",
-          "teachingNote": "Review Timothy (Acts) before continuing."
+          "teachingNote": "Timothy is the person identified by the clue \"A younger companion of Paul on his missionary journeys.\" Review Acts for the biblical setting behind that answer."
         },
         {
           "id": "ba-r042-stephen",
@@ -414,7 +414,7 @@
           "clue": "The first Christian martyr, stoned for his testimony.",
           "theme": "Acts",
           "difficulty": "medium",
-          "teachingNote": "Review Stephen (Acts) before continuing."
+          "teachingNote": "Stephen is the person identified by the clue \"The first Christian martyr, stoned for his testimony.\" Review Acts for the biblical setting behind that answer."
         },
         {
           "id": "ba-r043-mary",
@@ -423,7 +423,7 @@
           "clue": "The mother of Jesus.",
           "theme": "Gospels",
           "difficulty": "easy",
-          "teachingNote": "Review Mary (Gospels) before continuing."
+          "teachingNote": "Mary is the person identified by the clue \"The mother of Jesus.\" Review Gospels for the biblical setting behind that answer."
         },
         {
           "id": "ba-r044-martha",
@@ -432,7 +432,7 @@
           "clue": "Sister of Mary and Lazarus, busy with hospitality.",
           "theme": "Gospels",
           "difficulty": "medium",
-          "teachingNote": "Review Martha (Gospels) before continuing."
+          "teachingNote": "Martha is the person identified by the clue \"Sister of Mary and Lazarus, busy with hospitality.\" Review Gospels for the biblical setting behind that answer."
         },
         {
           "id": "ba-r045-lazarus",
@@ -441,7 +441,7 @@
           "clue": "Jesus raised him from the dead after four days in the tomb.",
           "theme": "Gospels",
           "difficulty": "medium",
-          "teachingNote": "Review Lazarus (Gospels) before continuing."
+          "teachingNote": "Lazarus is the person identified by the clue \"Jesus raised him from the dead after four days in the tomb.\" Review Gospels for the biblical setting behind that answer."
         },
         {
           "id": "ba-r046-zacchaeus",
@@ -450,7 +450,7 @@
           "clue": "A short tax collector who climbed a tree to see Jesus.",
           "theme": "Gospels",
           "difficulty": "hard",
-          "teachingNote": "Review Zacchaeus (Gospels) before continuing."
+          "teachingNote": "Zacchaeus is the person identified by the clue \"A short tax collector who climbed a tree to see Jesus.\" Review Gospels for the biblical setting behind that answer."
         },
         {
           "id": "ba-r047-nicodemus",
@@ -459,7 +459,7 @@
           "clue": "A Pharisee who came to Jesus by night.",
           "theme": "Gospels",
           "difficulty": "hard",
-          "teachingNote": "Review Nicodemus (Gospels) before continuing."
+          "teachingNote": "Nicodemus is the person identified by the clue \"A Pharisee who came to Jesus by night.\" Review Gospels for the biblical setting behind that answer."
         },
         {
           "id": "ba-r048-herod",
@@ -468,7 +468,7 @@
           "clue": "A king who ordered the killing of infant boys in Bethlehem.",
           "theme": "Gospels",
           "difficulty": "medium",
-          "teachingNote": "Review Herod (Gospels) before continuing."
+          "teachingNote": "Herod is the person identified by the clue \"A king who ordered the killing of infant boys in Bethlehem.\" Review Gospels for the biblical setting behind that answer."
         },
         {
           "id": "ba-r049-pilate",
@@ -477,7 +477,7 @@
           "clue": "The Roman governor who sentenced Jesus to be crucified.",
           "theme": "Gospels",
           "difficulty": "medium",
-          "teachingNote": "Review Pilate (Gospels) before continuing."
+          "teachingNote": "Pilate is the person identified by the clue \"The Roman governor who sentenced Jesus to be crucified.\" Review Gospels for the biblical setting behind that answer."
         },
         {
           "id": "ba-r050-goliath",
@@ -486,7 +486,7 @@
           "clue": "A Philistine giant defeated by a young shepherd.",
           "theme": "1 Samuel",
           "difficulty": "medium",
-          "teachingNote": "Review Goliath (1 Samuel) before continuing."
+          "teachingNote": "Goliath is the person identified by the clue \"A Philistine giant defeated by a young shepherd.\" Review 1 Samuel for the biblical setting behind that answer."
         }
       ]
     },
@@ -502,7 +502,7 @@
           "clue": "She discovered the secret of Samson's strength.",
           "theme": "Judges",
           "difficulty": "medium",
-          "teachingNote": "Review Delilah (Judges) before continuing."
+          "teachingNote": "Delilah is the person identified by the clue \"She discovered the secret of Samson's strength.\" Review Judges for the biblical setting behind that answer."
         },
         {
           "id": "ba-r052-naomi",
@@ -511,7 +511,7 @@
           "clue": "Ruth's mother-in-law who returned to Bethlehem.",
           "theme": "Ruth",
           "difficulty": "medium",
-          "teachingNote": "Review Naomi (Ruth) before continuing."
+          "teachingNote": "Naomi is the person identified by the clue \"Ruth's mother-in-law who returned to Bethlehem.\" Review Ruth for the biblical setting behind that answer."
         },
         {
           "id": "ba-r053-boaz",
@@ -520,7 +520,7 @@
           "clue": "A kinsman-redeemer who married Ruth.",
           "theme": "Ruth",
           "difficulty": "medium",
-          "teachingNote": "Review Boaz (Ruth) before continuing."
+          "teachingNote": "Boaz is the person identified by the clue \"A kinsman-redeemer who married Ruth.\" Review Ruth for the biblical setting behind that answer."
         },
         {
           "id": "ba-r054-eden",
@@ -529,7 +529,7 @@
           "clue": "The garden where Adam and Eve first lived.",
           "theme": "Genesis",
           "difficulty": "easy",
-          "teachingNote": "Review Eden (Genesis) before continuing."
+          "teachingNote": "Eden is the place identified by the clue \"The garden where Adam and Eve first lived.\" Review Genesis for the biblical setting behind that answer."
         },
         {
           "id": "ba-r055-bethlehem",
@@ -538,7 +538,7 @@
           "clue": "The town where Jesus was born.",
           "theme": "Gospels",
           "difficulty": "easy",
-          "teachingNote": "Review Bethlehem (Gospels) before continuing."
+          "teachingNote": "Bethlehem is the place identified by the clue \"The town where Jesus was born.\" Review Gospels for the biblical setting behind that answer."
         },
         {
           "id": "ba-r056-nazareth",
@@ -547,7 +547,7 @@
           "clue": "The town where Jesus grew up.",
           "theme": "Gospels",
           "difficulty": "easy",
-          "teachingNote": "Review Nazareth (Gospels) before continuing."
+          "teachingNote": "Nazareth is the place identified by the clue \"The town where Jesus grew up.\" Review Gospels for the biblical setting behind that answer."
         },
         {
           "id": "ba-r057-jerusalem",
@@ -556,7 +556,7 @@
           "clue": "The holy city with the temple at its center.",
           "theme": "Bible geography",
           "difficulty": "easy",
-          "teachingNote": "Review Jerusalem (Bible geography) before continuing."
+          "teachingNote": "Jerusalem is the place identified by the clue \"The holy city with the temple at its center.\" Review Bible geography for the biblical setting behind that answer."
         },
         {
           "id": "ba-r058-egypt",
@@ -565,7 +565,7 @@
           "clue": "The land where the Israelites were enslaved.",
           "theme": "Exodus",
           "difficulty": "easy",
-          "teachingNote": "Review Egypt (Exodus) before continuing."
+          "teachingNote": "Egypt is the place identified by the clue \"The land where the Israelites were enslaved.\" Review Exodus for the biblical setting behind that answer."
         },
         {
           "id": "ba-r059-jericho",
@@ -574,7 +574,7 @@
           "clue": "Its walls fell after Israel marched around it seven times.",
           "theme": "Joshua",
           "difficulty": "medium",
-          "teachingNote": "Review Jericho (Joshua) before continuing."
+          "teachingNote": "Jericho is the place identified by the clue \"Its walls fell after Israel marched around it seven times.\" Review Joshua for the biblical setting behind that answer."
         },
         {
           "id": "ba-r060-babylon",
@@ -583,7 +583,7 @@
           "clue": "The empire that took Judah into exile.",
           "theme": "2 Kings",
           "difficulty": "medium",
-          "teachingNote": "Review Babylon (2 Kings) before continuing."
+          "teachingNote": "Babylon is the place identified by the clue \"The empire that took Judah into exile.\" Review 2 Kings for the biblical setting behind that answer."
         }
       ]
     },
@@ -599,7 +599,7 @@
           "clue": "The mountain where Moses received the Ten Commandments.",
           "theme": "Exodus",
           "difficulty": "medium",
-          "teachingNote": "Review Sinai (Exodus) before continuing."
+          "teachingNote": "Sinai is the place identified by the clue \"The mountain where Moses received the Ten Commandments.\" Review Exodus for the biblical setting behind that answer."
         },
         {
           "id": "ba-r062-canaan",
@@ -608,7 +608,7 @@
           "clue": "The promised land given to Abraham's descendants.",
           "theme": "Bible geography",
           "difficulty": "medium",
-          "teachingNote": "Review Canaan (Bible geography) before continuing."
+          "teachingNote": "Canaan is the place identified by the clue \"The promised land given to Abraham's descendants.\" Review Bible geography for the biblical setting behind that answer."
         },
         {
           "id": "ba-r063-galilee",
@@ -617,7 +617,7 @@
           "clue": "A sea and region central to much of Jesus's ministry.",
           "theme": "Gospels",
           "difficulty": "medium",
-          "teachingNote": "Review Galilee (Gospels) before continuing."
+          "teachingNote": "Galilee is the place identified by the clue \"A sea and region central to much of Jesus's ministry.\" Review Gospels for the biblical setting behind that answer."
         },
         {
           "id": "ba-r064-damascus",
@@ -626,7 +626,7 @@
           "clue": "Saul was blinded on the road to this city.",
           "theme": "Acts",
           "difficulty": "medium",
-          "teachingNote": "Review Damascus (Acts) before continuing."
+          "teachingNote": "Damascus is the place identified by the clue \"Saul was blinded on the road to this city.\" Review Acts for the biblical setting behind that answer."
         },
         {
           "id": "ba-r065-sodom",
@@ -635,7 +635,7 @@
           "clue": "A wicked city destroyed by fire and brimstone.",
           "theme": "Genesis",
           "difficulty": "medium",
-          "teachingNote": "Review Sodom (Genesis) before continuing."
+          "teachingNote": "Sodom is the place identified by the clue \"A wicked city destroyed by fire and brimstone.\" Review Genesis for the biblical setting behind that answer."
         },
         {
           "id": "ba-r066-nineveh",
@@ -644,7 +644,7 @@
           "clue": "The city Jonah was sent to warn.",
           "theme": "Jonah",
           "difficulty": "medium",
-          "teachingNote": "Review Nineveh (Jonah) before continuing."
+          "teachingNote": "Nineveh is the place identified by the clue \"The city Jonah was sent to warn.\" Review Jonah for the biblical setting behind that answer."
         },
         {
           "id": "ba-r067-bethany",
@@ -653,7 +653,7 @@
           "clue": "The home village of Mary, Martha, and Lazarus.",
           "theme": "Gospels",
           "difficulty": "hard",
-          "teachingNote": "Review Bethany (Gospels) before continuing."
+          "teachingNote": "Bethany is the place identified by the clue \"The home village of Mary, Martha, and Lazarus.\" Review Gospels for the biblical setting behind that answer."
         },
         {
           "id": "ba-r068-capernaum",
@@ -662,7 +662,7 @@
           "clue": "A town by the Sea of Galilee where Jesus based His ministry.",
           "theme": "Gospels",
           "difficulty": "hard",
-          "teachingNote": "Review Capernaum (Gospels) before continuing."
+          "teachingNote": "Capernaum is the place identified by the clue \"A town by the Sea of Galilee where Jesus based His ministry.\" Review Gospels for the biblical setting behind that answer."
         },
         {
           "id": "ba-r069-corinth",
@@ -671,7 +671,7 @@
           "clue": "A Greek city Paul wrote two New Testament letters to.",
           "theme": "Acts",
           "difficulty": "hard",
-          "teachingNote": "Review Corinth (Acts) before continuing."
+          "teachingNote": "Corinth is the place identified by the clue \"A Greek city Paul wrote two New Testament letters to.\" Review Acts for the biblical setting behind that answer."
         },
         {
           "id": "ba-r070-ephesus",
@@ -680,7 +680,7 @@
           "clue": "A city known for its temple to Artemis, visited by Paul.",
           "theme": "Acts",
           "difficulty": "hard",
-          "teachingNote": "Review Ephesus (Acts) before continuing."
+          "teachingNote": "Ephesus is the place identified by the clue \"A city known for its temple to Artemis, visited by Paul.\" Review Acts for the biblical setting behind that answer."
         }
       ]
     },
@@ -696,7 +696,7 @@
           "clue": "The island where John received his vision of Revelation.",
           "theme": "Revelation",
           "difficulty": "hard",
-          "teachingNote": "Review Patmos (Revelation) before continuing."
+          "teachingNote": "Patmos is the place identified by the clue \"The island where John received his vision of Revelation.\" Review Revelation for the biblical setting behind that answer."
         },
         {
           "id": "ba-r072-ark",
@@ -705,7 +705,7 @@
           "clue": "Noah built this to survive the flood.",
           "theme": "Genesis",
           "difficulty": "easy",
-          "teachingNote": "Review Ark (Genesis) before continuing."
+          "teachingNote": "Ark is the thing identified by the clue \"Noah built this to survive the flood.\" Review Genesis for the biblical setting behind that answer."
         },
         {
           "id": "ba-r073-manna",
@@ -714,7 +714,7 @@
           "clue": "Bread from heaven that fed Israel in the wilderness.",
           "theme": "Exodus",
           "difficulty": "easy",
-          "teachingNote": "Review Manna (Exodus) before continuing."
+          "teachingNote": "Manna is the thing identified by the clue \"Bread from heaven that fed Israel in the wilderness.\" Review Exodus for the biblical setting behind that answer."
         },
         {
           "id": "ba-r074-rainbow",
@@ -723,7 +723,7 @@
           "clue": "A sign of God's covenant after the flood.",
           "theme": "Genesis",
           "difficulty": "easy",
-          "teachingNote": "Review Rainbow (Genesis) before continuing."
+          "teachingNote": "Rainbow is the thing identified by the clue \"A sign of God's covenant after the flood.\" Review Genesis for the biblical setting behind that answer."
         },
         {
           "id": "ba-r075-cross",
@@ -732,7 +732,7 @@
           "clue": "The instrument on which Jesus was crucified.",
           "theme": "Gospels",
           "difficulty": "easy",
-          "teachingNote": "Review Cross (Gospels) before continuing."
+          "teachingNote": "Cross is the thing identified by the clue \"The instrument on which Jesus was crucified.\" Review Gospels for the biblical setting behind that answer."
         },
         {
           "id": "ba-r076-manger",
@@ -741,7 +741,7 @@
           "clue": "The feeding trough where baby Jesus was laid.",
           "theme": "Gospels",
           "difficulty": "easy",
-          "teachingNote": "Review Manger (Gospels) before continuing."
+          "teachingNote": "Manger is the thing identified by the clue \"The feeding trough where baby Jesus was laid.\" Review Gospels for the biblical setting behind that answer."
         },
         {
           "id": "ba-r077-tablets",
@@ -750,7 +750,7 @@
           "clue": "Stone objects on which the Ten Commandments were written.",
           "theme": "Exodus",
           "difficulty": "medium",
-          "teachingNote": "Review Tablets (Exodus) before continuing."
+          "teachingNote": "Tablets is the thing identified by the clue \"Stone objects on which the Ten Commandments were written.\" Review Exodus for the biblical setting behind that answer."
         },
         {
           "id": "ba-r078-sling",
@@ -759,7 +759,7 @@
           "clue": "David's weapon against Goliath.",
           "theme": "1 Samuel",
           "difficulty": "medium",
-          "teachingNote": "Review Sling (1 Samuel) before continuing."
+          "teachingNote": "Sling is the thing identified by the clue \"David's weapon against Goliath.\" Review 1 Samuel for the biblical setting behind that answer."
         },
         {
           "id": "ba-r079-robe",
@@ -768,7 +768,7 @@
           "clue": "A colorful gift from Jacob to his son Joseph.",
           "theme": "Genesis",
           "difficulty": "medium",
-          "teachingNote": "Review Robe (Genesis) before continuing."
+          "teachingNote": "Robe is the thing identified by the clue \"A colorful gift from Jacob to his son Joseph.\" Review Genesis for the biblical setting behind that answer."
         },
         {
           "id": "ba-r080-staff",
@@ -777,7 +777,7 @@
           "clue": "Moses used this to part the Red Sea.",
           "theme": "Exodus",
           "difficulty": "medium",
-          "teachingNote": "Review Staff (Exodus) before continuing."
+          "teachingNote": "Staff is the thing identified by the clue \"Moses used this to part the Red Sea.\" Review Exodus for the biblical setting behind that answer."
         }
       ]
     },
@@ -793,7 +793,7 @@
           "clue": "What Jesus turned water into at a wedding in Cana.",
           "theme": "Gospels",
           "difficulty": "medium",
-          "teachingNote": "Review Wine (Gospels) before continuing."
+          "teachingNote": "Wine is the thing identified by the clue \"What Jesus turned water into at a wedding in Cana.\" Review Gospels for the biblical setting behind that answer."
         },
         {
           "id": "ba-r082-bread",
@@ -802,7 +802,7 @@
           "clue": "Broken and shared by Jesus at the Last Supper.",
           "theme": "Gospels",
           "difficulty": "easy",
-          "teachingNote": "Review Bread (Gospels) before continuing."
+          "teachingNote": "Bread is the thing identified by the clue \"Broken and shared by Jesus at the Last Supper.\" Review Gospels for the biblical setting behind that answer."
         },
         {
           "id": "ba-r083-trumpet",
@@ -811,7 +811,7 @@
           "clue": "Sounded by priests before the walls of Jericho fell.",
           "theme": "Joshua",
           "difficulty": "medium",
-          "teachingNote": "Review Trumpet (Joshua) before continuing."
+          "teachingNote": "Trumpet is the thing identified by the clue \"Sounded by priests before the walls of Jericho fell.\" Review Joshua for the biblical setting behind that answer."
         },
         {
           "id": "ba-r084-fleece",
@@ -820,7 +820,7 @@
           "clue": "Gideon used one to test God's will.",
           "theme": "Judges",
           "difficulty": "hard",
-          "teachingNote": "Review Fleece (Judges) before continuing."
+          "teachingNote": "Fleece is the thing identified by the clue \"Gideon used one to test God's will.\" Review Judges for the biblical setting behind that answer."
         },
         {
           "id": "ba-r085-ephod",
@@ -829,7 +829,7 @@
           "clue": "A priestly garment worn by Aaron.",
           "theme": "Exodus",
           "difficulty": "hard",
-          "teachingNote": "Review Ephod (Exodus) before continuing."
+          "teachingNote": "Ephod is the thing identified by the clue \"A priestly garment worn by Aaron.\" Review Exodus for the biblical setting behind that answer."
         },
         {
           "id": "ba-r086-scroll",
@@ -838,7 +838,7 @@
           "clue": "An ancient rolled document used for Scripture.",
           "theme": "Bible objects",
           "difficulty": "medium",
-          "teachingNote": "Review Scroll (Bible objects) before continuing."
+          "teachingNote": "Scroll is the thing identified by the clue \"An ancient rolled document used for Scripture.\" Review Bible objects for the biblical setting behind that answer."
         },
         {
           "id": "ba-r087-crown",
@@ -847,7 +847,7 @@
           "clue": "Made of thorns and placed on Jesus's head before His crucifixion.",
           "theme": "Gospels",
           "difficulty": "medium",
-          "teachingNote": "Review Crown (Gospels) before continuing."
+          "teachingNote": "Crown is the thing identified by the clue \"Made of thorns and placed on Jesus's head before His crucifixion.\" Review Gospels for the biblical setting behind that answer."
         },
         {
           "id": "ba-r088-net",
@@ -856,7 +856,7 @@
           "clue": "A fishing tool the disciples left behind to follow Jesus.",
           "theme": "Gospels",
           "difficulty": "easy",
-          "teachingNote": "Review Net (Gospels) before continuing."
+          "teachingNote": "Net is the thing identified by the clue \"A fishing tool the disciples left behind to follow Jesus.\" Review Gospels for the biblical setting behind that answer."
         },
         {
           "id": "ba-r089-lamp",
@@ -865,7 +865,7 @@
           "clue": "God's word is described as one for the psalmist's feet.",
           "theme": "Psalms",
           "difficulty": "medium",
-          "teachingNote": "Review Lamp (Psalms) before continuing."
+          "teachingNote": "Lamp is the thing identified by the clue \"God's word is described as one for the psalmist's feet.\" Review Psalms for the biblical setting behind that answer."
         },
         {
           "id": "ba-r090-flood",
@@ -874,7 +874,7 @@
           "clue": "A worldwide judgment that only Noah's family survived.",
           "theme": "Genesis",
           "difficulty": "easy",
-          "teachingNote": "Review Flood (Genesis) before continuing."
+          "teachingNote": "Flood is the event identified by the clue \"A worldwide judgment that only Noah's family survived.\" Review Genesis for the biblical setting behind that answer."
         }
       ]
     },
@@ -890,7 +890,7 @@
           "clue": "Israel's departure from slavery in Egypt.",
           "theme": "Exodus",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus (Exodus) before continuing."
+          "teachingNote": "Exodus is the event identified by the clue \"Israel's departure from slavery in Egypt.\" Review Exodus for the biblical setting behind that answer."
         },
         {
           "id": "ba-r092-passover",
@@ -899,7 +899,7 @@
           "clue": "The night the angel of death passed over Israelite homes.",
           "theme": "Exodus",
           "difficulty": "medium",
-          "teachingNote": "Review Passover (Exodus) before continuing."
+          "teachingNote": "Passover is the event identified by the clue \"The night the angel of death passed over Israelite homes.\" Review Exodus for the biblical setting behind that answer."
         },
         {
           "id": "ba-r093-crucifixion",
@@ -908,7 +908,7 @@
           "clue": "The event in which Jesus died on the cross.",
           "theme": "Gospels",
           "difficulty": "medium",
-          "teachingNote": "Review Crucifixion (Gospels) before continuing."
+          "teachingNote": "Crucifixion is the event identified by the clue \"The event in which Jesus died on the cross.\" Review Gospels for the biblical setting behind that answer."
         },
         {
           "id": "ba-r094-resurrection",
@@ -917,7 +917,7 @@
           "clue": "Jesus rising from the dead on the third day.",
           "theme": "Gospels",
           "difficulty": "medium",
-          "teachingNote": "Review Resurrection (Gospels) before continuing."
+          "teachingNote": "Resurrection is the event identified by the clue \"Jesus rising from the dead on the third day.\" Review Gospels for the biblical setting behind that answer."
         },
         {
           "id": "ba-r095-pentecost",
@@ -926,7 +926,7 @@
           "clue": "The day the Holy Spirit came upon the early church.",
           "theme": "Acts",
           "difficulty": "hard",
-          "teachingNote": "Review Pentecost (Acts) before continuing."
+          "teachingNote": "Pentecost is the event identified by the clue \"The day the Holy Spirit came upon the early church.\" Review Acts for the biblical setting behind that answer."
         },
         {
           "id": "ba-r096-transfiguration",
@@ -935,7 +935,7 @@
           "clue": "Jesus shone with glory before Peter, James, and John.",
           "theme": "Gospels",
           "difficulty": "hard",
-          "teachingNote": "Review Transfiguration (Gospels) before continuing."
+          "teachingNote": "Transfiguration is the event identified by the clue \"Jesus shone with glory before Peter, James, and John.\" Review Gospels for the biblical setting behind that answer."
         },
         {
           "id": "ba-r097-baptism",
@@ -944,7 +944,7 @@
           "clue": "John performed this on Jesus in the Jordan River.",
           "theme": "Gospels",
           "difficulty": "easy",
-          "teachingNote": "Review Baptism (Gospels) before continuing."
+          "teachingNote": "Baptism is the event identified by the clue \"John performed this on Jesus in the Jordan River.\" Review Gospels for the biblical setting behind that answer."
         },
         {
           "id": "ba-r098-ascension",
@@ -953,7 +953,7 @@
           "clue": "Jesus being taken up into heaven after His resurrection.",
           "theme": "Acts",
           "difficulty": "hard",
-          "teachingNote": "Review Ascension (Acts) before continuing."
+          "teachingNote": "Ascension is the event identified by the clue \"Jesus being taken up into heaven after His resurrection.\" Review Acts for the biblical setting behind that answer."
         },
         {
           "id": "ba-r099-nativity",
@@ -962,7 +962,7 @@
           "clue": "The birth of Jesus in Bethlehem.",
           "theme": "Gospels",
           "difficulty": "medium",
-          "teachingNote": "Review Nativity (Gospels) before continuing."
+          "teachingNote": "Nativity is the event identified by the clue \"The birth of Jesus in Bethlehem.\" Review Gospels for the biblical setting behind that answer."
         },
         {
           "id": "ba-r100-rapture",
@@ -971,7 +971,7 @@
           "clue": "Believers being caught up to meet the Lord, per 1 Thessalonians.",
           "theme": "Bible teaching",
           "difficulty": "hard",
-          "teachingNote": "Review Rapture (Bible teaching) before continuing."
+          "teachingNote": "Rapture is the event identified by the clue \"Believers being caught up to meet the Lord, per 1 Thessalonians.\" Review Bible teaching for the biblical setting behind that answer."
         }
       ]
     },
@@ -987,7 +987,7 @@
           "clue": "Adam and Eve's disobedience that brought sin into the world.",
           "theme": "Genesis",
           "difficulty": "medium",
-          "teachingNote": "Review Fall (Genesis) before continuing."
+          "teachingNote": "Fall is the event identified by the clue \"Adam and Eve's disobedience that brought sin into the world.\" Review Genesis for the biblical setting behind that answer."
         },
         {
           "id": "ba-r102-judgment",
@@ -996,7 +996,7 @@
           "clue": "A future day when all will be held accountable before God.",
           "theme": "Bible teaching",
           "difficulty": "hard",
-          "teachingNote": "Review Judgment (Bible teaching) before continuing."
+          "teachingNote": "Judgment is the event identified by the clue \"A future day when all will be held accountable before God.\" Review Bible teaching for the biblical setting behind that answer."
         },
         {
           "id": "ba-r103-covenant",
@@ -1005,7 +1005,7 @@
           "clue": "A binding promise, such as the one God made with Abraham.",
           "theme": "Bible teaching",
           "difficulty": "hard",
-          "teachingNote": "Review Covenant (Bible teaching) before continuing."
+          "teachingNote": "Covenant is the event identified by the clue \"A binding promise, such as the one God made with Abraham.\" Review Bible teaching for the biblical setting behind that answer."
         }
       ]
     }

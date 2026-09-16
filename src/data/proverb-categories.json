@@ -144,7 +144,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Proverb Category Board 01 and how it connects to the Bible before continuing."
+          "teachingNote": "Proverb Category Board 01 is solved by sorting the cards into these themes: Fear of the Lord: Proverbs 1:7, Proverbs 9:10; Pride and Humility: Proverbs 16:18, Proverbs 18:12; Correction and Discipline: Proverbs 12:1, Proverbs 13:24; Parents and Children: Proverbs 1:8, Proverbs 22:6; Peace and Conflict: Proverbs 10:12, Proverbs 15:18. The listed references are the textual anchors for those category matches.",
+          "scriptureReference": "Proverbs 1:7; Proverbs 9:10; Proverbs 14:27; Proverbs 16:18; Proverbs 18:12"
         },
         {
           "id": "pcv-002",
@@ -280,7 +281,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Proverb Category Board 02 and how it connects to the Bible before continuing."
+          "teachingNote": "Proverb Category Board 02 is solved by sorting the cards into these themes: Wise Speech: Proverbs 10:19, Proverbs 15:1; Diligence and Laziness: Proverbs 6:6, Proverbs 10:4; Money and Generosity: Proverbs 11:25, Proverbs 19:17; Wisdom and Understanding: Proverbs 2:6, Proverbs 3:5-6; Foolishness: Proverbs 12:15, Proverbs 14:12. The listed references are the textual anchors for those category matches.",
+          "scriptureReference": "Proverbs 10:19; Proverbs 15:1; Proverbs 16:24; Proverbs 6:6; Proverbs 10:4"
         },
         {
           "id": "pcv-003",
@@ -416,7 +418,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Proverb Category Board 03 and how it connects to the Bible before continuing."
+          "teachingNote": "Proverb Category Board 03 is solved by sorting the cards into these themes: Anger and Self-Control: Proverbs 14:29, Proverbs 16:32; Friendship and Counsel: Proverbs 11:14, Proverbs 17:17; Integrity and Honesty: Proverbs 10:9, Proverbs 12:22; The Heart: Proverbs 4:23, Proverbs 14:30; Planning and Counsel: Proverbs 15:22, Proverbs 16:3. The listed references are the textual anchors for those category matches.",
+          "scriptureReference": "Proverbs 14:29; Proverbs 16:32; Proverbs 29:11; Proverbs 11:14; Proverbs 17:17"
         },
         {
           "id": "pcv-004",
@@ -552,7 +555,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Proverb Category Board 04 and how it connects to the Bible before continuing."
+          "teachingNote": "Proverb Category Board 04 is solved by sorting the cards into these themes: Pride and Humility: Proverbs 16:18, Proverbs 18:12; Correction and Discipline: Proverbs 12:1, Proverbs 13:24; Parents and Children: Proverbs 1:8, Proverbs 22:6; Peace and Conflict: Proverbs 10:12, Proverbs 15:18; Fear of the Lord: Proverbs 1:7, Proverbs 9:10. The listed references are the textual anchors for those category matches.",
+          "scriptureReference": "Proverbs 16:18; Proverbs 18:12; Proverbs 22:4; Proverbs 12:1; Proverbs 13:24"
         },
         {
           "id": "pcv-005",
@@ -688,7 +692,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Proverb Category Board 05 and how it connects to the Bible before continuing."
+          "teachingNote": "Proverb Category Board 05 is solved by sorting the cards into these themes: Diligence and Laziness: Proverbs 6:6, Proverbs 10:4; Money and Generosity: Proverbs 11:25, Proverbs 19:17; Wisdom and Understanding: Proverbs 2:6, Proverbs 3:5-6; Foolishness: Proverbs 12:15, Proverbs 14:12; Wise Speech: Proverbs 10:19, Proverbs 15:1. The listed references are the textual anchors for those category matches.",
+          "scriptureReference": "Proverbs 6:6; Proverbs 10:4; Proverbs 13:4; Proverbs 11:25; Proverbs 19:17"
         },
         {
           "id": "pcv-006",
@@ -824,7 +829,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Proverb Category Board 06 and how it connects to the Bible before continuing."
+          "teachingNote": "Proverb Category Board 06 is solved by sorting the cards into these themes: Friendship and Counsel: Proverbs 11:14, Proverbs 17:17; Integrity and Honesty: Proverbs 10:9, Proverbs 12:22; The Heart: Proverbs 4:23, Proverbs 14:30; Planning and Counsel: Proverbs 15:22, Proverbs 16:3; Anger and Self-Control: Proverbs 14:29, Proverbs 16:32. The listed references are the textual anchors for those category matches.",
+          "scriptureReference": "Proverbs 11:14; Proverbs 17:17; Proverbs 27:17; Proverbs 10:9; Proverbs 12:22"
         },
         {
           "id": "pcv-007",
@@ -960,7 +966,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Proverb Category Board 07 and how it connects to the Bible before continuing."
+          "teachingNote": "Proverb Category Board 07 is solved by sorting the cards into these themes: Correction and Discipline: Proverbs 12:1, Proverbs 13:24; Parents and Children: Proverbs 1:8, Proverbs 22:6; Peace and Conflict: Proverbs 10:12, Proverbs 15:18; Fear of the Lord: Proverbs 1:7, Proverbs 9:10; Pride and Humility: Proverbs 16:18, Proverbs 18:12. The listed references are the textual anchors for those category matches.",
+          "scriptureReference": "Proverbs 12:1; Proverbs 13:24; Proverbs 19:18; Proverbs 1:8; Proverbs 22:6"
         },
         {
           "id": "pcv-008",
@@ -1096,7 +1103,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Proverb Category Board 08 and how it connects to the Bible before continuing."
+          "teachingNote": "Proverb Category Board 08 is solved by sorting the cards into these themes: Money and Generosity: Proverbs 11:25, Proverbs 19:17; Wisdom and Understanding: Proverbs 2:6, Proverbs 3:5-6; Foolishness: Proverbs 12:15, Proverbs 14:12; Wise Speech: Proverbs 10:19, Proverbs 15:1; Diligence and Laziness: Proverbs 6:6, Proverbs 10:4. The listed references are the textual anchors for those category matches.",
+          "scriptureReference": "Proverbs 11:25; Proverbs 19:17; Proverbs 22:1; Proverbs 2:6; Proverbs 3:5-6"
         },
         {
           "id": "pcv-009",
@@ -1232,7 +1240,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Proverb Category Board 09 and how it connects to the Bible before continuing."
+          "teachingNote": "Proverb Category Board 09 is solved by sorting the cards into these themes: Integrity and Honesty: Proverbs 10:9, Proverbs 12:22; The Heart: Proverbs 4:23, Proverbs 14:30; Planning and Counsel: Proverbs 15:22, Proverbs 16:3; Anger and Self-Control: Proverbs 14:29, Proverbs 16:32; Friendship and Counsel: Proverbs 11:14, Proverbs 17:17. The listed references are the textual anchors for those category matches.",
+          "scriptureReference": "Proverbs 10:9; Proverbs 12:22; Proverbs 20:7; Proverbs 4:23; Proverbs 14:30"
         },
         {
           "id": "pcv-010",
@@ -1368,7 +1377,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Proverb Category Board 10 and how it connects to the Bible before continuing."
+          "teachingNote": "Proverb Category Board 10 is solved by sorting the cards into these themes: Parents and Children: Proverbs 1:8, Proverbs 22:6; Peace and Conflict: Proverbs 10:12, Proverbs 15:18; Fear of the Lord: Proverbs 1:7, Proverbs 9:10; Pride and Humility: Proverbs 16:18, Proverbs 18:12; Correction and Discipline: Proverbs 12:1, Proverbs 13:24. The listed references are the textual anchors for those category matches.",
+          "scriptureReference": "Proverbs 1:8; Proverbs 22:6; Proverbs 31:10; Proverbs 10:12; Proverbs 15:18"
         },
         {
           "id": "pcv-011",
@@ -1504,7 +1514,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Proverb Category Board 11 and how it connects to the Bible before continuing."
+          "teachingNote": "Proverb Category Board 11 is solved by sorting the cards into these themes: Wisdom and Understanding: Proverbs 2:6, Proverbs 3:5-6; Foolishness: Proverbs 12:15, Proverbs 14:12; Wise Speech: Proverbs 10:19, Proverbs 15:1; Diligence and Laziness: Proverbs 6:6, Proverbs 10:4; Money and Generosity: Proverbs 11:25, Proverbs 19:17. The listed references are the textual anchors for those category matches.",
+          "scriptureReference": "Proverbs 2:6; Proverbs 3:5-6; Proverbs 4:7; Proverbs 12:15; Proverbs 14:12"
         },
         {
           "id": "pcv-012",
@@ -1640,7 +1651,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Proverb Category Board 12 and how it connects to the Bible before continuing."
+          "teachingNote": "Proverb Category Board 12 is solved by sorting the cards into these themes: The Heart: Proverbs 4:23, Proverbs 14:30; Planning and Counsel: Proverbs 15:22, Proverbs 16:3; Anger and Self-Control: Proverbs 14:29, Proverbs 16:32; Friendship and Counsel: Proverbs 11:14, Proverbs 17:17; Integrity and Honesty: Proverbs 10:9, Proverbs 12:22. The listed references are the textual anchors for those category matches.",
+          "scriptureReference": "Proverbs 4:23; Proverbs 14:30; Proverbs 23:7; Proverbs 15:22; Proverbs 16:3"
         },
         {
           "id": "pcv-013",
@@ -1776,7 +1788,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Proverb Category Board 13 and how it connects to the Bible before continuing."
+          "teachingNote": "Proverb Category Board 13 is solved by sorting the cards into these themes: Peace and Conflict: Proverbs 10:12, Proverbs 15:18; Fear of the Lord: Proverbs 1:7, Proverbs 9:10; Pride and Humility: Proverbs 16:18, Proverbs 18:12; Correction and Discipline: Proverbs 12:1, Proverbs 13:24; Parents and Children: Proverbs 1:8, Proverbs 22:6. The listed references are the textual anchors for those category matches.",
+          "scriptureReference": "Proverbs 10:12; Proverbs 15:18; Proverbs 17:14; Proverbs 1:7; Proverbs 9:10"
         },
         {
           "id": "pcv-014",
@@ -1912,7 +1925,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Proverb Category Board 14 and how it connects to the Bible before continuing."
+          "teachingNote": "Proverb Category Board 14 is solved by sorting the cards into these themes: Foolishness: Proverbs 12:15, Proverbs 14:12; Wise Speech: Proverbs 10:19, Proverbs 15:1; Diligence and Laziness: Proverbs 6:6, Proverbs 10:4; Money and Generosity: Proverbs 11:25, Proverbs 19:17; Wisdom and Understanding: Proverbs 2:6, Proverbs 3:5-6. The listed references are the textual anchors for those category matches.",
+          "scriptureReference": "Proverbs 12:15; Proverbs 14:12; Proverbs 26:4; Proverbs 10:19; Proverbs 15:1"
         },
         {
           "id": "pcv-015",
@@ -2048,7 +2062,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Proverb Category Board 15 and how it connects to the Bible before continuing."
+          "teachingNote": "Proverb Category Board 15 is solved by sorting the cards into these themes: Planning and Counsel: Proverbs 15:22, Proverbs 16:3; Anger and Self-Control: Proverbs 14:29, Proverbs 16:32; Friendship and Counsel: Proverbs 11:14, Proverbs 17:17; Integrity and Honesty: Proverbs 10:9, Proverbs 12:22; The Heart: Proverbs 4:23, Proverbs 14:30. The listed references are the textual anchors for those category matches.",
+          "scriptureReference": "Proverbs 15:22; Proverbs 16:3; Proverbs 21:5; Proverbs 14:29; Proverbs 16:32"
         },
         {
           "id": "pcv-016",
@@ -2184,7 +2199,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Proverb Category Board 16 and how it connects to the Bible before continuing."
+          "teachingNote": "Proverb Category Board 16 is solved by sorting the cards into these themes: Fear of the Lord: Proverbs 1:7, Proverbs 9:10; Pride and Humility: Proverbs 16:18, Proverbs 18:12; Correction and Discipline: Proverbs 12:1, Proverbs 13:24; Parents and Children: Proverbs 1:8, Proverbs 22:6; Peace and Conflict: Proverbs 10:12, Proverbs 15:18. The listed references are the textual anchors for those category matches.",
+          "scriptureReference": "Proverbs 1:7; Proverbs 9:10; Proverbs 14:27; Proverbs 16:18; Proverbs 18:12"
         },
         {
           "id": "pcv-017",
@@ -2320,7 +2336,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Proverb Category Board 17 and how it connects to the Bible before continuing."
+          "teachingNote": "Proverb Category Board 17 is solved by sorting the cards into these themes: Wise Speech: Proverbs 10:19, Proverbs 15:1; Diligence and Laziness: Proverbs 6:6, Proverbs 10:4; Money and Generosity: Proverbs 11:25, Proverbs 19:17; Wisdom and Understanding: Proverbs 2:6, Proverbs 3:5-6; Foolishness: Proverbs 12:15, Proverbs 14:12. The listed references are the textual anchors for those category matches.",
+          "scriptureReference": "Proverbs 10:19; Proverbs 15:1; Proverbs 16:24; Proverbs 6:6; Proverbs 10:4"
         },
         {
           "id": "pcv-018",
@@ -2456,7 +2473,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Proverb Category Board 18 and how it connects to the Bible before continuing."
+          "teachingNote": "Proverb Category Board 18 is solved by sorting the cards into these themes: Anger and Self-Control: Proverbs 14:29, Proverbs 16:32; Friendship and Counsel: Proverbs 11:14, Proverbs 17:17; Integrity and Honesty: Proverbs 10:9, Proverbs 12:22; The Heart: Proverbs 4:23, Proverbs 14:30; Planning and Counsel: Proverbs 15:22, Proverbs 16:3. The listed references are the textual anchors for those category matches.",
+          "scriptureReference": "Proverbs 14:29; Proverbs 16:32; Proverbs 29:11; Proverbs 11:14; Proverbs 17:17"
         },
         {
           "id": "pcv-019",
@@ -2592,7 +2610,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Proverb Category Board 19 and how it connects to the Bible before continuing."
+          "teachingNote": "Proverb Category Board 19 is solved by sorting the cards into these themes: Pride and Humility: Proverbs 16:18, Proverbs 18:12; Correction and Discipline: Proverbs 12:1, Proverbs 13:24; Parents and Children: Proverbs 1:8, Proverbs 22:6; Peace and Conflict: Proverbs 10:12, Proverbs 15:18; Fear of the Lord: Proverbs 1:7, Proverbs 9:10. The listed references are the textual anchors for those category matches.",
+          "scriptureReference": "Proverbs 16:18; Proverbs 18:12; Proverbs 22:4; Proverbs 12:1; Proverbs 13:24"
         },
         {
           "id": "pcv-020",
@@ -2728,7 +2747,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Proverb Category Board 20 and how it connects to the Bible before continuing."
+          "teachingNote": "Proverb Category Board 20 is solved by sorting the cards into these themes: Diligence and Laziness: Proverbs 6:6, Proverbs 10:4; Money and Generosity: Proverbs 11:25, Proverbs 19:17; Wisdom and Understanding: Proverbs 2:6, Proverbs 3:5-6; Foolishness: Proverbs 12:15, Proverbs 14:12; Wise Speech: Proverbs 10:19, Proverbs 15:1. The listed references are the textual anchors for those category matches.",
+          "scriptureReference": "Proverbs 6:6; Proverbs 10:4; Proverbs 13:4; Proverbs 11:25; Proverbs 19:17"
         },
         {
           "id": "pcv-021",
@@ -2864,7 +2884,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Proverb Category Board 21 and how it connects to the Bible before continuing."
+          "teachingNote": "Proverb Category Board 21 is solved by sorting the cards into these themes: Friendship and Counsel: Proverbs 11:14, Proverbs 17:17; Integrity and Honesty: Proverbs 10:9, Proverbs 12:22; The Heart: Proverbs 4:23, Proverbs 14:30; Planning and Counsel: Proverbs 15:22, Proverbs 16:3; Anger and Self-Control: Proverbs 14:29, Proverbs 16:32. The listed references are the textual anchors for those category matches.",
+          "scriptureReference": "Proverbs 11:14; Proverbs 17:17; Proverbs 27:17; Proverbs 10:9; Proverbs 12:22"
         },
         {
           "id": "pcv-022",
@@ -3000,7 +3021,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Proverb Category Board 22 and how it connects to the Bible before continuing."
+          "teachingNote": "Proverb Category Board 22 is solved by sorting the cards into these themes: Correction and Discipline: Proverbs 12:1, Proverbs 13:24; Parents and Children: Proverbs 1:8, Proverbs 22:6; Peace and Conflict: Proverbs 10:12, Proverbs 15:18; Fear of the Lord: Proverbs 1:7, Proverbs 9:10; Pride and Humility: Proverbs 16:18, Proverbs 18:12. The listed references are the textual anchors for those category matches.",
+          "scriptureReference": "Proverbs 12:1; Proverbs 13:24; Proverbs 19:18; Proverbs 1:8; Proverbs 22:6"
         },
         {
           "id": "pcv-023",
@@ -3136,7 +3158,8 @@
             }
           ],
           "difficulty": "medium",
-          "teachingNote": "Review Proverb Category Board 23 and how it connects to the Bible before continuing."
+          "teachingNote": "Proverb Category Board 23 is solved by sorting the cards into these themes: Money and Generosity: Proverbs 11:25, Proverbs 19:17; Wisdom and Understanding: Proverbs 2:6, Proverbs 3:5-6; Foolishness: Proverbs 12:15, Proverbs 14:12; Wise Speech: Proverbs 10:19, Proverbs 15:1; Diligence and Laziness: Proverbs 6:6, Proverbs 10:4. The listed references are the textual anchors for those category matches.",
+          "scriptureReference": "Proverbs 11:25; Proverbs 19:17; Proverbs 22:1; Proverbs 2:6; Proverbs 3:5-6"
         },
         {
           "id": "pcv-024",
@@ -3272,7 +3295,8 @@
             }
           ],
           "difficulty": "hard",
-          "teachingNote": "Review Proverb Category Board 24 and how it connects to the Bible before continuing."
+          "teachingNote": "Proverb Category Board 24 is solved by sorting the cards into these themes: Integrity and Honesty: Proverbs 10:9, Proverbs 12:22; The Heart: Proverbs 4:23, Proverbs 14:30; Planning and Counsel: Proverbs 15:22, Proverbs 16:3; Anger and Self-Control: Proverbs 14:29, Proverbs 16:32; Friendship and Counsel: Proverbs 11:14, Proverbs 17:17. The listed references are the textual anchors for those category matches.",
+          "scriptureReference": "Proverbs 10:9; Proverbs 12:22; Proverbs 20:7; Proverbs 4:23; Proverbs 14:30"
         },
         {
           "id": "pcv-025",
@@ -3408,7 +3432,8 @@
             }
           ],
           "difficulty": "easy",
-          "teachingNote": "Review Proverb Category Board 25 and how it connects to the Bible before continuing."
+          "teachingNote": "Proverb Category Board 25 is solved by sorting the cards into these themes: Parents and Children: Proverbs 1:8, Proverbs 22:6; Peace and Conflict: Proverbs 10:12, Proverbs 15:18; Fear of the Lord: Proverbs 1:7, Proverbs 9:10; Pride and Humility: Proverbs 16:18, Proverbs 18:12; Correction and Discipline: Proverbs 12:1, Proverbs 13:24. The listed references are the textual anchors for those category matches.",
+          "scriptureReference": "Proverbs 1:8; Proverbs 22:6; Proverbs 31:10; Proverbs 10:12; Proverbs 15:18"
         }
       ]
     }

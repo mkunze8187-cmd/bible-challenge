@@ -1,4 +1,11 @@
-import { useEffect, useRef, useState, type CSSProperties, type KeyboardEvent as ReactKeyboardEvent } from "react";
+import {
+  useEffect,
+  useRef,
+  useState,
+  type CSSProperties,
+  type DragEvent as ReactDragEvent,
+  type KeyboardEvent as ReactKeyboardEvent
+} from "react";
 import bibleChallengeLogo from "./assets/bible-challenge-logo.svg";
 import { EventHomeControls } from "./components/EventHomeControls";
 import { HelpModal } from "./components/HelpModal";
@@ -21,6 +28,7 @@ import {
   GAME_LIBRARY,
   answerBeforeOrAfter,
   buildCryptogramBoard,
+  buildCryptogramSolvedBoard,
   buildMissingWordVerse,
   buildScriptureBoard,
   clearBibleAnagramAnswer,
@@ -36,6 +44,8 @@ import {
   moveBibleBook,
   moveTimelineEvent,
   moveVerseTile,
+  reorderBibleBook,
+  reorderTimelineEvent,
   passBeforeOrAfter,
   passBibleAnagram,
   passBibleBooksRelay,
@@ -361,9 +371,10 @@ function getActiveGuessKey(state: SessionState | null): string | null {
   }
 
   if (state.gameId === "bible-cryptogram") {
-    return state.currentPrompt.isComplete
-      ? null
-      : `${state.gameId}-${state.roundIndex}-${state.turnIndex}-${state.currentPrompt.attemptedLetters.join("")}`;
+    const guessSignature = Object.entries(state.currentPrompt.cipherGuesses)
+      .map(([cipherLetter, guess]) => `${cipherLetter}${guess}`)
+      .join("");
+    return state.currentPrompt.isComplete ? null : `${state.gameId}-${state.roundIndex}-${state.turnIndex}-${guessSignature}`;
   }
 
   if (
@@ -901,6 +912,11 @@ function getRoundTeachingNote(round: unknown): string {
   return getOptionalText((round as { teachingNote?: unknown }).teachingNote) || "Review the reference and answer before continuing.";
 }
 
+function getRoundReference(round: unknown): string {
+  const record = round as { scriptureReference?: unknown; reference?: unknown };
+  return getOptionalText(record.scriptureReference) || getOptionalText(record.reference);
+}
+
 function getStudyNoteContent(state: SessionState | null): StudyNoteContent | null {
   if (!state) {
     return null;
@@ -933,7 +949,7 @@ function getStudyNoteContent(state: SessionState | null): StudyNoteContent | nul
       key: `${state.gameId}:${promptKey}:${prompt.resolvedMessage ?? ""}`,
       title: "Study Note",
       answer: "answer" in prompt.round ? String(prompt.round.answer) : String(prompt.round.book),
-      reference: getOptionalText((prompt.round as { reference?: unknown }).reference),
+      reference: getRoundReference(prompt.round),
       verse: "",
       note: getRoundTeachingNote(prompt.round)
     };
@@ -976,6 +992,7 @@ function getStudyNoteContent(state: SessionState | null): StudyNoteContent | nul
     getOptionalText(round.book) ||
     getOptionalText(round.earlierEvent);
   const reference =
+    getOptionalText(round.scriptureReference) ||
     getOptionalText(round.reference) ||
     getOptionalText(round.prophecyReference) ||
     getOptionalText(round.fulfillmentReference) ||
@@ -1015,7 +1032,7 @@ function getPromptMissTarget(state: SessionState): MissedPromptStat | null {
       ? createMissedPromptStat(
           prompt.round.id,
           prompt.round.answer,
-          getOptionalText((prompt.round as { reference?: unknown }).reference)
+          getRoundReference(prompt.round)
         )
       : null;
   }
@@ -1252,6 +1269,17 @@ function forceResolveForHost(state: SessionState): ActionResult {
     return { nextState, tone: "warning", text: message };
   }
 
+  if (nextState.gameId === "bible-cryptogram") {
+    // Cryptogram has no phase field to flip (any player can guess any cipher letter or
+    // attempt a solve at any time — see BibleCryptogramPrompt), so ending the round here
+    // means marking it complete directly, the same way a correct solve or a fully-revealed
+    // puzzle does.
+    nextState.currentPrompt.isComplete = true;
+    nextState.currentPrompt.completedReason = "fully-revealed";
+    nextState.currentPrompt.winnerParticipantId = null;
+    return { nextState, tone: "warning", text: message };
+  }
+
   if (nextState.gameId === "five-guesses" || nextState.gameId === "initials") {
     const prompt = nextState.currentPrompt;
     if (!prompt) {
@@ -1320,6 +1348,66 @@ function submitOnEnter(
 
   event.preventDefault();
   onSubmit();
+}
+
+// Shared by Bible Timeline and Bible Books Relay — both arrange a flat, ordered list of
+// cards. Their arrow buttons only ever swap one adjacent pair at a time (moveTimelineEvent
+// / moveBibleBook); a drag gesture can move a card several slots in a single drop, so this
+// calls a jump-to-index reorder action once per drop instead (reorderTimelineEvent /
+// reorderBibleBook) rather than replaying the one-step move — repeating that inside one
+// synchronous drop handler would just redo the same swap against state that hasn't
+// re-rendered yet. The arrow buttons stay untouched as a no-precision-needed alternative
+// (keyboard/touch/anyone who'd rather click).
+function useDragToReorder(orderedIds: string[], onReorder: (id: string, targetIndex: number) => void) {
+  const draggedIdRef = useRef<string | null>(null);
+  const [draggedId, setDraggedId] = useState<string | null>(null);
+  const [dragOverId, setDragOverId] = useState<string | null>(null);
+
+  function getItemProps(id: string) {
+    return {
+      draggable: true,
+      onDragStart: () => {
+        draggedIdRef.current = id;
+        setDraggedId(id);
+      },
+      onDragEnter: (event: ReactDragEvent<HTMLElement>) => {
+        event.preventDefault();
+        if (draggedIdRef.current && draggedIdRef.current !== id) {
+          setDragOverId(id);
+        }
+      },
+      onDragOver: (event: ReactDragEvent<HTMLElement>) => {
+        // Without this, the browser refuses to fire a drop event at all.
+        event.preventDefault();
+      },
+      onDrop: (event: ReactDragEvent<HTMLElement>) => {
+        event.preventDefault();
+        const sourceId = draggedIdRef.current;
+        setDraggedId(null);
+        setDragOverId(null);
+        draggedIdRef.current = null;
+
+        if (!sourceId || sourceId === id) {
+          return;
+        }
+
+        const targetIndex = orderedIds.indexOf(id);
+        if (targetIndex < 0) {
+          return;
+        }
+
+        onReorder(sourceId, targetIndex);
+      },
+      onDragEnd: () => {
+        draggedIdRef.current = null;
+        setDraggedId(null);
+        setDragOverId(null);
+      },
+      dragClassName: `${draggedId === id ? "drag-source" : ""} ${dragOverId === id ? "drag-target" : ""}`.trim()
+    };
+  }
+
+  return getItemProps;
 }
 
 function isGameId(value: unknown): value is GameId {
@@ -1661,7 +1749,6 @@ export function App() {
   const [dismissedStudyNoteKey, setDismissedStudyNoteKey] = useState<string | null>(null);
   const [guessText, setGuessText] = useState("");
   const [wordLadderDictionary, setWordLadderDictionary] = useState<ReadonlySet<string> | null>(null);
-  const [scriptureLetter, setScriptureLetter] = useState("");
   const [scriptureSolveText, setScriptureSolveText] = useState("");
   const [cryptogramSolveText, setCryptogramSolveText] = useState("");
   const [flashMessage, setFlashMessage] = useState<FlashMessage>({
@@ -2215,7 +2302,11 @@ export function App() {
     setIsMusicPreviewPlaying(isPlaying);
   }
 
-  function handleAction(action: () => ActionResult, preferredEffect?: SoundEffectName | null) {
+  // Returns the error message when `action` throws (callers that need to show that message
+  // somewhere more specific than the flash banner — e.g. inline under a rejected cryptogram
+  // guess — can use the return value; every other call site just ignores it, since the
+  // flash message set below already covers the general case), or null on success.
+  function handleAction(action: () => ActionResult, preferredEffect?: SoundEffectName | null): string | null {
     try {
       const previousState = sessionState;
       const result = action();
@@ -2241,13 +2332,15 @@ export function App() {
       }
 
       setGuessText("");
-      setScriptureLetter("");
       setScriptureSolveText("");
+      return null;
     } catch (error) {
+      const message = error instanceof Error ? error.message : "The action could not be completed.";
       setFlashMessage({
         tone: "warning",
-        text: error instanceof Error ? error.message : "The action could not be completed."
+        text: message
       });
+      return message;
     }
   }
 
@@ -2316,7 +2409,6 @@ export function App() {
       }));
       setActiveChallengeId(nextChallengeId);
       setGuessText("");
-      setScriptureLetter("");
       setScriptureSolveText("");
       setIsSetupOpen(false);
       setTimeRemaining(
@@ -2422,7 +2514,6 @@ export function App() {
     setIsHostControlsOpen(false);
     setDismissedStudyNoteKey(null);
     setGuessText("");
-    setScriptureLetter("");
     setScriptureSolveText("");
     setFlashMessage({
       tone: "info",
@@ -3074,7 +3165,6 @@ export function App() {
           </div>
         </div>
         <div className="topbar-actions">
-          {!sessionState ? <span className="pill pill-muted">Electron {window.desktopHost?.versions.electron ?? "runtime"}</span> : null}
           <span className="pill pill-accent">{currentGame.label}</span>
           <button
             type="button"
@@ -4478,15 +4568,13 @@ export function App() {
             ) : sessionState.gameId === "scripture-puzzles" ? (
               <ScriptureView
                 state={sessionState}
-                scriptureLetter={scriptureLetter}
                 scriptureSolveText={scriptureSolveText}
                 timerEnabled={timerEnabled}
                 timeRemaining={timeRemaining}
                 timerDurationSeconds={activeTimerSeconds}
                 isTimerExpired={timerEnabled && timeRemaining === 0}
-                onScriptureLetterChange={setScriptureLetter}
                 onScriptureSolveChange={setScriptureSolveText}
-                onSubmitLetter={() => handleAction(() => submitScriptureLetterGuess(sessionState, scriptureLetter))}
+                onSubmitLetter={(letter) => handleAction(() => submitScriptureLetterGuess(sessionState, letter))}
                 onSubmitSolve={() => handleAction(() => submitScriptureSolve(sessionState, scriptureSolveText))}
                 onPass={() => handleAction(() => passScriptureTurn(sessionState), "pass")}
                 onContinue={() => handleAction(() => continueGame(sessionState))}
@@ -4498,6 +4586,7 @@ export function App() {
                 timeRemaining={timeRemaining}
                 timerDurationSeconds={activeTimerSeconds}
                 onMove={(eventId, direction) => handleAction(() => moveTimelineEvent(sessionState, eventId, direction))}
+                onReorder={(eventId, targetIndex) => handleAction(() => reorderTimelineEvent(sessionState, eventId, targetIndex))}
                 onSubmit={() => handleAction(() => submitTimelineOrder(sessionState))}
                 onPass={() => handleAction(() => passTimelineRound(sessionState), "pass")}
                 onContinue={() => handleAction(() => continueGame(sessionState))}
@@ -4587,6 +4676,7 @@ export function App() {
                 isTimerExpired={timerEnabled && timeRemaining === 0}
                 onGuessChange={setGuessText}
                 onSubmit={() => handleAction(() => submitWhoSaidItGuess(sessionState, guessText))}
+                onSubmitChoice={(choice) => handleAction(() => submitWhoSaidItGuess(sessionState, choice))}
                 onPass={() => handleAction(() => passWhoSaidIt(sessionState), "pass")}
                 onContinue={() => handleAction(() => continueGame(sessionState))}
               />
@@ -4597,6 +4687,7 @@ export function App() {
                 timeRemaining={timeRemaining}
                 timerDurationSeconds={activeTimerSeconds}
                 onMove={(book, direction) => handleAction(() => moveBibleBook(sessionState, book, direction))}
+                onReorder={(book, targetIndex) => handleAction(() => reorderBibleBook(sessionState, book, targetIndex))}
                 onSubmit={() => handleAction(() => submitBibleBooksRelay(sessionState))}
                 onPass={() => handleAction(() => passBibleBooksRelay(sessionState), "pass")}
                 onContinue={() => handleAction(() => continueGame(sessionState))}
@@ -4802,10 +4893,31 @@ export function App() {
                 timerDurationSeconds={activeTimerSeconds}
                 isTimerExpired={timerEnabled && timeRemaining === 0}
                 onCryptogramSolveChange={setCryptogramSolveText}
-                onSubmitLetter={(letterGuess) => handleAction(() => submitBibleCryptogramLetterGuess(sessionState, letterGuess))}
+                onSubmitLetter={(cipherLetter, letterGuess) =>
+                  handleAction(() => submitBibleCryptogramLetterGuess(sessionState, cipherLetter, letterGuess), null)
+                }
                 onSubmitSolve={() => handleAction(() => submitBibleCryptogramSolve(sessionState, cryptogramSolveText))}
-                onPass={() => handleAction(() => passBibleCryptogramTurn(sessionState), "pass")}
-                onContinue={() => handleAction(() => continueGame(sessionState))}
+                onPass={() =>
+                  // Cryptogram has no fixed turn limit or phase to run out — with no
+                  // structural end besides a correct solve, passing once the timer expires
+                  // would otherwise just rotate forever with nothing left to do. So a pass
+                  // after time's up ends the round instead of handing off to the next player.
+                  handleAction(
+                    () =>
+                      (timerEnabled && timeRemaining === 0
+                        ? forceResolveForHost(sessionState)
+                        : passBibleCryptogramTurn(sessionState)),
+                    "pass"
+                  )
+                }
+                onContinue={() => {
+                  // The solve textarea isn't reset after every guess (a player mid-typing a
+                  // full solve shouldn't lose their draft just because a teammate fills in
+                  // one more cipher letter), so it has to be cleared explicitly here —
+                  // otherwise the next round opens still showing last round's leftover text.
+                  setCryptogramSolveText("");
+                  handleAction(() => continueGame(sessionState));
+                }}
               />
             ) : (
               <MissingWordView
@@ -5089,30 +5201,80 @@ function InitialsView(props: {
   );
 }
 
+const ALPHABET_LETTERS = "abcdefghijklmnopqrstuvwxyz".split("");
+
+// Shared by every game where a player picks from the 26 letters one at a time (currently
+// just Verse Reveal — Bible Cryptogram uses its own per-cipher-letter grid instead, since
+// there the puzzle only exposes the handful of cipher symbols actually in play). Letters
+// already guessed are crossed off in place, matching the "eliminated" look used for spent
+// choices elsewhere (Fulfillment Finder's choice buttons, for example) so a used letter is
+// never available to guess again.
+function AlphabetGrid(props: {
+  attemptedLetters: string[];
+  isDisabled: boolean;
+  onSelectLetter: (letter: string) => void;
+  // Read-only mode renders the same crossed-off-letters legend but as plain labels instead
+  // of clickable buttons — used by Bible Cryptogram, where the grid is just a reference key
+  // showing which real letters are already spoken for, not something you guess directly
+  // from (guesses go through the per-cipher-letter boxes instead).
+  readOnly?: boolean;
+}) {
+  const { attemptedLetters, isDisabled, onSelectLetter, readOnly } = props;
+  const attempted = new Set(attemptedLetters.map((letter) => letter.toLowerCase()));
+
+  return (
+    <div className="alphabet-grid" role="group" aria-label={readOnly ? "Letters already assigned" : "Guess a letter"}>
+      {ALPHABET_LETTERS.map((letter) => {
+        const isUsed = attempted.has(letter);
+
+        if (readOnly) {
+          return (
+            <span
+              key={letter}
+              className={`alphabet-letter-button alphabet-letter-static ${isUsed ? "choice-button-eliminated" : ""}`}
+            >
+              {letter.toUpperCase()}
+            </span>
+          );
+        }
+
+        return (
+          <button
+            key={letter}
+            type="button"
+            className={`choice-button alphabet-letter-button ${isUsed ? "choice-button-eliminated" : ""}`}
+            disabled={isDisabled || isUsed}
+            onClick={() => onSelectLetter(letter)}
+            aria-label={isUsed ? `${letter.toUpperCase()} already guessed` : `Guess the letter ${letter.toUpperCase()}`}
+          >
+            {letter.toUpperCase()}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
 function ScriptureView(props: {
   state: ScriptureState;
-  scriptureLetter: string;
   scriptureSolveText: string;
   timerEnabled: boolean;
   timeRemaining: number;
   timerDurationSeconds: number;
   isTimerExpired: boolean;
-  onScriptureLetterChange: (value: string) => void;
   onScriptureSolveChange: (value: string) => void;
-  onSubmitLetter: () => void;
+  onSubmitLetter: (letter: string) => void;
   onSubmitSolve: () => void;
   onPass: () => void;
   onContinue: () => void;
 }) {
   const {
     state,
-    scriptureLetter,
     scriptureSolveText,
     timerEnabled,
     timeRemaining,
     timerDurationSeconds,
     isTimerExpired,
-    onScriptureLetterChange,
     onScriptureSolveChange,
     onSubmitLetter,
     onSubmitSolve,
@@ -5149,31 +5311,16 @@ function ScriptureView(props: {
 
       <div className="chip-row">
         <span className="pill pill-muted">Remaining hidden letters: {getScriptureRemainingLetters(state)}</span>
-        <span className="pill pill-muted">
-          Attempted letters:{" "}
-          {state.currentPrompt.attemptedLetters.length > 0
-            ? state.currentPrompt.attemptedLetters.join(", ").toUpperCase()
-            : "none"}
-        </span>
       </div>
 
       {!isResolved ? (
         <>
           {state.currentPrompt.phase === "letter" ? (
-            <div className="guess-zone">
-              <input
-                className="text-input"
-                maxLength={1}
-                value={scriptureLetter}
-                onChange={(event) => onScriptureLetterChange(event.target.value)}
-                onKeyDown={(event) => submitOnEnter(event, onSubmitLetter, isTimerExpired)}
-                placeholder="A-Z"
-                disabled={isTimerExpired}
-              />
-              <button type="button" className="primary-button" onClick={onSubmitLetter} disabled={isTimerExpired}>
-                Submit Letter
-              </button>
-            </div>
+            <AlphabetGrid
+              attemptedLetters={state.currentPrompt.attemptedLetters}
+              isDisabled={isTimerExpired}
+              onSelectLetter={onSubmitLetter}
+            />
           ) : (
             <div className="solve-zone">
               <textarea
@@ -5210,35 +5357,59 @@ function ScriptureView(props: {
 
 function CryptogramLetterRow(props: {
   cipherLetter: string;
-  isSolved: boolean;
+  currentGuess: string | undefined;
+  isCorrect: boolean;
   isDisabled: boolean;
-  onSubmitLetter: (letterGuess: string) => void;
+  showWrongHighlight: boolean;
+  // Returns an error message when the guess is rejected (currently: reusing a real letter
+  // that's already assigned to a different cipher letter), or null when it went through —
+  // the row shows that message itself since it's the only feedback the player gets for a
+  // rejected guess (an app-wide flash banner isn't shown during active gameplay).
+  onSubmitLetter: (letterGuess: string) => string | null;
 }) {
-  const { cipherLetter, isSolved, isDisabled, onSubmitLetter } = props;
-  const [guess, setGuess] = useState("");
+  const { cipherLetter, currentGuess, isCorrect, isDisabled, showWrongHighlight, onSubmitLetter } = props;
+  const [draft, setDraft] = useState("");
+  const [rejectionMessage, setRejectionMessage] = useState<string | null>(null);
 
-  function submit() {
-    if (!guess.trim()) {
+  // The box always mirrors the player's current guess for this cipher letter (or shows
+  // whatever they're mid-typing), and stays editable even after a correct guess — this is
+  // a working substitution key, not a one-shot reveal, so they're free to change their mind
+  // about any single cipher letter without affecting any other box.
+  const displayValue = draft || currentGuess?.toUpperCase() || "";
+
+  function handleChange(rawValue: string) {
+    // The DOM input has no maxLength — with one already applied, the browser blocks a new
+    // keystroke outright once the field already holds a character, so typing over an
+    // existing guess would do nothing without first selecting or clearing it. Taking just
+    // the last typed character here means any keypress replaces whatever was there, no
+    // select-all or backspace needed.
+    const letter = rawValue.trim().slice(-1);
+
+    if (!/^[a-z]$/i.test(letter)) {
+      setDraft("");
+      setRejectionMessage(null);
       return;
     }
 
-    onSubmitLetter(guess);
-    setGuess("");
+    setDraft("");
+    setRejectionMessage(onSubmitLetter(letter));
   }
 
   return (
-    <div className={`cryptogram-letter-row ${isSolved ? "cryptogram-letter-row-solved" : ""}`}>
-      <span className="cryptogram-cipher-letter">{cipherLetter.toUpperCase()}</span>
-      <input
-        className="text-input cryptogram-letter-input"
-        maxLength={1}
-        value={isSolved ? "" : guess}
-        onChange={(event) => setGuess(event.target.value)}
-        onKeyDown={(event) => submitOnEnter(event, submit, isDisabled || isSolved)}
-        placeholder={isSolved ? "✓" : "?"}
-        disabled={isDisabled || isSolved}
-        aria-label={`Guess the real letter for cipher letter ${cipherLetter.toUpperCase()}`}
-      />
+    <div className="cryptogram-letter-row-wrap">
+      <div className="cryptogram-letter-row">
+        <span className="cryptogram-cipher-letter">{cipherLetter.toUpperCase()} =</span>
+        <input
+          className={`text-input cryptogram-letter-input ${showWrongHighlight && currentGuess && !isCorrect ? "cryptogram-letter-input-wrong" : ""}`}
+          value={displayValue}
+          onChange={(event) => handleChange(event.target.value)}
+          onFocus={(event) => event.target.select()}
+          placeholder="?"
+          disabled={isDisabled}
+          aria-label={`Guess the real letter for cipher letter ${cipherLetter.toUpperCase()}`}
+        />
+      </div>
+      {rejectionMessage ? <p className="cryptogram-letter-error">{rejectionMessage}</p> : null}
     </div>
   );
 }
@@ -5251,7 +5422,7 @@ function BibleCryptogramView(props: {
   timerDurationSeconds: number;
   isTimerExpired: boolean;
   onCryptogramSolveChange: (value: string) => void;
-  onSubmitLetter: (letterGuess: string) => void;
+  onSubmitLetter: (cipherLetter: string, letterGuess: string) => string | null;
   onSubmitSolve: () => void;
   onPass: () => void;
   onContinue: () => void;
@@ -5274,8 +5445,8 @@ function BibleCryptogramView(props: {
   const prompt = state.currentPrompt;
 
   // The cipher letters that actually appear in this puzzle, in the order they first show
-  // up left to right — not the full alphabet, so the grid only asks about symbols that
-  // matter for this round.
+  // up left to right — not the full alphabet, so the guess boxes only ask about symbols
+  // that matter for this round.
   const cipherLettersInPuzzle: string[] = [];
   const seenCipherLetters = new Set<string>();
   for (const character of prompt.round.verseText.toLowerCase()) {
@@ -5290,7 +5461,16 @@ function BibleCryptogramView(props: {
     }
   }
 
-  const solvedCipherLetters = new Set(prompt.attemptedLetters.map((letter) => prompt.cipherMap[letter] ?? letter));
+  // Real letters already used as someone's guess for some cipher letter — shown greyed out
+  // in the reference alphabet so the player can see at a glance which letters are spoken
+  // for, right or wrong, the way you'd cross a letter off a legend on paper.
+  const usedRealLetters = new Set(Object.values(prompt.cipherGuesses));
+
+  // Easier rounds get a bit more hand-holding: a wrong guess flashes red so the player
+  // immediately knows to try a different letter, rather than having to compare the two
+  // scripture boards themselves. Harder rounds stay silent about wrongness, same as a
+  // real paper cryptogram.
+  const showWrongHighlight = prompt.round.difficulty === "easy";
 
   return (
     <section className="panel panel-stage">
@@ -5312,12 +5492,18 @@ function BibleCryptogramView(props: {
       </div>
 
       <div className="scripture-screen">
-        {buildCryptogramBoard(state.currentPrompt.round.verseText, state.currentPrompt.cipherMap, state.currentPrompt.attemptedLetters)}
+        {buildCryptogramBoard(state.currentPrompt.round.verseText, state.currentPrompt.cipherMap)}
       </div>
 
       <p className="cryptogram-answer-label">Your solved answer so far</p>
       <div className="scripture-screen cryptogram-answer-screen">
-        {buildScriptureBoard(state.currentPrompt.round.verseText, state.currentPrompt.attemptedLetters)}
+        {buildCryptogramSolvedBoard(state.currentPrompt.round.verseText, state.currentPrompt.cipherMap, state.currentPrompt.cipherGuesses).map(
+          (entry, index) => (
+            <span key={index} className={entry.status === "incorrect" ? "char-incorrect" : undefined}>
+              {entry.character}
+            </span>
+          )
+        )}
       </div>
 
       <div className="chip-row">
@@ -5326,16 +5512,25 @@ function BibleCryptogramView(props: {
 
       {!isResolved ? (
         <>
-          <div className="cryptogram-letter-grid">
-            {cipherLettersInPuzzle.map((cipherLetter) => (
-              <CryptogramLetterRow
-                key={cipherLetter}
-                cipherLetter={cipherLetter}
-                isSolved={solvedCipherLetters.has(cipherLetter)}
-                isDisabled={isTimerExpired}
-                onSubmitLetter={onSubmitLetter}
-              />
-            ))}
+          <div className="cryptogram-solver-layout">
+            <div className="cryptogram-letter-grid">
+              {cipherLettersInPuzzle.map((cipherLetter) => (
+                <CryptogramLetterRow
+                  key={cipherLetter}
+                  cipherLetter={cipherLetter}
+                  currentGuess={prompt.cipherGuesses[cipherLetter]}
+                  isCorrect={prompt.cipherGuesses[cipherLetter] != null && prompt.cipherMap[prompt.cipherGuesses[cipherLetter]] === cipherLetter}
+                  isDisabled={isTimerExpired}
+                  showWrongHighlight={showWrongHighlight}
+                  onSubmitLetter={(letterGuess) => onSubmitLetter(cipherLetter, letterGuess)}
+                />
+              ))}
+            </div>
+
+            <div className="cryptogram-alphabet-key">
+              <p className="cryptogram-answer-label">Letters used</p>
+              <AlphabetGrid attemptedLetters={Array.from(usedRealLetters)} isDisabled={false} onSelectLetter={() => {}} readOnly />
+            </div>
           </div>
 
           <div className="solve-zone">
@@ -5376,16 +5571,18 @@ function BibleTimelineView(props: {
   timeRemaining: number;
   timerDurationSeconds: number;
   onMove: (eventId: string, direction: "left" | "right") => void;
+  onReorder: (eventId: string, targetIndex: number) => void;
   onSubmit: () => void;
   onPass: () => void;
   onContinue: () => void;
 }) {
-  const { state, timerEnabled, timeRemaining, timerDurationSeconds, onMove, onSubmit, onPass, onContinue } = props;
+  const { state, timerEnabled, timeRemaining, timerDurationSeconds, onMove, onReorder, onSubmit, onPass, onContinue } = props;
   const prompt = state.currentPrompt;
   const eventById = new Map(prompt.round.events.map((event) => [event.id, event]));
   const arrangedEvents = prompt.arrangedEventIds.map((eventId) => eventById.get(eventId)).filter(Boolean);
   const orderedEvents = [...prompt.round.events].sort((left, right) => left.order - right.order);
   const isResolved = prompt.phase === "resolved";
+  const getDragProps = useDragToReorder(prompt.arrangedEventIds, onReorder);
 
   return (
     <section className="panel panel-stage">
@@ -5403,9 +5600,15 @@ function BibleTimelineView(props: {
       {!isResolved ? (
         <>
           <div className="timeline-row">
-            {arrangedEvents.map((event, index) =>
-              event ? (
-                <article key={event.id} className="timeline-card">
+            {arrangedEvents.map((event, index) => {
+              if (!event) {
+                return null;
+              }
+
+              const { dragClassName, ...dragProps } = getDragProps(event.id);
+
+              return (
+                <article key={event.id} {...dragProps} className={`timeline-card ${dragClassName}`}>
                   <span className="clue-card-label">Slot {index + 1}</span>
                   <strong>{event.label}</strong>
                   {event.clue ? <p>{event.clue}</p> : null}
@@ -5418,8 +5621,8 @@ function BibleTimelineView(props: {
                     </button>
                   </div>
                 </article>
-              ) : null
-            )}
+              );
+            })}
           </div>
           <div className="guess-zone">
             <button type="button" className="primary-button" onClick={onSubmit}>
@@ -5737,7 +5940,18 @@ function NameThatBookView(props: {
   onPass: () => void;
   onContinue: () => void;
 }) {
-  const { state, guessText, timerEnabled, timeRemaining, timerDurationSeconds, isTimerExpired, onGuessChange, onSubmit, onPass, onContinue } = props;
+  const {
+    state,
+    guessText,
+    timerEnabled,
+    timeRemaining,
+    timerDurationSeconds,
+    isTimerExpired,
+    onGuessChange,
+    onSubmit,
+    onPass,
+    onContinue
+  } = props;
   const prompt = state.currentPrompt;
   const isResolved = prompt.phase === "resolved";
 
@@ -5828,14 +6042,24 @@ function BeforeOrAfterView(props: {
       </div>
 
       <div className="before-after-grid">
-        <article className={`event-choice ${isResolved && prompt.round.earlierEvent === "left" ? "event-choice-earlier" : ""}`}>
+        <button
+          type="button"
+          className={`event-choice event-choice-clickable ${isResolved && prompt.round.earlierEvent === "left" ? "event-choice-earlier" : ""}`}
+          onClick={() => onAnswer("left")}
+          disabled={isResolved}
+        >
           <span className="clue-card-label">Left</span>
           <strong>{prompt.round.leftEvent}</strong>
-        </article>
-        <article className={`event-choice ${isResolved && prompt.round.earlierEvent === "right" ? "event-choice-earlier" : ""}`}>
+        </button>
+        <button
+          type="button"
+          className={`event-choice event-choice-clickable ${isResolved && prompt.round.earlierEvent === "right" ? "event-choice-earlier" : ""}`}
+          onClick={() => onAnswer("right")}
+          disabled={isResolved}
+        >
           <span className="clue-card-label">Right</span>
           <strong>{prompt.round.rightEvent}</strong>
-        </article>
+        </button>
       </div>
 
       {isResolved ? (
@@ -5851,12 +6075,7 @@ function BeforeOrAfterView(props: {
         </>
       ) : (
         <div className="guess-zone">
-          <button type="button" className="primary-button" onClick={() => onAnswer("left")}>
-            Left Happened First
-          </button>
-          <button type="button" className="primary-button" onClick={() => onAnswer("right")}>
-            Right Happened First
-          </button>
+          <p className="hint-text">Click the card for whichever event happened first.</p>
           <button type="button" className="secondary-button" onClick={onPass}>
             Pass
           </button>
@@ -6011,12 +6230,26 @@ function WhoSaidItView(props: {
   isTimerExpired: boolean;
   onGuessChange: (value: string) => void;
   onSubmit: () => void;
+  onSubmitChoice: (choice: string) => void;
   onPass: () => void;
   onContinue: () => void;
 }) {
-  const { state, guessText, timerEnabled, timeRemaining, timerDurationSeconds, isTimerExpired, onGuessChange, onSubmit, onPass, onContinue } = props;
+  const {
+    state,
+    guessText,
+    timerEnabled,
+    timeRemaining,
+    timerDurationSeconds,
+    isTimerExpired,
+    onGuessChange,
+    onSubmit,
+    onSubmitChoice,
+    onPass,
+    onContinue
+  } = props;
   const prompt = state.currentPrompt;
   const isResolved = prompt.phase === "resolved";
+  const hasChoices = Array.isArray(prompt.choices) && prompt.choices.length > 0;
 
   return (
     <section className="panel panel-stage">
@@ -6051,17 +6284,29 @@ function WhoSaidItView(props: {
         </>
       ) : (
         <div className="guess-zone">
-          <input
-            className="text-input"
-            value={guessText}
-            onChange={(event) => onGuessChange(event.target.value)}
-            onKeyDown={(event) => submitOnEnter(event, onSubmit, isTimerExpired)}
-            placeholder="Enter the speaker"
-            disabled={isTimerExpired}
-          />
-          <button type="button" className="primary-button" onClick={onSubmit} disabled={isTimerExpired}>
-            Submit Speaker
-          </button>
+          {hasChoices ? (
+            <div className="choice-grid">
+              {prompt.choices?.map((choice) => (
+                <button key={choice} type="button" className="choice-button" onClick={() => onSubmitChoice(choice)} disabled={isTimerExpired}>
+                  {choice}
+                </button>
+              ))}
+            </div>
+          ) : (
+            <>
+              <input
+                className="text-input"
+                value={guessText}
+                onChange={(event) => onGuessChange(event.target.value)}
+                onKeyDown={(event) => submitOnEnter(event, onSubmit, isTimerExpired)}
+                placeholder="Enter the speaker"
+                disabled={isTimerExpired}
+              />
+              <button type="button" className="primary-button" onClick={onSubmit} disabled={isTimerExpired}>
+                Submit Speaker
+              </button>
+            </>
+          )}
           <button type="button" className="secondary-button" onClick={onPass}>
             Pass
           </button>
@@ -6077,12 +6322,14 @@ function BibleBooksRelayView(props: {
   timeRemaining: number;
   timerDurationSeconds: number;
   onMove: (book: string, direction: "left" | "right") => void;
+  onReorder: (book: string, targetIndex: number) => void;
   onSubmit: () => void;
   onPass: () => void;
   onContinue: () => void;
 }) {
-  const { state, timerEnabled, timeRemaining, timerDurationSeconds, onMove, onSubmit, onPass, onContinue } = props;
+  const { state, timerEnabled, timeRemaining, timerDurationSeconds, onMove, onReorder, onSubmit, onPass, onContinue } = props;
   const prompt = state.currentPrompt;
+  const getDragProps = useDragToReorder(prompt.arrangedBooks, onReorder);
   const isResolved = prompt.phase === "resolved";
 
   return (
@@ -6120,20 +6367,24 @@ function BibleBooksRelayView(props: {
       ) : (
         <>
           <div className="book-relay-grid">
-            {prompt.arrangedBooks.map((book, index) => (
-              <div key={book} className="book-relay-tile">
-                <span>{index + 1}</span>
-                <strong>{book}</strong>
-                <div className="mini-controls">
-                  <button type="button" className="ghost-button icon-button" onClick={() => onMove(book, "left")}>
-                    {"<"}
-                  </button>
-                  <button type="button" className="ghost-button icon-button" onClick={() => onMove(book, "right")}>
-                    {">"}
-                  </button>
+            {prompt.arrangedBooks.map((book, index) => {
+              const { dragClassName, ...dragProps } = getDragProps(book);
+
+              return (
+                <div key={book} {...dragProps} className={`book-relay-tile ${dragClassName}`}>
+                  <span>{index + 1}</span>
+                  <strong>{book}</strong>
+                  <div className="mini-controls">
+                    <button type="button" className="ghost-button icon-button" onClick={() => onMove(book, "left")}>
+                      {"<"}
+                    </button>
+                    <button type="button" className="ghost-button icon-button" onClick={() => onMove(book, "right")}>
+                      {">"}
+                    </button>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
           <div className="guess-zone">
             <button type="button" className="primary-button" onClick={onSubmit}>

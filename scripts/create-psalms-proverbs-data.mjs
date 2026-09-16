@@ -1,6 +1,7 @@
 import { writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { buildCategoryBoardStudyNote } from "./structured-study-notes.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -391,8 +392,10 @@ const categoryRounds = Array.from({ length: 25 }, (_, sessionIndex) => {
     id: `pcv-${String(sessionIndex + 1).padStart(3, "0")}`,
     title: `Proverb Category Board ${String(sessionIndex + 1).padStart(2, "0")}`,
     theme: "Sorting Proverbs by wisdom category",
+    difficulty: difficulty(sessionIndex),
     categories,
-    cards
+    cards,
+    ...buildCategoryBoardStudyNote({ title: `Proverb Category Board ${String(sessionIndex + 1).padStart(2, "0")}`, categories, cards })
   };
 });
 
@@ -478,11 +481,14 @@ const schemas = {
   "proverb-categories": basePackSchema("proverb-categories", "Proverb Categories Challenge Pack", {
     type: "object",
     additionalProperties: false,
-    required: ["id", "title", "theme", "categories", "cards"],
+    required: ["id", "title", "theme", "categories", "cards", "difficulty", "teachingNote"],
     properties: {
       id: { type: "string", minLength: 1 },
       title: { type: "string", minLength: 1 },
       theme: { type: "string", minLength: 1 },
+      difficulty: difficultySchema,
+      scriptureReference: { type: "string", minLength: 1 },
+      teachingNote: { type: "string", minLength: 1 },
       categories: {
         type: "array",
         minItems: 5,

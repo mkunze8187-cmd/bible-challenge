@@ -22,7 +22,7 @@
           "sourceTranslation": "KJV",
           "theme": "Genesis",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 4:9 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 4:9 identifies Cain as the speaker of \"Am I my brother's keeper?\" Cain answered the LORD after Abel's death. That context is why Cain is the correct answer."
         },
         {
           "id": "wsi-r002",
@@ -37,7 +37,7 @@
           "sourceTranslation": "KJV",
           "theme": "Faith",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 22:8 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 22:8 identifies Abraham as the speaker of \"My son, God will provide himself a lamb for a burnt offering.\" Abraham answered Isaac on the way to Moriah. That context is why Abraham is the correct answer."
         },
         {
           "id": "wsi-r003",
@@ -52,7 +52,7 @@
           "sourceTranslation": "KJV",
           "theme": "Exodus",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 5:2 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 5:2 identifies Pharaoh as the speaker of \"Who is the LORD, that I should obey his voice to let Israel go?\" Pharaoh answered Moses and Aaron in Egypt. That context is why Pharaoh is the correct answer."
         },
         {
           "id": "wsi-r004",
@@ -66,7 +66,7 @@
           "sourceTranslation": "KJV",
           "theme": "Loyalty",
           "difficulty": "easy",
-          "teachingNote": "Review Ruth 1:16 and how it connects to the Bible before continuing."
+          "teachingNote": "Ruth 1:16 identifies Ruth as the speaker of \"Intreat me not to leave thee, or to return from following after thee.\" Ruth spoke to Naomi on the road from Moab. That context is why Ruth is the correct answer."
         },
         {
           "id": "wsi-r005",
@@ -81,7 +81,7 @@
           "sourceTranslation": "KJV",
           "theme": "Courage",
           "difficulty": "medium",
-          "teachingNote": "Review 1 Samuel 17:45 and how it connects to the Bible before continuing."
+          "teachingNote": "1 Samuel 17:45 identifies David as the speaker of \"Thou comest to me with a sword, and with a spear, and with a shield.\" David spoke to Goliath before the battle. That context is why David is the correct answer."
         },
         {
           "id": "wsi-r006",
@@ -95,7 +95,7 @@
           "sourceTranslation": "KJV",
           "theme": "Endurance",
           "difficulty": "hard",
-          "teachingNote": "Review Job 1:21 and how it connects to the Bible before continuing."
+          "teachingNote": "Job 1:21 identifies Job as the speaker of \"The LORD gave, and the LORD hath taken away; blessed be the name of the LORD.\" Job worshipped after losing his children and possessions. That context is why Job is the correct answer."
         },
         {
           "id": "wsi-r007",
@@ -110,7 +110,7 @@
           "sourceTranslation": "KJV",
           "theme": "Calling",
           "difficulty": "easy",
-          "teachingNote": "Review Isaiah 6:8 and how it connects to the Bible before continuing."
+          "teachingNote": "Isaiah 6:8 identifies Isaiah as the speaker of \"Here am I; send me.\" Isaiah answered the Lord's call. That context is why Isaiah is the correct answer."
         },
         {
           "id": "wsi-r008",
@@ -125,7 +125,7 @@
           "sourceTranslation": "KJV",
           "theme": "Prophets",
           "difficulty": "medium",
-          "teachingNote": "Review Jonah 2:9 and how it connects to the Bible before continuing."
+          "teachingNote": "Jonah 2:9 identifies Jonah as the speaker of \"Salvation is of the LORD.\" Jonah prayed from inside the fish. That context is why Jonah is the correct answer."
         },
         {
           "id": "wsi-r009",
@@ -141,7 +141,7 @@
           "sourceTranslation": "KJV",
           "theme": "Jesus",
           "difficulty": "hard",
-          "teachingNote": "Review Matthew 3:17 and how it connects to the Bible before continuing."
+          "teachingNote": "Matthew 3:17 identifies God the Father as the speaker of \"This is my beloved Son, in whom I am well pleased.\" The voice from heaven spoke at Jesus' baptism. That context is why God the Father is the correct answer."
         },
         {
           "id": "wsi-r010",
@@ -157,7 +157,7 @@
           "sourceTranslation": "KJV",
           "theme": "Temptation",
           "difficulty": "easy",
-          "teachingNote": "Review Matthew 4:4 and how it connects to the Bible before continuing."
+          "teachingNote": "Matthew 4:4 identifies Jesus as the speaker of \"Man shall not live by bread alone, but by every word that proceedeth out of the mouth of God.\" Jesus answered the tempter in the wilderness. That context is why Jesus is the correct answer."
         }
       ]
     },
@@ -180,7 +180,7 @@
           "sourceTranslation": "KJV",
           "theme": "Confession",
           "difficulty": "medium",
-          "teachingNote": "Review Matthew 16:16 and how it connects to the Bible before continuing."
+          "teachingNote": "Matthew 16:16 identifies Peter as the speaker of \"Thou art the Christ, the Son of the living God.\" Peter answered Jesus at Caesarea Philippi. That context is why Peter is the correct answer."
         },
         {
           "id": "wsi-r012",
@@ -195,7 +195,7 @@
           "sourceTranslation": "KJV",
           "theme": "Birth of Jesus",
           "difficulty": "hard",
-          "teachingNote": "Review Luke 1:38 and how it connects to the Bible before continuing."
+          "teachingNote": "Luke 1:38 identifies Mary as the speaker of \"Behold the handmaid of the Lord; be it unto me according to thy word.\" Mary answered Gabriel. That context is why Mary is the correct answer."
         },
         {
           "id": "wsi-r013",
@@ -210,7 +210,7 @@
           "sourceTranslation": "KJV",
           "theme": "Praise",
           "difficulty": "easy",
-          "teachingNote": "Review Luke 1:46 and how it connects to the Bible before continuing."
+          "teachingNote": "Luke 1:46 identifies Mary as the speaker of \"My soul doth magnify the Lord,\" Mary spoke while visiting Elisabeth. That context is why Mary is the correct answer."
         },
         {
           "id": "wsi-r014",
@@ -224,7 +224,7 @@
           "sourceTranslation": "KJV",
           "theme": "Promise",
           "difficulty": "medium",
-          "teachingNote": "Review Luke 2:29 and how it connects to the Bible before continuing."
+          "teachingNote": "Luke 2:29 identifies Simeon as the speaker of \"Lord, now lettest thou thy servant depart in peace, according to thy word:\" Simeon blessed God while holding the infant Jesus. That context is why Simeon is the correct answer."
         },
         {
           "id": "wsi-r015",
@@ -240,7 +240,7 @@
           "sourceTranslation": "KJV",
           "theme": "Witness",
           "difficulty": "hard",
-          "teachingNote": "Review John 1:29 and how it connects to the Bible before continuing."
+          "teachingNote": "John 1:29 identifies John the Baptist as the speaker of \"Behold the Lamb of God, which taketh away the sin of the world.\" John identified Jesus near Jordan. That context is why John the Baptist is the correct answer."
         },
         {
           "id": "wsi-r016",
@@ -255,7 +255,7 @@
           "sourceTranslation": "KJV",
           "theme": "Resurrection",
           "difficulty": "easy",
-          "teachingNote": "Review John 11:27 and how it connects to the Bible before continuing."
+          "teachingNote": "John 11:27 identifies Martha as the speaker of \"Yea, Lord: I believe that thou art the Christ, the Son of God.\" Martha spoke to Jesus before Lazarus was raised. That context is why Martha is the correct answer."
         },
         {
           "id": "wsi-r017",
@@ -271,7 +271,7 @@
           "sourceTranslation": "KJV",
           "theme": "Resurrection",
           "difficulty": "medium",
-          "teachingNote": "Review John 20:28 and how it connects to the Bible before continuing."
+          "teachingNote": "John 20:28 identifies Thomas as the speaker of \"My Lord and my God.\" Thomas answered the risen Jesus. That context is why Thomas is the correct answer."
         },
         {
           "id": "wsi-r018",
@@ -288,7 +288,7 @@
           "sourceTranslation": "KJV",
           "theme": "Conversion",
           "difficulty": "hard",
-          "teachingNote": "Review Acts 9:5 and how it connects to the Bible before continuing."
+          "teachingNote": "Acts 9:5 identifies Saul as the speaker of \"Who art thou, Lord?\" Saul spoke on the road to Damascus. That context is why Saul is the correct answer."
         },
         {
           "id": "wsi-r019",
@@ -304,7 +304,7 @@
           "sourceTranslation": "KJV",
           "theme": "Salvation",
           "difficulty": "easy",
-          "teachingNote": "Review Acts 16:30 and how it connects to the Bible before continuing."
+          "teachingNote": "Acts 16:30 identifies The Philippian jailer as the speaker of \"Sirs, what must I do to be saved?\" The jailer asked Paul and Silas after the prison doors opened. That context is why The Philippian jailer is the correct answer."
         },
         {
           "id": "wsi-r020",
@@ -320,7 +320,7 @@
           "sourceTranslation": "KJV",
           "theme": "Witness",
           "difficulty": "medium",
-          "teachingNote": "Review Acts 26:28 and how it connects to the Bible before continuing."
+          "teachingNote": "Acts 26:28 identifies Agrippa as the speaker of \"Almost thou persuadest me to be a Christian.\" Agrippa answered Paul during Paul's defense. That context is why Agrippa is the correct answer."
         }
       ]
     },
@@ -344,7 +344,7 @@
           "sourceTranslation": "KJV",
           "theme": "Light",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 1:3 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 1:3 identifies God as the speaker of \"Let there be light: and there was light.\" God spoke in Genesis 1:3. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r022",
@@ -361,7 +361,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 1:6 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 1:6 identifies God as the speaker of \"Let there be a firmament in the midst of the waters, and let it divide the waters from the waters.\" God spoke in Genesis 1:6. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r023",
@@ -378,7 +378,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 1:9 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 1:9 identifies God as the speaker of \"Let the waters under the heaven be gathered together unto one place, and let the dry land appear: and it was so.\" God spoke in Genesis 1:9. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r024",
@@ -395,7 +395,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 1:11 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 1:11 identifies God as the speaker of \"Let the earth bring forth grass, the herb yielding seed, and the fruit tree yielding fruit after his kind, whose seed is in itself, upon the earth: and it was so.\" God spoke in Genesis 1:11. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r025",
@@ -412,7 +412,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 1:14 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 1:14 identifies God as the speaker of \"Let there be lights in the firmament of the heaven to divide the day from the night; and let them be for signs, and for seasons, and for days, and years:\" God spoke in Genesis 1:14. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r026",
@@ -429,7 +429,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 1:20 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 1:20 identifies God as the speaker of \"Let the waters bring forth abundantly the moving creature that hath life, and fowl that may fly above the earth in the open firmament of heaven.\" God spoke in Genesis 1:20. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r027",
@@ -446,7 +446,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 1:24 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 1:24 identifies God as the speaker of \"Let the earth bring forth the living creature after his kind, cattle, and creeping thing, and beast of the earth after his kind: and it was so.\" God spoke in Genesis 1:24. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r028",
@@ -463,7 +463,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 2:18 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 2:18 identifies God as the speaker of \"It is not good that the man should be alone; I will make him an help meet for him.\" God spoke in Genesis 2:18. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r029",
@@ -477,7 +477,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 2:23 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 2:23 identifies Adam as the speaker of \"This is now bone of my bones, and flesh of my flesh: she shall be called Woman, because she was taken out of Man.\" Adam spoke in Genesis 2:23. That context is why Adam is the correct answer."
         },
         {
           "id": "wsi-r030",
@@ -494,7 +494,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 3:9 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 3:9 identifies God as the speaker of \"Where art thou?\" God spoke in Genesis 3:9. That context is why God is the correct answer."
         }
       ]
     },
@@ -518,7 +518,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 3:14 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 3:14 identifies God as the speaker of \"Because thou hast done this, thou art cursed above all cattle, and above every beast of the field; upon thy belly shalt thou go, and dust shalt thou eat all the days of thy life:\" God spoke in Genesis 3:14. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r032",
@@ -535,7 +535,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 3:22 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 3:22 identifies God as the speaker of \"Behold, the man is become as one of us, to know good and evil: and now, lest he put forth his hand, and take also of the tree of life, and eat, and live for ever:\" God spoke in Genesis 3:22. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r033",
@@ -552,7 +552,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 4:6 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 4:6 identifies God as the speaker of \"Why art thou wroth? and why is thy countenance fallen?\" God spoke in Genesis 4:6. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r034",
@@ -566,7 +566,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 4:13 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 4:13 identifies Cain as the speaker of \"My punishment is greater than I can bear.\" Cain spoke in Genesis 4:13. That context is why Cain is the correct answer."
         },
         {
           "id": "wsi-r035",
@@ -583,7 +583,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 4:15 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 4:15 identifies God as the speaker of \"Therefore whosoever slayeth Cain, vengeance shall be taken on him sevenfold. And the Lord set a mark upon Cain, lest any finding him should kill him.\" God spoke in Genesis 4:15. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r036",
@@ -600,7 +600,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 6:3 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 6:3 identifies God as the speaker of \"My spirit shall not always strive with man, for that he also is flesh: yet his days shall be an hundred and twenty years.\" God spoke in Genesis 6:3. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r037",
@@ -617,7 +617,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 6:7 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 6:7 identifies God as the speaker of \"I will destroy man whom I have created from the face of the earth; both man, and beast, and the creeping thing, and the fowls of the air; for it repenteth me that I have made them.\" God spoke in Genesis 6:7. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r038",
@@ -634,7 +634,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 6:13 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 6:13 identifies God as the speaker of \"The end of all flesh is come before me; for the earth is filled with violence through them; and, behold, I will destroy them with the earth.\" God spoke in Genesis 6:13. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r039",
@@ -651,7 +651,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 7:1 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 7:1 identifies God as the speaker of \"Come thou and all thy house into the ark; for thee have I seen righteous before me in this generation.\" God spoke in Genesis 7:1. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r040",
@@ -668,7 +668,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 9:1 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 9:1 identifies God as the speaker of \"Be fruitful, and multiply, and replenish the earth.\" God spoke in Genesis 9:1. That context is why God is the correct answer."
         }
       ]
     },
@@ -692,7 +692,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 9:8 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 9:8 identifies God as the speaker of \"and to his sons with him, saying,\" God spoke in Genesis 9:8. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r042",
@@ -709,7 +709,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 9:12 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 9:12 identifies God as the speaker of \"This is the token of the covenant which I make between me and you and every living creature that is with you, for perpetual generations:\" God spoke in Genesis 9:12. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r043",
@@ -726,7 +726,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 9:17 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 9:17 identifies God as the speaker of \"This is the token of the covenant, which I have established between me and all flesh that is upon the earth.\" God spoke in Genesis 9:17. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r044",
@@ -743,7 +743,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 11:6 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 11:6 identifies God as the speaker of \"Behold, the people is one, and they have all one language; and this they begin to do: and now nothing will be restrained from them, which they have imagined to do.\" God spoke in Genesis 11:6. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r045",
@@ -760,7 +760,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 12:7 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 12:7 identifies God as the speaker of \"Unto thy seed will I give this land: and there builded he an altar unto the Lord, who appeared unto him.\" God spoke in Genesis 12:7. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r046",
@@ -777,7 +777,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 17:9 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 17:9 identifies God as the speaker of \"Thou shalt keep my covenant therefore, thou, and thy seed after thee in their generations.\" God spoke in Genesis 17:9. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r047",
@@ -794,7 +794,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 17:15 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 17:15 identifies God as the speaker of \"As for Sarai thy wife, thou shalt not call her name Sarai, but Sarah shall her name be.\" God spoke in Genesis 17:15. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r048",
@@ -808,7 +808,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 17:18 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 17:18 identifies Abraham as the speaker of \"O that Ishmael might live before thee!\" Abraham spoke in Genesis 17:18. That context is why Abraham is the correct answer."
         },
         {
           "id": "wsi-r049",
@@ -825,7 +825,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 17:19 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 17:19 identifies God as the speaker of \"Sarah thy wife shall bear thee a son indeed; and thou shalt call his name Isaac: and I will establish my covenant with him for an everlasting covenant, and with his seed after him.\" God spoke in Genesis 17:19. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r050",
@@ -839,7 +839,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 18:6 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 18:6 identifies Abraham as the speaker of \"Make ready quickly three measures of fine meal, knead it, and make cakes upon the hearth.\" Abraham spoke in Genesis 18:6. That context is why Abraham is the correct answer."
         }
       ]
     },
@@ -863,7 +863,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 18:13 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 18:13 identifies God as the speaker of \"Wherefore did Sarah laugh, saying, Shall I of a surety bear a child, which am old?\" God spoke in Genesis 18:13. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r052",
@@ -880,7 +880,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 18:17 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 18:17 identifies God as the speaker of \"Shall I hide from Abraham that thing which I do;\" God spoke in Genesis 18:17. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r053",
@@ -897,7 +897,7 @@
           "sourceTranslation": "KJV",
           "theme": "Mercy",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 18:20 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 18:20 identifies God as the speaker of \"Because the cry of Sodom and Gomorrah is great, and because their sin is very grievous;\" God spoke in Genesis 18:20. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r054",
@@ -911,7 +911,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 18:23 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 18:23 identifies Abraham as the speaker of \"Wilt thou also destroy the righteous with the wicked?\" Abraham spoke in Genesis 18:23. That context is why Abraham is the correct answer."
         },
         {
           "id": "wsi-r055",
@@ -928,7 +928,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 18:26 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 18:26 identifies God as the speaker of \"If I find in Sodom fifty righteous within the city, then I will spare all the place for their sakes.\" God spoke in Genesis 18:26. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r056",
@@ -942,7 +942,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 18:27 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 18:27 identifies Abraham as the speaker of \"Behold now, I have taken upon me to speak unto the Lord, which am but dust and ashes:\" Abraham spoke in Genesis 18:27. That context is why Abraham is the correct answer."
         },
         {
           "id": "wsi-r057",
@@ -959,7 +959,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 20:3 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 20:3 identifies God as the speaker of \"Behold, thou art but a dead man, for the woman which thou hast taken; for she is a man's wife.\" God spoke in Genesis 20:3. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r058",
@@ -976,7 +976,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 20:6 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 20:6 identifies God as the speaker of \"Yea, I know that thou didst this in the integrity of thy heart; for I also withheld thee from sinning against me: therefore suffered I thee not to touch her.\" God spoke in Genesis 20:6. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r059",
@@ -990,7 +990,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 20:11 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 20:11 identifies Abraham as the speaker of \"Because I thought, Surely the fear of God is not in this place; and they will slay me for my wife's sake.\" Abraham spoke in Genesis 20:11. That context is why Abraham is the correct answer."
         },
         {
           "id": "wsi-r060",
@@ -1004,7 +1004,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 21:24 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 21:24 identifies Abraham as the speaker of \"I will swear.\" Abraham spoke in Genesis 21:24. That context is why Abraham is the correct answer."
         }
       ]
     },
@@ -1025,7 +1025,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 22:5 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 22:5 identifies Abraham as the speaker of \"Abide ye here with the ass; and I and the lad will go yonder and worship, and come again to you.\" Abraham spoke in Genesis 22:5. That context is why Abraham is the correct answer."
         },
         {
           "id": "wsi-r062",
@@ -1039,7 +1039,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 22:8 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 22:8 identifies Abraham as the speaker of \"My son, God will provide himself a lamb for a burnt offering: so they went both of them together.\" Abraham spoke in Genesis 22:8. That context is why Abraham is the correct answer."
         },
         {
           "id": "wsi-r063",
@@ -1053,7 +1053,7 @@
           "sourceTranslation": "KJV",
           "theme": "Prayer",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 24:2 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 24:2 identifies Abraham as the speaker of \"that ruled over all that he had, Put, I pray thee, thy hand under my thigh:\" Abraham spoke in Genesis 24:2. That context is why Abraham is the correct answer."
         },
         {
           "id": "wsi-r064",
@@ -1067,7 +1067,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 24:6 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 24:6 identifies Abraham as the speaker of \"Beware thou that thou bring not my son thither again.\" Abraham spoke in Genesis 24:6. That context is why Abraham is the correct answer."
         },
         {
           "id": "wsi-r065",
@@ -1081,7 +1081,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 25:31 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 25:31 identifies Jacob as the speaker of \"Sell me this day thy birthright.\" Jacob spoke in Genesis 25:31. That context is why Jacob is the correct answer."
         },
         {
           "id": "wsi-r066",
@@ -1095,7 +1095,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 25:33 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 25:33 identifies Jacob as the speaker of \"Swear to me this day; and he sware unto him: and he sold his birthright unto Jacob.\" Jacob spoke in Genesis 25:33. That context is why Jacob is the correct answer."
         },
         {
           "id": "wsi-r067",
@@ -1112,7 +1112,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 26:2 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 26:2 identifies God as the speaker of \"Go not down into Egypt; dwell in the land which I shall tell thee of:\" God spoke in Genesis 26:2. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r068",
@@ -1129,7 +1129,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 26:24 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 26:24 identifies God as the speaker of \"I am the God of Abraham thy father: fear not, for I am with thee, and will bless thee, and multiply thy seed for my servant Abraham's sake.\" God spoke in Genesis 26:24. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r069",
@@ -1143,7 +1143,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 26:27 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 26:27 identifies Isaac as the speaker of \"Wherefore come ye to me, seeing ye hate me, and have sent me away from you?\" Isaac spoke in Genesis 26:27. That context is why Isaac is the correct answer."
         },
         {
           "id": "wsi-r070",
@@ -1157,7 +1157,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 27:11 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 27:11 identifies Jacob as the speaker of \"Behold, Esau my brother is a hairy man, and I am a smooth man:\" Jacob spoke in Genesis 27:11. That context is why Jacob is the correct answer."
         }
       ]
     },
@@ -1178,7 +1178,7 @@
           "sourceTranslation": "KJV",
           "theme": "Prayer",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 27:19 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 27:19 identifies Jacob as the speaker of \"I am Esau thy first born; I have done according as thou badest me: arise, I pray thee, sit and eat of my venison, that thy soul may bless me.\" Jacob spoke in Genesis 27:19. That context is why Jacob is the correct answer."
         },
         {
           "id": "wsi-r072",
@@ -1192,7 +1192,7 @@
           "sourceTranslation": "KJV",
           "theme": "Prayer",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 27:21 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 27:21 identifies Isaac as the speaker of \"Come near, I pray thee, that I may feel thee, my son, whether thou be my very son Esau or not.\" Isaac spoke in Genesis 27:21. That context is why Isaac is the correct answer."
         },
         {
           "id": "wsi-r073",
@@ -1206,7 +1206,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 27:33 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 27:33 identifies Isaac as the speaker of \"Who? where is he that hath taken venison, and brought it me, and I have eaten of all before thou camest, and have blessed him? yea, and he shall be blessed.\" Isaac spoke in Genesis 27:33. That context is why Isaac is the correct answer."
         },
         {
           "id": "wsi-r074",
@@ -1220,7 +1220,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 27:37 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 27:37 identifies Isaac as the speaker of \"Behold, I have made him thy lord, and all his brethren have I given to him for servants; and with corn and wine have I sustained him: and what shall I do now unto thee, my son?\" Isaac spoke in Genesis 27:37. That context is why Isaac is the correct answer."
         },
         {
           "id": "wsi-r075",
@@ -1234,7 +1234,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 28:1 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 28:1 identifies Isaac as the speaker of \"Thou shalt not take a wife of the daughters of Canaan.\" Isaac spoke in Genesis 28:1. That context is why Isaac is the correct answer."
         },
         {
           "id": "wsi-r076",
@@ -1248,7 +1248,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 29:21 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 29:21 identifies Jacob as the speaker of \"Give me my wife, for my days are fulfilled, that I may go in unto her.\" Jacob spoke in Genesis 29:21. That context is why Jacob is the correct answer."
         },
         {
           "id": "wsi-r077",
@@ -1265,7 +1265,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 31:3 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 31:3 identifies God as the speaker of \"Return unto the land of thy fathers, and to thy kindred; and I will be with thee.\" God spoke in Genesis 31:3. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r078",
@@ -1282,7 +1282,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 31:24 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 31:24 identifies God as the speaker of \"Take heed that thou speak not to Jacob either good or bad.\" God spoke in Genesis 31:24. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r079",
@@ -1296,7 +1296,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 31:31 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 31:31 identifies Jacob as the speaker of \"Because I was afraid: for I said, Peradventure thou wouldest take by force thy daughters from me.\" Jacob spoke in Genesis 31:31. That context is why Jacob is the correct answer."
         },
         {
           "id": "wsi-r080",
@@ -1310,7 +1310,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 31:46 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 31:46 identifies Jacob as the speaker of \"Gather stones; and they took stones, and made an heap: and they did eat there upon the heap.\" Jacob spoke in Genesis 31:46. That context is why Jacob is the correct answer."
         }
       ]
     },
@@ -1331,7 +1331,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 32:9 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 32:9 identifies Jacob as the speaker of \"O God of my father Abraham, and God of my father Isaac, the Lord which saidst unto me, Return unto thy country, and to thy kindred, and I will deal well with thee:\" Jacob spoke in Genesis 32:9. That context is why Jacob is the correct answer."
         },
         {
           "id": "wsi-r082",
@@ -1348,7 +1348,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 35:1 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 35:1 identifies God as the speaker of \"Arise, go up to Bethel, and dwell there: and make there an altar unto God, that appeared unto thee when thou fleddest from the face of Esau thy brother.\" God spoke in Genesis 35:1. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r083",
@@ -1362,7 +1362,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 35:2 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 35:2 identifies Jacob as the speaker of \"and to all that were with him, Put away the strange gods that are among you, and be clean, and change your garments:\" Jacob spoke in Genesis 35:2. That context is why Jacob is the correct answer."
         },
         {
           "id": "wsi-r084",
@@ -1379,7 +1379,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 35:10 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 35:10 identifies God as the speaker of \"Thy name is Jacob: thy name shall not be called any more Jacob, but Israel shall be thy name: and he called his name Israel.\" God spoke in Genesis 35:10. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r085",
@@ -1396,7 +1396,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 35:11 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 35:11 identifies God as the speaker of \"I am God Almighty: be fruitful and multiply; a nation and a company of nations shall be of thee, and kings shall come out of thy loins;\" God spoke in Genesis 35:11. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r086",
@@ -1410,7 +1410,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 40:12 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 40:12 identifies Joseph as the speaker of \"This is the interpretation of it: The three branches are three days:\" Joseph spoke in Genesis 40:12. That context is why Joseph is the correct answer."
         },
         {
           "id": "wsi-r087",
@@ -1424,7 +1424,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 40:18 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 40:18 identifies Joseph as the speaker of \"This is the interpretation thereof: The three baskets are three days:\" Joseph spoke in Genesis 40:18. That context is why Joseph is the correct answer."
         },
         {
           "id": "wsi-r088",
@@ -1438,7 +1438,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 41:15 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 41:15 identifies Pharaoh as the speaker of \"I have dreamed a dream, and there is none that can interpret it: and I have heard say of thee, that thou canst understand a dream to interpret it.\" Pharaoh spoke in Genesis 41:15. That context is why Pharaoh is the correct answer."
         },
         {
           "id": "wsi-r089",
@@ -1452,7 +1452,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 41:17 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 41:17 identifies Pharaoh as the speaker of \"In my dream, behold, I stood upon the bank of the river:\" Pharaoh spoke in Genesis 41:17. That context is why Pharaoh is the correct answer."
         },
         {
           "id": "wsi-r090",
@@ -1466,7 +1466,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 41:25 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 41:25 identifies Joseph as the speaker of \"The dream of Pharaoh is one: God hath shewed Pharaoh what he is about to do.\" Joseph spoke in Genesis 41:25. That context is why Joseph is the correct answer."
         }
       ]
     },
@@ -1487,7 +1487,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 41:38 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 41:38 identifies Pharaoh as the speaker of \"Can we find such a one as this is, a man in whom the Spirit of God is?\" Pharaoh spoke in Genesis 41:38. That context is why Pharaoh is the correct answer."
         },
         {
           "id": "wsi-r092",
@@ -1501,7 +1501,7 @@
           "sourceTranslation": "KJV",
           "theme": "Wisdom",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 41:39 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 41:39 identifies Pharaoh as the speaker of \"Forasmuch as God hath shewed thee all this, there is none so discreet and wise as thou art:\" Pharaoh spoke in Genesis 41:39. That context is why Pharaoh is the correct answer."
         },
         {
           "id": "wsi-r093",
@@ -1515,7 +1515,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 41:41 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 41:41 identifies Pharaoh as the speaker of \"See, I have set thee over all the land of Egypt.\" Pharaoh spoke in Genesis 41:41. That context is why Pharaoh is the correct answer."
         },
         {
           "id": "wsi-r094",
@@ -1529,7 +1529,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 41:44 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 41:44 identifies Pharaoh as the speaker of \"I am Pharaoh, and without thee shall no man lift up his hand or foot in all the land of Egypt.\" Pharaoh spoke in Genesis 41:44. That context is why Pharaoh is the correct answer."
         },
         {
           "id": "wsi-r095",
@@ -1543,7 +1543,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 42:9 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 42:9 identifies Joseph as the speaker of \"Ye are spies; to see the nakedness of the land ye are come.\" Joseph spoke in Genesis 42:9. That context is why Joseph is the correct answer."
         },
         {
           "id": "wsi-r096",
@@ -1557,7 +1557,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 42:14 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 42:14 identifies Joseph as the speaker of \"That is it that I spake unto you, saying, Ye are spies:\" Joseph spoke in Genesis 42:14. That context is why Joseph is the correct answer."
         },
         {
           "id": "wsi-r097",
@@ -1571,7 +1571,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 42:18 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 42:18 identifies Joseph as the speaker of \"This do, and live; for I fear God:\" Joseph spoke in Genesis 42:18. That context is why Joseph is the correct answer."
         },
         {
           "id": "wsi-r098",
@@ -1585,7 +1585,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 44:15 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 44:15 identifies Joseph as the speaker of \"What deed is this that ye have done? wot ye not that such a man as I can certainly divine?\" Joseph spoke in Genesis 44:15. That context is why Joseph is the correct answer."
         },
         {
           "id": "wsi-r099",
@@ -1599,7 +1599,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 45:3 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 45:3 identifies Joseph as the speaker of \"I am Joseph; doth my father yet live? And his brethren could not answer him; for they were troubled at his presence.\" Joseph spoke in Genesis 45:3. That context is why Joseph is the correct answer."
         },
         {
           "id": "wsi-r100",
@@ -1613,7 +1613,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 45:17 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 45:17 identifies Pharaoh as the speaker of \"Say unto thy brethren, This do ye; lade your beasts, and go, get you unto the land of Canaan;\" Pharaoh spoke in Genesis 45:17. That context is why Pharaoh is the correct answer."
         }
       ]
     },
@@ -1634,7 +1634,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 46:31 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 46:31 identifies Joseph as the speaker of \"and unto his father's house, I will go up, and shew Pharaoh, and say unto him, My brethren, and my father's house, which were in the land of Canaan, are come unto me;\" Joseph spoke in Genesis 46:31. That context is why Joseph is the correct answer."
         },
         {
           "id": "wsi-r102",
@@ -1648,7 +1648,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 47:1 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 47:1 identifies Joseph as the speaker of \"My father and my brethren, and their flocks, and their herds, and all that they have, are come out of the land of Canaan; and, behold, they are in the land of Goshen.\" Joseph spoke in Genesis 47:1. That context is why Joseph is the correct answer."
         },
         {
           "id": "wsi-r103",
@@ -1662,7 +1662,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 47:5 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 47:5 identifies Pharaoh as the speaker of \"saying, Thy father and thy brethren are come unto thee:\" Pharaoh spoke in Genesis 47:5. That context is why Pharaoh is the correct answer."
         },
         {
           "id": "wsi-r104",
@@ -1676,7 +1676,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 47:8 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 47:8 identifies Pharaoh as the speaker of \"How old art thou?\" Pharaoh spoke in Genesis 47:8. That context is why Pharaoh is the correct answer."
         },
         {
           "id": "wsi-r105",
@@ -1690,7 +1690,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 47:16 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 47:16 identifies Joseph as the speaker of \"Give your cattle; and I will give you for your cattle, if money fail.\" Joseph spoke in Genesis 47:16. That context is why Joseph is the correct answer."
         },
         {
           "id": "wsi-r106",
@@ -1704,7 +1704,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 47:23 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 47:23 identifies Joseph as the speaker of \"Behold, I have bought you this day and your land for Pharaoh: lo, here is seed for you, and ye shall sow the land.\" Joseph spoke in Genesis 47:23. That context is why Joseph is the correct answer."
         },
         {
           "id": "wsi-r107",
@@ -1718,7 +1718,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 48:3 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 48:3 identifies Jacob as the speaker of \"God Almighty appeared unto me at Luz in the land of Canaan, and blessed me,\" Jacob spoke in Genesis 48:3. That context is why Jacob is the correct answer."
         },
         {
           "id": "wsi-r108",
@@ -1732,7 +1732,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 48:18 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 48:18 identifies Joseph as the speaker of \"Not so, my father: for this is the firstborn; put thy right hand upon his head.\" Joseph spoke in Genesis 48:18. That context is why Joseph is the correct answer."
         },
         {
           "id": "wsi-r109",
@@ -1746,7 +1746,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 49:1 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 49:1 identifies Jacob as the speaker of \"Gather yourselves together, that I may tell you that which shall befall you in the last days.\" Jacob spoke in Genesis 49:1. That context is why Jacob is the correct answer."
         },
         {
           "id": "wsi-r110",
@@ -1760,7 +1760,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Genesis 50:6 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 50:6 identifies Pharaoh as the speaker of \"Go up, and bury thy father, according as he made thee swear.\" Pharaoh spoke in Genesis 50:6. That context is why Pharaoh is the correct answer."
         }
       ]
     },
@@ -1781,7 +1781,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "hard",
-          "teachingNote": "Review Genesis 50:19 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 50:19 identifies Joseph as the speaker of \"Fear not: for am I in the place of God?\" Joseph spoke in Genesis 50:19. That context is why Joseph is the correct answer."
         },
         {
           "id": "wsi-r112",
@@ -1795,7 +1795,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "easy",
-          "teachingNote": "Review Genesis 50:24 and how it connects to the Bible before continuing."
+          "teachingNote": "Genesis 50:24 identifies Joseph as the speaker of \"I die: and God will surely visit you, and bring you out of this land unto the land which he sware to Abraham, to Isaac, and to Jacob.\" Joseph spoke in Genesis 50:24. That context is why Joseph is the correct answer."
         },
         {
           "id": "wsi-r113",
@@ -1809,7 +1809,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 3:3 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 3:3 identifies Moses as the speaker of \"I will now turn aside, and see this great sight, why the bush is not burnt.\" Moses spoke in Exodus 3:3. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r114",
@@ -1826,7 +1826,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 3:7 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 3:7 identifies God as the speaker of \"I have surely seen the affliction of my people which are in Egypt, and have heard their cry by reason of their taskmasters; for I know their sorrows;\" God spoke in Exodus 3:7. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r115",
@@ -1840,7 +1840,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 3:11 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 3:11 identifies Moses as the speaker of \"Who am I, that I should go unto Pharaoh, and that I should bring forth the children of Israel out of Egypt?\" Moses spoke in Exodus 3:11. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r116",
@@ -1854,7 +1854,7 @@
           "sourceTranslation": "KJV",
           "theme": "Faith",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 4:1 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 4:1 identifies Moses as the speaker of \"But, behold, they will not believe me, nor hearken unto my voice: for they will say, The Lord hath not appeared unto thee.\" Moses spoke in Exodus 4:1. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r117",
@@ -1871,7 +1871,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 4:4 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 4:4 identifies God as the speaker of \"Put forth thine hand, and take it by the tail. And he put forth his hand, and caught it, and it became a rod in his hand:\" God spoke in Exodus 4:4. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r118",
@@ -1885,7 +1885,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 4:10 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 4:10 identifies Moses as the speaker of \"O my Lord, I am not eloquent, neither heretofore, nor since thou hast spoken unto thy servant: but I am slow of speech, and of a slow tongue.\" Moses spoke in Exodus 4:10. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r119",
@@ -1902,7 +1902,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 4:11 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 4:11 identifies God as the speaker of \"Who hath made man's mouth? or who maketh the dumb, or deaf, or the seeing, or the blind? have not I the Lord?\" God spoke in Exodus 4:11. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r120",
@@ -1916,7 +1916,7 @@
           "sourceTranslation": "KJV",
           "theme": "Peace",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 4:18 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 4:18 identifies Moses as the speaker of \"Let me go, I pray thee, and return unto my brethren which are in Egypt, and see whether they be yet alive. And Jethro said to Moses, Go in peace.\" Moses spoke in Exodus 4:18. That context is why Moses is the correct answer."
         }
       ]
     },
@@ -1940,7 +1940,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 4:19 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 4:19 identifies God as the speaker of \"Go, return into Egypt: for all the men are dead which sought thy life.\" God spoke in Exodus 4:19. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r122",
@@ -1957,7 +1957,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 4:27 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 4:27 identifies God as the speaker of \"Go into the wilderness to meet Moses. And he went, and met him in the mount of God, and kissed him.\" God spoke in Exodus 4:27. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r123",
@@ -1971,7 +1971,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 5:2 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 5:2 identifies Pharaoh as the speaker of \"Who is the Lord, that I should obey his voice to let Israel go? I know not the Lord, neither will I let Israel go.\" Pharaoh spoke in Exodus 5:2. That context is why Pharaoh is the correct answer."
         },
         {
           "id": "wsi-r124",
@@ -1985,7 +1985,7 @@
           "sourceTranslation": "KJV",
           "theme": "Peace",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 5:5 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 5:5 identifies Pharaoh as the speaker of \"Behold, the people of the land now are many, and ye make them rest from their burdens.\" Pharaoh spoke in Exodus 5:5. That context is why Pharaoh is the correct answer."
         },
         {
           "id": "wsi-r125",
@@ -1999,7 +1999,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 5:22 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 5:22 identifies Moses as the speaker of \"Lord, wherefore hast thou so evil entreated this people? why is it that thou hast sent me?\" Moses spoke in Exodus 5:22. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r126",
@@ -2016,7 +2016,7 @@
           "sourceTranslation": "KJV",
           "theme": "Strength",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 6:1 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 6:1 identifies God as the speaker of \"Now shalt thou see what I will do to Pharaoh: for with a strong hand shall he let them go, and with a strong hand shall he drive them out of his land.\" God spoke in Exodus 6:1. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r127",
@@ -2033,7 +2033,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 6:2 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 6:2 identifies God as the speaker of \"and said unto him, I am the Lord:\" God spoke in Exodus 6:2. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r128",
@@ -2050,7 +2050,7 @@
           "sourceTranslation": "KJV",
           "theme": "Kingdom",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 6:13 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 6:13 identifies God as the speaker of \"and gave them a charge unto the children of Israel, and unto Pharaoh king of Egypt, to bring the children of Israel out of the land of Egypt.\" God spoke in Exodus 6:13. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r129",
@@ -2067,7 +2067,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 7:1 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 7:1 identifies God as the speaker of \"See, I have made thee a god to Pharaoh: and Aaron thy brother shall be thy prophet.\" God spoke in Exodus 7:1. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r130",
@@ -2084,7 +2084,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 7:14 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 7:14 identifies God as the speaker of \"Pharaoh's heart is hardened, he refuseth to let the people go.\" God spoke in Exodus 7:14. That context is why God is the correct answer."
         }
       ]
     },
@@ -2108,7 +2108,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 8:1 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 8:1 identifies God as the speaker of \"Go unto Pharaoh, and say unto him, Thus saith the Lord, Let my people go, that they may serve me.\" God spoke in Exodus 8:1. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r132",
@@ -2125,7 +2125,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 8:5 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 8:5 identifies God as the speaker of \"Say unto Aaron, Stretch forth thine hand with thy rod over the streams, over the rivers, and over the ponds, and cause frogs to come up upon the land of Egypt.\" God spoke in Exodus 8:5. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r133",
@@ -2139,7 +2139,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 8:8 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 8:8 identifies Pharaoh as the speaker of \"Intreat the Lord, that he may take away the frogs from me, and from my people; and I will let the people go, that they may do sacrifice unto the Lord.\" Pharaoh spoke in Exodus 8:8. That context is why Pharaoh is the correct answer."
         },
         {
           "id": "wsi-r134",
@@ -2153,7 +2153,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 8:9 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 8:9 identifies Moses as the speaker of \"Glory over me: when shall I intreat for thee, and for thy servants, and for thy people, to destroy the frogs from thee and thy houses, that they may remain in the river only?\" Moses spoke in Exodus 8:9. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r135",
@@ -2170,7 +2170,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 8:16 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 8:16 identifies God as the speaker of \"Say unto Aaron, Stretch out thy rod, and smite the dust of the land, that it may become lice throughout all the land of Egypt.\" God spoke in Exodus 8:16. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r136",
@@ -2187,7 +2187,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 8:20 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 8:20 identifies God as the speaker of \"Rise up early in the morning, and stand before Pharaoh; lo, he cometh forth to the water; and say unto him, Thus saith the Lord, Let my people go, that they may serve me.\" God spoke in Exodus 8:20. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r137",
@@ -2201,7 +2201,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 8:25 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 8:25 identifies Pharaoh as the speaker of \"Go ye, sacrifice to your God in the land.\" Pharaoh spoke in Exodus 8:25. That context is why Pharaoh is the correct answer."
         },
         {
           "id": "wsi-r138",
@@ -2215,7 +2215,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 8:28 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 8:28 identifies Pharaoh as the speaker of \"I will let you go, that ye may sacrifice to the Lord your God in the wilderness; only ye shall not go very far away: intreat for me.\" Pharaoh spoke in Exodus 8:28. That context is why Pharaoh is the correct answer."
         },
         {
           "id": "wsi-r139",
@@ -2232,7 +2232,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 9:1 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 9:1 identifies God as the speaker of \"Go in unto Pharaoh, and tell him, Thus saith the Lord God of the Hebrews, Let my people go, that they may serve me.\" God spoke in Exodus 9:1. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r140",
@@ -2249,7 +2249,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 9:8 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 9:8 identifies God as the speaker of \"Take to you handfuls of ashes of the furnace, and let Moses sprinkle it toward the heaven in the sight of Pharaoh.\" God spoke in Exodus 9:8. That context is why God is the correct answer."
         }
       ]
     },
@@ -2273,7 +2273,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 9:13 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 9:13 identifies God as the speaker of \"Rise up early in the morning, and stand before Pharaoh, and say unto him, Thus saith the Lord God of the Hebrews, Let my people go, that they may serve me.\" God spoke in Exodus 9:13. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r142",
@@ -2290,7 +2290,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 9:22 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 9:22 identifies God as the speaker of \"Stretch forth thine hand toward heaven, that there may be hail in all the land of Egypt, upon man, and upon beast, and upon every herb of the field, throughout the land of Egypt.\" God spoke in Exodus 9:22. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r143",
@@ -2304,7 +2304,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 9:27 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 9:27 identifies Pharaoh as the speaker of \"I have sinned this time: the Lord is righteous, and I and my people are wicked.\" Pharaoh spoke in Exodus 9:27. That context is why Pharaoh is the correct answer."
         },
         {
           "id": "wsi-r144",
@@ -2321,7 +2321,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 10:1 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 10:1 identifies God as the speaker of \"Go in unto Pharaoh: for I have hardened his heart, and the heart of his servants, that I might shew these my signs before him:\" God spoke in Exodus 10:1. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r145",
@@ -2335,7 +2335,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 10:3 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 10:3 identifies Moses as the speaker of \"Thus saith the Lord God of the Hebrews, How long wilt thou refuse to humble thyself before me? let my people go, that they may serve me.\" Moses spoke in Exodus 10:3. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r146",
@@ -2349,7 +2349,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 10:9 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 10:9 identifies Moses as the speaker of \"We will go with our young and with our old, with our sons and with our daughters, with our flocks and with our herds will we go; for we must hold a feast unto the Lord.\" Moses spoke in Exodus 10:9. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r147",
@@ -2366,7 +2366,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 10:12 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 10:12 identifies God as the speaker of \"Stretch out thine hand over the land of Egypt for the locusts, that they may come up upon the land of Egypt, and eat every herb of the land, even all that the hail hath left.\" God spoke in Exodus 10:12. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r148",
@@ -2383,7 +2383,7 @@
           "sourceTranslation": "KJV",
           "theme": "Light",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 10:21 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 10:21 identifies God as the speaker of \"Stretch out thine hand toward heaven, that there may be darkness over the land of Egypt, even darkness which may be felt.\" God spoke in Exodus 10:21. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r149",
@@ -2397,7 +2397,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 10:24 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 10:24 identifies Pharaoh as the speaker of \"Go ye, serve the Lord; only let your flocks and your herds be stayed: let your little ones also go with you.\" Pharaoh spoke in Exodus 10:24. That context is why Pharaoh is the correct answer."
         },
         {
           "id": "wsi-r150",
@@ -2411,7 +2411,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 10:25 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 10:25 identifies Moses as the speaker of \"Thou must give us also sacrifices and burnt offerings, that we may sacrifice unto the Lord our God.\" Moses spoke in Exodus 10:25. That context is why Moses is the correct answer."
         }
       ]
     },
@@ -2432,7 +2432,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 10:28 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 10:28 identifies Pharaoh as the speaker of \"Get thee from me, take heed to thyself, see my face no more; for in that day thou seest my face thou shalt die.\" Pharaoh spoke in Exodus 10:28. That context is why Pharaoh is the correct answer."
         },
         {
           "id": "wsi-r152",
@@ -2446,7 +2446,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 10:29 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 10:29 identifies Moses as the speaker of \"Thou hast spoken well, I will see thy face again no more.\" Moses spoke in Exodus 10:29. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r153",
@@ -2463,7 +2463,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 11:1 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 11:1 identifies God as the speaker of \"Yet will I bring one plague more upon Pharaoh, and upon Egypt; afterwards he will let you go hence: when he shall let you go, he shall surely thrust you out hence altogether.\" God spoke in Exodus 11:1. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r154",
@@ -2477,7 +2477,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 11:4 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 11:4 identifies Moses as the speaker of \"Thus saith the Lord, About midnight will I go out into the midst of Egypt:\" Moses spoke in Exodus 11:4. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r155",
@@ -2494,7 +2494,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 11:9 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 11:9 identifies God as the speaker of \"Pharaoh shall not hearken unto you; that my wonders may be multiplied in the land of Egypt.\" God spoke in Exodus 11:9. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r156",
@@ -2508,7 +2508,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 12:21 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 12:21 identifies Moses as the speaker of \"Draw out and take you a lamb according to your families, and kill the passover.\" Moses spoke in Exodus 12:21. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r157",
@@ -2525,7 +2525,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 12:43 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 12:43 identifies God as the speaker of \"This is the ordinance of the passover: There shall no stranger eat thereof:\" God spoke in Exodus 12:43. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r158",
@@ -2539,7 +2539,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 14:13 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 14:13 identifies Moses as the speaker of \"Fear ye not, stand still, and see the salvation of the Lord, which he will shew to you to day: for the Egyptians whom ye have seen to day, ye shall see them again no more for ever.\" Moses spoke in Exodus 14:13. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r159",
@@ -2556,7 +2556,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 14:15 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 14:15 identifies God as the speaker of \"Wherefore criest thou unto me? speak unto the children of Israel, that they go forward:\" God spoke in Exodus 14:15. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r160",
@@ -2573,7 +2573,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 14:26 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 14:26 identifies God as the speaker of \"Stretch out thine hand over the sea, that the waters may come again upon the Egyptians, upon their chariots, and upon their horsemen.\" God spoke in Exodus 14:26. That context is why God is the correct answer."
         }
       ]
     },
@@ -2594,7 +2594,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 16:9 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 16:9 identifies Moses as the speaker of \"Say unto all the congregation of the children of Israel, Come near before the Lord: for he hath heard your murmurings.\" Moses spoke in Exodus 16:9. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r162",
@@ -2608,7 +2608,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 16:19 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 16:19 identifies Moses as the speaker of \"Let no man leave of it till the morning.\" Moses spoke in Exodus 16:19. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r163",
@@ -2622,7 +2622,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 16:25 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 16:25 identifies Moses as the speaker of \"Eat that to day; for to day is a sabbath unto the Lord: to day ye shall not find it in the field.\" Moses spoke in Exodus 16:25. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r164",
@@ -2639,7 +2639,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 16:28 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 16:28 identifies God as the speaker of \"How long refuse ye to keep my commandments and my laws?\" God spoke in Exodus 16:28. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r165",
@@ -2653,7 +2653,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 16:33 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 16:33 identifies Moses as the speaker of \"Take a pot, and put an omer full of manna therein, and lay it up before the Lord, to be kept for your generations.\" Moses spoke in Exodus 16:33. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r166",
@@ -2670,7 +2670,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 17:5 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 17:5 identifies God as the speaker of \"Go on before the people, and take with thee of the elders of Israel; and thy rod, wherewith thou smotest the river, take in thine hand, and go.\" God spoke in Exodus 17:5. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r167",
@@ -2684,7 +2684,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 17:9 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 17:9 identifies Moses as the speaker of \"Choose us out men, and go out, fight with Amalek: to morrow I will stand on the top of the hill with the rod of God in mine hand.\" Moses spoke in Exodus 17:9. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r168",
@@ -2701,7 +2701,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 17:14 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 17:14 identifies God as the speaker of \"Write this for a memorial in a book, and rehearse it in the ears of Joshua: for I will utterly put out the remembrance of Amalek from under heaven.\" God spoke in Exodus 17:14. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r169",
@@ -2715,7 +2715,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 18:15 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 18:15 identifies Moses as the speaker of \"Because the people come unto me to enquire of God:\" Moses spoke in Exodus 18:15. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r170",
@@ -2732,7 +2732,7 @@
           "sourceTranslation": "KJV",
           "theme": "Faith",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 19:9 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 19:9 identifies God as the speaker of \"Lo, I come unto thee in a thick cloud, that the people may hear when I speak with thee, and believe thee for ever. And Moses told the words of the people unto the Lord.\" God spoke in Exodus 19:9. That context is why God is the correct answer."
         }
       ]
     },
@@ -2756,7 +2756,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 19:10 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 19:10 identifies God as the speaker of \"Go unto the people, and sanctify them to day and to morrow, and let them wash their clothes,\" God spoke in Exodus 19:10. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r172",
@@ -2773,7 +2773,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 19:21 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 19:21 identifies God as the speaker of \"Go down, charge the people, lest they break through unto the Lord to gaze, and many of them perish.\" God spoke in Exodus 19:21. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r173",
@@ -2787,7 +2787,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 19:23 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 19:23 identifies Moses as the speaker of \"The people cannot come up to mount Sinai: for thou chargedst us, saying, Set bounds about the mount, and sanctify it.\" Moses spoke in Exodus 19:23. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r174",
@@ -2801,7 +2801,7 @@
           "sourceTranslation": "KJV",
           "theme": "Mercy",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 20:20 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 20:20 identifies Moses as the speaker of \"Fear not: for God is come to prove you, and that his fear may be before your faces, that ye sin not.\" Moses spoke in Exodus 20:20. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r175",
@@ -2818,7 +2818,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 20:22 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 20:22 identifies God as the speaker of \"Thus thou shalt say unto the children of Israel, Ye have seen that I have talked with you from heaven.\" God spoke in Exodus 20:22. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r176",
@@ -2832,7 +2832,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 24:8 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 24:8 identifies Moses as the speaker of \"Behold the blood of the covenant, which the Lord hath made with you concerning all these words.\" Moses spoke in Exodus 24:8. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r177",
@@ -2849,7 +2849,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Word",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 24:12 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 24:12 identifies God as the speaker of \"Come up to me into the mount, and be there: and I will give thee tables of stone, and a law, and commandments which I have written; that thou mayest teach them.\" God spoke in Exodus 24:12. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r178",
@@ -2866,7 +2866,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 30:34 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 30:34 identifies God as the speaker of \"Take unto thee sweet spices, stacte, and onycha, and galbanum; these sweet spices with pure frankincense: of each shall there be a like weight:\" God spoke in Exodus 30:34. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r179",
@@ -2880,7 +2880,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 32:2 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 32:2 identifies Aaron as the speaker of \"Break off the golden earrings, which are in the ears of your wives, of your sons, and of your daughters, and bring them unto me.\" Aaron spoke in Exodus 32:2. That context is why Aaron is the correct answer."
         },
         {
           "id": "wsi-r180",
@@ -2897,7 +2897,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 32:7 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 32:7 identifies God as the speaker of \"Go, get thee down; for thy people, which thou broughtest out of the land of Egypt, have corrupted themselves:\" God spoke in Exodus 32:7. That context is why God is the correct answer."
         }
       ]
     },
@@ -2921,7 +2921,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 32:9 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 32:9 identifies God as the speaker of \"I have seen this people, and, behold, it is a stiffnecked people:\" God spoke in Exodus 32:9. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r182",
@@ -2935,7 +2935,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 32:11 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 32:11 identifies Moses as the speaker of \"Lord, why doth thy wrath wax hot against thy people, which thou hast brought forth out of the land of Egypt with great power, and with a mighty hand?\" Moses spoke in Exodus 32:11. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r183",
@@ -2949,7 +2949,7 @@
           "sourceTranslation": "KJV",
           "theme": "Mercy",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 32:21 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 32:21 identifies Moses as the speaker of \"What did this people unto thee, that thou hast brought so great a sin upon them?\" Moses spoke in Exodus 32:21. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r184",
@@ -2963,7 +2963,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 32:22 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 32:22 identifies Aaron as the speaker of \"Let not the anger of my lord wax hot: thou knowest the people, that they are set on mischief.\" Aaron spoke in Exodus 32:22. That context is why Aaron is the correct answer."
         },
         {
           "id": "wsi-r185",
@@ -2977,7 +2977,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 32:26 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 32:26 identifies Moses as the speaker of \"Who is on the Lord's side? let him come unto me. And all the sons of Levi gathered themselves together unto him.\" Moses spoke in Exodus 32:26. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r186",
@@ -2991,7 +2991,7 @@
           "sourceTranslation": "KJV",
           "theme": "Mercy",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 32:31 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 32:31 identifies Moses as the speaker of \"Oh, this people have sinned a great sin, and have made them gods of gold.\" Moses spoke in Exodus 32:31. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r187",
@@ -3008,7 +3008,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 32:33 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 32:33 identifies God as the speaker of \"Whosoever hath sinned against me, him will I blot out of my book.\" God spoke in Exodus 32:33. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r188",
@@ -3025,7 +3025,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 33:11 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 33:11 identifies God as the speaker of \"as a man speaketh unto his friend. And he turned again into the camp: but his servant Joshua, the son of Nun, a young man, departed not out of the tabernacle.\" God spoke in Exodus 33:11. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r189",
@@ -3042,7 +3042,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 33:17 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 33:17 identifies God as the speaker of \"I will do this thing also that thou hast spoken: for thou hast found grace in my sight, and I know thee by name.\" God spoke in Exodus 33:17. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r190",
@@ -3059,7 +3059,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 33:21 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 33:21 identifies God as the speaker of \"Behold, there is a place by me, and thou shalt stand upon a rock:\" God spoke in Exodus 33:21. That context is why God is the correct answer."
         }
       ]
     },
@@ -3083,7 +3083,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 34:1 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 34:1 identifies God as the speaker of \"Hew thee two tables of stone like unto the first: and I will write upon these tables the words that were in the first tables, which thou brakest.\" God spoke in Exodus 34:1. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r192",
@@ -3100,7 +3100,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Exodus 34:27 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 34:27 identifies God as the speaker of \"Write thou these words: for after the tenor of these words I have made a covenant with thee and with Israel.\" God spoke in Exodus 34:27. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r193",
@@ -3114,7 +3114,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "easy",
-          "teachingNote": "Review Exodus 35:4 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 35:4 identifies Moses as the speaker of \"saying, This is the thing which the Lord commanded, saying,\" Moses spoke in Exodus 35:4. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r194",
@@ -3128,7 +3128,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "medium",
-          "teachingNote": "Review Exodus 35:30 and how it connects to the Bible before continuing."
+          "teachingNote": "Exodus 35:30 identifies Moses as the speaker of \"See, the Lord hath called by name Bezaleel the son of Uri, the son of Hur, of the tribe of Judah;\" Moses spoke in Exodus 35:30. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r195",
@@ -3142,7 +3142,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "hard",
-          "teachingNote": "Review Leviticus 8:5 and how it connects to the Bible before continuing."
+          "teachingNote": "Leviticus 8:5 identifies Moses as the speaker of \"This is the thing which the Lord commanded to be done.\" Moses spoke in Leviticus 8:5. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r196",
@@ -3156,7 +3156,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "easy",
-          "teachingNote": "Review Leviticus 9:6 and how it connects to the Bible before continuing."
+          "teachingNote": "Leviticus 9:6 identifies Moses as the speaker of \"This is the thing which the Lord commanded that ye should do: and the glory of the Lord shall appear unto you.\" Moses spoke in Leviticus 9:6. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r197",
@@ -3170,7 +3170,7 @@
           "sourceTranslation": "KJV",
           "theme": "Peace",
           "difficulty": "medium",
-          "teachingNote": "Review Leviticus 10:3 and how it connects to the Bible before continuing."
+          "teachingNote": "Leviticus 10:3 identifies Moses as the speaker of \"This is it that the Lord spake, saying, I will be sanctified in them that come nigh me, and before all the people I will be glorified. And Aaron held his peace.\" Moses spoke in Leviticus 10:3. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r198",
@@ -3187,7 +3187,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Leviticus 11:1 and how it connects to the Bible before continuing."
+          "teachingNote": "Leviticus 11:1 identifies God as the speaker of \"saying unto them,\" God spoke in Leviticus 11:1. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r199",
@@ -3204,7 +3204,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "easy",
-          "teachingNote": "Review Leviticus 16:1 and how it connects to the Bible before continuing."
+          "teachingNote": "Leviticus 16:1 identifies God as the speaker of \"when they offered before the Lord, and died;\" God spoke in Leviticus 16:1. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r200",
@@ -3221,7 +3221,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Leviticus 21:1 and how it connects to the Bible before continuing."
+          "teachingNote": "Leviticus 21:1 identifies God as the speaker of \"Speak unto the priests the sons of Aaron, and say unto them, There shall none be defiled for the dead among his people:\" God spoke in Leviticus 21:1. That context is why God is the correct answer."
         }
       ]
     },
@@ -3242,7 +3242,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "hard",
-          "teachingNote": "Review Leviticus 24:23 and how it connects to the Bible before continuing."
+          "teachingNote": "Leviticus 24:23 identifies Moses as the speaker of \"that they should bring forth him that had cursed out of the camp, and stone him with stones. And the children of Israel did as the Lord commanded Moses.\" Moses spoke in Leviticus 24:23. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r202",
@@ -3259,7 +3259,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Numbers 1:1 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 1:1 identifies God as the speaker of \"in the tabernacle of the congregation, on the first day of the second month, in the second year after they were come out of the land of Egypt, saying,\" God spoke in Numbers 1:1. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r203",
@@ -3276,7 +3276,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Numbers 3:40 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 3:40 identifies God as the speaker of \"Number all the firstborn of the males of the children of Israel from a month old and upward, and take the number of their names.\" God spoke in Numbers 3:40. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r204",
@@ -3293,7 +3293,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Numbers 7:11 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 7:11 identifies God as the speaker of \"They shall offer their offering, each prince on his day, for the dedicating of the altar.\" God spoke in Numbers 7:11. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r205",
@@ -3310,7 +3310,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Numbers 9:1 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 9:1 identifies God as the speaker of \"in the first month of the second year after they were come out of the land of Egypt, saying,\" God spoke in Numbers 9:1. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r206",
@@ -3324,7 +3324,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Numbers 9:4 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 9:4 identifies Moses as the speaker of \"that they should keep the passover.\" Moses spoke in Numbers 9:4. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r207",
@@ -3338,7 +3338,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "hard",
-          "teachingNote": "Review Numbers 9:8 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 9:8 identifies Moses as the speaker of \"Stand still, and I will hear what the Lord will command concerning you.\" Moses spoke in Numbers 9:8. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r208",
@@ -3352,7 +3352,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Numbers 11:11 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 11:11 identifies Moses as the speaker of \"Wherefore hast thou afflicted thy servant? and wherefore have I not found favour in thy sight, that thou layest the burden of all this people upon me?\" Moses spoke in Numbers 11:11. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r209",
@@ -3366,7 +3366,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Numbers 11:21 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 11:21 identifies Moses as the speaker of \"The people, among whom I am, are six hundred thousand footmen; and thou hast said, I will give them flesh, that they may eat a whole month.\" Moses spoke in Numbers 11:21. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r210",
@@ -3383,7 +3383,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Word",
           "difficulty": "hard",
-          "teachingNote": "Review Numbers 11:23 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 11:23 identifies God as the speaker of \"Is the Lord'S hand waxed short? thou shalt see now whether my word shall come to pass unto thee or not.\" God spoke in Numbers 11:23. That context is why God is the correct answer."
         }
       ]
     },
@@ -3404,7 +3404,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "easy",
-          "teachingNote": "Review Numbers 11:29 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 11:29 identifies Moses as the speaker of \"Enviest thou for my sake? would God that all the Lord'S people were prophets, and that the Lord would put his spirit upon them!\" Moses spoke in Numbers 11:29. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r212",
@@ -3418,7 +3418,7 @@
           "sourceTranslation": "KJV",
           "theme": "Mercy",
           "difficulty": "medium",
-          "teachingNote": "Review Numbers 12:11 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 12:11 identifies Aaron as the speaker of \"Alas, my lord, I beseech thee, lay not the sin upon us, wherein we have done foolishly, and wherein we have sinned.\" Aaron spoke in Numbers 12:11. That context is why Aaron is the correct answer."
         },
         {
           "id": "wsi-r213",
@@ -3435,7 +3435,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Numbers 12:14 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 12:14 identifies God as the speaker of \"If her father had but spit in her face, should she not be ashamed seven days? let her be shut out from the camp seven days, and after that let her be received in again.\" God spoke in Numbers 12:14. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r214",
@@ -3449,7 +3449,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Numbers 13:17 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 13:17 identifies Moses as the speaker of \"Get you up this way southward, and go up into the mountain:\" Moses spoke in Numbers 13:17. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r215",
@@ -3466,7 +3466,7 @@
           "sourceTranslation": "KJV",
           "theme": "Faith",
           "difficulty": "medium",
-          "teachingNote": "Review Numbers 14:11 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 14:11 identifies God as the speaker of \"How long will this people provoke me? and how long will it be ere they believe me, for all the signs which I have shewed among them?\" God spoke in Numbers 14:11. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r216",
@@ -3480,7 +3480,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Numbers 14:13 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 14:13 identifies Moses as the speaker of \"Then the Egyptians shall hear it, (for thou broughtest up this people in thy might from among them;)\" Moses spoke in Numbers 14:13. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r217",
@@ -3497,7 +3497,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Word",
           "difficulty": "easy",
-          "teachingNote": "Review Numbers 14:20 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 14:20 identifies God as the speaker of \"I have pardoned according to thy word:\" God spoke in Numbers 14:20. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r218",
@@ -3511,7 +3511,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Word",
           "difficulty": "medium",
-          "teachingNote": "Review Numbers 14:41 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 14:41 identifies Moses as the speaker of \"Wherefore now do ye transgress the commandment of the Lord? but it shall not prosper.\" Moses spoke in Numbers 14:41. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r219",
@@ -3528,7 +3528,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Numbers 15:35 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 15:35 identifies God as the speaker of \"The man shall be surely put to death: all the congregation shall stone him with stones without the camp.\" God spoke in Numbers 15:35. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r220",
@@ -3542,7 +3542,7 @@
           "sourceTranslation": "KJV",
           "theme": "Prayer",
           "difficulty": "easy",
-          "teachingNote": "Review Numbers 16:8 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 16:8 identifies Moses as the speaker of \"Hear, I pray you, ye sons of Levi:\" Moses spoke in Numbers 16:8. That context is why Moses is the correct answer."
         }
       ]
     },
@@ -3563,7 +3563,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Numbers 16:15 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 16:15 identifies Moses as the speaker of \"Respect not thou their offering: I have not taken one ass from them, neither have I hurt one of them.\" Moses spoke in Numbers 16:15. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r222",
@@ -3577,7 +3577,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "hard",
-          "teachingNote": "Review Numbers 16:16 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 16:16 identifies Moses as the speaker of \"Be thou and all thy company before the Lord, thou, and they, and Aaron, to morrow:\" Moses spoke in Numbers 16:16. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r223",
@@ -3591,7 +3591,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "easy",
-          "teachingNote": "Review Numbers 16:28 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 16:28 identifies Moses as the speaker of \"Hereby ye shall know that the Lord hath sent me to do all these works; for I have not done them of mine own mind.\" Moses spoke in Numbers 16:28. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r224",
@@ -3605,7 +3605,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Numbers 17:6 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 17:6 identifies Moses as the speaker of \"and every one of their princes gave him a rod apiece, for each prince one, according to their fathers' houses, even twelve rods: and the rod of Aaron was among their rods.\" Moses spoke in Numbers 17:6. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r225",
@@ -3622,7 +3622,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Numbers 17:10 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 17:10 identifies God as the speaker of \"Bring Aaron's rod again before the testimony, to be kept for a token against the rebels; and thou shalt quite take away their murmurings from me, that they die not.\" God spoke in Numbers 17:10. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r226",
@@ -3639,7 +3639,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Numbers 18:1 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 18:1 identifies God as the speaker of \"Thou and thy sons and thy father's house with thee shall bear the iniquity of the sanctuary: and thou and thy sons with thee shall bear the iniquity of your priesthood.\" God spoke in Numbers 18:1. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r227",
@@ -3656,7 +3656,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Numbers 18:20 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 18:20 identifies God as the speaker of \"Thou shalt have no inheritance in their land, neither shalt thou have any part among them: I am thy part and thine inheritance among the children of Israel.\" God spoke in Numbers 18:20. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r228",
@@ -3673,7 +3673,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Numbers 20:12 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 20:12 identifies God as the speaker of \"Because ye believed me not, to sanctify me in the eyes of the children of Israel, therefore ye shall not bring this congregation into the land which I have given them.\" God spoke in Numbers 20:12. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r229",
@@ -3690,7 +3690,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Numbers 20:23 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 20:23 identifies God as the speaker of \"by the coast of the land of Edom, saying,\" God spoke in Numbers 20:23. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r230",
@@ -3707,7 +3707,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Numbers 21:8 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 21:8 identifies God as the speaker of \"Make thee a fiery serpent, and set it upon a pole: and it shall come to pass, that every one that is bitten, when he looketh upon it, shall live.\" God spoke in Numbers 21:8. That context is why God is the correct answer."
         }
       ]
     },
@@ -3731,7 +3731,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Numbers 22:9 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 22:9 identifies God as the speaker of \"What men are these with thee?\" God spoke in Numbers 22:9. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r232",
@@ -3748,7 +3748,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Numbers 22:12 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 22:12 identifies God as the speaker of \"Thou shalt not go with them; thou shalt not curse the people: for they are blessed.\" God spoke in Numbers 22:12. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r233",
@@ -3765,7 +3765,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Word",
           "difficulty": "medium",
-          "teachingNote": "Review Numbers 22:20 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 22:20 identifies God as the speaker of \"If the men come to call thee, rise up, and go with them; but yet the word which I shall say unto thee, that shalt thou do.\" God spoke in Numbers 22:20. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r234",
@@ -3782,7 +3782,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Numbers 23:5 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 23:5 identifies God as the speaker of \"Return unto Balak, and thus thou shalt speak.\" God spoke in Numbers 23:5. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r235",
@@ -3799,7 +3799,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Numbers 23:16 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 23:16 identifies God as the speaker of \"Go again unto Balak, and say thus.\" God spoke in Numbers 23:16. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r236",
@@ -3816,7 +3816,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "medium",
-          "teachingNote": "Review Numbers 25:4 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 25:4 identifies God as the speaker of \"Take all the heads of the people, and hang them up before the Lord against the sun, that the fierce anger of the Lord may be turned away from Israel.\" God spoke in Numbers 25:4. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r237",
@@ -3830,7 +3830,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Numbers 25:5 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 25:5 identifies Moses as the speaker of \"Slay ye every one his men that were joined unto Baalpeor.\" Moses spoke in Numbers 25:5. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r238",
@@ -3847,7 +3847,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Numbers 27:12 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 27:12 identifies God as the speaker of \"Get thee up into this mount Abarim, and see the land which I have given unto the children of Israel.\" God spoke in Numbers 27:12. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r239",
@@ -3864,7 +3864,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Numbers 27:18 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 27:18 identifies God as the speaker of \"Take thee Joshua the son of Nun, a man in whom is the spirit, and lay thine hand upon him;\" God spoke in Numbers 27:18. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r240",
@@ -3878,7 +3878,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "hard",
-          "teachingNote": "Review Numbers 30:1 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 30:1 identifies Moses as the speaker of \"saying, This is the thing which the Lord hath commanded.\" Moses spoke in Numbers 30:1. That context is why Moses is the correct answer."
         }
       ]
     },
@@ -3899,7 +3899,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "easy",
-          "teachingNote": "Review Numbers 31:3 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 31:3 identifies Moses as the speaker of \"saying, Arm some of yourselves unto the war, and let them go against the Midianites, and avenge the Lord of Midian.\" Moses spoke in Numbers 31:3. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r242",
@@ -3913,7 +3913,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Numbers 31:15 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 31:15 identifies Moses as the speaker of \"Have ye saved all the women alive?\" Moses spoke in Numbers 31:15. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r243",
@@ -3927,7 +3927,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Numbers 32:6 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 32:6 identifies Moses as the speaker of \"Shall your brethren go to war, and shall ye sit here?\" Moses spoke in Numbers 32:6. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r244",
@@ -3941,7 +3941,7 @@
           "sourceTranslation": "KJV",
           "theme": "God's Character",
           "difficulty": "easy",
-          "teachingNote": "Review Numbers 32:20 and how it connects to the Bible before continuing."
+          "teachingNote": "Numbers 32:20 identifies Moses as the speaker of \"If ye will do this thing, if ye will go armed before the Lord to war,\" Moses spoke in Numbers 32:20. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r245",
@@ -3958,7 +3958,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Deuteronomy 1:42 and how it connects to the Bible before continuing."
+          "teachingNote": "Deuteronomy 1:42 identifies God as the speaker of \"Say unto them. Go not up, neither fight; for I am not among you; lest ye be smitten before your enemies.\" God spoke in Deuteronomy 1:42. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r246",
@@ -3975,7 +3975,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Deuteronomy 2:31 and how it connects to the Bible before continuing."
+          "teachingNote": "Deuteronomy 2:31 identifies God as the speaker of \"Behold, I have begun to give Sihon and his land before thee: begin to possess, that thou mayest inherit his land.\" God spoke in Deuteronomy 2:31. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r247",
@@ -3992,7 +3992,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Deuteronomy 4:12 and how it connects to the Bible before continuing."
+          "teachingNote": "Deuteronomy 4:12 identifies God as the speaker of \"ye heard the voice of the words, but saw no similitude; only ye heard a voice.\" God spoke in Deuteronomy 4:12. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r248",
@@ -4006,7 +4006,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "medium",
-          "teachingNote": "Review Deuteronomy 5:1 and how it connects to the Bible before continuing."
+          "teachingNote": "Deuteronomy 5:1 identifies Moses as the speaker of \"Hear, O Israel, the statutes and judgments which I speak in your ears this day, that ye may learn them, and keep, and do them.\" Moses spoke in Deuteronomy 5:1. That context is why Moses is the correct answer."
         },
         {
           "id": "wsi-r249",
@@ -4023,7 +4023,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "hard",
-          "teachingNote": "Review Deuteronomy 10:11 and how it connects to the Bible before continuing."
+          "teachingNote": "Deuteronomy 10:11 identifies God as the speaker of \"Arise, take thy journey before the people, that they may go in and possess the land, which I sware unto their fathers to give unto them.\" God spoke in Deuteronomy 10:11. That context is why God is the correct answer."
         },
         {
           "id": "wsi-r250",
@@ -4040,7 +4040,7 @@
           "sourceTranslation": "KJV",
           "theme": "Scripture",
           "difficulty": "easy",
-          "teachingNote": "Review Deuteronomy 18:17 and how it connects to the Bible before continuing."
+          "teachingNote": "Deuteronomy 18:17 identifies God as the speaker of \"They have well spoken that which they have spoken.\" God spoke in Deuteronomy 18:17. That context is why God is the correct answer."
         }
       ]
     }

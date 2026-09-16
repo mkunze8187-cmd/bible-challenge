@@ -24,7 +24,7 @@
           "reference": "Genesis 6-9",
           "theme": "Genesis",
           "difficulty": "hard",
-          "teachingNote": "Review Noah (Genesis 6-9) before continuing."
+          "teachingNote": "Genesis 6:16 describes the ark with lower, second, and third stories — three levels, not four."
         },
         {
           "id": "ttl-r002-moses",
@@ -40,7 +40,7 @@
           "reference": "Exodus 2, 14",
           "theme": "Exodus",
           "difficulty": "easy",
-          "teachingNote": "Review Moses (Exodus 2, 14) before continuing."
+          "teachingNote": "Moses parted the Red Sea in Exodus 14. Joshua later led Israel across the Jordan River."
         },
         {
           "id": "ttl-r003-david-and-goliath",
@@ -56,7 +56,7 @@
           "reference": "1 Samuel 17",
           "theme": "1 Samuel",
           "difficulty": "medium",
-          "teachingNote": "Review David and Goliath (1 Samuel 17) before continuing."
+          "teachingNote": "David refused Saul's armor because it didn't fit and he wasn't used to it (1 Samuel 17:39)."
         },
         {
           "id": "ttl-r004-samson",
@@ -72,7 +72,7 @@
           "reference": "Judges 13-16",
           "theme": "Judges",
           "difficulty": "hard",
-          "teachingNote": "Review Samson (Judges 13-16) before continuing."
+          "teachingNote": "Samson was a judge of Israel, long before the New Testament apostles."
         },
         {
           "id": "ttl-r005-daniel",
@@ -88,7 +88,7 @@
           "reference": "Daniel 6",
           "theme": "Daniel",
           "difficulty": "medium",
-          "teachingNote": "Review Daniel (Daniel 6) before continuing."
+          "teachingNote": "God shut the lions' mouths and Daniel was unharmed (Daniel 6:22)."
         },
         {
           "id": "ttl-r006-jonah",
@@ -104,7 +104,7 @@
           "reference": "Jonah 1-3",
           "theme": "Jonah",
           "difficulty": "easy",
-          "teachingNote": "Review Jonah (Jonah 1-3) before continuing."
+          "teachingNote": "Jonah initially fled from God's call and boarded a ship to Tarshish instead (Jonah 1:3)."
         },
         {
           "id": "ttl-r007-esther",
@@ -120,7 +120,7 @@
           "reference": "Esther 2, 4",
           "theme": "Esther",
           "difficulty": "hard",
-          "teachingNote": "Review Esther (Esther 2, 4) before continuing."
+          "teachingNote": "Esther's story takes place in Persia under King Ahasuerus, not Babylon under Nebuchadnezzar."
         },
         {
           "id": "ttl-r008-ruth",
@@ -136,7 +136,7 @@
           "reference": "Ruth 1, 2, 4",
           "theme": "Ruth",
           "difficulty": "easy",
-          "teachingNote": "Review Ruth (Ruth 1, 2, 4) before continuing."
+          "teachingNote": "Ruth was David's great-grandmother — her son Obed was the father of Jesse, David's father."
         },
         {
           "id": "ttl-r009-joseph-son-of-jacob",
@@ -152,7 +152,7 @@
           "reference": "Genesis 37",
           "theme": "Genesis",
           "difficulty": "medium",
-          "teachingNote": "Review Joseph son of Jacob (Genesis 37) before continuing."
+          "teachingNote": "Reuben was Jacob's firstborn; Joseph was the eleventh of twelve sons."
         },
         {
           "id": "ttl-r010-abraham",
@@ -168,7 +168,7 @@
           "reference": "Genesis 17, 22",
           "theme": "Genesis",
           "difficulty": "hard",
-          "teachingNote": "Review Abraham (Genesis 17, 22) before continuing."
+          "teachingNote": "Abraham's grandson Jacob had twelve sons who became the twelve tribes."
         }
       ]
     },
@@ -191,7 +191,7 @@
           "reference": "Genesis 25, 32",
           "theme": "Genesis",
           "difficulty": "medium",
-          "teachingNote": "Review Jacob (Genesis 25, 32) before continuing."
+          "teachingNote": "Esau was born first; Jacob was Isaac's younger twin son."
         },
         {
           "id": "ttl-r012-elijah",
@@ -207,7 +207,7 @@
           "reference": "1 Kings 18-19",
           "theme": "1 Kings",
           "difficulty": "easy",
-          "teachingNote": "Review Elijah (1 Kings 18-19) before continuing."
+          "teachingNote": "Elijah fled in fear from Jezebel and asked God to let him die (1 Kings 19)."
         },
         {
           "id": "ttl-r013-solomon",
@@ -223,7 +223,7 @@
           "reference": "1 Kings 3, 6",
           "theme": "1 Kings",
           "difficulty": "hard",
-          "teachingNote": "Review Solomon (1 Kings 3, 6) before continuing."
+          "teachingNote": "Saul was Israel's first king; Solomon was the third, after Saul and his father David."
         },
         {
           "id": "ttl-r014-job",
@@ -239,7 +239,7 @@
           "reference": "Job 1-2, 42",
           "theme": "Job",
           "difficulty": "easy",
-          "teachingNote": "Review Job (Job 1-2, 42) before continuing."
+          "teachingNote": "Job never cursed God — he struggled and questioned, but remained faithful (Job 1:22)."
         },
         {
           "id": "ttl-r015-paul-the-apostle",
@@ -255,7 +255,7 @@
           "reference": "Acts 9",
           "theme": "Acts",
           "difficulty": "medium",
-          "teachingNote": "Review Paul the Apostle (Acts 9) before continuing."
+          "teachingNote": "Paul was not among the original twelve — he encountered the risen Jesus later and became an apostle afterward."
         },
         {
           "id": "ttl-r016-peter",
@@ -271,7 +271,7 @@
           "reference": "Matthew 14, 26",
           "theme": "Gospels",
           "difficulty": "hard",
-          "teachingNote": "Review Peter (Matthew 14, 26) before continuing."
+          "teachingNote": "Peter's brother was Andrew; James and John were a separate pair of brothers among the apostles."
         },
         {
           "id": "ttl-r017-john-the-baptist",
@@ -287,7 +287,7 @@
           "reference": "Luke 1, Matthew 3",
           "theme": "Gospels",
           "difficulty": "medium",
-          "teachingNote": "Review John the Baptist (Luke 1, Matthew 3) before continuing."
+          "teachingNote": "John was Jesus's relative through Elizabeth and Mary, not a brother."
         },
         {
           "id": "ttl-r018-mary-mother-of-jesus",
@@ -303,7 +303,7 @@
           "reference": "Luke 1-2, John 2",
           "theme": "Gospels",
           "difficulty": "easy",
-          "teachingNote": "Review Mary mother of Jesus (Luke 1-2, John 2) before continuing."
+          "teachingNote": "The wedding at Cana (John 2) took place in Cana, not Nazareth."
         },
         {
           "id": "ttl-r019-feeding-of-the-five-thousand",
@@ -319,7 +319,7 @@
           "reference": "John 6",
           "theme": "Gospels",
           "difficulty": "hard",
-          "teachingNote": "Review Feeding of the Five Thousand (John 6) before continuing."
+          "teachingNote": "The feeding of the five thousand happened in a remote location near the Sea of Galilee, not Jerusalem."
         },
         {
           "id": "ttl-r020-adam-and-eve",
@@ -335,7 +335,7 @@
           "reference": "Genesis 2-4",
           "theme": "Genesis",
           "difficulty": "easy",
-          "teachingNote": "Review Adam and Eve (Genesis 2-4) before continuing."
+          "teachingNote": "Adam and Eve had multiple named sons in Scripture, including Cain, Abel, and Seth."
         }
       ]
     },
@@ -358,7 +358,7 @@
           "reference": "Genesis 4",
           "theme": "Genesis",
           "difficulty": "medium",
-          "teachingNote": "Review Cain and Abel (Genesis 4) before continuing."
+          "teachingNote": "It was the reverse: Cain worked the soil and Abel kept flocks, per Genesis 4:2."
         },
         {
           "id": "ttl-r022-joshua-and-jericho",
@@ -374,7 +374,7 @@
           "reference": "Joshua 6",
           "theme": "Joshua",
           "difficulty": "hard",
-          "teachingNote": "Review Joshua and Jericho (Joshua 6) before continuing."
+          "teachingNote": "The walls fell after trumpets sounded and the people shouted — no battering ram was used (Joshua 6)."
         },
         {
           "id": "ttl-r023-gideon",
@@ -390,7 +390,7 @@
           "reference": "Judges 6-7",
           "theme": "Judges",
           "difficulty": "medium",
-          "teachingNote": "Review Gideon (Judges 6-7) before continuing."
+          "teachingNote": "Gideon was hiding and threshing wheat in a winepress out of fear when God's angel first called him (Judges 6:11)."
         },
         {
           "id": "ttl-r024-deborah",
@@ -406,7 +406,7 @@
           "reference": "Judges 4-5",
           "theme": "Judges",
           "difficulty": "easy",
-          "teachingNote": "Review Deborah (Judges 4-5) before continuing."
+          "teachingNote": "Deborah held court under a palm tree as a judge and prophetess (Judges 4:5) — she was not a queen."
         },
         {
           "id": "ttl-r025-lazarus",
@@ -422,7 +422,7 @@
           "reference": "John 11",
           "theme": "Gospels",
           "difficulty": "hard",
-          "teachingNote": "Review Lazarus (John 11) before continuing."
+          "teachingNote": "Lazarus came out when Jesus called him — there is no account of doubt or refusal (John 11:43-44)."
         },
         {
           "id": "ttl-r026-the-tower-of-babel",
@@ -438,7 +438,7 @@
           "reference": "Genesis 11",
           "theme": "Genesis",
           "difficulty": "easy",
-          "teachingNote": "Review The Tower of Babel (Genesis 11) before continuing."
+          "teachingNote": "The people stopped building and scattered once their language was confused (Genesis 11:8)."
         },
         {
           "id": "ttl-r027-isaac",
@@ -454,7 +454,7 @@
           "reference": "Genesis 24-27",
           "theme": "Genesis",
           "difficulty": "medium",
-          "teachingNote": "Review Isaac (Genesis 24-27) before continuing."
+          "teachingNote": "Isaac was the father of Esau and Jacob; he was not one of the twins himself."
         },
         {
           "id": "ttl-r028-the-ten-commandments",
@@ -470,7 +470,7 @@
           "reference": "Exodus 20, 31-32",
           "theme": "Exodus",
           "difficulty": "hard",
-          "teachingNote": "Review The Ten Commandments (Exodus 20, 31-32) before continuing."
+          "teachingNote": "Exodus 31:18 says the tablets were written with the finger of God, not by Moses."
         },
         {
           "id": "ttl-r029-samuel",
@@ -486,7 +486,7 @@
           "reference": "1 Samuel 1-3",
           "theme": "1 Samuel",
           "difficulty": "medium",
-          "teachingNote": "Review Samuel (1 Samuel 1-3) before continuing."
+          "teachingNote": "Samuel was a prophet and judge who anointed Saul as Israel's first king — he was not king himself."
         },
         {
           "id": "ttl-r030-king-saul",
@@ -502,7 +502,7 @@
           "reference": "1 Samuel 9-10",
           "theme": "1 Samuel",
           "difficulty": "easy",
-          "teachingNote": "Review King Saul (1 Samuel 9-10) before continuing."
+          "teachingNote": "Saul was from the tribe of Benjamin (1 Samuel 9:1-2)."
         }
       ]
     },
@@ -525,7 +525,7 @@
           "reference": "1 Samuel 16-17",
           "theme": "1-2 Samuel",
           "difficulty": "hard",
-          "teachingNote": "Review King David (1 Samuel 16-17) before continuing."
+          "teachingNote": "David was the youngest of Jesse's sons (1 Samuel 16:11)."
         },
         {
           "id": "ttl-r032-the-golden-calf",
@@ -541,7 +541,7 @@
           "reference": "Exodus 32",
           "theme": "Exodus",
           "difficulty": "easy",
-          "teachingNote": "Review The Golden Calf (Exodus 32) before continuing."
+          "teachingNote": "Moses was angry and broke the tablets when he saw the golden calf (Exodus 32:19)."
         },
         {
           "id": "ttl-r033-the-ten-plagues-of-egypt",
@@ -557,7 +557,7 @@
           "reference": "Exodus 7-12",
           "theme": "Exodus",
           "difficulty": "medium",
-          "teachingNote": "Review The Ten Plagues of Egypt (Exodus 7-12) before continuing."
+          "teachingNote": "There were ten plagues in total, ending with the death of the firstborn (Exodus 7-12)."
         },
         {
           "id": "ttl-r034-balaam-s-donkey",
@@ -573,7 +573,7 @@
           "reference": "Numbers 22",
           "theme": "Numbers",
           "difficulty": "hard",
-          "teachingNote": "Review Balaam's Donkey (Numbers 22) before continuing."
+          "teachingNote": "Balaam was angry and argued with the donkey, not calmly accepting a talking animal (Numbers 22:29)."
         },
         {
           "id": "ttl-r035-rahab",
@@ -589,7 +589,7 @@
           "reference": "Joshua 2, 6",
           "theme": "Joshua",
           "difficulty": "medium",
-          "teachingNote": "Review Rahab (Joshua 2, 6) before continuing."
+          "teachingNote": "Rahab lived in Jericho and is described in Scripture as a harlot, not a Philistine princess (Joshua 2:1)."
         },
         {
           "id": "ttl-r036-ehud",
@@ -605,7 +605,7 @@
           "reference": "Judges 3",
           "theme": "Judges",
           "difficulty": "easy",
-          "teachingNote": "Review Ehud (Judges 3) before continuing."
+          "teachingNote": "Ehud's deliverance of Israel from Moab was a land conflict, not a naval battle (Judges 3:15-30)."
         },
         {
           "id": "ttl-r037-naomi",
@@ -621,7 +621,7 @@
           "reference": "Ruth 1",
           "theme": "Ruth",
           "difficulty": "hard",
-          "teachingNote": "Review Naomi (Ruth 1) before continuing."
+          "teachingNote": "Naomi returned to Bethlehem with Ruth after hearing the famine had ended (Ruth 1:6-7)."
         },
         {
           "id": "ttl-r038-hannah",
@@ -637,7 +637,7 @@
           "reference": "1 Samuel 1",
           "theme": "1 Samuel",
           "difficulty": "easy",
-          "teachingNote": "Review Hannah (1 Samuel 1) before continuing."
+          "teachingNote": "Elkanah had two wives, Hannah and Peninnah (1 Samuel 1:2)."
         },
         {
           "id": "ttl-r039-elisha",
@@ -653,7 +653,7 @@
           "reference": "1 Kings 19, 2 Kings 2",
           "theme": "2 Kings",
           "difficulty": "medium",
-          "teachingNote": "Review Elisha (1 Kings 19, 2 Kings 2) before continuing."
+          "teachingNote": "It was Elijah, not Elisha, who was taken up to heaven in a whirlwind (2 Kings 2:11)."
         },
         {
           "id": "ttl-r040-naaman",
@@ -669,7 +669,7 @@
           "reference": "2 Kings 5",
           "theme": "2 Kings",
           "difficulty": "hard",
-          "teachingNote": "Review Naaman (2 Kings 5) before continuing."
+          "teachingNote": "Naaman was healed only after washing in the Jordan seven times, as Elisha instructed (2 Kings 5:14)."
         }
       ]
     },
@@ -692,7 +692,7 @@
           "reference": "2 Kings 22-23",
           "theme": "2 Kings",
           "difficulty": "medium",
-          "teachingNote": "Review Josiah (2 Kings 22-23) before continuing."
+          "teachingNote": "Josiah led major religious reforms against idolatry after the Law was rediscovered (2 Kings 23)."
         },
         {
           "id": "ttl-r042-nebuchadnezzar",
@@ -708,7 +708,7 @@
           "reference": "Daniel 2-4",
           "theme": "Daniel",
           "difficulty": "easy",
-          "teachingNote": "Review Nebuchadnezzar (Daniel 2-4) before continuing."
+          "teachingNote": "Nebuchadnezzar only came to acknowledge God's sovereignty after later humbling experiences (Daniel 4:34-37)."
         },
         {
           "id": "ttl-r043-shadrach-meshach-and-abednego",
@@ -724,7 +724,7 @@
           "reference": "Daniel 3",
           "theme": "Daniel",
           "difficulty": "hard",
-          "teachingNote": "Review Shadrach, Meshach, and Abednego (Daniel 3) before continuing."
+          "teachingNote": "They emerged from the furnace completely unharmed, without even the smell of fire on them (Daniel 3:27)."
         },
         {
           "id": "ttl-r044-the-fall-of-jericho-s-spies",
@@ -740,7 +740,7 @@
           "reference": "Joshua 2",
           "theme": "Joshua",
           "difficulty": "easy",
-          "teachingNote": "Review The Fall of Jericho's Spies (Joshua 2) before continuing."
+          "teachingNote": "Rahab hid the spies and helped them escape; they were never captured (Joshua 2:4-6, 15)."
         },
         {
           "id": "ttl-r045-zacchaeus",
@@ -756,7 +756,7 @@
           "reference": "Luke 19",
           "theme": "Gospels",
           "difficulty": "medium",
-          "teachingNote": "Review Zacchaeus (Luke 19) before continuing."
+          "teachingNote": "Zacchaeus promised to give half his goods to the poor and repay fourfold anyone he had defrauded (Luke 19:8)."
         },
         {
           "id": "ttl-r046-the-prodigal-son",
@@ -772,7 +772,7 @@
           "reference": "Luke 15",
           "theme": "Gospels",
           "difficulty": "hard",
-          "teachingNote": "Review The Prodigal Son (Luke 15) before continuing."
+          "teachingNote": "The father ran to meet his returning son and celebrated his return (Luke 15:20-24)."
         },
         {
           "id": "ttl-r047-the-good-samaritan",
@@ -788,7 +788,7 @@
           "reference": "Luke 10",
           "theme": "Gospels",
           "difficulty": "medium",
-          "teachingNote": "Review The Good Samaritan (Luke 10) before continuing."
+          "teachingNote": "The Samaritan was the one who stopped and cared for the injured man (Luke 10:33-34)."
         },
         {
           "id": "ttl-r048-the-wedding-at-cana",
@@ -804,7 +804,7 @@
           "reference": "John 2",
           "theme": "Gospels",
           "difficulty": "easy",
-          "teachingNote": "Review The Wedding at Cana (John 2) before continuing."
+          "teachingNote": "John 2:11 calls this the first of Jesus's miracles, not the last."
         },
         {
           "id": "ttl-r049-the-transfiguration",
@@ -820,7 +820,7 @@
           "reference": "Matthew 17",
           "theme": "Gospels",
           "difficulty": "hard",
-          "teachingNote": "Review The Transfiguration (Matthew 17) before continuing."
+          "teachingNote": "The transfiguration took place on a high mountain, not in the temple (Matthew 17:1-2)."
         },
         {
           "id": "ttl-r050-the-last-supper",
@@ -836,7 +836,7 @@
           "reference": "Matthew 26",
           "theme": "Gospels",
           "difficulty": "easy",
-          "teachingNote": "Review The Last Supper (Matthew 26) before continuing."
+          "teachingNote": "Judas was present at the Last Supper before leaving to betray Jesus (Matthew 26:20-25)."
         }
       ]
     },
@@ -859,7 +859,7 @@
           "reference": "Matthew 27",
           "theme": "Gospels",
           "difficulty": "medium",
-          "teachingNote": "Review The Crucifixion (Matthew 27) before continuing."
+          "teachingNote": "Most of the disciples fled; only John and a few women are noted as present at the cross (John 19:25-26)."
         },
         {
           "id": "ttl-r052-the-resurrection",
@@ -875,7 +875,7 @@
           "reference": "Matthew 28",
           "theme": "Gospels",
           "difficulty": "hard",
-          "teachingNote": "Review The Resurrection (Matthew 28) before continuing."
+          "teachingNote": "The disciples initially thought the women's report was nonsense and did not believe them (Luke 24:11)."
         },
         {
           "id": "ttl-r053-the-road-to-emmaus",
@@ -891,7 +891,7 @@
           "reference": "Luke 24",
           "theme": "Gospels",
           "difficulty": "medium",
-          "teachingNote": "Review The Road to Emmaus (Luke 24) before continuing."
+          "teachingNote": "They recognized Jesus only later, when He broke bread with them (Luke 24:30-31)."
         },
         {
           "id": "ttl-r054-stephen",
@@ -907,7 +907,7 @@
           "reference": "Acts 6-7",
           "theme": "Acts",
           "difficulty": "easy",
-          "teachingNote": "Review Stephen (Acts 6-7) before continuing."
+          "teachingNote": "Stephen did not recant — he prayed for his killers as he was being stoned (Acts 7:59-60)."
         },
         {
           "id": "ttl-r055-philip-and-the-ethiopian",
@@ -923,7 +923,7 @@
           "reference": "Acts 8",
           "theme": "Acts",
           "difficulty": "hard",
-          "teachingNote": "Review Philip and the Ethiopian (Acts 8) before continuing."
+          "teachingNote": "The Ethiopian official asked to be baptized right away and Philip baptized him (Acts 8:36-38)."
         },
         {
           "id": "ttl-r056-cornelius",
@@ -939,7 +939,7 @@
           "reference": "Acts 10",
           "theme": "Acts",
           "difficulty": "easy",
-          "teachingNote": "Review Cornelius (Acts 10) before continuing."
+          "teachingNote": "Cornelius was a Roman centurion and Gentile, not a Jewish high priest (Acts 10:1)."
         },
         {
           "id": "ttl-r057-barnabas",
@@ -955,7 +955,7 @@
           "reference": "Acts 4, 9, 13",
           "theme": "Acts",
           "difficulty": "medium",
-          "teachingNote": "Review Barnabas (Acts 4, 9, 13) before continuing."
+          "teachingNote": "Barnabas and Paul traveled together on missionary journeys, including from Antioch (Acts 13:2-3)."
         },
         {
           "id": "ttl-r058-timothy",
@@ -971,7 +971,7 @@
           "reference": "Acts 16, 2 Timothy 1",
           "theme": "Acts",
           "difficulty": "hard",
-          "teachingNote": "Review Timothy (Acts 16, 2 Timothy 1) before continuing."
+          "teachingNote": "Timothy was a younger companion of Paul, not one of Jesus's original twelve apostles."
         },
         {
           "id": "ttl-r059-lydia",
@@ -987,7 +987,7 @@
           "reference": "Acts 16",
           "theme": "Acts",
           "difficulty": "medium",
-          "teachingNote": "Review Lydia (Acts 16) before continuing."
+          "teachingNote": "Lydia was from Thyatira and met Paul in Philippi, not Rome (Acts 16:14)."
         },
         {
           "id": "ttl-r060-silas",
@@ -1003,7 +1003,7 @@
           "reference": "Acts 16",
           "theme": "Acts",
           "difficulty": "easy",
-          "teachingNote": "Review Silas (Acts 16) before continuing."
+          "teachingNote": "An earthquake shook the prison and opened the doors and everyone's chains (Acts 16:26)."
         }
       ]
     },
@@ -1026,7 +1026,7 @@
           "reference": "Genesis 14",
           "theme": "Genesis",
           "difficulty": "hard",
-          "teachingNote": "Review Melchizedek (Genesis 14) before continuing."
+          "teachingNote": "Melchizedek is described as king of Salem and priest of God Most High, not a Philistine warlord (Genesis 14:18)."
         },
         {
           "id": "ttl-r062-the-queen-of-sheba",
@@ -1042,7 +1042,7 @@
           "reference": "1 Kings 10",
           "theme": "1 Kings",
           "difficulty": "easy",
-          "teachingNote": "Review The Queen of Sheba (1 Kings 10) before continuing."
+          "teachingNote": "She was overwhelmed, saying the half had not been told to her (1 Kings 10:6-7)."
         },
         {
           "id": "ttl-r063-absalom",
@@ -1058,7 +1058,7 @@
           "reference": "2 Samuel 15, 18",
           "theme": "2 Samuel",
           "difficulty": "medium",
-          "teachingNote": "Review Absalom (2 Samuel 15, 18) before continuing."
+          "teachingNote": "Absalom was killed during his rebellion and never established a lasting reign (2 Samuel 18:14-15)."
         },
         {
           "id": "ttl-r064-jephthah",
@@ -1074,7 +1074,7 @@
           "reference": "Judges 11",
           "theme": "Judges",
           "difficulty": "hard",
-          "teachingNote": "Review Jephthah (Judges 11) before continuing."
+          "teachingNote": "Jephthah was driven out by his half-brothers before later being called back to lead (Judges 11:1-3)."
         },
         {
           "id": "ttl-r065-hezekiah",
@@ -1090,7 +1090,7 @@
           "reference": "2 Kings 18-20",
           "theme": "2 Kings",
           "difficulty": "medium",
-          "teachingNote": "Review Hezekiah (2 Kings 18-20) before continuing."
+          "teachingNote": "Hezekiah is described as a reforming king who removed idols and trusted the Lord (2 Kings 18:3-4)."
         },
         {
           "id": "ttl-r066-the-fiery-serpents",
@@ -1106,7 +1106,7 @@
           "reference": "Numbers 21",
           "theme": "Numbers",
           "difficulty": "easy",
-          "teachingNote": "Review The Fiery Serpents (Numbers 21) before continuing."
+          "teachingNote": "The bronze serpent on a pole was for the people to look at and be healed, not to be worshiped as a god (Numbers 21:8-9)."
         },
         {
           "id": "ttl-r067-manna-in-the-wilderness",
@@ -1122,7 +1122,7 @@
           "reference": "Exodus 16",
           "theme": "Exodus",
           "difficulty": "hard",
-          "teachingNote": "Review Manna in the Wilderness (Exodus 16) before continuing."
+          "teachingNote": "Manna left overnight bred worms and stank, except before the Sabbath (Exodus 16:19-20, 23-24)."
         },
         {
           "id": "ttl-r068-the-twelve-spies",
@@ -1138,7 +1138,7 @@
           "reference": "Numbers 13-14",
           "theme": "Numbers",
           "difficulty": "easy",
-          "teachingNote": "Review The Twelve Spies (Numbers 13-14) before continuing."
+          "teachingNote": "Ten of the twelve spies gave a fearful report that discouraged the people (Numbers 13:31-33)."
         },
         {
           "id": "ttl-r069-the-widow-s-oil",
@@ -1154,7 +1154,7 @@
           "reference": "2 Kings 4",
           "theme": "2 Kings",
           "difficulty": "medium",
-          "teachingNote": "Review The Widow's Oil (2 Kings 4) before continuing."
+          "teachingNote": "The oil kept flowing until every vessel was full and only stopped once there were no more vessels (2 Kings 4:6)."
         },
         {
           "id": "ttl-r070-jehoshaphat",
@@ -1170,7 +1170,7 @@
           "reference": "2 Chronicles 20",
           "theme": "2 Chronicles",
           "difficulty": "hard",
-          "teachingNote": "Review Jehoshaphat (2 Chronicles 20) before continuing."
+          "teachingNote": "The enemy armies turned on each other and Judah's army did not even need to fight (2 Chronicles 20:22-24)."
         }
       ]
     },
@@ -1193,7 +1193,7 @@
           "reference": "Luke 2",
           "theme": "Gospels",
           "difficulty": "medium",
-          "teachingNote": "Review The Nativity (Luke 2) before continuing."
+          "teachingNote": "Jesus was laid in a manger because there was no room at the inn (Luke 2:7)."
         },
         {
           "id": "ttl-r072-the-magi",
@@ -1209,7 +1209,7 @@
           "reference": "Matthew 2",
           "theme": "Gospels",
           "difficulty": "easy",
-          "teachingNote": "Review The Magi (Matthew 2) before continuing."
+          "teachingNote": "The Magi were warned in a dream not to return to Herod and left another way (Matthew 2:12)."
         },
         {
           "id": "ttl-r073-john-s-vision-on-patmos",
@@ -1225,7 +1225,7 @@
           "reference": "Revelation 1",
           "theme": "Revelation",
           "difficulty": "hard",
-          "teachingNote": "Review John's Vision on Patmos (Revelation 1) before continuing."
+          "teachingNote": "John received the vision in exile on Patmos, not in comfort in Rome (Revelation 1:9)."
         }
       ]
     }

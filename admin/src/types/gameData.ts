@@ -1,0 +1,33 @@
+// Vendored from the main Bible Challenge app's src/types/gameData.ts — see
+// scripts/sync-schemas.mjs. Keep in sync manually; do not hand-edit without also updating
+// the main app or re-running the sync script.
+export type GameId =
+  | "five-guesses"
+  | "initials"
+  | "scripture-puzzles"
+  | "bible-timeline"
+  | "verse-scramble"
+  | "bible-connections"
+  | "name-that-book"
+  | "before-or-after"
+  | "reference-rush"
+  | "chapter-finder"
+  | "who-said-it"
+  | "bible-books-relay"
+  | "missing-word"
+  | "prophecy-match"
+  | "messiah-prophecy"
+  | "prophecy-clue-ladder"
+  | "fulfillment-finder"
+  | "prophecy-categories"
+  | "complete-the-verse"
+  | "wisdom-match"
+  | "psalm-theme"
+  | "proverb-categories"
+  | "psalm-reference-finder"
+  | "two-truths-and-a-lie"
+  | "relay-verse-build"
+  | "verse-typing-race"
+  | "word-ladder"
+  | "bible-anagrams"
+  | "bible-cryptogram";
