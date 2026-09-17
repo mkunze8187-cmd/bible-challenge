@@ -11,9 +11,12 @@ import type {
   InitialsPack,
   BibleBooksRelayPack,
   ChapterFinderPack,
+  GenealogyPack,
   MissingWordPack,
   NameThatBookPack,
   MessiahProphecyPack,
+  OddOneOutPack,
+  ParableMatchPack,
   ProphecyCategoriesPack,
   ProphecyClueLadderPack,
   ProphecyMatchPack,
@@ -51,7 +54,10 @@ export interface ContentPackByGame {
   "who-said-it": WhoSaidItPack;
   "bible-books-relay": BibleBooksRelayPack;
   "missing-word": MissingWordPack;
+  "odd-one-out": OddOneOutPack;
+  genealogy: GenealogyPack;
   "prophecy-match": ProphecyMatchPack;
+  "parable-match": ParableMatchPack;
   "messiah-prophecy": MessiahProphecyPack;
   "prophecy-clue-ladder": ProphecyClueLadderPack;
   "fulfillment-finder": FulfillmentFinderPack;
@@ -193,10 +199,25 @@ const PACK_LOADER_ENTRIES: {
     data: () => import("../data/missing-word.json"),
     schema: () => import("../data/schemas/missing-word.schema.json")
   },
+  "odd-one-out": {
+    label: "Odd One Out",
+    data: () => import("../data/odd-one-out.json"),
+    schema: () => import("../data/schemas/odd-one-out.schema.json")
+  },
+  genealogy: {
+    label: "Fill in the Genealogy",
+    data: () => import("../data/genealogy.json"),
+    schema: () => import("../data/schemas/genealogy.schema.json")
+  },
   "prophecy-match": {
     label: "Prophecy Match Challenge",
     data: () => import("../data/prophecy-match.json"),
     schema: () => import("../data/schemas/prophecy-match.schema.json")
+  },
+  "parable-match": {
+    label: "Parable Match",
+    data: () => import("../data/parable-match.json"),
+    schema: () => import("../data/schemas/parable-match.schema.json")
   },
   "messiah-prophecy": {
     label: "Messiah Prophecy Challenge",

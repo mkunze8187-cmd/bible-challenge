@@ -1,4 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
+import oddOneOutData from "../src/data/odd-one-out.json";
 import {
   continueGame,
   createSessionState,
@@ -6,10 +7,13 @@ import {
   moveBibleAnagramTile,
   passBibleAnagram,
   passBibleCryptogramTurn,
+  passGenealogyTurn,
   passRelayWord,
   passScriptureTurn,
   passWordLadderTurn,
+  removeLastGenealogyLink,
   removeLastWordLadderRung,
+  selectParableMatchCard,
   reorderBibleBook,
   reorderTimelineEvent,
   selectBoardCard,
@@ -18,6 +22,9 @@ import {
   submitBibleCryptogramLetterGuess,
   submitBibleCryptogramSolve,
   submitBoardGuess,
+  submitGenealogyStep,
+  submitOddOneOutChoice,
+  submitParableMatch,
   submitRelayWord,
   submitScriptureLetterGuess,
   submitScriptureSolve,
@@ -28,6 +35,9 @@ import {
   type BibleTimelineState,
   type BeforeOrAfterState,
   type FiveGuessesState,
+  type GenealogyState,
+  type OddOneOutState,
+  type ParableMatchState,
   type RelayVerseBuildState,
   type ScriptureState,
   type TwoTruthsAndALieState,
@@ -288,6 +298,50 @@ function makeWordLadderState(): WordLadderState {
       kind: "word-ladder",
       round,
       chain: ["cat"],
+      startTurnIndex: 0,
+      phase: "active",
+      wasCorrect: null,
+      resolvedMessage: null
+    }
+  };
+}
+
+function makeGenealogyState(): GenealogyState {
+  const round = {
+    id: "gen-test-1",
+    startPerson: "Abraham",
+    endPerson: "Judah",
+    fullChain: ["abraham", "isaac", "jacob", "judah"],
+    startFlavorText: "Received God's covenant promises.",
+    endFlavorText: "Ancestor of the royal line.",
+    scriptureReference: "Matthew 1:2",
+    theme: "Test",
+    difficulty: "easy" as const,
+    teachingNote: "Note."
+  };
+
+  return {
+    gameId: "genealogy",
+    displayName: "Fill in the Genealogy",
+    sessionTitle: "Test",
+    sessionTheme: "Test",
+    participantMode: "individual",
+    participants: structuredClone(participants),
+    stats: {
+      "player-anna-1": stats(),
+      "player-ben-2": stats()
+    },
+    activityLog: [],
+    status: "in-progress",
+    turnIndex: 0,
+    totalPrompts: 1,
+    resolvedPrompts: 0,
+    roundIndex: 0,
+    rounds: [round],
+    currentPrompt: {
+      kind: "genealogy",
+      round,
+      chain: [round.startPerson],
       startTurnIndex: 0,
       phase: "active",
       wasCorrect: null,
@@ -909,5 +963,117 @@ describe("gameEngine transitions", () => {
     state = passBibleAnagram(state).nextState as BibleAnagramsState;
     expect(state.currentPrompt.phase).toBe("resolved");
     expect(state.currentPrompt.wasCorrect).toBe(false);
+  });
+
+  it("scores Odd One Out after a miss with stepped-down points", async () => {
+    let state = (await createSessionState({
+      gameId: "odd-one-out",
+      participantMode: "individual",
+      individualNames: ["Anna", "Ben"]
+    })) as OddOneOutState;
+    const wrongChoice = state.currentPrompt.round.items.find((item) => item !== state.currentPrompt.round.oddItem)!;
+
+    state = submitOddOneOutChoice(state, wrongChoice).nextState as OddOneOutState;
+    expect(state.currentPrompt.phase).toBe("active");
+    expect(state.currentPrompt.eliminatedChoices).toContain(wrongChoice);
+    expect(state.stats["player-anna-1"].incorrectAttempts).toBe(1);
+
+    state = submitOddOneOutChoice(state, state.currentPrompt.round.oddItem).nextState as OddOneOutState;
+    expect(state.currentPrompt.phase).toBe("resolved");
+    expect(state.currentPrompt.wasCorrect).toBe(true);
+    expect(state.stats["player-ben-2"].totalScore).toBe(4);
+  });
+
+  it("ships Odd One Out content without repeated correct-item sets", () => {
+    const rounds = oddOneOutData.sessions.flatMap((session) => session.rounds);
+    const correctSetKeys = rounds.map((round) =>
+      round.items
+        .filter((item) => item !== round.oddItem)
+        .slice()
+        .sort()
+        .join("|")
+    );
+
+    expect(new Set(correctSetKeys).size).toBe(correctSetKeys.length);
+  });
+
+  it("starts the newest games without falling back from restrictive difficulty filters", async () => {
+    const oddOneOut = (await createSessionState({
+      gameId: "odd-one-out",
+      participantMode: "individual",
+      individualNames: ["Anna", "Ben"],
+      difficulty: "hard"
+    })) as OddOneOutState;
+    expect(oddOneOut.rounds).toHaveLength(10);
+    expect(oddOneOut.rounds.every((round) => round.difficulty === "hard")).toBe(true);
+    expect(oddOneOut.activityLog[0].text).not.toContain("mixed difficulty");
+
+    const genealogy = (await createSessionState({
+      gameId: "genealogy",
+      participantMode: "individual",
+      individualNames: ["Anna", "Ben"],
+      difficulty: "medium"
+    })) as GenealogyState;
+    expect(genealogy.rounds).toHaveLength(6);
+    expect(genealogy.rounds.every((round) => round.difficulty === "medium")).toBe(true);
+    expect(genealogy.activityLog[0].text).not.toContain("mixed difficulty");
+
+    const parableMatch = (await createSessionState({
+      gameId: "parable-match",
+      participantMode: "individual",
+      individualNames: ["Anna", "Ben"],
+      difficulty: "hard"
+    })) as ParableMatchState;
+    expect(parableMatch.pairs).toHaveLength(5);
+    expect(parableMatch.pairs.every((pair) => pair.difficulty === "hard")).toBe(true);
+    expect(parableMatch.activityLog[0].text).not.toContain("mixed difficulty");
+  });
+
+  it("builds and edits a Genealogy chain using authored next names", async () => {
+    let state = makeGenealogyState();
+    const firstNextName = state.currentPrompt.round.fullChain[1];
+
+    state = submitGenealogyStep(state, firstNextName).nextState as GenealogyState;
+    expect(state.currentPrompt.chain).toEqual([state.currentPrompt.round.startPerson, firstNextName]);
+
+    state = removeLastGenealogyLink(state).nextState as GenealogyState;
+    expect(state.currentPrompt.chain).toEqual([state.currentPrompt.round.startPerson]);
+
+    state = passGenealogyTurn(state).nextState as GenealogyState;
+    expect(state.turnIndex).toBe(1);
+    expect(state.currentPrompt.phase).toBe("active");
+  });
+
+  it("completes a Genealogy round when every authored link is submitted", async () => {
+    let state = makeGenealogyState();
+
+    for (const name of state.currentPrompt.round.fullChain.slice(1)) {
+      state = submitGenealogyStep(state, name).nextState as GenealogyState;
+    }
+
+    expect(state.currentPrompt.phase).toBe("resolved");
+    expect(state.currentPrompt.wasCorrect).toBe(true);
+    expect(state.stats["player-anna-1"].roundWins).toBe(1);
+    expect(state.stats["player-anna-1"].totalScore).toBeGreaterThan(0);
+  });
+
+  it("matches Parable Match cards and completes the board", async () => {
+    let state = (await createSessionState({
+      gameId: "parable-match",
+      participantMode: "individual",
+      individualNames: ["Anna", "Ben"]
+    })) as ParableMatchState;
+
+    for (const pair of state.pairs) {
+      const parable = state.currentPrompt.parableCards.find((card) => card.pairId === pair.id)!;
+      const lesson = state.currentPrompt.lessonCards.find((card) => card.pairId === pair.id)!;
+      state = selectParableMatchCard(state, "parable", parable.id).nextState as ParableMatchState;
+      state = selectParableMatchCard(state, "lesson", lesson.id).nextState as ParableMatchState;
+      state = submitParableMatch(state).nextState as ParableMatchState;
+    }
+
+    expect(state.currentPrompt.phase).toBe("resolved");
+    expect(state.currentPrompt.matchedPairIds).toHaveLength(state.totalPrompts);
+    expect(state.resolvedPrompts).toBe(state.totalPrompts);
   });
 });

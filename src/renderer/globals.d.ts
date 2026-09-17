@@ -37,6 +37,18 @@ interface CustomContentImportResult {
   error?: string;
 }
 
+interface ProjectorDisplay {
+  id: number;
+  label: string;
+  bounds: {
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+  };
+  primary: boolean;
+}
+
 declare global {
   interface Window {
     audioHost?: {
@@ -64,6 +76,12 @@ declare global {
       chooseCustomContentJson: () => Promise<CustomContentImportResult>;
       saveCustomContentPack: (pack: unknown) => Promise<unknown>;
       removeCustomContentPack: (packId: string) => Promise<unknown>;
+      getProjectorDisplays: () => Promise<ProjectorDisplay[]>;
+      openProjectorWindow: (displayId: number | null) => Promise<ProjectorDisplay[]>;
+      closeProjectorWindow: () => Promise<void>;
+      updateProjectorState: (state: unknown) => void;
+      onProjectorState: (callback: (state: unknown) => void) => () => void;
+      onProjectorWindowStatus: (callback: (status: { isOpen?: boolean }) => void) => () => void;
     };
   }
 }

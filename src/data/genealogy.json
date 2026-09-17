@@ -1,0 +1,2758 @@
+{
+  "$schema": "./schemas/genealogy.schema.json",
+  "game": "genealogy",
+  "version": 1,
+  "displayName": "Fill in the Genealogy",
+  "roundsPerSession": 6,
+  "sessions": [
+    {
+      "id": "core-genealogy-001",
+      "title": "Genealogy Core Library",
+      "theme": "Bible family lines",
+      "rounds": [
+        {
+          "id": "gen-genesis-5-1-3",
+          "startPerson": "Adam",
+          "endPerson": "Enos",
+          "fullChain": [
+            "adam",
+            "seth",
+            "enos"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Adam.",
+          "endFlavorText": "Ends this authored Bible family segment at Enos.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-2-3",
+          "startPerson": "Seth",
+          "endPerson": "Cainan",
+          "fullChain": [
+            "seth",
+            "enos",
+            "cainan"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Seth.",
+          "endFlavorText": "Ends this authored Bible family segment at Cainan.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-3-3",
+          "startPerson": "Enos",
+          "endPerson": "Mahalaleel",
+          "fullChain": [
+            "enos",
+            "cainan",
+            "mahalaleel"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Enos.",
+          "endFlavorText": "Ends this authored Bible family segment at Mahalaleel.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-4-3",
+          "startPerson": "Cainan",
+          "endPerson": "Jared",
+          "fullChain": [
+            "cainan",
+            "mahalaleel",
+            "jared"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Cainan.",
+          "endFlavorText": "Ends this authored Bible family segment at Jared.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-5-3",
+          "startPerson": "Mahalaleel",
+          "endPerson": "Enoch",
+          "fullChain": [
+            "mahalaleel",
+            "jared",
+            "enoch"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Mahalaleel.",
+          "endFlavorText": "Ends this authored Bible family segment at Enoch.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-6-3",
+          "startPerson": "Jared",
+          "endPerson": "Methuselah",
+          "fullChain": [
+            "jared",
+            "enoch",
+            "methuselah"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Jared.",
+          "endFlavorText": "Ends this authored Bible family segment at Methuselah.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-7-3",
+          "startPerson": "Enoch",
+          "endPerson": "Lamech",
+          "fullChain": [
+            "enoch",
+            "methuselah",
+            "lamech"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Enoch.",
+          "endFlavorText": "Ends this authored Bible family segment at Lamech.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-8-3",
+          "startPerson": "Methuselah",
+          "endPerson": "Noah",
+          "fullChain": [
+            "methuselah",
+            "lamech",
+            "noah"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Methuselah.",
+          "endFlavorText": "Ends this authored Bible family segment at Noah.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-1-4",
+          "startPerson": "Adam",
+          "endPerson": "Cainan",
+          "fullChain": [
+            "adam",
+            "seth",
+            "enos",
+            "cainan"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Adam.",
+          "endFlavorText": "Ends this authored Bible family segment at Cainan.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-2-4",
+          "startPerson": "Seth",
+          "endPerson": "Mahalaleel",
+          "fullChain": [
+            "seth",
+            "enos",
+            "cainan",
+            "mahalaleel"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Seth.",
+          "endFlavorText": "Ends this authored Bible family segment at Mahalaleel.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-3-4",
+          "startPerson": "Enos",
+          "endPerson": "Jared",
+          "fullChain": [
+            "enos",
+            "cainan",
+            "mahalaleel",
+            "jared"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Enos.",
+          "endFlavorText": "Ends this authored Bible family segment at Jared.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-4-4",
+          "startPerson": "Cainan",
+          "endPerson": "Enoch",
+          "fullChain": [
+            "cainan",
+            "mahalaleel",
+            "jared",
+            "enoch"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Cainan.",
+          "endFlavorText": "Ends this authored Bible family segment at Enoch.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-5-4",
+          "startPerson": "Mahalaleel",
+          "endPerson": "Methuselah",
+          "fullChain": [
+            "mahalaleel",
+            "jared",
+            "enoch",
+            "methuselah"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Mahalaleel.",
+          "endFlavorText": "Ends this authored Bible family segment at Methuselah.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-6-4",
+          "startPerson": "Jared",
+          "endPerson": "Lamech",
+          "fullChain": [
+            "jared",
+            "enoch",
+            "methuselah",
+            "lamech"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Jared.",
+          "endFlavorText": "Ends this authored Bible family segment at Lamech.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-7-4",
+          "startPerson": "Enoch",
+          "endPerson": "Noah",
+          "fullChain": [
+            "enoch",
+            "methuselah",
+            "lamech",
+            "noah"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Enoch.",
+          "endFlavorText": "Ends this authored Bible family segment at Noah.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-11-1-3",
+          "startPerson": "Noah",
+          "endPerson": "Arphaxad",
+          "fullChain": [
+            "noah",
+            "shem",
+            "arphaxad"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Noah.",
+          "endFlavorText": "Ends this authored Bible family segment at Arphaxad.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-2-3",
+          "startPerson": "Shem",
+          "endPerson": "Salah",
+          "fullChain": [
+            "shem",
+            "arphaxad",
+            "salah"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Shem.",
+          "endFlavorText": "Ends this authored Bible family segment at Salah.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-3-3",
+          "startPerson": "Arphaxad",
+          "endPerson": "Eber",
+          "fullChain": [
+            "arphaxad",
+            "salah",
+            "eber"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Arphaxad.",
+          "endFlavorText": "Ends this authored Bible family segment at Eber.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-4-3",
+          "startPerson": "Salah",
+          "endPerson": "Peleg",
+          "fullChain": [
+            "salah",
+            "eber",
+            "peleg"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Salah.",
+          "endFlavorText": "Ends this authored Bible family segment at Peleg.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-5-3",
+          "startPerson": "Eber",
+          "endPerson": "Reu",
+          "fullChain": [
+            "eber",
+            "peleg",
+            "reu"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Eber.",
+          "endFlavorText": "Ends this authored Bible family segment at Reu.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-6-3",
+          "startPerson": "Peleg",
+          "endPerson": "Serug",
+          "fullChain": [
+            "peleg",
+            "reu",
+            "serug"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Peleg.",
+          "endFlavorText": "Ends this authored Bible family segment at Serug.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-7-3",
+          "startPerson": "Reu",
+          "endPerson": "Nahor",
+          "fullChain": [
+            "reu",
+            "serug",
+            "nahor"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Reu.",
+          "endFlavorText": "Ends this authored Bible family segment at Nahor.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-8-3",
+          "startPerson": "Serug",
+          "endPerson": "Terah",
+          "fullChain": [
+            "serug",
+            "nahor",
+            "terah"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Serug.",
+          "endFlavorText": "Ends this authored Bible family segment at Terah.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-9-3",
+          "startPerson": "Nahor",
+          "endPerson": "Abram",
+          "fullChain": [
+            "nahor",
+            "terah",
+            "abram"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Nahor.",
+          "endFlavorText": "Ends this authored Bible family segment at Abram.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-1-4",
+          "startPerson": "Noah",
+          "endPerson": "Salah",
+          "fullChain": [
+            "noah",
+            "shem",
+            "arphaxad",
+            "salah"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Noah.",
+          "endFlavorText": "Ends this authored Bible family segment at Salah.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-2-4",
+          "startPerson": "Shem",
+          "endPerson": "Eber",
+          "fullChain": [
+            "shem",
+            "arphaxad",
+            "salah",
+            "eber"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Shem.",
+          "endFlavorText": "Ends this authored Bible family segment at Eber.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-3-4",
+          "startPerson": "Arphaxad",
+          "endPerson": "Peleg",
+          "fullChain": [
+            "arphaxad",
+            "salah",
+            "eber",
+            "peleg"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Arphaxad.",
+          "endFlavorText": "Ends this authored Bible family segment at Peleg.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-4-4",
+          "startPerson": "Salah",
+          "endPerson": "Reu",
+          "fullChain": [
+            "salah",
+            "eber",
+            "peleg",
+            "reu"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Salah.",
+          "endFlavorText": "Ends this authored Bible family segment at Reu.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-5-4",
+          "startPerson": "Eber",
+          "endPerson": "Serug",
+          "fullChain": [
+            "eber",
+            "peleg",
+            "reu",
+            "serug"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Eber.",
+          "endFlavorText": "Ends this authored Bible family segment at Serug.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-6-4",
+          "startPerson": "Peleg",
+          "endPerson": "Nahor",
+          "fullChain": [
+            "peleg",
+            "reu",
+            "serug",
+            "nahor"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Peleg.",
+          "endFlavorText": "Ends this authored Bible family segment at Nahor.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-7-4",
+          "startPerson": "Reu",
+          "endPerson": "Terah",
+          "fullChain": [
+            "reu",
+            "serug",
+            "nahor",
+            "terah"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Reu.",
+          "endFlavorText": "Ends this authored Bible family segment at Terah.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-8-4",
+          "startPerson": "Serug",
+          "endPerson": "Abram",
+          "fullChain": [
+            "serug",
+            "nahor",
+            "terah",
+            "abram"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Serug.",
+          "endFlavorText": "Ends this authored Bible family segment at Abram.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-ruth-4-1-3",
+          "startPerson": "Pharez",
+          "endPerson": "Ram",
+          "fullChain": [
+            "pharez",
+            "hezron",
+            "ram"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Pharez.",
+          "endFlavorText": "Ends this authored Bible family segment at Ram.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "easy",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-2-3",
+          "startPerson": "Hezron",
+          "endPerson": "Amminadab",
+          "fullChain": [
+            "hezron",
+            "ram",
+            "amminadab"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Hezron.",
+          "endFlavorText": "Ends this authored Bible family segment at Amminadab.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "easy",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-3-3",
+          "startPerson": "Ram",
+          "endPerson": "Nahshon",
+          "fullChain": [
+            "ram",
+            "amminadab",
+            "nahshon"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Ram.",
+          "endFlavorText": "Ends this authored Bible family segment at Nahshon.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "easy",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-4-3",
+          "startPerson": "Amminadab",
+          "endPerson": "Salmon",
+          "fullChain": [
+            "amminadab",
+            "nahshon",
+            "salmon"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Amminadab.",
+          "endFlavorText": "Ends this authored Bible family segment at Salmon.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "easy",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-5-3",
+          "startPerson": "Nahshon",
+          "endPerson": "Boaz",
+          "fullChain": [
+            "nahshon",
+            "salmon",
+            "boaz"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Nahshon.",
+          "endFlavorText": "Ends this authored Bible family segment at Boaz.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "easy",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-6-3",
+          "startPerson": "Salmon",
+          "endPerson": "Obed",
+          "fullChain": [
+            "salmon",
+            "boaz",
+            "obed"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Salmon.",
+          "endFlavorText": "Ends this authored Bible family segment at Obed.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "easy",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-7-3",
+          "startPerson": "Boaz",
+          "endPerson": "Jesse",
+          "fullChain": [
+            "boaz",
+            "obed",
+            "jesse"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Boaz.",
+          "endFlavorText": "Ends this authored Bible family segment at Jesse.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "easy",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-8-3",
+          "startPerson": "Obed",
+          "endPerson": "David",
+          "fullChain": [
+            "obed",
+            "jesse",
+            "david"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Obed.",
+          "endFlavorText": "Ends this authored Bible family segment at David.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "easy",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-1-4",
+          "startPerson": "Pharez",
+          "endPerson": "Amminadab",
+          "fullChain": [
+            "pharez",
+            "hezron",
+            "ram",
+            "amminadab"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Pharez.",
+          "endFlavorText": "Ends this authored Bible family segment at Amminadab.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "easy",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-2-4",
+          "startPerson": "Hezron",
+          "endPerson": "Nahshon",
+          "fullChain": [
+            "hezron",
+            "ram",
+            "amminadab",
+            "nahshon"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Hezron.",
+          "endFlavorText": "Ends this authored Bible family segment at Nahshon.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "easy",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-3-4",
+          "startPerson": "Ram",
+          "endPerson": "Salmon",
+          "fullChain": [
+            "ram",
+            "amminadab",
+            "nahshon",
+            "salmon"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Ram.",
+          "endFlavorText": "Ends this authored Bible family segment at Salmon.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "easy",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-4-4",
+          "startPerson": "Amminadab",
+          "endPerson": "Boaz",
+          "fullChain": [
+            "amminadab",
+            "nahshon",
+            "salmon",
+            "boaz"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Amminadab.",
+          "endFlavorText": "Ends this authored Bible family segment at Boaz.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "easy",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-5-4",
+          "startPerson": "Nahshon",
+          "endPerson": "Obed",
+          "fullChain": [
+            "nahshon",
+            "salmon",
+            "boaz",
+            "obed"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Nahshon.",
+          "endFlavorText": "Ends this authored Bible family segment at Obed.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "easy",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-6-4",
+          "startPerson": "Salmon",
+          "endPerson": "Jesse",
+          "fullChain": [
+            "salmon",
+            "boaz",
+            "obed",
+            "jesse"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Salmon.",
+          "endFlavorText": "Ends this authored Bible family segment at Jesse.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "easy",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-7-4",
+          "startPerson": "Boaz",
+          "endPerson": "David",
+          "fullChain": [
+            "boaz",
+            "obed",
+            "jesse",
+            "david"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Boaz.",
+          "endFlavorText": "Ends this authored Bible family segment at David.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "easy",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-matthew-1-1-3",
+          "startPerson": "Abraham",
+          "endPerson": "Jacob",
+          "fullChain": [
+            "abraham",
+            "isaac",
+            "jacob"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Abraham.",
+          "endFlavorText": "Ends this authored Bible family segment at Jacob.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "easy",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-2-3",
+          "startPerson": "Isaac",
+          "endPerson": "Judah",
+          "fullChain": [
+            "isaac",
+            "jacob",
+            "judah"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Isaac.",
+          "endFlavorText": "Ends this authored Bible family segment at Judah.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "easy",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-3-3",
+          "startPerson": "Jacob",
+          "endPerson": "Phares",
+          "fullChain": [
+            "jacob",
+            "judah",
+            "phares"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Jacob.",
+          "endFlavorText": "Ends this authored Bible family segment at Phares.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "easy",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-4-3",
+          "startPerson": "Judah",
+          "endPerson": "Esrom",
+          "fullChain": [
+            "judah",
+            "phares",
+            "esrom"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Judah.",
+          "endFlavorText": "Ends this authored Bible family segment at Esrom.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "easy",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-5-3",
+          "startPerson": "Phares",
+          "endPerson": "Aram",
+          "fullChain": [
+            "phares",
+            "esrom",
+            "aram"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Phares.",
+          "endFlavorText": "Ends this authored Bible family segment at Aram.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "easy",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-6-3",
+          "startPerson": "Esrom",
+          "endPerson": "Aminadab",
+          "fullChain": [
+            "esrom",
+            "aram",
+            "aminadab"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Esrom.",
+          "endFlavorText": "Ends this authored Bible family segment at Aminadab.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "easy",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-7-3",
+          "startPerson": "Aram",
+          "endPerson": "Naasson",
+          "fullChain": [
+            "aram",
+            "aminadab",
+            "naasson"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Aram.",
+          "endFlavorText": "Ends this authored Bible family segment at Naasson.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "easy",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-8-3",
+          "startPerson": "Aminadab",
+          "endPerson": "Salmon",
+          "fullChain": [
+            "aminadab",
+            "naasson",
+            "salmon"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Aminadab.",
+          "endFlavorText": "Ends this authored Bible family segment at Salmon.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "easy",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-genesis-5-1-5",
+          "startPerson": "Adam",
+          "endPerson": "Mahalaleel",
+          "fullChain": [
+            "adam",
+            "seth",
+            "enos",
+            "cainan",
+            "mahalaleel"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Adam.",
+          "endFlavorText": "Ends this authored Bible family segment at Mahalaleel.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "medium",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-2-5",
+          "startPerson": "Seth",
+          "endPerson": "Jared",
+          "fullChain": [
+            "seth",
+            "enos",
+            "cainan",
+            "mahalaleel",
+            "jared"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Seth.",
+          "endFlavorText": "Ends this authored Bible family segment at Jared.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "medium",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-3-5",
+          "startPerson": "Enos",
+          "endPerson": "Enoch",
+          "fullChain": [
+            "enos",
+            "cainan",
+            "mahalaleel",
+            "jared",
+            "enoch"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Enos.",
+          "endFlavorText": "Ends this authored Bible family segment at Enoch.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "medium",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-4-5",
+          "startPerson": "Cainan",
+          "endPerson": "Methuselah",
+          "fullChain": [
+            "cainan",
+            "mahalaleel",
+            "jared",
+            "enoch",
+            "methuselah"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Cainan.",
+          "endFlavorText": "Ends this authored Bible family segment at Methuselah.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "medium",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-5-5",
+          "startPerson": "Mahalaleel",
+          "endPerson": "Lamech",
+          "fullChain": [
+            "mahalaleel",
+            "jared",
+            "enoch",
+            "methuselah",
+            "lamech"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Mahalaleel.",
+          "endFlavorText": "Ends this authored Bible family segment at Lamech.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "medium",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-6-5",
+          "startPerson": "Jared",
+          "endPerson": "Noah",
+          "fullChain": [
+            "jared",
+            "enoch",
+            "methuselah",
+            "lamech",
+            "noah"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Jared.",
+          "endFlavorText": "Ends this authored Bible family segment at Noah.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "medium",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-1-6",
+          "startPerson": "Adam",
+          "endPerson": "Jared",
+          "fullChain": [
+            "adam",
+            "seth",
+            "enos",
+            "cainan",
+            "mahalaleel",
+            "jared"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Adam.",
+          "endFlavorText": "Ends this authored Bible family segment at Jared.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "medium",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-2-6",
+          "startPerson": "Seth",
+          "endPerson": "Enoch",
+          "fullChain": [
+            "seth",
+            "enos",
+            "cainan",
+            "mahalaleel",
+            "jared",
+            "enoch"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Seth.",
+          "endFlavorText": "Ends this authored Bible family segment at Enoch.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "medium",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-3-6",
+          "startPerson": "Enos",
+          "endPerson": "Methuselah",
+          "fullChain": [
+            "enos",
+            "cainan",
+            "mahalaleel",
+            "jared",
+            "enoch",
+            "methuselah"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Enos.",
+          "endFlavorText": "Ends this authored Bible family segment at Methuselah.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "medium",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-4-6",
+          "startPerson": "Cainan",
+          "endPerson": "Lamech",
+          "fullChain": [
+            "cainan",
+            "mahalaleel",
+            "jared",
+            "enoch",
+            "methuselah",
+            "lamech"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Cainan.",
+          "endFlavorText": "Ends this authored Bible family segment at Lamech.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "medium",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-5-6",
+          "startPerson": "Mahalaleel",
+          "endPerson": "Noah",
+          "fullChain": [
+            "mahalaleel",
+            "jared",
+            "enoch",
+            "methuselah",
+            "lamech",
+            "noah"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Mahalaleel.",
+          "endFlavorText": "Ends this authored Bible family segment at Noah.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "medium",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-11-1-5",
+          "startPerson": "Noah",
+          "endPerson": "Eber",
+          "fullChain": [
+            "noah",
+            "shem",
+            "arphaxad",
+            "salah",
+            "eber"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Noah.",
+          "endFlavorText": "Ends this authored Bible family segment at Eber.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "medium",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-2-5",
+          "startPerson": "Shem",
+          "endPerson": "Peleg",
+          "fullChain": [
+            "shem",
+            "arphaxad",
+            "salah",
+            "eber",
+            "peleg"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Shem.",
+          "endFlavorText": "Ends this authored Bible family segment at Peleg.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "medium",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-3-5",
+          "startPerson": "Arphaxad",
+          "endPerson": "Reu",
+          "fullChain": [
+            "arphaxad",
+            "salah",
+            "eber",
+            "peleg",
+            "reu"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Arphaxad.",
+          "endFlavorText": "Ends this authored Bible family segment at Reu.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "medium",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-4-5",
+          "startPerson": "Salah",
+          "endPerson": "Serug",
+          "fullChain": [
+            "salah",
+            "eber",
+            "peleg",
+            "reu",
+            "serug"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Salah.",
+          "endFlavorText": "Ends this authored Bible family segment at Serug.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "medium",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-5-5",
+          "startPerson": "Eber",
+          "endPerson": "Nahor",
+          "fullChain": [
+            "eber",
+            "peleg",
+            "reu",
+            "serug",
+            "nahor"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Eber.",
+          "endFlavorText": "Ends this authored Bible family segment at Nahor.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "medium",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-6-5",
+          "startPerson": "Peleg",
+          "endPerson": "Terah",
+          "fullChain": [
+            "peleg",
+            "reu",
+            "serug",
+            "nahor",
+            "terah"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Peleg.",
+          "endFlavorText": "Ends this authored Bible family segment at Terah.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "medium",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-7-5",
+          "startPerson": "Reu",
+          "endPerson": "Abram",
+          "fullChain": [
+            "reu",
+            "serug",
+            "nahor",
+            "terah",
+            "abram"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Reu.",
+          "endFlavorText": "Ends this authored Bible family segment at Abram.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "medium",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-1-6",
+          "startPerson": "Noah",
+          "endPerson": "Peleg",
+          "fullChain": [
+            "noah",
+            "shem",
+            "arphaxad",
+            "salah",
+            "eber",
+            "peleg"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Noah.",
+          "endFlavorText": "Ends this authored Bible family segment at Peleg.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "medium",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-2-6",
+          "startPerson": "Shem",
+          "endPerson": "Reu",
+          "fullChain": [
+            "shem",
+            "arphaxad",
+            "salah",
+            "eber",
+            "peleg",
+            "reu"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Shem.",
+          "endFlavorText": "Ends this authored Bible family segment at Reu.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "medium",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-3-6",
+          "startPerson": "Arphaxad",
+          "endPerson": "Serug",
+          "fullChain": [
+            "arphaxad",
+            "salah",
+            "eber",
+            "peleg",
+            "reu",
+            "serug"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Arphaxad.",
+          "endFlavorText": "Ends this authored Bible family segment at Serug.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "medium",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-4-6",
+          "startPerson": "Salah",
+          "endPerson": "Nahor",
+          "fullChain": [
+            "salah",
+            "eber",
+            "peleg",
+            "reu",
+            "serug",
+            "nahor"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Salah.",
+          "endFlavorText": "Ends this authored Bible family segment at Nahor.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "medium",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-5-6",
+          "startPerson": "Eber",
+          "endPerson": "Terah",
+          "fullChain": [
+            "eber",
+            "peleg",
+            "reu",
+            "serug",
+            "nahor",
+            "terah"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Eber.",
+          "endFlavorText": "Ends this authored Bible family segment at Terah.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "medium",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-6-6",
+          "startPerson": "Peleg",
+          "endPerson": "Abram",
+          "fullChain": [
+            "peleg",
+            "reu",
+            "serug",
+            "nahor",
+            "terah",
+            "abram"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Peleg.",
+          "endFlavorText": "Ends this authored Bible family segment at Abram.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "medium",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-ruth-4-1-5",
+          "startPerson": "Pharez",
+          "endPerson": "Nahshon",
+          "fullChain": [
+            "pharez",
+            "hezron",
+            "ram",
+            "amminadab",
+            "nahshon"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Pharez.",
+          "endFlavorText": "Ends this authored Bible family segment at Nahshon.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "medium",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-2-5",
+          "startPerson": "Hezron",
+          "endPerson": "Salmon",
+          "fullChain": [
+            "hezron",
+            "ram",
+            "amminadab",
+            "nahshon",
+            "salmon"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Hezron.",
+          "endFlavorText": "Ends this authored Bible family segment at Salmon.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "medium",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-3-5",
+          "startPerson": "Ram",
+          "endPerson": "Boaz",
+          "fullChain": [
+            "ram",
+            "amminadab",
+            "nahshon",
+            "salmon",
+            "boaz"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Ram.",
+          "endFlavorText": "Ends this authored Bible family segment at Boaz.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "medium",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-4-5",
+          "startPerson": "Amminadab",
+          "endPerson": "Obed",
+          "fullChain": [
+            "amminadab",
+            "nahshon",
+            "salmon",
+            "boaz",
+            "obed"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Amminadab.",
+          "endFlavorText": "Ends this authored Bible family segment at Obed.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "medium",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-5-5",
+          "startPerson": "Nahshon",
+          "endPerson": "Jesse",
+          "fullChain": [
+            "nahshon",
+            "salmon",
+            "boaz",
+            "obed",
+            "jesse"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Nahshon.",
+          "endFlavorText": "Ends this authored Bible family segment at Jesse.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "medium",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-6-5",
+          "startPerson": "Salmon",
+          "endPerson": "David",
+          "fullChain": [
+            "salmon",
+            "boaz",
+            "obed",
+            "jesse",
+            "david"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Salmon.",
+          "endFlavorText": "Ends this authored Bible family segment at David.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "medium",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-1-6",
+          "startPerson": "Pharez",
+          "endPerson": "Salmon",
+          "fullChain": [
+            "pharez",
+            "hezron",
+            "ram",
+            "amminadab",
+            "nahshon",
+            "salmon"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Pharez.",
+          "endFlavorText": "Ends this authored Bible family segment at Salmon.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "medium",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-2-6",
+          "startPerson": "Hezron",
+          "endPerson": "Boaz",
+          "fullChain": [
+            "hezron",
+            "ram",
+            "amminadab",
+            "nahshon",
+            "salmon",
+            "boaz"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Hezron.",
+          "endFlavorText": "Ends this authored Bible family segment at Boaz.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "medium",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-3-6",
+          "startPerson": "Ram",
+          "endPerson": "Obed",
+          "fullChain": [
+            "ram",
+            "amminadab",
+            "nahshon",
+            "salmon",
+            "boaz",
+            "obed"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Ram.",
+          "endFlavorText": "Ends this authored Bible family segment at Obed.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "medium",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-4-6",
+          "startPerson": "Amminadab",
+          "endPerson": "Jesse",
+          "fullChain": [
+            "amminadab",
+            "nahshon",
+            "salmon",
+            "boaz",
+            "obed",
+            "jesse"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Amminadab.",
+          "endFlavorText": "Ends this authored Bible family segment at Jesse.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "medium",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-5-6",
+          "startPerson": "Nahshon",
+          "endPerson": "David",
+          "fullChain": [
+            "nahshon",
+            "salmon",
+            "boaz",
+            "obed",
+            "jesse",
+            "david"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Nahshon.",
+          "endFlavorText": "Ends this authored Bible family segment at David.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "medium",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-matthew-1-1-5",
+          "startPerson": "Abraham",
+          "endPerson": "Phares",
+          "fullChain": [
+            "abraham",
+            "isaac",
+            "jacob",
+            "judah",
+            "phares"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Abraham.",
+          "endFlavorText": "Ends this authored Bible family segment at Phares.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "medium",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-2-5",
+          "startPerson": "Isaac",
+          "endPerson": "Esrom",
+          "fullChain": [
+            "isaac",
+            "jacob",
+            "judah",
+            "phares",
+            "esrom"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Isaac.",
+          "endFlavorText": "Ends this authored Bible family segment at Esrom.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "medium",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-3-5",
+          "startPerson": "Jacob",
+          "endPerson": "Aram",
+          "fullChain": [
+            "jacob",
+            "judah",
+            "phares",
+            "esrom",
+            "aram"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Jacob.",
+          "endFlavorText": "Ends this authored Bible family segment at Aram.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "medium",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-4-5",
+          "startPerson": "Judah",
+          "endPerson": "Aminadab",
+          "fullChain": [
+            "judah",
+            "phares",
+            "esrom",
+            "aram",
+            "aminadab"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Judah.",
+          "endFlavorText": "Ends this authored Bible family segment at Aminadab.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "medium",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-5-5",
+          "startPerson": "Phares",
+          "endPerson": "Naasson",
+          "fullChain": [
+            "phares",
+            "esrom",
+            "aram",
+            "aminadab",
+            "naasson"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Phares.",
+          "endFlavorText": "Ends this authored Bible family segment at Naasson.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "medium",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-6-5",
+          "startPerson": "Esrom",
+          "endPerson": "Salmon",
+          "fullChain": [
+            "esrom",
+            "aram",
+            "aminadab",
+            "naasson",
+            "salmon"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Esrom.",
+          "endFlavorText": "Ends this authored Bible family segment at Salmon.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "medium",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-7-5",
+          "startPerson": "Aram",
+          "endPerson": "Booz",
+          "fullChain": [
+            "aram",
+            "aminadab",
+            "naasson",
+            "salmon",
+            "booz"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Aram.",
+          "endFlavorText": "Ends this authored Bible family segment at Booz.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "medium",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-8-5",
+          "startPerson": "Aminadab",
+          "endPerson": "Obed",
+          "fullChain": [
+            "aminadab",
+            "naasson",
+            "salmon",
+            "booz",
+            "obed"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Aminadab.",
+          "endFlavorText": "Ends this authored Bible family segment at Obed.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "medium",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-9-5",
+          "startPerson": "Naasson",
+          "endPerson": "Jesse",
+          "fullChain": [
+            "naasson",
+            "salmon",
+            "booz",
+            "obed",
+            "jesse"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Naasson.",
+          "endFlavorText": "Ends this authored Bible family segment at Jesse.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "medium",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-10-5",
+          "startPerson": "Salmon",
+          "endPerson": "David",
+          "fullChain": [
+            "salmon",
+            "booz",
+            "obed",
+            "jesse",
+            "david"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Salmon.",
+          "endFlavorText": "Ends this authored Bible family segment at David.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "medium",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-11-5",
+          "startPerson": "Booz",
+          "endPerson": "Solomon",
+          "fullChain": [
+            "booz",
+            "obed",
+            "jesse",
+            "david",
+            "solomon"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Booz.",
+          "endFlavorText": "Ends this authored Bible family segment at Solomon.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "medium",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-12-5",
+          "startPerson": "Obed",
+          "endPerson": "Roboam",
+          "fullChain": [
+            "obed",
+            "jesse",
+            "david",
+            "solomon",
+            "roboam"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Obed.",
+          "endFlavorText": "Ends this authored Bible family segment at Roboam.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "medium",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-13-5",
+          "startPerson": "Jesse",
+          "endPerson": "Abia",
+          "fullChain": [
+            "jesse",
+            "david",
+            "solomon",
+            "roboam",
+            "abia"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Jesse.",
+          "endFlavorText": "Ends this authored Bible family segment at Abia.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "medium",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-14-5",
+          "startPerson": "David",
+          "endPerson": "Asa",
+          "fullChain": [
+            "david",
+            "solomon",
+            "roboam",
+            "abia",
+            "asa"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at David.",
+          "endFlavorText": "Ends this authored Bible family segment at Asa.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "medium",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-15-5",
+          "startPerson": "Solomon",
+          "endPerson": "Josaphat",
+          "fullChain": [
+            "solomon",
+            "roboam",
+            "abia",
+            "asa",
+            "josaphat"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Solomon.",
+          "endFlavorText": "Ends this authored Bible family segment at Josaphat.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "medium",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-genesis-5-1-7",
+          "startPerson": "Adam",
+          "endPerson": "Enoch",
+          "fullChain": [
+            "adam",
+            "seth",
+            "enos",
+            "cainan",
+            "mahalaleel",
+            "jared",
+            "enoch"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Adam.",
+          "endFlavorText": "Ends this authored Bible family segment at Enoch.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "hard",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-2-7",
+          "startPerson": "Seth",
+          "endPerson": "Methuselah",
+          "fullChain": [
+            "seth",
+            "enos",
+            "cainan",
+            "mahalaleel",
+            "jared",
+            "enoch",
+            "methuselah"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Seth.",
+          "endFlavorText": "Ends this authored Bible family segment at Methuselah.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "hard",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-3-7",
+          "startPerson": "Enos",
+          "endPerson": "Lamech",
+          "fullChain": [
+            "enos",
+            "cainan",
+            "mahalaleel",
+            "jared",
+            "enoch",
+            "methuselah",
+            "lamech"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Enos.",
+          "endFlavorText": "Ends this authored Bible family segment at Lamech.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "hard",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-4-7",
+          "startPerson": "Cainan",
+          "endPerson": "Noah",
+          "fullChain": [
+            "cainan",
+            "mahalaleel",
+            "jared",
+            "enoch",
+            "methuselah",
+            "lamech",
+            "noah"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Cainan.",
+          "endFlavorText": "Ends this authored Bible family segment at Noah.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "hard",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-1-8",
+          "startPerson": "Adam",
+          "endPerson": "Methuselah",
+          "fullChain": [
+            "adam",
+            "seth",
+            "enos",
+            "cainan",
+            "mahalaleel",
+            "jared",
+            "enoch",
+            "methuselah"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Adam.",
+          "endFlavorText": "Ends this authored Bible family segment at Methuselah.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "hard",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-2-8",
+          "startPerson": "Seth",
+          "endPerson": "Lamech",
+          "fullChain": [
+            "seth",
+            "enos",
+            "cainan",
+            "mahalaleel",
+            "jared",
+            "enoch",
+            "methuselah",
+            "lamech"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Seth.",
+          "endFlavorText": "Ends this authored Bible family segment at Lamech.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "hard",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-3-8",
+          "startPerson": "Enos",
+          "endPerson": "Noah",
+          "fullChain": [
+            "enos",
+            "cainan",
+            "mahalaleel",
+            "jared",
+            "enoch",
+            "methuselah",
+            "lamech",
+            "noah"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Enos.",
+          "endFlavorText": "Ends this authored Bible family segment at Noah.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "hard",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-1-9",
+          "startPerson": "Adam",
+          "endPerson": "Lamech",
+          "fullChain": [
+            "adam",
+            "seth",
+            "enos",
+            "cainan",
+            "mahalaleel",
+            "jared",
+            "enoch",
+            "methuselah",
+            "lamech"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Adam.",
+          "endFlavorText": "Ends this authored Bible family segment at Lamech.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "hard",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-5-2-9",
+          "startPerson": "Seth",
+          "endPerson": "Noah",
+          "fullChain": [
+            "seth",
+            "enos",
+            "cainan",
+            "mahalaleel",
+            "jared",
+            "enoch",
+            "methuselah",
+            "lamech",
+            "noah"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Seth.",
+          "endFlavorText": "Ends this authored Bible family segment at Noah.",
+          "scriptureReference": "Genesis 5:3-32",
+          "theme": "Genesis 5",
+          "difficulty": "hard",
+          "teachingNote": "Genesis 5 traces the line from Adam through Seth to Noah before the flood."
+        },
+        {
+          "id": "gen-genesis-11-1-7",
+          "startPerson": "Noah",
+          "endPerson": "Reu",
+          "fullChain": [
+            "noah",
+            "shem",
+            "arphaxad",
+            "salah",
+            "eber",
+            "peleg",
+            "reu"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Noah.",
+          "endFlavorText": "Ends this authored Bible family segment at Reu.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "hard",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-2-7",
+          "startPerson": "Shem",
+          "endPerson": "Serug",
+          "fullChain": [
+            "shem",
+            "arphaxad",
+            "salah",
+            "eber",
+            "peleg",
+            "reu",
+            "serug"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Shem.",
+          "endFlavorText": "Ends this authored Bible family segment at Serug.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "hard",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-3-7",
+          "startPerson": "Arphaxad",
+          "endPerson": "Nahor",
+          "fullChain": [
+            "arphaxad",
+            "salah",
+            "eber",
+            "peleg",
+            "reu",
+            "serug",
+            "nahor"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Arphaxad.",
+          "endFlavorText": "Ends this authored Bible family segment at Nahor.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "hard",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-4-7",
+          "startPerson": "Salah",
+          "endPerson": "Terah",
+          "fullChain": [
+            "salah",
+            "eber",
+            "peleg",
+            "reu",
+            "serug",
+            "nahor",
+            "terah"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Salah.",
+          "endFlavorText": "Ends this authored Bible family segment at Terah.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "hard",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-5-7",
+          "startPerson": "Eber",
+          "endPerson": "Abram",
+          "fullChain": [
+            "eber",
+            "peleg",
+            "reu",
+            "serug",
+            "nahor",
+            "terah",
+            "abram"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Eber.",
+          "endFlavorText": "Ends this authored Bible family segment at Abram.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "hard",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-1-8",
+          "startPerson": "Noah",
+          "endPerson": "Serug",
+          "fullChain": [
+            "noah",
+            "shem",
+            "arphaxad",
+            "salah",
+            "eber",
+            "peleg",
+            "reu",
+            "serug"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Noah.",
+          "endFlavorText": "Ends this authored Bible family segment at Serug.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "hard",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-2-8",
+          "startPerson": "Shem",
+          "endPerson": "Nahor",
+          "fullChain": [
+            "shem",
+            "arphaxad",
+            "salah",
+            "eber",
+            "peleg",
+            "reu",
+            "serug",
+            "nahor"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Shem.",
+          "endFlavorText": "Ends this authored Bible family segment at Nahor.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "hard",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-3-8",
+          "startPerson": "Arphaxad",
+          "endPerson": "Terah",
+          "fullChain": [
+            "arphaxad",
+            "salah",
+            "eber",
+            "peleg",
+            "reu",
+            "serug",
+            "nahor",
+            "terah"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Arphaxad.",
+          "endFlavorText": "Ends this authored Bible family segment at Terah.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "hard",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-4-8",
+          "startPerson": "Salah",
+          "endPerson": "Abram",
+          "fullChain": [
+            "salah",
+            "eber",
+            "peleg",
+            "reu",
+            "serug",
+            "nahor",
+            "terah",
+            "abram"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Salah.",
+          "endFlavorText": "Ends this authored Bible family segment at Abram.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "hard",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-1-9",
+          "startPerson": "Noah",
+          "endPerson": "Nahor",
+          "fullChain": [
+            "noah",
+            "shem",
+            "arphaxad",
+            "salah",
+            "eber",
+            "peleg",
+            "reu",
+            "serug",
+            "nahor"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Noah.",
+          "endFlavorText": "Ends this authored Bible family segment at Nahor.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "hard",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-2-9",
+          "startPerson": "Shem",
+          "endPerson": "Terah",
+          "fullChain": [
+            "shem",
+            "arphaxad",
+            "salah",
+            "eber",
+            "peleg",
+            "reu",
+            "serug",
+            "nahor",
+            "terah"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Shem.",
+          "endFlavorText": "Ends this authored Bible family segment at Terah.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "hard",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-genesis-11-3-9",
+          "startPerson": "Arphaxad",
+          "endPerson": "Abram",
+          "fullChain": [
+            "arphaxad",
+            "salah",
+            "eber",
+            "peleg",
+            "reu",
+            "serug",
+            "nahor",
+            "terah",
+            "abram"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Arphaxad.",
+          "endFlavorText": "Ends this authored Bible family segment at Abram.",
+          "scriptureReference": "Genesis 11:10-26",
+          "theme": "Genesis 11",
+          "difficulty": "hard",
+          "teachingNote": "Genesis 11 narrows the post-flood line toward Abram, through whom the covenant promises come."
+        },
+        {
+          "id": "gen-ruth-4-1-7",
+          "startPerson": "Pharez",
+          "endPerson": "Boaz",
+          "fullChain": [
+            "pharez",
+            "hezron",
+            "ram",
+            "amminadab",
+            "nahshon",
+            "salmon",
+            "boaz"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Pharez.",
+          "endFlavorText": "Ends this authored Bible family segment at Boaz.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "hard",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-2-7",
+          "startPerson": "Hezron",
+          "endPerson": "Obed",
+          "fullChain": [
+            "hezron",
+            "ram",
+            "amminadab",
+            "nahshon",
+            "salmon",
+            "boaz",
+            "obed"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Hezron.",
+          "endFlavorText": "Ends this authored Bible family segment at Obed.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "hard",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-3-7",
+          "startPerson": "Ram",
+          "endPerson": "Jesse",
+          "fullChain": [
+            "ram",
+            "amminadab",
+            "nahshon",
+            "salmon",
+            "boaz",
+            "obed",
+            "jesse"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Ram.",
+          "endFlavorText": "Ends this authored Bible family segment at Jesse.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "hard",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-4-7",
+          "startPerson": "Amminadab",
+          "endPerson": "David",
+          "fullChain": [
+            "amminadab",
+            "nahshon",
+            "salmon",
+            "boaz",
+            "obed",
+            "jesse",
+            "david"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Amminadab.",
+          "endFlavorText": "Ends this authored Bible family segment at David.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "hard",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-1-8",
+          "startPerson": "Pharez",
+          "endPerson": "Obed",
+          "fullChain": [
+            "pharez",
+            "hezron",
+            "ram",
+            "amminadab",
+            "nahshon",
+            "salmon",
+            "boaz",
+            "obed"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Pharez.",
+          "endFlavorText": "Ends this authored Bible family segment at Obed.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "hard",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-2-8",
+          "startPerson": "Hezron",
+          "endPerson": "Jesse",
+          "fullChain": [
+            "hezron",
+            "ram",
+            "amminadab",
+            "nahshon",
+            "salmon",
+            "boaz",
+            "obed",
+            "jesse"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Hezron.",
+          "endFlavorText": "Ends this authored Bible family segment at Jesse.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "hard",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-3-8",
+          "startPerson": "Ram",
+          "endPerson": "David",
+          "fullChain": [
+            "ram",
+            "amminadab",
+            "nahshon",
+            "salmon",
+            "boaz",
+            "obed",
+            "jesse",
+            "david"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Ram.",
+          "endFlavorText": "Ends this authored Bible family segment at David.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "hard",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-1-9",
+          "startPerson": "Pharez",
+          "endPerson": "Jesse",
+          "fullChain": [
+            "pharez",
+            "hezron",
+            "ram",
+            "amminadab",
+            "nahshon",
+            "salmon",
+            "boaz",
+            "obed",
+            "jesse"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Pharez.",
+          "endFlavorText": "Ends this authored Bible family segment at Jesse.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "hard",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-ruth-4-2-9",
+          "startPerson": "Hezron",
+          "endPerson": "David",
+          "fullChain": [
+            "hezron",
+            "ram",
+            "amminadab",
+            "nahshon",
+            "salmon",
+            "boaz",
+            "obed",
+            "jesse",
+            "david"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Hezron.",
+          "endFlavorText": "Ends this authored Bible family segment at David.",
+          "scriptureReference": "Ruth 4:18-22",
+          "theme": "Ruth and David",
+          "difficulty": "hard",
+          "teachingNote": "Ruth closes by connecting Boaz and Ruth's family to King David."
+        },
+        {
+          "id": "gen-matthew-1-1-7",
+          "startPerson": "Abraham",
+          "endPerson": "Aram",
+          "fullChain": [
+            "abraham",
+            "isaac",
+            "jacob",
+            "judah",
+            "phares",
+            "esrom",
+            "aram"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Abraham.",
+          "endFlavorText": "Ends this authored Bible family segment at Aram.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "hard",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-2-7",
+          "startPerson": "Isaac",
+          "endPerson": "Aminadab",
+          "fullChain": [
+            "isaac",
+            "jacob",
+            "judah",
+            "phares",
+            "esrom",
+            "aram",
+            "aminadab"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Isaac.",
+          "endFlavorText": "Ends this authored Bible family segment at Aminadab.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "hard",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-3-7",
+          "startPerson": "Jacob",
+          "endPerson": "Naasson",
+          "fullChain": [
+            "jacob",
+            "judah",
+            "phares",
+            "esrom",
+            "aram",
+            "aminadab",
+            "naasson"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Jacob.",
+          "endFlavorText": "Ends this authored Bible family segment at Naasson.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "hard",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-4-7",
+          "startPerson": "Judah",
+          "endPerson": "Salmon",
+          "fullChain": [
+            "judah",
+            "phares",
+            "esrom",
+            "aram",
+            "aminadab",
+            "naasson",
+            "salmon"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Judah.",
+          "endFlavorText": "Ends this authored Bible family segment at Salmon.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "hard",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-5-7",
+          "startPerson": "Phares",
+          "endPerson": "Booz",
+          "fullChain": [
+            "phares",
+            "esrom",
+            "aram",
+            "aminadab",
+            "naasson",
+            "salmon",
+            "booz"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Phares.",
+          "endFlavorText": "Ends this authored Bible family segment at Booz.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "hard",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-6-7",
+          "startPerson": "Esrom",
+          "endPerson": "Obed",
+          "fullChain": [
+            "esrom",
+            "aram",
+            "aminadab",
+            "naasson",
+            "salmon",
+            "booz",
+            "obed"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Esrom.",
+          "endFlavorText": "Ends this authored Bible family segment at Obed.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "hard",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-7-7",
+          "startPerson": "Aram",
+          "endPerson": "Jesse",
+          "fullChain": [
+            "aram",
+            "aminadab",
+            "naasson",
+            "salmon",
+            "booz",
+            "obed",
+            "jesse"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Aram.",
+          "endFlavorText": "Ends this authored Bible family segment at Jesse.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "hard",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-8-7",
+          "startPerson": "Aminadab",
+          "endPerson": "David",
+          "fullChain": [
+            "aminadab",
+            "naasson",
+            "salmon",
+            "booz",
+            "obed",
+            "jesse",
+            "david"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Aminadab.",
+          "endFlavorText": "Ends this authored Bible family segment at David.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "hard",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-9-7",
+          "startPerson": "Naasson",
+          "endPerson": "Solomon",
+          "fullChain": [
+            "naasson",
+            "salmon",
+            "booz",
+            "obed",
+            "jesse",
+            "david",
+            "solomon"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Naasson.",
+          "endFlavorText": "Ends this authored Bible family segment at Solomon.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "hard",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-10-7",
+          "startPerson": "Salmon",
+          "endPerson": "Roboam",
+          "fullChain": [
+            "salmon",
+            "booz",
+            "obed",
+            "jesse",
+            "david",
+            "solomon",
+            "roboam"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Salmon.",
+          "endFlavorText": "Ends this authored Bible family segment at Roboam.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "hard",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-11-7",
+          "startPerson": "Booz",
+          "endPerson": "Abia",
+          "fullChain": [
+            "booz",
+            "obed",
+            "jesse",
+            "david",
+            "solomon",
+            "roboam",
+            "abia"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Booz.",
+          "endFlavorText": "Ends this authored Bible family segment at Abia.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "hard",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-12-7",
+          "startPerson": "Obed",
+          "endPerson": "Asa",
+          "fullChain": [
+            "obed",
+            "jesse",
+            "david",
+            "solomon",
+            "roboam",
+            "abia",
+            "asa"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Obed.",
+          "endFlavorText": "Ends this authored Bible family segment at Asa.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "hard",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-13-7",
+          "startPerson": "Jesse",
+          "endPerson": "Josaphat",
+          "fullChain": [
+            "jesse",
+            "david",
+            "solomon",
+            "roboam",
+            "abia",
+            "asa",
+            "josaphat"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Jesse.",
+          "endFlavorText": "Ends this authored Bible family segment at Josaphat.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "hard",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-14-7",
+          "startPerson": "David",
+          "endPerson": "Joram",
+          "fullChain": [
+            "david",
+            "solomon",
+            "roboam",
+            "abia",
+            "asa",
+            "josaphat",
+            "joram"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at David.",
+          "endFlavorText": "Ends this authored Bible family segment at Joram.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "hard",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        },
+        {
+          "id": "gen-matthew-1-15-7",
+          "startPerson": "Solomon",
+          "endPerson": "Ozias",
+          "fullChain": [
+            "solomon",
+            "roboam",
+            "abia",
+            "asa",
+            "josaphat",
+            "joram",
+            "ozias"
+          ],
+          "startFlavorText": "Starts this authored Bible family segment at Solomon.",
+          "endFlavorText": "Ends this authored Bible family segment at Ozias.",
+          "scriptureReference": "Matthew 1:2-16",
+          "theme": "Matthew's genealogy",
+          "difficulty": "hard",
+          "teachingNote": "Matthew presents Jesus as the son of David and son of Abraham through the royal line."
+        }
+      ]
+    }
+  ]
+}

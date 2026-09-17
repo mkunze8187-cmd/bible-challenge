@@ -28,7 +28,10 @@ export type GameId =
   | "who-said-it"
   | "bible-books-relay"
   | "missing-word"
+  | "odd-one-out"
+  | "genealogy"
   | "prophecy-match"
+  | "parable-match"
   | "messiah-prophecy"
   | "prophecy-clue-ladder"
   | "fulfillment-finder"
@@ -217,6 +220,35 @@ export interface MissingWordRound {
 
 export type MissingWordPack = SessionPackBase<MissingWordRound>;
 
+export interface OddOneOutRound {
+  id: string;
+  prompt: string;
+  items: string[];
+  oddItem: string;
+  groupTheme: string;
+  explanation: string;
+  theme: string;
+  difficulty: PsalmsProverbsDifficulty;
+  teachingNote: string;
+}
+
+export type OddOneOutPack = SessionPackBase<OddOneOutRound>;
+
+export interface GenealogyRound {
+  id: string;
+  startPerson: string;
+  endPerson: string;
+  fullChain: string[];
+  startFlavorText: string;
+  endFlavorText: string;
+  scriptureReference: string;
+  theme: string;
+  difficulty: PsalmsProverbsDifficulty;
+  teachingNote: string;
+}
+
+export type GenealogyPack = SessionPackBase<GenealogyRound>;
+
 export type ProphecyDifficulty = "easy" | "medium" | "hard";
 
 export interface ProphecyMatchRound {
@@ -235,6 +267,22 @@ export interface ProphecyMatchRound {
 }
 
 export type ProphecyMatchPack = SessionPackBase<ProphecyMatchRound>;
+
+export interface ParableMatchRound {
+  id: string;
+  title: string;
+  theme: string;
+  parableReference: string;
+  parableSummary: string;
+  parableTextShort: string;
+  lessonSummary: string;
+  lessonTextShort: string;
+  answerKey: string;
+  difficulty: PsalmsProverbsDifficulty;
+  teachingNote: string;
+}
+
+export type ParableMatchPack = SessionPackBase<ParableMatchRound>;
 
 export interface MessiahProphecyRound {
   id: string;

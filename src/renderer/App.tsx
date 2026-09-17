@@ -57,7 +57,10 @@ import {
   passMissingWord,
   passNameThatBookTurn,
   passFulfillmentFinder,
+  passGenealogyTurn,
   passMessiahProphecy,
+  passOddOneOut,
+  passParableMatch,
   passProphecyCategory,
   passProphecyClue,
   passProphecyMatch,
@@ -73,13 +76,16 @@ import {
   passWisdomMatch,
   passWhoSaidIt,
   passWordLadderTurn,
+  removeLastGenealogyLink,
   removeLastWordLadderRung,
+  resolveGenealogyOnTimer,
   resolveWordLadderOnTimer,
   revealTimelineRound,
   selectBoardCard,
   selectProphecyCategory,
   selectProphecyCategoryCard,
   selectProphecyMatchCard,
+  selectParableMatchCard,
   selectProverbCategory,
   selectProverbCategoryCard,
   selectTwoTruthsStatement,
@@ -92,7 +98,10 @@ import {
   submitChapterFinderGuess,
   submitConnectionGroup,
   submitFulfillmentFinderChoice,
+  submitGenealogyStep,
   submitMessiahProphecyChoice,
+  submitOddOneOutChoice,
+  submitParableMatch,
   submitMissingWordGuess,
   submitNameThatBookGuess,
   submitProphecyCategory,
@@ -125,12 +134,15 @@ import {
   type FulfillmentFinderState,
   type FiveGuessesState,
   type GameId,
+  type GenealogyState,
   type DifficultyFilter,
   type InitialsState,
   type MessiahProphecyState,
   type MissingWordState,
   type NameThatBookState,
+  type OddOneOutState,
   type ParticipantMode,
+  type ParableMatchState,
   type ProphecyCategoriesState,
   type ProphecyClueLadderState,
   type ProphecyMatchState,
@@ -170,6 +182,7 @@ type TimerPreset = "off" | "beginner" | "standard" | "advanced" | "expert" | "cu
 type DisplayMode = "normal" | "projector";
 type ContentPackId =
   | "all"
+  | "popular"
   | "core"
   | "scripture"
   | "psalms-proverbs"
@@ -210,6 +223,37 @@ interface PersistedAppSettings {
   defaultContentPackId: ContentPackId;
 }
 
+interface ProjectorSnapshot {
+  colorTheme: AppTheme;
+  sessionState: SessionState | null;
+  timeRemaining: number;
+  timerEnabled: boolean;
+  isTimerPaused: boolean;
+  challengeTimerSeconds: Record<GameId, number>;
+  useVerseSecondsPerWord: boolean;
+  verseScrambleSecondsPerWord: number;
+  challengeRatings: Partial<Record<GameId, ChallengeRating>>;
+  showChallengeRatings: boolean;
+  showStudyNotes: boolean;
+  dismissedStudyNoteKey: string | null;
+  eventScoringEnabled: boolean;
+  eventScores: Record<string, EventScoreEntry>;
+}
+
+interface ProjectorDisplay {
+  id: number;
+  label: string;
+  bounds: {
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+  };
+  primary: boolean;
+}
+
+const IS_PROJECTOR_WINDOW = new URLSearchParams(window.location.search).get("projector") === "1";
+
 const PARTICIPANT_COLORS = ["#2f6f5f", "#8a5c24", "#69436d", "#285f73", "#9b4a36", "#5c6f2a"];
 const CONNECTION_GROUP_COLORS = ["#2f6f5f", "#8a5c24", "#69436d", "#285f73"];
 const PROPHECY_MATCH_COLOR_COUNT = 5;
@@ -239,6 +283,7 @@ const FORMINIT_FEEDBACK_FORM_ID = "e69o7x640m6";
 const DEFAULT_FEEDBACK_ENDPOINT = `https://forminit.com/f/${FORMINIT_FEEDBACK_FORM_ID}`;
 const CONTENT_PACKS: Record<ContentPackId, { label: string; color: string }> = {
   all: { label: "All Challenges", color: "#4f463d" },
+  popular: { label: "Popular", color: "#8f5d2a" },
   core: { label: "Core Bible Challenge", color: "#215348" },
   scripture: { label: "Scripture Memory", color: "#2f5fa8" },
   "psalms-proverbs": { label: "Psalms and Proverbs", color: "#aa7740" },
@@ -263,7 +308,10 @@ const GAME_CONTENT_PACKS: Record<GameId, ContentPackId[]> = {
   "who-said-it": ["core", "old-testament", "new-testament", "life-of-christ"],
   "bible-books-relay": ["core"],
   "missing-word": ["scripture"],
+  "odd-one-out": ["core", "old-testament", "new-testament"],
+  genealogy: ["core", "old-testament", "life-of-christ"],
   "prophecy-match": ["prophecy"],
+  "parable-match": ["core", "life-of-christ"],
   "messiah-prophecy": ["prophecy", "life-of-christ"],
   "prophecy-clue-ladder": ["prophecy"],
   "fulfillment-finder": ["prophecy", "life-of-christ"],
@@ -294,7 +342,10 @@ const DEFAULT_CHALLENGE_TIMER_SECONDS: Record<GameId, number> = {
   "who-said-it": 45,
   "bible-books-relay": 90,
   "missing-word": 45,
+  "odd-one-out": 35,
+  genealogy: 45,
   "prophecy-match": 45,
+  "parable-match": 45,
   "messiah-prophecy": 35,
   "prophecy-clue-ladder": 30,
   "fulfillment-finder": 35,
@@ -347,6 +398,7 @@ const QUICK_CHOICE_TIMER_GAMES = new Set<GameId>([
   "messiah-prophecy",
   "fulfillment-finder",
   "complete-the-verse",
+  "odd-one-out",
   "wisdom-match",
   "psalm-theme",
   "psalm-reference-finder",
@@ -386,6 +438,7 @@ function getActiveGuessKey(state: SessionState | null): string | null {
     state.gameId === "who-said-it" ||
     state.gameId === "bible-books-relay" ||
     state.gameId === "missing-word" ||
+    state.gameId === "odd-one-out" ||
     state.gameId === "messiah-prophecy" ||
     state.gameId === "fulfillment-finder" ||
     state.gameId === "complete-the-verse" ||
@@ -406,13 +459,17 @@ function getActiveGuessKey(state: SessionState | null): string | null {
     return state.currentPrompt.phase === "active" ? `${state.gameId}-${state.roundIndex}` : null;
   }
 
+  if (state.gameId === "genealogy") {
+    return state.currentPrompt.phase === "active" ? `${state.gameId}-${state.roundIndex}` : null;
+  }
+
   if (state.gameId === "relay-verse-build") {
     return state.currentPrompt.phase === "active"
       ? `${state.gameId}-${state.roundIndex}-${state.turnIndex}-${state.currentPrompt.revealedCount}`
       : null;
   }
 
-  if (state.gameId === "prophecy-match") {
+  if (state.gameId === "prophecy-match" || state.gameId === "parable-match") {
     return state.currentPrompt.phase === "active"
       ? `${state.gameId}-${state.turnIndex}-${state.currentPrompt.matchedPairIds.length}`
       : null;
@@ -477,7 +534,7 @@ function getRoundStartKey(state: SessionState | null): string | null {
     return state.currentPrompt.isComplete ? null : `${state.sessionTitle}-${state.roundIndex}`;
   }
 
-  if (state.gameId === "prophecy-match") {
+  if (state.gameId === "prophecy-match" || state.gameId === "parable-match") {
     return state.currentPrompt.phase === "active" ? `${state.sessionTitle}-match-board` : null;
   }
 
@@ -742,8 +799,20 @@ function getSetupDetail(gameId: GameId): string {
     return "This mode builds a fresh 5-round relay deck of shuffled Bible book subsets.";
   }
 
+  if (gameId === "odd-one-out") {
+    return "This mode builds a fresh 10-round deck of Bible grouping prompts.";
+  }
+
+  if (gameId === "genealogy") {
+    return "This mode builds a fresh 6-round deck of Bible family-line chains.";
+  }
+
   if (gameId === "prophecy-match") {
     return "This mode builds a fresh 5-pair prophecy matching board with independently shuffled columns.";
+  }
+
+  if (gameId === "parable-match") {
+    return "This mode builds a fresh 5-pair parable matching board with independently shuffled columns.";
   }
 
   if (gameId === "messiah-prophecy") {
@@ -790,7 +859,7 @@ function getProgressLabel(state: SessionState): string {
     return getBoardProgressLabel(state);
   }
 
-  if (state.gameId === "prophecy-match") {
+  if (state.gameId === "prophecy-match" || state.gameId === "parable-match") {
     return `${state.resolvedPrompts} of ${state.totalPrompts} matched`;
   }
 
@@ -1314,6 +1383,20 @@ function forceResolveForHost(state: SessionState): ActionResult {
     return { nextState, tone: "warning", text: message };
   }
 
+  if (nextState.gameId === "parable-match") {
+    nextState.currentPrompt.parableCards.forEach((card) => {
+      card.status = "matched";
+    });
+    nextState.currentPrompt.lessonCards.forEach((card) => {
+      card.status = "matched";
+    });
+    nextState.currentPrompt.matchedPairIds = nextState.pairs.map((pair) => pair.id);
+    nextState.currentPrompt.phase = "resolved";
+    nextState.currentPrompt.resolvedMessage = message;
+    nextState.resolvedPrompts = nextState.totalPrompts;
+    return { nextState, tone: "warning", text: message };
+  }
+
   if (nextState.gameId === "prophecy-categories" || nextState.gameId === "proverb-categories") {
     nextState.currentPrompt.sortedCardIds = nextState.currentPrompt.cards.map((card) => card.cardId);
     nextState.currentPrompt.phase = "resolved";
@@ -1708,7 +1791,7 @@ export function App() {
   );
   const [showStudyNotes, setShowStudyNotes] = useState(true);
   const [difficultyFilter, setDifficultyFilter] = useState<DifficultyFilter>("mixed");
-  const [displayMode, setDisplayMode] = useState<DisplayMode>("normal");
+  const [displayMode, setDisplayMode] = useState<DisplayMode>(IS_PROJECTOR_WINDOW ? "projector" : "normal");
   const [defaultContentPackId, setDefaultContentPackId] = useState<ContentPackId>("core");
   const [activeContentPackId, setActiveContentPackId] = useState<ContentPackId>("core");
   const [customContentPacks, setCustomContentPacks] = useState<CustomContentPack[]>([]);
@@ -1761,6 +1844,11 @@ export function App() {
   const [hasLoadedAudioSettings, setHasLoadedAudioSettings] = useState(false);
   const [audioWarning, setAudioWarning] = useState("");
   const [isMusicPreviewPlaying, setIsMusicPreviewPlaying] = useState(false);
+  const [projectorDisplays, setProjectorDisplays] = useState<ProjectorDisplay[]>([]);
+  const [selectedProjectorDisplayId, setSelectedProjectorDisplayId] = useState<number | null>(null);
+  const [isProjectorWindowOpen, setIsProjectorWindowOpen] = useState(false);
+  const [isProjectorControlsOpen, setIsProjectorControlsOpen] = useState(false);
+  const [projectorStatus, setProjectorStatus] = useState("");
 
   if (!audioManagerRef.current) {
     audioManagerRef.current = new AudioManager();
@@ -1777,6 +1865,103 @@ export function App() {
     useVerseSecondsPerWord,
     verseScrambleSecondsPerWord
   );
+
+  useEffect(() => {
+    if (IS_PROJECTOR_WINDOW || !window.desktopHost?.getProjectorDisplays) {
+      return;
+    }
+
+    window.desktopHost.getProjectorDisplays().then((displays) => {
+      setProjectorDisplays(displays);
+      setSelectedProjectorDisplayId((current) => current ?? displays.find((display) => !display.primary)?.id ?? displays[0]?.id ?? null);
+    }).catch(() => {
+      setProjectorStatus("Projector displays could not be loaded.");
+    });
+  }, []);
+
+  useEffect(() => {
+    if (!IS_PROJECTOR_WINDOW || !window.desktopHost?.onProjectorState) {
+      return;
+    }
+
+    return window.desktopHost.onProjectorState((state) => {
+      const snapshot = state as Partial<ProjectorSnapshot> | null;
+      if (!snapshot) {
+        return;
+      }
+
+      setColorTheme(snapshot.colorTheme ?? "classic");
+      setSessionState(snapshot.sessionState ?? null);
+      setTimeRemaining(snapshot.timeRemaining ?? 0);
+      setTimerEnabled(snapshot.timerEnabled ?? false);
+      setIsTimerPaused(snapshot.isTimerPaused ?? false);
+      setChallengeTimerSeconds(snapshot.challengeTimerSeconds ?? DEFAULT_CHALLENGE_TIMER_SECONDS);
+      setUseVerseSecondsPerWord(snapshot.useVerseSecondsPerWord ?? true);
+      setVerseScrambleSecondsPerWord(snapshot.verseScrambleSecondsPerWord ?? DEFAULT_VERSE_SCRAMBLE_SECONDS_PER_WORD);
+      setChallengeRatings(snapshot.challengeRatings ?? {});
+      setShowChallengeRatings(snapshot.showChallengeRatings ?? true);
+      setShowStudyNotes(snapshot.showStudyNotes ?? true);
+      setDismissedStudyNoteKey(snapshot.dismissedStudyNoteKey ?? null);
+      setEventScoringEnabled(snapshot.eventScoringEnabled ?? false);
+      setEventScores(snapshot.eventScores ?? {});
+      setDisplayMode("projector");
+    });
+  }, []);
+
+  useEffect(() => {
+    if (IS_PROJECTOR_WINDOW || !window.desktopHost?.onProjectorWindowStatus) {
+      return;
+    }
+
+    return window.desktopHost.onProjectorWindowStatus((status) => {
+      const nextIsOpen = Boolean(status?.isOpen);
+      setIsProjectorWindowOpen(nextIsOpen);
+      setIsProjectorControlsOpen(nextIsOpen);
+      if (!nextIsOpen) {
+        setProjectorStatus("Projector window closed.");
+      }
+    });
+  }, []);
+
+  useEffect(() => {
+    if (IS_PROJECTOR_WINDOW || !window.desktopHost?.updateProjectorState) {
+      return;
+    }
+
+    const snapshot: ProjectorSnapshot = {
+      colorTheme,
+      sessionState,
+      timeRemaining,
+      timerEnabled,
+      isTimerPaused,
+      challengeTimerSeconds,
+      useVerseSecondsPerWord,
+      verseScrambleSecondsPerWord,
+      challengeRatings,
+      showChallengeRatings,
+      showStudyNotes,
+      dismissedStudyNoteKey,
+      eventScoringEnabled,
+      eventScores
+    };
+
+    window.desktopHost.updateProjectorState(snapshot);
+  }, [
+    challengeRatings,
+    challengeTimerSeconds,
+    colorTheme,
+    dismissedStudyNoteKey,
+    eventScores,
+    eventScoringEnabled,
+    isTimerPaused,
+    sessionState,
+    showChallengeRatings,
+    showStudyNotes,
+    timeRemaining,
+    timerEnabled,
+    useVerseSecondsPerWord,
+    verseScrambleSecondsPerWord
+  ]);
 
   useEffect(() => {
     let isCancelled = false;
@@ -1865,6 +2050,11 @@ export function App() {
   }
 
   useEffect(() => {
+    if (IS_PROJECTOR_WINDOW) {
+      setHasLoadedAppSettings(true);
+      return;
+    }
+
     let isCancelled = false;
 
     async function loadAppSettings() {
@@ -1955,7 +2145,7 @@ export function App() {
   }, []);
 
   useEffect(() => {
-    if (!hasLoadedAppSettings) {
+    if (!hasLoadedAppSettings || IS_PROJECTOR_WINDOW) {
       return;
     }
 
@@ -2080,7 +2270,7 @@ export function App() {
   }, [audioManager, audioSettings]);
 
   useEffect(() => {
-    if (!hasLoadedAudioSettings || !window.audioHost) {
+    if (!hasLoadedAudioSettings || !window.audioHost || IS_PROJECTOR_WINDOW) {
       return;
     }
 
@@ -2094,6 +2284,10 @@ export function App() {
   }, [audioSettings, hasLoadedAudioSettings]);
 
   useEffect(() => {
+    if (IS_PROJECTOR_WINDOW) {
+      return;
+    }
+
     audioManager.updateBackgroundPlayback(sessionState !== null || isMusicPreviewPlaying, isMusicPreviewPlaying);
   }, [audioManager, audioSettings, isMusicPreviewPlaying, sessionState]);
 
@@ -2106,7 +2300,7 @@ export function App() {
   }, [isSettingsOpen]);
 
   useEffect(() => {
-    if (!roundStartKey) {
+    if (IS_PROJECTOR_WINDOW || !roundStartKey) {
       previousRoundStartKeyRef.current = null;
       return;
     }
@@ -2118,11 +2312,15 @@ export function App() {
   }, [audioManager, roundStartKey]);
 
   useEffect(() => {
+    if (IS_PROJECTOR_WINDOW) {
+      return;
+    }
+
     setTimeRemaining(activeTimerSeconds);
   }, [activeGuessKey, activeTimerSeconds, timerEnabled]);
 
   useEffect(() => {
-    if (!activeGuessKey || !timerEnabled || isTimerPaused || timeRemaining <= 0) {
+    if (IS_PROJECTOR_WINDOW || !activeGuessKey || !timerEnabled || isTimerPaused || timeRemaining <= 0) {
       return;
     }
 
@@ -2134,7 +2332,7 @@ export function App() {
   }, [activeGuessKey, isTimerPaused, timerEnabled, timeRemaining]);
 
   useEffect(() => {
-    if (!timerEnabled || isTimerPaused || timeRemaining !== 0 || !activeGuessKey || !sessionState) {
+    if (IS_PROJECTOR_WINDOW || !timerEnabled || isTimerPaused || timeRemaining !== 0 || !activeGuessKey || !sessionState) {
       return;
     }
 
@@ -2167,6 +2365,8 @@ export function App() {
       // the round timer covers the entire ladder, so expiry ends it, it doesn't hand off a
       // fresh clock the way passWordLadderTurn's explicit steal does.
       handleAction(() => resolveWordLadderOnTimer(sessionState), null);
+    } else if (sessionState.gameId === "genealogy") {
+      handleAction(() => resolveGenealogyOnTimer(sessionState), null);
     }
 
     if (didAutoPass) {
@@ -2300,6 +2500,35 @@ export function App() {
     setAudioWarning("");
     const isPlaying = audioManager.toggleBackgroundPreview();
     setIsMusicPreviewPlaying(isPlaying);
+  }
+
+  async function handleOpenProjectorWindow() {
+    if (!window.desktopHost?.openProjectorWindow) {
+      setDisplayMode((current) => (current === "projector" ? "normal" : "projector"));
+      return;
+    }
+
+    try {
+      const displays = await window.desktopHost.openProjectorWindow(selectedProjectorDisplayId);
+      setProjectorDisplays(displays);
+      setIsProjectorWindowOpen(true);
+      setIsProjectorControlsOpen(true);
+      setProjectorStatus("Projector window is open.");
+      setDisplayMode("normal");
+    } catch (error) {
+      setProjectorStatus(error instanceof Error ? error.message : "Projector window could not be opened.");
+    }
+  }
+
+  async function handleCloseProjectorWindow() {
+    try {
+      await window.desktopHost?.closeProjectorWindow?.();
+      setIsProjectorWindowOpen(false);
+      setIsProjectorControlsOpen(false);
+      setProjectorStatus("Projector window closed.");
+    } catch (error) {
+      setProjectorStatus(error instanceof Error ? error.message : "Projector window could not be closed.");
+    }
   }
 
   // Returns the error message when `action` throws (callers that need to show that message
@@ -3120,11 +3349,19 @@ export function App() {
   const customGameIds = Array.from(
     new Set(customContentPacks.flatMap((pack) => pack.games.map((customGame) => customGame.gameType)))
   );
+  const popularGameIds = [...ALL_GAME_IDS]
+    .filter((mode) => (gameStats[mode]?.totalPlays ?? 0) > 0)
+    .sort((left, right) => {
+      const playDelta = (gameStats[right]?.totalPlays ?? 0) - (gameStats[left]?.totalPlays ?? 0);
+      return playDelta !== 0 ? playDelta : GAME_LIBRARY[left].label.localeCompare(GAME_LIBRARY[right].label);
+    });
   const visibleGameIds = eventScoringEnabled
     ? selectedEventGameIds
     : activeContentPackId === "custom"
       ? customGameIds
-      : ALL_GAME_IDS.filter((mode) => activeContentPackId === "all" || GAME_CONTENT_PACKS[mode].includes(activeContentPackId));
+      : activeContentPackId === "popular"
+        ? popularGameIds
+        : ALL_GAME_IDS.filter((mode) => activeContentPackId === "all" || GAME_CONTENT_PACKS[mode].includes(activeContentPackId));
   const nextEventGameId = selectedEventGameIds.find((mode) => !completedEventGameIds.includes(mode)) ?? null;
   const eventHasStarted = isEventStarted || completedEventGameIds.length > 0 || eventStandings.length > 0;
   const showChallengeSplash = Boolean(sessionState && sessionState.status === "completed" && standings.length > 1);
@@ -3144,13 +3381,17 @@ export function App() {
   const studyNoteContent = getStudyNoteContent(sessionState);
   const shouldShowStudyNote =
     showStudyNotes && studyNoteContent !== null && dismissedStudyNoteKey !== studyNoteContent.key;
+  const shouldShowStudyNoteOnHost =
+    shouldShowStudyNote && !IS_PROJECTOR_WINDOW && (!window.desktopHost?.openProjectorWindow || !isProjectorWindowOpen);
+  const shouldShowStudyNoteOnProjector = shouldShowStudyNote && IS_PROJECTOR_WINDOW;
+  const effectiveDisplayMode = IS_PROJECTOR_WINDOW ? "projector" : window.desktopHost?.openProjectorWindow ? "normal" : displayMode;
   const uniqueEventWinner =
     eventStandings.length === 1 || (eventStandings[0] && eventStandings[1] && eventStandings[0].totalScore > eventStandings[1].totalScore)
       ? eventStandings[0]
       : null;
 
   return (
-    <div className={`app-shell app-theme-${colorTheme} app-display-${displayMode} ${sessionState ? "app-shell-play" : ""}`}>
+    <div className={`app-shell app-theme-${colorTheme} app-display-${effectiveDisplayMode} ${sessionState ? "app-shell-play" : ""} ${IS_PROJECTOR_WINDOW ? "app-projector-window" : ""}`}>
       <div className="glow glow-left" />
       <div className="glow glow-right" />
       <header className="topbar">
@@ -3165,14 +3406,53 @@ export function App() {
           </div>
         </div>
         <div className="topbar-actions">
-          <span className="pill pill-accent">{currentGame.label}</span>
-          <button
-            type="button"
-            className={`ghost-button ${displayMode === "projector" ? "ghost-button-active" : ""}`}
-            onClick={() => setDisplayMode((current) => (current === "projector" ? "normal" : "projector"))}
-          >
-            Projector
-          </button>
+          {window.desktopHost?.openProjectorWindow ? (
+            <div className="projector-menu">
+              <button
+                type="button"
+                className={`ghost-button ${isProjectorWindowOpen ? "ghost-button-active" : ""}`}
+                onClick={() => setIsProjectorControlsOpen((current) => !current)}
+              >
+                Projector
+              </button>
+              {isProjectorControlsOpen ? (
+                <div className="projector-popover" role="dialog" aria-label="Projector controls">
+                  <label className="projector-field">
+                    <span>Display</span>
+                    <select
+                      className="projector-select"
+                      value={selectedProjectorDisplayId ?? ""}
+                      onChange={(event) => setSelectedProjectorDisplayId(event.target.value ? Number(event.target.value) : null)}
+                      aria-label="Projector display"
+                    >
+                      {projectorDisplays.map((display) => (
+                        <option key={display.id} value={display.id}>
+                          {display.label}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+                  <div className="projector-actions">
+                    <button type="button" className="primary-button" onClick={handleOpenProjectorWindow}>
+                      Open Projector
+                    </button>
+                    <button type="button" className="ghost-button" onClick={handleCloseProjectorWindow} disabled={!isProjectorWindowOpen}>
+                      Close Projector
+                    </button>
+                  </div>
+                  {projectorStatus ? <p className="projector-status">{projectorStatus}</p> : null}
+                </div>
+              ) : null}
+            </div>
+          ) : (
+            <button
+              type="button"
+              className={`ghost-button ${displayMode === "projector" ? "ghost-button-active" : ""}`}
+              onClick={handleOpenProjectorWindow}
+            >
+              Projector
+            </button>
+          )}
           <button
             type="button"
             className="ghost-button"
@@ -3667,7 +3947,7 @@ export function App() {
                           setActiveContentPackId(nextPackId);
                         }}
                       >
-                        {CONTENT_PACK_IDS.map((packId) => (
+                        {CONTENT_PACK_IDS.filter((packId) => packId !== "popular").map((packId) => (
                           <option key={packId} value={packId}>
                             {CONTENT_PACKS[packId].label}
                           </option>
@@ -4008,7 +4288,15 @@ export function App() {
 
       {!sessionState ? <div className={`flash flash-${flashMessage.tone}`}>{flashMessage.text}</div> : null}
 
-      {!sessionState ? (
+      {IS_PROJECTOR_WINDOW && !sessionState ? (
+        <main className="projector-wait">
+          <section className="panel panel-stage">
+            <p className="eyebrow">Projector</p>
+            <h2>Waiting for a game</h2>
+            <p className="section-copy">Start or continue a game on the host screen.</p>
+          </section>
+        </main>
+      ) : !sessionState ? (
         <main className="menu-grid">
           <section className="panel panel-wide">
             <div className="section-header">
@@ -4044,8 +4332,12 @@ export function App() {
             <div className="mode-grid">
               {visibleGameIds.length === 0 ? (
                 <div className="static-card empty-event-card">
-                  <strong>No event challenges selected.</strong>
-                  <p>Open Settings and add challenges to the event play order.</p>
+                  <strong>{activeContentPackId === "popular" ? "No popular challenges yet." : "No event challenges selected."}</strong>
+                  <p>
+                    {activeContentPackId === "popular"
+                      ? "Play a few challenges and they will appear here, ordered by total plays."
+                      : "Open Settings and add challenges to the event play order."}
+                  </p>
                 </div>
               ) : null}
               {visibleGameIds.map((mode, eventIndex) => {
@@ -4059,8 +4351,12 @@ export function App() {
                 const isEventUnavailable =
                   eventScoringEnabled &&
                   (!eventHasStarted || isEventEndedEarly || !isEventSelected || isEventCompleted || isOutOfOrder);
-                const cardPackId = activeContentPackId === "all" ? GAME_CONTENT_PACKS[mode][0] : activeContentPackId;
+                const cardPackId =
+                  activeContentPackId === "all" || activeContentPackId === "popular"
+                    ? GAME_CONTENT_PACKS[mode][0]
+                    : activeContentPackId;
                 const cardAccent = eventScoringEnabled ? info.accent : CONTENT_PACKS[cardPackId]?.color ?? info.accent;
+                const totalPlays = gameStats[mode]?.totalPlays ?? 0;
                 const eventCardStatus = isEventCompleted
                   ? "Completed"
                   : isEventEndedEarly
@@ -4087,6 +4383,7 @@ export function App() {
                     >
                       {info.label}
                       {eventScoringEnabled ? <span>{eventIndex + 1}. {eventCardStatus}</span> : hasBeenPlayed ? <span>Played</span> : null}
+                      {activeContentPackId === "popular" ? <span>{totalPlays} play{totalPlays === 1 ? "" : "s"}</span> : null}
                       {showChallengeRatings ? <span className="rating-average">{getRatingLabel(modeRating)}</span> : null}
                     </button>
                     <div className="mode-card-actions">
@@ -4360,8 +4657,8 @@ export function App() {
             />
           ) : null}
 
-          {shouldShowStudyNote && studyNoteContent ? (
-            <div className="modal-backdrop" role="presentation">
+          {(shouldShowStudyNoteOnHost || shouldShowStudyNoteOnProjector) && studyNoteContent ? (
+            <div className={`modal-backdrop ${shouldShowStudyNoteOnProjector ? "projector-study-note-backdrop" : ""}`} role="presentation">
               <section className="study-note-modal" role="dialog" aria-modal="true" aria-labelledby="study-note-title">
                 <div className="section-header">
                   <div>
@@ -4376,29 +4673,33 @@ export function App() {
                   {studyNoteContent.verse ? <blockquote>{studyNoteContent.verse}</blockquote> : null}
                   <p>{studyNoteContent.note}</p>
                 </div>
-                <label className="check-row">
-                  <input
-                    type="checkbox"
-                    onChange={(event) => {
-                      if (event.target.checked) {
-                        setShowStudyNotes(false);
-                      }
-                    }}
-                  />
-                  Don't show study notes again
-                </label>
-                <div className="modal-actions">
-                  <button
-                    type="button"
-                    className="primary-button"
-                    onClick={() => {
-                      setDismissedStudyNoteKey(studyNoteContent.key);
-                      handleAction(() => continueGame(sessionState));
-                    }}
-                  >
-                    Continue
-                  </button>
-                </div>
+                {shouldShowStudyNoteOnHost ? (
+                  <>
+                    <label className="check-row">
+                      <input
+                        type="checkbox"
+                        onChange={(event) => {
+                          if (event.target.checked) {
+                            setShowStudyNotes(false);
+                          }
+                        }}
+                      />
+                      Don't show study notes again
+                    </label>
+                    <div className="modal-actions">
+                      <button
+                        type="button"
+                        className="primary-button"
+                        onClick={() => {
+                          setDismissedStudyNoteKey(studyNoteContent.key);
+                          handleAction(() => continueGame(sessionState));
+                        }}
+                      >
+                        Continue
+                      </button>
+                    </div>
+                  </>
+                ) : null}
               </section>
             </div>
           ) : null}
@@ -4707,6 +5008,21 @@ export function App() {
                 onPass={() => handleAction(() => passProphecyMatch(sessionState), "pass")}
                 onContinue={() => handleAction(() => continueGame(sessionState))}
               />
+            ) : sessionState.gameId === "parable-match" ? (
+              <ParableMatchView
+                state={sessionState}
+                timerEnabled={timerEnabled}
+                timeRemaining={timeRemaining}
+                timerDurationSeconds={activeTimerSeconds}
+                isTimerExpired={timerEnabled && timeRemaining === 0}
+                onSelect={(cardType, cardId) => {
+                  audioManager.playEffect("click");
+                  handleAction(() => selectParableMatchCard(sessionState, cardType, cardId));
+                }}
+                onSubmit={() => handleAction(() => submitParableMatch(sessionState))}
+                onPass={() => handleAction(() => passParableMatch(sessionState), "pass")}
+                onContinue={() => handleAction(() => continueGame(sessionState))}
+              />
             ) : sessionState.gameId === "messiah-prophecy" ? (
               <MessiahProphecyView
                 state={sessionState}
@@ -4781,6 +5097,17 @@ export function App() {
                 isTimerExpired={timerEnabled && timeRemaining === 0}
                 onChoose={(choice) => handleAction(() => submitWisdomMatchChoice(sessionState, choice))}
                 onPass={() => handleAction(() => passWisdomMatch(sessionState), "pass")}
+                onContinue={() => handleAction(() => continueGame(sessionState))}
+              />
+            ) : sessionState.gameId === "odd-one-out" ? (
+              <OddOneOutView
+                state={sessionState}
+                timerEnabled={timerEnabled}
+                timeRemaining={timeRemaining}
+                timerDurationSeconds={activeTimerSeconds}
+                isTimerExpired={timerEnabled && timeRemaining === 0}
+                onChoose={(choice) => handleAction(() => submitOddOneOutChoice(sessionState, choice))}
+                onPass={() => handleAction(() => passOddOneOut(sessionState), "pass")}
                 onContinue={() => handleAction(() => continueGame(sessionState))}
               />
             ) : sessionState.gameId === "psalm-theme" ? (
@@ -4870,6 +5197,20 @@ export function App() {
                 onSubmit={() => handleAction(() => submitWordLadderStepWithDictionary(sessionState, guessText))}
                 onRemoveLastRung={() => handleAction(() => removeLastWordLadderRung(sessionState))}
                 onPass={() => handleAction(() => passWordLadderTurn(sessionState))}
+                onContinue={() => handleAction(() => continueGame(sessionState))}
+              />
+            ) : sessionState.gameId === "genealogy" ? (
+              <GenealogyView
+                state={sessionState}
+                guessText={guessText}
+                timerEnabled={timerEnabled}
+                timeRemaining={timeRemaining}
+                timerDurationSeconds={activeTimerSeconds}
+                isTimerExpired={timerEnabled && timeRemaining === 0}
+                onGuessChange={setGuessText}
+                onSubmit={() => handleAction(() => submitGenealogyStep(sessionState, guessText))}
+                onRemoveLastLink={() => handleAction(() => removeLastGenealogyLink(sessionState))}
+                onPass={() => handleAction(() => passGenealogyTurn(sessionState))}
                 onContinue={() => handleAction(() => continueGame(sessionState))}
               />
             ) : sessionState.gameId === "bible-anagrams" ? (
@@ -6498,6 +6839,104 @@ function ProphecyMatchView(props: {
   );
 }
 
+function ParableMatchView(props: {
+  state: ParableMatchState;
+  timerEnabled: boolean;
+  timeRemaining: number;
+  timerDurationSeconds: number;
+  isTimerExpired: boolean;
+  onSelect: (cardType: "parable" | "lesson", cardId: string) => void;
+  onSubmit: () => void;
+  onPass: () => void;
+  onContinue: () => void;
+}) {
+  const { state, timerEnabled, timeRemaining, timerDurationSeconds, isTimerExpired, onSelect, onSubmit, onPass, onContinue } = props;
+  const prompt = state.currentPrompt;
+  const isResolved = prompt.phase === "resolved";
+  const getMatchColorClass = (pairId: string, status: "available" | "selected" | "matched") => {
+    if (status !== "matched") {
+      return "";
+    }
+
+    const matchedIndex = prompt.matchedPairIds.indexOf(pairId);
+    return `prophecy-match-color-${Math.max(0, matchedIndex) % PROPHECY_MATCH_COLOR_COUNT}`;
+  };
+
+  return (
+    <section className="panel panel-stage">
+      <div className="section-header">
+        <div>
+          <p className="eyebrow">Match Board</p>
+          <h2>Parable Match</h2>
+        </div>
+        <div className="header-status">
+          {!isResolved ? <TimerBadge isEnabled={timerEnabled} timeRemaining={timeRemaining} durationSeconds={timerDurationSeconds} /> : null}
+          <span className="pill pill-accent">{prompt.matchedPairIds.length}/{state.totalPrompts} matched</span>
+        </div>
+      </div>
+
+      <div className="prophecy-match-layout">
+        <div className="prophecy-column">
+          <span className="clue-card-label">Parable Cards</span>
+          <div className="prophecy-card-grid">
+            {prompt.parableCards.map((card) => (
+              <button
+                key={card.id}
+                type="button"
+                className={`prophecy-card-button prophecy-card-${card.status} ${getMatchColorClass(card.pairId, card.status)}`}
+                disabled={isTimerExpired || card.status === "matched" || isResolved}
+                onClick={() => onSelect("parable", card.id)}
+              >
+                <strong>{card.reference}</strong>
+                <span>{card.summary}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+        <div className="prophecy-column">
+          <span className="clue-card-label">Lesson Cards</span>
+          <div className="prophecy-card-grid">
+            {prompt.lessonCards.map((card) => (
+              <button
+                key={card.id}
+                type="button"
+                className={`prophecy-card-button prophecy-card-${card.status} ${getMatchColorClass(card.pairId, card.status)}`}
+                disabled={isTimerExpired || card.status === "matched" || isResolved}
+                onClick={() => onSelect("lesson", card.id)}
+              >
+                <strong>{card.summary}</strong>
+                <span>{card.textShort}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {isResolved ? (
+        <>
+          <div className="answer-panel answer-panel-correct">
+            <span>Board Complete</span>
+            <strong>All parable pairs matched</strong>
+            {prompt.resolvedMessage ? <p>{prompt.resolvedMessage}</p> : null}
+          </div>
+          <button type="button" className="primary-button" onClick={onContinue}>
+            Show Final Standings
+          </button>
+        </>
+      ) : (
+        <div className="guess-zone">
+          <button type="button" className="primary-button" onClick={onSubmit} disabled={isTimerExpired}>
+            Submit Match
+          </button>
+          <button type="button" className="secondary-button" onClick={onPass}>
+            Pass
+          </button>
+        </div>
+      )}
+    </section>
+  );
+}
+
 type PsalmProverbChoiceState = CompleteVerseState | WisdomMatchState | PsalmThemeState | PsalmReferenceFinderState;
 
 function PsalmProverbChoiceView(props: {
@@ -6625,6 +7064,82 @@ function PsalmProverbChoiceView(props: {
             <span>{answerLabel}</span>
             <strong>{answer}</strong>
             <p>{answerDetail}</p>
+          </div>
+          <button type="button" className="primary-button" onClick={onContinue}>
+            {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Continue"}
+          </button>
+        </>
+      ) : (
+        <div className="guess-zone">
+          <button type="button" className="secondary-button" onClick={onPass}>
+            Pass
+          </button>
+        </div>
+      )}
+    </section>
+  );
+}
+
+function OddOneOutView(props: {
+  state: OddOneOutState;
+  timerEnabled: boolean;
+  timeRemaining: number;
+  timerDurationSeconds: number;
+  isTimerExpired: boolean;
+  onChoose: (choice: string) => void;
+  onPass: () => void;
+  onContinue: () => void;
+}) {
+  const { state, timerEnabled, timeRemaining, timerDurationSeconds, isTimerExpired, onChoose, onPass, onContinue } = props;
+  const prompt = state.currentPrompt;
+  const round = prompt.round;
+  const isResolved = prompt.phase === "resolved";
+  const possiblePoints = prompt.eliminatedChoices.length >= 3 ? 1 : 5 - prompt.eliminatedChoices.length;
+
+  return (
+    <section className="panel panel-stage">
+      <div className="section-header">
+        <div>
+          <p className="eyebrow">Round {state.roundIndex + 1}</p>
+          <h2>Odd One Out</h2>
+        </div>
+        <div className="header-status">
+          {!isResolved ? <TimerBadge isEnabled={timerEnabled} timeRemaining={timeRemaining} durationSeconds={timerDurationSeconds} /> : null}
+          <span className="pill pill-accent">{possiblePoints} pts available</span>
+        </div>
+      </div>
+
+      <div className="prophecy-prompt">
+        <span className="prompt-banner-label">{round.theme}</span>
+        <strong className="fulfillment-verse-text">{round.prompt}</strong>
+        <p>Choose the item that does not belong with the others.</p>
+      </div>
+
+      <div className="choice-grid">
+        {round.items.map((choice) => {
+          const isEliminated = prompt.eliminatedChoices.includes(choice);
+          return (
+            <button
+              key={choice}
+              type="button"
+              className={`choice-button ${isEliminated ? "choice-button-eliminated" : ""}`}
+              disabled={isTimerExpired || isResolved || isEliminated}
+              onClick={() => onChoose(choice)}
+            >
+              {choice}
+            </button>
+          );
+        })}
+      </div>
+
+      {isResolved ? (
+        <>
+          <div className={`answer-panel ${prompt.wasCorrect ? "answer-panel-correct" : ""}`}>
+            <span>Odd Item</span>
+            <strong>{round.oddItem}</strong>
+            <p>{round.groupTheme}</p>
+            <p>{round.explanation}</p>
+            <p>{round.teachingNote}</p>
           </div>
           <button type="button" className="primary-button" onClick={onContinue}>
             {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Continue"}
@@ -7486,6 +8001,124 @@ function WordLadderView(props: {
           </button>
           <button type="button" className="secondary-button" onClick={onRemoveLastRung} disabled={!canRemoveRung}>
             Undo Last Rung
+          </button>
+          <button type="button" className="secondary-button" onClick={onPass}>
+            Pass to Next
+          </button>
+        </div>
+      )}
+    </section>
+  );
+}
+
+function GenealogyView(props: {
+  state: GenealogyState;
+  guessText: string;
+  timerEnabled: boolean;
+  timeRemaining: number;
+  timerDurationSeconds: number;
+  isTimerExpired: boolean;
+  onGuessChange: (value: string) => void;
+  onSubmit: () => void;
+  onRemoveLastLink: () => void;
+  onPass: () => void;
+  onContinue: () => void;
+}) {
+  const {
+    state,
+    guessText,
+    timerEnabled,
+    timeRemaining,
+    timerDurationSeconds,
+    isTimerExpired,
+    onGuessChange,
+    onSubmit,
+    onRemoveLastLink,
+    onPass,
+    onContinue
+  } = props;
+  const prompt = state.currentPrompt;
+  const isResolved = prompt.phase === "resolved";
+  const canRemoveLink = prompt.chain.length > 1;
+
+  return (
+    <section className="panel panel-stage">
+      <div className="section-header">
+        <div>
+          <p className="eyebrow">Round {state.roundIndex + 1}</p>
+          <h2>Fill in the Genealogy</h2>
+        </div>
+        <div className="header-status">
+          {!isResolved ? <TimerBadge isEnabled={timerEnabled} timeRemaining={timeRemaining} durationSeconds={timerDurationSeconds} /> : null}
+          <span className="pill pill-accent">{prompt.round.fullChain.length - 1} generations</span>
+        </div>
+      </div>
+
+      <div className="chip-row compact-row">
+        <span className="pill pill-muted">{prompt.round.theme}</span>
+        <span className="pill pill-muted">{prompt.round.difficulty}</span>
+        <span className="pill pill-muted">{prompt.round.scriptureReference}</span>
+      </div>
+
+      <div className="chip-row compact-row">
+        <span className="pill pill-accent">{prompt.round.startPerson}</span>
+        <span>{prompt.round.startFlavorText}</span>
+      </div>
+      <div className="chip-row compact-row">
+        <span className="pill pill-accent">{prompt.round.endPerson}</span>
+        <span>{prompt.round.endFlavorText}</span>
+      </div>
+
+      <div className="chip-row compact-row">
+        {prompt.chain.map((name, index) => {
+          const isLastLink = index === prompt.chain.length - 1;
+          const isStartPerson = index === 0;
+
+          return (
+            <span key={`${name}-${index}`} className="pill pill-muted word-ladder-rung">
+              {name}
+              {!isResolved && isLastLink && !isStartPerson ? (
+                <button
+                  type="button"
+                  className="word-ladder-rung-remove"
+                  onClick={onRemoveLastLink}
+                  aria-label={`Remove ${name} from the genealogy`}
+                  title="Remove this link"
+                >
+                  ×
+                </button>
+              ) : null}
+            </span>
+          );
+        })}
+      </div>
+
+      {isResolved ? (
+        <>
+          <div className={`answer-panel ${prompt.wasCorrect ? "answer-panel-correct" : ""}`}>
+            <span>{prompt.wasCorrect ? "Genealogy Completed" : "Genealogy Revealed"}</span>
+            <strong>{prompt.round.fullChain.join(" -> ")}</strong>
+            <p>{prompt.round.teachingNote}</p>
+          </div>
+          <button type="button" className="primary-button" onClick={onContinue}>
+            {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Continue"}
+          </button>
+        </>
+      ) : (
+        <div className="guess-zone">
+          <input
+            className="text-input"
+            value={guessText}
+            onChange={(event) => onGuessChange(event.target.value)}
+            onKeyDown={(event) => submitOnEnter(event, onSubmit, isTimerExpired)}
+            placeholder="Enter the next name"
+            disabled={isTimerExpired}
+          />
+          <button type="button" className="primary-button" onClick={onSubmit} disabled={isTimerExpired}>
+            Submit Name
+          </button>
+          <button type="button" className="secondary-button" onClick={onRemoveLastLink} disabled={!canRemoveLink || isTimerExpired}>
+            Undo Last
           </button>
           <button type="button" className="secondary-button" onClick={onPass}>
             Pass to Next

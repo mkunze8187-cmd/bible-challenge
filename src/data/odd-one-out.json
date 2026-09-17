@@ -1,0 +1,4266 @@
+{
+  "$schema": "./schemas/odd-one-out.schema.json",
+  "game": "odd-one-out",
+  "version": 1,
+  "displayName": "Odd One Out",
+  "roundsPerSession": 10,
+  "sessions": [
+    {
+      "id": "core-odd-one-out-001",
+      "title": "Odd One Out Core Library",
+      "theme": "Bible people, places, books, events, and themes",
+      "rounds": [
+        {
+          "id": "ooo-easy-1",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Othniel",
+            "Ehud",
+            "Deborah",
+            "Gideon",
+            "Saul"
+          ],
+          "oddItem": "Saul",
+          "groupTheme": "The others served as judges or deliverers of Israel before the monarchy.",
+          "explanation": "Saul is remembered as a king, not as one of Israel's judges in Judges.",
+          "theme": "Judges and kings",
+          "difficulty": "easy",
+          "teachingNote": "Judges led Israel in cycles of oppression and deliverance before Israel asked for a king."
+        },
+        {
+          "id": "ooo-easy-2",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Peter",
+            "Andrew",
+            "James",
+            "John",
+            "Matthias"
+          ],
+          "oddItem": "Matthias",
+          "groupTheme": "The others were named among the Twelve during Jesus' earthly ministry.",
+          "explanation": "Matthias was not listed among the original Twelve disciples called during Jesus' ministry.",
+          "theme": "Apostles",
+          "difficulty": "easy",
+          "teachingNote": "The Gospels name the Twelve as Jesus' appointed apostolic witnesses."
+        },
+        {
+          "id": "ooo-easy-3",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Blood",
+            "Frogs",
+            "Lice",
+            "Flies",
+            "Earthquake"
+          ],
+          "oddItem": "Earthquake",
+          "groupTheme": "The others are plagues sent on Egypt in Exodus.",
+          "explanation": "Earthquake is not listed among the ten plagues of Egypt.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "The plagues confront Egypt and lead to Israel's release from bondage."
+        },
+        {
+          "id": "ooo-easy-4",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Matthew",
+            "Mark",
+            "Luke",
+            "John",
+            "Acts"
+          ],
+          "oddItem": "Acts",
+          "groupTheme": "The others are the four canonical Gospels.",
+          "explanation": "Acts is a New Testament book, but it is not one of the four Gospels.",
+          "theme": "New Testament books",
+          "difficulty": "easy",
+          "teachingNote": "Matthew, Mark, Luke, and John present the good news of Jesus' life, death, and resurrection."
+        },
+        {
+          "id": "ooo-easy-5",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Abraham",
+            "Isaac",
+            "Jacob",
+            "Judah",
+            "Moses"
+          ],
+          "oddItem": "Moses",
+          "groupTheme": "The others belong to the patriarchal family line in Genesis.",
+          "explanation": "Moses appears later in Israel's story, outside the patriarchal family sequence in Genesis.",
+          "theme": "Genesis families",
+          "difficulty": "easy",
+          "teachingNote": "Genesis follows God's covenant promises through Abraham's family."
+        },
+        {
+          "id": "ooo-easy-6",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Othniel",
+            "Ehud",
+            "Deborah",
+            "Samson",
+            "David"
+          ],
+          "oddItem": "David",
+          "groupTheme": "The others served as judges or deliverers of Israel before the monarchy.",
+          "explanation": "David is remembered as a king, not as one of Israel's judges in Judges.",
+          "theme": "Judges and kings",
+          "difficulty": "easy",
+          "teachingNote": "Judges led Israel in cycles of oppression and deliverance before Israel asked for a king."
+        },
+        {
+          "id": "ooo-easy-7",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Peter",
+            "Andrew",
+            "James",
+            "Philip",
+            "Barnabas"
+          ],
+          "oddItem": "Barnabas",
+          "groupTheme": "The others were named among the Twelve during Jesus' earthly ministry.",
+          "explanation": "Barnabas was not listed among the original Twelve disciples called during Jesus' ministry.",
+          "theme": "Apostles",
+          "difficulty": "easy",
+          "teachingNote": "The Gospels name the Twelve as Jesus' appointed apostolic witnesses."
+        },
+        {
+          "id": "ooo-easy-8",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Blood",
+            "Frogs",
+            "Lice",
+            "Murrain",
+            "Flood"
+          ],
+          "oddItem": "Flood",
+          "groupTheme": "The others are plagues sent on Egypt in Exodus.",
+          "explanation": "Flood is not listed among the ten plagues of Egypt.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "The plagues confront Egypt and lead to Israel's release from bondage."
+        },
+        {
+          "id": "ooo-easy-9",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Abraham",
+            "Isaac",
+            "Jacob",
+            "Joseph",
+            "Aaron"
+          ],
+          "oddItem": "Aaron",
+          "groupTheme": "The others belong to the patriarchal family line in Genesis.",
+          "explanation": "Aaron appears later in Israel's story, outside the patriarchal family sequence in Genesis.",
+          "theme": "Genesis families",
+          "difficulty": "easy",
+          "teachingNote": "Genesis follows God's covenant promises through Abraham's family."
+        },
+        {
+          "id": "ooo-easy-10",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Othniel",
+            "Ehud",
+            "Deborah",
+            "Jephthah",
+            "Solomon"
+          ],
+          "oddItem": "Solomon",
+          "groupTheme": "The others served as judges or deliverers of Israel before the monarchy.",
+          "explanation": "Solomon is remembered as a king, not as one of Israel's judges in Judges.",
+          "theme": "Judges and kings",
+          "difficulty": "easy",
+          "teachingNote": "Judges led Israel in cycles of oppression and deliverance before Israel asked for a king."
+        },
+        {
+          "id": "ooo-easy-11",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Peter",
+            "Andrew",
+            "James",
+            "Bartholomew",
+            "Paul"
+          ],
+          "oddItem": "Paul",
+          "groupTheme": "The others were named among the Twelve during Jesus' earthly ministry.",
+          "explanation": "Paul was not listed among the original Twelve disciples called during Jesus' ministry.",
+          "theme": "Apostles",
+          "difficulty": "easy",
+          "teachingNote": "The Gospels name the Twelve as Jesus' appointed apostolic witnesses."
+        },
+        {
+          "id": "ooo-easy-12",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Blood",
+            "Frogs",
+            "Lice",
+            "Boils",
+            "Famine"
+          ],
+          "oddItem": "Famine",
+          "groupTheme": "The others are plagues sent on Egypt in Exodus.",
+          "explanation": "Famine is not listed among the ten plagues of Egypt.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "The plagues confront Egypt and lead to Israel's release from bondage."
+        },
+        {
+          "id": "ooo-easy-13",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Abraham",
+            "Isaac",
+            "Judah",
+            "Joseph",
+            "Joshua"
+          ],
+          "oddItem": "Joshua",
+          "groupTheme": "The others belong to the patriarchal family line in Genesis.",
+          "explanation": "Joshua appears later in Israel's story, outside the patriarchal family sequence in Genesis.",
+          "theme": "Genesis families",
+          "difficulty": "easy",
+          "teachingNote": "Genesis follows God's covenant promises through Abraham's family."
+        },
+        {
+          "id": "ooo-easy-14",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Othniel",
+            "Ehud",
+            "Deborah",
+            "Barak",
+            "Rehoboam"
+          ],
+          "oddItem": "Rehoboam",
+          "groupTheme": "The others served as judges or deliverers of Israel before the monarchy.",
+          "explanation": "Rehoboam is remembered as a king, not as one of Israel's judges in Judges.",
+          "theme": "Judges and kings",
+          "difficulty": "easy",
+          "teachingNote": "Judges led Israel in cycles of oppression and deliverance before Israel asked for a king."
+        },
+        {
+          "id": "ooo-easy-15",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Peter",
+            "Andrew",
+            "James",
+            "Matthew",
+            "Stephen"
+          ],
+          "oddItem": "Stephen",
+          "groupTheme": "The others were named among the Twelve during Jesus' earthly ministry.",
+          "explanation": "Stephen was not listed among the original Twelve disciples called during Jesus' ministry.",
+          "theme": "Apostles",
+          "difficulty": "easy",
+          "teachingNote": "The Gospels name the Twelve as Jesus' appointed apostolic witnesses."
+        },
+        {
+          "id": "ooo-easy-16",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Blood",
+            "Frogs",
+            "Lice",
+            "Hail",
+            "Drought"
+          ],
+          "oddItem": "Drought",
+          "groupTheme": "The others are plagues sent on Egypt in Exodus.",
+          "explanation": "Drought is not listed among the ten plagues of Egypt.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "The plagues confront Egypt and lead to Israel's release from bondage."
+        },
+        {
+          "id": "ooo-easy-17",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Abraham",
+            "Jacob",
+            "Judah",
+            "Joseph",
+            "Samuel"
+          ],
+          "oddItem": "Samuel",
+          "groupTheme": "The others belong to the patriarchal family line in Genesis.",
+          "explanation": "Samuel appears later in Israel's story, outside the patriarchal family sequence in Genesis.",
+          "theme": "Genesis families",
+          "difficulty": "easy",
+          "teachingNote": "Genesis follows God's covenant promises through Abraham's family."
+        },
+        {
+          "id": "ooo-easy-18",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Othniel",
+            "Ehud",
+            "Deborah",
+            "Tola",
+            "Ahab"
+          ],
+          "oddItem": "Ahab",
+          "groupTheme": "The others served as judges or deliverers of Israel before the monarchy.",
+          "explanation": "Ahab is remembered as a king, not as one of Israel's judges in Judges.",
+          "theme": "Judges and kings",
+          "difficulty": "easy",
+          "teachingNote": "Judges led Israel in cycles of oppression and deliverance before Israel asked for a king."
+        },
+        {
+          "id": "ooo-easy-19",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Peter",
+            "Andrew",
+            "James",
+            "Thomas",
+            "Silas"
+          ],
+          "oddItem": "Silas",
+          "groupTheme": "The others were named among the Twelve during Jesus' earthly ministry.",
+          "explanation": "Silas was not listed among the original Twelve disciples called during Jesus' ministry.",
+          "theme": "Apostles",
+          "difficulty": "easy",
+          "teachingNote": "The Gospels name the Twelve as Jesus' appointed apostolic witnesses."
+        },
+        {
+          "id": "ooo-easy-20",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Blood",
+            "Frogs",
+            "Lice",
+            "Locusts",
+            "Fire from heaven"
+          ],
+          "oddItem": "Fire from heaven",
+          "groupTheme": "The others are plagues sent on Egypt in Exodus.",
+          "explanation": "Fire from heaven is not listed among the ten plagues of Egypt.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "The plagues confront Egypt and lead to Israel's release from bondage."
+        },
+        {
+          "id": "ooo-easy-21",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Isaac",
+            "Jacob",
+            "Judah",
+            "Joseph",
+            "Saul"
+          ],
+          "oddItem": "Saul",
+          "groupTheme": "The others belong to the patriarchal family line in Genesis.",
+          "explanation": "Saul appears later in Israel's story, outside the patriarchal family sequence in Genesis.",
+          "theme": "Genesis families",
+          "difficulty": "easy",
+          "teachingNote": "Genesis follows God's covenant promises through Abraham's family."
+        },
+        {
+          "id": "ooo-easy-22",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Othniel",
+            "Ehud",
+            "Deborah",
+            "Jair",
+            "Saul"
+          ],
+          "oddItem": "Saul",
+          "groupTheme": "The others served as judges or deliverers of Israel before the monarchy.",
+          "explanation": "Saul is remembered as a king, not as one of Israel's judges in Judges.",
+          "theme": "Judges and kings",
+          "difficulty": "easy",
+          "teachingNote": "Judges led Israel in cycles of oppression and deliverance before Israel asked for a king."
+        },
+        {
+          "id": "ooo-easy-23",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Peter",
+            "Andrew",
+            "James",
+            "James son of Alphaeus",
+            "Matthias"
+          ],
+          "oddItem": "Matthias",
+          "groupTheme": "The others were named among the Twelve during Jesus' earthly ministry.",
+          "explanation": "Matthias was not listed among the original Twelve disciples called during Jesus' ministry.",
+          "theme": "Apostles",
+          "difficulty": "easy",
+          "teachingNote": "The Gospels name the Twelve as Jesus' appointed apostolic witnesses."
+        },
+        {
+          "id": "ooo-easy-24",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Blood",
+            "Frogs",
+            "Lice",
+            "Darkness",
+            "Earthquake"
+          ],
+          "oddItem": "Earthquake",
+          "groupTheme": "The others are plagues sent on Egypt in Exodus.",
+          "explanation": "Earthquake is not listed among the ten plagues of Egypt.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "The plagues confront Egypt and lead to Israel's release from bondage."
+        },
+        {
+          "id": "ooo-easy-25",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Othniel",
+            "Ehud",
+            "Deborah",
+            "Ibzan",
+            "David"
+          ],
+          "oddItem": "David",
+          "groupTheme": "The others served as judges or deliverers of Israel before the monarchy.",
+          "explanation": "David is remembered as a king, not as one of Israel's judges in Judges.",
+          "theme": "Judges and kings",
+          "difficulty": "easy",
+          "teachingNote": "Judges led Israel in cycles of oppression and deliverance before Israel asked for a king."
+        },
+        {
+          "id": "ooo-easy-26",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Peter",
+            "Andrew",
+            "James",
+            "Thaddaeus",
+            "Barnabas"
+          ],
+          "oddItem": "Barnabas",
+          "groupTheme": "The others were named among the Twelve during Jesus' earthly ministry.",
+          "explanation": "Barnabas was not listed among the original Twelve disciples called during Jesus' ministry.",
+          "theme": "Apostles",
+          "difficulty": "easy",
+          "teachingNote": "The Gospels name the Twelve as Jesus' appointed apostolic witnesses."
+        },
+        {
+          "id": "ooo-easy-27",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Blood",
+            "Frogs",
+            "Flies",
+            "Murrain",
+            "Flood"
+          ],
+          "oddItem": "Flood",
+          "groupTheme": "The others are plagues sent on Egypt in Exodus.",
+          "explanation": "Flood is not listed among the ten plagues of Egypt.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "The plagues confront Egypt and lead to Israel's release from bondage."
+        },
+        {
+          "id": "ooo-easy-28",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Othniel",
+            "Ehud",
+            "Gideon",
+            "Samson",
+            "Solomon"
+          ],
+          "oddItem": "Solomon",
+          "groupTheme": "The others served as judges or deliverers of Israel before the monarchy.",
+          "explanation": "Solomon is remembered as a king, not as one of Israel's judges in Judges.",
+          "theme": "Judges and kings",
+          "difficulty": "easy",
+          "teachingNote": "Judges led Israel in cycles of oppression and deliverance before Israel asked for a king."
+        },
+        {
+          "id": "ooo-easy-29",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Peter",
+            "Andrew",
+            "James",
+            "Simon the Zealot",
+            "Paul"
+          ],
+          "oddItem": "Paul",
+          "groupTheme": "The others were named among the Twelve during Jesus' earthly ministry.",
+          "explanation": "Paul was not listed among the original Twelve disciples called during Jesus' ministry.",
+          "theme": "Apostles",
+          "difficulty": "easy",
+          "teachingNote": "The Gospels name the Twelve as Jesus' appointed apostolic witnesses."
+        },
+        {
+          "id": "ooo-easy-30",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Blood",
+            "Frogs",
+            "Flies",
+            "Boils",
+            "Famine"
+          ],
+          "oddItem": "Famine",
+          "groupTheme": "The others are plagues sent on Egypt in Exodus.",
+          "explanation": "Famine is not listed among the ten plagues of Egypt.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "The plagues confront Egypt and lead to Israel's release from bondage."
+        },
+        {
+          "id": "ooo-easy-31",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Othniel",
+            "Ehud",
+            "Gideon",
+            "Jephthah",
+            "Rehoboam"
+          ],
+          "oddItem": "Rehoboam",
+          "groupTheme": "The others served as judges or deliverers of Israel before the monarchy.",
+          "explanation": "Rehoboam is remembered as a king, not as one of Israel's judges in Judges.",
+          "theme": "Judges and kings",
+          "difficulty": "easy",
+          "teachingNote": "Judges led Israel in cycles of oppression and deliverance before Israel asked for a king."
+        },
+        {
+          "id": "ooo-easy-32",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Peter",
+            "Andrew",
+            "John",
+            "Philip",
+            "Stephen"
+          ],
+          "oddItem": "Stephen",
+          "groupTheme": "The others were named among the Twelve during Jesus' earthly ministry.",
+          "explanation": "Stephen was not listed among the original Twelve disciples called during Jesus' ministry.",
+          "theme": "Apostles",
+          "difficulty": "easy",
+          "teachingNote": "The Gospels name the Twelve as Jesus' appointed apostolic witnesses."
+        },
+        {
+          "id": "ooo-easy-33",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Blood",
+            "Frogs",
+            "Flies",
+            "Hail",
+            "Drought"
+          ],
+          "oddItem": "Drought",
+          "groupTheme": "The others are plagues sent on Egypt in Exodus.",
+          "explanation": "Drought is not listed among the ten plagues of Egypt.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "The plagues confront Egypt and lead to Israel's release from bondage."
+        },
+        {
+          "id": "ooo-easy-34",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Othniel",
+            "Ehud",
+            "Gideon",
+            "Barak",
+            "Ahab"
+          ],
+          "oddItem": "Ahab",
+          "groupTheme": "The others served as judges or deliverers of Israel before the monarchy.",
+          "explanation": "Ahab is remembered as a king, not as one of Israel's judges in Judges.",
+          "theme": "Judges and kings",
+          "difficulty": "easy",
+          "teachingNote": "Judges led Israel in cycles of oppression and deliverance before Israel asked for a king."
+        },
+        {
+          "id": "ooo-easy-35",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Peter",
+            "Andrew",
+            "John",
+            "Bartholomew",
+            "Silas"
+          ],
+          "oddItem": "Silas",
+          "groupTheme": "The others were named among the Twelve during Jesus' earthly ministry.",
+          "explanation": "Silas was not listed among the original Twelve disciples called during Jesus' ministry.",
+          "theme": "Apostles",
+          "difficulty": "easy",
+          "teachingNote": "The Gospels name the Twelve as Jesus' appointed apostolic witnesses."
+        },
+        {
+          "id": "ooo-easy-36",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Blood",
+            "Frogs",
+            "Flies",
+            "Locusts",
+            "Fire from heaven"
+          ],
+          "oddItem": "Fire from heaven",
+          "groupTheme": "The others are plagues sent on Egypt in Exodus.",
+          "explanation": "Fire from heaven is not listed among the ten plagues of Egypt.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "The plagues confront Egypt and lead to Israel's release from bondage."
+        },
+        {
+          "id": "ooo-easy-37",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Othniel",
+            "Ehud",
+            "Gideon",
+            "Tola",
+            "Saul"
+          ],
+          "oddItem": "Saul",
+          "groupTheme": "The others served as judges or deliverers of Israel before the monarchy.",
+          "explanation": "Saul is remembered as a king, not as one of Israel's judges in Judges.",
+          "theme": "Judges and kings",
+          "difficulty": "easy",
+          "teachingNote": "Judges led Israel in cycles of oppression and deliverance before Israel asked for a king."
+        },
+        {
+          "id": "ooo-easy-38",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Peter",
+            "Andrew",
+            "John",
+            "Matthew",
+            "Matthias"
+          ],
+          "oddItem": "Matthias",
+          "groupTheme": "The others were named among the Twelve during Jesus' earthly ministry.",
+          "explanation": "Matthias was not listed among the original Twelve disciples called during Jesus' ministry.",
+          "theme": "Apostles",
+          "difficulty": "easy",
+          "teachingNote": "The Gospels name the Twelve as Jesus' appointed apostolic witnesses."
+        },
+        {
+          "id": "ooo-easy-39",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Blood",
+            "Frogs",
+            "Flies",
+            "Darkness",
+            "Earthquake"
+          ],
+          "oddItem": "Earthquake",
+          "groupTheme": "The others are plagues sent on Egypt in Exodus.",
+          "explanation": "Earthquake is not listed among the ten plagues of Egypt.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "The plagues confront Egypt and lead to Israel's release from bondage."
+        },
+        {
+          "id": "ooo-easy-40",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Othniel",
+            "Ehud",
+            "Gideon",
+            "Jair",
+            "David"
+          ],
+          "oddItem": "David",
+          "groupTheme": "The others served as judges or deliverers of Israel before the monarchy.",
+          "explanation": "David is remembered as a king, not as one of Israel's judges in Judges.",
+          "theme": "Judges and kings",
+          "difficulty": "easy",
+          "teachingNote": "Judges led Israel in cycles of oppression and deliverance before Israel asked for a king."
+        },
+        {
+          "id": "ooo-easy-41",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Peter",
+            "Andrew",
+            "John",
+            "Thomas",
+            "Barnabas"
+          ],
+          "oddItem": "Barnabas",
+          "groupTheme": "The others were named among the Twelve during Jesus' earthly ministry.",
+          "explanation": "Barnabas was not listed among the original Twelve disciples called during Jesus' ministry.",
+          "theme": "Apostles",
+          "difficulty": "easy",
+          "teachingNote": "The Gospels name the Twelve as Jesus' appointed apostolic witnesses."
+        },
+        {
+          "id": "ooo-easy-42",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Blood",
+            "Frogs",
+            "Murrain",
+            "Boils",
+            "Flood"
+          ],
+          "oddItem": "Flood",
+          "groupTheme": "The others are plagues sent on Egypt in Exodus.",
+          "explanation": "Flood is not listed among the ten plagues of Egypt.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "The plagues confront Egypt and lead to Israel's release from bondage."
+        },
+        {
+          "id": "ooo-easy-43",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Othniel",
+            "Ehud",
+            "Gideon",
+            "Ibzan",
+            "Solomon"
+          ],
+          "oddItem": "Solomon",
+          "groupTheme": "The others served as judges or deliverers of Israel before the monarchy.",
+          "explanation": "Solomon is remembered as a king, not as one of Israel's judges in Judges.",
+          "theme": "Judges and kings",
+          "difficulty": "easy",
+          "teachingNote": "Judges led Israel in cycles of oppression and deliverance before Israel asked for a king."
+        },
+        {
+          "id": "ooo-easy-44",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Peter",
+            "Andrew",
+            "John",
+            "James son of Alphaeus",
+            "Paul"
+          ],
+          "oddItem": "Paul",
+          "groupTheme": "The others were named among the Twelve during Jesus' earthly ministry.",
+          "explanation": "Paul was not listed among the original Twelve disciples called during Jesus' ministry.",
+          "theme": "Apostles",
+          "difficulty": "easy",
+          "teachingNote": "The Gospels name the Twelve as Jesus' appointed apostolic witnesses."
+        },
+        {
+          "id": "ooo-easy-45",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Blood",
+            "Frogs",
+            "Murrain",
+            "Hail",
+            "Famine"
+          ],
+          "oddItem": "Famine",
+          "groupTheme": "The others are plagues sent on Egypt in Exodus.",
+          "explanation": "Famine is not listed among the ten plagues of Egypt.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "The plagues confront Egypt and lead to Israel's release from bondage."
+        },
+        {
+          "id": "ooo-easy-46",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Othniel",
+            "Ehud",
+            "Samson",
+            "Jephthah",
+            "Rehoboam"
+          ],
+          "oddItem": "Rehoboam",
+          "groupTheme": "The others served as judges or deliverers of Israel before the monarchy.",
+          "explanation": "Rehoboam is remembered as a king, not as one of Israel's judges in Judges.",
+          "theme": "Judges and kings",
+          "difficulty": "easy",
+          "teachingNote": "Judges led Israel in cycles of oppression and deliverance before Israel asked for a king."
+        },
+        {
+          "id": "ooo-easy-47",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Peter",
+            "Andrew",
+            "John",
+            "Thaddaeus",
+            "Stephen"
+          ],
+          "oddItem": "Stephen",
+          "groupTheme": "The others were named among the Twelve during Jesus' earthly ministry.",
+          "explanation": "Stephen was not listed among the original Twelve disciples called during Jesus' ministry.",
+          "theme": "Apostles",
+          "difficulty": "easy",
+          "teachingNote": "The Gospels name the Twelve as Jesus' appointed apostolic witnesses."
+        },
+        {
+          "id": "ooo-easy-48",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Blood",
+            "Frogs",
+            "Murrain",
+            "Locusts",
+            "Drought"
+          ],
+          "oddItem": "Drought",
+          "groupTheme": "The others are plagues sent on Egypt in Exodus.",
+          "explanation": "Drought is not listed among the ten plagues of Egypt.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "The plagues confront Egypt and lead to Israel's release from bondage."
+        },
+        {
+          "id": "ooo-easy-49",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Othniel",
+            "Ehud",
+            "Samson",
+            "Barak",
+            "Ahab"
+          ],
+          "oddItem": "Ahab",
+          "groupTheme": "The others served as judges or deliverers of Israel before the monarchy.",
+          "explanation": "Ahab is remembered as a king, not as one of Israel's judges in Judges.",
+          "theme": "Judges and kings",
+          "difficulty": "easy",
+          "teachingNote": "Judges led Israel in cycles of oppression and deliverance before Israel asked for a king."
+        },
+        {
+          "id": "ooo-easy-50",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Peter",
+            "Andrew",
+            "John",
+            "Simon the Zealot",
+            "Silas"
+          ],
+          "oddItem": "Silas",
+          "groupTheme": "The others were named among the Twelve during Jesus' earthly ministry.",
+          "explanation": "Silas was not listed among the original Twelve disciples called during Jesus' ministry.",
+          "theme": "Apostles",
+          "difficulty": "easy",
+          "teachingNote": "The Gospels name the Twelve as Jesus' appointed apostolic witnesses."
+        },
+        {
+          "id": "ooo-easy-51",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Blood",
+            "Frogs",
+            "Murrain",
+            "Darkness",
+            "Fire from heaven"
+          ],
+          "oddItem": "Fire from heaven",
+          "groupTheme": "The others are plagues sent on Egypt in Exodus.",
+          "explanation": "Fire from heaven is not listed among the ten plagues of Egypt.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "The plagues confront Egypt and lead to Israel's release from bondage."
+        },
+        {
+          "id": "ooo-easy-52",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Othniel",
+            "Ehud",
+            "Samson",
+            "Tola",
+            "Saul"
+          ],
+          "oddItem": "Saul",
+          "groupTheme": "The others served as judges or deliverers of Israel before the monarchy.",
+          "explanation": "Saul is remembered as a king, not as one of Israel's judges in Judges.",
+          "theme": "Judges and kings",
+          "difficulty": "easy",
+          "teachingNote": "Judges led Israel in cycles of oppression and deliverance before Israel asked for a king."
+        },
+        {
+          "id": "ooo-easy-53",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Peter",
+            "Andrew",
+            "Philip",
+            "Bartholomew",
+            "Matthias"
+          ],
+          "oddItem": "Matthias",
+          "groupTheme": "The others were named among the Twelve during Jesus' earthly ministry.",
+          "explanation": "Matthias was not listed among the original Twelve disciples called during Jesus' ministry.",
+          "theme": "Apostles",
+          "difficulty": "easy",
+          "teachingNote": "The Gospels name the Twelve as Jesus' appointed apostolic witnesses."
+        },
+        {
+          "id": "ooo-easy-54",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Blood",
+            "Frogs",
+            "Boils",
+            "Hail",
+            "Earthquake"
+          ],
+          "oddItem": "Earthquake",
+          "groupTheme": "The others are plagues sent on Egypt in Exodus.",
+          "explanation": "Earthquake is not listed among the ten plagues of Egypt.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "The plagues confront Egypt and lead to Israel's release from bondage."
+        },
+        {
+          "id": "ooo-easy-55",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Othniel",
+            "Ehud",
+            "Samson",
+            "Jair",
+            "David"
+          ],
+          "oddItem": "David",
+          "groupTheme": "The others served as judges or deliverers of Israel before the monarchy.",
+          "explanation": "David is remembered as a king, not as one of Israel's judges in Judges.",
+          "theme": "Judges and kings",
+          "difficulty": "easy",
+          "teachingNote": "Judges led Israel in cycles of oppression and deliverance before Israel asked for a king."
+        },
+        {
+          "id": "ooo-easy-56",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Peter",
+            "Andrew",
+            "Philip",
+            "Matthew",
+            "Barnabas"
+          ],
+          "oddItem": "Barnabas",
+          "groupTheme": "The others were named among the Twelve during Jesus' earthly ministry.",
+          "explanation": "Barnabas was not listed among the original Twelve disciples called during Jesus' ministry.",
+          "theme": "Apostles",
+          "difficulty": "easy",
+          "teachingNote": "The Gospels name the Twelve as Jesus' appointed apostolic witnesses."
+        },
+        {
+          "id": "ooo-easy-57",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Blood",
+            "Frogs",
+            "Boils",
+            "Locusts",
+            "Flood"
+          ],
+          "oddItem": "Flood",
+          "groupTheme": "The others are plagues sent on Egypt in Exodus.",
+          "explanation": "Flood is not listed among the ten plagues of Egypt.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "The plagues confront Egypt and lead to Israel's release from bondage."
+        },
+        {
+          "id": "ooo-easy-58",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Othniel",
+            "Ehud",
+            "Samson",
+            "Ibzan",
+            "Solomon"
+          ],
+          "oddItem": "Solomon",
+          "groupTheme": "The others served as judges or deliverers of Israel before the monarchy.",
+          "explanation": "Solomon is remembered as a king, not as one of Israel's judges in Judges.",
+          "theme": "Judges and kings",
+          "difficulty": "easy",
+          "teachingNote": "Judges led Israel in cycles of oppression and deliverance before Israel asked for a king."
+        },
+        {
+          "id": "ooo-easy-59",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Peter",
+            "Andrew",
+            "Philip",
+            "Thomas",
+            "Paul"
+          ],
+          "oddItem": "Paul",
+          "groupTheme": "The others were named among the Twelve during Jesus' earthly ministry.",
+          "explanation": "Paul was not listed among the original Twelve disciples called during Jesus' ministry.",
+          "theme": "Apostles",
+          "difficulty": "easy",
+          "teachingNote": "The Gospels name the Twelve as Jesus' appointed apostolic witnesses."
+        },
+        {
+          "id": "ooo-easy-60",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Blood",
+            "Frogs",
+            "Boils",
+            "Darkness",
+            "Famine"
+          ],
+          "oddItem": "Famine",
+          "groupTheme": "The others are plagues sent on Egypt in Exodus.",
+          "explanation": "Famine is not listed among the ten plagues of Egypt.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "The plagues confront Egypt and lead to Israel's release from bondage."
+        },
+        {
+          "id": "ooo-easy-61",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Othniel",
+            "Ehud",
+            "Jephthah",
+            "Barak",
+            "Rehoboam"
+          ],
+          "oddItem": "Rehoboam",
+          "groupTheme": "The others served as judges or deliverers of Israel before the monarchy.",
+          "explanation": "Rehoboam is remembered as a king, not as one of Israel's judges in Judges.",
+          "theme": "Judges and kings",
+          "difficulty": "easy",
+          "teachingNote": "Judges led Israel in cycles of oppression and deliverance before Israel asked for a king."
+        },
+        {
+          "id": "ooo-easy-62",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Peter",
+            "Andrew",
+            "Philip",
+            "James son of Alphaeus",
+            "Stephen"
+          ],
+          "oddItem": "Stephen",
+          "groupTheme": "The others were named among the Twelve during Jesus' earthly ministry.",
+          "explanation": "Stephen was not listed among the original Twelve disciples called during Jesus' ministry.",
+          "theme": "Apostles",
+          "difficulty": "easy",
+          "teachingNote": "The Gospels name the Twelve as Jesus' appointed apostolic witnesses."
+        },
+        {
+          "id": "ooo-easy-63",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Blood",
+            "Frogs",
+            "Hail",
+            "Locusts",
+            "Drought"
+          ],
+          "oddItem": "Drought",
+          "groupTheme": "The others are plagues sent on Egypt in Exodus.",
+          "explanation": "Drought is not listed among the ten plagues of Egypt.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "The plagues confront Egypt and lead to Israel's release from bondage."
+        },
+        {
+          "id": "ooo-easy-64",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Othniel",
+            "Ehud",
+            "Jephthah",
+            "Tola",
+            "Ahab"
+          ],
+          "oddItem": "Ahab",
+          "groupTheme": "The others served as judges or deliverers of Israel before the monarchy.",
+          "explanation": "Ahab is remembered as a king, not as one of Israel's judges in Judges.",
+          "theme": "Judges and kings",
+          "difficulty": "easy",
+          "teachingNote": "Judges led Israel in cycles of oppression and deliverance before Israel asked for a king."
+        },
+        {
+          "id": "ooo-easy-65",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Peter",
+            "Andrew",
+            "Philip",
+            "Thaddaeus",
+            "Silas"
+          ],
+          "oddItem": "Silas",
+          "groupTheme": "The others were named among the Twelve during Jesus' earthly ministry.",
+          "explanation": "Silas was not listed among the original Twelve disciples called during Jesus' ministry.",
+          "theme": "Apostles",
+          "difficulty": "easy",
+          "teachingNote": "The Gospels name the Twelve as Jesus' appointed apostolic witnesses."
+        },
+        {
+          "id": "ooo-easy-66",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Blood",
+            "Frogs",
+            "Hail",
+            "Darkness",
+            "Fire from heaven"
+          ],
+          "oddItem": "Fire from heaven",
+          "groupTheme": "The others are plagues sent on Egypt in Exodus.",
+          "explanation": "Fire from heaven is not listed among the ten plagues of Egypt.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "The plagues confront Egypt and lead to Israel's release from bondage."
+        },
+        {
+          "id": "ooo-easy-67",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Othniel",
+            "Ehud",
+            "Jephthah",
+            "Jair",
+            "Saul"
+          ],
+          "oddItem": "Saul",
+          "groupTheme": "The others served as judges or deliverers of Israel before the monarchy.",
+          "explanation": "Saul is remembered as a king, not as one of Israel's judges in Judges.",
+          "theme": "Judges and kings",
+          "difficulty": "easy",
+          "teachingNote": "Judges led Israel in cycles of oppression and deliverance before Israel asked for a king."
+        },
+        {
+          "id": "ooo-easy-68",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Peter",
+            "Andrew",
+            "Philip",
+            "Simon the Zealot",
+            "Matthias"
+          ],
+          "oddItem": "Matthias",
+          "groupTheme": "The others were named among the Twelve during Jesus' earthly ministry.",
+          "explanation": "Matthias was not listed among the original Twelve disciples called during Jesus' ministry.",
+          "theme": "Apostles",
+          "difficulty": "easy",
+          "teachingNote": "The Gospels name the Twelve as Jesus' appointed apostolic witnesses."
+        },
+        {
+          "id": "ooo-easy-69",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Blood",
+            "Frogs",
+            "Locusts",
+            "Darkness",
+            "Earthquake"
+          ],
+          "oddItem": "Earthquake",
+          "groupTheme": "The others are plagues sent on Egypt in Exodus.",
+          "explanation": "Earthquake is not listed among the ten plagues of Egypt.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "The plagues confront Egypt and lead to Israel's release from bondage."
+        },
+        {
+          "id": "ooo-easy-70",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Othniel",
+            "Ehud",
+            "Jephthah",
+            "Ibzan",
+            "David"
+          ],
+          "oddItem": "David",
+          "groupTheme": "The others served as judges or deliverers of Israel before the monarchy.",
+          "explanation": "David is remembered as a king, not as one of Israel's judges in Judges.",
+          "theme": "Judges and kings",
+          "difficulty": "easy",
+          "teachingNote": "Judges led Israel in cycles of oppression and deliverance before Israel asked for a king."
+        },
+        {
+          "id": "ooo-easy-71",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Peter",
+            "Andrew",
+            "Bartholomew",
+            "Matthew",
+            "Barnabas"
+          ],
+          "oddItem": "Barnabas",
+          "groupTheme": "The others were named among the Twelve during Jesus' earthly ministry.",
+          "explanation": "Barnabas was not listed among the original Twelve disciples called during Jesus' ministry.",
+          "theme": "Apostles",
+          "difficulty": "easy",
+          "teachingNote": "The Gospels name the Twelve as Jesus' appointed apostolic witnesses."
+        },
+        {
+          "id": "ooo-easy-72",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Blood",
+            "Lice",
+            "Flies",
+            "Murrain",
+            "Flood"
+          ],
+          "oddItem": "Flood",
+          "groupTheme": "The others are plagues sent on Egypt in Exodus.",
+          "explanation": "Flood is not listed among the ten plagues of Egypt.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "The plagues confront Egypt and lead to Israel's release from bondage."
+        },
+        {
+          "id": "ooo-easy-73",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Othniel",
+            "Ehud",
+            "Barak",
+            "Tola",
+            "Solomon"
+          ],
+          "oddItem": "Solomon",
+          "groupTheme": "The others served as judges or deliverers of Israel before the monarchy.",
+          "explanation": "Solomon is remembered as a king, not as one of Israel's judges in Judges.",
+          "theme": "Judges and kings",
+          "difficulty": "easy",
+          "teachingNote": "Judges led Israel in cycles of oppression and deliverance before Israel asked for a king."
+        },
+        {
+          "id": "ooo-easy-74",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Peter",
+            "Andrew",
+            "Bartholomew",
+            "Thomas",
+            "Paul"
+          ],
+          "oddItem": "Paul",
+          "groupTheme": "The others were named among the Twelve during Jesus' earthly ministry.",
+          "explanation": "Paul was not listed among the original Twelve disciples called during Jesus' ministry.",
+          "theme": "Apostles",
+          "difficulty": "easy",
+          "teachingNote": "The Gospels name the Twelve as Jesus' appointed apostolic witnesses."
+        },
+        {
+          "id": "ooo-easy-75",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Blood",
+            "Lice",
+            "Flies",
+            "Boils",
+            "Famine"
+          ],
+          "oddItem": "Famine",
+          "groupTheme": "The others are plagues sent on Egypt in Exodus.",
+          "explanation": "Famine is not listed among the ten plagues of Egypt.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "The plagues confront Egypt and lead to Israel's release from bondage."
+        },
+        {
+          "id": "ooo-easy-76",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Othniel",
+            "Ehud",
+            "Barak",
+            "Jair",
+            "Rehoboam"
+          ],
+          "oddItem": "Rehoboam",
+          "groupTheme": "The others served as judges or deliverers of Israel before the monarchy.",
+          "explanation": "Rehoboam is remembered as a king, not as one of Israel's judges in Judges.",
+          "theme": "Judges and kings",
+          "difficulty": "easy",
+          "teachingNote": "Judges led Israel in cycles of oppression and deliverance before Israel asked for a king."
+        },
+        {
+          "id": "ooo-easy-77",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Peter",
+            "Andrew",
+            "Bartholomew",
+            "James son of Alphaeus",
+            "Stephen"
+          ],
+          "oddItem": "Stephen",
+          "groupTheme": "The others were named among the Twelve during Jesus' earthly ministry.",
+          "explanation": "Stephen was not listed among the original Twelve disciples called during Jesus' ministry.",
+          "theme": "Apostles",
+          "difficulty": "easy",
+          "teachingNote": "The Gospels name the Twelve as Jesus' appointed apostolic witnesses."
+        },
+        {
+          "id": "ooo-easy-78",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Blood",
+            "Lice",
+            "Flies",
+            "Hail",
+            "Drought"
+          ],
+          "oddItem": "Drought",
+          "groupTheme": "The others are plagues sent on Egypt in Exodus.",
+          "explanation": "Drought is not listed among the ten plagues of Egypt.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "The plagues confront Egypt and lead to Israel's release from bondage."
+        },
+        {
+          "id": "ooo-easy-79",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Othniel",
+            "Ehud",
+            "Barak",
+            "Ibzan",
+            "Ahab"
+          ],
+          "oddItem": "Ahab",
+          "groupTheme": "The others served as judges or deliverers of Israel before the monarchy.",
+          "explanation": "Ahab is remembered as a king, not as one of Israel's judges in Judges.",
+          "theme": "Judges and kings",
+          "difficulty": "easy",
+          "teachingNote": "Judges led Israel in cycles of oppression and deliverance before Israel asked for a king."
+        },
+        {
+          "id": "ooo-easy-80",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Peter",
+            "Andrew",
+            "Bartholomew",
+            "Thaddaeus",
+            "Silas"
+          ],
+          "oddItem": "Silas",
+          "groupTheme": "The others were named among the Twelve during Jesus' earthly ministry.",
+          "explanation": "Silas was not listed among the original Twelve disciples called during Jesus' ministry.",
+          "theme": "Apostles",
+          "difficulty": "easy",
+          "teachingNote": "The Gospels name the Twelve as Jesus' appointed apostolic witnesses."
+        },
+        {
+          "id": "ooo-easy-81",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Blood",
+            "Lice",
+            "Flies",
+            "Locusts",
+            "Fire from heaven"
+          ],
+          "oddItem": "Fire from heaven",
+          "groupTheme": "The others are plagues sent on Egypt in Exodus.",
+          "explanation": "Fire from heaven is not listed among the ten plagues of Egypt.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "The plagues confront Egypt and lead to Israel's release from bondage."
+        },
+        {
+          "id": "ooo-easy-82",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Othniel",
+            "Ehud",
+            "Tola",
+            "Jair",
+            "Saul"
+          ],
+          "oddItem": "Saul",
+          "groupTheme": "The others served as judges or deliverers of Israel before the monarchy.",
+          "explanation": "Saul is remembered as a king, not as one of Israel's judges in Judges.",
+          "theme": "Judges and kings",
+          "difficulty": "easy",
+          "teachingNote": "Judges led Israel in cycles of oppression and deliverance before Israel asked for a king."
+        },
+        {
+          "id": "ooo-easy-83",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Peter",
+            "Andrew",
+            "Bartholomew",
+            "Simon the Zealot",
+            "Matthias"
+          ],
+          "oddItem": "Matthias",
+          "groupTheme": "The others were named among the Twelve during Jesus' earthly ministry.",
+          "explanation": "Matthias was not listed among the original Twelve disciples called during Jesus' ministry.",
+          "theme": "Apostles",
+          "difficulty": "easy",
+          "teachingNote": "The Gospels name the Twelve as Jesus' appointed apostolic witnesses."
+        },
+        {
+          "id": "ooo-easy-84",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Blood",
+            "Lice",
+            "Flies",
+            "Darkness",
+            "Earthquake"
+          ],
+          "oddItem": "Earthquake",
+          "groupTheme": "The others are plagues sent on Egypt in Exodus.",
+          "explanation": "Earthquake is not listed among the ten plagues of Egypt.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "The plagues confront Egypt and lead to Israel's release from bondage."
+        },
+        {
+          "id": "ooo-easy-85",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Othniel",
+            "Ehud",
+            "Tola",
+            "Ibzan",
+            "David"
+          ],
+          "oddItem": "David",
+          "groupTheme": "The others served as judges or deliverers of Israel before the monarchy.",
+          "explanation": "David is remembered as a king, not as one of Israel's judges in Judges.",
+          "theme": "Judges and kings",
+          "difficulty": "easy",
+          "teachingNote": "Judges led Israel in cycles of oppression and deliverance before Israel asked for a king."
+        },
+        {
+          "id": "ooo-easy-86",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Peter",
+            "Andrew",
+            "Matthew",
+            "Thomas",
+            "Barnabas"
+          ],
+          "oddItem": "Barnabas",
+          "groupTheme": "The others were named among the Twelve during Jesus' earthly ministry.",
+          "explanation": "Barnabas was not listed among the original Twelve disciples called during Jesus' ministry.",
+          "theme": "Apostles",
+          "difficulty": "easy",
+          "teachingNote": "The Gospels name the Twelve as Jesus' appointed apostolic witnesses."
+        },
+        {
+          "id": "ooo-easy-87",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Blood",
+            "Lice",
+            "Murrain",
+            "Boils",
+            "Flood"
+          ],
+          "oddItem": "Flood",
+          "groupTheme": "The others are plagues sent on Egypt in Exodus.",
+          "explanation": "Flood is not listed among the ten plagues of Egypt.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "The plagues confront Egypt and lead to Israel's release from bondage."
+        },
+        {
+          "id": "ooo-easy-88",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Othniel",
+            "Ehud",
+            "Jair",
+            "Ibzan",
+            "Solomon"
+          ],
+          "oddItem": "Solomon",
+          "groupTheme": "The others served as judges or deliverers of Israel before the monarchy.",
+          "explanation": "Solomon is remembered as a king, not as one of Israel's judges in Judges.",
+          "theme": "Judges and kings",
+          "difficulty": "easy",
+          "teachingNote": "Judges led Israel in cycles of oppression and deliverance before Israel asked for a king."
+        },
+        {
+          "id": "ooo-easy-89",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Peter",
+            "Andrew",
+            "Matthew",
+            "James son of Alphaeus",
+            "Paul"
+          ],
+          "oddItem": "Paul",
+          "groupTheme": "The others were named among the Twelve during Jesus' earthly ministry.",
+          "explanation": "Paul was not listed among the original Twelve disciples called during Jesus' ministry.",
+          "theme": "Apostles",
+          "difficulty": "easy",
+          "teachingNote": "The Gospels name the Twelve as Jesus' appointed apostolic witnesses."
+        },
+        {
+          "id": "ooo-easy-90",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Blood",
+            "Lice",
+            "Murrain",
+            "Hail",
+            "Famine"
+          ],
+          "oddItem": "Famine",
+          "groupTheme": "The others are plagues sent on Egypt in Exodus.",
+          "explanation": "Famine is not listed among the ten plagues of Egypt.",
+          "theme": "Exodus",
+          "difficulty": "easy",
+          "teachingNote": "The plagues confront Egypt and lead to Israel's release from bondage."
+        },
+        {
+          "id": "ooo-medium-1",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Romans",
+            "1 Corinthians",
+            "2 Corinthians",
+            "Galatians",
+            "Hebrews"
+          ],
+          "oddItem": "Hebrews",
+          "groupTheme": "The others are New Testament letters that open by naming Paul.",
+          "explanation": "Hebrews does not open by naming Paul as sender, while the other letters do.",
+          "theme": "New Testament letters",
+          "difficulty": "medium",
+          "teachingNote": "The Pauline letters identify Paul in their greetings; several other New Testament letters do not."
+        },
+        {
+          "id": "ooo-medium-2",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Isaiah",
+            "Jeremiah",
+            "Lamentations",
+            "Ezekiel",
+            "Hosea"
+          ],
+          "oddItem": "Hosea",
+          "groupTheme": "The others are commonly grouped with the Major Prophets in English Old Testaments.",
+          "explanation": "Hosea is counted among the Minor Prophets, not the Major Prophets grouping.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "Major and Minor refer mainly to book length, not prophetic importance."
+        },
+        {
+          "id": "ooo-medium-3",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Hosea",
+            "Joel",
+            "Amos",
+            "Obadiah",
+            "Isaiah"
+          ],
+          "oddItem": "Isaiah",
+          "groupTheme": "The others are books in the Twelve Minor Prophets.",
+          "explanation": "Isaiah is outside the Twelve Minor Prophets collection.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "The Twelve Minor Prophets form one compact prophetic section in the Old Testament."
+        },
+        {
+          "id": "ooo-medium-4",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Job",
+            "Psalms",
+            "Proverbs",
+            "Ecclesiastes",
+            "Joshua"
+          ],
+          "oddItem": "Joshua",
+          "groupTheme": "The others are commonly grouped as Old Testament wisdom or poetry books.",
+          "explanation": "Joshua belongs to historical narrative rather than wisdom or poetry literature.",
+          "theme": "Wisdom literature",
+          "difficulty": "medium",
+          "teachingNote": "Wisdom and poetry books emphasize worship, lament, practical wisdom, and reflection."
+        },
+        {
+          "id": "ooo-medium-5",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Reuben",
+            "Simeon",
+            "Levi",
+            "Judah",
+            "Ephraim"
+          ],
+          "oddItem": "Ephraim",
+          "groupTheme": "The others are sons of Jacob named in Genesis.",
+          "explanation": "Ephraim is not one of Jacob's twelve sons.",
+          "theme": "Tribes of Israel",
+          "difficulty": "medium",
+          "teachingNote": "The tribes of Israel trace their names through Jacob's household, with later tribal lists sometimes naming Joseph's sons."
+        },
+        {
+          "id": "ooo-medium-6",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Romans",
+            "1 Corinthians",
+            "2 Corinthians",
+            "Ephesians",
+            "James"
+          ],
+          "oddItem": "James",
+          "groupTheme": "The others are New Testament letters that open by naming Paul.",
+          "explanation": "James does not open by naming Paul as sender, while the other letters do.",
+          "theme": "New Testament letters",
+          "difficulty": "medium",
+          "teachingNote": "The Pauline letters identify Paul in their greetings; several other New Testament letters do not."
+        },
+        {
+          "id": "ooo-medium-7",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Isaiah",
+            "Jeremiah",
+            "Lamentations",
+            "Daniel",
+            "Joel"
+          ],
+          "oddItem": "Joel",
+          "groupTheme": "The others are commonly grouped with the Major Prophets in English Old Testaments.",
+          "explanation": "Joel is counted among the Minor Prophets, not the Major Prophets grouping.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "Major and Minor refer mainly to book length, not prophetic importance."
+        },
+        {
+          "id": "ooo-medium-8",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Hosea",
+            "Joel",
+            "Amos",
+            "Jonah",
+            "Jeremiah"
+          ],
+          "oddItem": "Jeremiah",
+          "groupTheme": "The others are books in the Twelve Minor Prophets.",
+          "explanation": "Jeremiah is outside the Twelve Minor Prophets collection.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "The Twelve Minor Prophets form one compact prophetic section in the Old Testament."
+        },
+        {
+          "id": "ooo-medium-9",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Job",
+            "Psalms",
+            "Proverbs",
+            "Song of Solomon",
+            "Judges"
+          ],
+          "oddItem": "Judges",
+          "groupTheme": "The others are commonly grouped as Old Testament wisdom or poetry books.",
+          "explanation": "Judges belongs to historical narrative rather than wisdom or poetry literature.",
+          "theme": "Wisdom literature",
+          "difficulty": "medium",
+          "teachingNote": "Wisdom and poetry books emphasize worship, lament, practical wisdom, and reflection."
+        },
+        {
+          "id": "ooo-medium-10",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Reuben",
+            "Simeon",
+            "Levi",
+            "Dan",
+            "Manasseh"
+          ],
+          "oddItem": "Manasseh",
+          "groupTheme": "The others are sons of Jacob named in Genesis.",
+          "explanation": "Manasseh is not one of Jacob's twelve sons.",
+          "theme": "Tribes of Israel",
+          "difficulty": "medium",
+          "teachingNote": "The tribes of Israel trace their names through Jacob's household, with later tribal lists sometimes naming Joseph's sons."
+        },
+        {
+          "id": "ooo-medium-11",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Romans",
+            "1 Corinthians",
+            "2 Corinthians",
+            "Philippians",
+            "1 Peter"
+          ],
+          "oddItem": "1 Peter",
+          "groupTheme": "The others are New Testament letters that open by naming Paul.",
+          "explanation": "1 Peter does not open by naming Paul as sender, while the other letters do.",
+          "theme": "New Testament letters",
+          "difficulty": "medium",
+          "teachingNote": "The Pauline letters identify Paul in their greetings; several other New Testament letters do not."
+        },
+        {
+          "id": "ooo-medium-12",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Isaiah",
+            "Jeremiah",
+            "Ezekiel",
+            "Daniel",
+            "Amos"
+          ],
+          "oddItem": "Amos",
+          "groupTheme": "The others are commonly grouped with the Major Prophets in English Old Testaments.",
+          "explanation": "Amos is counted among the Minor Prophets, not the Major Prophets grouping.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "Major and Minor refer mainly to book length, not prophetic importance."
+        },
+        {
+          "id": "ooo-medium-13",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Hosea",
+            "Joel",
+            "Amos",
+            "Micah",
+            "Ezekiel"
+          ],
+          "oddItem": "Ezekiel",
+          "groupTheme": "The others are books in the Twelve Minor Prophets.",
+          "explanation": "Ezekiel is outside the Twelve Minor Prophets collection.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "The Twelve Minor Prophets form one compact prophetic section in the Old Testament."
+        },
+        {
+          "id": "ooo-medium-14",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Job",
+            "Psalms",
+            "Ecclesiastes",
+            "Song of Solomon",
+            "Ruth"
+          ],
+          "oddItem": "Ruth",
+          "groupTheme": "The others are commonly grouped as Old Testament wisdom or poetry books.",
+          "explanation": "Ruth belongs to historical narrative rather than wisdom or poetry literature.",
+          "theme": "Wisdom literature",
+          "difficulty": "medium",
+          "teachingNote": "Wisdom and poetry books emphasize worship, lament, practical wisdom, and reflection."
+        },
+        {
+          "id": "ooo-medium-15",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Reuben",
+            "Simeon",
+            "Levi",
+            "Naphtali",
+            "Ishmael"
+          ],
+          "oddItem": "Ishmael",
+          "groupTheme": "The others are sons of Jacob named in Genesis.",
+          "explanation": "Ishmael is not one of Jacob's twelve sons.",
+          "theme": "Tribes of Israel",
+          "difficulty": "medium",
+          "teachingNote": "The tribes of Israel trace their names through Jacob's household, with later tribal lists sometimes naming Joseph's sons."
+        },
+        {
+          "id": "ooo-medium-16",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Romans",
+            "1 Corinthians",
+            "2 Corinthians",
+            "Colossians",
+            "1 John"
+          ],
+          "oddItem": "1 John",
+          "groupTheme": "The others are New Testament letters that open by naming Paul.",
+          "explanation": "1 John does not open by naming Paul as sender, while the other letters do.",
+          "theme": "New Testament letters",
+          "difficulty": "medium",
+          "teachingNote": "The Pauline letters identify Paul in their greetings; several other New Testament letters do not."
+        },
+        {
+          "id": "ooo-medium-17",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Isaiah",
+            "Lamentations",
+            "Ezekiel",
+            "Daniel",
+            "Micah"
+          ],
+          "oddItem": "Micah",
+          "groupTheme": "The others are commonly grouped with the Major Prophets in English Old Testaments.",
+          "explanation": "Micah is counted among the Minor Prophets, not the Major Prophets grouping.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "Major and Minor refer mainly to book length, not prophetic importance."
+        },
+        {
+          "id": "ooo-medium-18",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Hosea",
+            "Joel",
+            "Amos",
+            "Nahum",
+            "Daniel"
+          ],
+          "oddItem": "Daniel",
+          "groupTheme": "The others are books in the Twelve Minor Prophets.",
+          "explanation": "Daniel is outside the Twelve Minor Prophets collection.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "The Twelve Minor Prophets form one compact prophetic section in the Old Testament."
+        },
+        {
+          "id": "ooo-medium-19",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Job",
+            "Proverbs",
+            "Ecclesiastes",
+            "Song of Solomon",
+            "Esther"
+          ],
+          "oddItem": "Esther",
+          "groupTheme": "The others are commonly grouped as Old Testament wisdom or poetry books.",
+          "explanation": "Esther belongs to historical narrative rather than wisdom or poetry literature.",
+          "theme": "Wisdom literature",
+          "difficulty": "medium",
+          "teachingNote": "Wisdom and poetry books emphasize worship, lament, practical wisdom, and reflection."
+        },
+        {
+          "id": "ooo-medium-20",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Reuben",
+            "Simeon",
+            "Levi",
+            "Gad",
+            "Esau"
+          ],
+          "oddItem": "Esau",
+          "groupTheme": "The others are sons of Jacob named in Genesis.",
+          "explanation": "Esau is not one of Jacob's twelve sons.",
+          "theme": "Tribes of Israel",
+          "difficulty": "medium",
+          "teachingNote": "The tribes of Israel trace their names through Jacob's household, with later tribal lists sometimes naming Joseph's sons."
+        },
+        {
+          "id": "ooo-medium-21",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Romans",
+            "1 Corinthians",
+            "2 Corinthians",
+            "Philemon",
+            "Jude"
+          ],
+          "oddItem": "Jude",
+          "groupTheme": "The others are New Testament letters that open by naming Paul.",
+          "explanation": "Jude does not open by naming Paul as sender, while the other letters do.",
+          "theme": "New Testament letters",
+          "difficulty": "medium",
+          "teachingNote": "The Pauline letters identify Paul in their greetings; several other New Testament letters do not."
+        },
+        {
+          "id": "ooo-medium-22",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Jeremiah",
+            "Lamentations",
+            "Ezekiel",
+            "Daniel",
+            "Malachi"
+          ],
+          "oddItem": "Malachi",
+          "groupTheme": "The others are commonly grouped with the Major Prophets in English Old Testaments.",
+          "explanation": "Malachi is counted among the Minor Prophets, not the Major Prophets grouping.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "Major and Minor refer mainly to book length, not prophetic importance."
+        },
+        {
+          "id": "ooo-medium-23",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Hosea",
+            "Joel",
+            "Amos",
+            "Habakkuk",
+            "Lamentations"
+          ],
+          "oddItem": "Lamentations",
+          "groupTheme": "The others are books in the Twelve Minor Prophets.",
+          "explanation": "Lamentations is outside the Twelve Minor Prophets collection.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "The Twelve Minor Prophets form one compact prophetic section in the Old Testament."
+        },
+        {
+          "id": "ooo-medium-24",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Psalms",
+            "Proverbs",
+            "Ecclesiastes",
+            "Song of Solomon",
+            "Nehemiah"
+          ],
+          "oddItem": "Nehemiah",
+          "groupTheme": "The others are commonly grouped as Old Testament wisdom or poetry books.",
+          "explanation": "Nehemiah belongs to historical narrative rather than wisdom or poetry literature.",
+          "theme": "Wisdom literature",
+          "difficulty": "medium",
+          "teachingNote": "Wisdom and poetry books emphasize worship, lament, practical wisdom, and reflection."
+        },
+        {
+          "id": "ooo-medium-25",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Reuben",
+            "Simeon",
+            "Levi",
+            "Asher",
+            "Moab"
+          ],
+          "oddItem": "Moab",
+          "groupTheme": "The others are sons of Jacob named in Genesis.",
+          "explanation": "Moab is not one of Jacob's twelve sons.",
+          "theme": "Tribes of Israel",
+          "difficulty": "medium",
+          "teachingNote": "The tribes of Israel trace their names through Jacob's household, with later tribal lists sometimes naming Joseph's sons."
+        },
+        {
+          "id": "ooo-medium-26",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Romans",
+            "1 Corinthians",
+            "2 Corinthians",
+            "1 Thessalonians",
+            "Hebrews"
+          ],
+          "oddItem": "Hebrews",
+          "groupTheme": "The others are New Testament letters that open by naming Paul.",
+          "explanation": "Hebrews does not open by naming Paul as sender, while the other letters do.",
+          "theme": "New Testament letters",
+          "difficulty": "medium",
+          "teachingNote": "The Pauline letters identify Paul in their greetings; several other New Testament letters do not."
+        },
+        {
+          "id": "ooo-medium-27",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Hosea",
+            "Joel",
+            "Amos",
+            "Zephaniah",
+            "Isaiah"
+          ],
+          "oddItem": "Isaiah",
+          "groupTheme": "The others are books in the Twelve Minor Prophets.",
+          "explanation": "Isaiah is outside the Twelve Minor Prophets collection.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "The Twelve Minor Prophets form one compact prophetic section in the Old Testament."
+        },
+        {
+          "id": "ooo-medium-28",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Reuben",
+            "Simeon",
+            "Levi",
+            "Issachar",
+            "Ephraim"
+          ],
+          "oddItem": "Ephraim",
+          "groupTheme": "The others are sons of Jacob named in Genesis.",
+          "explanation": "Ephraim is not one of Jacob's twelve sons.",
+          "theme": "Tribes of Israel",
+          "difficulty": "medium",
+          "teachingNote": "The tribes of Israel trace their names through Jacob's household, with later tribal lists sometimes naming Joseph's sons."
+        },
+        {
+          "id": "ooo-medium-29",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Romans",
+            "1 Corinthians",
+            "2 Corinthians",
+            "2 Timothy",
+            "James"
+          ],
+          "oddItem": "James",
+          "groupTheme": "The others are New Testament letters that open by naming Paul.",
+          "explanation": "James does not open by naming Paul as sender, while the other letters do.",
+          "theme": "New Testament letters",
+          "difficulty": "medium",
+          "teachingNote": "The Pauline letters identify Paul in their greetings; several other New Testament letters do not."
+        },
+        {
+          "id": "ooo-medium-30",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Hosea",
+            "Joel",
+            "Amos",
+            "Haggai",
+            "Jeremiah"
+          ],
+          "oddItem": "Jeremiah",
+          "groupTheme": "The others are books in the Twelve Minor Prophets.",
+          "explanation": "Jeremiah is outside the Twelve Minor Prophets collection.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "The Twelve Minor Prophets form one compact prophetic section in the Old Testament."
+        },
+        {
+          "id": "ooo-medium-31",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Reuben",
+            "Simeon",
+            "Levi",
+            "Zebulun",
+            "Manasseh"
+          ],
+          "oddItem": "Manasseh",
+          "groupTheme": "The others are sons of Jacob named in Genesis.",
+          "explanation": "Manasseh is not one of Jacob's twelve sons.",
+          "theme": "Tribes of Israel",
+          "difficulty": "medium",
+          "teachingNote": "The tribes of Israel trace their names through Jacob's household, with later tribal lists sometimes naming Joseph's sons."
+        },
+        {
+          "id": "ooo-medium-32",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Romans",
+            "1 Corinthians",
+            "Galatians",
+            "Ephesians",
+            "1 Peter"
+          ],
+          "oddItem": "1 Peter",
+          "groupTheme": "The others are New Testament letters that open by naming Paul.",
+          "explanation": "1 Peter does not open by naming Paul as sender, while the other letters do.",
+          "theme": "New Testament letters",
+          "difficulty": "medium",
+          "teachingNote": "The Pauline letters identify Paul in their greetings; several other New Testament letters do not."
+        },
+        {
+          "id": "ooo-medium-33",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Hosea",
+            "Joel",
+            "Amos",
+            "Zechariah",
+            "Ezekiel"
+          ],
+          "oddItem": "Ezekiel",
+          "groupTheme": "The others are books in the Twelve Minor Prophets.",
+          "explanation": "Ezekiel is outside the Twelve Minor Prophets collection.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "The Twelve Minor Prophets form one compact prophetic section in the Old Testament."
+        },
+        {
+          "id": "ooo-medium-34",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Reuben",
+            "Simeon",
+            "Levi",
+            "Joseph",
+            "Ishmael"
+          ],
+          "oddItem": "Ishmael",
+          "groupTheme": "The others are sons of Jacob named in Genesis.",
+          "explanation": "Ishmael is not one of Jacob's twelve sons.",
+          "theme": "Tribes of Israel",
+          "difficulty": "medium",
+          "teachingNote": "The tribes of Israel trace their names through Jacob's household, with later tribal lists sometimes naming Joseph's sons."
+        },
+        {
+          "id": "ooo-medium-35",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Romans",
+            "1 Corinthians",
+            "Galatians",
+            "Philippians",
+            "1 John"
+          ],
+          "oddItem": "1 John",
+          "groupTheme": "The others are New Testament letters that open by naming Paul.",
+          "explanation": "1 John does not open by naming Paul as sender, while the other letters do.",
+          "theme": "New Testament letters",
+          "difficulty": "medium",
+          "teachingNote": "The Pauline letters identify Paul in their greetings; several other New Testament letters do not."
+        },
+        {
+          "id": "ooo-medium-36",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Hosea",
+            "Joel",
+            "Amos",
+            "Malachi",
+            "Daniel"
+          ],
+          "oddItem": "Daniel",
+          "groupTheme": "The others are books in the Twelve Minor Prophets.",
+          "explanation": "Daniel is outside the Twelve Minor Prophets collection.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "The Twelve Minor Prophets form one compact prophetic section in the Old Testament."
+        },
+        {
+          "id": "ooo-medium-37",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Reuben",
+            "Simeon",
+            "Levi",
+            "Benjamin",
+            "Esau"
+          ],
+          "oddItem": "Esau",
+          "groupTheme": "The others are sons of Jacob named in Genesis.",
+          "explanation": "Esau is not one of Jacob's twelve sons.",
+          "theme": "Tribes of Israel",
+          "difficulty": "medium",
+          "teachingNote": "The tribes of Israel trace their names through Jacob's household, with later tribal lists sometimes naming Joseph's sons."
+        },
+        {
+          "id": "ooo-medium-38",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Romans",
+            "1 Corinthians",
+            "Galatians",
+            "Colossians",
+            "Jude"
+          ],
+          "oddItem": "Jude",
+          "groupTheme": "The others are New Testament letters that open by naming Paul.",
+          "explanation": "Jude does not open by naming Paul as sender, while the other letters do.",
+          "theme": "New Testament letters",
+          "difficulty": "medium",
+          "teachingNote": "The Pauline letters identify Paul in their greetings; several other New Testament letters do not."
+        },
+        {
+          "id": "ooo-medium-39",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Hosea",
+            "Joel",
+            "Obadiah",
+            "Jonah",
+            "Lamentations"
+          ],
+          "oddItem": "Lamentations",
+          "groupTheme": "The others are books in the Twelve Minor Prophets.",
+          "explanation": "Lamentations is outside the Twelve Minor Prophets collection.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "The Twelve Minor Prophets form one compact prophetic section in the Old Testament."
+        },
+        {
+          "id": "ooo-medium-40",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Reuben",
+            "Simeon",
+            "Judah",
+            "Dan",
+            "Moab"
+          ],
+          "oddItem": "Moab",
+          "groupTheme": "The others are sons of Jacob named in Genesis.",
+          "explanation": "Moab is not one of Jacob's twelve sons.",
+          "theme": "Tribes of Israel",
+          "difficulty": "medium",
+          "teachingNote": "The tribes of Israel trace their names through Jacob's household, with later tribal lists sometimes naming Joseph's sons."
+        },
+        {
+          "id": "ooo-medium-41",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Romans",
+            "1 Corinthians",
+            "Galatians",
+            "Philemon",
+            "Hebrews"
+          ],
+          "oddItem": "Hebrews",
+          "groupTheme": "The others are New Testament letters that open by naming Paul.",
+          "explanation": "Hebrews does not open by naming Paul as sender, while the other letters do.",
+          "theme": "New Testament letters",
+          "difficulty": "medium",
+          "teachingNote": "The Pauline letters identify Paul in their greetings; several other New Testament letters do not."
+        },
+        {
+          "id": "ooo-medium-42",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Hosea",
+            "Joel",
+            "Obadiah",
+            "Micah",
+            "Isaiah"
+          ],
+          "oddItem": "Isaiah",
+          "groupTheme": "The others are books in the Twelve Minor Prophets.",
+          "explanation": "Isaiah is outside the Twelve Minor Prophets collection.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "The Twelve Minor Prophets form one compact prophetic section in the Old Testament."
+        },
+        {
+          "id": "ooo-medium-43",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Reuben",
+            "Simeon",
+            "Judah",
+            "Naphtali",
+            "Ephraim"
+          ],
+          "oddItem": "Ephraim",
+          "groupTheme": "The others are sons of Jacob named in Genesis.",
+          "explanation": "Ephraim is not one of Jacob's twelve sons.",
+          "theme": "Tribes of Israel",
+          "difficulty": "medium",
+          "teachingNote": "The tribes of Israel trace their names through Jacob's household, with later tribal lists sometimes naming Joseph's sons."
+        },
+        {
+          "id": "ooo-medium-44",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Romans",
+            "1 Corinthians",
+            "Galatians",
+            "1 Thessalonians",
+            "James"
+          ],
+          "oddItem": "James",
+          "groupTheme": "The others are New Testament letters that open by naming Paul.",
+          "explanation": "James does not open by naming Paul as sender, while the other letters do.",
+          "theme": "New Testament letters",
+          "difficulty": "medium",
+          "teachingNote": "The Pauline letters identify Paul in their greetings; several other New Testament letters do not."
+        },
+        {
+          "id": "ooo-medium-45",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Hosea",
+            "Joel",
+            "Obadiah",
+            "Nahum",
+            "Jeremiah"
+          ],
+          "oddItem": "Jeremiah",
+          "groupTheme": "The others are books in the Twelve Minor Prophets.",
+          "explanation": "Jeremiah is outside the Twelve Minor Prophets collection.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "The Twelve Minor Prophets form one compact prophetic section in the Old Testament."
+        },
+        {
+          "id": "ooo-medium-46",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Reuben",
+            "Simeon",
+            "Judah",
+            "Gad",
+            "Manasseh"
+          ],
+          "oddItem": "Manasseh",
+          "groupTheme": "The others are sons of Jacob named in Genesis.",
+          "explanation": "Manasseh is not one of Jacob's twelve sons.",
+          "theme": "Tribes of Israel",
+          "difficulty": "medium",
+          "teachingNote": "The tribes of Israel trace their names through Jacob's household, with later tribal lists sometimes naming Joseph's sons."
+        },
+        {
+          "id": "ooo-medium-47",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Romans",
+            "1 Corinthians",
+            "Galatians",
+            "2 Timothy",
+            "1 Peter"
+          ],
+          "oddItem": "1 Peter",
+          "groupTheme": "The others are New Testament letters that open by naming Paul.",
+          "explanation": "1 Peter does not open by naming Paul as sender, while the other letters do.",
+          "theme": "New Testament letters",
+          "difficulty": "medium",
+          "teachingNote": "The Pauline letters identify Paul in their greetings; several other New Testament letters do not."
+        },
+        {
+          "id": "ooo-medium-48",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Hosea",
+            "Joel",
+            "Obadiah",
+            "Habakkuk",
+            "Ezekiel"
+          ],
+          "oddItem": "Ezekiel",
+          "groupTheme": "The others are books in the Twelve Minor Prophets.",
+          "explanation": "Ezekiel is outside the Twelve Minor Prophets collection.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "The Twelve Minor Prophets form one compact prophetic section in the Old Testament."
+        },
+        {
+          "id": "ooo-medium-49",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Reuben",
+            "Simeon",
+            "Judah",
+            "Asher",
+            "Ishmael"
+          ],
+          "oddItem": "Ishmael",
+          "groupTheme": "The others are sons of Jacob named in Genesis.",
+          "explanation": "Ishmael is not one of Jacob's twelve sons.",
+          "theme": "Tribes of Israel",
+          "difficulty": "medium",
+          "teachingNote": "The tribes of Israel trace their names through Jacob's household, with later tribal lists sometimes naming Joseph's sons."
+        },
+        {
+          "id": "ooo-medium-50",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Romans",
+            "1 Corinthians",
+            "Ephesians",
+            "Philippians",
+            "1 John"
+          ],
+          "oddItem": "1 John",
+          "groupTheme": "The others are New Testament letters that open by naming Paul.",
+          "explanation": "1 John does not open by naming Paul as sender, while the other letters do.",
+          "theme": "New Testament letters",
+          "difficulty": "medium",
+          "teachingNote": "The Pauline letters identify Paul in their greetings; several other New Testament letters do not."
+        },
+        {
+          "id": "ooo-medium-51",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Hosea",
+            "Joel",
+            "Obadiah",
+            "Zephaniah",
+            "Daniel"
+          ],
+          "oddItem": "Daniel",
+          "groupTheme": "The others are books in the Twelve Minor Prophets.",
+          "explanation": "Daniel is outside the Twelve Minor Prophets collection.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "The Twelve Minor Prophets form one compact prophetic section in the Old Testament."
+        },
+        {
+          "id": "ooo-medium-52",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Reuben",
+            "Simeon",
+            "Judah",
+            "Issachar",
+            "Esau"
+          ],
+          "oddItem": "Esau",
+          "groupTheme": "The others are sons of Jacob named in Genesis.",
+          "explanation": "Esau is not one of Jacob's twelve sons.",
+          "theme": "Tribes of Israel",
+          "difficulty": "medium",
+          "teachingNote": "The tribes of Israel trace their names through Jacob's household, with later tribal lists sometimes naming Joseph's sons."
+        },
+        {
+          "id": "ooo-medium-53",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Romans",
+            "1 Corinthians",
+            "Ephesians",
+            "Colossians",
+            "Jude"
+          ],
+          "oddItem": "Jude",
+          "groupTheme": "The others are New Testament letters that open by naming Paul.",
+          "explanation": "Jude does not open by naming Paul as sender, while the other letters do.",
+          "theme": "New Testament letters",
+          "difficulty": "medium",
+          "teachingNote": "The Pauline letters identify Paul in their greetings; several other New Testament letters do not."
+        },
+        {
+          "id": "ooo-medium-54",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Hosea",
+            "Joel",
+            "Obadiah",
+            "Haggai",
+            "Lamentations"
+          ],
+          "oddItem": "Lamentations",
+          "groupTheme": "The others are books in the Twelve Minor Prophets.",
+          "explanation": "Lamentations is outside the Twelve Minor Prophets collection.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "The Twelve Minor Prophets form one compact prophetic section in the Old Testament."
+        },
+        {
+          "id": "ooo-medium-55",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Reuben",
+            "Simeon",
+            "Judah",
+            "Zebulun",
+            "Moab"
+          ],
+          "oddItem": "Moab",
+          "groupTheme": "The others are sons of Jacob named in Genesis.",
+          "explanation": "Moab is not one of Jacob's twelve sons.",
+          "theme": "Tribes of Israel",
+          "difficulty": "medium",
+          "teachingNote": "The tribes of Israel trace their names through Jacob's household, with later tribal lists sometimes naming Joseph's sons."
+        },
+        {
+          "id": "ooo-medium-56",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Romans",
+            "1 Corinthians",
+            "Ephesians",
+            "Philemon",
+            "Hebrews"
+          ],
+          "oddItem": "Hebrews",
+          "groupTheme": "The others are New Testament letters that open by naming Paul.",
+          "explanation": "Hebrews does not open by naming Paul as sender, while the other letters do.",
+          "theme": "New Testament letters",
+          "difficulty": "medium",
+          "teachingNote": "The Pauline letters identify Paul in their greetings; several other New Testament letters do not."
+        },
+        {
+          "id": "ooo-medium-57",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Hosea",
+            "Joel",
+            "Obadiah",
+            "Zechariah",
+            "Isaiah"
+          ],
+          "oddItem": "Isaiah",
+          "groupTheme": "The others are books in the Twelve Minor Prophets.",
+          "explanation": "Isaiah is outside the Twelve Minor Prophets collection.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "The Twelve Minor Prophets form one compact prophetic section in the Old Testament."
+        },
+        {
+          "id": "ooo-medium-58",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Reuben",
+            "Simeon",
+            "Judah",
+            "Joseph",
+            "Ephraim"
+          ],
+          "oddItem": "Ephraim",
+          "groupTheme": "The others are sons of Jacob named in Genesis.",
+          "explanation": "Ephraim is not one of Jacob's twelve sons.",
+          "theme": "Tribes of Israel",
+          "difficulty": "medium",
+          "teachingNote": "The tribes of Israel trace their names through Jacob's household, with later tribal lists sometimes naming Joseph's sons."
+        },
+        {
+          "id": "ooo-medium-59",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Romans",
+            "1 Corinthians",
+            "Ephesians",
+            "1 Thessalonians",
+            "James"
+          ],
+          "oddItem": "James",
+          "groupTheme": "The others are New Testament letters that open by naming Paul.",
+          "explanation": "James does not open by naming Paul as sender, while the other letters do.",
+          "theme": "New Testament letters",
+          "difficulty": "medium",
+          "teachingNote": "The Pauline letters identify Paul in their greetings; several other New Testament letters do not."
+        },
+        {
+          "id": "ooo-medium-60",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Hosea",
+            "Joel",
+            "Obadiah",
+            "Malachi",
+            "Jeremiah"
+          ],
+          "oddItem": "Jeremiah",
+          "groupTheme": "The others are books in the Twelve Minor Prophets.",
+          "explanation": "Jeremiah is outside the Twelve Minor Prophets collection.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "The Twelve Minor Prophets form one compact prophetic section in the Old Testament."
+        },
+        {
+          "id": "ooo-medium-61",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Reuben",
+            "Simeon",
+            "Judah",
+            "Benjamin",
+            "Manasseh"
+          ],
+          "oddItem": "Manasseh",
+          "groupTheme": "The others are sons of Jacob named in Genesis.",
+          "explanation": "Manasseh is not one of Jacob's twelve sons.",
+          "theme": "Tribes of Israel",
+          "difficulty": "medium",
+          "teachingNote": "The tribes of Israel trace their names through Jacob's household, with later tribal lists sometimes naming Joseph's sons."
+        },
+        {
+          "id": "ooo-medium-62",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Romans",
+            "1 Corinthians",
+            "Ephesians",
+            "2 Timothy",
+            "1 Peter"
+          ],
+          "oddItem": "1 Peter",
+          "groupTheme": "The others are New Testament letters that open by naming Paul.",
+          "explanation": "1 Peter does not open by naming Paul as sender, while the other letters do.",
+          "theme": "New Testament letters",
+          "difficulty": "medium",
+          "teachingNote": "The Pauline letters identify Paul in their greetings; several other New Testament letters do not."
+        },
+        {
+          "id": "ooo-medium-63",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Hosea",
+            "Joel",
+            "Jonah",
+            "Micah",
+            "Ezekiel"
+          ],
+          "oddItem": "Ezekiel",
+          "groupTheme": "The others are books in the Twelve Minor Prophets.",
+          "explanation": "Ezekiel is outside the Twelve Minor Prophets collection.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "The Twelve Minor Prophets form one compact prophetic section in the Old Testament."
+        },
+        {
+          "id": "ooo-medium-64",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Reuben",
+            "Simeon",
+            "Dan",
+            "Naphtali",
+            "Ishmael"
+          ],
+          "oddItem": "Ishmael",
+          "groupTheme": "The others are sons of Jacob named in Genesis.",
+          "explanation": "Ishmael is not one of Jacob's twelve sons.",
+          "theme": "Tribes of Israel",
+          "difficulty": "medium",
+          "teachingNote": "The tribes of Israel trace their names through Jacob's household, with later tribal lists sometimes naming Joseph's sons."
+        },
+        {
+          "id": "ooo-medium-65",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Romans",
+            "1 Corinthians",
+            "Philippians",
+            "Colossians",
+            "1 John"
+          ],
+          "oddItem": "1 John",
+          "groupTheme": "The others are New Testament letters that open by naming Paul.",
+          "explanation": "1 John does not open by naming Paul as sender, while the other letters do.",
+          "theme": "New Testament letters",
+          "difficulty": "medium",
+          "teachingNote": "The Pauline letters identify Paul in their greetings; several other New Testament letters do not."
+        },
+        {
+          "id": "ooo-medium-66",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Hosea",
+            "Joel",
+            "Jonah",
+            "Nahum",
+            "Daniel"
+          ],
+          "oddItem": "Daniel",
+          "groupTheme": "The others are books in the Twelve Minor Prophets.",
+          "explanation": "Daniel is outside the Twelve Minor Prophets collection.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "The Twelve Minor Prophets form one compact prophetic section in the Old Testament."
+        },
+        {
+          "id": "ooo-medium-67",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Reuben",
+            "Simeon",
+            "Dan",
+            "Gad",
+            "Esau"
+          ],
+          "oddItem": "Esau",
+          "groupTheme": "The others are sons of Jacob named in Genesis.",
+          "explanation": "Esau is not one of Jacob's twelve sons.",
+          "theme": "Tribes of Israel",
+          "difficulty": "medium",
+          "teachingNote": "The tribes of Israel trace their names through Jacob's household, with later tribal lists sometimes naming Joseph's sons."
+        },
+        {
+          "id": "ooo-medium-68",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Romans",
+            "1 Corinthians",
+            "Philippians",
+            "Philemon",
+            "Jude"
+          ],
+          "oddItem": "Jude",
+          "groupTheme": "The others are New Testament letters that open by naming Paul.",
+          "explanation": "Jude does not open by naming Paul as sender, while the other letters do.",
+          "theme": "New Testament letters",
+          "difficulty": "medium",
+          "teachingNote": "The Pauline letters identify Paul in their greetings; several other New Testament letters do not."
+        },
+        {
+          "id": "ooo-medium-69",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Hosea",
+            "Joel",
+            "Jonah",
+            "Habakkuk",
+            "Lamentations"
+          ],
+          "oddItem": "Lamentations",
+          "groupTheme": "The others are books in the Twelve Minor Prophets.",
+          "explanation": "Lamentations is outside the Twelve Minor Prophets collection.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "The Twelve Minor Prophets form one compact prophetic section in the Old Testament."
+        },
+        {
+          "id": "ooo-medium-70",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Reuben",
+            "Simeon",
+            "Dan",
+            "Asher",
+            "Moab"
+          ],
+          "oddItem": "Moab",
+          "groupTheme": "The others are sons of Jacob named in Genesis.",
+          "explanation": "Moab is not one of Jacob's twelve sons.",
+          "theme": "Tribes of Israel",
+          "difficulty": "medium",
+          "teachingNote": "The tribes of Israel trace their names through Jacob's household, with later tribal lists sometimes naming Joseph's sons."
+        },
+        {
+          "id": "ooo-medium-71",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Romans",
+            "1 Corinthians",
+            "Philippians",
+            "1 Thessalonians",
+            "Hebrews"
+          ],
+          "oddItem": "Hebrews",
+          "groupTheme": "The others are New Testament letters that open by naming Paul.",
+          "explanation": "Hebrews does not open by naming Paul as sender, while the other letters do.",
+          "theme": "New Testament letters",
+          "difficulty": "medium",
+          "teachingNote": "The Pauline letters identify Paul in their greetings; several other New Testament letters do not."
+        },
+        {
+          "id": "ooo-medium-72",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Hosea",
+            "Joel",
+            "Jonah",
+            "Zephaniah",
+            "Isaiah"
+          ],
+          "oddItem": "Isaiah",
+          "groupTheme": "The others are books in the Twelve Minor Prophets.",
+          "explanation": "Isaiah is outside the Twelve Minor Prophets collection.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "The Twelve Minor Prophets form one compact prophetic section in the Old Testament."
+        },
+        {
+          "id": "ooo-medium-73",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Reuben",
+            "Simeon",
+            "Dan",
+            "Issachar",
+            "Ephraim"
+          ],
+          "oddItem": "Ephraim",
+          "groupTheme": "The others are sons of Jacob named in Genesis.",
+          "explanation": "Ephraim is not one of Jacob's twelve sons.",
+          "theme": "Tribes of Israel",
+          "difficulty": "medium",
+          "teachingNote": "The tribes of Israel trace their names through Jacob's household, with later tribal lists sometimes naming Joseph's sons."
+        },
+        {
+          "id": "ooo-medium-74",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Romans",
+            "1 Corinthians",
+            "Philippians",
+            "2 Timothy",
+            "James"
+          ],
+          "oddItem": "James",
+          "groupTheme": "The others are New Testament letters that open by naming Paul.",
+          "explanation": "James does not open by naming Paul as sender, while the other letters do.",
+          "theme": "New Testament letters",
+          "difficulty": "medium",
+          "teachingNote": "The Pauline letters identify Paul in their greetings; several other New Testament letters do not."
+        },
+        {
+          "id": "ooo-medium-75",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Hosea",
+            "Joel",
+            "Jonah",
+            "Haggai",
+            "Jeremiah"
+          ],
+          "oddItem": "Jeremiah",
+          "groupTheme": "The others are books in the Twelve Minor Prophets.",
+          "explanation": "Jeremiah is outside the Twelve Minor Prophets collection.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "The Twelve Minor Prophets form one compact prophetic section in the Old Testament."
+        },
+        {
+          "id": "ooo-medium-76",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Reuben",
+            "Simeon",
+            "Dan",
+            "Zebulun",
+            "Manasseh"
+          ],
+          "oddItem": "Manasseh",
+          "groupTheme": "The others are sons of Jacob named in Genesis.",
+          "explanation": "Manasseh is not one of Jacob's twelve sons.",
+          "theme": "Tribes of Israel",
+          "difficulty": "medium",
+          "teachingNote": "The tribes of Israel trace their names through Jacob's household, with later tribal lists sometimes naming Joseph's sons."
+        },
+        {
+          "id": "ooo-medium-77",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Romans",
+            "1 Corinthians",
+            "Colossians",
+            "Philemon",
+            "1 Peter"
+          ],
+          "oddItem": "1 Peter",
+          "groupTheme": "The others are New Testament letters that open by naming Paul.",
+          "explanation": "1 Peter does not open by naming Paul as sender, while the other letters do.",
+          "theme": "New Testament letters",
+          "difficulty": "medium",
+          "teachingNote": "The Pauline letters identify Paul in their greetings; several other New Testament letters do not."
+        },
+        {
+          "id": "ooo-medium-78",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Hosea",
+            "Joel",
+            "Jonah",
+            "Zechariah",
+            "Ezekiel"
+          ],
+          "oddItem": "Ezekiel",
+          "groupTheme": "The others are books in the Twelve Minor Prophets.",
+          "explanation": "Ezekiel is outside the Twelve Minor Prophets collection.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "The Twelve Minor Prophets form one compact prophetic section in the Old Testament."
+        },
+        {
+          "id": "ooo-medium-79",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Reuben",
+            "Simeon",
+            "Dan",
+            "Joseph",
+            "Ishmael"
+          ],
+          "oddItem": "Ishmael",
+          "groupTheme": "The others are sons of Jacob named in Genesis.",
+          "explanation": "Ishmael is not one of Jacob's twelve sons.",
+          "theme": "Tribes of Israel",
+          "difficulty": "medium",
+          "teachingNote": "The tribes of Israel trace their names through Jacob's household, with later tribal lists sometimes naming Joseph's sons."
+        },
+        {
+          "id": "ooo-medium-80",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Romans",
+            "1 Corinthians",
+            "Colossians",
+            "1 Thessalonians",
+            "1 John"
+          ],
+          "oddItem": "1 John",
+          "groupTheme": "The others are New Testament letters that open by naming Paul.",
+          "explanation": "1 John does not open by naming Paul as sender, while the other letters do.",
+          "theme": "New Testament letters",
+          "difficulty": "medium",
+          "teachingNote": "The Pauline letters identify Paul in their greetings; several other New Testament letters do not."
+        },
+        {
+          "id": "ooo-medium-81",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Hosea",
+            "Joel",
+            "Jonah",
+            "Malachi",
+            "Daniel"
+          ],
+          "oddItem": "Daniel",
+          "groupTheme": "The others are books in the Twelve Minor Prophets.",
+          "explanation": "Daniel is outside the Twelve Minor Prophets collection.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "The Twelve Minor Prophets form one compact prophetic section in the Old Testament."
+        },
+        {
+          "id": "ooo-medium-82",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Reuben",
+            "Simeon",
+            "Dan",
+            "Benjamin",
+            "Esau"
+          ],
+          "oddItem": "Esau",
+          "groupTheme": "The others are sons of Jacob named in Genesis.",
+          "explanation": "Esau is not one of Jacob's twelve sons.",
+          "theme": "Tribes of Israel",
+          "difficulty": "medium",
+          "teachingNote": "The tribes of Israel trace their names through Jacob's household, with later tribal lists sometimes naming Joseph's sons."
+        },
+        {
+          "id": "ooo-medium-83",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Romans",
+            "1 Corinthians",
+            "Colossians",
+            "2 Timothy",
+            "Jude"
+          ],
+          "oddItem": "Jude",
+          "groupTheme": "The others are New Testament letters that open by naming Paul.",
+          "explanation": "Jude does not open by naming Paul as sender, while the other letters do.",
+          "theme": "New Testament letters",
+          "difficulty": "medium",
+          "teachingNote": "The Pauline letters identify Paul in their greetings; several other New Testament letters do not."
+        },
+        {
+          "id": "ooo-medium-84",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Hosea",
+            "Joel",
+            "Micah",
+            "Nahum",
+            "Lamentations"
+          ],
+          "oddItem": "Lamentations",
+          "groupTheme": "The others are books in the Twelve Minor Prophets.",
+          "explanation": "Lamentations is outside the Twelve Minor Prophets collection.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "The Twelve Minor Prophets form one compact prophetic section in the Old Testament."
+        },
+        {
+          "id": "ooo-medium-85",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Reuben",
+            "Simeon",
+            "Naphtali",
+            "Gad",
+            "Moab"
+          ],
+          "oddItem": "Moab",
+          "groupTheme": "The others are sons of Jacob named in Genesis.",
+          "explanation": "Moab is not one of Jacob's twelve sons.",
+          "theme": "Tribes of Israel",
+          "difficulty": "medium",
+          "teachingNote": "The tribes of Israel trace their names through Jacob's household, with later tribal lists sometimes naming Joseph's sons."
+        },
+        {
+          "id": "ooo-medium-86",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Romans",
+            "1 Corinthians",
+            "Philemon",
+            "1 Thessalonians",
+            "Hebrews"
+          ],
+          "oddItem": "Hebrews",
+          "groupTheme": "The others are New Testament letters that open by naming Paul.",
+          "explanation": "Hebrews does not open by naming Paul as sender, while the other letters do.",
+          "theme": "New Testament letters",
+          "difficulty": "medium",
+          "teachingNote": "The Pauline letters identify Paul in their greetings; several other New Testament letters do not."
+        },
+        {
+          "id": "ooo-medium-87",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Hosea",
+            "Joel",
+            "Micah",
+            "Habakkuk",
+            "Isaiah"
+          ],
+          "oddItem": "Isaiah",
+          "groupTheme": "The others are books in the Twelve Minor Prophets.",
+          "explanation": "Isaiah is outside the Twelve Minor Prophets collection.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "The Twelve Minor Prophets form one compact prophetic section in the Old Testament."
+        },
+        {
+          "id": "ooo-medium-88",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Reuben",
+            "Simeon",
+            "Naphtali",
+            "Asher",
+            "Ephraim"
+          ],
+          "oddItem": "Ephraim",
+          "groupTheme": "The others are sons of Jacob named in Genesis.",
+          "explanation": "Ephraim is not one of Jacob's twelve sons.",
+          "theme": "Tribes of Israel",
+          "difficulty": "medium",
+          "teachingNote": "The tribes of Israel trace their names through Jacob's household, with later tribal lists sometimes naming Joseph's sons."
+        },
+        {
+          "id": "ooo-medium-89",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Romans",
+            "1 Corinthians",
+            "Philemon",
+            "2 Timothy",
+            "James"
+          ],
+          "oddItem": "James",
+          "groupTheme": "The others are New Testament letters that open by naming Paul.",
+          "explanation": "James does not open by naming Paul as sender, while the other letters do.",
+          "theme": "New Testament letters",
+          "difficulty": "medium",
+          "teachingNote": "The Pauline letters identify Paul in their greetings; several other New Testament letters do not."
+        },
+        {
+          "id": "ooo-medium-90",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Hosea",
+            "Joel",
+            "Micah",
+            "Zephaniah",
+            "Jeremiah"
+          ],
+          "oddItem": "Jeremiah",
+          "groupTheme": "The others are books in the Twelve Minor Prophets.",
+          "explanation": "Jeremiah is outside the Twelve Minor Prophets collection.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "The Twelve Minor Prophets form one compact prophetic section in the Old Testament."
+        },
+        {
+          "id": "ooo-hard-1",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Ark of the covenant",
+            "Mercy seat",
+            "Table of shewbread",
+            "Golden candlestick",
+            "Bronze serpent"
+          ],
+          "oddItem": "Bronze serpent",
+          "groupTheme": "The others are furnishings or objects connected with the tabernacle.",
+          "explanation": "Bronze serpent is a biblical object, but it is not a tabernacle furnishing listed with the sanctuary pattern.",
+          "theme": "Tabernacle",
+          "difficulty": "hard",
+          "teachingNote": "The tabernacle furnishings taught Israel about worship, sacrifice, cleansing, and God's presence."
+        },
+        {
+          "id": "ooo-hard-2",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Loins girt with truth",
+            "Breastplate of righteousness",
+            "Shoes of peace",
+            "Shield of faith",
+            "Crown of life"
+          ],
+          "oddItem": "Crown of life",
+          "groupTheme": "The others are pieces of the armor of God in Ephesians 6.",
+          "explanation": "Crown of life is biblical imagery, but it is not one of Paul's armor-of-God pieces in Ephesians 6.",
+          "theme": "Paul's imagery",
+          "difficulty": "hard",
+          "teachingNote": "Paul uses armor imagery to describe steadfast spiritual readiness."
+        },
+        {
+          "id": "ooo-hard-3",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Love",
+            "Joy",
+            "Peace",
+            "Longsuffering",
+            "Knowledge"
+          ],
+          "oddItem": "Knowledge",
+          "groupTheme": "The others are named as fruit of the Spirit in Galatians 5.",
+          "explanation": "Knowledge is a virtue or biblical theme, but it is not listed in Paul's fruit of the Spirit list.",
+          "theme": "New Testament virtues",
+          "difficulty": "hard",
+          "teachingNote": "Galatians contrasts the works of the flesh with the Spirit's fruit."
+        },
+        {
+          "id": "ooo-hard-4",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Ephesus",
+            "Smyrna",
+            "Pergamos",
+            "Thyatira",
+            "Corinth"
+          ],
+          "oddItem": "Corinth",
+          "groupTheme": "The others are the seven churches addressed in Revelation 2-3.",
+          "explanation": "Corinth was an important early Christian location, but it is not one of Revelation's seven churches.",
+          "theme": "Revelation",
+          "difficulty": "hard",
+          "teachingNote": "Revelation opens with messages to seven churches in Asia."
+        },
+        {
+          "id": "ooo-hard-5",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Stephen",
+            "Philip",
+            "Prochorus",
+            "Nicanor",
+            "Barnabas"
+          ],
+          "oddItem": "Barnabas",
+          "groupTheme": "The others are the seven men chosen for service in Acts 6.",
+          "explanation": "Barnabas served in the early church, but is not named among the seven chosen in Acts 6.",
+          "theme": "Early church",
+          "difficulty": "hard",
+          "teachingNote": "Acts 6 names seven reputable men appointed to serve practical needs in the church."
+        },
+        {
+          "id": "ooo-hard-6",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Ark of the covenant",
+            "Mercy seat",
+            "Table of shewbread",
+            "Altar of incense",
+            "David's harp"
+          ],
+          "oddItem": "David's harp",
+          "groupTheme": "The others are furnishings or objects connected with the tabernacle.",
+          "explanation": "David's harp is a biblical object, but it is not a tabernacle furnishing listed with the sanctuary pattern.",
+          "theme": "Tabernacle",
+          "difficulty": "hard",
+          "teachingNote": "The tabernacle furnishings taught Israel about worship, sacrifice, cleansing, and God's presence."
+        },
+        {
+          "id": "ooo-hard-7",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Loins girt with truth",
+            "Breastplate of righteousness",
+            "Shoes of peace",
+            "Helmet of salvation",
+            "Mantle of Elijah"
+          ],
+          "oddItem": "Mantle of Elijah",
+          "groupTheme": "The others are pieces of the armor of God in Ephesians 6.",
+          "explanation": "Mantle of Elijah is biblical imagery, but it is not one of Paul's armor-of-God pieces in Ephesians 6.",
+          "theme": "Paul's imagery",
+          "difficulty": "hard",
+          "teachingNote": "Paul uses armor imagery to describe steadfast spiritual readiness."
+        },
+        {
+          "id": "ooo-hard-8",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Love",
+            "Joy",
+            "Peace",
+            "Gentleness",
+            "Courage"
+          ],
+          "oddItem": "Courage",
+          "groupTheme": "The others are named as fruit of the Spirit in Galatians 5.",
+          "explanation": "Courage is a virtue or biblical theme, but it is not listed in Paul's fruit of the Spirit list.",
+          "theme": "New Testament virtues",
+          "difficulty": "hard",
+          "teachingNote": "Galatians contrasts the works of the flesh with the Spirit's fruit."
+        },
+        {
+          "id": "ooo-hard-9",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Ephesus",
+            "Smyrna",
+            "Pergamos",
+            "Sardis",
+            "Rome"
+          ],
+          "oddItem": "Rome",
+          "groupTheme": "The others are the seven churches addressed in Revelation 2-3.",
+          "explanation": "Rome was an important early Christian location, but it is not one of Revelation's seven churches.",
+          "theme": "Revelation",
+          "difficulty": "hard",
+          "teachingNote": "Revelation opens with messages to seven churches in Asia."
+        },
+        {
+          "id": "ooo-hard-10",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Stephen",
+            "Philip",
+            "Prochorus",
+            "Timon",
+            "Silas"
+          ],
+          "oddItem": "Silas",
+          "groupTheme": "The others are the seven men chosen for service in Acts 6.",
+          "explanation": "Silas served in the early church, but is not named among the seven chosen in Acts 6.",
+          "theme": "Early church",
+          "difficulty": "hard",
+          "teachingNote": "Acts 6 names seven reputable men appointed to serve practical needs in the church."
+        },
+        {
+          "id": "ooo-hard-11",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Ark of the covenant",
+            "Mercy seat",
+            "Table of shewbread",
+            "Brazen altar",
+            "Gideon's fleece"
+          ],
+          "oddItem": "Gideon's fleece",
+          "groupTheme": "The others are furnishings or objects connected with the tabernacle.",
+          "explanation": "Gideon's fleece is a biblical object, but it is not a tabernacle furnishing listed with the sanctuary pattern.",
+          "theme": "Tabernacle",
+          "difficulty": "hard",
+          "teachingNote": "The tabernacle furnishings taught Israel about worship, sacrifice, cleansing, and God's presence."
+        },
+        {
+          "id": "ooo-hard-12",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Loins girt with truth",
+            "Breastplate of righteousness",
+            "Shoes of peace",
+            "Sword of the Spirit",
+            "Rod of Aaron"
+          ],
+          "oddItem": "Rod of Aaron",
+          "groupTheme": "The others are pieces of the armor of God in Ephesians 6.",
+          "explanation": "Rod of Aaron is biblical imagery, but it is not one of Paul's armor-of-God pieces in Ephesians 6.",
+          "theme": "Paul's imagery",
+          "difficulty": "hard",
+          "teachingNote": "Paul uses armor imagery to describe steadfast spiritual readiness."
+        },
+        {
+          "id": "ooo-hard-13",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Love",
+            "Joy",
+            "Peace",
+            "Goodness",
+            "Patience of Job"
+          ],
+          "oddItem": "Patience of Job",
+          "groupTheme": "The others are named as fruit of the Spirit in Galatians 5.",
+          "explanation": "Patience of Job is a virtue or biblical theme, but it is not listed in Paul's fruit of the Spirit list.",
+          "theme": "New Testament virtues",
+          "difficulty": "hard",
+          "teachingNote": "Galatians contrasts the works of the flesh with the Spirit's fruit."
+        },
+        {
+          "id": "ooo-hard-14",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Ephesus",
+            "Smyrna",
+            "Pergamos",
+            "Philadelphia",
+            "Antioch"
+          ],
+          "oddItem": "Antioch",
+          "groupTheme": "The others are the seven churches addressed in Revelation 2-3.",
+          "explanation": "Antioch was an important early Christian location, but it is not one of Revelation's seven churches.",
+          "theme": "Revelation",
+          "difficulty": "hard",
+          "teachingNote": "Revelation opens with messages to seven churches in Asia."
+        },
+        {
+          "id": "ooo-hard-15",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Stephen",
+            "Philip",
+            "Prochorus",
+            "Parmenas",
+            "Apollos"
+          ],
+          "oddItem": "Apollos",
+          "groupTheme": "The others are the seven men chosen for service in Acts 6.",
+          "explanation": "Apollos served in the early church, but is not named among the seven chosen in Acts 6.",
+          "theme": "Early church",
+          "difficulty": "hard",
+          "teachingNote": "Acts 6 names seven reputable men appointed to serve practical needs in the church."
+        },
+        {
+          "id": "ooo-hard-16",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Ark of the covenant",
+            "Mercy seat",
+            "Table of shewbread",
+            "Laver",
+            "Elijah's mantle"
+          ],
+          "oddItem": "Elijah's mantle",
+          "groupTheme": "The others are furnishings or objects connected with the tabernacle.",
+          "explanation": "Elijah's mantle is a biblical object, but it is not a tabernacle furnishing listed with the sanctuary pattern.",
+          "theme": "Tabernacle",
+          "difficulty": "hard",
+          "teachingNote": "The tabernacle furnishings taught Israel about worship, sacrifice, cleansing, and God's presence."
+        },
+        {
+          "id": "ooo-hard-17",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Loins girt with truth",
+            "Breastplate of righteousness",
+            "Shield of faith",
+            "Helmet of salvation",
+            "Sling of David"
+          ],
+          "oddItem": "Sling of David",
+          "groupTheme": "The others are pieces of the armor of God in Ephesians 6.",
+          "explanation": "Sling of David is biblical imagery, but it is not one of Paul's armor-of-God pieces in Ephesians 6.",
+          "theme": "Paul's imagery",
+          "difficulty": "hard",
+          "teachingNote": "Paul uses armor imagery to describe steadfast spiritual readiness."
+        },
+        {
+          "id": "ooo-hard-18",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Love",
+            "Joy",
+            "Peace",
+            "Faith",
+            "Hospitality"
+          ],
+          "oddItem": "Hospitality",
+          "groupTheme": "The others are named as fruit of the Spirit in Galatians 5.",
+          "explanation": "Hospitality is a virtue or biblical theme, but it is not listed in Paul's fruit of the Spirit list.",
+          "theme": "New Testament virtues",
+          "difficulty": "hard",
+          "teachingNote": "Galatians contrasts the works of the flesh with the Spirit's fruit."
+        },
+        {
+          "id": "ooo-hard-19",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Ephesus",
+            "Smyrna",
+            "Pergamos",
+            "Laodicea",
+            "Jerusalem"
+          ],
+          "oddItem": "Jerusalem",
+          "groupTheme": "The others are the seven churches addressed in Revelation 2-3.",
+          "explanation": "Jerusalem was an important early Christian location, but it is not one of Revelation's seven churches.",
+          "theme": "Revelation",
+          "difficulty": "hard",
+          "teachingNote": "Revelation opens with messages to seven churches in Asia."
+        },
+        {
+          "id": "ooo-hard-20",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Stephen",
+            "Philip",
+            "Prochorus",
+            "Nicolas",
+            "Timothy"
+          ],
+          "oddItem": "Timothy",
+          "groupTheme": "The others are the seven men chosen for service in Acts 6.",
+          "explanation": "Timothy served in the early church, but is not named among the seven chosen in Acts 6.",
+          "theme": "Early church",
+          "difficulty": "hard",
+          "teachingNote": "Acts 6 names seven reputable men appointed to serve practical needs in the church."
+        },
+        {
+          "id": "ooo-hard-21",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Ark of the covenant",
+            "Mercy seat",
+            "Golden candlestick",
+            "Altar of incense",
+            "Temple veil"
+          ],
+          "oddItem": "Temple veil",
+          "groupTheme": "The others are furnishings or objects connected with the tabernacle.",
+          "explanation": "Temple veil is a biblical object, but it is not a tabernacle furnishing listed with the sanctuary pattern.",
+          "theme": "Tabernacle",
+          "difficulty": "hard",
+          "teachingNote": "The tabernacle furnishings taught Israel about worship, sacrifice, cleansing, and God's presence."
+        },
+        {
+          "id": "ooo-hard-22",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Loins girt with truth",
+            "Breastplate of righteousness",
+            "Shield of faith",
+            "Sword of the Spirit",
+            "Breastplate of judgment"
+          ],
+          "oddItem": "Breastplate of judgment",
+          "groupTheme": "The others are pieces of the armor of God in Ephesians 6.",
+          "explanation": "Breastplate of judgment is biblical imagery, but it is not one of Paul's armor-of-God pieces in Ephesians 6.",
+          "theme": "Paul's imagery",
+          "difficulty": "hard",
+          "teachingNote": "Paul uses armor imagery to describe steadfast spiritual readiness."
+        },
+        {
+          "id": "ooo-hard-23",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Love",
+            "Joy",
+            "Peace",
+            "Meekness",
+            "Generosity"
+          ],
+          "oddItem": "Generosity",
+          "groupTheme": "The others are named as fruit of the Spirit in Galatians 5.",
+          "explanation": "Generosity is a virtue or biblical theme, but it is not listed in Paul's fruit of the Spirit list.",
+          "theme": "New Testament virtues",
+          "difficulty": "hard",
+          "teachingNote": "Galatians contrasts the works of the flesh with the Spirit's fruit."
+        },
+        {
+          "id": "ooo-hard-24",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Ephesus",
+            "Smyrna",
+            "Thyatira",
+            "Sardis",
+            "Colossae"
+          ],
+          "oddItem": "Colossae",
+          "groupTheme": "The others are the seven churches addressed in Revelation 2-3.",
+          "explanation": "Colossae was an important early Christian location, but it is not one of Revelation's seven churches.",
+          "theme": "Revelation",
+          "difficulty": "hard",
+          "teachingNote": "Revelation opens with messages to seven churches in Asia."
+        },
+        {
+          "id": "ooo-hard-25",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Stephen",
+            "Philip",
+            "Nicanor",
+            "Timon",
+            "Titus"
+          ],
+          "oddItem": "Titus",
+          "groupTheme": "The others are the seven men chosen for service in Acts 6.",
+          "explanation": "Titus served in the early church, but is not named among the seven chosen in Acts 6.",
+          "theme": "Early church",
+          "difficulty": "hard",
+          "teachingNote": "Acts 6 names seven reputable men appointed to serve practical needs in the church."
+        },
+        {
+          "id": "ooo-hard-26",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Ark of the covenant",
+            "Mercy seat",
+            "Golden candlestick",
+            "Brazen altar",
+            "Bronze serpent"
+          ],
+          "oddItem": "Bronze serpent",
+          "groupTheme": "The others are furnishings or objects connected with the tabernacle.",
+          "explanation": "Bronze serpent is a biblical object, but it is not a tabernacle furnishing listed with the sanctuary pattern.",
+          "theme": "Tabernacle",
+          "difficulty": "hard",
+          "teachingNote": "The tabernacle furnishings taught Israel about worship, sacrifice, cleansing, and God's presence."
+        },
+        {
+          "id": "ooo-hard-27",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Loins girt with truth",
+            "Breastplate of righteousness",
+            "Helmet of salvation",
+            "Sword of the Spirit",
+            "Crown of life"
+          ],
+          "oddItem": "Crown of life",
+          "groupTheme": "The others are pieces of the armor of God in Ephesians 6.",
+          "explanation": "Crown of life is biblical imagery, but it is not one of Paul's armor-of-God pieces in Ephesians 6.",
+          "theme": "Paul's imagery",
+          "difficulty": "hard",
+          "teachingNote": "Paul uses armor imagery to describe steadfast spiritual readiness."
+        },
+        {
+          "id": "ooo-hard-28",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Love",
+            "Joy",
+            "Peace",
+            "Temperance",
+            "Knowledge"
+          ],
+          "oddItem": "Knowledge",
+          "groupTheme": "The others are named as fruit of the Spirit in Galatians 5.",
+          "explanation": "Knowledge is a virtue or biblical theme, but it is not listed in Paul's fruit of the Spirit list.",
+          "theme": "New Testament virtues",
+          "difficulty": "hard",
+          "teachingNote": "Galatians contrasts the works of the flesh with the Spirit's fruit."
+        },
+        {
+          "id": "ooo-hard-29",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Ephesus",
+            "Smyrna",
+            "Thyatira",
+            "Philadelphia",
+            "Corinth"
+          ],
+          "oddItem": "Corinth",
+          "groupTheme": "The others are the seven churches addressed in Revelation 2-3.",
+          "explanation": "Corinth was an important early Christian location, but it is not one of Revelation's seven churches.",
+          "theme": "Revelation",
+          "difficulty": "hard",
+          "teachingNote": "Revelation opens with messages to seven churches in Asia."
+        },
+        {
+          "id": "ooo-hard-30",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Stephen",
+            "Philip",
+            "Nicanor",
+            "Parmenas",
+            "Barnabas"
+          ],
+          "oddItem": "Barnabas",
+          "groupTheme": "The others are the seven men chosen for service in Acts 6.",
+          "explanation": "Barnabas served in the early church, but is not named among the seven chosen in Acts 6.",
+          "theme": "Early church",
+          "difficulty": "hard",
+          "teachingNote": "Acts 6 names seven reputable men appointed to serve practical needs in the church."
+        },
+        {
+          "id": "ooo-hard-31",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Ark of the covenant",
+            "Mercy seat",
+            "Golden candlestick",
+            "Laver",
+            "David's harp"
+          ],
+          "oddItem": "David's harp",
+          "groupTheme": "The others are furnishings or objects connected with the tabernacle.",
+          "explanation": "David's harp is a biblical object, but it is not a tabernacle furnishing listed with the sanctuary pattern.",
+          "theme": "Tabernacle",
+          "difficulty": "hard",
+          "teachingNote": "The tabernacle furnishings taught Israel about worship, sacrifice, cleansing, and God's presence."
+        },
+        {
+          "id": "ooo-hard-32",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Loins girt with truth",
+            "Shoes of peace",
+            "Shield of faith",
+            "Helmet of salvation",
+            "Mantle of Elijah"
+          ],
+          "oddItem": "Mantle of Elijah",
+          "groupTheme": "The others are pieces of the armor of God in Ephesians 6.",
+          "explanation": "Mantle of Elijah is biblical imagery, but it is not one of Paul's armor-of-God pieces in Ephesians 6.",
+          "theme": "Paul's imagery",
+          "difficulty": "hard",
+          "teachingNote": "Paul uses armor imagery to describe steadfast spiritual readiness."
+        },
+        {
+          "id": "ooo-hard-33",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Love",
+            "Joy",
+            "Longsuffering",
+            "Gentleness",
+            "Courage"
+          ],
+          "oddItem": "Courage",
+          "groupTheme": "The others are named as fruit of the Spirit in Galatians 5.",
+          "explanation": "Courage is a virtue or biblical theme, but it is not listed in Paul's fruit of the Spirit list.",
+          "theme": "New Testament virtues",
+          "difficulty": "hard",
+          "teachingNote": "Galatians contrasts the works of the flesh with the Spirit's fruit."
+        },
+        {
+          "id": "ooo-hard-34",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Ephesus",
+            "Smyrna",
+            "Thyatira",
+            "Laodicea",
+            "Rome"
+          ],
+          "oddItem": "Rome",
+          "groupTheme": "The others are the seven churches addressed in Revelation 2-3.",
+          "explanation": "Rome was an important early Christian location, but it is not one of Revelation's seven churches.",
+          "theme": "Revelation",
+          "difficulty": "hard",
+          "teachingNote": "Revelation opens with messages to seven churches in Asia."
+        },
+        {
+          "id": "ooo-hard-35",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Stephen",
+            "Philip",
+            "Nicanor",
+            "Nicolas",
+            "Silas"
+          ],
+          "oddItem": "Silas",
+          "groupTheme": "The others are the seven men chosen for service in Acts 6.",
+          "explanation": "Silas served in the early church, but is not named among the seven chosen in Acts 6.",
+          "theme": "Early church",
+          "difficulty": "hard",
+          "teachingNote": "Acts 6 names seven reputable men appointed to serve practical needs in the church."
+        },
+        {
+          "id": "ooo-hard-36",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Ark of the covenant",
+            "Mercy seat",
+            "Altar of incense",
+            "Brazen altar",
+            "Gideon's fleece"
+          ],
+          "oddItem": "Gideon's fleece",
+          "groupTheme": "The others are furnishings or objects connected with the tabernacle.",
+          "explanation": "Gideon's fleece is a biblical object, but it is not a tabernacle furnishing listed with the sanctuary pattern.",
+          "theme": "Tabernacle",
+          "difficulty": "hard",
+          "teachingNote": "The tabernacle furnishings taught Israel about worship, sacrifice, cleansing, and God's presence."
+        },
+        {
+          "id": "ooo-hard-37",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Loins girt with truth",
+            "Shoes of peace",
+            "Shield of faith",
+            "Sword of the Spirit",
+            "Rod of Aaron"
+          ],
+          "oddItem": "Rod of Aaron",
+          "groupTheme": "The others are pieces of the armor of God in Ephesians 6.",
+          "explanation": "Rod of Aaron is biblical imagery, but it is not one of Paul's armor-of-God pieces in Ephesians 6.",
+          "theme": "Paul's imagery",
+          "difficulty": "hard",
+          "teachingNote": "Paul uses armor imagery to describe steadfast spiritual readiness."
+        },
+        {
+          "id": "ooo-hard-38",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Love",
+            "Joy",
+            "Longsuffering",
+            "Goodness",
+            "Patience of Job"
+          ],
+          "oddItem": "Patience of Job",
+          "groupTheme": "The others are named as fruit of the Spirit in Galatians 5.",
+          "explanation": "Patience of Job is a virtue or biblical theme, but it is not listed in Paul's fruit of the Spirit list.",
+          "theme": "New Testament virtues",
+          "difficulty": "hard",
+          "teachingNote": "Galatians contrasts the works of the flesh with the Spirit's fruit."
+        },
+        {
+          "id": "ooo-hard-39",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Ephesus",
+            "Smyrna",
+            "Sardis",
+            "Philadelphia",
+            "Antioch"
+          ],
+          "oddItem": "Antioch",
+          "groupTheme": "The others are the seven churches addressed in Revelation 2-3.",
+          "explanation": "Antioch was an important early Christian location, but it is not one of Revelation's seven churches.",
+          "theme": "Revelation",
+          "difficulty": "hard",
+          "teachingNote": "Revelation opens with messages to seven churches in Asia."
+        },
+        {
+          "id": "ooo-hard-40",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Stephen",
+            "Philip",
+            "Timon",
+            "Parmenas",
+            "Apollos"
+          ],
+          "oddItem": "Apollos",
+          "groupTheme": "The others are the seven men chosen for service in Acts 6.",
+          "explanation": "Apollos served in the early church, but is not named among the seven chosen in Acts 6.",
+          "theme": "Early church",
+          "difficulty": "hard",
+          "teachingNote": "Acts 6 names seven reputable men appointed to serve practical needs in the church."
+        },
+        {
+          "id": "ooo-hard-41",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Ark of the covenant",
+            "Mercy seat",
+            "Altar of incense",
+            "Laver",
+            "Elijah's mantle"
+          ],
+          "oddItem": "Elijah's mantle",
+          "groupTheme": "The others are furnishings or objects connected with the tabernacle.",
+          "explanation": "Elijah's mantle is a biblical object, but it is not a tabernacle furnishing listed with the sanctuary pattern.",
+          "theme": "Tabernacle",
+          "difficulty": "hard",
+          "teachingNote": "The tabernacle furnishings taught Israel about worship, sacrifice, cleansing, and God's presence."
+        },
+        {
+          "id": "ooo-hard-42",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Loins girt with truth",
+            "Shoes of peace",
+            "Helmet of salvation",
+            "Sword of the Spirit",
+            "Sling of David"
+          ],
+          "oddItem": "Sling of David",
+          "groupTheme": "The others are pieces of the armor of God in Ephesians 6.",
+          "explanation": "Sling of David is biblical imagery, but it is not one of Paul's armor-of-God pieces in Ephesians 6.",
+          "theme": "Paul's imagery",
+          "difficulty": "hard",
+          "teachingNote": "Paul uses armor imagery to describe steadfast spiritual readiness."
+        },
+        {
+          "id": "ooo-hard-43",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Love",
+            "Joy",
+            "Longsuffering",
+            "Faith",
+            "Hospitality"
+          ],
+          "oddItem": "Hospitality",
+          "groupTheme": "The others are named as fruit of the Spirit in Galatians 5.",
+          "explanation": "Hospitality is a virtue or biblical theme, but it is not listed in Paul's fruit of the Spirit list.",
+          "theme": "New Testament virtues",
+          "difficulty": "hard",
+          "teachingNote": "Galatians contrasts the works of the flesh with the Spirit's fruit."
+        },
+        {
+          "id": "ooo-hard-44",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Ephesus",
+            "Smyrna",
+            "Sardis",
+            "Laodicea",
+            "Jerusalem"
+          ],
+          "oddItem": "Jerusalem",
+          "groupTheme": "The others are the seven churches addressed in Revelation 2-3.",
+          "explanation": "Jerusalem was an important early Christian location, but it is not one of Revelation's seven churches.",
+          "theme": "Revelation",
+          "difficulty": "hard",
+          "teachingNote": "Revelation opens with messages to seven churches in Asia."
+        },
+        {
+          "id": "ooo-hard-45",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Stephen",
+            "Philip",
+            "Timon",
+            "Nicolas",
+            "Timothy"
+          ],
+          "oddItem": "Timothy",
+          "groupTheme": "The others are the seven men chosen for service in Acts 6.",
+          "explanation": "Timothy served in the early church, but is not named among the seven chosen in Acts 6.",
+          "theme": "Early church",
+          "difficulty": "hard",
+          "teachingNote": "Acts 6 names seven reputable men appointed to serve practical needs in the church."
+        },
+        {
+          "id": "ooo-hard-46",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Ark of the covenant",
+            "Mercy seat",
+            "Brazen altar",
+            "Laver",
+            "Temple veil"
+          ],
+          "oddItem": "Temple veil",
+          "groupTheme": "The others are furnishings or objects connected with the tabernacle.",
+          "explanation": "Temple veil is a biblical object, but it is not a tabernacle furnishing listed with the sanctuary pattern.",
+          "theme": "Tabernacle",
+          "difficulty": "hard",
+          "teachingNote": "The tabernacle furnishings taught Israel about worship, sacrifice, cleansing, and God's presence."
+        },
+        {
+          "id": "ooo-hard-47",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Loins girt with truth",
+            "Shield of faith",
+            "Helmet of salvation",
+            "Sword of the Spirit",
+            "Breastplate of judgment"
+          ],
+          "oddItem": "Breastplate of judgment",
+          "groupTheme": "The others are pieces of the armor of God in Ephesians 6.",
+          "explanation": "Breastplate of judgment is biblical imagery, but it is not one of Paul's armor-of-God pieces in Ephesians 6.",
+          "theme": "Paul's imagery",
+          "difficulty": "hard",
+          "teachingNote": "Paul uses armor imagery to describe steadfast spiritual readiness."
+        },
+        {
+          "id": "ooo-hard-48",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Love",
+            "Joy",
+            "Longsuffering",
+            "Meekness",
+            "Generosity"
+          ],
+          "oddItem": "Generosity",
+          "groupTheme": "The others are named as fruit of the Spirit in Galatians 5.",
+          "explanation": "Generosity is a virtue or biblical theme, but it is not listed in Paul's fruit of the Spirit list.",
+          "theme": "New Testament virtues",
+          "difficulty": "hard",
+          "teachingNote": "Galatians contrasts the works of the flesh with the Spirit's fruit."
+        },
+        {
+          "id": "ooo-hard-49",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Ephesus",
+            "Smyrna",
+            "Philadelphia",
+            "Laodicea",
+            "Colossae"
+          ],
+          "oddItem": "Colossae",
+          "groupTheme": "The others are the seven churches addressed in Revelation 2-3.",
+          "explanation": "Colossae was an important early Christian location, but it is not one of Revelation's seven churches.",
+          "theme": "Revelation",
+          "difficulty": "hard",
+          "teachingNote": "Revelation opens with messages to seven churches in Asia."
+        },
+        {
+          "id": "ooo-hard-50",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Stephen",
+            "Philip",
+            "Parmenas",
+            "Nicolas",
+            "Titus"
+          ],
+          "oddItem": "Titus",
+          "groupTheme": "The others are the seven men chosen for service in Acts 6.",
+          "explanation": "Titus served in the early church, but is not named among the seven chosen in Acts 6.",
+          "theme": "Early church",
+          "difficulty": "hard",
+          "teachingNote": "Acts 6 names seven reputable men appointed to serve practical needs in the church."
+        },
+        {
+          "id": "ooo-hard-51",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Ark of the covenant",
+            "Table of shewbread",
+            "Golden candlestick",
+            "Altar of incense",
+            "Bronze serpent"
+          ],
+          "oddItem": "Bronze serpent",
+          "groupTheme": "The others are furnishings or objects connected with the tabernacle.",
+          "explanation": "Bronze serpent is a biblical object, but it is not a tabernacle furnishing listed with the sanctuary pattern.",
+          "theme": "Tabernacle",
+          "difficulty": "hard",
+          "teachingNote": "The tabernacle furnishings taught Israel about worship, sacrifice, cleansing, and God's presence."
+        },
+        {
+          "id": "ooo-hard-52",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Breastplate of righteousness",
+            "Shoes of peace",
+            "Shield of faith",
+            "Helmet of salvation",
+            "Crown of life"
+          ],
+          "oddItem": "Crown of life",
+          "groupTheme": "The others are pieces of the armor of God in Ephesians 6.",
+          "explanation": "Crown of life is biblical imagery, but it is not one of Paul's armor-of-God pieces in Ephesians 6.",
+          "theme": "Paul's imagery",
+          "difficulty": "hard",
+          "teachingNote": "Paul uses armor imagery to describe steadfast spiritual readiness."
+        },
+        {
+          "id": "ooo-hard-53",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Love",
+            "Joy",
+            "Longsuffering",
+            "Temperance",
+            "Knowledge"
+          ],
+          "oddItem": "Knowledge",
+          "groupTheme": "The others are named as fruit of the Spirit in Galatians 5.",
+          "explanation": "Knowledge is a virtue or biblical theme, but it is not listed in Paul's fruit of the Spirit list.",
+          "theme": "New Testament virtues",
+          "difficulty": "hard",
+          "teachingNote": "Galatians contrasts the works of the flesh with the Spirit's fruit."
+        },
+        {
+          "id": "ooo-hard-54",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Ephesus",
+            "Pergamos",
+            "Thyatira",
+            "Sardis",
+            "Corinth"
+          ],
+          "oddItem": "Corinth",
+          "groupTheme": "The others are the seven churches addressed in Revelation 2-3.",
+          "explanation": "Corinth was an important early Christian location, but it is not one of Revelation's seven churches.",
+          "theme": "Revelation",
+          "difficulty": "hard",
+          "teachingNote": "Revelation opens with messages to seven churches in Asia."
+        },
+        {
+          "id": "ooo-hard-55",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Stephen",
+            "Prochorus",
+            "Nicanor",
+            "Timon",
+            "Barnabas"
+          ],
+          "oddItem": "Barnabas",
+          "groupTheme": "The others are the seven men chosen for service in Acts 6.",
+          "explanation": "Barnabas served in the early church, but is not named among the seven chosen in Acts 6.",
+          "theme": "Early church",
+          "difficulty": "hard",
+          "teachingNote": "Acts 6 names seven reputable men appointed to serve practical needs in the church."
+        },
+        {
+          "id": "ooo-hard-56",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Ark of the covenant",
+            "Table of shewbread",
+            "Golden candlestick",
+            "Brazen altar",
+            "David's harp"
+          ],
+          "oddItem": "David's harp",
+          "groupTheme": "The others are furnishings or objects connected with the tabernacle.",
+          "explanation": "David's harp is a biblical object, but it is not a tabernacle furnishing listed with the sanctuary pattern.",
+          "theme": "Tabernacle",
+          "difficulty": "hard",
+          "teachingNote": "The tabernacle furnishings taught Israel about worship, sacrifice, cleansing, and God's presence."
+        },
+        {
+          "id": "ooo-hard-57",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Breastplate of righteousness",
+            "Shoes of peace",
+            "Shield of faith",
+            "Sword of the Spirit",
+            "Mantle of Elijah"
+          ],
+          "oddItem": "Mantle of Elijah",
+          "groupTheme": "The others are pieces of the armor of God in Ephesians 6.",
+          "explanation": "Mantle of Elijah is biblical imagery, but it is not one of Paul's armor-of-God pieces in Ephesians 6.",
+          "theme": "Paul's imagery",
+          "difficulty": "hard",
+          "teachingNote": "Paul uses armor imagery to describe steadfast spiritual readiness."
+        },
+        {
+          "id": "ooo-hard-58",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Love",
+            "Joy",
+            "Gentleness",
+            "Goodness",
+            "Courage"
+          ],
+          "oddItem": "Courage",
+          "groupTheme": "The others are named as fruit of the Spirit in Galatians 5.",
+          "explanation": "Courage is a virtue or biblical theme, but it is not listed in Paul's fruit of the Spirit list.",
+          "theme": "New Testament virtues",
+          "difficulty": "hard",
+          "teachingNote": "Galatians contrasts the works of the flesh with the Spirit's fruit."
+        },
+        {
+          "id": "ooo-hard-59",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Ephesus",
+            "Pergamos",
+            "Thyatira",
+            "Philadelphia",
+            "Rome"
+          ],
+          "oddItem": "Rome",
+          "groupTheme": "The others are the seven churches addressed in Revelation 2-3.",
+          "explanation": "Rome was an important early Christian location, but it is not one of Revelation's seven churches.",
+          "theme": "Revelation",
+          "difficulty": "hard",
+          "teachingNote": "Revelation opens with messages to seven churches in Asia."
+        },
+        {
+          "id": "ooo-hard-60",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Stephen",
+            "Prochorus",
+            "Nicanor",
+            "Parmenas",
+            "Silas"
+          ],
+          "oddItem": "Silas",
+          "groupTheme": "The others are the seven men chosen for service in Acts 6.",
+          "explanation": "Silas served in the early church, but is not named among the seven chosen in Acts 6.",
+          "theme": "Early church",
+          "difficulty": "hard",
+          "teachingNote": "Acts 6 names seven reputable men appointed to serve practical needs in the church."
+        },
+        {
+          "id": "ooo-hard-61",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Ark of the covenant",
+            "Table of shewbread",
+            "Golden candlestick",
+            "Laver",
+            "Gideon's fleece"
+          ],
+          "oddItem": "Gideon's fleece",
+          "groupTheme": "The others are furnishings or objects connected with the tabernacle.",
+          "explanation": "Gideon's fleece is a biblical object, but it is not a tabernacle furnishing listed with the sanctuary pattern.",
+          "theme": "Tabernacle",
+          "difficulty": "hard",
+          "teachingNote": "The tabernacle furnishings taught Israel about worship, sacrifice, cleansing, and God's presence."
+        },
+        {
+          "id": "ooo-hard-62",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Breastplate of righteousness",
+            "Shoes of peace",
+            "Helmet of salvation",
+            "Sword of the Spirit",
+            "Rod of Aaron"
+          ],
+          "oddItem": "Rod of Aaron",
+          "groupTheme": "The others are pieces of the armor of God in Ephesians 6.",
+          "explanation": "Rod of Aaron is biblical imagery, but it is not one of Paul's armor-of-God pieces in Ephesians 6.",
+          "theme": "Paul's imagery",
+          "difficulty": "hard",
+          "teachingNote": "Paul uses armor imagery to describe steadfast spiritual readiness."
+        },
+        {
+          "id": "ooo-hard-63",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Love",
+            "Joy",
+            "Gentleness",
+            "Faith",
+            "Patience of Job"
+          ],
+          "oddItem": "Patience of Job",
+          "groupTheme": "The others are named as fruit of the Spirit in Galatians 5.",
+          "explanation": "Patience of Job is a virtue or biblical theme, but it is not listed in Paul's fruit of the Spirit list.",
+          "theme": "New Testament virtues",
+          "difficulty": "hard",
+          "teachingNote": "Galatians contrasts the works of the flesh with the Spirit's fruit."
+        },
+        {
+          "id": "ooo-hard-64",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Ephesus",
+            "Pergamos",
+            "Thyatira",
+            "Laodicea",
+            "Antioch"
+          ],
+          "oddItem": "Antioch",
+          "groupTheme": "The others are the seven churches addressed in Revelation 2-3.",
+          "explanation": "Antioch was an important early Christian location, but it is not one of Revelation's seven churches.",
+          "theme": "Revelation",
+          "difficulty": "hard",
+          "teachingNote": "Revelation opens with messages to seven churches in Asia."
+        },
+        {
+          "id": "ooo-hard-65",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Stephen",
+            "Prochorus",
+            "Nicanor",
+            "Nicolas",
+            "Apollos"
+          ],
+          "oddItem": "Apollos",
+          "groupTheme": "The others are the seven men chosen for service in Acts 6.",
+          "explanation": "Apollos served in the early church, but is not named among the seven chosen in Acts 6.",
+          "theme": "Early church",
+          "difficulty": "hard",
+          "teachingNote": "Acts 6 names seven reputable men appointed to serve practical needs in the church."
+        },
+        {
+          "id": "ooo-hard-66",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Ark of the covenant",
+            "Table of shewbread",
+            "Altar of incense",
+            "Brazen altar",
+            "Elijah's mantle"
+          ],
+          "oddItem": "Elijah's mantle",
+          "groupTheme": "The others are furnishings or objects connected with the tabernacle.",
+          "explanation": "Elijah's mantle is a biblical object, but it is not a tabernacle furnishing listed with the sanctuary pattern.",
+          "theme": "Tabernacle",
+          "difficulty": "hard",
+          "teachingNote": "The tabernacle furnishings taught Israel about worship, sacrifice, cleansing, and God's presence."
+        },
+        {
+          "id": "ooo-hard-67",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Breastplate of righteousness",
+            "Shield of faith",
+            "Helmet of salvation",
+            "Sword of the Spirit",
+            "Sling of David"
+          ],
+          "oddItem": "Sling of David",
+          "groupTheme": "The others are pieces of the armor of God in Ephesians 6.",
+          "explanation": "Sling of David is biblical imagery, but it is not one of Paul's armor-of-God pieces in Ephesians 6.",
+          "theme": "Paul's imagery",
+          "difficulty": "hard",
+          "teachingNote": "Paul uses armor imagery to describe steadfast spiritual readiness."
+        },
+        {
+          "id": "ooo-hard-68",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Love",
+            "Joy",
+            "Gentleness",
+            "Meekness",
+            "Hospitality"
+          ],
+          "oddItem": "Hospitality",
+          "groupTheme": "The others are named as fruit of the Spirit in Galatians 5.",
+          "explanation": "Hospitality is a virtue or biblical theme, but it is not listed in Paul's fruit of the Spirit list.",
+          "theme": "New Testament virtues",
+          "difficulty": "hard",
+          "teachingNote": "Galatians contrasts the works of the flesh with the Spirit's fruit."
+        },
+        {
+          "id": "ooo-hard-69",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Ephesus",
+            "Pergamos",
+            "Sardis",
+            "Philadelphia",
+            "Jerusalem"
+          ],
+          "oddItem": "Jerusalem",
+          "groupTheme": "The others are the seven churches addressed in Revelation 2-3.",
+          "explanation": "Jerusalem was an important early Christian location, but it is not one of Revelation's seven churches.",
+          "theme": "Revelation",
+          "difficulty": "hard",
+          "teachingNote": "Revelation opens with messages to seven churches in Asia."
+        },
+        {
+          "id": "ooo-hard-70",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Stephen",
+            "Prochorus",
+            "Timon",
+            "Parmenas",
+            "Timothy"
+          ],
+          "oddItem": "Timothy",
+          "groupTheme": "The others are the seven men chosen for service in Acts 6.",
+          "explanation": "Timothy served in the early church, but is not named among the seven chosen in Acts 6.",
+          "theme": "Early church",
+          "difficulty": "hard",
+          "teachingNote": "Acts 6 names seven reputable men appointed to serve practical needs in the church."
+        }
+      ]
+    }
+  ]
+}

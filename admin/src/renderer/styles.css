@@ -232,6 +232,10 @@ body {
   max-width: 160px;
 }
 
+.compact-report {
+  margin-bottom: 10px;
+}
+
 .lock-shell {
   display: grid;
   place-items: center;
@@ -402,6 +406,90 @@ body {
   text-align: left;
   padding: 6px 10px;
   border-bottom: 1px solid var(--panel-border);
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.62);
+}
+
+.projector-preview-modal {
+  width: min(980px, 100%);
+  border: 1px solid var(--panel-border);
+  border-radius: 14px;
+  background: #111722;
+  padding: 14px;
+}
+
+.projector-preview-stage {
+  min-height: 540px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #fdf9ee 0%, #efe4d0 100%);
+  color: #20150f;
+  padding: 18px;
+}
+
+.projector-preview-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: start;
+  margin-bottom: 16px;
+}
+
+.projector-preview-header h2 {
+  margin: 0;
+  font-size: 2.25rem;
+}
+
+.eyebrow {
+  margin: 0 0 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #865726;
+  font-size: 0.72rem;
+}
+
+.projector-preview-card {
+  border: 1px solid rgba(36, 25, 21, 0.24);
+  border-radius: 12px;
+  background: rgba(255, 254, 250, 0.96);
+  padding: 18px;
+}
+
+.projector-preview-card h3 {
+  margin: 4px 0 16px;
+  font-size: 2rem;
+}
+
+.preview-field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.preview-field {
+  display: grid;
+  gap: 4px;
+  border: 1px solid rgba(36, 25, 21, 0.14);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.preview-field span {
+  color: #6d574a;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+}
+
+.preview-field strong {
+  font-size: 1rem;
+  overflow-wrap: anywhere;
 }
 
 /* Sentinel/smoke-test panel */

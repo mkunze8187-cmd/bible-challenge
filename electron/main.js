@@ -1,4 +1,4 @@
-const { app, BrowserWindow, dialog, ipcMain, shell } = require("electron");
+const { app, BrowserWindow, dialog, ipcMain, screen, shell } = require("electron");
 const fs = require("node:fs/promises");
 const path = require("node:path");
 
@@ -185,8 +185,23 @@ async function writeCustomContentPack(pack) {
   return readCustomContentPacks();
 }
 
+let mainWindow = null;
+let projectorWindow = null;
+let projectorState = null;
+
+function loadAppWindow(window, query = "") {
+  const devServerUrl = process.env.VITE_DEV_SERVER_URL;
+
+  if (devServerUrl) {
+    window.loadURL(`${devServerUrl}${query}`);
+    return;
+  }
+
+  window.loadFile(path.join(__dirname, "..", "dist", "index.html"), query ? { query: Object.fromEntries(new URLSearchParams(query.slice(1))) } : undefined);
+}
+
 function createWindow() {
-  const window = new BrowserWindow({
+  mainWindow = new BrowserWindow({
     width: 1500,
     height: 980,
     minWidth: 1180,
@@ -202,24 +217,83 @@ function createWindow() {
     }
   });
 
-  window.webContents.on("did-fail-load", (_event, errorCode, errorDescription) => {
+  mainWindow.webContents.on("did-fail-load", (_event, errorCode, errorDescription) => {
     console.error(`Renderer failed to load: ${errorCode} ${errorDescription}`);
-    window.show();
+    mainWindow.show();
   });
 
-  window.webContents.setWindowOpenHandler(({ url }) => {
+  mainWindow.webContents.setWindowOpenHandler(({ url }) => {
     shell.openExternal(url);
     return { action: "deny" };
   });
 
-  const devServerUrl = process.env.VITE_DEV_SERVER_URL;
+  mainWindow.on("closed", () => {
+    mainWindow = null;
+    if (projectorWindow) {
+      projectorWindow.close();
+    }
+  });
 
-  if (devServerUrl) {
-    window.loadURL(devServerUrl);
-    return;
+  loadAppWindow(mainWindow);
+}
+
+function getDisplaySummaries() {
+  const primaryDisplayId = screen.getPrimaryDisplay().id;
+
+  return screen.getAllDisplays().map((display, index) => ({
+    id: display.id,
+    label: `${display.label || `Display ${index + 1}`} (${display.size.width} x ${display.size.height})${display.id === primaryDisplayId ? " (Primary)" : ""}`,
+    bounds: display.bounds,
+    primary: display.id === primaryDisplayId
+  }));
+}
+
+function notifyMainWindowProjectorStatus(isOpen) {
+  if (mainWindow && !mainWindow.isDestroyed()) {
+    mainWindow.webContents.send("projector:window-status", { isOpen });
+  }
+}
+
+function openProjectorWindow(displayId) {
+  const displays = screen.getAllDisplays();
+  const selectedDisplay = displays.find((display) => display.id === Number(displayId)) ?? displays.find((display) => display.id !== screen.getPrimaryDisplay().id) ?? screen.getPrimaryDisplay();
+
+  if (projectorWindow && !projectorWindow.isDestroyed()) {
+    projectorWindow.setBounds(selectedDisplay.bounds);
+    projectorWindow.setFullScreen(true);
+    projectorWindow.focus();
+    notifyMainWindowProjectorStatus(true);
+    return getDisplaySummaries();
   }
 
-  window.loadFile(path.join(__dirname, "..", "dist", "index.html"));
+  projectorWindow = new BrowserWindow({
+    x: selectedDisplay.bounds.x,
+    y: selectedDisplay.bounds.y,
+    width: selectedDisplay.bounds.width,
+    height: selectedDisplay.bounds.height,
+    fullscreen: true,
+    autoHideMenuBar: true,
+    backgroundColor: "#efe3ce",
+    webPreferences: {
+      preload: path.join(__dirname, "preload.js"),
+      contextIsolation: true,
+      nodeIntegration: false
+    }
+  });
+
+  projectorWindow.webContents.on("did-finish-load", () => {
+    if (projectorState) {
+      projectorWindow.webContents.send("projector:state", projectorState);
+    }
+  });
+
+  projectorWindow.on("closed", () => {
+    projectorWindow = null;
+    notifyMainWindowProjectorStatus(false);
+  });
+
+  loadAppWindow(projectorWindow, "?projector=1");
+  return getDisplaySummaries();
 }
 
 app.whenReady().then(() => {
@@ -246,6 +320,29 @@ ipcMain.handle("app:open-external", async (_event, url) => {
 
 ipcMain.handle("app:get-version", () => {
   return app.getVersion();
+});
+
+ipcMain.handle("projector:get-displays", () => {
+  return getDisplaySummaries();
+});
+
+ipcMain.handle("projector:open", (_event, displayId) => {
+  return openProjectorWindow(displayId);
+});
+
+ipcMain.handle("projector:close", () => {
+  if (projectorWindow && !projectorWindow.isDestroyed()) {
+    projectorWindow.close();
+  } else {
+    notifyMainWindowProjectorStatus(false);
+  }
+});
+
+ipcMain.on("projector:update-state", (_event, state) => {
+  projectorState = state ?? null;
+  if (projectorWindow && !projectorWindow.isDestroyed()) {
+    projectorWindow.webContents.send("projector:state", projectorState);
+  }
 });
 
 ipcMain.handle("app:get-settings", async () => {

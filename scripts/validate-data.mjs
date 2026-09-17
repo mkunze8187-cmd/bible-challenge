@@ -21,7 +21,10 @@ const files = [
   { fileName: "who-said-it.json", game: "who-said-it" },
   { fileName: "bible-books-relay.json", game: "bible-books-relay" },
   { fileName: "missing-word.json", game: "missing-word" },
+  { fileName: "odd-one-out.json", game: "odd-one-out" },
+  { fileName: "genealogy.json", game: "genealogy" },
   { fileName: "prophecy-match.json", game: "prophecy-match" },
+  { fileName: "parable-match.json", game: "parable-match" },
   { fileName: "messiah-prophecy.json", game: "messiah-prophecy" },
   { fileName: "prophecy-clue-ladder.json", game: "prophecy-clue-ladder" },
   { fileName: "fulfillment-finder.json", game: "fulfillment-finder" },
@@ -752,6 +755,29 @@ function validateVerseTypingRace(pack) {
   });
 }
 
+function validateOddOneOut(pack) {
+  pack.sessions.forEach((session) => {
+    session.rounds.forEach((round) => {
+      ensure(Array.isArray(round.items) && round.items.includes(round.oddItem), `${round.id}: oddItem must be one of items.`);
+      ensure(isNonEmptyString(round.groupTheme), `${round.id}: groupTheme is required.`);
+      ensure(isNonEmptyString(round.explanation), `${round.id}: explanation is required.`);
+      validateDifficulty(round);
+    });
+  });
+}
+
+function validateGenealogy(pack) {
+  pack.sessions.forEach((session) => {
+    session.rounds.forEach((round) => {
+      const first = round.fullChain?.[0];
+      const last = round.fullChain?.[round.fullChain.length - 1];
+      ensure(normalizeAlias(first ?? "") === normalizeAlias(round.startPerson), `${round.id}: fullChain must start with startPerson.`);
+      ensure(normalizeAlias(last ?? "") === normalizeAlias(round.endPerson), `${round.id}: fullChain must end with endPerson.`);
+      validateDifficulty(round);
+    });
+  });
+}
+
 function validateWordLadder(pack) {
   const rounds = getAllRounds(pack);
   ensure(rounds.length >= 25, "word-ladder.json: must contain at least 25 playable rounds.");
@@ -875,6 +901,21 @@ function validateProphecyMatch(pack) {
     const pairKey = `${normalizeAlias(round.prophecyReference)}=>${normalizeAlias(round.fulfillmentReference)}`;
     ensure(!pairs.has(pairKey), `${round.id}: duplicate prophecy/fulfillment pair.`);
     pairs.add(pairKey);
+  });
+}
+
+function validateParableMatch(pack) {
+  pack.sessions.forEach((session) => {
+    session.rounds.forEach((round) => {
+      ensure(isNonEmptyString(round.title), `${round.id}: title is required.`);
+      ensure(isNonEmptyString(round.parableReference), `${round.id}: parableReference is required.`);
+      ensure(isNonEmptyString(round.parableSummary), `${round.id}: parableSummary is required.`);
+      ensure(isNonEmptyString(round.parableTextShort), `${round.id}: parableTextShort is required.`);
+      ensure(isNonEmptyString(round.lessonSummary), `${round.id}: lessonSummary is required.`);
+      ensure(isNonEmptyString(round.lessonTextShort), `${round.id}: lessonTextShort is required.`);
+      ensure(isNonEmptyString(round.answerKey), `${round.id}: answerKey is required.`);
+      validateDifficulty(round);
+    });
   });
 }
 

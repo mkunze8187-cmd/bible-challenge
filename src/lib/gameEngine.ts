@@ -40,11 +40,14 @@ import type {
   ChapterFinderRound,
   CompleteVerseRound,
   FulfillmentFinderRound,
+  GenealogyRound,
   GameId,
   InitialsRound,
   MessiahProphecyRound,
   MissingWordRound,
   NameThatBookRound,
+  OddOneOutRound,
+  ParableMatchRound,
   ProphecyCategoriesRound,
   ProphecyCategoryCard,
   ProphecyClueLadderRound,
@@ -310,6 +313,34 @@ export interface MissingWordState extends RoundSessionBase<MissingWordRound, Mis
   gameId: "missing-word";
 }
 
+export interface OddOneOutPrompt {
+  kind: "odd-one-out";
+  round: OddOneOutRound;
+  eliminatedChoices: string[];
+  selectedChoice: string | null;
+  phase: "active" | "resolved";
+  wasCorrect: boolean | null;
+  resolvedMessage: string | null;
+}
+
+export interface OddOneOutState extends RoundSessionBase<OddOneOutRound, OddOneOutPrompt> {
+  gameId: "odd-one-out";
+}
+
+export interface GenealogyPrompt {
+  kind: "genealogy";
+  round: GenealogyRound;
+  chain: string[];
+  startTurnIndex: number;
+  phase: "active" | "resolved";
+  wasCorrect: boolean | null;
+  resolvedMessage: string | null;
+}
+
+export interface GenealogyState extends RoundSessionBase<GenealogyRound, GenealogyPrompt> {
+  gameId: "genealogy";
+}
+
 export interface ProphecyMatchCard {
   id: string;
   pairId: string;
@@ -337,6 +368,35 @@ export interface ProphecyMatchState extends SessionBase {
   gameId: "prophecy-match";
   pairs: ProphecyMatchRound[];
   currentPrompt: ProphecyMatchPrompt;
+}
+
+export interface ParableMatchCard {
+  id: string;
+  pairId: string;
+  answerKey: string;
+  reference: string;
+  summary: string;
+  textShort: string;
+  status: "available" | "selected" | "matched";
+}
+
+export interface ParableMatchPrompt {
+  kind: "parable-match";
+  parableCards: ParableMatchCard[];
+  lessonCards: ParableMatchCard[];
+  selectedParableId: string | null;
+  selectedLessonId: string | null;
+  matchedPairIds: string[];
+  wrongAttemptsByPairId: Record<string, number>;
+  lastAttempt: { parableId: string; lessonId: string; wasCorrect: boolean } | null;
+  phase: "active" | "resolved";
+  resolvedMessage: string | null;
+}
+
+export interface ParableMatchState extends SessionBase {
+  gameId: "parable-match";
+  pairs: ParableMatchRound[];
+  currentPrompt: ParableMatchPrompt;
 }
 
 export interface MessiahProphecyPrompt {
@@ -604,7 +664,10 @@ export type SessionState =
   | WhoSaidItState
   | BibleBooksRelayState
   | MissingWordState
+  | OddOneOutState
+  | GenealogyState
   | ProphecyMatchState
+  | ParableMatchState
   | MessiahProphecyState
   | ProphecyClueLadderState
   | FulfillmentFinderState
@@ -708,11 +771,29 @@ export const GAME_LIBRARY: Record<
     setupPrompt: "Ten random KJV verse rounds are selected. More missing words score more points.",
     accent: "#75512e"
   },
+  "odd-one-out": {
+    label: "Odd One Out",
+    shortDescription: "Pick the Bible person, place, event, or book that does not fit the group.",
+    setupPrompt: "Ten random odd-one-out rounds are selected. Wrong choices disappear and scoring steps down.",
+    accent: "#83572a"
+  },
+  genealogy: {
+    label: "Fill in the Genealogy",
+    shortDescription: "Build the Bible family line one correct name at a time.",
+    setupPrompt: "Six random genealogy chains are selected. Submit the next person in the authored lineage.",
+    accent: "#3f6b45"
+  },
   "prophecy-match": {
     label: "Prophecy Match Challenge",
     shortDescription: "Match Old Testament prophecy cards with New Testament fulfillment cards.",
     setupPrompt: "Five prophecy pairs are selected. Match each prophecy to its fulfillment.",
     accent: "#6a4b2c"
+  },
+  "parable-match": {
+    label: "Parable Match",
+    shortDescription: "Match Jesus' parables with their central lessons.",
+    setupPrompt: "Five parable pairs are selected. Match each parable to its lesson.",
+    accent: "#5d3567"
   },
   "messiah-prophecy": {
     label: "Messiah Prophecy Challenge",
@@ -819,7 +900,10 @@ const CHAPTER_FINDER_ROUNDS_PER_GAME = 10;
 const WHO_SAID_IT_ROUNDS_PER_GAME = 10;
 const BIBLE_BOOKS_RELAY_ROUNDS_PER_GAME = 5;
 const MISSING_WORD_ROUNDS_PER_GAME = 10;
+const ODD_ONE_OUT_ROUNDS_PER_GAME = 10;
+const GENEALOGY_ROUNDS_PER_GAME = 6;
 const PROPHECY_MATCH_PAIRS_PER_GAME = 5;
+const PARABLE_MATCH_PAIRS_PER_GAME = 5;
 const PROPHECY_MULTIPLE_CHOICE_ROUNDS_PER_GAME = 10;
 const PROPHECY_CLUE_LADDER_ROUNDS_PER_GAME = 10;
 const PROPHECY_CATEGORIES_ROUNDS_PER_GAME = 1;
@@ -1088,7 +1172,10 @@ function getRoundNumber(state: SessionState): number {
     state.gameId === "who-said-it" ||
     state.gameId === "bible-books-relay" ||
     state.gameId === "missing-word" ||
+    state.gameId === "odd-one-out" ||
+    state.gameId === "genealogy" ||
     state.gameId === "prophecy-match" ||
+    state.gameId === "parable-match" ||
     state.gameId === "messiah-prophecy" ||
     state.gameId === "prophecy-clue-ladder" ||
     state.gameId === "fulfillment-finder" ||
@@ -1339,6 +1426,29 @@ function pickGameRounds<T>(rounds: T[], count: number, gameName: string, difficu
   return selected;
 }
 
+function pickGameRoundsWithDifficultyFallback<T>(
+  rounds: T[],
+  count: number,
+  gameName: string,
+  difficulty?: DifficultyFilter
+): { rounds: T[]; usedFallbackDifficulty: boolean } {
+  if (!difficulty || difficulty === "mixed") {
+    return { rounds: pickGameRounds(rounds, count, gameName, difficulty), usedFallbackDifficulty: false };
+  }
+
+  const filteredRounds = rounds.filter((round) => getRoundDifficulty(round) === difficulty);
+
+  if (filteredRounds.length >= count) {
+    return { rounds: shuffle(filteredRounds).slice(0, count), usedFallbackDifficulty: false };
+  }
+
+  if (rounds.length < count) {
+    throw new Error(`${gameName} needs at least ${count} rounds. Add more content or choose another game.`);
+  }
+
+  return { rounds: shuffle(rounds).slice(0, count), usedFallbackDifficulty: true };
+}
+
 function createTimelinePrompt(round: BibleTimelineRound): BibleTimelinePrompt {
   return {
     kind: "bible-timeline",
@@ -1500,6 +1610,48 @@ function createMissingWordPrompt(round: MissingWordRound): MissingWordPrompt {
   };
 }
 
+function createOddOneOutPrompt(round: OddOneOutRound): OddOneOutPrompt {
+  if (!round.items.includes(round.oddItem)) {
+    throw new Error(`Odd One Out round ${round.id} has an oddItem that is not in items.`);
+  }
+
+  return {
+    kind: "odd-one-out",
+    round: {
+      ...round,
+      items: shuffle(round.items)
+    },
+    eliminatedChoices: [],
+    selectedChoice: null,
+    phase: "active",
+    wasCorrect: null,
+    resolvedMessage: null
+  };
+}
+
+function validateGenealogyRound(round: GenealogyRound) {
+  const first = round.fullChain[0];
+  const last = round.fullChain[round.fullChain.length - 1];
+
+  if (normalizeText(first) !== normalizeText(round.startPerson) || normalizeText(last) !== normalizeText(round.endPerson)) {
+    throw new Error(`Genealogy round ${round.id} fullChain must start with startPerson and end with endPerson.`);
+  }
+}
+
+function createGenealogyPrompt(round: GenealogyRound, startTurnIndex: number): GenealogyPrompt {
+  validateGenealogyRound(round);
+
+  return {
+    kind: "genealogy",
+    round,
+    chain: [round.startPerson],
+    startTurnIndex,
+    phase: "active",
+    wasCorrect: null,
+    resolvedMessage: null
+  };
+}
+
 function createProphecyMatchPrompt(pairs: ProphecyMatchRound[]): ProphecyMatchPrompt {
   return {
     kind: "prophecy-match",
@@ -1527,6 +1679,41 @@ function createProphecyMatchPrompt(pairs: ProphecyMatchRound[]): ProphecyMatchPr
     ),
     selectedProphecyId: null,
     selectedFulfillmentId: null,
+    matchedPairIds: [],
+    wrongAttemptsByPairId: {},
+    lastAttempt: null,
+    phase: "active",
+    resolvedMessage: null
+  };
+}
+
+function createParableMatchPrompt(pairs: ParableMatchRound[]): ParableMatchPrompt {
+  return {
+    kind: "parable-match",
+    parableCards: shuffle(
+      pairs.map((pair) => ({
+        id: `${pair.id}-parable`,
+        pairId: pair.id,
+        answerKey: pair.answerKey,
+        reference: pair.parableReference,
+        summary: pair.parableSummary,
+        textShort: pair.parableTextShort,
+        status: "available" as const
+      }))
+    ),
+    lessonCards: shuffle(
+      pairs.map((pair) => ({
+        id: `${pair.id}-lesson`,
+        pairId: pair.id,
+        answerKey: pair.answerKey,
+        reference: pair.title,
+        summary: pair.lessonSummary,
+        textShort: pair.lessonTextShort,
+        status: "available" as const
+      }))
+    ),
+    selectedParableId: null,
+    selectedLessonId: null,
     matchedPairIds: [],
     wrongAttemptsByPairId: {},
     lastAttempt: null,
@@ -2227,6 +2414,80 @@ export async function createSessionState(config: SessionConfig): Promise<Session
     };
   }
 
+  if (config.gameId === "odd-one-out") {
+    const pack = await loadContent("odd-one-out");
+    const { rounds, usedFallbackDifficulty } = pickGameRoundsWithDifficultyFallback(
+      pack.sessions.flatMap((session) => session.rounds),
+      ODD_ONE_OUT_ROUNDS_PER_GAME,
+      "Odd One Out",
+      config.difficulty
+    );
+
+    return {
+      gameId: "odd-one-out",
+      displayName: GAME_LIBRARY["odd-one-out"].label,
+      sessionTitle: "Random Odd One Out Deck",
+      sessionTheme: "Ten random Bible grouping rounds drawn from the full library.",
+      participantMode: config.participantMode,
+      participants,
+      stats,
+      activityLog: [
+        {
+          id: "start-1",
+          tone: "info",
+          text: usedFallbackDifficulty
+            ? "Odd One Out is live using mixed difficulty because the selected difficulty does not have enough rounds. Choose the item that does not fit the group."
+            : "Odd One Out is live. Choose the item that does not fit the group.",
+          roundNumber: 1
+        }
+      ],
+      status: "in-progress",
+      turnIndex: 0,
+      totalPrompts: rounds.length,
+      resolvedPrompts: 0,
+      roundIndex: 0,
+      rounds,
+      currentPrompt: createOddOneOutPrompt(rounds[0])
+    };
+  }
+
+  if (config.gameId === "genealogy") {
+    const pack = await loadContent("genealogy");
+    const { rounds, usedFallbackDifficulty } = pickGameRoundsWithDifficultyFallback(
+      pack.sessions.flatMap((session) => session.rounds),
+      GENEALOGY_ROUNDS_PER_GAME,
+      "Fill in the Genealogy",
+      config.difficulty
+    );
+
+    return {
+      gameId: "genealogy",
+      displayName: GAME_LIBRARY.genealogy.label,
+      sessionTitle: "Random Genealogy Chains",
+      sessionTheme: "Six random Bible family lines drawn from the full library.",
+      participantMode: config.participantMode,
+      participants,
+      stats,
+      activityLog: [
+        {
+          id: "start-1",
+          tone: "info",
+          text: usedFallbackDifficulty
+            ? "Fill in the Genealogy is live using mixed difficulty because the selected difficulty does not have enough rounds. Submit the next name in the line."
+            : "Fill in the Genealogy is live. Submit the next name in the line.",
+          roundNumber: 1
+        }
+      ],
+      status: "in-progress",
+      turnIndex: 0,
+      totalPrompts: rounds.length,
+      resolvedPrompts: 0,
+      roundIndex: 0,
+      rounds,
+      currentPrompt: createGenealogyPrompt(rounds[0], 0)
+    };
+  }
+
   if (config.gameId === "prophecy-match") {
     const pack = await loadContent("prophecy-match");
     const pairs = pickRounds(
@@ -2257,6 +2518,42 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       resolvedPrompts: 0,
       pairs,
       currentPrompt: createProphecyMatchPrompt(pairs)
+    };
+  }
+
+  if (config.gameId === "parable-match") {
+    const pack = await loadContent("parable-match");
+    const { rounds: pairs, usedFallbackDifficulty } = pickGameRoundsWithDifficultyFallback(
+      pack.sessions.flatMap((session) => session.rounds),
+      PARABLE_MATCH_PAIRS_PER_GAME,
+      "Parable Match",
+      config.difficulty
+    );
+
+    return {
+      gameId: "parable-match",
+      displayName: GAME_LIBRARY["parable-match"].label,
+      sessionTitle: "Random Parable Match Board",
+      sessionTheme: "Five parable cards matched to central lesson cards.",
+      participantMode: config.participantMode,
+      participants,
+      stats,
+      activityLog: [
+        {
+          id: "start-1",
+          tone: "info",
+          text: usedFallbackDifficulty
+            ? "Parable Match is live using mixed difficulty because the selected difficulty does not have enough pairs. Select one parable card and one lesson card."
+            : "Parable Match is live. Select one parable card and one lesson card.",
+          roundNumber: 1
+        }
+      ],
+      status: "in-progress",
+      turnIndex: 0,
+      totalPrompts: pairs.length,
+      resolvedPrompts: 0,
+      pairs,
+      currentPrompt: createParableMatchPrompt(pairs)
     };
   }
 
@@ -2825,7 +3122,10 @@ export function getCurrentActorLabel(state: SessionState): string {
     state.gameId === "who-said-it" ||
     state.gameId === "bible-books-relay" ||
     state.gameId === "missing-word" ||
+    state.gameId === "odd-one-out" ||
+    state.gameId === "genealogy" ||
     state.gameId === "prophecy-match" ||
+    state.gameId === "parable-match" ||
     state.gameId === "messiah-prophecy" ||
     state.gameId === "prophecy-clue-ladder" ||
     state.gameId === "fulfillment-finder" ||
@@ -3223,6 +3523,15 @@ export function continueGame(state: SessionState): ActionResult {
     return addActivity(nextState, "info", `${nextState.sessionTitle} is complete. Final standings are ready.`);
   }
 
+  if (nextState.gameId === "parable-match") {
+    if (nextState.currentPrompt.phase !== "resolved") {
+      throw new Error("Finish the parable match board before continuing.");
+    }
+
+    nextState.status = "completed";
+    return addActivity(nextState, "info", `${nextState.sessionTitle} is complete. Final standings are ready.`);
+  }
+
   if (nextState.gameId === "messiah-prophecy") {
     if (nextState.currentPrompt.phase !== "resolved") {
       throw new Error("Resolve the prophecy round before continuing.");
@@ -3326,6 +3635,22 @@ export function continueGame(state: SessionState): ActionResult {
     }
 
     return advanceLinearRound(nextState, (round) => createWordLadderPrompt(round as WordLadderRound, nextState.turnIndex));
+  }
+
+  if (nextState.gameId === "odd-one-out") {
+    if (nextState.currentPrompt.phase !== "resolved") {
+      throw new Error("Resolve the current odd-one-out round before continuing.");
+    }
+
+    return advanceLinearRound(nextState, (round) => createOddOneOutPrompt(round as OddOneOutRound));
+  }
+
+  if (nextState.gameId === "genealogy") {
+    if (nextState.currentPrompt.phase !== "resolved") {
+      throw new Error("Resolve the current genealogy before continuing.");
+    }
+
+    return advanceLinearRound(nextState, (round) => createGenealogyPrompt(round as GenealogyRound, nextState.turnIndex));
   }
 
   if (nextState.gameId === "bible-anagrams") {
@@ -3844,6 +4169,152 @@ export function passProphecyMatch(state: SessionState): ActionResult {
   return addActivity(nextState, "info", `${actorLabel} passed. ${getCurrentActorLabel(nextState)} is up.`);
 }
 
+export function selectParableMatchCard(
+  state: SessionState,
+  cardType: "parable" | "lesson",
+  cardId: string
+): ActionResult {
+  if (state.gameId !== "parable-match") {
+    throw new Error("Parable Match cards are only available in Parable Match.");
+  }
+
+  if (state.currentPrompt.phase !== "active") {
+    throw new Error("Continue after the resolved match board.");
+  }
+
+  const nextState = structuredClone(state);
+  const cards = cardType === "parable" ? nextState.currentPrompt.parableCards : nextState.currentPrompt.lessonCards;
+  const card = cards.find((entry) => entry.id === cardId);
+
+  if (!card || card.status === "matched") {
+    throw new Error("Choose an available parable match card.");
+  }
+
+  cards.forEach((entry) => {
+    if (entry.status === "selected") {
+      entry.status = "available";
+    }
+  });
+  card.status = "selected";
+
+  if (cardType === "parable") {
+    nextState.currentPrompt.selectedParableId = card.id;
+  } else {
+    nextState.currentPrompt.selectedLessonId = card.id;
+  }
+
+  return addActivity(nextState, "info", `${card.reference} selected.`);
+}
+
+export function submitParableMatch(state: SessionState): ActionResult {
+  if (state.gameId !== "parable-match") {
+    throw new Error("Parable Match submit is only available in Parable Match.");
+  }
+
+  if (state.currentPrompt.phase !== "active") {
+    throw new Error("Continue after the resolved match board.");
+  }
+
+  const nextState = structuredClone(state);
+  const prompt = nextState.currentPrompt;
+  const parable = prompt.parableCards.find((card) => card.id === prompt.selectedParableId);
+  const lesson = prompt.lessonCards.find((card) => card.id === prompt.selectedLessonId);
+
+  if (!parable || !lesson) {
+    throw new Error("Select one parable card and one lesson card.");
+  }
+
+  const actorIndex = nextState.turnIndex;
+  const actorLabel = getCurrentActorLabel(nextState);
+  const stats = getParticipantStats(nextState, actorIndex);
+
+  consumeTurn(nextState.participants, actorIndex);
+  nextState.turnIndex = nextIndex(nextState.participants.length, actorIndex);
+
+  if (parable.answerKey === lesson.answerKey) {
+    const wrongCount = prompt.wrongAttemptsByPairId[parable.pairId] ?? 0;
+    const points = scoreProphecyRetry(wrongCount);
+    parable.status = "matched";
+    lesson.status = "matched";
+    prompt.matchedPairIds = Array.from(new Set([...prompt.matchedPairIds, parable.pairId]));
+    prompt.selectedParableId = null;
+    prompt.selectedLessonId = null;
+    prompt.lastAttempt = { parableId: parable.id, lessonId: lesson.id, wasCorrect: true };
+    nextState.resolvedPrompts = prompt.matchedPairIds.length;
+    stats.totalScore += points;
+    stats.roundWins += 1;
+
+    if (prompt.matchedPairIds.length >= nextState.totalPrompts) {
+      prompt.phase = "resolved";
+      prompt.resolvedMessage = `${actorLabel} completed the final parable match.`;
+    }
+
+    return addActivity(nextState, "success", `${actorLabel} matched ${parable.reference} with ${lesson.summary} for ${points} points.`);
+  }
+
+  stats.incorrectAttempts += 1;
+  prompt.wrongAttemptsByPairId[parable.pairId] = (prompt.wrongAttemptsByPairId[parable.pairId] ?? 0) + 1;
+  parable.status = "available";
+  lesson.status = "available";
+  prompt.selectedParableId = null;
+  prompt.selectedLessonId = null;
+  prompt.lastAttempt = { parableId: parable.id, lessonId: lesson.id, wasCorrect: false };
+
+  return addActivity(nextState, "warning", `${actorLabel} missed the match. ${getCurrentActorLabel(nextState)} is up.`);
+}
+
+export function passParableMatch(state: SessionState): ActionResult {
+  if (state.gameId !== "parable-match") {
+    throw new Error("Parable Match pass is only available in Parable Match.");
+  }
+
+  if (state.currentPrompt.phase !== "active") {
+    throw new Error("Continue after the resolved match board.");
+  }
+
+  const nextState = structuredClone(state);
+  const actorIndex = nextState.turnIndex;
+  const actorLabel = getCurrentActorLabel(nextState);
+  const unmatchedPairId = nextState.pairs.find((pair) => !nextState.currentPrompt.matchedPairIds.includes(pair.id))?.id;
+
+  nextState.currentPrompt.parableCards.forEach((card) => {
+    if (card.status === "selected") {
+      card.status = "available";
+    }
+  });
+  nextState.currentPrompt.lessonCards.forEach((card) => {
+    if (card.status === "selected") {
+      card.status = "available";
+    }
+  });
+  nextState.currentPrompt.selectedParableId = null;
+  nextState.currentPrompt.selectedLessonId = null;
+  consumeTurn(nextState.participants, actorIndex);
+  nextState.turnIndex = nextIndex(nextState.participants.length, actorIndex);
+
+  if (isSoloSession(nextState) && unmatchedPairId) {
+    const parable = nextState.currentPrompt.parableCards.find((card) => card.pairId === unmatchedPairId);
+    const lesson = nextState.currentPrompt.lessonCards.find((card) => card.pairId === unmatchedPairId);
+
+    if (parable && lesson) {
+      parable.status = "matched";
+      lesson.status = "matched";
+      nextState.currentPrompt.matchedPairIds = Array.from(new Set([...nextState.currentPrompt.matchedPairIds, unmatchedPairId]));
+      nextState.currentPrompt.lastAttempt = { parableId: parable.id, lessonId: lesson.id, wasCorrect: false };
+      nextState.resolvedPrompts = nextState.currentPrompt.matchedPairIds.length;
+
+      if (nextState.currentPrompt.matchedPairIds.length >= nextState.totalPrompts) {
+        nextState.currentPrompt.phase = "resolved";
+        nextState.currentPrompt.resolvedMessage = `${actorLabel} passed on the final parable match.`;
+      }
+
+      return addActivity(nextState, "warning", `${actorLabel} passed. ${parable.reference} matches ${lesson.summary}.`);
+    }
+  }
+
+  return addActivity(nextState, "info", `${actorLabel} passed. ${getCurrentActorLabel(nextState)} is up.`);
+}
+
 export function submitMessiahProphecyChoice(state: SessionState, choice: string): ActionResult {
   if (state.gameId !== "messiah-prophecy") {
     throw new Error("Messiah prophecy choices are only available in Messiah Prophecy Challenge.");
@@ -4127,6 +4598,67 @@ export function passCompleteVerse(state: SessionState): ActionResult {
     nextState.currentPrompt.wasCorrect = false;
     resolveRoundState(nextState, `${actorLabel} passed. The ending was ${nextState.currentPrompt.round.correctEnding}.`);
     return addActivity(nextState, "warning", nextState.currentPrompt.resolvedMessage ?? "Verse ending revealed.");
+  }
+
+  return addActivity(nextState, "info", `${actorLabel} passed. ${getCurrentActorLabel(nextState)} is up.`);
+}
+
+export function submitOddOneOutChoice(state: SessionState, choice: string): ActionResult {
+  if (state.gameId !== "odd-one-out") {
+    throw new Error("Odd One Out choices are only available in Odd One Out.");
+  }
+
+  if (state.currentPrompt.phase !== "active") {
+    throw new Error("Continue to the next round before guessing again.");
+  }
+
+  const nextState = structuredClone(state);
+  const prompt = nextState.currentPrompt;
+  const actorIndex = nextState.turnIndex;
+  const actorLabel = getCurrentActorLabel(nextState);
+  const stats = getParticipantStats(nextState, actorIndex);
+
+  if (prompt.eliminatedChoices.includes(choice)) {
+    throw new Error("Choose an available item.");
+  }
+
+  consumeTurn(nextState.participants, actorIndex);
+  nextState.turnIndex = nextIndex(nextState.participants.length, actorIndex);
+  prompt.selectedChoice = choice;
+
+  if (normalizeText(choice) === normalizeText(prompt.round.oddItem)) {
+    const points = scoreProphecyRetry(prompt.eliminatedChoices.length);
+    stats.totalScore += points;
+    stats.roundWins += 1;
+    prompt.wasCorrect = true;
+    resolveRoundState(nextState, `${actorLabel} found the odd item for ${points} points.`);
+    return addActivity(nextState, "success", nextState.currentPrompt.resolvedMessage ?? "Odd item found.");
+  }
+
+  stats.incorrectAttempts += 1;
+  prompt.eliminatedChoices = Array.from(new Set([...prompt.eliminatedChoices, choice]));
+  return addActivity(nextState, "warning", `${actorLabel} missed. ${getCurrentActorLabel(nextState)} is up.`);
+}
+
+export function passOddOneOut(state: SessionState): ActionResult {
+  if (state.gameId !== "odd-one-out") {
+    throw new Error("Odd One Out pass is only available in Odd One Out.");
+  }
+
+  if (state.currentPrompt.phase !== "active") {
+    throw new Error("Continue to the next round before passing again.");
+  }
+
+  const nextState = structuredClone(state);
+  const actorIndex = nextState.turnIndex;
+  const actorLabel = getCurrentActorLabel(nextState);
+  consumeTurn(nextState.participants, actorIndex);
+  nextState.turnIndex = nextIndex(nextState.participants.length, actorIndex);
+
+  if (isSoloSession(nextState)) {
+    nextState.currentPrompt.wasCorrect = false;
+    resolveRoundState(nextState, `${actorLabel} passed. The odd item was ${nextState.currentPrompt.round.oddItem}.`);
+    return addActivity(nextState, "warning", nextState.currentPrompt.resolvedMessage ?? "Odd item revealed.");
   }
 
   return addActivity(nextState, "info", `${actorLabel} passed. ${getCurrentActorLabel(nextState)} is up.`);
@@ -4593,6 +5125,123 @@ export function resolveWordLadderOnTimer(state: SessionState): ActionResult {
   prompt.wasCorrect = false;
   resolveRoundState(nextState, `Time's up. One valid path was ${prompt.round.revealPath.join(" → ")}.`);
   return addActivity(nextState, "warning", nextState.currentPrompt.resolvedMessage ?? "Ladder revealed.");
+}
+
+export function submitGenealogyStep(state: SessionState, guess: string): ActionResult {
+  if (state.gameId !== "genealogy") {
+    throw new Error("Genealogy guesses are only available in Fill in the Genealogy.");
+  }
+
+  if (state.currentPrompt.phase !== "active") {
+    throw new Error("Continue to the next genealogy before guessing again.");
+  }
+
+  const normalizedGuess = normalizeText(guess);
+
+  if (!normalizedGuess) {
+    throw new Error("Enter a name before submitting.");
+  }
+
+  const nextState = structuredClone(state);
+  const prompt = nextState.currentPrompt;
+  const actorIndex = nextState.turnIndex;
+  const actorLabel = getCurrentActorLabel(nextState);
+  const nextIndexInChain = prompt.chain.length;
+  const expectedName = prompt.round.fullChain[nextIndexInChain];
+
+  if (!expectedName) {
+    throw new Error("This genealogy is already complete.");
+  }
+
+  if (prompt.chain.some((name) => normalizeText(name) === normalizedGuess)) {
+    throw new Error("That name is already in the chain.");
+  }
+
+  if (normalizedGuess === normalizeText(expectedName)) {
+    prompt.chain.push(expectedName);
+
+    if (prompt.chain.length === prompt.round.fullChain.length) {
+      const stats = getParticipantStats(nextState, actorIndex);
+      const stepsTaken = prompt.chain.length - 1;
+      const points = scoreWordLadder(stepsTaken, prompt.round.fullChain.length - 1);
+      stats.totalScore += points;
+      stats.roundWins += 1;
+      consumeTurn(nextState.participants, actorIndex);
+      prompt.wasCorrect = true;
+      resolveRoundState(nextState, `${actorLabel} completed the genealogy in ${stepsTaken} generations for ${points} points.`);
+      return addActivity(nextState, "success", nextState.currentPrompt.resolvedMessage ?? "Genealogy completed.");
+    }
+
+    const nextStats = getParticipantStats(nextState, actorIndex);
+    nextStats.wordLadderStepsCompleted += 1;
+    return addActivity(nextState, "success", `${actorLabel} added ${expectedName}.`);
+  }
+
+  const stats = getParticipantStats(nextState, actorIndex);
+  stats.incorrectAttempts += 1;
+  return addActivity(nextState, "warning", `${actorLabel} tried "${guess.trim()}" - not the next name in this line. Try again.`);
+}
+
+export function removeLastGenealogyLink(state: SessionState): ActionResult {
+  if (state.gameId !== "genealogy") {
+    throw new Error("Genealogy links can only be removed in Fill in the Genealogy.");
+  }
+
+  if (state.currentPrompt.phase !== "active") {
+    throw new Error("Continue to the next genealogy before editing it.");
+  }
+
+  const nextState = structuredClone(state);
+  const prompt = nextState.currentPrompt;
+
+  if (prompt.chain.length <= 1) {
+    throw new Error("The starting person can't be removed.");
+  }
+
+  const removedName = prompt.chain.pop();
+  return addActivity(nextState, "info", `Removed ${removedName} from the genealogy.`);
+}
+
+export function passGenealogyTurn(state: SessionState): ActionResult {
+  if (state.gameId !== "genealogy") {
+    throw new Error("Passing is only available in Fill in the Genealogy.");
+  }
+
+  if (state.currentPrompt.phase !== "active") {
+    throw new Error("Continue to the next genealogy before passing.");
+  }
+
+  const nextState = structuredClone(state);
+  const prompt = nextState.currentPrompt;
+  const actorIndex = nextState.turnIndex;
+  const actorLabel = getCurrentActorLabel(nextState);
+
+  consumeTurn(nextState.participants, actorIndex);
+  nextState.turnIndex = nextIndex(nextState.participants.length, actorIndex);
+
+  if (nextState.turnIndex === prompt.startTurnIndex || nextState.participants.length <= 1) {
+    prompt.wasCorrect = false;
+    resolveRoundState(nextState, `Nobody completed the genealogy. The line was ${prompt.round.fullChain.join(" -> ")}.`);
+    return addActivity(nextState, "warning", nextState.currentPrompt.resolvedMessage ?? "Genealogy revealed.");
+  }
+
+  return addActivity(nextState, "info", `${actorLabel} passed. ${getCurrentActorLabel(nextState)} can steal.`);
+}
+
+export function resolveGenealogyOnTimer(state: SessionState): ActionResult {
+  if (state.gameId !== "genealogy") {
+    throw new Error("Genealogy timer resolution only applies to Fill in the Genealogy.");
+  }
+
+  if (state.currentPrompt.phase !== "active") {
+    throw new Error("The genealogy is already resolved.");
+  }
+
+  const nextState = structuredClone(state);
+  const prompt = nextState.currentPrompt;
+  prompt.wasCorrect = false;
+  resolveRoundState(nextState, `Time's up. The line was ${prompt.round.fullChain.join(" -> ")}.`);
+  return addActivity(nextState, "warning", nextState.currentPrompt.resolvedMessage ?? "Genealogy revealed.");
 }
 
 export function moveBibleAnagramTile(state: SessionState, tileId: string, target: "answer" | "bank"): ActionResult {

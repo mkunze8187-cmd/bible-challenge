@@ -396,6 +396,37 @@ export const GAME_HELP_CONTENT: Record<GameId, GameHelpContent> = {
       }
     ]
   },
+  "parable-match": {
+    gameId: "parable-match",
+    tabs: [
+      {
+        id: "how-to-play",
+        label: "How to Play",
+        body: [
+          "Select one parable card and one lesson card, then submit the match.",
+          "Correct pairs lock on the board. Incorrect pairs clear and the next player takes a turn.",
+          "The board ends when every parable is matched to its lesson."
+        ]
+      },
+      {
+        id: "scoring",
+        label: "Scoring",
+        body: [
+          "A first-try match scores 5 points.",
+          "Each wrong attempt on that pair lowers the later match value by 1 point, down to a minimum of 1.",
+          "Passing scores 0 and moves play to the next player."
+        ]
+      },
+      {
+        id: "tips",
+        label: "Tips",
+        body: [
+          "Match the central lesson, not just a shared word.",
+          "Use the short text on lesson cards to separate parables with similar themes."
+        ]
+      }
+    ]
+  },
   "messiah-prophecy": {
     gameId: "messiah-prophecy",
     tabs: [
@@ -531,6 +562,37 @@ export const GAME_HELP_CONTENT: Record<GameId, GameHelpContent> = {
         id: "tips",
         label: "Tips",
         body: ["Focus on the excerpt's key noun or behavior (diligence, pride, speech, friendship) — that's usually the fastest path to the matching theme."]
+      }
+    ]
+  },
+  "odd-one-out": {
+    gameId: "odd-one-out",
+    tabs: [
+      {
+        id: "how-to-play",
+        label: "How to Play",
+        body: [
+          "Each round shows four or five Bible items.",
+          "Choose the item that does not belong with the rest of the group.",
+          "Wrong choices disappear and the next player gets a turn."
+        ]
+      },
+      {
+        id: "scoring",
+        label: "Scoring",
+        body: [
+          "A first-try correct answer scores 5 points.",
+          "Each wrong choice lowers the available score by 1 point, down to a minimum of 1.",
+          "Passing scores 0; in solo play it reveals the answer."
+        ]
+      },
+      {
+        id: "tips",
+        label: "Tips",
+        body: [
+          "Look for what four items have in common before guessing.",
+          "The reveal explains both the odd item and the shared group connection."
+        ]
       }
     ]
   },
@@ -698,6 +760,37 @@ export const GAME_HELP_CONTENT: Record<GameId, GameHelpContent> = {
         body: [
           "There's no penalty for a wrong guess beyond losing a little time, so try freely — only Pass or the round timer actually costs you the turn.",
           "If a path looks like a dead end, Undo Last Rung to back up rather than passing away a ladder you might still solve."
+        ]
+      }
+    ]
+  },
+  genealogy: {
+    gameId: "genealogy",
+    tabs: [
+      {
+        id: "how-to-play",
+        label: "How to Play",
+        body: [
+          "Each round gives a starting person and an ending person from a Bible family line.",
+          "Submit the next name in the authored lineage. Correct names extend the chain.",
+          "A wrong guess does not advance the chain. Pass gives the next player a chance."
+        ]
+      },
+      {
+        id: "scoring",
+        label: "Scoring",
+        body: [
+          "Completing the full line scores based on the number of generations in the chain.",
+          "Incomplete lines score 0 when time expires or everyone passes.",
+          "Wrong guesses count as misses but do not remove existing links."
+        ]
+      },
+      {
+        id: "tips",
+        label: "Tips",
+        body: [
+          "Use the scripture reference and endpoint clues to place the chain.",
+          "Undo removes only the most recent submitted link; the starting person stays fixed."
         ]
       }
     ]

@@ -1,6 +1,6 @@
 {
   "name": "bible-challenge-admin",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "private": true,
   "description": "Admin console for the Bible Challenge desktop app: content editing, play stats, ratings, and updates.",
   "author": "Michael Kunze",

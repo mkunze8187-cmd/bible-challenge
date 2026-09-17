@@ -562,6 +562,73 @@ async function validatePackGames(pack: CustomContentPack): Promise<void> {
   }
 }
 
+function buildDifficultyReport(entries: RoundIndexEntry[]) {
+  const report = new Map<string, { gameTitle: string; easy: number; medium: number; hard: number; none: number; total: number }>();
+
+  for (const entry of entries) {
+    const current = report.get(entry.gameType) ?? {
+      gameTitle: entry.gameTitle,
+      easy: 0,
+      medium: 0,
+      hard: 0,
+      none: 0,
+      total: 0
+    };
+    const difficulty = entry.round.difficulty;
+    if (difficulty === "easy" || difficulty === "medium" || difficulty === "hard") {
+      current[difficulty] += 1;
+    } else {
+      current.none += 1;
+    }
+    current.total += 1;
+    report.set(entry.gameType, current);
+  }
+
+  return Array.from(report.values()).sort((left, right) => left.gameTitle.localeCompare(right.gameTitle));
+}
+
+function ProjectorPreviewModal({
+  entry,
+  round,
+  onClose
+}: {
+  entry: RoundIndexEntry;
+  round: Record<string, unknown>;
+  onClose: () => void;
+}) {
+  const visibleFields = Object.entries(round)
+    .filter(([name, value]) => name !== "id" && value != null && value !== "")
+    .slice(0, 10);
+
+  return (
+    <div className="modal-backdrop" role="presentation">
+      <section className="projector-preview-modal" role="dialog" aria-modal="true" aria-labelledby="projector-preview-title">
+        <div className="projector-preview-stage">
+          <div className="projector-preview-header">
+            <div>
+              <p className="eyebrow">Projector Preview</p>
+              <h2 id="projector-preview-title">{entry.gameTitle}</h2>
+            </div>
+            <button type="button" className="ghost-button" onClick={onClose}>Close</button>
+          </div>
+          <div className="projector-preview-card">
+            <p className="muted-note">{entry.packName}</p>
+            <h3>{summarizeRound(round)}</h3>
+            <div className="preview-field-grid">
+              {visibleFields.map(([name, value]) => (
+                <div key={name} className="preview-field">
+                  <span>{name}</span>
+                  <strong>{Array.isArray(value) ? value.join(", ") : String(value)}</strong>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
 function ContentLibraryTab() {
   const [packs, setPacks] = useState<CustomContentPack[]>([]);
   const [status, setStatus] = useState<StatusMessage | null>(null);
@@ -573,6 +640,8 @@ function ContentLibraryTab() {
   const [bulkDifficulty, setBulkDifficulty] = useState("medium");
   const [schema, setSchema] = useState<JsonSchemaDocument | null>(null);
   const [editValues, setEditValues] = useState<Record<string, unknown>>({});
+  const [showDifficultyReport, setShowDifficultyReport] = useState(false);
+  const [isPreviewOpen, setIsPreviewOpen] = useState(false);
 
   async function refresh() {
     const next = (await window.adminHost?.listCustomContentPacks()) ?? [];
@@ -592,6 +661,7 @@ function ContentLibraryTab() {
   });
   const selectedEntry = entries.find((entry) => entry.key === selectedKey) ?? null;
   const fields = useMemo(() => (schema ? describeRoundFields(schema) : []), [schema]);
+  const difficultyReport = useMemo(() => buildDifficultyReport(entries), [entries]);
 
   useEffect(() => {
     if (!selectedEntry) {
@@ -651,6 +721,24 @@ function ContentLibraryTab() {
     }
   }
 
+  async function validateAllContent() {
+    const failures: string[] = [];
+
+    for (const pack of packs) {
+      try {
+        await validatePackGames(pack);
+      } catch (error) {
+        failures.push(`${pack.packName}: ${error instanceof Error ? error.message : "Invalid content."}`);
+      }
+    }
+
+    if (failures.length === 0) {
+      setStatus({ tone: "success", text: `Validated ${packs.length} pack${packs.length === 1 ? "" : "s"} successfully.` });
+    } else {
+      setStatus({ tone: "warning", text: `${failures.length} pack${failures.length === 1 ? "" : "s"} failed validation. ${failures.join(" ")}` });
+    }
+  }
+
   return (
     <div className="library-grid">
       <section className="pack-detail">
@@ -680,7 +768,39 @@ function ContentLibraryTab() {
           <button type="button" className="secondary-button" onClick={applyBulkDifficulty} disabled={checkedKeys.size === 0}>
             Apply Difficulty To Selected
           </button>
+          <button type="button" className="secondary-button" onClick={validateAllContent}>
+            Validate All
+          </button>
+          <button type="button" className="secondary-button" onClick={() => setShowDifficultyReport((current) => !current)}>
+            Difficulty Report
+          </button>
         </div>
+        {showDifficultyReport ? (
+          <table className="stats-table compact-report">
+            <thead>
+              <tr>
+                <th>Game</th>
+                <th>Easy</th>
+                <th>Medium</th>
+                <th>Hard</th>
+                <th>None</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              {difficultyReport.map((row) => (
+                <tr key={row.gameTitle}>
+                  <td>{row.gameTitle}</td>
+                  <td>{row.easy}</td>
+                  <td>{row.medium}</td>
+                  <td>{row.hard}</td>
+                  <td>{row.none}</td>
+                  <td>{row.total}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        ) : null}
         <div className="round-table">
           {filtered.map((entry) => (
             <button key={entry.key} type="button" className={`round-row ${selectedKey === entry.key ? "round-row-active" : ""}`} onClick={() => setSelectedKey(entry.key)}>
@@ -707,12 +827,18 @@ function ContentLibraryTab() {
           <>
             <p className="muted-note">{selectedEntry.packName} / {selectedEntry.gameTitle}</p>
             <SchemaForm fields={fields} values={editValues} onChange={setEditValues} />
-            <button type="button" className="primary-button" onClick={saveEditedRound}>Save Round</button>
+            <div className="inline-controls">
+              <button type="button" className="primary-button" onClick={saveEditedRound}>Save Round</button>
+              <button type="button" className="secondary-button" onClick={() => setIsPreviewOpen(true)}>Projector Preview</button>
+            </div>
           </>
         ) : (
           <p className="muted-note">Select a round to edit.</p>
         )}
       </section>
+      {selectedEntry && isPreviewOpen ? (
+        <ProjectorPreviewModal entry={selectedEntry} round={{ ...selectedEntry.round, ...editValues }} onClose={() => setIsPreviewOpen(false)} />
+      ) : null}
     </div>
   );
 }
