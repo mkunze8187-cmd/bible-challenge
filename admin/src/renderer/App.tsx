@@ -18,6 +18,26 @@ const TABS: Array<{ id: AdminTab; label: string }> = [
   { id: "updates", label: "Updates" }
 ];
 
+// Reaches the renderer only through the query string admin/electron/main.js attaches when
+// BIBLE_CHALLENGE_E2E=1 and the app is unpackaged — main is the source of truth, so the
+// renderer never reads environment variables directly. See
+// specs/automated-testing-spec.md sections 4.1 and 4.5.
+const IS_TEST_MODE = new URLSearchParams(window.location.search).get("e2e") === "1";
+
+// Test mode only. A read-only snapshot of admin renderer state, attached to
+// window.__bibleChallengeAdminTest so Playwright's page.evaluate() can inspect what's on
+// screen without parsing the DOM. Never mutates state.
+interface BibleChallengeAdminTestHook {
+  getActiveTab(): AdminTab;
+  isLocked(): boolean;
+}
+
+declare global {
+  interface Window {
+    __bibleChallengeAdminTest?: BibleChallengeAdminTestHook;
+  }
+}
+
 type StatusMessage = { tone: "info" | "warning" | "success"; text: string };
 
 interface RoundIndexEntry {
@@ -46,6 +66,21 @@ export function App() {
       setLockChecked(true);
     });
   }, []);
+
+  useEffect(() => {
+    if (!IS_TEST_MODE) {
+      return;
+    }
+
+    window.__bibleChallengeAdminTest = {
+      getActiveTab: () => activeTab,
+      isLocked: () => isLocked
+    };
+
+    return () => {
+      delete window.__bibleChallengeAdminTest;
+    };
+  }, [activeTab, isLocked]);
 
   async function handleUnlock() {
     if (!window.adminHost) {

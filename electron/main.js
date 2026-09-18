@@ -2,6 +2,28 @@ const { app, BrowserWindow, dialog, ipcMain, screen, shell } = require("electron
 const fs = require("node:fs/promises");
 const path = require("node:path");
 
+// Test mode is on only when BOTH BIBLE_CHALLENGE_E2E=1 and the app is running unpackaged.
+// This must be checked with app.isPackaged, not NODE_ENV or similar — isPackaged is the one
+// signal that can't be set inside a shipped installer, so an installed build can never enter
+// test mode no matter what environment variables are present on the machine that runs it.
+// See specs/automated-testing-spec.md section 4.1.
+const isTestMode = process.env.BIBLE_CHALLENGE_E2E === "1" && !app.isPackaged;
+
+// In test mode, an isolated userData directory keeps tests from touching the developer's
+// real settings, stats, and custom content. Must run before any app.getPath("userData")
+// call, anywhere — including lazily inside helper functions below — so every path derived
+// from it (audio-settings.json, app-settings.json, custom-content/) resolves inside the
+// isolated folder from the very first read or write.
+if (isTestMode && process.env.BIBLE_CHALLENGE_USER_DATA_DIR) {
+  app.setPath("userData", process.env.BIBLE_CHALLENGE_USER_DATA_DIR);
+}
+
+// Keeps Windows display scaling from changing screenshot sizes between machines, so visual
+// regression baselines stay comparable. Must be set before app.whenReady().
+if (isTestMode) {
+  app.commandLine.appendSwitch("force-device-scale-factor", "1");
+}
+
 const SUPPORTED_AUDIO_EXTENSIONS = new Set([".mp3", ".wav", ".ogg", ".m4a", ".aac", ".flac"]);
 const CUSTOM_CONTENT_FILE_EXTENSION = ".json";
 const AUDIO_SETTINGS_DEFAULTS = {
@@ -189,15 +211,38 @@ let mainWindow = null;
 let projectorWindow = null;
 let projectorState = null;
 
+// In test mode, adds e2e=1 (and seed=... / maxPrompts=... when set) to a window's query
+// string so the renderer can read them at startup. Merges with any query the caller already
+// built (for example the projector window's own "?projector=1"), rather than overwriting it.
+function withTestModeQuery(query = "") {
+  if (!isTestMode) {
+    return query;
+  }
+
+  const params = new URLSearchParams(query.startsWith("?") ? query.slice(1) : query);
+  params.set("e2e", "1");
+
+  if (process.env.BIBLE_CHALLENGE_E2E_SEED) {
+    params.set("seed", process.env.BIBLE_CHALLENGE_E2E_SEED);
+  }
+
+  if (process.env.BIBLE_CHALLENGE_E2E_MAX_PROMPTS) {
+    params.set("maxPrompts", process.env.BIBLE_CHALLENGE_E2E_MAX_PROMPTS);
+  }
+
+  return `?${params.toString()}`;
+}
+
 function loadAppWindow(window, query = "") {
   const devServerUrl = process.env.VITE_DEV_SERVER_URL;
+  const fullQuery = withTestModeQuery(query);
 
   if (devServerUrl) {
-    window.loadURL(`${devServerUrl}${query}`);
+    window.loadURL(`${devServerUrl}${fullQuery}`);
     return;
   }
 
-  window.loadFile(path.join(__dirname, "..", "dist", "index.html"), query ? { query: Object.fromEntries(new URLSearchParams(query.slice(1))) } : undefined);
+  window.loadFile(path.join(__dirname, "..", "dist", "index.html"), fullQuery ? { query: Object.fromEntries(new URLSearchParams(fullQuery.slice(1))) } : undefined);
 }
 
 function createWindow() {

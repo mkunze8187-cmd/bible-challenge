@@ -1,4 +1,5 @@
 import { loadGameContent, loadWordLadderDictionary } from "./content";
+import { random, shuffle } from "./random";
 import {
   scoreInitials,
   scoreProphecyRetry,
@@ -95,6 +96,10 @@ export interface SessionConfig {
   individualColors?: string[];
   teams?: TeamSetup[];
   sessionId?: string;
+  // Caps the number of rounds (or board cards, for board games) a session is created with.
+  // Test mode only, for short E2E play-throughs — leave unset for normal play, which uses
+  // each game's own default round count. See specs/automated-testing-spec.md section 4.4.
+  maxPrompts?: number;
 }
 
 export type ActionResult = EngineActionResult<SessionState>;
@@ -1056,17 +1061,6 @@ function buildStealOrder(length: number, primaryIndex: number): number[] {
   return order;
 }
 
-function shuffle<T>(values: T[]): T[] {
-  const next = [...values];
-
-  for (let index = next.length - 1; index > 0; index -= 1) {
-    const swapIndex = Math.floor(Math.random() * (index + 1));
-    [next[index], next[swapIndex]] = [next[swapIndex], next[index]];
-  }
-
-  return next;
-}
-
 function pickRandomSubset<T>(values: T[], count: number): T[] {
   if (count <= 0) {
     return [];
@@ -1526,7 +1520,7 @@ function createNameThatBookPrompt(round: NameThatBookRound, state: Pick<SessionB
 }
 
 function createBeforeOrAfterPrompt(round: BeforeOrAfterRound): BeforeOrAfterPrompt {
-  const shouldSwap = Math.random() < 0.5;
+  const shouldSwap = random() < 0.5;
   const displayRound = shouldSwap
     ? {
         ...round,
@@ -2005,16 +1999,39 @@ export async function getScriptureSessionOptions(): Promise<SessionOption[]> {
   }));
 }
 
+// Applies SessionConfig.maxPrompts to a game's normal round/card count, for short test-mode
+// sessions. Never increases the count, and always leaves at least one prompt.
+function capPromptCount(count: number, maxPrompts: number | undefined): number {
+  if (typeof maxPrompts !== "number" || !Number.isFinite(maxPrompts) || maxPrompts <= 0) {
+    return count;
+  }
+
+  return Math.max(1, Math.min(count, Math.floor(maxPrompts)));
+}
+
+// Same idea as capPromptCount, but for board games (five-guesses, initials) whose card count
+// is decided by their own board-building logic rather than pickGameRounds. Truncating the
+// board to a prefix is fine here: pickNumber is only ever used for a display label, and the
+// five-guesses board UI derives its category columns from whatever cards are present, so a
+// short board still renders correctly. Real (non-test-mode) sessions never pass maxPrompts.
+function capBoardCards<T>(boardCards: T[], maxPrompts: number | undefined): T[] {
+  if (typeof maxPrompts !== "number" || !Number.isFinite(maxPrompts) || maxPrompts <= 0) {
+    return boardCards;
+  }
+
+  return boardCards.slice(0, Math.max(1, Math.floor(maxPrompts)));
+}
+
 export async function createSessionState(config: SessionConfig): Promise<SessionState> {
   const participants = createParticipants(config);
   const stats = Object.fromEntries(participants.map((participant) => [participant.id, createPlayerStats()]));
   const customOnly = config.contentSource === "custom";
   const loadContent = <TGame extends GameId>(mode: TGame) => loadGameContent(mode, { customOnly });
   const pickRounds = <T,>(rounds: T[], count: number, gameName: string) =>
-    pickGameRounds(rounds, count, gameName, config.difficulty);
+    pickGameRounds(rounds, capPromptCount(count, config.maxPrompts), gameName, config.difficulty);
 
   if (config.gameId === "five-guesses") {
-    const boardCards = await createFiveGuessesBoard(config.difficulty, customOnly);
+    const boardCards = capBoardCards(await createFiveGuessesBoard(config.difficulty, customOnly), config.maxPrompts);
 
     return {
       gameId: "five-guesses",
@@ -2042,7 +2059,11 @@ export async function createSessionState(config: SessionConfig): Promise<Session
   }
 
   if (config.gameId === "initials") {
-    const { boardCards, usedFallbackDifficulty } = await createInitialsBoard(config.difficulty, customOnly);
+    const { boardCards: fullBoardCards, usedFallbackDifficulty } = await createInitialsBoard(
+      config.difficulty,
+      customOnly
+    );
+    const boardCards = capBoardCards(fullBoardCards, config.maxPrompts);
 
     return {
       gameId: "initials",

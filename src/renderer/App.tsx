@@ -24,6 +24,7 @@ import {
   registerCustomContentPacks,
   type CustomContentPack
 } from "../lib/content";
+import { setRandomSeed } from "../lib/random";
 import {
   GAME_LIBRARY,
   answerBeforeOrAfter,
@@ -223,6 +224,24 @@ interface PersistedAppSettings {
   defaultContentPackId: ContentPackId;
 }
 
+// Test mode only (see IS_TEST_MODE below). A read-only snapshot of renderer state, attached
+// to window.__bibleChallengeTest so Playwright's page.evaluate() can inspect what's on
+// screen without parsing the DOM. Never mutates state — tests act only through the UI.
+// See specs/automated-testing-spec.md section 4.5.
+type TestModeScreen = "menu" | "setup" | "settings" | "game" | "complete";
+
+interface BibleChallengeTestHook {
+  getSessionState(): SessionState | null;
+  getScreen(): TestModeScreen;
+  getSettings(): PersistedAppSettings;
+}
+
+declare global {
+  interface Window {
+    __bibleChallengeTest?: BibleChallengeTestHook;
+  }
+}
+
 interface ProjectorSnapshot {
   colorTheme: AppTheme;
   sessionState: SessionState | null;
@@ -253,6 +272,23 @@ interface ProjectorDisplay {
 }
 
 const IS_PROJECTOR_WINDOW = new URLSearchParams(window.location.search).get("projector") === "1";
+
+// Test mode reaches the renderer only through the query string the main process attaches in
+// electron/main.js (see withTestModeQuery there) — main is the source of truth for whether
+// BIBLE_CHALLENGE_E2E is set, so the renderer never reads environment variables directly.
+// IS_TEST_MODE gates the renderer test hook (below) and nothing else; a normal launch's
+// query string never has e2e=1, so this is false and behavior is unchanged.
+const TEST_MODE_QUERY = new URLSearchParams(window.location.search);
+const IS_TEST_MODE = TEST_MODE_QUERY.get("e2e") === "1";
+const TEST_MODE_SEED = IS_TEST_MODE ? Number(TEST_MODE_QUERY.get("seed")) : NaN;
+const TEST_MODE_MAX_PROMPTS = IS_TEST_MODE ? Number(TEST_MODE_QUERY.get("maxPrompts")) : NaN;
+// Every createSessionState call passes this. undefined outside test mode (or when no
+// maxPrompts query param was given) means "no cap" — normal play is unaffected.
+const TEST_MODE_MAX_PROMPTS_VALUE = Number.isFinite(TEST_MODE_MAX_PROMPTS) ? TEST_MODE_MAX_PROMPTS : undefined;
+
+if (IS_TEST_MODE && Number.isFinite(TEST_MODE_SEED)) {
+  setRandomSeed(TEST_MODE_SEED);
+}
 
 const PARTICIPANT_COLORS = ["#2f6f5f", "#8a5c24", "#69436d", "#285f73", "#9b4a36", "#5c6f2a"];
 const CONNECTION_GROUP_COLORS = ["#2f6f5f", "#8a5c24", "#69436d", "#285f73"];
@@ -2205,6 +2241,73 @@ export function App() {
   ]);
 
   useEffect(() => {
+    if (!IS_TEST_MODE) {
+      return;
+    }
+
+    const screen: TestModeScreen = isSettingsOpen
+      ? "settings"
+      : isSetupOpen
+        ? "setup"
+        : sessionState
+          ? sessionState.status === "completed"
+            ? "complete"
+            : "game"
+          : "menu";
+
+    window.__bibleChallengeTest = {
+      getSessionState: () => sessionState,
+      getScreen: () => screen,
+      getSettings: () => ({
+        colorTheme,
+        participantMode,
+        timerEnabled,
+        challengeTimerSeconds,
+        useVerseSecondsPerWord,
+        verseScrambleSecondsPerWord,
+        eventName,
+        selectedEventGameIds,
+        savedEventDefinitions,
+        challengeRatings,
+        showChallengeRatings,
+        gameStats,
+        feedbackEndpoint,
+        showStudyNotes,
+        difficultyFilter,
+        timerPreset,
+        displayMode,
+        defaultContentPackId
+      })
+    };
+
+    return () => {
+      delete window.__bibleChallengeTest;
+    };
+  }, [
+    challengeRatings,
+    challengeTimerSeconds,
+    colorTheme,
+    defaultContentPackId,
+    difficultyFilter,
+    displayMode,
+    eventName,
+    feedbackEndpoint,
+    gameStats,
+    isSettingsOpen,
+    isSetupOpen,
+    participantMode,
+    savedEventDefinitions,
+    selectedEventGameIds,
+    sessionState,
+    showChallengeRatings,
+    showStudyNotes,
+    timerEnabled,
+    timerPreset,
+    useVerseSecondsPerWord,
+    verseScrambleSecondsPerWord
+  ]);
+
+  useEffect(() => {
     function updateOnlineState() {
       setIsOnline(typeof navigator === "undefined" ? true : navigator.onLine);
     }
@@ -2623,7 +2726,8 @@ export function App() {
         individualNames: playerNames,
         individualColors: playerColors,
         teams,
-        sessionId: nextChallengeId
+        sessionId: nextChallengeId,
+        maxPrompts: TEST_MODE_MAX_PROMPTS_VALUE
       });
       setGameId(modeToStart);
       setGameStats((current) => recordGameStarted(current, modeToStart, participantMode, eventScoringEnabled));
@@ -2834,7 +2938,8 @@ export function App() {
         individualNames: playerNames,
         individualColors: playerColors,
         teams,
-        sessionId: nextChallengeId
+        sessionId: nextChallengeId,
+        maxPrompts: TEST_MODE_MAX_PROMPTS_VALUE
       });
       setGameStats((current) =>
         recordGameStarted(current, sessionState.gameId, participantMode, eventScoringEnabled)
