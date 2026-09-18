@@ -36,6 +36,7 @@ import {
   type BeforeOrAfterState,
   type FiveGuessesState,
   type GenealogyState,
+  type InitialsState,
   type OddOneOutState,
   type ParableMatchState,
   type RelayVerseBuildState,
@@ -1075,5 +1076,79 @@ describe("gameEngine transitions", () => {
     expect(state.currentPrompt.phase).toBe("resolved");
     expect(state.currentPrompt.matchedPairIds).toHaveLength(state.totalPrompts);
     expect(state.resolvedPrompts).toBe(state.totalPrompts);
+  });
+
+  describe("maxPrompts", () => {
+    it("caps a round-based game to the requested prompt count", async () => {
+      const state = (await createSessionState({
+        gameId: "who-said-it",
+        participantMode: "individual",
+        individualNames: ["Anna", "Ben"],
+        maxPrompts: 2
+      })) as WhoSaidItState;
+
+      expect(state.totalPrompts).toBe(2);
+    });
+
+    it("caps the Five Clues board to the requested card count", async () => {
+      const state = (await createSessionState({
+        gameId: "five-guesses",
+        participantMode: "individual",
+        individualNames: ["Anna", "Ben"],
+        maxPrompts: 2
+      })) as FiveGuessesState;
+
+      expect(state.boardCards).toHaveLength(2);
+      expect(state.totalPrompts).toBe(2);
+    });
+
+    it("caps the Bible Initials board to the requested card count", async () => {
+      const state = (await createSessionState({
+        gameId: "initials",
+        participantMode: "individual",
+        individualNames: ["Anna", "Ben"],
+        maxPrompts: 2
+      })) as InitialsState;
+
+      expect(state.boardCards).toHaveLength(2);
+      expect(state.totalPrompts).toBe(2);
+    });
+
+    it("never picks fewer than one prompt, even when maxPrompts is 0 or negative", async () => {
+      const zero = (await createSessionState({
+        gameId: "who-said-it",
+        participantMode: "individual",
+        individualNames: ["Anna", "Ben"],
+        maxPrompts: 0
+      })) as WhoSaidItState;
+      const negative = (await createSessionState({
+        gameId: "who-said-it",
+        participantMode: "individual",
+        individualNames: ["Anna", "Ben"],
+        maxPrompts: -5
+      })) as WhoSaidItState;
+
+      // maxPrompts <= 0 is treated as "no cap" (falls back to the game's normal default),
+      // matching capPromptCount's guard — it must never throw or produce a zero-prompt session.
+      expect(zero.totalPrompts).toBeGreaterThan(0);
+      expect(negative.totalPrompts).toBeGreaterThan(0);
+    });
+
+    it("leaves the session unchanged when maxPrompts is not set", async () => {
+      const withCap = (await createSessionState({
+        gameId: "who-said-it",
+        participantMode: "individual",
+        individualNames: ["Anna", "Ben"],
+        maxPrompts: 3
+      })) as WhoSaidItState;
+      const withoutCap = (await createSessionState({
+        gameId: "who-said-it",
+        participantMode: "individual",
+        individualNames: ["Anna", "Ben"]
+      })) as WhoSaidItState;
+
+      expect(withCap.totalPrompts).toBe(3);
+      expect(withoutCap.totalPrompts).toBeGreaterThan(withCap.totalPrompts);
+    });
   });
 });

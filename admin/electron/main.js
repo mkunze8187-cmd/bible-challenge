@@ -8,6 +8,22 @@ const { app, BrowserWindow, dialog, ipcMain, shell } = require("electron");
 // one. See the userData-sharing smoke test in scripts/smoke-test-user-data.mjs.
 app.setName("Bible Challenge");
 
+// Test mode is on only when BOTH BIBLE_CHALLENGE_E2E=1 and the app is running unpackaged.
+// See electron/main.js for why app.isPackaged is the load-bearing check here, and
+// specs/automated-testing-spec.md section 4.1.
+const isTestMode = process.env.BIBLE_CHALLENGE_E2E === "1" && !app.isPackaged;
+
+// Immediately after app.setName(...) — see the comment above it — so the isolated userData
+// directory takes effect before anything (including lazily, inside helpers below) reads
+// app.getPath("userData"). Cross-app tests point both apps at the same temp folder.
+if (isTestMode && process.env.BIBLE_CHALLENGE_USER_DATA_DIR) {
+  app.setPath("userData", process.env.BIBLE_CHALLENGE_USER_DATA_DIR);
+}
+
+if (isTestMode) {
+  app.commandLine.appendSwitch("force-device-scale-factor", "1");
+}
+
 const { spawn } = require("node:child_process");
 const fsSync = require("node:fs");
 const fs = require("node:fs/promises");
@@ -17,7 +33,13 @@ const path = require("node:path");
 const CUSTOM_CONTENT_FILE_EXTENSION = ".json";
 const GITHUB_OWNER = "mkunze8187-cmd";
 const GITHUB_REPO = "bible-challenge";
-const GITHUB_API_BASE = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}`;
+// In test mode, BIBLE_CHALLENGE_UPDATES_URL points the update checker at a local fixture
+// HTTP server instead of the real GitHub Releases API, so E2E tests never make a real
+// network call. Ignored outside test mode. See specs/automated-testing-spec.md section 4.6.
+const GITHUB_API_BASE =
+  isTestMode && process.env.BIBLE_CHALLENGE_UPDATES_URL
+    ? process.env.BIBLE_CHALLENGE_UPDATES_URL
+    : `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}`;
 const GITHUB_RELEASES_URL = `https://github.com/${GITHUB_OWNER}/${GITHUB_REPO}/releases`;
 // Two installer assets now ship in every release — the main game app and this admin
 // console — since packaging decided on two separate NSIS installers published together
@@ -454,6 +476,14 @@ function downloadFile(url, targetPath, token = null) {
 // "Update both apps" action calls this twice — main first, then admin last, since
 // launching the admin console's own installer may require this process to exit.
 async function downloadAndInstallOne(role) {
+  // Hard guard, independent of the update-check URL stub above: in test mode this always
+  // throws before downloading or spawning anything, so an E2E test can exercise the button
+  // and error path without ever launching a real installer. See
+  // specs/automated-testing-spec.md section 4.6.
+  if (isTestMode) {
+    throw new Error("Installer download and install is disabled in test mode.");
+  }
+
   const release = await getLatestRelease();
   const asset = getInstallerAsset(release, role);
   const latestVersion = String(release.tag_name || "").replace(/^v/i, "");
@@ -532,13 +562,17 @@ function createWindow() {
   });
 
   const devServerUrl = process.env.VITE_DEV_SERVER_URL;
+  const query = isTestMode ? "?e2e=1" : "";
 
   if (devServerUrl) {
-    window.loadURL(devServerUrl);
+    window.loadURL(`${devServerUrl}${query}`);
     return;
   }
 
-  window.loadFile(path.join(__dirname, "..", "dist", "index.html"));
+  window.loadFile(
+    path.join(__dirname, "..", "dist", "index.html"),
+    query ? { query: Object.fromEntries(new URLSearchParams(query.slice(1))) } : undefined
+  );
 }
 
 app.whenReady().then(() => {

@@ -1,4 +1,5 @@
 import { loadGameContent } from "../content";
+import { shuffle } from "../random";
 import { scoreFiveGuesses } from "../scoring";
 import type { FiveGuessesRound } from "../../types/gameData";
 import type {
@@ -77,17 +78,6 @@ function buildStealOrder(length: number, primaryIndex: number): number[] {
   }
 
   return order;
-}
-
-function shuffle<T>(values: T[]): T[] {
-  const next = [...values];
-
-  for (let index = next.length - 1; index > 0; index -= 1) {
-    const swapIndex = Math.floor(Math.random() * (index + 1));
-    [next[index], next[swapIndex]] = [next[swapIndex], next[index]];
-  }
-
-  return next;
 }
 
 function pickRandomSubset<T>(values: T[], count: number): T[] {
