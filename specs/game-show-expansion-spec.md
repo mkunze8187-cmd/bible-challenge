@@ -247,21 +247,32 @@ Both already exist as scoped work: `isCorrectGuess`/`normalizeText` (answer chec
 
 # 10. Milestones and Issues
 
-These are created as **new milestones after the existing roadmap**, not inserted into it — everything currently scheduled (Host Mode, Phone Mode Stages 1-3, Tournament, Daily Challenge, Bible Map Challenge, Themed Content, Licensing) is unaffected and unreordered. New milestones depend on Phone Mode Stage 1 or Stage 3 Step 1 via native `blockedBy` edges, same convention as the rest of the tracker.
+These are created as **new milestones after the existing roadmap**, not inserted into it — everything currently scheduled (Host Mode, Phone Mode Stages 1-3, Tournament, Daily Challenge, Bible Map Challenge, Themed Content, Licensing) is unaffected and unreordered. New milestones depend on Phone Mode Stage 1, Host Mode Phase 1, or Stage 3 Step 1 via native `blockedBy` edges, same convention as the rest of the tracker.
 
-| Milestone | Depends on (blockedBy) | Issues |
-|---|---|---|
-| **1.x — Controller: Private Choice & Number Input** | Phone Mode Stage 3, Step 1 (Choice Select) | 1. Add `number-input` and `private-choice` to `PhoneInteraction`; 2. Add `privateOverride` to `PhonePromptModel` and extend `toPhoneView()`; 3. Extend the Stage 3 leak test for `privateOverride` |
-| **1.x — New Games: Progressive Reveal Content Batch** | none beyond existing engine (ships any time) | 1. Clue Ladder (`GameId`, schema, content); 2. Who Am I? / Name That Story / Quick Bible Mystery (shared schema shape); 3. Movie Trailer / Investigator / Archaeologist; 4. Casting Call (Choice Select skin); 5. Scripture Stumpers (`GameId`, schema, ~100 main-pack puzzles) |
-| **1.x — Timeline Sub-Modes** | none (extends shipped `bible-timeline`) | 1. Add `roundType` field and "Which Came First?" pairwise mode; 2. Add "Insert Event" mode |
-| **1.x — Director's Cut Presentation Variant** | none (extends shipped `two-truths-and-a-lie`) | 1. Add `presentationStyle` field and narrated-account content |
-| **1.x — Bible Baseball** | Host Mode (0.2.0); Controller: Private Choice & Number Input | 1. Base-running state machine + unit tests; 2. Pitch inventory reducer + presets; 3. Role-switching participant support; 4. Pitcher private-choice UI + batter answer UI; 5. Host console + projector views; 6. Stats fields and scoring integration |
-| **1.x — Bible Blockbusters** | Phone Mode Stage 1 (0.3.0) | 1. Hex board state + adjacency/win-check + unit tests; 2. Content-aware board generator; 3. `GameId`, schema, content; 4. Host console + projector board UI |
-| **1.x — Forbidden Words** | Controller: Private Choice & Number Input | 1. Team-turn clue-giver flow using `privateOverride`; 2. Timer + scoring; 3. Content (target word + forbidden list) |
+## 10.1 Priority tiering
+
+Lumping all seven new milestones at a flat `priority: later` obscured real differences in dependency depth. They were re-tagged after review:
+
+| Tier | Milestones | Priority | Why |
+|---|---|---|---|
+| **No dependency on unshipped work** | New Games: Progressive Reveal Content Batch, Timeline Sub-Modes, Director's Cut Presentation Variant | `priority: next` | Pure schema/content extensions to games that already ship. Zero architectural risk; nothing to build first. |
+| **Reachable once Phone Mode Stage 1 ships** (already `priority: next`) | Bible Blockbusters | `priority: next` | Depends only on Phone Mode Stage 1, Step 1 (issue #12) — not Host Mode, not the controller extension. Shallower than Baseball by a full milestone; sequence its build *ahead* of Baseball to validate the buzzer-arena-as-board-game pattern first. |
+| **Reachable once Stage 3 Step 1 / Host Mode Phase 1 ship** | Controller: Private Choice & Number Input, Forbidden Words | `priority: later` | Real prerequisites (Phone Mode Stage 3 Step 1; the controller extension) haven't shipped yet. |
+| **Deepest chain in the new batch** | Bible Baseball | `priority: later` | Needs Host Mode Phase 1 *and* the controller extension *and* four internal issues before a host console exists. Build after Blockbusters proves the pattern, not in parallel with it. |
+
+| Milestone | Priority | Depends on (blockedBy) | Issues |
+|---|---|---|---|
+| **1.x — New Games: Progressive Reveal Content Batch** | `next` | none beyond existing engine (ships any time) | 1. Clue Ladder (`GameId`, schema, content); 2. Who Am I? / Name That Story / Quick Bible Mystery (shared schema shape); 3. Movie Trailer / Investigator / Archaeologist; 4. Casting Call (Choice Select skin); 5. Scripture Stumpers (`GameId`, schema, ~100 main-pack puzzles) |
+| **1.x — Timeline Sub-Modes** | `next` | none (extends shipped `bible-timeline`) | 1. Add `roundType` field and "Which Came First?" pairwise mode; 2. Add "Insert Event" mode |
+| **1.x — Director's Cut Presentation Variant** | `next` | none (extends shipped `two-truths-and-a-lie`) | 1. Add `presentationStyle` field and narrated-account content |
+| **1.x — Bible Blockbusters** | `next` | Phone Mode Stage 1 (0.3.0), issue #12 | 1. Hex board state + adjacency/win-check + unit tests; 2. Content-aware board generator; 3. `GameId`, schema, content; 4. Host console + projector board UI |
+| **1.x — Controller: Private Choice & Number Input** | `later` | Phone Mode Stage 3, Step 1 (Choice Select), issue #17 | 1. Add `number-input` and `private-choice` to `PhoneInteraction`; 2. Add `privateOverride` to `PhonePromptModel` and extend `toPhoneView()`; 3. Extend the Stage 3 leak test for `privateOverride` |
+| **1.x — Forbidden Words** | `later` | Controller: Private Choice & Number Input | 1. Team-turn clue-giver flow using `privateOverride`; 2. Timer + scoring; 3. Content (target word + forbidden list) |
+| **1.x — Bible Baseball** | `later` | Host Mode (0.2.0), issue #8; Controller: Private Choice & Number Input | 1. Base-running state machine + unit tests; 2. Pitch inventory reducer + presets; 3. Role-switching participant support; 4. Pitcher private-choice UI + batter answer UI; 5. Host console + projector views; 6. Stats fields and scoring integration |
 
 Everything in §5.3/§5.4 (Basketball, Football, Bible Grid, Movie Mashup, Bible Escape, etc.) is intentionally **not** filed as an issue yet — it stays as a candidate list in this spec per the triage rationale, to avoid inflating the tracker with unscoped work. File issues for those only after Baseball and Blockbusters ship and the risk/reward and board-claiming patterns they establish can inform the design.
 
-Apply the existing labels: `spec`, `enhancement`, plus `priority: later` for everything in this table (nothing here is scheduled ahead of the current `next`/`now` work) and `content-pack` for the content-only issues (Scripture Stumpers puzzles, Clue Ladder content, etc.).
+Apply the existing labels: `spec`, `enhancement`, the priority tier from §10.1, and `content-pack` for the content-only issues (Scripture Stumpers puzzles, Clue Ladder content, etc.).
 
 ---
 
