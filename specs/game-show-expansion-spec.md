@@ -11,8 +11,9 @@
 7. Bible Blockbusters (New Engine)
 8. Content Pack Interaction
 9. Answer Normalization and Host Override
-10. Milestones and Issues
-11. Open Decisions
+10. Admin Console Impact
+11. Milestones and Issues
+12. Open Decisions
 
 ---
 
@@ -245,11 +246,44 @@ Both already exist as scoped work: `isCorrectGuess`/`normalizeText` (answer chec
 
 ---
 
-# 10. Milestones and Issues
+# 10. Admin Console Impact
+
+The original pass of this spec omitted this section entirely, unlike every other content-affecting spec in this repo (`themed-content-spec.md` section 12, and the Admin Console subsections under Tournament and Bible Map Challenge in `enhancement-spec-tournament-daily-host-map.md`). Corrected here.
+
+## 10.1 Why every new game or schema change touches the admin console
+
+The admin console renders its content-editing forms **generically from each game's JSON Schema**, driven by a vendored manifest (`admin/src/data/games.json`, mapping `gameId` to `label`/`shortDescription`/`schemaFile`) that is copied from the main app via `scripts/sync-schemas.mjs` — a deliberate one-way vendor, not a live cross-repo read (see that script's own header comment). This means:
+
+- **A brand-new `GameId`** is not editable in the admin console until (a) `sync-schemas` is re-run to vendor its schema, and (b) it gets an entry in `games.json` with a label and description. This is a manual step (`npm run sync-schemas -- --source ../Personal`), not automatic.
+- **A new field on an existing game's schema** (e.g. `roundType` on `bible-timeline`, `presentationStyle` on `two-truths-and-a-lie`) should be picked up by the generic form renderer once `sync-schemas` is re-run, since the form is schema-driven rather than hand-built per game — but this should be verified per change, not assumed, since the generic renderer's coverage of schema features (enums, discriminated unions, nested arrays) is not guaranteed to be complete for every shape a new field might take.
+- **`verify-schemas-fresh.mjs`** exists specifically to catch a stale vendor copy. Any PR that changes a game's schema in the main app without re-running `sync-schemas` in the admin console repo should fail that check.
+
+## 10.2 Per-issue admin console impact
+
+| Issue | Admin console change needed |
+|---|---|
+| #52 Clue Ladder | New `GameId` + schema: run `sync-schemas`, add `games.json` entry |
+| #53 Who Am I? / Name That Story / Quick Bible Mystery | New `GameId`(s) + schema: run `sync-schemas`, add `games.json` entries |
+| #54 Movie Trailer / Investigator / Archaeologist / Casting Call | New `GameId`(s) + schema: run `sync-schemas`, add `games.json` entries |
+| #55 Scripture Stumpers | New `GameId` + schema: run `sync-schemas`, add `games.json` entry |
+| #56 `bible-timeline` `roundType` field | Re-run `sync-schemas`; verify the generic form renderer handles the new field (round-type discriminator) correctly, not just assume it |
+| #57 `bible-timeline` "Insert Event" mode | Same schema-refresh verification as #56 |
+| #58 `two-truths-and-a-lie` `presentationStyle` field | Re-run `sync-schemas`; verify the generic form renderer handles narrated-account content authoring (likely a longer free-text field than the existing statement list) |
+| #60 Baseball pitch inventory presets (Young/Standard/Advanced) | Per `phone-buzzer-spec.md` section on Settings ("the admin console can later expose per-game defaults"), these presets are a natural admin-exposed per-game default, same shape as `defaultPlayStyleByGame`. Add an admin settings surface for the active preset, or explicitly defer with a note if out of scope for MVP |
+| #64 Baseball stats fields | New `PlayerStats` fields (hits, runs, outs) — check whether the admin console's stats view (existing `gameStats`/`GamePlayStats`, per this project's separate content-editor/admin-console plans) needs to know about them, or whether it already displays arbitrary stat fields generically |
+| #66 Blockbusters board generator | Board size is a per-game default in the same shape as Baseball's presets; same admin-exposure question |
+| #67 Blockbusters schema/content | New `GameId` + schema: run `sync-schemas`, add `games.json` entry |
+| #71 Forbidden Words content | New `GameId` + schema: run `sync-schemas`, add `games.json` entry |
+
+No admin console change is needed for #49-51 (controller/protocol-only, no content schema) or #59/#61/#62/#63/#65/#68/#69/#70 (state machines and host/projector/timer UI, no schema or settings surface of their own).
+
+---
+
+# 11. Milestones and Issues
 
 These are created as **new milestones after the existing roadmap**, not inserted into it — everything currently scheduled (Host Mode, Phone Mode Stages 1-3, Tournament, Daily Challenge, Bible Map Challenge, Themed Content, Licensing) is unaffected and unreordered. New milestones depend on Phone Mode Stage 1, Host Mode Phase 1, or Stage 3 Step 1 via native `blockedBy` edges, same convention as the rest of the tracker.
 
-## 10.1 Priority tiering
+## 11.1 Priority tiering
 
 Lumping all seven new milestones at a flat `priority: later` obscured real differences in dependency depth. They were re-tagged after review:
 
@@ -272,13 +306,14 @@ Lumping all seven new milestones at a flat `priority: later` obscured real diffe
 
 Everything in §5.3/§5.4 (Basketball, Football, Bible Grid, Movie Mashup, Bible Escape, etc.) is intentionally **not** filed as an issue yet — it stays as a candidate list in this spec per the triage rationale, to avoid inflating the tracker with unscoped work. File issues for those only after Baseball and Blockbusters ship and the risk/reward and board-claiming patterns they establish can inform the design.
 
-Apply the existing labels: `spec`, `enhancement`, the priority tier from §10.1, and `content-pack` for the content-only issues (Scripture Stumpers puzzles, Clue Ladder content, etc.).
+Apply the existing labels: `spec`, `enhancement`, the priority tier from §11.1, and `content-pack` for the content-only issues (Scripture Stumpers puzzles, Clue Ladder content, etc.). Every issue that adds a `GameId` or a content schema also needs the admin console follow-through in §10.2.
 
 ---
 
-# 11. Open Decisions
+# 12. Open Decisions
 
 1. **Baseball hit-quality timing model.** Source doc suggests either fixed thresholds or percentage-of-allowed-time. Deferred to implementation; not a blocker for MVP (every correct answer is a single).
 2. **Blockbusters board size and >2-team variant.** 5x5/2-team is the MVP assumption in this spec; needs play-testing before locking the size, and the >2-team variant needs its own design pass (source doc flags this itself).
 3. **Entity-tag metadata model** (Bible Grid, Categories, Movie Mashup, Four Square's shared dependency) is unscoped. Worth its own short spec once the higher-priority items in this document ship, since several §5.4 "fold in" candidates become buildable once it exists.
 4. **Whether Clue Ladder's schema should be unified with `prophecy-clue-ladder`'s** (literally the same engine) or kept as a sibling schema. Leaning toward unifying under one generic "clue ladder" schema with a `theme`/`category` field, but that's a judgment call for whoever picks up that issue.
+5. **Whether the admin console's stats view displays new per-game stat fields generically or needs per-field awareness.** Baseball adds `hits`/`runs`/`outs` to `PlayerStats` (§10.2, issue #64). If the admin console's stats view (or the separate planned admin-console stats/ratings migration) already renders arbitrary `PlayerStats` fields generically, no admin work is needed there; if it hand-lists known fields, Baseball's stats need to be added explicitly. Whoever picks up #64 should check the admin console's current stats-rendering code before assuming either way.
