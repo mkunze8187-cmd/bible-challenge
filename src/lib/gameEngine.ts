@@ -2439,7 +2439,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
     const pack = await loadContent("odd-one-out");
     const { rounds, usedFallbackDifficulty } = pickGameRoundsWithDifficultyFallback(
       pack.sessions.flatMap((session) => session.rounds),
-      ODD_ONE_OUT_ROUNDS_PER_GAME,
+      capPromptCount(ODD_ONE_OUT_ROUNDS_PER_GAME, config.maxPrompts),
       "Odd One Out",
       config.difficulty
     );
@@ -2476,7 +2476,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
     const pack = await loadContent("genealogy");
     const { rounds, usedFallbackDifficulty } = pickGameRoundsWithDifficultyFallback(
       pack.sessions.flatMap((session) => session.rounds),
-      GENEALOGY_ROUNDS_PER_GAME,
+      capPromptCount(GENEALOGY_ROUNDS_PER_GAME, config.maxPrompts),
       "Fill in the Genealogy",
       config.difficulty
     );
@@ -2546,7 +2546,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
     const pack = await loadContent("parable-match");
     const { rounds: pairs, usedFallbackDifficulty } = pickGameRoundsWithDifficultyFallback(
       pack.sessions.flatMap((session) => session.rounds),
-      PARABLE_MATCH_PAIRS_PER_GAME,
+      capPromptCount(PARABLE_MATCH_PAIRS_PER_GAME, config.maxPrompts),
       "Parable Match",
       config.difficulty
     );
@@ -2687,11 +2687,13 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       PROPHECY_CATEGORIES_ROUNDS_PER_GAME,
       "Prophecy Categories Challenge"
     );
+    const cards = capBoardCards(rounds[0].cards, config.maxPrompts);
+    const round = { ...rounds[0], cards };
 
     return {
       gameId: "prophecy-categories",
       displayName: GAME_LIBRARY["prophecy-categories"].label,
-      sessionTitle: rounds[0].title,
+      sessionTitle: round.title,
       sessionTheme: "Sort each prophecy card into the correct reference category.",
       participantMode: config.participantMode,
       participants,
@@ -2706,11 +2708,11 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       ],
       status: "in-progress",
       turnIndex: 0,
-      totalPrompts: rounds[0].cards.length,
+      totalPrompts: round.cards.length,
       resolvedPrompts: 0,
       roundIndex: 0,
-      rounds,
-      currentPrompt: createProphecyCategoriesPrompt(rounds[0])
+      rounds: [{ ...rounds[0], cards }, ...rounds.slice(1)],
+      currentPrompt: createProphecyCategoriesPrompt(round)
     };
   }
 
@@ -2823,11 +2825,13 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       PROVERB_CATEGORIES_ROUNDS_PER_GAME,
       "Proverb Categories Challenge"
     );
+    const cards = capBoardCards(rounds[0].cards, config.maxPrompts);
+    const round = { ...rounds[0], cards };
 
     return {
       gameId: "proverb-categories",
       displayName: GAME_LIBRARY["proverb-categories"].label,
-      sessionTitle: rounds[0].title,
+      sessionTitle: round.title,
       sessionTheme: "Sort each Proverbs card into the correct wisdom category.",
       participantMode: config.participantMode,
       participants,
@@ -2842,11 +2846,11 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       ],
       status: "in-progress",
       turnIndex: 0,
-      totalPrompts: rounds[0].cards.length,
+      totalPrompts: round.cards.length,
       resolvedPrompts: 0,
       roundIndex: 0,
-      rounds,
-      currentPrompt: createProverbCategoriesPrompt(rounds[0])
+      rounds: [{ ...rounds[0], cards }, ...rounds.slice(1)],
+      currentPrompt: createProverbCategoriesPrompt(round)
     };
   }
 
@@ -3582,6 +3586,11 @@ export function continueGame(state: SessionState): ActionResult {
       throw new Error("Resolve the prophecy categories board before continuing.");
     }
 
+    if (nextState.resolvedPrompts >= nextState.totalPrompts) {
+      nextState.status = "completed";
+      return addActivity(nextState, "info", `${nextState.sessionTitle} is complete. Final standings are ready.`);
+    }
+
     return advanceLinearRound(nextState, (round) => createProphecyCategoriesPrompt(round as ProphecyCategoriesRound));
   }
 
@@ -3612,6 +3621,11 @@ export function continueGame(state: SessionState): ActionResult {
   if (nextState.gameId === "proverb-categories") {
     if (nextState.currentPrompt.phase !== "resolved") {
       throw new Error("Resolve the proverb categories board before continuing.");
+    }
+
+    if (nextState.resolvedPrompts >= nextState.totalPrompts) {
+      nextState.status = "completed";
+      return addActivity(nextState, "info", `${nextState.sessionTitle} is complete. Final standings are ready.`);
     }
 
     return advanceLinearRound(nextState, (round) => createProverbCategoriesPrompt(round as ProverbCategoriesRound));
