@@ -4,8 +4,8 @@
 
 Maps planned features to release versions for Bible Challenge and the Admin Console, and defines how version numbers are chosen.
 
-- **Current version:** 0.1.9 (both apps, tag `v0.1.9`)
-- **History:** every release so far (`v0.1.0` through `v0.1.9`) has been a patch bump, including the release that added six games and split out the admin console.
+- **Current version:** 0.1.11 (both apps, tag `v0.1.11`)
+- **History:** every release so far (`v0.1.0` through `v0.1.11`) has been a patch bump, including the release that added six games and split out the admin console.
 
 ## Version Rules
 
@@ -38,7 +38,7 @@ No major bumps before 1.0.0.
 
 | Version | Feature | Spec | Bump | Notes |
 |---|---|---|---|---|
-| 0.1.x | Automated testing, Steps 1-3 plus game tests and core screenshot baselines | `automated-testing-spec.md` | Patch | Dev-only apart from seeded randomness and `maxPrompts`. Ships with the next fix release, or no release at all. |
+| 0.1.x | Automated testing, Steps 1-3 plus Layer 1 game tests | `automated-testing-spec.md` | Patch | Dev-only apart from seeded randomness and `maxPrompts`. Ships with the next fix release, or no release at all. |
 | **0.2.0** | Host Mode / Game Master Controls | `enhancement-spec-tournament-daily-host-map.md`, section 3 | Minor | Refactors every game's submit path. Adds Select Answering Participant, Mark Correct, Mark Incorrect, participant score selector, and multi-level undo. |
 | **0.3.0** | Phone Mode, Stage 1: Buzz Only | `phone-buzzer-spec.md`, section 3 | Minor | First release that opens a network port. Triggers a Windows firewall prompt. Adds `ws` and `qrcode` runtime dependencies. |
 | **1.0.0** | Stabilization milestone | — | Major (milestone) | No new features. Released once the 1.0.0 criteria below are met. |
