@@ -21,7 +21,10 @@ if (isTestMode && process.env.BIBLE_CHALLENGE_USER_DATA_DIR) {
 }
 
 if (isTestMode) {
+  app.disableHardwareAcceleration();
   app.commandLine.appendSwitch("force-device-scale-factor", "1");
+  app.commandLine.appendSwitch("disable-gpu");
+  app.commandLine.appendSwitch("disable-gpu-sandbox");
 }
 
 const { spawn } = require("node:child_process");

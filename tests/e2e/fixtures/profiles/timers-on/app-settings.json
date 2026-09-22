@@ -1,0 +1,7 @@
+{
+  "colorTheme": "classic",
+  "timerEnabled": true,
+  "challengeTimerSeconds": 10,
+  "useVerseSecondsPerWord": true,
+  "verseScrambleSecondsPerWord": 2
+}

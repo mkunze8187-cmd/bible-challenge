@@ -1,0 +1,17 @@
+{
+  "colorTheme": "classic",
+  "timerEnabled": false,
+  "gameStats": {
+    "five-guesses": {
+      "plays": 3,
+      "totalScore": 42,
+      "lastPlayedAt": "2026-09-22T00:00:00.000Z"
+    }
+  },
+  "challengeRatings": {
+    "five-guesses": {
+      "total": 9,
+      "count": 2
+    }
+  }
+}

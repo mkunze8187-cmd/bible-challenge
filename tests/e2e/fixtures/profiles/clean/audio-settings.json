@@ -1,0 +1,9 @@
+{
+  "soundEffectsEnabled": false,
+  "soundEffectsVolume": 0,
+  "backgroundMusicEnabled": false,
+  "backgroundMusicVolume": 0,
+  "backgroundMusicLoop": true,
+  "backgroundMusicFilePath": null,
+  "backgroundMusicDisplayName": null
+}

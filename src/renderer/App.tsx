@@ -317,6 +317,7 @@ const ALL_GAME_IDS = Object.keys(GAME_LIBRARY) as GameId[];
 const ALL_GAME_ID_SET = new Set<GameId>(ALL_GAME_IDS);
 const FORMINIT_FEEDBACK_FORM_ID = "e69o7x640m6";
 const DEFAULT_FEEDBACK_ENDPOINT = `https://forminit.com/f/${FORMINIT_FEEDBACK_FORM_ID}`;
+const TEST_MODE_FEEDBACK_ENDPOINT = IS_TEST_MODE ? TEST_MODE_QUERY.get("feedbackEndpoint") : null;
 const CONTENT_PACKS: Record<ContentPackId, { label: string; color: string }> = {
   all: { label: "All Challenges", color: "#4f463d" },
   popular: { label: "Popular", color: "#8f5d2a" },
@@ -1692,14 +1693,29 @@ function cleanGamePlayStats(value: unknown): Partial<Record<GameId, GamePlayStat
 }
 
 function cleanFeedbackEndpoint(value: unknown): string {
+  let fallback = DEFAULT_FEEDBACK_ENDPOINT;
+
+  if (typeof TEST_MODE_FEEDBACK_ENDPOINT === "string" && TEST_MODE_FEEDBACK_ENDPOINT.trim()) {
+    try {
+      const testUrl = new URL(TEST_MODE_FEEDBACK_ENDPOINT.trim());
+      const testHost = testUrl.hostname.toLowerCase();
+
+      if (testUrl.protocol === "http:" && (testHost === "127.0.0.1" || testHost === "localhost")) {
+        fallback = testUrl.toString();
+      }
+    } catch (error) {
+      fallback = DEFAULT_FEEDBACK_ENDPOINT;
+    }
+  }
+
   if (typeof value !== "string") {
-    return DEFAULT_FEEDBACK_ENDPOINT;
+    return fallback;
   }
 
   const trimmed = value.trim();
 
   if (!trimmed) {
-    return DEFAULT_FEEDBACK_ENDPOINT;
+    return fallback;
   }
 
   try {
@@ -1709,11 +1725,15 @@ function cleanFeedbackEndpoint(value: unknown): string {
     if (url.protocol === "https:" && (host === "forminit.com" || host === "getform.io")) {
       return url.toString();
     }
+
+    if (IS_TEST_MODE && url.protocol === "http:" && (host === "127.0.0.1" || host === "localhost")) {
+      return url.toString();
+    }
   } catch (error) {
-    return DEFAULT_FEEDBACK_ENDPOINT;
+    return fallback;
   }
 
-  return DEFAULT_FEEDBACK_ENDPOINT;
+  return fallback;
 }
 
 function cleanDifficultyFilter(value: unknown): DifficultyFilter {
@@ -1849,7 +1869,7 @@ export function App() {
   const [gameStats, setGameStats] = useState<Partial<Record<GameId, GamePlayStats>>>({});
   const [recordedStatsChallengeIds, setRecordedStatsChallengeIds] = useState<string[]>([]);
   const [sessionMisses, setSessionMisses] = useState<Record<string, MissedPromptStat[]>>({});
-  const [feedbackEndpoint, setFeedbackEndpoint] = useState(DEFAULT_FEEDBACK_ENDPOINT);
+  const [feedbackEndpoint, setFeedbackEndpoint] = useState(() => cleanFeedbackEndpoint(null));
   const [feedbackDraft, setFeedbackDraft] = useState<FeedbackDraft | null>(null);
   const [feedbackStatus, setFeedbackStatus] = useState("");
   const [isSubmittingFeedback, setIsSubmittingFeedback] = useState(false);
