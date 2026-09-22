@@ -4,6 +4,11 @@
   "private": true,
   "description": "Admin console for the Bible Challenge desktop app: content editing, play stats, ratings, and updates.",
   "author": "Michael Kunze",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mkunze8187-cmd/bible-challenge.git",
+    "directory": "admin"
+  },
   "main": "electron/main.js",
   "scripts": {
     "typecheck": "tsc -p .",
