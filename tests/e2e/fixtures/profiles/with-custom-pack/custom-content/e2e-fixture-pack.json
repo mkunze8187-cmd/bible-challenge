@@ -1,0 +1,6 @@
+{
+  "packId": "e2e-fixture-pack",
+  "displayName": "E2E Fixture Pack",
+  "description": "Small content pack used by Playwright fixtures.",
+  "games": []
+}

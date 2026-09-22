@@ -21,7 +21,10 @@ if (isTestMode && process.env.BIBLE_CHALLENGE_USER_DATA_DIR) {
 // Keeps Windows display scaling from changing screenshot sizes between machines, so visual
 // regression baselines stay comparable. Must be set before app.whenReady().
 if (isTestMode) {
+  app.disableHardwareAcceleration();
   app.commandLine.appendSwitch("force-device-scale-factor", "1");
+  app.commandLine.appendSwitch("disable-gpu");
+  app.commandLine.appendSwitch("disable-gpu-sandbox");
 }
 
 const SUPPORTED_AUDIO_EXTENSIONS = new Set([".mp3", ".wav", ".ogg", ".m4a", ".aac", ".flac"]);
@@ -211,7 +214,7 @@ let mainWindow = null;
 let projectorWindow = null;
 let projectorState = null;
 
-// In test mode, adds e2e=1 (and seed=... / maxPrompts=... when set) to a window's query
+// In test mode, adds e2e=1 (and seed/maxPrompts/feedbackEndpoint when set) to a window's query
 // string so the renderer can read them at startup. Merges with any query the caller already
 // built (for example the projector window's own "?projector=1"), rather than overwriting it.
 function withTestModeQuery(query = "") {
@@ -228,6 +231,10 @@ function withTestModeQuery(query = "") {
 
   if (process.env.BIBLE_CHALLENGE_E2E_MAX_PROMPTS) {
     params.set("maxPrompts", process.env.BIBLE_CHALLENGE_E2E_MAX_PROMPTS);
+  }
+
+  if (process.env.BIBLE_CHALLENGE_FEEDBACK_URL) {
+    params.set("feedbackEndpoint", process.env.BIBLE_CHALLENGE_FEEDBACK_URL);
   }
 
   return `?${params.toString()}`;
