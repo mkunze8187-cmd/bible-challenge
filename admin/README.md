@@ -1,6 +1,6 @@
 # Bible Challenge Admin Console
 
-Companion app to [Bible Challenge](../Personal) — handles anything not directly related
+Companion app to [Bible Challenge](..) — handles anything not directly related
 to game play: content editing (create/edit rounds for any of the 28 games), play stats,
 challenge ratings, and app updates.
 
@@ -8,11 +8,14 @@ challenge ratings, and app updates.
 
 ```
 npm install
-npm run sync-schemas -- --source ../Personal   # vendor schemas from the main app
-npm run typecheck
-npm run build
-npm run start   # launches the Electron app
+npm run sync-schemas --workspace bible-challenge-admin -- --source ..
+npm run typecheck:admin
+npm run build:admin
+npm run start --workspace bible-challenge-admin
 ```
+
+For the full build, run, test, package, and release workflow for both apps, see
+the root [Developer Guide](../README.md).
 
 ## Keeping schemas in sync
 
@@ -21,8 +24,8 @@ its source tree — see the comment at the top of `scripts/sync-schemas.mjs` for
 Whenever the main app adds or changes a game:
 
 ```
-npm run sync-schemas -- --source ../Personal
-npm run verify-schemas-fresh -- --source ../Personal   # run before cutting a release
+npm run sync-schemas --workspace bible-challenge-admin -- --source ..
+npm run verify-schemas-fresh --workspace bible-challenge-admin -- --source ..   # run before cutting a release
 ```
 
 ## userData sharing

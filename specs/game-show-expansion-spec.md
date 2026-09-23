@@ -31,7 +31,7 @@ That document was written without access to this repository. It explicitly asked
 
 # 2. Reconciliation: What This Spec Changes vs. Existing Specs
 
-This section is the direct answer to "identify what conflicts/enhances/overrides current issues." Read this before the milestone/issue list in section 10.
+This section is the direct answer to "identify what conflicts/enhances/overrides current issues." Read this before the milestone/issue list in section 11.
 
 ## 2.1 Direct naming/mechanic collisions (source doc vs. shipped game)
 
@@ -254,9 +254,9 @@ The original pass of this spec omitted this section entirely, unlike every other
 
 The admin console renders its content-editing forms **generically from each game's JSON Schema**, driven by a vendored manifest (`admin/src/data/games.json`, mapping `gameId` to `label`/`shortDescription`/`schemaFile`) that is copied from the main app via `scripts/sync-schemas.mjs` — a deliberate one-way vendor, not a live cross-repo read (see that script's own header comment). This means:
 
-- **A brand-new `GameId`** is not editable in the admin console until (a) `sync-schemas` is re-run to vendor its schema, and (b) it gets an entry in `games.json` with a label and description. This is a manual step (`npm run sync-schemas -- --source ../Personal`), not automatic.
+- **A brand-new `GameId`** is not editable in the admin console until (a) `sync-schemas` is re-run to vendor its schema, and (b) it gets an entry in `games.json` with a label and description. This is a manual step (`npm run sync-schemas --workspace bible-challenge-admin -- --source ..` from the repository root), not automatic.
 - **A new field on an existing game's schema** (e.g. `roundType` on `bible-timeline`, `presentationStyle` on `two-truths-and-a-lie`) should be picked up by the generic form renderer once `sync-schemas` is re-run, since the form is schema-driven rather than hand-built per game — but this should be verified per change, not assumed, since the generic renderer's coverage of schema features (enums, discriminated unions, nested arrays) is not guaranteed to be complete for every shape a new field might take.
-- **`verify-schemas-fresh.mjs`** exists specifically to catch a stale vendor copy. Any PR that changes a game's schema in the main app without re-running `sync-schemas` in the admin console repo should fail that check.
+- **`verify-schemas-fresh.mjs`** exists specifically to catch a stale vendor copy. Any PR that changes a game's schema in the main app should run `npm run verify-schemas-fresh --workspace bible-challenge-admin -- --source ..`; if schemas changed without re-running `sync-schemas`, that check reports the drift.
 
 ## 10.2 Per-issue admin console impact
 
