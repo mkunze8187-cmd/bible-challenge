@@ -1199,6 +1199,7 @@ describe("gameEngine transitions", () => {
     })) as ParableMatchState;
     expect(parableMatch.pairs).toHaveLength(5);
     expect(parableMatch.pairs.every((pair) => pair.difficulty === "hard")).toBe(true);
+    expect(new Set(parableMatch.pairs.map((pair) => pair.parableReference)).size).toBe(parableMatch.pairs.length);
     expect(parableMatch.activityLog[0].text).not.toContain("mixed difficulty");
   });
 
@@ -1236,6 +1237,8 @@ describe("gameEngine transitions", () => {
       participantMode: "individual",
       individualNames: ["Anna", "Ben"]
     })) as ParableMatchState;
+
+    expect(new Set(state.pairs.map((pair) => pair.parableReference)).size).toBe(state.pairs.length);
 
     for (const pair of state.pairs) {
       const parable = state.currentPrompt.parableCards.find((card) => card.pairId === pair.id)!;

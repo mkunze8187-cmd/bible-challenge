@@ -343,6 +343,7 @@ const CONTENT_PACKS: Record<ContentPackId, { label: string; color: string }> = {
   custom: { label: "Custom", color: "#666b72" }
 };
 const CONTENT_PACK_IDS = Object.keys(CONTENT_PACKS) as ContentPackId[];
+const MENU_CONTENT_PACK_IDS = CONTENT_PACK_IDS.filter((packId) => packId !== "all") as ContentPackId[];
 const GAME_CONTENT_PACKS: Record<GameId, ContentPackId[]> = {
   "five-guesses": ["core", "old-testament", "new-testament"],
   initials: ["core", "old-testament", "new-testament", "life-of-christ"],
@@ -1841,7 +1842,7 @@ function cleanDisplayMode(value: unknown): DisplayMode {
 }
 
 function cleanContentPackId(value: unknown): ContentPackId {
-  return typeof value === "string" && CONTENT_PACK_IDS.includes(value as ContentPackId)
+  return typeof value === "string" && MENU_CONTENT_PACK_IDS.includes(value as ContentPackId)
     ? (value as ContentPackId)
     : "core";
 }
@@ -3722,7 +3723,7 @@ export function App() {
       ? customGameIds
       : activeContentPackId === "popular"
         ? popularGameIds
-        : ALL_GAME_IDS.filter((mode) => activeContentPackId === "all" || GAME_CONTENT_PACKS[mode].includes(activeContentPackId));
+        : ALL_GAME_IDS.filter((mode) => GAME_CONTENT_PACKS[mode].includes(activeContentPackId));
   const nextEventGameId = selectedEventGameIds.find((mode) => !completedEventGameIds.includes(mode)) ?? null;
   const eventHasStarted = isEventStarted || completedEventGameIds.length > 0 || eventStandings.length > 0;
   const showChallengeSplash = Boolean(sessionState && sessionState.status === "completed" && standings.length > 1);
@@ -4342,20 +4343,12 @@ export function App() {
                           setActiveContentPackId(nextPackId);
                         }}
                       >
-                        {CONTENT_PACK_IDS.filter((packId) => packId !== "popular").map((packId) => (
+                        {MENU_CONTENT_PACK_IDS.filter((packId) => packId !== "popular").map((packId) => (
                           <option key={packId} value={packId}>
                             {CONTENT_PACKS[packId].label}
                           </option>
                         ))}
                       </select>
-                    </label>
-                    <label className="check-row">
-                      <input
-                        type="checkbox"
-                        checked={activeContentPackId === "all"}
-                        onChange={(event) => setActiveContentPackId(event.target.checked ? "all" : defaultContentPackId)}
-                      />
-                      Show all challenges
                     </label>
                   </div>
 
@@ -4707,21 +4700,20 @@ export function App() {
             </div>
 
             {!eventScoringEnabled ? (
-              <div className="content-pack-tabs" role="tablist" aria-label="Content packs">
-                {CONTENT_PACK_IDS.map((packId) => (
-                  <button
-                    key={packId}
-                    type="button"
-                    role="tab"
-                    aria-selected={activeContentPackId === packId}
-                    className={`content-pack-tab ${activeContentPackId === packId ? "content-pack-tab-active" : ""}`}
-                    style={{ "--pack-accent": CONTENT_PACKS[packId].color } as CSSProperties}
-                    onClick={() => setActiveContentPackId(packId)}
-                  >
-                    {CONTENT_PACKS[packId].label}
-                  </button>
-                ))}
-              </div>
+              <label className="content-pack-select-row">
+                <span>Category</span>
+                <select
+                  className="content-pack-select"
+                  value={activeContentPackId}
+                  onChange={(event) => setActiveContentPackId(cleanContentPackId(event.target.value))}
+                >
+                  {MENU_CONTENT_PACK_IDS.map((packId) => (
+                    <option key={packId} value={packId}>
+                      {CONTENT_PACKS[packId].label}
+                    </option>
+                  ))}
+                </select>
+              </label>
             ) : null}
 
             <div className="mode-grid">
@@ -4746,10 +4738,7 @@ export function App() {
                 const isEventUnavailable =
                   eventScoringEnabled &&
                   (!eventHasStarted || isEventEndedEarly || !isEventSelected || isEventCompleted || isOutOfOrder);
-                const cardPackId =
-                  activeContentPackId === "all" || activeContentPackId === "popular"
-                    ? GAME_CONTENT_PACKS[mode][0]
-                    : activeContentPackId;
+                const cardPackId = activeContentPackId === "popular" ? GAME_CONTENT_PACKS[mode][0] : activeContentPackId;
                 const cardAccent = eventScoringEnabled ? info.accent : CONTENT_PACKS[cardPackId]?.color ?? info.accent;
                 const totalPlays = gameStats[mode]?.totalPlays ?? 0;
                 const eventCardStatus = isEventCompleted

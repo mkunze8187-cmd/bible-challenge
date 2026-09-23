@@ -1512,6 +1512,58 @@ function pickGameRoundsWithDifficultyFallback<T>(
   return { rounds: shuffle(rounds).slice(0, count), usedFallbackDifficulty: true };
 }
 
+function getParableMatchUniqueKey(round: ParableMatchRound): string {
+  return `${round.parableReference.trim().toLowerCase()}::${round.parableSummary.trim().toLowerCase()}`;
+}
+
+function pickUniqueParableMatchPairs(
+  rounds: ParableMatchRound[],
+  count: number,
+  difficulty?: DifficultyFilter
+): { rounds: ParableMatchRound[]; usedFallbackDifficulty: boolean } {
+  const selectUnique = (candidates: ParableMatchRound[]) => {
+    const seenKeys = new Set<string>();
+    const selected: ParableMatchRound[] = [];
+
+    for (const round of shuffle(candidates)) {
+      const key = getParableMatchUniqueKey(round);
+      if (seenKeys.has(key)) {
+        continue;
+      }
+
+      seenKeys.add(key);
+      selected.push(round);
+
+      if (selected.length >= count) {
+        break;
+      }
+    }
+
+    return selected;
+  };
+
+  if (!difficulty || difficulty === "mixed") {
+    const selected = selectUnique(rounds);
+    if (selected.length < count) {
+      throw new Error(`Parable Match needs at least ${count} unique parables. Add more content or choose another game.`);
+    }
+
+    return { rounds: selected, usedFallbackDifficulty: false };
+  }
+
+  const selectedForDifficulty = selectUnique(rounds.filter((round) => getRoundDifficulty(round) === difficulty));
+  if (selectedForDifficulty.length >= count) {
+    return { rounds: selectedForDifficulty, usedFallbackDifficulty: false };
+  }
+
+  const fallbackSelected = selectUnique(rounds);
+  if (fallbackSelected.length < count) {
+    throw new Error(`Parable Match needs at least ${count} unique parables. Add more content or choose another game.`);
+  }
+
+  return { rounds: fallbackSelected, usedFallbackDifficulty: true };
+}
+
 function pickGameRoundsForParticipantDifficulties<T>(
   rounds: T[],
   count: number,
@@ -3184,10 +3236,9 @@ export async function createSessionState(config: SessionConfig): Promise<Session
 
   if (config.gameId === "parable-match") {
     const pack = await loadContent("parable-match");
-    const { rounds: pairs, usedFallbackDifficulty } = pickGameRoundsWithDifficultyFallback(
+    const { rounds: pairs, usedFallbackDifficulty } = pickUniqueParableMatchPairs(
       pack.sessions.flatMap((session) => session.rounds),
       capPromptCount(PARABLE_MATCH_PAIRS_PER_GAME, config.maxPrompts),
-      "Parable Match",
       config.difficulty
     );
 
