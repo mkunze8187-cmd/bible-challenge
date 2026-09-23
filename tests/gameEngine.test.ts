@@ -1,5 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
 import oddOneOutData from "../src/data/odd-one-out.json";
+import wordLadderDictionaryData from "../src/data/word-ladder-dictionary.json";
 import {
   continueGame,
   createSessionState,
@@ -53,6 +54,7 @@ import {
   type WordLadderState
 } from "../src/lib/gameEngine";
 import type { PlayerStats } from "../src/lib/gameEngine";
+import { setRandomSeed } from "../src/lib/random";
 
 function stats(): PlayerStats {
   return {
@@ -807,6 +809,43 @@ describe("gameEngine transitions", () => {
     expect(state.currentPrompt.choices).toBeNull();
   });
 
+  it("selects linear-deck rounds using participant difficulty overrides", async () => {
+    const state = (await createSessionState({
+      gameId: "who-said-it",
+      participantMode: "individual",
+      difficulty: "mixed",
+      individualNames: ["Anna", "Ben"],
+      individualDifficulties: ["easy", "hard"],
+      maxPrompts: 2
+    })) as WhoSaidItState;
+
+    expect(state.participants[0].difficulty).toBe("easy");
+    expect(state.participants[1].difficulty).toBe("hard");
+    expect(state.rounds.map((round) => round.difficulty)).toEqual(["easy", "hard"]);
+  });
+
+  it("lets team member difficulty override team difficulty for scheduled rounds", async () => {
+    const state = (await createSessionState({
+      gameId: "who-said-it",
+      participantMode: "teams",
+      difficulty: "mixed",
+      teams: [
+        {
+          teamName: "Family",
+          color: "#111111",
+          difficulty: "medium",
+          members: ["Anna", "Ben"],
+          memberDifficulties: ["easy", "hard"]
+        }
+      ],
+      maxPrompts: 2
+    })) as WhoSaidItState;
+
+    expect(state.participants[0].difficulty).toBe("medium");
+    expect(state.participants[0].members.map((member) => member.difficulty)).toEqual(["easy", "hard"]);
+    expect(state.rounds.map((round) => round.difficulty)).toEqual(["easy", "hard"]);
+  });
+
   it("randomizes Before or After left/right display while preserving the correct side", () => {
     const randomSpy = vi.spyOn(Math, "random");
 
@@ -1090,6 +1129,45 @@ describe("gameEngine transitions", () => {
     );
 
     expect(new Set(correctSetKeys).size).toBe(correctSetKeys.length);
+  });
+
+  it("ships Word Ladder dictionary with common short guesses", () => {
+    const words = new Set(wordLadderDictionaryData.words);
+
+    for (const word of ["man", "his", "has", "die", "bot"]) {
+      expect(words.has(word)).toBe(true);
+    }
+  });
+
+  it("ships enough Odd One Out group themes for each difficulty tier", () => {
+    const rounds = oddOneOutData.sessions.flatMap((session) => session.rounds);
+
+    for (const difficulty of ["easy", "medium", "hard"] as const) {
+      const themeCount = new Set(
+        rounds.filter((round) => round.difficulty === difficulty).map((round) => round.groupTheme)
+      ).size;
+
+      expect(themeCount).toBeGreaterThanOrEqual(oddOneOutData.roundsPerSession);
+    }
+  });
+
+  it("deals Odd One Out sessions without repeating group themes", async () => {
+    try {
+      for (const difficulty of ["mixed", "easy", "medium", "hard"] as const) {
+        setRandomSeed(77);
+        const state = (await createSessionState({
+          gameId: "odd-one-out",
+          participantMode: "individual",
+          individualNames: ["Anna", "Ben"],
+          difficulty
+        })) as OddOneOutState;
+        const groupThemes = state.rounds.map((round) => round.groupTheme);
+
+        expect(new Set(groupThemes).size).toBe(groupThemes.length);
+      }
+    } finally {
+      setRandomSeed(null);
+    }
   });
 
   it("starts the newest games without falling back from restrictive difficulty filters", async () => {

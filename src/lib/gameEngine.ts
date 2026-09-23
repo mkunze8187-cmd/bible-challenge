@@ -85,6 +85,8 @@ export interface TeamSetup {
   teamName: string;
   members: string[];
   color?: string;
+  difficulty?: DifficultyFilter;
+  memberDifficulties?: DifficultyFilter[];
 }
 
 export interface SessionConfig {
@@ -94,6 +96,7 @@ export interface SessionConfig {
   contentSource?: "built-in" | "custom" | "all";
   individualNames?: string[];
   individualColors?: string[];
+  individualDifficulties?: DifficultyFilter[];
   teams?: TeamSetup[];
   sessionId?: string;
   // Caps the number of rounds (or board cards, for board games) a session is created with.
@@ -996,6 +999,11 @@ function createSessionInstanceId(): string {
 }
 
 function createParticipants(config: SessionConfig): Participant[] {
+  const cleanDifficulty = (difficulty: DifficultyFilter | undefined): DifficultyFilter | undefined =>
+    difficulty === "easy" || difficulty === "medium" || difficulty === "hard" || difficulty === "mixed"
+      ? difficulty
+      : undefined;
+
   if (config.participantMode === "individual") {
     const names = (config.individualNames ?? []).map((name) => name.trim()).filter(Boolean);
 
@@ -1010,10 +1018,12 @@ function createParticipants(config: SessionConfig): Participant[] {
       members: [
         {
           id: createId("member", name, 0),
-          name
+          name,
+          difficulty: cleanDifficulty(config.individualDifficulties?.[index])
         }
       ],
-      turnCounter: 0
+      turnCounter: 0,
+      difficulty: cleanDifficulty(config.individualDifficulties?.[index])
     }));
   }
 
@@ -1021,7 +1031,9 @@ function createParticipants(config: SessionConfig): Participant[] {
     .map((team, index) => ({
       teamName: team.teamName.trim() || `Team ${index + 1}`,
       members: team.members.map((member) => member.trim()).filter(Boolean),
-      color: team.color
+      color: team.color,
+      difficulty: cleanDifficulty(team.difficulty),
+      memberDifficulties: team.memberDifficulties?.map(cleanDifficulty)
     }))
     .filter((team) => team.members.length > 0);
 
@@ -1040,11 +1052,29 @@ function createParticipants(config: SessionConfig): Participant[] {
       color: team.color ?? DEFAULT_PARTICIPANT_COLORS[index % DEFAULT_PARTICIPANT_COLORS.length],
       members: team.members.map((member, memberIndex) => ({
         id: createId(`team-member-${index + 1}`, member, memberIndex),
-        name: member
+        name: member,
+        difficulty: team.memberDifficulties?.[memberIndex]
       })),
-      turnCounter: 0
+      turnCounter: 0,
+      difficulty: team.difficulty
     };
   });
+}
+
+function getEffectiveParticipantDifficulty(
+  participant: Participant | undefined,
+  memberTurnOffset = participant?.turnCounter ?? 0
+): DifficultyFilter | undefined {
+  if (!participant) {
+    return undefined;
+  }
+
+  const member = participant.members[memberTurnOffset % participant.members.length];
+  return member?.difficulty && member.difficulty !== "mixed"
+    ? member.difficulty
+    : participant.difficulty && participant.difficulty !== "mixed"
+      ? participant.difficulty
+      : undefined;
 }
 
 function getCurrentMemberName(participant: Participant): string {
@@ -1480,6 +1510,132 @@ function pickGameRoundsWithDifficultyFallback<T>(
   }
 
   return { rounds: shuffle(rounds).slice(0, count), usedFallbackDifficulty: true };
+}
+
+function pickGameRoundsForParticipantDifficulties<T>(
+  rounds: T[],
+  count: number,
+  gameName: string,
+  globalDifficulty: DifficultyFilter | undefined,
+  participants: Participant[]
+): { rounds: T[]; usedFallbackDifficulty: boolean } {
+  if (
+    participants.every(
+      (participant) =>
+        !getEffectiveParticipantDifficulty(participant) &&
+        participant.members.every((member) => !member.difficulty || member.difficulty === "mixed")
+    )
+  ) {
+    return pickGameRoundsWithDifficultyFallback(rounds, count, gameName, globalDifficulty);
+  }
+
+  const shuffled = shuffle(rounds);
+  const usedRoundIndexes = new Set<number>();
+  const selected: T[] = [];
+  let usedFallbackDifficulty = false;
+
+  const takeRound = (difficulty: DifficultyFilter | undefined): T | null => {
+    const shouldFilter = difficulty && difficulty !== "mixed";
+    const matchingIndex = shuffled.findIndex((round, index) => {
+      if (usedRoundIndexes.has(index)) {
+        return false;
+      }
+
+      return !shouldFilter || getRoundDifficulty(round) === difficulty;
+    });
+
+    if (matchingIndex >= 0) {
+      usedRoundIndexes.add(matchingIndex);
+      return shuffled[matchingIndex];
+    }
+
+    if (shouldFilter) {
+      usedFallbackDifficulty = true;
+      return takeRound("mixed");
+    }
+
+    return null;
+  };
+
+  for (let index = 0; index < count; index += 1) {
+    const participantIndex = index % participants.length;
+    const participant = participants[participantIndex];
+    const memberTurnOffset = participant.turnCounter + Math.floor(index / participants.length);
+    const round = takeRound(getEffectiveParticipantDifficulty(participant, memberTurnOffset) ?? globalDifficulty);
+
+    if (!round) {
+      break;
+    }
+
+    selected.push(round);
+  }
+
+  if (selected.length < count) {
+    throw new Error(`${gameName} needs at least ${count} rounds. Add more content or choose another game.`);
+  }
+
+  return { rounds: selected, usedFallbackDifficulty };
+}
+
+function pickRoundsWithUniqueGroupThemeFallback<T extends { groupTheme?: string; difficulty?: string }>(
+  rounds: T[],
+  count: number,
+  gameName: string,
+  difficulty?: DifficultyFilter
+): { rounds: T[]; usedFallbackDifficulty: boolean } {
+  const selectUniqueThemes = (candidates: T[]): T[] => {
+    const selected: T[] = [];
+    const seenThemes = new Set<string>();
+    const shuffled = shuffle(candidates);
+
+    for (const round of shuffled) {
+      const groupTheme = round.groupTheme?.trim();
+      if (!groupTheme || seenThemes.has(groupTheme)) {
+        continue;
+      }
+
+      selected.push(round);
+      seenThemes.add(groupTheme);
+
+      if (selected.length >= count) {
+        return selected;
+      }
+    }
+
+    for (const round of shuffled) {
+      if (!selected.includes(round)) {
+        selected.push(round);
+      }
+
+      if (selected.length >= count) {
+        return selected;
+      }
+    }
+
+    return selected;
+  };
+
+  if (!difficulty || difficulty === "mixed") {
+    const selected = selectUniqueThemes(rounds);
+    if (selected.length < count) {
+      throw new Error(`${gameName} needs at least ${count} rounds. Add more content or choose another game.`);
+    }
+
+    return { rounds: selected, usedFallbackDifficulty: false };
+  }
+
+  const filteredRounds = rounds.filter((round) => round.difficulty === difficulty);
+  const selected = selectUniqueThemes(filteredRounds);
+
+  if (selected.length >= count) {
+    return { rounds: selected, usedFallbackDifficulty: false };
+  }
+
+  if (rounds.length < count) {
+    throw new Error(`${gameName} needs at least ${count} rounds. Add more content or choose another game.`);
+  }
+
+  return { rounds: selectUniqueThemes(rounds), usedFallbackDifficulty: true };
 }
 
 function createTimelinePrompt(round: BibleTimelineRound): BibleTimelinePrompt {
@@ -2491,7 +2647,13 @@ export async function createSessionState(config: SessionConfig): Promise<Session
   const customOnly = config.contentSource === "custom";
   const loadContent = <TGame extends GameId>(mode: TGame) => loadGameContent(mode, { customOnly });
   const pickRounds = <T,>(rounds: T[], count: number, gameName: string) =>
-    pickGameRounds(rounds, capPromptCount(count, config.maxPrompts), gameName, config.difficulty);
+    pickGameRoundsForParticipantDifficulties(
+      rounds,
+      capPromptCount(count, config.maxPrompts),
+      gameName,
+      config.difficulty,
+      participants
+    ).rounds;
 
   if (config.gameId === "five-guesses") {
     const boardCards = capBoardCards(await createFiveGuessesBoard(config.difficulty, customOnly), config.maxPrompts);
@@ -2912,7 +3074,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
 
   if (config.gameId === "odd-one-out") {
     const pack = await loadContent("odd-one-out");
-    const { rounds, usedFallbackDifficulty } = pickGameRoundsWithDifficultyFallback(
+    const { rounds, usedFallbackDifficulty } = pickRoundsWithUniqueGroupThemeFallback(
       pack.sessions.flatMap((session) => session.rounds),
       capPromptCount(ODD_ONE_OUT_ROUNDS_PER_GAME, config.maxPrompts),
       "Odd One Out",

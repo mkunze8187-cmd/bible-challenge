@@ -313,7 +313,39 @@ const WORDS_BY_LENGTH = {
   ]
 };
 
-const dictionary = Object.values(WORDS_BY_LENGTH).flat().filter((word) => /^[a-z]+$/.test(word));
+// Extra common words that close gaps found during play without turning the validator into
+// an obscure full dictionary. Bias toward short everyday 3-5 letter words because those
+// are the easiest ladders and the most likely casual guesses.
+const EXTRA_COMMON_WORDS_BY_LENGTH = {
+  3: [
+    "abs", "ace", "aha", "ale", "amp", "apt", "are", "ark", "awl", "ban", "bib", "bot", "bra", "bye", "cam",
+    "chi", "coy", "dab", "die", "duo", "dye", "eel", "err", "ewe", "fab", "fax", "fay", "foe", "gap", "gee",
+    "gin", "has", "hem", "hex", "hey", "his", "hoe", "hum", "ire", "jig", "lab", "lea", "lee", "man", "mar",
+    "maw", "mix", "nay", "ode", "ore", "pea", "per", "pro", "rib", "roe", "rum", "she", "tan", "tee", "urn",
+    "vet", "war", "web", "wee", "yen"
+  ],
+  4: [
+    "ache", "afar", "aged", "amen", "anal", "ante", "aunt", "bail", "bait", "beak", "beet", "bias", "bled",
+    "blog", "blur", "boon", "bout", "brag", "brim", "cafe", "carb", "chef", "chew", "chop", "chug", "cite",
+    "cozy", "crew", "damp", "defy", "demo", "deny", "envy", "fake", "fawn", "flaw", "gasp", "germ", "gist",
+    "glen", "gory", "haul", "herd", "hers", "holy", "joke", "keen", "leak", "liar", "lick", "loot", "maid",
+    "maze", "mild", "mine", "mold", "mole", "mood", "moot", "nerd", "nope", "oval", "owed", "poll", "poop",
+    "prep", "redo", "rein", "ripe", "rung", "scar", "scum", "shin", "solo", "soot", "torn", "toss", "tote",
+    "twin", "vibe", "woke", "yolk"
+  ],
+  5: [
+    "aback", "acute", "adopt", "aisle", "amaze", "ample", "annoy", "arbor", "avail", "baler", "banal", "beech",
+    "binge", "blurb", "bogus", "brace", "brine", "caper", "chore", "churn", "cited", "clamp", "creed", "curry",
+    "defer", "deter", "diner", "ditto", "dwell", "eerie", "evade", "flair", "gamer", "giddy", "grime", "hover",
+    "idiom", "inbox", "irate", "jaunt", "linen", "lousy", "macho", "mimic", "naive", "nerdy", "nudge", "picky",
+    "plush", "prank", "query", "recap", "renal", "riser", "savor", "shove", "skimp", "slack", "smirk", "snore",
+    "stunt", "taunt", "ulcer", "vouch", "wiser"
+  ]
+};
+
+const dictionary = [...Object.values(WORDS_BY_LENGTH), ...Object.values(EXTRA_COMMON_WORDS_BY_LENGTH)]
+  .flat()
+  .filter((word) => /^[a-z]+$/.test(word));
 const uniqueDictionary = Array.from(new Set(dictionary)).sort();
 
 const pack = {
@@ -326,4 +358,4 @@ await mkdir(dataDir, { recursive: true });
 await writeFile(path.join(dataDir, "word-ladder-dictionary.json"), `${JSON.stringify(pack, null, 2)}\n`, "utf8");
 console.log(`Generated word-ladder-dictionary.json with ${uniqueDictionary.length} words.`);
 
-export { WORDS_BY_LENGTH };
+export { EXTRA_COMMON_WORDS_BY_LENGTH, WORDS_BY_LENGTH };

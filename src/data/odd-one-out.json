@@ -4259,6 +4259,512 @@
           "theme": "Early church",
           "difficulty": "hard",
           "teachingNote": "Acts 6 names seven reputable men appointed to serve practical needs in the church."
+        },
+        {
+          "id": "ooo-extra-easy-1",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Genesis",
+            "Exodus",
+            "Leviticus",
+            "Numbers",
+            "Joshua"
+          ],
+          "oddItem": "Joshua",
+          "groupTheme": "The others are books of the Law, the first five books of Moses.",
+          "explanation": "Joshua follows the books of Moses and begins the historical books in English Old Testaments.",
+          "theme": "Old Testament books",
+          "difficulty": "easy",
+          "teachingNote": "Genesis through Deuteronomy form the Torah or Pentateuch, the covenant foundation of Israel's Scriptures."
+        },
+        {
+          "id": "ooo-extra-easy-2",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Matthew",
+            "Romans",
+            "Hebrews",
+            "James",
+            "Genesis"
+          ],
+          "oddItem": "Genesis",
+          "groupTheme": "The others are books of the New Testament.",
+          "explanation": "Genesis is the first book of the Old Testament, while the others are New Testament books.",
+          "theme": "Bible books",
+          "difficulty": "easy",
+          "teachingNote": "The Bible is arranged into Old and New Testaments, with the New Testament centered on Christ and the early church."
+        },
+        {
+          "id": "ooo-extra-easy-3",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Pison",
+            "Gihon",
+            "Hiddekel",
+            "Euphrates",
+            "Jordan"
+          ],
+          "oddItem": "Jordan",
+          "groupTheme": "The others are rivers named in the garden of Eden account in Genesis 2.",
+          "explanation": "Jordan is central to Israel's later story, but it is not one of the four Eden rivers in Genesis 2.",
+          "theme": "Genesis places",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 2 describes Eden with four river names, placing the garden in the Bible's earliest setting."
+        },
+        {
+          "id": "ooo-extra-easy-4",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Simeon",
+            "Levi",
+            "Judah",
+            "Zebulun",
+            "Benjamin"
+          ],
+          "oddItem": "Benjamin",
+          "groupTheme": "The others are sons of Jacob born to Leah.",
+          "explanation": "Benjamin was Rachel's son, while Simeon, Levi, Judah, and Zebulun were born to Leah.",
+          "theme": "Genesis families",
+          "difficulty": "easy",
+          "teachingNote": "Genesis traces Jacob's family through four mothers, which later becomes the tribal family of Israel."
+        },
+        {
+          "id": "ooo-extra-easy-5",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Tamar",
+            "Rahab",
+            "Ruth",
+            "Mary",
+            "Sarah"
+          ],
+          "oddItem": "Sarah",
+          "groupTheme": "The others are women named in Matthew's genealogy of Jesus.",
+          "explanation": "Sarah is a key matriarch, but she is not one of the women named in Matthew 1.",
+          "theme": "Jesus' genealogy",
+          "difficulty": "easy",
+          "teachingNote": "Matthew's genealogy highlights God's grace through unexpected people and stories."
+        },
+        {
+          "id": "ooo-extra-easy-6",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Passover",
+            "Unleavened Bread",
+            "Firstfruits",
+            "Pentecost",
+            "Purim"
+          ],
+          "oddItem": "Purim",
+          "groupTheme": "The others are appointed feasts listed in Leviticus 23.",
+          "explanation": "Purim is remembered from Esther, but it is not one of the appointed feasts listed in Leviticus 23.",
+          "theme": "Biblical feasts",
+          "difficulty": "easy",
+          "teachingNote": "Israel's appointed feasts shaped worship, remembrance, harvest, and hope."
+        },
+        {
+          "id": "ooo-extra-easy-7",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "1 Samuel",
+            "2 Samuel",
+            "1 Kings",
+            "2 Kings",
+            "Romans"
+          ],
+          "oddItem": "Romans",
+          "groupTheme": "The others are Old Testament historical books covering Israel's monarchy.",
+          "explanation": "Romans is a New Testament letter, not one of the Old Testament historical books about Israel's monarchy.",
+          "theme": "Old Testament history",
+          "difficulty": "easy",
+          "teachingNote": "Samuel and Kings trace Israel's movement from judges into monarchy, division, decline, and exile."
+        },
+        {
+          "id": "ooo-extra-easy-8",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Ephesians",
+            "Philippians",
+            "Colossians",
+            "Philemon",
+            "Galatians"
+          ],
+          "oddItem": "Galatians",
+          "groupTheme": "The others are often grouped as Paul's Prison Epistles.",
+          "explanation": "Galatians is Pauline, but it is not usually grouped with Ephesians, Philippians, Colossians, and Philemon as a Prison Epistle.",
+          "theme": "Pauline letters",
+          "difficulty": "easy",
+          "teachingNote": "The Prison Epistles show Paul teaching and encouraging churches while in custody."
+        },
+        {
+          "id": "ooo-extra-easy-9",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Light",
+            "Firmament",
+            "Dry land",
+            "Sun and moon",
+            "Tower of Babel"
+          ],
+          "oddItem": "Tower of Babel",
+          "groupTheme": "The others are works described during the creation week in Genesis 1.",
+          "explanation": "The Tower of Babel appears later in Genesis and is not part of the creation week.",
+          "theme": "Creation",
+          "difficulty": "easy",
+          "teachingNote": "Genesis 1 presents God ordering creation by his word across six days."
+        },
+        {
+          "id": "ooo-extra-easy-10",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Water turned to wine",
+            "Nobleman's son healed",
+            "Feeding the five thousand",
+            "Walking on the sea",
+            "Malchus' ear healed"
+          ],
+          "oddItem": "Malchus' ear healed",
+          "groupTheme": "The others are signs recorded in the Gospel of John.",
+          "explanation": "Jesus healing Malchus' ear is recorded in Luke, not as one of John's selected signs.",
+          "theme": "Miracles of Jesus",
+          "difficulty": "easy",
+          "teachingNote": "John presents selected signs so readers may believe Jesus is the Christ, the Son of God."
+        },
+        {
+          "id": "ooo-extra-medium-1",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Kedesh",
+            "Shechem",
+            "Hebron",
+            "Bezer",
+            "Jericho"
+          ],
+          "oddItem": "Jericho",
+          "groupTheme": "The others are cities of refuge named in Joshua 20.",
+          "explanation": "Jericho was an important conquest city, but it is not one of the cities of refuge listed in Joshua 20.",
+          "theme": "Cities of refuge",
+          "difficulty": "medium",
+          "teachingNote": "Cities of refuge protected those accused of manslaughter until judgment could be rightly heard."
+        },
+        {
+          "id": "ooo-extra-medium-2",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "1 Timothy",
+            "2 Timothy",
+            "Titus",
+            "Philemon"
+          ],
+          "oddItem": "Philemon",
+          "groupTheme": "The others are commonly grouped as Paul's Pastoral Epistles.",
+          "explanation": "Philemon is a Pauline letter, but 1 Timothy, 2 Timothy, and Titus are the Pastoral Epistles.",
+          "theme": "Pauline letters",
+          "difficulty": "medium",
+          "teachingNote": "The Pastoral Epistles instruct church leaders about doctrine, conduct, and order."
+        },
+        {
+          "id": "ooo-extra-medium-3",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Haggai",
+            "Zechariah",
+            "Malachi",
+            "Zephaniah"
+          ],
+          "oddItem": "Zephaniah",
+          "groupTheme": "The others are post-exilic prophets connected with Judah after the return from Babylon.",
+          "explanation": "Zephaniah prophesied before the exile, while Haggai, Zechariah, and Malachi ministered after the return.",
+          "theme": "Prophets",
+          "difficulty": "medium",
+          "teachingNote": "Post-exilic prophets called the returned people to rebuild, repent, and hope in the Lord."
+        },
+        {
+          "id": "ooo-extra-medium-4",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Poor in spirit",
+            "They that mourn",
+            "The meek",
+            "The merciful",
+            "The proud in heart"
+          ],
+          "oddItem": "The proud in heart",
+          "groupTheme": "The others are groups blessed in the Beatitudes in Matthew 5.",
+          "explanation": "The proud in heart are not named among the blessed groups in Jesus' Beatitudes.",
+          "theme": "Sermon on the Mount",
+          "difficulty": "medium",
+          "teachingNote": "The Beatitudes describe the character and hope of kingdom people."
+        },
+        {
+          "id": "ooo-extra-medium-5",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Bread of life",
+            "Light of the world",
+            "Door",
+            "Good shepherd",
+            "Salt of the earth"
+          ],
+          "oddItem": "Salt of the earth",
+          "groupTheme": "The others are I AM images Jesus uses of himself in John.",
+          "explanation": "Salt of the earth describes Jesus' disciples in Matthew 5, not an I AM saying in John.",
+          "theme": "Jesus' sayings",
+          "difficulty": "medium",
+          "teachingNote": "John records Jesus' I AM sayings to reveal his identity and mission."
+        },
+        {
+          "id": "ooo-extra-medium-6",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Rome",
+            "Corinth",
+            "Galatia",
+            "Ephesus",
+            "Bethlehem"
+          ],
+          "oddItem": "Bethlehem",
+          "groupTheme": "The others are churches or regions addressed by Paul's New Testament letters.",
+          "explanation": "Bethlehem is central to Jesus' birth, but no Pauline letter is addressed to Bethlehem.",
+          "theme": "Pauline letters",
+          "difficulty": "medium",
+          "teachingNote": "Paul's letters often address real churches in major cities or regions of the Roman world."
+        },
+        {
+          "id": "ooo-extra-medium-7",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Ephod",
+            "Breastplate",
+            "Robe",
+            "Mitre",
+            "Sandals"
+          ],
+          "oddItem": "Sandals",
+          "groupTheme": "The others are garments associated with the high priest in Exodus 28.",
+          "explanation": "Sandals are not listed among the holy garments for Aaron in Exodus 28.",
+          "theme": "Priesthood",
+          "difficulty": "medium",
+          "teachingNote": "The high priest's garments symbolized holiness, representation, and service before the Lord."
+        },
+        {
+          "id": "ooo-extra-medium-8",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Gershon",
+            "Kohath",
+            "Merari",
+            "Ephraim"
+          ],
+          "oddItem": "Ephraim",
+          "groupTheme": "The others are the three main Levitical clans descended from Levi's sons.",
+          "explanation": "Ephraim was a son of Joseph, not one of the Levitical clans Gershon, Kohath, and Merari.",
+          "theme": "Levites",
+          "difficulty": "medium",
+          "teachingNote": "The Levite clans had distinct responsibilities connected with tabernacle service."
+        },
+        {
+          "id": "ooo-extra-medium-9",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Abel",
+            "Enoch",
+            "Noah",
+            "Abraham",
+            "Ahab"
+          ],
+          "oddItem": "Ahab",
+          "groupTheme": "The others are named as examples of faith in Hebrews 11.",
+          "explanation": "Ahab is remembered as a wicked king, not as one of the examples of faith in Hebrews 11.",
+          "theme": "Faith examples",
+          "difficulty": "medium",
+          "teachingNote": "Hebrews 11 surveys faithful witnesses who trusted God across many generations."
+        },
+        {
+          "id": "ooo-extra-medium-10",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Sower",
+            "Tares",
+            "Mustard seed",
+            "Leaven",
+            "Prodigal son"
+          ],
+          "oddItem": "Prodigal son",
+          "groupTheme": "The others are kingdom parables grouped in Matthew 13.",
+          "explanation": "The prodigal son is a parable in Luke 15, not part of Matthew 13's kingdom parable collection.",
+          "theme": "Parables",
+          "difficulty": "medium",
+          "teachingNote": "Matthew 13 gathers parables that reveal the mystery and growth of the kingdom."
+        },
+        {
+          "id": "ooo-extra-hard-1",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Asa",
+            "Jehoshaphat",
+            "Hezekiah",
+            "Josiah",
+            "Ahab"
+          ],
+          "oddItem": "Ahab",
+          "groupTheme": "The others are kings of Judah remembered for reform or relative faithfulness.",
+          "explanation": "Ahab was a northern king of Israel and is remembered for wickedness, not Judahite reform.",
+          "theme": "Kings",
+          "difficulty": "hard",
+          "teachingNote": "Judah's reforming kings show moments of covenant renewal amid a troubled monarchy."
+        },
+        {
+          "id": "ooo-extra-hard-2",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "James",
+            "1 Peter",
+            "2 Peter",
+            "1 John",
+            "Romans"
+          ],
+          "oddItem": "Romans",
+          "groupTheme": "The others are commonly grouped among the General Epistles.",
+          "explanation": "Romans is a Pauline Epistle, while James, Peter, and John are grouped among the General Epistles.",
+          "theme": "New Testament letters",
+          "difficulty": "hard",
+          "teachingNote": "The General Epistles are addressed broadly rather than to one Pauline mission church."
+        },
+        {
+          "id": "ooo-extra-hard-3",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Dan",
+            "Naphtali",
+            "Gad",
+            "Asher",
+            "Levi"
+          ],
+          "oddItem": "Levi",
+          "groupTheme": "The others are sons of Jacob born to Bilhah or Zilpah.",
+          "explanation": "Levi was born to Leah, not to Bilhah or Zilpah.",
+          "theme": "Genesis families",
+          "difficulty": "hard",
+          "teachingNote": "The tribes of Dan, Naphtali, Gad, and Asher trace through Jacob's concubines Bilhah and Zilpah."
+        },
+        {
+          "id": "ooo-extra-hard-4",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Sheep Gate",
+            "Fish Gate",
+            "Old Gate",
+            "Valley Gate",
+            "Beautiful Gate"
+          ],
+          "oddItem": "Beautiful Gate",
+          "groupTheme": "The others are Jerusalem gates named in Nehemiah 3 during wall rebuilding.",
+          "explanation": "Beautiful Gate appears in Acts 3, not in Nehemiah 3's wall-building list.",
+          "theme": "Jerusalem",
+          "difficulty": "hard",
+          "teachingNote": "Nehemiah 3 records many families repairing named sections and gates of Jerusalem's wall."
+        },
+        {
+          "id": "ooo-extra-hard-5",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Simeon",
+            "Levi",
+            "Judah",
+            "Issachar",
+            "Reuben"
+          ],
+          "oddItem": "Reuben",
+          "groupTheme": "The others are tribes named to stand on Mount Gerizim for blessing in Deuteronomy 27.",
+          "explanation": "Reuben is listed with the tribes on Mount Ebal, not Mount Gerizim.",
+          "theme": "Deuteronomy",
+          "difficulty": "hard",
+          "teachingNote": "Deuteronomy 27 dramatizes covenant blessing and curse through tribes on two mountains."
+        },
+        {
+          "id": "ooo-extra-hard-6",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Reuben",
+            "Gad",
+            "Asher",
+            "Zebulun",
+            "Judah"
+          ],
+          "oddItem": "Judah",
+          "groupTheme": "The others are tribes named to stand on Mount Ebal for curse in Deuteronomy 27.",
+          "explanation": "Judah is listed with the tribes on Mount Gerizim, not Mount Ebal.",
+          "theme": "Deuteronomy",
+          "difficulty": "hard",
+          "teachingNote": "The Mount Ebal and Mount Gerizim ceremony pressed Israel to hear the covenant seriously."
+        },
+        {
+          "id": "ooo-extra-hard-7",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Blue",
+            "Purple",
+            "Scarlet",
+            "Fine twined linen",
+            "Iron"
+          ],
+          "oddItem": "Iron",
+          "groupTheme": "The others are materials repeatedly named for tabernacle curtains and priestly work.",
+          "explanation": "Iron is not named among the colored yarns and fine linen used for the tabernacle curtains.",
+          "theme": "Tabernacle",
+          "difficulty": "hard",
+          "teachingNote": "The tabernacle instructions emphasize ordered, beautiful materials devoted to worship."
+        },
+        {
+          "id": "ooo-extra-hard-8",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Sardius",
+            "Topaz",
+            "Carbuncle",
+            "Emerald"
+          ],
+          "oddItem": "Emerald",
+          "groupTheme": "The others are stones in the first row of the high priest's breastplate in Exodus 28 KJV.",
+          "explanation": "Emerald appears in another row of the breastplate, not the first row with sardius, topaz, and carbuncle.",
+          "theme": "Priesthood",
+          "difficulty": "hard",
+          "teachingNote": "The breastplate stones represented Israel before the Lord in the high priest's ministry."
+        },
+        {
+          "id": "ooo-extra-hard-9",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Cherubim",
+            "Mercy seat",
+            "Veil",
+            "Ark of the covenant",
+            "Brazen altar"
+          ],
+          "oddItem": "Brazen altar",
+          "groupTheme": "The others are associated with the Most Holy Place or its immediate entrance.",
+          "explanation": "The brazen altar stood in the court, not in or immediately before the Most Holy Place.",
+          "theme": "Tabernacle",
+          "difficulty": "hard",
+          "teachingNote": "The Most Holy Place focused attention on God's holy presence and atonement."
+        },
+        {
+          "id": "ooo-extra-hard-10",
+          "prompt": "Which one does not belong?",
+          "items": [
+            "Barley harvest",
+            "Ruth gleaning",
+            "Boaz redeeming",
+            "Naomi returning",
+            "Esther fasting"
+          ],
+          "oddItem": "Esther fasting",
+          "groupTheme": "The others are events or settings from the book of Ruth.",
+          "explanation": "Esther fasting belongs to the book of Esther, not Ruth.",
+          "theme": "Ruth",
+          "difficulty": "hard",
+          "teachingNote": "Ruth weaves ordinary faithfulness, providence, and redemption into David's family line."
         }
       ]
     }
