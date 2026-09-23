@@ -921,6 +921,33 @@ const WORD_LADDER_ROUNDS_PER_GAME = 6;
 const BIBLE_ANAGRAMS_ROUNDS_PER_GAME = 10;
 const BIBLE_CRYPTOGRAM_ROUNDS_PER_GAME = 5;
 const DEFAULT_PARTICIPANT_COLORS = ["#2f6f5f", "#8a5c24", "#69436d", "#285f73", "#9b4a36", "#5c6f2a"];
+const HOST_MARK_INCORRECT_PLACEHOLDER = "__host_mark_incorrect__";
+
+const HOST_PHASE_ONE_GAMES = new Set<GameId>([
+  "before-or-after",
+  "reference-rush",
+  "chapter-finder",
+  "who-said-it",
+  "missing-word",
+  "odd-one-out",
+  "messiah-prophecy",
+  "fulfillment-finder",
+  "complete-the-verse",
+  "wisdom-match",
+  "psalm-theme",
+  "psalm-reference-finder",
+  "two-truths-and-a-lie",
+  "prophecy-clue-ladder",
+  "bible-anagrams",
+  "bible-timeline",
+  "verse-scramble",
+  "bible-books-relay",
+  "bible-connections",
+  "prophecy-match",
+  "parable-match",
+  "prophecy-categories",
+  "proverb-categories"
+]);
 
 function createPlayerStats(): PlayerStats {
   return {
@@ -958,6 +985,14 @@ function normalizeText(value: string): string {
 function createId(prefix: string, name: string, index: number): string {
   const base = normalizeText(name).replace(/\s+/g, "-") || `${prefix}-${index + 1}`;
   return `${prefix}-${base}-${index + 1}`;
+}
+
+function createSessionInstanceId(): string {
+  if (typeof crypto !== "undefined" && "randomUUID" in crypto) {
+    return crypto.randomUUID();
+  }
+
+  return `session-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`;
 }
 
 function createParticipants(config: SessionConfig): Participant[] {
@@ -1045,6 +1080,10 @@ function isCorrectGuess(answer: string, aliases: string[] | undefined, guess: st
 
 function nextIndex(length: number, currentIndex: number): number {
   return (currentIndex + 1) % length;
+}
+
+function getSessionPromptPrefix(state: SessionState): string {
+  return state.sessionInstanceId ?? `legacy-${state.sessionTitle}`;
 }
 
 function consumeTurn(participants: Participant[], participantIndex: number) {
@@ -1938,6 +1977,423 @@ function resolveRoundState<TState extends RoundSessionBase<unknown, { phase: "ac
   nextState.currentPrompt.resolvedMessage = message;
 }
 
+export function getPromptId(state: SessionState): string | null {
+  const prefix = getSessionPromptPrefix(state);
+
+  if (state.status !== "in-progress") {
+    return null;
+  }
+
+  if (state.gameId === "five-guesses" || state.gameId === "initials") {
+    return state.currentPrompt && state.currentPrompt.phase !== "resolved"
+      ? `${prefix}:${state.gameId}:${state.currentPrompt.cardId}`
+      : null;
+  }
+
+  if (state.gameId === "scripture-puzzles" || state.gameId === "bible-cryptogram") {
+    return state.currentPrompt.isComplete ? null : `${prefix}:${state.gameId}:${state.roundIndex}:${state.currentPrompt.round.id}`;
+  }
+
+  if (state.gameId === "prophecy-match" || state.gameId === "parable-match") {
+    return state.currentPrompt.phase === "active"
+      ? `${prefix}:${state.gameId}:match-board:${state.currentPrompt.matchedPairIds.length}`
+      : null;
+  }
+
+  if (state.gameId === "prophecy-categories" || state.gameId === "proverb-categories") {
+    return state.currentPrompt.phase === "active"
+      ? `${prefix}:${state.gameId}:${state.roundIndex}:${state.currentPrompt.sortedCardIds.length}`
+      : null;
+  }
+
+  if (!state.currentPrompt || state.currentPrompt.phase === "resolved") {
+    return null;
+  }
+
+  if ("roundIndex" in state && "round" in state.currentPrompt && "id" in state.currentPrompt.round) {
+    return `${prefix}:${state.gameId}:${state.roundIndex}:${String(state.currentPrompt.round.id)}`;
+  }
+
+  return `${prefix}:${state.gameId}:${state.resolvedPrompts}`;
+}
+
+function getParticipantIndexById(state: SessionState, participantId: string): number {
+  const participantIndex = state.participants.findIndex((participant) => participant.id === participantId);
+
+  if (participantIndex < 0) {
+    throw new Error("Choose a valid participant.");
+  }
+
+  return participantIndex;
+}
+
+export function setCurrentActor(state: SessionState, participantId: string): ActionResult {
+  if (state.status !== "in-progress") {
+    return { nextState: state, tone: "info", text: "The game is already complete." };
+  }
+
+  const participantIndex = getParticipantIndexById(state, participantId);
+  const nextState = structuredClone(state);
+  nextState.turnIndex = participantIndex;
+  const participant = nextState.participants[participantIndex];
+
+  if (nextState.gameId === "name-that-book") {
+    const prompt = nextState.currentPrompt;
+    if (prompt.phase === "primary") {
+      prompt.primaryParticipantIndex = participantIndex;
+      prompt.primaryMemberName = getCurrentMemberName(participant);
+      prompt.primaryTurnConsumed = false;
+      prompt.stealOrder = buildStealOrder(nextState.participants.length, participantIndex);
+      prompt.stealCursor = 0;
+    } else if (prompt.phase === "steal") {
+      prompt.stealOrder = [participantIndex, ...prompt.stealOrder.filter((entry) => entry !== participantIndex)];
+      prompt.stealCursor = 0;
+    }
+  }
+
+  return addActivity(nextState, "info", `Host selected ${participant.name} to answer.`);
+}
+
+function withHostActor(state: SessionState, participantId: string): SessionState {
+  const participantIndex = getParticipantIndexById(state, participantId);
+  const nextState = structuredClone(state);
+  nextState.turnIndex = participantIndex;
+  return nextState;
+}
+
+function getFirstUnsortedProphecyCategoryCard(state: ProphecyCategoriesState): ProphecyCategoryCard | null {
+  return state.currentPrompt.cards.find((card) => !state.currentPrompt.sortedCardIds.includes(card.cardId)) ?? null;
+}
+
+function getFirstUnsortedProverbCategoryCard(state: ProverbCategoriesState): ProverbCategoryCard | null {
+  return state.currentPrompt.cards.find((card) => !state.currentPrompt.sortedCardIds.includes(card.cardId)) ?? null;
+}
+
+export function getHostAwardPoints(state: SessionState, participantId: string): number | null {
+  getParticipantIndexById(state, participantId);
+
+  if (state.status !== "in-progress" || !HOST_PHASE_ONE_GAMES.has(state.gameId)) {
+    return null;
+  }
+
+  switch (state.gameId) {
+    case "before-or-after":
+      return 3;
+    case "reference-rush":
+    case "chapter-finder":
+    case "who-said-it":
+      return 5;
+    case "missing-word":
+      return state.currentPrompt.round.missingWords.length === 1 ? 3 : state.currentPrompt.round.missingWords.length === 2 ? 5 : 7;
+    case "bible-timeline":
+    case "verse-scramble":
+    case "bible-books-relay":
+    case "bible-anagrams":
+      return 10;
+    case "bible-connections":
+    case "prophecy-match":
+    case "parable-match":
+      return 5;
+    case "prophecy-categories":
+    case "proverb-categories":
+      return 1;
+    case "messiah-prophecy":
+      return scoreProphecyRetry(state.currentPrompt.eliminatedChoices.length);
+    case "fulfillment-finder":
+    case "psalm-reference-finder":
+      return scoreProphecyRetry(state.currentPrompt.eliminatedReferences.length);
+    case "complete-the-verse":
+    case "wisdom-match":
+    case "psalm-theme":
+    case "odd-one-out":
+      return scoreProphecyRetry(state.currentPrompt.eliminatedChoices.length);
+    case "two-truths-and-a-lie":
+      return scoreProphecyRetry(state.currentPrompt.eliminatedIndexes.length);
+    case "prophecy-clue-ladder":
+      return scoreProphecyRetry(state.currentPrompt.revealedClues - 1);
+    default:
+      return null;
+  }
+}
+
+function overrideAwardPoints(
+  sourceState: SessionState,
+  result: ActionResult,
+  participantId: string,
+  points: number | undefined
+): ActionResult {
+  if (points == null) {
+    return result;
+  }
+
+  const nextState = structuredClone(result.nextState);
+  const beforeScore = sourceState.stats[participantId]?.totalScore ?? 0;
+  const afterScore = result.nextState.stats[participantId]?.totalScore ?? beforeScore;
+  const defaultAward = afterScore - beforeScore;
+
+  if (result.tone === "success" && nextState.stats[participantId]) {
+    nextState.stats[participantId].totalScore = Math.max(0, afterScore - defaultAward + points);
+  }
+
+  return { ...result, nextState };
+}
+
+export function markCorrectForHost(
+  state: SessionState,
+  participantId: string,
+  options: { points?: number; answerText?: string } = {}
+): ActionResult {
+  if (state.status !== "in-progress") {
+    return { nextState: state, tone: "info", text: "The game is already complete." };
+  }
+
+  const hostState = withHostActor(state, participantId);
+  let result: ActionResult;
+
+  switch (hostState.gameId) {
+    case "before-or-after":
+      result = answerBeforeOrAfter(hostState, hostState.currentPrompt.round.earlierEvent);
+      break;
+    case "reference-rush":
+      result = submitReferenceRushGuess(hostState, hostState.currentPrompt.round.reference);
+      break;
+    case "chapter-finder":
+      result = submitChapterFinderGuess(
+        hostState,
+        `${hostState.currentPrompt.round.answerBook} ${hostState.currentPrompt.round.answerChapter}`
+      );
+      break;
+    case "who-said-it":
+      result = submitWhoSaidItGuess(hostState, hostState.currentPrompt.round.speaker);
+      break;
+    case "missing-word":
+      result = submitMissingWordGuess(hostState, hostState.currentPrompt.round.missingWords.join(" "));
+      break;
+    case "odd-one-out":
+      result = submitOddOneOutChoice(hostState, hostState.currentPrompt.round.oddItem);
+      break;
+    case "messiah-prophecy":
+      result = submitMessiahProphecyChoice(hostState, hostState.currentPrompt.round.correctAnswer);
+      break;
+    case "fulfillment-finder":
+      result = submitFulfillmentFinderChoice(hostState, hostState.currentPrompt.round.correctProphecyReference);
+      break;
+    case "complete-the-verse":
+      result = submitCompleteVerseChoice(hostState, hostState.currentPrompt.round.correctEnding);
+      break;
+    case "wisdom-match":
+      result = submitWisdomMatchChoice(hostState, hostState.currentPrompt.round.correctTheme);
+      break;
+    case "psalm-theme":
+      result = submitPsalmThemeChoice(hostState, hostState.currentPrompt.round.correctTheme);
+      break;
+    case "psalm-reference-finder":
+      result = submitPsalmReferenceFinderChoice(hostState, hostState.currentPrompt.round.correctReference);
+      break;
+    case "two-truths-and-a-lie":
+      result = selectTwoTruthsStatement(hostState, hostState.currentPrompt.round.lieIndex);
+      break;
+    case "prophecy-clue-ladder":
+      result = submitProphecyClueGuess(hostState, hostState.currentPrompt.round.answer);
+      break;
+    case "bible-anagrams": {
+      const nextState = structuredClone(hostState);
+      nextState.currentPrompt.answerTileIds = nextState.currentPrompt.tiles
+        .slice()
+        .sort((left, right) => left.originalIndex - right.originalIndex)
+        .map((tile) => tile.id);
+      nextState.currentPrompt.bankTileIds = [];
+      result = submitBibleAnagram(nextState);
+      break;
+    }
+    case "bible-timeline": {
+      const nextState = structuredClone(hostState);
+      nextState.currentPrompt.arrangedEventIds = nextState.currentPrompt.round.events
+        .slice()
+        .sort((left, right) => left.order - right.order)
+        .map((event) => event.id);
+      result = submitTimelineOrder(nextState);
+      break;
+    }
+    case "verse-scramble": {
+      const nextState = structuredClone(hostState);
+      nextState.currentPrompt.answerTileIds = nextState.currentPrompt.tiles
+        .slice()
+        .sort((left, right) => left.originalIndex - right.originalIndex)
+        .map((tile) => tile.id);
+      nextState.currentPrompt.bankTileIds = [];
+      result = submitVerseScramble(nextState);
+      break;
+    }
+    case "bible-books-relay": {
+      const nextState = structuredClone(hostState);
+      nextState.currentPrompt.arrangedBooks = [...nextState.currentPrompt.round.books];
+      result = submitBibleBooksRelay(nextState);
+      break;
+    }
+    case "bible-connections": {
+      const group = hostState.currentPrompt.round.groups.find(
+        (entry) => !hostState.currentPrompt.solvedGroups.some((solved) => solved.groupId === entry.id)
+      );
+      if (!group) {
+        throw new Error("No unsolved connection group is available.");
+      }
+      const nextState = structuredClone(hostState);
+      nextState.currentPrompt.selectedTileIds = nextState.currentPrompt.tiles
+        .filter((tile) => tile.groupId === group.id)
+        .map((tile) => tile.id);
+      result = submitConnectionGroup(nextState);
+      break;
+    }
+    case "prophecy-match": {
+      const pair = hostState.pairs.find((entry) => !hostState.currentPrompt.matchedPairIds.includes(entry.id));
+      if (!pair) {
+        throw new Error("No unmatched prophecy pair is available.");
+      }
+      let next = selectProphecyMatchCard(hostState, "prophecy", `${pair.id}-prophecy`).nextState;
+      next = selectProphecyMatchCard(next, "fulfillment", `${pair.id}-fulfillment`).nextState;
+      result = submitProphecyMatch(next);
+      break;
+    }
+    case "parable-match": {
+      const pair = hostState.pairs.find((entry) => !hostState.currentPrompt.matchedPairIds.includes(entry.id));
+      if (!pair) {
+        throw new Error("No unmatched parable pair is available.");
+      }
+      let next = selectParableMatchCard(hostState, "parable", `${pair.id}-parable`).nextState;
+      next = selectParableMatchCard(next, "lesson", `${pair.id}-lesson`).nextState;
+      result = submitParableMatch(next);
+      break;
+    }
+    case "prophecy-categories": {
+      const card = getFirstUnsortedProphecyCategoryCard(hostState);
+      if (!card) {
+        throw new Error("No unsorted prophecy card is available.");
+      }
+      let next = selectProphecyCategoryCard(hostState, card.cardId).nextState;
+      next = selectProphecyCategory(next, card.category).nextState;
+      result = submitProphecyCategory(next);
+      break;
+    }
+    case "proverb-categories": {
+      const card = getFirstUnsortedProverbCategoryCard(hostState);
+      if (!card) {
+        throw new Error("No unsorted Proverbs card is available.");
+      }
+      let next = selectProverbCategoryCard(hostState, card.cardId).nextState;
+      next = selectProverbCategory(next, card.category).nextState;
+      result = submitProverbCategory(next);
+      break;
+    }
+    default:
+      throw new Error("Host judging is not available for this game yet.");
+  }
+
+  return overrideAwardPoints(state, result, participantId, options.points);
+}
+
+export function markIncorrectForHost(
+  state: SessionState,
+  participantId: string,
+  options: { answerText?: string } = {}
+): ActionResult {
+  if (state.status !== "in-progress") {
+    return { nextState: state, tone: "info", text: "The game is already complete." };
+  }
+
+  const hostState = withHostActor(state, participantId);
+
+  switch (hostState.gameId) {
+    case "before-or-after":
+      return answerBeforeOrAfter(hostState, hostState.currentPrompt.round.earlierEvent === "left" ? "right" : "left");
+    case "reference-rush":
+      return submitReferenceRushGuess(hostState, HOST_MARK_INCORRECT_PLACEHOLDER);
+    case "chapter-finder":
+      return submitChapterFinderGuess(hostState, HOST_MARK_INCORRECT_PLACEHOLDER);
+    case "who-said-it":
+      return submitWhoSaidItGuess(hostState, HOST_MARK_INCORRECT_PLACEHOLDER);
+    case "missing-word":
+      return submitMissingWordGuess(hostState, HOST_MARK_INCORRECT_PLACEHOLDER);
+    case "odd-one-out":
+      return submitOddOneOutChoice(
+        hostState,
+        hostState.currentPrompt.round.items.find((item) => normalizeText(item) !== normalizeText(hostState.currentPrompt.round.oddItem)) ??
+          HOST_MARK_INCORRECT_PLACEHOLDER
+      );
+    case "messiah-prophecy":
+      return submitMessiahProphecyChoice(
+        hostState,
+        hostState.currentPrompt.round.choices.find(
+          (choice) => normalizeText(choice) !== normalizeText(hostState.currentPrompt.round.correctAnswer)
+        ) ?? HOST_MARK_INCORRECT_PLACEHOLDER
+      );
+    case "fulfillment-finder":
+      return submitFulfillmentFinderChoice(
+        hostState,
+        hostState.currentPrompt.round.choices.find(
+          (choice) => normalizeText(choice.reference) !== normalizeText(hostState.currentPrompt.round.correctProphecyReference)
+        )?.reference ?? HOST_MARK_INCORRECT_PLACEHOLDER
+      );
+    case "complete-the-verse":
+      return submitCompleteVerseChoice(
+        hostState,
+        hostState.currentPrompt.round.choices.find(
+          (choice) => normalizeText(choice) !== normalizeText(hostState.currentPrompt.round.correctEnding)
+        ) ?? HOST_MARK_INCORRECT_PLACEHOLDER
+      );
+    case "wisdom-match":
+      return submitWisdomMatchChoice(
+        hostState,
+        hostState.currentPrompt.round.choices.find(
+          (choice) => normalizeText(choice) !== normalizeText(hostState.currentPrompt.round.correctTheme)
+        ) ?? HOST_MARK_INCORRECT_PLACEHOLDER
+      );
+    case "psalm-theme":
+      return submitPsalmThemeChoice(
+        hostState,
+        hostState.currentPrompt.round.choices.find(
+          (choice) => normalizeText(choice) !== normalizeText(hostState.currentPrompt.round.correctTheme)
+        ) ?? HOST_MARK_INCORRECT_PLACEHOLDER
+      );
+    case "psalm-reference-finder":
+      return submitPsalmReferenceFinderChoice(
+        hostState,
+        hostState.currentPrompt.round.choices.find(
+          (choice) => normalizeText(choice) !== normalizeText(hostState.currentPrompt.round.correctReference)
+        ) ?? HOST_MARK_INCORRECT_PLACEHOLDER
+      );
+    case "two-truths-and-a-lie": {
+      const trueStatement = hostState.currentPrompt.statements.find((statement) => statement.originalIndex !== hostState.currentPrompt.round.lieIndex);
+      if (!trueStatement) {
+        throw new Error("No incorrect statement is available.");
+      }
+      return selectTwoTruthsStatement(hostState, trueStatement.originalIndex);
+    }
+    case "prophecy-clue-ladder":
+      return submitProphecyClueGuess(hostState, HOST_MARK_INCORRECT_PLACEHOLDER);
+    case "bible-anagrams":
+      return passBibleAnagram(hostState);
+    case "bible-timeline":
+      return revealTimelineRound(hostState, `${hostState.participants[hostState.turnIndex]?.name ?? "The selected participant"} missed. Correct order is revealed.`);
+    case "verse-scramble":
+      return passVerseScramble(hostState);
+    case "bible-books-relay":
+      return passBibleBooksRelay(hostState);
+    case "bible-connections":
+      return passConnectionTurn(hostState);
+    case "prophecy-match":
+      return passProphecyMatch(hostState);
+    case "parable-match":
+      return passParableMatch(hostState);
+    case "prophecy-categories":
+      return passProphecyCategory(hostState);
+    case "proverb-categories":
+      return passProverbCategory(hostState);
+    default:
+      throw new Error("Host judging is not available for this game yet.");
+  }
+}
+
 function advanceLinearRound<TState extends RoundSessionBase<unknown, unknown>>(
   nextState: TState,
   createPrompt: (round: unknown) => unknown
@@ -2023,6 +2479,7 @@ function capBoardCards<T>(boardCards: T[], maxPrompts: number | undefined): T[] 
 }
 
 export async function createSessionState(config: SessionConfig): Promise<SessionState> {
+  const sessionInstanceId = createSessionInstanceId();
   const participants = createParticipants(config);
   const stats = Object.fromEntries(participants.map((participant) => [participant.id, createPlayerStats()]));
   const customOnly = config.contentSource === "custom";
@@ -2039,6 +2496,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       sessionTitle: "Random Five Clues Board",
       sessionTheme: "Five categories with five value cards drawn from the full library.",
       participantMode: config.participantMode,
+      sessionInstanceId,
       participants,
       stats,
       activityLog: [
@@ -2071,6 +2529,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       sessionTitle: "Random Bible Initials Board",
       sessionTheme: "Twenty-five random Bible Initials cards drawn from the full library.",
       participantMode: config.participantMode,
+      sessionInstanceId,
       participants,
       stats,
       activityLog: [
@@ -2106,6 +2565,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       sessionTitle: "Random Bible Timeline Deck",
       sessionTheme: "Five random chronology rounds drawn from the full library.",
       participantMode: config.participantMode,
+      sessionInstanceId,
       participants,
       stats,
       activityLog: [
@@ -2140,6 +2600,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       sessionTitle: "Random Verse Scramble Deck",
       sessionTheme: "Five short KJV verse rounds drawn from the full library.",
       participantMode: config.participantMode,
+      sessionInstanceId,
       participants,
       stats,
       activityLog: [
@@ -2174,6 +2635,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       sessionTitle: "Random Bible Connections Boards",
       sessionTheme: "Three random sixteen-tile boards drawn from the full library.",
       participantMode: config.participantMode,
+      sessionInstanceId,
       participants,
       stats,
       activityLog: [
@@ -2208,6 +2670,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       sessionTitle: "Random Name That Book Deck",
       sessionTheme: "Ten random Bible-book clue rounds drawn from the full library.",
       participantMode: config.participantMode,
+      sessionInstanceId,
       participants,
       stats,
       activityLog: [
@@ -2245,6 +2708,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       sessionTitle: "Random Before Or After Deck",
       sessionTheme: "Fifteen random event-order comparisons drawn from the full library.",
       participantMode: config.participantMode,
+      sessionInstanceId,
       participants,
       stats,
       activityLog: [
@@ -2279,6 +2743,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       sessionTitle: "Random Reference Rush Deck",
       sessionTheme: "Ten random KJV reference rounds drawn from the full library.",
       participantMode: config.participantMode,
+      sessionInstanceId,
       participants,
       stats,
       activityLog: [
@@ -2313,6 +2778,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       sessionTitle: "Random Chapter Finder Deck",
       sessionTheme: "Ten random book-and-chapter prompts drawn from the full library.",
       participantMode: config.participantMode,
+      sessionInstanceId,
       participants,
       stats,
       activityLog: [
@@ -2347,6 +2813,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       sessionTitle: "Random Who Said It? Deck",
       sessionTheme: "Ten random KJV quote rounds drawn from the full library.",
       participantMode: config.participantMode,
+      sessionInstanceId,
       participants,
       stats,
       activityLog: [
@@ -2381,6 +2848,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       sessionTitle: "Random Bible Books Relay Deck",
       sessionTheme: "Five random canonical book-order rounds drawn from the full library.",
       participantMode: config.participantMode,
+      sessionInstanceId,
       participants,
       stats,
       activityLog: [
@@ -2415,6 +2883,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       sessionTitle: "Random Missing Word Deck",
       sessionTheme: "Ten random KJV missing-word rounds drawn from the full library.",
       participantMode: config.participantMode,
+      sessionInstanceId,
       participants,
       stats,
       activityLog: [
@@ -2450,6 +2919,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       sessionTitle: "Random Odd One Out Deck",
       sessionTheme: "Ten random Bible grouping rounds drawn from the full library.",
       participantMode: config.participantMode,
+      sessionInstanceId,
       participants,
       stats,
       activityLog: [
@@ -2487,6 +2957,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       sessionTitle: "Random Genealogy Chains",
       sessionTheme: "Six random Bible family lines drawn from the full library.",
       participantMode: config.participantMode,
+      sessionInstanceId,
       participants,
       stats,
       activityLog: [
@@ -2523,6 +2994,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       sessionTitle: "Random Prophecy Match Board",
       sessionTheme: "Five Old Testament prophecy cards matched to New Testament fulfillment cards.",
       participantMode: config.participantMode,
+      sessionInstanceId,
       participants,
       stats,
       activityLog: [
@@ -2557,6 +3029,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       sessionTitle: "Random Parable Match Board",
       sessionTheme: "Five parable cards matched to central lesson cards.",
       participantMode: config.participantMode,
+      sessionInstanceId,
       participants,
       stats,
       activityLog: [
@@ -2592,6 +3065,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       sessionTitle: "Random Messiah Prophecy Deck",
       sessionTheme: "Ten messianic prophecy prompts drawn from the prophecy library.",
       participantMode: config.participantMode,
+      sessionInstanceId,
       participants,
       stats,
       activityLog: [
@@ -2626,6 +3100,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       sessionTitle: "Random Prophecy Clue Ladder Deck",
       sessionTheme: "Ten five-clue prophecy rounds drawn from the prophecy library.",
       participantMode: config.participantMode,
+      sessionInstanceId,
       participants,
       stats,
       activityLog: [
@@ -2660,6 +3135,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       sessionTitle: "Random Fulfillment Finder Deck",
       sessionTheme: "Ten New Testament fulfillment prompts drawn from the prophecy library.",
       participantMode: config.participantMode,
+      sessionInstanceId,
       participants,
       stats,
       activityLog: [
@@ -2696,6 +3172,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       sessionTitle: round.title,
       sessionTheme: "Sort each prophecy card into the correct reference category.",
       participantMode: config.participantMode,
+      sessionInstanceId,
       participants,
       stats,
       activityLog: [
@@ -2730,6 +3207,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       sessionTitle: "Random Complete the Verse Deck",
       sessionTheme: "Ten KJV verse-ending prompts drawn from Psalms and Proverbs.",
       participantMode: config.participantMode,
+      sessionInstanceId,
       participants,
       stats,
       activityLog: [
@@ -2764,6 +3242,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       sessionTitle: "Random Wisdom Match Deck",
       sessionTheme: "Ten Proverbs excerpts matched to wisdom themes.",
       participantMode: config.participantMode,
+      sessionInstanceId,
       participants,
       stats,
       activityLog: [
@@ -2798,6 +3277,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       sessionTitle: "Random Psalm Theme Deck",
       sessionTheme: "Ten Psalm excerpts matched to major themes.",
       participantMode: config.participantMode,
+      sessionInstanceId,
       participants,
       stats,
       activityLog: [
@@ -2834,6 +3314,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       sessionTitle: round.title,
       sessionTheme: "Sort each Proverbs card into the correct wisdom category.",
       participantMode: config.participantMode,
+      sessionInstanceId,
       participants,
       stats,
       activityLog: [
@@ -2868,6 +3349,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       sessionTitle: "Random Psalm Reference Finder Deck",
       sessionTheme: "Ten Psalm excerpts matched to KJV references.",
       participantMode: config.participantMode,
+      sessionInstanceId,
       participants,
       stats,
       activityLog: [
@@ -2902,6 +3384,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       sessionTitle: "Random Two Truths and a Lie Deck",
       sessionTheme: "Ten Bible figures and events, each with one false statement to catch.",
       participantMode: config.participantMode,
+      sessionInstanceId,
       participants,
       stats,
       activityLog: [
@@ -2936,6 +3419,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       sessionTitle: "Random Relay Verse Build Deck",
       sessionTheme: "Five hidden KJV verses to rebuild one word at a time.",
       participantMode: config.participantMode,
+      sessionInstanceId,
       participants,
       stats,
       activityLog: [
@@ -2970,6 +3454,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       sessionTitle: "Random Verse Typing Race Deck",
       sessionTheme: "Five short KJV verses to type as fast and accurately as you can.",
       participantMode: config.participantMode,
+      sessionInstanceId,
       participants,
       stats,
       activityLog: [
@@ -3004,6 +3489,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       sessionTitle: "Random Word Ladder Deck",
       sessionTheme: "Six word ladders to solve one letter change at a time.",
       participantMode: config.participantMode,
+      sessionInstanceId,
       participants,
       stats,
       activityLog: [
@@ -3038,6 +3524,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       sessionTitle: "Random Bible Anagrams Deck",
       sessionTheme: "Ten scrambled Bible names, places, things, and events to unscramble.",
       participantMode: config.participantMode,
+      sessionInstanceId,
       participants,
       stats,
       activityLog: [
@@ -3072,6 +3559,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
       sessionTitle: "Random Bible Cryptogram Deck",
       sessionTheme: "Crack the cipher to reveal a Bible name, phrase, or short verse.",
       participantMode: config.participantMode,
+      sessionInstanceId,
       participants,
       stats,
       activityLog: [
@@ -3105,6 +3593,7 @@ export async function createSessionState(config: SessionConfig): Promise<Session
     sessionTitle: "Random Verse Reveal Deck",
     sessionTheme: "Five random scripture rounds drawn from the full library.",
     participantMode: config.participantMode,
+    sessionInstanceId,
     participants,
     stats,
     activityLog: [
@@ -5089,6 +5578,9 @@ export function submitWordLadderStep(state: SessionState, guess: string, diction
     return addActivity(nextState, "success", `${actorLabel} added "${normalizedGuess}".`);
   }
 
+  // The timer now covers a single guess, not the whole ladder, so a wrong guess costs the
+  // turn just like an explicit Pass or a timeout: it hands the still-live ladder to the next
+  // participant to steal, rather than letting the same player keep guessing indefinitely.
   const stats = getParticipantStats(nextState, actorIndex);
   stats.incorrectAttempts += 1;
   return addActivity(nextState, "warning", `${actorLabel} tried "${normalizedGuess}" — not a valid next word. Try again.`);

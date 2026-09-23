@@ -3,7 +3,11 @@ import oddOneOutData from "../src/data/odd-one-out.json";
 import {
   continueGame,
   createSessionState,
+  getHostAwardPoints,
+  getPromptId,
   getCurrentActorLabel,
+  markCorrectForHost,
+  markIncorrectForHost,
   moveBibleAnagramTile,
   passBibleAnagram,
   passBibleCryptogramTurn,
@@ -18,6 +22,7 @@ import {
   reorderTimelineEvent,
   selectBoardCard,
   selectTwoTruthsStatement,
+  setCurrentActor,
   submitBibleAnagram,
   submitBibleCryptogramLetterGuess,
   submitBibleCryptogramSolve,
@@ -39,6 +44,7 @@ import {
   type InitialsState,
   type OddOneOutState,
   type ParableMatchState,
+  type ReferenceRushState,
   type RelayVerseBuildState,
   type ScriptureState,
   type TwoTruthsAndALieState,
@@ -95,6 +101,7 @@ function makeFiveGuessesState(totalPrompts = 1): FiveGuessesState {
     sessionTitle: "Test Board",
     sessionTheme: "Test",
     participantMode: "individual",
+    sessionInstanceId: "test-five-guesses-session",
     participants: structuredClone(participants),
     stats: {
       "player-anna-1": stats(),
@@ -149,6 +156,7 @@ function makeScriptureState(rounds = ["Faith", "Hope"]): ScriptureState {
     sessionTitle: "Test Scripture",
     sessionTheme: "Test",
     participantMode: "individual",
+    sessionInstanceId: "test-scripture-session",
     participants: structuredClone(participants),
     stats: {
       "player-anna-1": stats(),
@@ -194,6 +202,7 @@ function makeTwoTruthsState(): TwoTruthsAndALieState {
     sessionTitle: "Test",
     sessionTheme: "Test",
     participantMode: "individual",
+    sessionInstanceId: "test-two-truths-session",
     participants: structuredClone(participants),
     stats: {
       "player-anna-1": stats(),
@@ -236,6 +245,7 @@ function makeRelayVerseBuildState(): RelayVerseBuildState {
     sessionTitle: "Test",
     sessionTheme: "Test",
     participantMode: "individual",
+    sessionInstanceId: "test-relay-verse-build-session",
     participants: structuredClone(participants),
     stats: {
       "player-anna-1": stats(),
@@ -283,6 +293,7 @@ function makeWordLadderState(): WordLadderState {
     sessionTitle: "Test",
     sessionTheme: "Test",
     participantMode: "individual",
+    sessionInstanceId: "test-word-ladder-session",
     participants: structuredClone(participants),
     stats: {
       "player-anna-1": stats(),
@@ -327,6 +338,7 @@ function makeGenealogyState(): GenealogyState {
     sessionTitle: "Test",
     sessionTheme: "Test",
     participantMode: "individual",
+    sessionInstanceId: "test-genealogy-session",
     participants: structuredClone(participants),
     stats: {
       "player-anna-1": stats(),
@@ -374,6 +386,7 @@ function makeBibleAnagramsState(): BibleAnagramsState {
     sessionTitle: "Test",
     sessionTheme: "Test",
     participantMode: "individual",
+    sessionInstanceId: "test-bible-anagrams-session",
     participants: structuredClone(participants),
     stats: {
       "player-anna-1": stats(),
@@ -426,6 +439,7 @@ function makeBibleCryptogramState(verseText = "CAT"): BibleCryptogramState {
     sessionTitle: "Test",
     sessionTheme: "Test",
     participantMode: "individual",
+    sessionInstanceId: "test-bible-cryptogram-session",
     participants: structuredClone(participants),
     stats: {
       "player-anna-1": stats(),
@@ -465,6 +479,7 @@ function makeBibleTimelineState(): BibleTimelineState {
     sessionTitle: "Test",
     sessionTheme: "Test",
     participantMode: "individual",
+    sessionInstanceId: "test-bible-timeline-session",
     participants: structuredClone(participants),
     stats: {
       "player-anna-1": stats(),
@@ -500,6 +515,7 @@ function makeBibleBooksRelayState(): BibleBooksRelayState {
     sessionTitle: "Test",
     sessionTheme: "Test",
     participantMode: "individual",
+    sessionInstanceId: "test-bible-books-relay-session",
     participants: structuredClone(participants),
     stats: {
       "player-anna-1": stats(),
@@ -552,6 +568,7 @@ function makeResolvedBeforeOrAfterState(): BeforeOrAfterState {
     sessionTitle: "Test",
     sessionTheme: "Test",
     participantMode: "individual",
+    sessionInstanceId: "test-before-or-after-session",
     participants: structuredClone(participants),
     stats: {
       "player-anna-1": stats(),
@@ -823,6 +840,61 @@ describe("gameEngine transitions", () => {
     expect(state.currentPrompt.phase).toBe("resolved");
     expect(state.currentPrompt.wasCorrect).toBe(true);
     expect(state.stats["player-ben-2"].totalScore).toBe(4);
+  });
+
+  it("keeps prompt identity stable across host answerer selection and misses", () => {
+    let state = makeTwoTruthsState();
+    state.sessionInstanceId = "host-test-session";
+    const initialPromptId = getPromptId(state);
+
+    state = setCurrentActor(state, "player-ben-2").nextState as TwoTruthsAndALieState;
+    expect(state.turnIndex).toBe(1);
+    expect(getPromptId(state)).toBe(initialPromptId);
+
+    state = markIncorrectForHost(state, "player-ben-2").nextState as TwoTruthsAndALieState;
+    expect(state.stats["player-ben-2"].incorrectAttempts).toBe(1);
+    expect(getPromptId(state)).toBe(initialPromptId);
+
+    state = markCorrectForHost(state, "player-anna-1").nextState as TwoTruthsAndALieState;
+    expect(getPromptId(state)).toBeNull();
+  });
+
+  it("marks a host-approved answer with the same outcome as the engine submission", () => {
+    const engineResult = selectTwoTruthsStatement(makeTwoTruthsState(), 2).nextState as TwoTruthsAndALieState;
+    const hostResult = markCorrectForHost(makeTwoTruthsState(), "player-anna-1").nextState as TwoTruthsAndALieState;
+
+    expect(getHostAwardPoints(makeTwoTruthsState(), "player-anna-1")).toBe(5);
+    expect(hostResult.currentPrompt.phase).toBe(engineResult.currentPrompt.phase);
+    expect(hostResult.stats["player-anna-1"].totalScore).toBe(engineResult.stats["player-anna-1"].totalScore);
+    expect(hostResult.stats["player-anna-1"].roundWins).toBe(engineResult.stats["player-anna-1"].roundWins);
+  });
+
+  it("lets the host override text answer grading", async () => {
+    const acceptedState = (await createSessionState({
+      gameId: "reference-rush",
+      participantMode: "individual",
+      individualNames: ["Anna", "Ben"]
+    })) as ReferenceRushState;
+    const acceptedResult = markCorrectForHost(acceptedState, "player-anna-1", { answerText: "host accepted typo" })
+      .nextState as ReferenceRushState;
+
+    expect(acceptedResult.currentPrompt.phase).toBe("resolved");
+    expect(acceptedResult.currentPrompt.wasCorrect).toBe(true);
+    expect(acceptedResult.stats["player-anna-1"].totalScore).toBe(5);
+    expect(acceptedResult.stats["player-anna-1"].referenceRushCorrect).toBe(1);
+
+    const rejectedState = (await createSessionState({
+      gameId: "reference-rush",
+      participantMode: "individual",
+      individualNames: ["Anna", "Ben"]
+    })) as ReferenceRushState;
+    const rejectedResult = markIncorrectForHost(rejectedState, "player-anna-1", {
+      answerText: rejectedState.currentPrompt.round.reference
+    }).nextState as ReferenceRushState;
+
+    expect(rejectedResult.currentPrompt.phase).toBe("active");
+    expect(rejectedResult.stats["player-anna-1"].incorrectAttempts).toBe(1);
+    expect(rejectedResult.stats["player-anna-1"].totalScore).toBe(0);
   });
 
   it("keeps the same player on a Relay Verse Build miss and rotates turns on a correct word", () => {
