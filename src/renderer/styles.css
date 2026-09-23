@@ -765,7 +765,8 @@ textarea {
 }
 
 .text-input,
-.text-area {
+.text-area,
+.select-input {
   width: 100%;
   border-radius: 14px;
   border: 1px solid rgba(84, 66, 56, 0.16);
@@ -774,13 +775,20 @@ textarea {
   color: #241915;
 }
 
+.compact-select {
+  flex: 0 0 120px;
+  min-height: 42px;
+}
+
 .panel-stage .text-input,
-.panel-stage .text-area {
+.panel-stage .text-area,
+.panel-stage .select-input {
   padding: 8px 10px;
 }
 
 .text-input:focus,
-.text-area:focus {
+.text-area:focus,
+.select-input:focus {
   outline: 2px solid rgba(42, 103, 88, 0.22);
   border-color: rgba(42, 103, 88, 0.22);
 }

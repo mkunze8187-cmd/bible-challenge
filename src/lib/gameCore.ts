@@ -8,6 +8,7 @@ export type DifficultyFilter = ChallengeDifficulty | "mixed";
 export interface ParticipantMember {
   id: string;
   name: string;
+  difficulty?: DifficultyFilter;
 }
 
 export interface Participant {
@@ -16,6 +17,7 @@ export interface Participant {
   color: string;
   members: ParticipantMember[];
   turnCounter: number;
+  difficulty?: DifficultyFilter;
 }
 
 export interface PlayerStats {

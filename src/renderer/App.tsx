@@ -211,8 +211,11 @@ interface FeedbackDraft {
 interface PersistedAppSettings {
   colorTheme: AppTheme;
   participantMode: ParticipantMode;
-  // playerNames/playerColors/teams are deliberately NOT persisted — every launch
-  // starts from a single default "Player 1," never restoring a previous roster.
+  // Names/colors are deliberately NOT persisted; difficulty arrays are persisted so the
+  // default roster keeps its handicap choices across launches.
+  playerDifficulties: DifficultyFilter[];
+  teamDifficulties: DifficultyFilter[];
+  teamMemberDifficulties: DifficultyFilter[][];
   timerEnabled: boolean;
   challengeTimerSeconds: Record<GameId, number>;
   useVerseSecondsPerWord: boolean;
@@ -317,7 +320,9 @@ const DEFAULT_TEAMS: TeamSetup[] = [
   {
     teamName: "Team Alpha",
     members: ["Alice"],
-    color: PARTICIPANT_COLORS[0]
+    color: PARTICIPANT_COLORS[0],
+    difficulty: "mixed",
+    memberDifficulties: ["mixed"]
   }
 ];
 const ALL_GAME_IDS = Object.keys(GAME_LIBRARY) as GameId[];
@@ -409,6 +414,12 @@ const DEFAULT_CHALLENGE_TIMER_SECONDS: Record<GameId, number> = {
 const DEFAULT_VERSE_SCRAMBLE_SECONDS_PER_WORD = 6;
 const DIFFICULTY_FILTERS: Array<{ id: DifficultyFilter; label: string }> = [
   { id: "mixed", label: "Mixed" },
+  { id: "easy", label: "Easy" },
+  { id: "medium", label: "Medium" },
+  { id: "hard", label: "Hard" }
+];
+const PLAYER_DIFFICULTY_OPTIONS: Array<{ id: DifficultyFilter; label: string }> = [
+  { id: "mixed", label: "Inherit" },
   { id: "easy", label: "Easy" },
   { id: "medium", label: "Medium" },
   { id: "hard", label: "Hard" }
@@ -1005,12 +1016,35 @@ function getTimerDurationSeconds(
   verseScrambleSecondsPerWord: number
 ): number {
   const gameId = state?.gameId ?? selectedGameId;
+  let baseSeconds: number;
 
   if (state?.gameId === "verse-scramble" && useVerseSecondsPerWord) {
-    return Math.max(5, state.currentPrompt.tiles.length * verseScrambleSecondsPerWord);
+    baseSeconds = Math.max(5, state.currentPrompt.tiles.length * verseScrambleSecondsPerWord);
+  } else {
+    baseSeconds = challengeTimerSeconds[gameId];
   }
 
-  return challengeTimerSeconds[gameId];
+  const participant = state && getCurrentParticipantId(state)
+    ? state.participants.find((entry) => entry.id === getCurrentParticipantId(state))
+    : null;
+  const memberDifficulty =
+    participant?.members[participant.turnCounter % participant.members.length]?.difficulty;
+  const effectiveDifficulty =
+    memberDifficulty && memberDifficulty !== "mixed"
+      ? memberDifficulty
+      : participant?.difficulty && participant.difficulty !== "mixed"
+        ? participant.difficulty
+        : null;
+
+  if (effectiveDifficulty === "easy") {
+    return Math.min(1800, Math.max(5, Math.round(baseSeconds * 1.5)));
+  }
+
+  if (effectiveDifficulty === "hard") {
+    return Math.min(1800, Math.max(5, Math.round(baseSeconds * 0.75)));
+  }
+
+  return baseSeconds;
 }
 
 interface StudyNoteContent {
@@ -1783,6 +1817,14 @@ function cleanDifficultyFilter(value: unknown): DifficultyFilter {
   return value === "easy" || value === "medium" || value === "hard" || value === "mixed" ? value : "mixed";
 }
 
+function cleanDifficultyList(value: unknown): DifficultyFilter[] {
+  return Array.isArray(value) ? value.map(cleanDifficultyFilter) : [];
+}
+
+function cleanDifficultyMatrix(value: unknown): DifficultyFilter[][] {
+  return Array.isArray(value) ? value.map(cleanDifficultyList) : [];
+}
+
 function cleanTimerPreset(value: unknown): TimerPreset {
   return value === "off" ||
     value === "beginner" ||
@@ -1838,6 +1880,9 @@ function cleanAppSettings(value: unknown): Partial<PersistedAppSettings> {
   return {
     colorTheme: APP_THEMES.includes(input.colorTheme as AppTheme) ? input.colorTheme : "classic",
     participantMode: input.participantMode === "teams" ? "teams" : "individual",
+    playerDifficulties: cleanDifficultyList(input.playerDifficulties),
+    teamDifficulties: cleanDifficultyList(input.teamDifficulties),
+    teamMemberDifficulties: cleanDifficultyMatrix(input.teamMemberDifficulties),
     timerEnabled: typeof input.timerEnabled === "boolean" ? input.timerEnabled : true,
     challengeTimerSeconds: timers,
     useVerseSecondsPerWord:
@@ -1877,6 +1922,7 @@ export function App() {
   const [participantMode, setParticipantMode] = useState<ParticipantMode>("individual");
   const [playerNames, setPlayerNames] = useState<string[]>(DEFAULT_PLAYER_NAMES);
   const [playerColors, setPlayerColors] = useState<string[]>(DEFAULT_PLAYER_COLORS);
+  const [playerDifficulties, setPlayerDifficulties] = useState<DifficultyFilter[]>(["mixed"]);
   const [newPlayerName, setNewPlayerName] = useState("");
   const [teams, setTeams] = useState<TeamSetup[]>(DEFAULT_TEAMS);
   const [colorTheme, setColorTheme] = useState<AppTheme>("classic");
@@ -2191,9 +2237,22 @@ export function App() {
         if (cleaned.participantMode) {
           setParticipantMode(cleaned.participantMode);
         }
-        // playerNames/playerColors/teams are deliberately NOT restored here — every
-        // launch starts from the in-memory defaults (a single "Player 1") regardless
-        // of what was set up last session, per the app's player-persistence policy.
+        // Names/colors are deliberately NOT restored here, per the app's player-persistence
+        // policy. Difficulty arrays are safe to restore because they fall back to inherit.
+        if (cleaned.playerDifficulties) {
+          setPlayerDifficulties(cleaned.playerDifficulties.length > 0 ? cleaned.playerDifficulties : ["mixed"]);
+        }
+        if (cleaned.teamDifficulties || cleaned.teamMemberDifficulties) {
+          setTeams((current) =>
+            current.map((team, index) => ({
+              ...team,
+              difficulty: cleaned.teamDifficulties?.[index] ?? team.difficulty ?? "mixed",
+              memberDifficulties: team.members.map(
+                (_, memberIndex) => cleaned.teamMemberDifficulties?.[index]?.[memberIndex] ?? team.memberDifficulties?.[memberIndex] ?? "mixed"
+              )
+            }))
+          );
+        }
         if (typeof cleaned.timerEnabled === "boolean") {
           setTimerEnabled(cleaned.timerEnabled);
         }
@@ -2269,6 +2328,9 @@ export function App() {
     const settings: PersistedAppSettings = {
       colorTheme,
       participantMode,
+      playerDifficulties,
+      teamDifficulties: teams.map((team) => team.difficulty ?? "mixed"),
+      teamMemberDifficulties: teams.map((team) => team.members.map((_, index) => team.memberDifficulties?.[index] ?? "mixed")),
       timerEnabled,
       challengeTimerSeconds,
       useVerseSecondsPerWord,
@@ -2311,11 +2373,13 @@ export function App() {
     displayMode,
     hasLoadedAppSettings,
     participantMode,
+    playerDifficulties,
     savedEventDefinitions,
     selectedEventGameIds,
     showChallengeRatings,
     showStudyNotes,
     timerEnabled,
+    teams,
     timerPreset,
     useVerseSecondsPerWord,
     verseScrambleSecondsPerWord
@@ -2342,6 +2406,9 @@ export function App() {
       getSettings: () => ({
         colorTheme,
         participantMode,
+        playerDifficulties,
+        teamDifficulties: teams.map((team) => team.difficulty ?? "mixed"),
+        teamMemberDifficulties: teams.map((team) => team.members.map((_, index) => team.memberDifficulties?.[index] ?? "mixed")),
         timerEnabled,
         challengeTimerSeconds,
         useVerseSecondsPerWord,
@@ -2377,12 +2444,14 @@ export function App() {
     isSettingsOpen,
     isSetupOpen,
     participantMode,
+    playerDifficulties,
     savedEventDefinitions,
     selectedEventGameIds,
     sessionState,
     showChallengeRatings,
     showStudyNotes,
     timerEnabled,
+    teams,
     timerPreset,
     useVerseSecondsPerWord,
     verseScrambleSecondsPerWord
@@ -2804,6 +2873,7 @@ export function App() {
         contentSource: activeContentPackId === "custom" ? "custom" : "all",
         individualNames: playerNames,
         individualColors: playerColors,
+        individualDifficulties: playerDifficulties,
         teams,
         sessionId: nextChallengeId,
         maxPrompts: TEST_MODE_MAX_PROMPTS_VALUE
@@ -3077,6 +3147,7 @@ export function App() {
         contentSource: activeContentPackId === "custom" ? "custom" : "all",
         individualNames: playerNames,
         individualColors: playerColors,
+        individualDifficulties: playerDifficulties,
         teams,
         sessionId: nextChallengeId,
         maxPrompts: TEST_MODE_MAX_PROMPTS_VALUE
@@ -3480,6 +3551,14 @@ export function App() {
     updateSessionParticipantColor(index, color, "individual");
   }
 
+  function updatePlayerDifficulty(index: number, difficulty: DifficultyFilter) {
+    setPlayerDifficulties((current) => {
+      const next = [...current];
+      next[index] = difficulty;
+      return next;
+    });
+  }
+
   function addPlayer() {
     const trimmed = newPlayerName.trim();
 
@@ -3493,12 +3572,14 @@ export function App() {
 
     setPlayerNames((current) => [...current, trimmed]);
     setPlayerColors((current) => [...current, getNextParticipantColor(current.length)]);
+    setPlayerDifficulties((current) => [...current, "mixed"]);
     setNewPlayerName("");
   }
 
   function removePlayer(index: number) {
     setPlayerNames((current) => current.filter((_, currentIndex) => currentIndex !== index));
     setPlayerColors((current) => current.filter((_, currentIndex) => currentIndex !== index));
+    setPlayerDifficulties((current) => current.filter((_, currentIndex) => currentIndex !== index));
   }
 
   function updateTeamName(index: number, value: string) {
@@ -3512,6 +3593,12 @@ export function App() {
       current.map((team, currentIndex) => (currentIndex === index ? { ...team, color } : team))
     );
     updateSessionParticipantColor(index, color, "teams");
+  }
+
+  function updateTeamDifficulty(index: number, difficulty: DifficultyFilter) {
+    setTeams((current) =>
+      current.map((team, currentIndex) => (currentIndex === index ? { ...team, difficulty } : team))
+    );
   }
 
   function updateTeamMember(teamIndex: number, memberIndex: number, value: string) {
@@ -3529,13 +3616,32 @@ export function App() {
     );
   }
 
+  function updateTeamMemberDifficulty(teamIndex: number, memberIndex: number, difficulty: DifficultyFilter) {
+    setTeams((current) =>
+      current.map((team, currentTeamIndex) =>
+        currentTeamIndex === teamIndex
+          ? {
+              ...team,
+              memberDifficulties: team.members.map((_, currentMemberIndex) =>
+                currentMemberIndex === memberIndex
+                  ? difficulty
+                  : team.memberDifficulties?.[currentMemberIndex] ?? "mixed"
+              )
+            }
+          : team
+      )
+    );
+  }
+
   function addTeam() {
     setTeams((current) => [
       ...current,
       {
         teamName: `Team ${current.length + 1}`,
         members: ["New Member"],
-        color: getNextParticipantColor(current.length)
+        color: getNextParticipantColor(current.length),
+        difficulty: "mixed",
+        memberDifficulties: ["mixed"]
       }
     ]);
   }
@@ -3561,7 +3667,8 @@ export function App() {
 
         return {
           ...team,
-          members: [...team.members, `Member ${team.members.length + 1}`]
+          members: [...team.members, `Member ${team.members.length + 1}`],
+          memberDifficulties: [...(team.memberDifficulties ?? team.members.map(() => "mixed" as DifficultyFilter)), "mixed"]
         };
       })
     );
@@ -3573,7 +3680,10 @@ export function App() {
         currentIndex === teamIndex
           ? {
               ...team,
-              members: team.members.filter((_, currentMemberIndex) => currentMemberIndex !== memberIndex)
+              members: team.members.filter((_, currentMemberIndex) => currentMemberIndex !== memberIndex),
+              memberDifficulties: (team.memberDifficulties ?? team.members.map(() => "mixed" as DifficultyFilter)).filter(
+                (_, currentMemberIndex) => currentMemberIndex !== memberIndex
+              )
             }
           : team
       )
@@ -3855,6 +3965,18 @@ export function App() {
                               onChange={(event) => updatePlayerName(index, event.target.value)}
                               placeholder={`Player ${index + 1}`}
                             />
+                            <select
+                              className="select-input compact-select"
+                              value={playerDifficulties[index] ?? "mixed"}
+                              onChange={(event) => updatePlayerDifficulty(index, cleanDifficultyFilter(event.target.value))}
+                              aria-label={`${playerName || `Player ${index + 1}`} difficulty`}
+                            >
+                              {PLAYER_DIFFICULTY_OPTIONS.map((option) => (
+                                <option key={option.id} value={option.id}>
+                                  {option.label}
+                                </option>
+                              ))}
+                            </select>
                             <button type="button" className="ghost-button" onClick={() => removePlayer(index)}>
                               Remove
                             </button>
@@ -3891,6 +4013,18 @@ export function App() {
                                 onChange={(event) => updateTeamName(teamIndex, event.target.value)}
                                 placeholder={`Team ${teamIndex + 1}`}
                               />
+                              <select
+                                className="select-input compact-select"
+                                value={team.difficulty ?? "mixed"}
+                                onChange={(event) => updateTeamDifficulty(teamIndex, cleanDifficultyFilter(event.target.value))}
+                                aria-label={`${team.teamName || `Team ${teamIndex + 1}`} difficulty`}
+                              >
+                                {PLAYER_DIFFICULTY_OPTIONS.map((option) => (
+                                  <option key={option.id} value={option.id}>
+                                    {option.label}
+                                  </option>
+                                ))}
+                              </select>
                               <button type="button" className="ghost-button" onClick={() => removeTeam(teamIndex)}>
                                 Remove Team
                               </button>
@@ -3905,6 +4039,20 @@ export function App() {
                                     onChange={(event) => updateTeamMember(teamIndex, memberIndex, event.target.value)}
                                     placeholder={`Member ${memberIndex + 1}`}
                                   />
+                                  <select
+                                    className="select-input compact-select"
+                                    value={team.memberDifficulties?.[memberIndex] ?? "mixed"}
+                                    onChange={(event) =>
+                                      updateTeamMemberDifficulty(teamIndex, memberIndex, cleanDifficultyFilter(event.target.value))
+                                    }
+                                    aria-label={`${member || `Member ${memberIndex + 1}`} difficulty`}
+                                  >
+                                    {PLAYER_DIFFICULTY_OPTIONS.map((option) => (
+                                      <option key={option.id} value={option.id}>
+                                        {option.label}
+                                      </option>
+                                    ))}
+                                  </select>
                                   <button
                                     type="button"
                                     className="ghost-button"
