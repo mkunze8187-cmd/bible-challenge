@@ -405,7 +405,9 @@ textarea {
   gap: 12px;
   align-content: start;
   min-height: 0;
-  overflow: hidden;
+  overflow-y: auto;
+  padding-right: 4px;
+  padding-bottom: 8px;
 }
 
 .panel {
@@ -430,10 +432,10 @@ textarea {
 }
 
 .panel-stage {
-  height: 100%;
+  min-height: 100%;
   display: grid;
   align-content: start;
-  overflow: hidden;
+  overflow: visible;
   padding: 12px 16px;
 }
 
@@ -514,31 +516,32 @@ textarea {
   align-content: start;
 }
 
-.content-pack-tabs {
-  display: flex;
-  gap: 8px;
-  min-height: 44px;
+.content-pack-select-row {
+  display: grid;
+  grid-template-columns: auto minmax(180px, 280px);
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
   margin-bottom: 12px;
-  overflow-x: auto;
-  padding-bottom: 2px;
-}
-
-.content-pack-tab {
-  flex: 0 0 auto;
-  min-height: 38px;
-  border: 1px solid color-mix(in srgb, var(--pack-accent, #215348) 42%, transparent);
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--pack-accent, #215348) 10%, #fffdf8);
-  color: #34241c;
-  padding: 7px 12px;
+  color: #5c493f;
+  font-size: 0.82rem;
   font-weight: 850;
-  cursor: pointer;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.content-pack-tab-active {
-  background: var(--pack-accent, #215348);
-  color: #fffdfa;
-  box-shadow: 0 10px 24px color-mix(in srgb, var(--pack-accent, #215348) 24%, transparent);
+.content-pack-select {
+  min-height: 38px;
+  border: 1px solid rgba(83, 67, 55, 0.18);
+  border-radius: 10px;
+  background: #fffdf8;
+  color: #2d2019;
+  padding: 7px 10px;
+  font: inherit;
+  font-size: 0.94rem;
+  font-weight: 750;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .mode-card,
