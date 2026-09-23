@@ -15,6 +15,7 @@ import {
   passRelayWord,
   passScriptureTurn,
   passWordLadderTurn,
+  resolveWordLadderOnTimer,
   removeLastGenealogyLink,
   removeLastWordLadderRung,
   selectParableMatchCard,
@@ -920,19 +921,23 @@ describe("gameEngine transitions", () => {
     expect(state.turnIndex).toBe(1);
   });
 
-  it("scores a guess changing more than one letter as a miss without passing the turn, then accepts a valid step", () => {
+  it("charges a Word Ladder miss to the current turn, then accepts a valid steal step", () => {
     let state = makeWordLadderState();
     const dictionary = new Set(["cat", "cot", "cog", "dog", "bat"]);
+    const initialPromptId = getPromptId(state);
 
     state = submitWordLadderStep(state, "cog", dictionary).nextState as WordLadderState;
     expect(state.currentPrompt.chain).toEqual(["cat"]);
-    expect(state.turnIndex).toBe(0);
+    expect(state.turnIndex).toBe(1);
     expect(state.stats["player-anna-1"].incorrectAttempts).toBe(1);
+    expect(getPromptId(state)).not.toBe(initialPromptId);
 
+    const stealPromptId = getPromptId(state);
     state = submitWordLadderStep(state, "cot", dictionary).nextState as WordLadderState;
     expect(state.currentPrompt.chain).toEqual(["cat", "cot"]);
-    expect(state.turnIndex).toBe(0);
-    expect(state.stats["player-anna-1"].wordLadderStepsCompleted).toBe(1);
+    expect(state.turnIndex).toBe(1);
+    expect(state.stats["player-ben-2"].wordLadderStepsCompleted).toBe(1);
+    expect(getPromptId(state)).not.toBe(stealPromptId);
   });
 
   it("throws when a Word Ladder guess repeats a word already in the chain", () => {
@@ -942,17 +947,20 @@ describe("gameEngine transitions", () => {
     expect(() => submitWordLadderStep(state, "cat", dictionary)).toThrow();
   });
 
-  it("keeps the same player on unlimited Word Ladder misses until they pass", () => {
+  it("reveals Word Ladder after misses cycle through every participant", () => {
     let state = makeWordLadderState();
     const dictionary = new Set(["cat"]);
 
-    for (let miss = 0; miss < 6; miss += 1) {
-      state = submitWordLadderStep(state, "zzz", dictionary).nextState as WordLadderState;
-    }
-
+    state = submitWordLadderStep(state, "zzz", dictionary).nextState as WordLadderState;
     expect(state.currentPrompt.phase).toBe("active");
+    expect(state.turnIndex).toBe(1);
+
+    state = submitWordLadderStep(state, "zzz", dictionary).nextState as WordLadderState;
+    expect(state.currentPrompt.phase).toBe("resolved");
     expect(state.turnIndex).toBe(0);
-    expect(state.stats["player-anna-1"].incorrectAttempts).toBe(6);
+    expect(state.currentPrompt.wasCorrect).toBe(false);
+    expect(state.stats["player-anna-1"].incorrectAttempts).toBe(1);
+    expect(state.stats["player-ben-2"].incorrectAttempts).toBe(1);
   });
 
   it("removes the last rung from a Word Ladder chain but never the starting word", () => {
@@ -991,6 +999,20 @@ describe("gameEngine transitions", () => {
     expect(state.currentPrompt.phase).toBe("resolved");
     expect(state.currentPrompt.wasCorrect).toBe(false);
     expect(state.currentPrompt.resolvedMessage).toContain("cat");
+  });
+
+  it("treats a Word Ladder timeout like a per-guess pass", () => {
+    let state = makeWordLadderState();
+    const initialPromptId = getPromptId(state);
+
+    state = resolveWordLadderOnTimer(state).nextState as WordLadderState;
+    expect(state.currentPrompt.phase).toBe("active");
+    expect(state.turnIndex).toBe(1);
+    expect(getPromptId(state)).not.toBe(initialPromptId);
+
+    state = resolveWordLadderOnTimer(state).nextState as WordLadderState;
+    expect(state.currentPrompt.phase).toBe("resolved");
+    expect(state.currentPrompt.wasCorrect).toBe(false);
   });
 
   it("solves a Bible Anagrams round when the correct letters are moved to the answer row", () => {

@@ -2006,6 +2006,12 @@ export function getPromptId(state: SessionState): string | null {
       : null;
   }
 
+  if (state.gameId === "word-ladder") {
+    return state.currentPrompt.phase === "active"
+      ? `${prefix}:${state.gameId}:${state.roundIndex}:${state.turnIndex}:${state.currentPrompt.chain.length}`
+      : null;
+  }
+
   if (!state.currentPrompt || state.currentPrompt.phase === "resolved") {
     return null;
   }
@@ -5551,11 +5557,6 @@ export function submitWordLadderStep(state: SessionState, guess: string, diction
     throw new Error(`Word must be ${lastWord.length} letters long.`);
   }
 
-  // Unlike other games' turn-based rounds, a single player/team keeps this ladder for the
-  // whole round: the turn only advances via an explicit Pass (passWordLadderTurn) or the
-  // whole-round timer expiring — never automatically on a correct or incorrect guess. This
-  // is deliberate: the ladder is not locked to one path, so a wrong guess is just a wrong
-  // attempt at the *next* rung, not a forfeited turn.
   const isValidStep = hammingDistanceOne(normalizedGuess, lastWord) && dictionary.has(normalizedGuess);
 
   if (isValidStep) {
@@ -5583,7 +5584,11 @@ export function submitWordLadderStep(state: SessionState, guess: string, diction
   // participant to steal, rather than letting the same player keep guessing indefinitely.
   const stats = getParticipantStats(nextState, actorIndex);
   stats.incorrectAttempts += 1;
-  return addActivity(nextState, "warning", `${actorLabel} tried "${normalizedGuess}" — not a valid next word. Try again.`);
+  return advanceWordLadderTurn(
+    nextState,
+    `${actorLabel} tried "${normalizedGuess}" — not a valid next word.`,
+    `${actorLabel} tried "${normalizedGuess}" — not a valid next word. One valid path was ${prompt.round.revealPath.join(" → ")}.`
+  );
 }
 
 export function removeLastWordLadderRung(state: SessionState): ActionResult {
@@ -5616,23 +5621,37 @@ export function passWordLadderTurn(state: SessionState): ActionResult {
   }
 
   const nextState = structuredClone(state);
+  const actorLabel = getCurrentActorLabel(nextState);
+
+  return advanceWordLadderTurn(
+    nextState,
+    `${actorLabel} passed.`,
+    `Nobody solved the ladder. One valid path was ${nextState.currentPrompt.round.revealPath.join(" → ")}.`,
+    "info"
+  );
+}
+
+function advanceWordLadderTurn(
+  nextState: WordLadderState,
+  attemptMessage: string,
+  resolvedMessage: string,
+  activeTone: ActivityTone = "warning"
+): ActionResult {
   const prompt = nextState.currentPrompt;
   const actorIndex = nextState.turnIndex;
-  const actorLabel = getCurrentActorLabel(nextState);
 
   consumeTurn(nextState.participants, actorIndex);
   nextState.turnIndex = nextIndex(nextState.participants.length, actorIndex);
 
   if (nextState.turnIndex === prompt.startTurnIndex || nextState.participants.length <= 1) {
     // Every participant has now had a chance at this ladder (or there's only one to begin
-    // with) — stealing further would just cycle back to someone who already passed, so the
-    // round ends and the path is revealed rather than looping forever.
+    // with), so the round ends and the path is revealed rather than looping forever.
     prompt.wasCorrect = false;
-    resolveRoundState(nextState, `Nobody solved the ladder. One valid path was ${prompt.round.revealPath.join(" → ")}.`);
+    resolveRoundState(nextState, resolvedMessage);
     return addActivity(nextState, "warning", nextState.currentPrompt.resolvedMessage ?? "Ladder revealed.");
   }
 
-  return addActivity(nextState, "info", `${actorLabel} passed. ${getCurrentActorLabel(nextState)} can steal.`);
+  return addActivity(nextState, activeTone, `${attemptMessage} ${getCurrentActorLabel(nextState)} can steal.`);
 }
 
 export function resolveWordLadderOnTimer(state: SessionState): ActionResult {
@@ -5644,14 +5663,14 @@ export function resolveWordLadderOnTimer(state: SessionState): ActionResult {
     throw new Error("The ladder is already resolved.");
   }
 
-  // The round timer covers the whole ladder, not a single rung or a single participant's
-  // turn — when it expires, the round ends outright (no further stealing), unlike an
-  // explicit Pass which hands the same still-live ladder to the next participant.
   const nextState = structuredClone(state);
-  const prompt = nextState.currentPrompt;
-  prompt.wasCorrect = false;
-  resolveRoundState(nextState, `Time's up. One valid path was ${prompt.round.revealPath.join(" → ")}.`);
-  return addActivity(nextState, "warning", nextState.currentPrompt.resolvedMessage ?? "Ladder revealed.");
+  const actorLabel = getCurrentActorLabel(nextState);
+
+  return advanceWordLadderTurn(
+    nextState,
+    `Time expired for ${actorLabel}.`,
+    `Time's up. One valid path was ${nextState.currentPrompt.round.revealPath.join(" → ")}.`
+  );
 }
 
 export function submitGenealogyStep(state: SessionState, guess: string): ActionResult {

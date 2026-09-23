@@ -1684,9 +1684,54 @@ textarea {
   box-shadow: 0 16px 36px rgba(38, 93, 67, 0.18);
 }
 
+.answer-panel-incorrect {
+  background: linear-gradient(135deg, rgba(140, 47, 57, 0.96), rgba(179, 73, 64, 0.94));
+  color: #fff8f6;
+  border-color: rgba(140, 47, 57, 0.22);
+  box-shadow: 0 16px 36px rgba(140, 47, 57, 0.18);
+}
+
+.answer-panel-unsolved {
+  background: linear-gradient(135deg, rgba(232, 181, 79, 0.96), rgba(247, 220, 135, 0.94));
+  color: #33250f;
+  border-color: rgba(139, 97, 28, 0.24);
+  box-shadow: 0 16px 36px rgba(139, 97, 28, 0.16);
+}
+
 .answer-panel-correct span,
-.answer-panel-correct strong {
+.answer-panel-correct strong,
+.answer-panel-incorrect span,
+.answer-panel-incorrect strong {
   color: #f8fff9;
+}
+
+.answer-panel-unsolved span,
+.answer-panel-unsolved strong {
+  color: #33250f;
+}
+
+.study-note-inline {
+  margin-top: -4px;
+  padding: 14px 16px;
+  border: 1px solid rgba(78, 58, 44, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 252, 245, 0.94);
+  color: #3a2a22;
+  display: grid;
+  gap: 6px;
+}
+
+.study-note-inline span {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.68rem;
+  color: #7c5430;
+  font-weight: 900;
+}
+
+.study-note-inline p {
+  margin: 0;
+  line-height: 1.45;
 }
 
 .modal-backdrop {
@@ -1702,7 +1747,6 @@ textarea {
 .setup-modal,
 .info-modal,
 .host-controls-modal,
-.study-note-modal,
 .help-modal {
   width: min(720px, 100%);
   max-height: min(680px, calc(100vh - 36px));
@@ -1719,7 +1763,6 @@ textarea {
 }
 
 .host-controls-modal,
-.study-note-modal,
 .help-modal {
   width: min(620px, 100%);
 }
@@ -1788,13 +1831,6 @@ textarea {
   color: #34241c;
   padding: 8px 10px;
   font: inherit;
-}
-
-.study-note-modal blockquote {
-  margin: 8px 0 0;
-  padding-left: 12px;
-  border-left: 4px solid rgba(47, 95, 168, 0.42);
-  color: #49382f;
 }
 
 .feedback-modal {
@@ -2849,11 +2885,6 @@ textarea {
 .app-projector-window .score-panel,
 .app-projector-window .modal-backdrop {
   display: none;
-}
-
-.app-projector-window .modal-backdrop.projector-study-note-backdrop {
-  display: grid;
-  pointer-events: none;
 }
 
 .app-projector-window .play-grid {

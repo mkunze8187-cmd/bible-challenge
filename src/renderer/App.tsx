@@ -1,7 +1,9 @@
 import {
+  createContext,
   useEffect,
   useRef,
   useState,
+  useContext,
   type CSSProperties,
   type DragEvent as ReactDragEvent,
   type KeyboardEvent as ReactKeyboardEvent
@@ -400,7 +402,7 @@ const DEFAULT_CHALLENGE_TIMER_SECONDS: Record<GameId, number> = {
   "two-truths-and-a-lie": 35,
   "relay-verse-build": 30,
   "verse-typing-race": 60,
-  "word-ladder": 30,
+  "word-ladder": 20,
   "bible-anagrams": 30,
   "bible-cryptogram": 60
 };
@@ -446,11 +448,11 @@ const QUICK_CHOICE_TIMER_GAMES = new Set<GameId>([
   "psalm-reference-finder",
   "two-truths-and-a-lie"
 ]);
-const TIMER_PRESET_SECONDS: Record<Exclude<TimerPreset, "off" | "custom">, { standard: number; verse: number; quick: number }> = {
-  beginner: { standard: 90, verse: 120, quick: 45 },
-  standard: { standard: 60, verse: 90, quick: 30 },
-  advanced: { standard: 30, verse: 45, quick: 20 },
-  expert: { standard: 15, verse: 25, quick: 10 }
+const TIMER_PRESET_SECONDS: Record<Exclude<TimerPreset, "off" | "custom">, { standard: number; verse: number; quick: number; wordLadder: number }> = {
+  beginner: { standard: 90, verse: 120, quick: 45, wordLadder: 30 },
+  standard: { standard: 60, verse: 90, quick: 30, wordLadder: 20 },
+  advanced: { standard: 30, verse: 45, quick: 20, wordLadder: 15 },
+  expert: { standard: 15, verse: 25, quick: 10, wordLadder: 10 }
 };
 
 function getActiveGuessKey(state: SessionState | null): string | null {
@@ -1018,6 +1020,37 @@ interface StudyNoteContent {
   reference: string;
   verse: string;
   note: string;
+}
+
+const StudyNoteContext = createContext<StudyNoteContent | null>(null);
+
+function getAnswerPanelClassName(wasCorrect: boolean | null | undefined, resolvedMessage?: string | null): string {
+  if (wasCorrect === true) {
+    return "answer-panel answer-panel-correct";
+  }
+
+  if (wasCorrect === false) {
+    const message = resolvedMessage ?? "";
+    const isIncorrect = /\bmiss(?:ed|es)?\b|\bwrong\b|\bincorrect\b/i.test(message);
+    return `answer-panel ${isIncorrect ? "answer-panel-incorrect" : "answer-panel-unsolved"}`;
+  }
+
+  return "answer-panel answer-panel-unsolved";
+}
+
+function InlineStudyNote() {
+  const note = useContext(StudyNoteContext);
+
+  if (!note) {
+    return null;
+  }
+
+  return (
+    <aside className="study-note-inline" aria-label={note.title}>
+      <span>{note.title}</span>
+      <p>{note.note}</p>
+    </aside>
+  );
 }
 
 function getOptionalText(value: unknown): string {
@@ -1774,11 +1807,13 @@ function cleanContentPackId(value: unknown): ContentPackId {
 function getTimerPresetSeconds(preset: Exclude<TimerPreset, "off" | "custom">): Record<GameId, number> {
   const presetSeconds = TIMER_PRESET_SECONDS[preset];
   return ALL_GAME_IDS.reduce((timers, mode) => {
-    timers[mode] = QUICK_CHOICE_TIMER_GAMES.has(mode)
-      ? presetSeconds.quick
-      : VERSE_TIMER_GAMES.has(mode)
-        ? presetSeconds.verse
-        : presetSeconds.standard;
+    timers[mode] = mode === "word-ladder"
+      ? presetSeconds.wordLadder
+      : QUICK_CHOICE_TIMER_GAMES.has(mode)
+        ? presetSeconds.quick
+        : VERSE_TIMER_GAMES.has(mode)
+          ? presetSeconds.verse
+          : presetSeconds.standard;
     return timers;
   }, {} as Record<GameId, number>);
 }
@@ -2510,10 +2545,8 @@ export function App() {
       handleAction(() => revealProphecyClueOnTimer(sessionState), null);
       didAutoPass = true;
     } else if (sessionState.gameId === "word-ladder") {
-      // Resolves the whole ladder outright rather than passing to the next participant —
-      // the round timer covers the entire ladder, so expiry ends it, it doesn't hand off a
-      // fresh clock the way passWordLadderTurn's explicit steal does.
       handleAction(() => resolveWordLadderOnTimer(sessionState), null);
+      didAutoPass = true;
     } else if (sessionState.gameId === "genealogy") {
       handleAction(() => resolveGenealogyOnTimer(sessionState), null);
     }
@@ -3597,11 +3630,7 @@ export function App() {
         ? `${eventHasStarted ? "Next" : "First"}: ${GAME_LIBRARY[nextEventGameId].label}`
         : "No challenges selected";
   const studyNoteContent = getStudyNoteContent(sessionState);
-  const shouldShowStudyNote =
-    showStudyNotes && studyNoteContent !== null && dismissedStudyNoteKey !== studyNoteContent.key;
-  const shouldShowStudyNoteOnHost =
-    shouldShowStudyNote && !IS_PROJECTOR_WINDOW && (!window.desktopHost?.openProjectorWindow || !isProjectorWindowOpen);
-  const shouldShowStudyNoteOnProjector = shouldShowStudyNote && IS_PROJECTOR_WINDOW;
+  const inlineStudyNote = showStudyNotes && studyNoteContent !== null && dismissedStudyNoteKey !== studyNoteContent.key ? studyNoteContent : null;
   const effectiveDisplayMode = IS_PROJECTOR_WINDOW ? "projector" : window.desktopHost?.openProjectorWindow ? "normal" : displayMode;
   const uniqueEventWinner =
     eventStandings.length === 1 || (eventStandings[0] && eventStandings[1] && eventStandings[0].totalScore > eventStandings[1].totalScore)
@@ -4901,54 +4930,8 @@ export function App() {
             />
           ) : null}
 
-          {(shouldShowStudyNoteOnHost || shouldShowStudyNoteOnProjector) && studyNoteContent ? (
-            <div className={`modal-backdrop ${shouldShowStudyNoteOnProjector ? "projector-study-note-backdrop" : ""}`} role="presentation">
-              <section className="study-note-modal" role="dialog" aria-modal="true" aria-labelledby="study-note-title">
-                <div className="section-header">
-                  <div>
-                    <p className="eyebrow">After Answer</p>
-                    <h2 id="study-note-title">{studyNoteContent.title}</h2>
-                  </div>
-                </div>
-                <div className="answer-panel answer-panel-correct">
-                  <span>Answer</span>
-                  <strong>{studyNoteContent.answer}</strong>
-                  {studyNoteContent.reference ? <p>{studyNoteContent.reference}</p> : null}
-                  {studyNoteContent.verse ? <blockquote>{studyNoteContent.verse}</blockquote> : null}
-                  <p>{studyNoteContent.note}</p>
-                </div>
-                {shouldShowStudyNoteOnHost ? (
-                  <>
-                    <label className="check-row">
-                      <input
-                        type="checkbox"
-                        onChange={(event) => {
-                          if (event.target.checked) {
-                            setShowStudyNotes(false);
-                          }
-                        }}
-                      />
-                      Don't show study notes again
-                    </label>
-                    <div className="modal-actions">
-                      <button
-                        type="button"
-                        className="primary-button"
-                        onClick={() => {
-                          setDismissedStudyNoteKey(studyNoteContent.key);
-                          handleAction(() => continueGame(sessionState));
-                        }}
-                      >
-                        Continue
-                      </button>
-                    </div>
-                  </>
-                ) : null}
-              </section>
-            </div>
-          ) : null}
-
           <section className="stage">
+            <StudyNoteContext.Provider value={inlineStudyNote}>
             {sessionState.status === "completed" ? (
               <section className="panel panel-stage">
                 {isEventComplete ? (
@@ -5518,6 +5501,7 @@ export function App() {
                 onContinue={() => handleAction(() => continueGame(sessionState))}
               />
             )}
+            </StudyNoteContext.Provider>
           </section>
         </main>
       )}
@@ -5628,11 +5612,12 @@ function FiveGuessesView(props: {
 
       {isResolved ? (
         <>
-          <div className={`answer-panel ${wasSolved ? "answer-panel-correct" : ""}`}>
+          <div className={getAnswerPanelClassName(wasSolved ? true : null, prompt.resolvedMessage)}>
             <span>{wasSolved ? "Correct" : "Answer"}</span>
             <strong>{prompt.round.answer}</strong>
             {prompt.resolvedMessage ? <p>{prompt.resolvedMessage}</p> : null}
           </div>
+          <InlineStudyNote />
           <button type="button" className="primary-button" onClick={onContinue}>
             {state.status === "completed" ? "Show Final Standings" : "Back To Board"}
           </button>
@@ -5755,11 +5740,12 @@ function InitialsView(props: {
 
       {isResolved ? (
         <>
-          <div className={`answer-panel ${wasSolved ? "answer-panel-correct" : ""}`}>
+          <div className={getAnswerPanelClassName(wasSolved ? true : null, prompt.resolvedMessage)}>
             <span>{wasSolved ? "Correct" : "Answer"}</span>
             <strong>{prompt.round.answer}</strong>
             {prompt.resolvedMessage ? <p>{prompt.resolvedMessage}</p> : null}
           </div>
+          <InlineStudyNote />
           <button type="button" className="primary-button" onClick={onContinue}>
             {state.status === "completed" ? "Show Final Standings" : "Back To Board"}
           </button>
@@ -5931,6 +5917,7 @@ function ScriptureView(props: {
       ) : (
         <>
           <div className="answer-panel">{state.currentPrompt.round.verseText}</div>
+          <InlineStudyNote />
           <button type="button" className="primary-button" onClick={onContinue}>
             {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Next Round"}
           </button>
@@ -6141,6 +6128,7 @@ function BibleCryptogramView(props: {
       ) : (
         <>
           <div className="answer-panel">{state.currentPrompt.round.verseText}</div>
+          <InlineStudyNote />
           <button type="button" className="primary-button" onClick={onContinue}>
             {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Next Round"}
           </button>
@@ -6220,7 +6208,7 @@ function BibleTimelineView(props: {
         </>
       ) : (
         <>
-          <div className={`answer-panel ${prompt.wasCorrect ? "answer-panel-correct" : ""}`}>
+          <div className={getAnswerPanelClassName(prompt.wasCorrect, prompt.resolvedMessage)}>
             <span>Correct Order</span>
             <strong>{prompt.wasCorrect ? "Solved" : "Revealed"}</strong>
             {prompt.resolvedMessage ? <p>{prompt.resolvedMessage}</p> : null}
@@ -6233,6 +6221,7 @@ function BibleTimelineView(props: {
               </div>
             ))}
           </div>
+          <InlineStudyNote />
           <button type="button" className="primary-button" onClick={onContinue}>
             {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Next Round"}
           </button>
@@ -6317,11 +6306,12 @@ function VerseScrambleView(props: {
         </>
       ) : (
         <>
-          <div className={`answer-panel ${prompt.wasCorrect ? "answer-panel-correct" : ""}`}>
+          <div className={getAnswerPanelClassName(prompt.wasCorrect, prompt.resolvedMessage)}>
             <span>{prompt.wasCorrect ? "Correct" : "Verse"}</span>
             <strong>{prompt.round.reference}</strong>
             <p>{prompt.round.verseText}</p>
           </div>
+          <InlineStudyNote />
           <button type="button" className="primary-button" onClick={onContinue}>
             {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Next Round"}
           </button>
@@ -6409,11 +6399,12 @@ function BibleAnagramsView(props: {
         </>
       ) : (
         <>
-          <div className={`answer-panel ${prompt.wasCorrect ? "answer-panel-correct" : ""}`}>
+          <div className={getAnswerPanelClassName(prompt.wasCorrect, prompt.resolvedMessage)}>
             <span>{prompt.wasCorrect ? "Correct" : "Answer"}</span>
             <strong>{prompt.round.answer}</strong>
             <p>{prompt.round.teachingNote}</p>
           </div>
+          <InlineStudyNote />
           <button type="button" className="primary-button" onClick={onContinue}>
             {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Next Round"}
           </button>
@@ -6490,11 +6481,12 @@ function BibleConnectionsView(props: {
 
       {isResolved ? (
         <>
-          <div className="answer-panel answer-panel-correct">
+          <div className={getAnswerPanelClassName(true, prompt.resolvedMessage)}>
             <span>Board Complete</span>
             <strong>All groups found</strong>
             {prompt.resolvedMessage ? <p>{prompt.resolvedMessage}</p> : null}
           </div>
+          <InlineStudyNote />
           <button type="button" className="primary-button" onClick={onContinue}>
             {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Next Round"}
           </button>
@@ -6569,11 +6561,12 @@ function NameThatBookView(props: {
 
       {isResolved ? (
         <>
-          <div className={`answer-panel ${prompt.winnerParticipantId ? "answer-panel-correct" : ""}`}>
+          <div className={getAnswerPanelClassName(prompt.winnerParticipantId ? true : null, prompt.resolvedMessage)}>
             <span>{prompt.winnerParticipantId ? "Correct" : "Answer"}</span>
             <strong>{prompt.round.book}</strong>
             {prompt.resolvedMessage ? <p>{prompt.resolvedMessage}</p> : null}
           </div>
+          <InlineStudyNote />
           <button type="button" className="primary-button" onClick={onContinue}>
             {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Continue"}
           </button>
@@ -6649,11 +6642,12 @@ function BeforeOrAfterView(props: {
 
       {isResolved ? (
         <>
-          <div className={`answer-panel ${prompt.wasCorrect ? "answer-panel-correct" : ""}`}>
+          <div className={getAnswerPanelClassName(prompt.wasCorrect, prompt.resolvedMessage)}>
             <span>{prompt.wasCorrect ? "Correct" : "Result"}</span>
             <strong>{prompt.round.earlierEvent === "left" ? "Left happened first" : "Right happened first"}</strong>
             <p>{prompt.round.explanation}</p>
           </div>
+          <InlineStudyNote />
           <button type="button" className="primary-button" onClick={onContinue}>
             {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Continue"}
           </button>
@@ -6707,11 +6701,12 @@ function ReferenceRushView(props: {
 
       {isResolved ? (
         <>
-          <div className={`answer-panel ${prompt.wasCorrect ? "answer-panel-correct" : ""}`}>
+          <div className={getAnswerPanelClassName(prompt.wasCorrect, prompt.resolvedMessage)}>
             <span>Correct Reference</span>
             <strong>{prompt.round.reference}</strong>
             <p>{prompt.round.verseText}</p>
           </div>
+          <InlineStudyNote />
           <button type="button" className="primary-button" onClick={onContinue}>
             {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Continue"}
           </button>
@@ -6776,10 +6771,11 @@ function ChapterFinderView(props: {
 
       {isResolved ? (
         <>
-          <div className={`answer-panel ${prompt.wasCorrect ? "answer-panel-correct" : ""}`}>
+          <div className={getAnswerPanelClassName(prompt.wasCorrect, prompt.resolvedMessage)}>
             <span>Correct Answer</span>
             <strong>{answer}</strong>
           </div>
+          <InlineStudyNote />
           <button type="button" className="primary-button" onClick={onContinue}>
             {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Continue"}
           </button>
@@ -6857,12 +6853,13 @@ function WhoSaidItView(props: {
 
       {isResolved ? (
         <>
-          <div className={`answer-panel ${prompt.wasCorrect ? "answer-panel-correct" : ""}`}>
+          <div className={getAnswerPanelClassName(prompt.wasCorrect, prompt.resolvedMessage)}>
             <span>Correct Speaker</span>
             <strong>{prompt.round.speaker}</strong>
             <p>{prompt.round.reference}</p>
             <p>{prompt.round.context}</p>
           </div>
+          <InlineStudyNote />
           <button type="button" className="primary-button" onClick={onContinue}>
             {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Continue"}
           </button>
@@ -6932,7 +6929,7 @@ function BibleBooksRelayView(props: {
 
       {isResolved ? (
         <>
-          <div className={`answer-panel ${prompt.wasCorrect ? "answer-panel-correct" : ""}`}>
+          <div className={getAnswerPanelClassName(prompt.wasCorrect, prompt.resolvedMessage)}>
             <span>Correct Order</span>
             <strong>{prompt.wasCorrect ? "Solved" : "Revealed"}</strong>
             {prompt.resolvedMessage ? <p>{prompt.resolvedMessage}</p> : null}
@@ -6945,6 +6942,7 @@ function BibleBooksRelayView(props: {
               </div>
             ))}
           </div>
+          <InlineStudyNote />
           <button type="button" className="primary-button" onClick={onContinue}>
             {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Continue"}
           </button>
@@ -7060,11 +7058,12 @@ function ProphecyMatchView(props: {
 
       {isResolved ? (
         <>
-          <div className="answer-panel answer-panel-correct">
+          <div className={getAnswerPanelClassName(true, prompt.resolvedMessage)}>
             <span>Board Complete</span>
             <strong>All prophecy pairs matched</strong>
             {prompt.resolvedMessage ? <p>{prompt.resolvedMessage}</p> : null}
           </div>
+          <InlineStudyNote />
           <button type="button" className="primary-button" onClick={onContinue}>
             Show Final Standings
           </button>
@@ -7158,11 +7157,12 @@ function ParableMatchView(props: {
 
       {isResolved ? (
         <>
-          <div className="answer-panel answer-panel-correct">
+          <div className={getAnswerPanelClassName(true, prompt.resolvedMessage)}>
             <span>Board Complete</span>
             <strong>All parable pairs matched</strong>
             {prompt.resolvedMessage ? <p>{prompt.resolvedMessage}</p> : null}
           </div>
+          <InlineStudyNote />
           <button type="button" className="primary-button" onClick={onContinue}>
             Show Final Standings
           </button>
@@ -7304,11 +7304,12 @@ function PsalmProverbChoiceView(props: {
 
       {isResolved ? (
         <>
-          <div className={`answer-panel ${prompt.wasCorrect ? "answer-panel-correct" : ""}`}>
+          <div className={getAnswerPanelClassName(prompt.wasCorrect, prompt.resolvedMessage)}>
             <span>{answerLabel}</span>
             <strong>{answer}</strong>
             <p>{answerDetail}</p>
           </div>
+          <InlineStudyNote />
           <button type="button" className="primary-button" onClick={onContinue}>
             {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Continue"}
           </button>
@@ -7378,13 +7379,14 @@ function OddOneOutView(props: {
 
       {isResolved ? (
         <>
-          <div className={`answer-panel ${prompt.wasCorrect ? "answer-panel-correct" : ""}`}>
+          <div className={getAnswerPanelClassName(prompt.wasCorrect, prompt.resolvedMessage)}>
             <span>Odd Item</span>
             <strong>{round.oddItem}</strong>
             <p>{round.groupTheme}</p>
             <p>{round.explanation}</p>
             <p>{round.teachingNote}</p>
           </div>
+          <InlineStudyNote />
           <button type="button" className="primary-button" onClick={onContinue}>
             {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Continue"}
           </button>
@@ -7457,11 +7459,12 @@ function MessiahProphecyView(props: {
 
       {isResolved ? (
         <>
-          <div className={`answer-panel ${prompt.wasCorrect ? "answer-panel-correct" : ""}`}>
+          <div className={getAnswerPanelClassName(prompt.wasCorrect, prompt.resolvedMessage)}>
             <span>Fulfillment</span>
             <strong>{prompt.round.correctAnswer}</strong>
             <p>{prompt.round.fulfillmentReference}: {prompt.round.fulfillmentSummary}</p>
           </div>
+          <InlineStudyNote />
           <button type="button" className="primary-button" onClick={onContinue}>
             {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Continue"}
           </button>
@@ -7524,10 +7527,11 @@ function ProphecyClueLadderView(props: {
 
       {isResolved ? (
         <>
-          <div className={`answer-panel ${prompt.wasCorrect ? "answer-panel-correct" : ""}`}>
+          <div className={getAnswerPanelClassName(prompt.wasCorrect, prompt.resolvedMessage)}>
             <span>Answer</span>
             <strong>{prompt.round.answer}</strong>
           </div>
+          <InlineStudyNote />
           <button type="button" className="primary-button" onClick={onContinue}>
             {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Continue"}
           </button>
@@ -7609,11 +7613,12 @@ function FulfillmentFinderView(props: {
 
       {isResolved ? (
         <>
-          <div className={`answer-panel ${prompt.wasCorrect ? "answer-panel-correct" : ""}`}>
+          <div className={getAnswerPanelClassName(prompt.wasCorrect, prompt.resolvedMessage)}>
             <span>Connected Prophecy</span>
             <strong>{prompt.round.correctProphecyReference}</strong>
             <p>{prompt.round.correctProphecySummary}</p>
           </div>
+          <InlineStudyNote />
           <button type="button" className="primary-button" onClick={onContinue}>
             {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Continue"}
           </button>
@@ -7694,11 +7699,12 @@ function ProphecyCategoriesView(props: {
 
       {isResolved ? (
         <>
-          <div className="answer-panel answer-panel-correct">
+          <div className={getAnswerPanelClassName(true, prompt.resolvedMessage)}>
             <span>Board Complete</span>
             <strong>All cards sorted</strong>
             {prompt.resolvedMessage ? <p>{prompt.resolvedMessage}</p> : null}
           </div>
+          <InlineStudyNote />
           <button type="button" className="primary-button" onClick={onContinue}>
             Show Final Standings
           </button>
@@ -7782,11 +7788,12 @@ function ProverbCategoriesView(props: {
 
       {isResolved ? (
         <>
-          <div className="answer-panel answer-panel-correct">
+          <div className={getAnswerPanelClassName(true, prompt.resolvedMessage)}>
             <span>Board Complete</span>
             <strong>All cards sorted</strong>
             {prompt.resolvedMessage ? <p>{prompt.resolvedMessage}</p> : null}
           </div>
+          <InlineStudyNote />
           <button type="button" className="primary-button" onClick={onContinue}>
             Show Final Standings
           </button>
@@ -7844,11 +7851,12 @@ function MissingWordView(props: {
 
       {isResolved ? (
         <>
-          <div className={`answer-panel ${prompt.wasCorrect ? "answer-panel-correct" : ""}`}>
+          <div className={getAnswerPanelClassName(prompt.wasCorrect, prompt.resolvedMessage)}>
             <span>Correct Missing Word</span>
             <strong>{answer}</strong>
             <p>{prompt.round.verseText}</p>
           </div>
+          <InlineStudyNote />
           <button type="button" className="primary-button" onClick={onContinue}>
             {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Continue"}
           </button>
@@ -7931,11 +7939,12 @@ function TwoTruthsView(props: {
 
       {isResolved ? (
         <>
-          <div className={`answer-panel ${prompt.wasCorrect ? "answer-panel-correct" : ""}`}>
+          <div className={getAnswerPanelClassName(prompt.wasCorrect, prompt.resolvedMessage)}>
             <span>The Lie</span>
             <strong>{lieStatement?.text ?? prompt.round.statements[prompt.round.lieIndex]}</strong>
             <p>{prompt.round.explanation} ({prompt.round.reference})</p>
           </div>
+          <InlineStudyNote />
           <button type="button" className="primary-button" onClick={onContinue}>
             {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Continue"}
           </button>
@@ -8005,11 +8014,12 @@ function RelayVerseBuildView(props: {
 
       {isResolved ? (
         <>
-          <div className={`answer-panel ${prompt.wasCorrect ? "answer-panel-correct" : ""}`}>
+          <div className={getAnswerPanelClassName(prompt.wasCorrect, prompt.resolvedMessage)}>
             <span>Full Verse</span>
             <strong>{prompt.round.verseText}</strong>
             <p>{prompt.round.teachingNote}</p>
           </div>
+          <InlineStudyNote />
           <button type="button" className="primary-button" onClick={onContinue}>
             {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Continue"}
           </button>
@@ -8108,13 +8118,14 @@ function VerseTypingRaceView(props: {
 
       {isResolved ? (
         <>
-          <div className={`answer-panel ${prompt.wasCorrect ? "answer-panel-correct" : ""}`}>
+          <div className={getAnswerPanelClassName(prompt.wasCorrect, prompt.resolvedMessage)}>
             <span>Result</span>
             <strong>
               {prompt.lastResult ? `${Math.round(prompt.lastResult.wpm)} WPM · ${Math.round(prompt.lastResult.accuracy * 100)}% accuracy` : "Recorded"}
             </strong>
             <p>{prompt.round.teachingNote}</p>
           </div>
+          <InlineStudyNote />
           <button type="button" className="primary-button" onClick={onContinue}>
             {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Continue"}
           </button>
@@ -8221,11 +8232,12 @@ function WordLadderView(props: {
 
       {isResolved ? (
         <>
-          <div className={`answer-panel ${prompt.wasCorrect ? "answer-panel-correct" : ""}`}>
+          <div className={getAnswerPanelClassName(prompt.wasCorrect, prompt.resolvedMessage)}>
             <span>{prompt.wasCorrect ? "Ladder Solved" : "Ladder Revealed"}</span>
             <strong>{prompt.round.revealPath.join(" → ").toUpperCase()}</strong>
             <p>{prompt.round.teachingNote}</p>
           </div>
+          <InlineStudyNote />
           <button type="button" className="primary-button" onClick={onContinue}>
             {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Continue"}
           </button>
@@ -8339,11 +8351,12 @@ function GenealogyView(props: {
 
       {isResolved ? (
         <>
-          <div className={`answer-panel ${prompt.wasCorrect ? "answer-panel-correct" : ""}`}>
+          <div className={getAnswerPanelClassName(prompt.wasCorrect, prompt.resolvedMessage)}>
             <span>{prompt.wasCorrect ? "Genealogy Completed" : "Genealogy Revealed"}</span>
             <strong>{prompt.round.fullChain.join(" -> ")}</strong>
             <p>{prompt.round.teachingNote}</p>
           </div>
+          <InlineStudyNote />
           <button type="button" className="primary-button" onClick={onContinue}>
             {state.roundIndex + 1 >= state.totalPrompts ? "Show Final Standings" : "Continue"}
           </button>
