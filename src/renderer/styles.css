@@ -1770,6 +1770,26 @@ textarea {
   min-height: 44px;
 }
 
+.host-field {
+  display: grid;
+  gap: 6px;
+  margin: 0 0 12px;
+  color: #4d382e;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.host-select {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid rgba(78, 58, 44, 0.24);
+  border-radius: 12px;
+  background: rgba(255, 252, 245, 0.86);
+  color: #34241c;
+  padding: 8px 10px;
+  font: inherit;
+}
+
 .study-note-modal blockquote {
   margin: 8px 0 0;
   padding-left: 12px;

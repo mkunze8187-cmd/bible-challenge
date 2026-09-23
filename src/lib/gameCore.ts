@@ -49,6 +49,7 @@ export interface ActivityEntry {
 
 export interface SessionBase {
   gameId: GameId;
+  sessionInstanceId: string;
   displayName: string;
   sessionTitle: string;
   sessionTheme: string;

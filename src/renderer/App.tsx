@@ -36,11 +36,15 @@ import {
   clearVerseAnswer,
   continueGame,
   createSessionState,
+  getHostAwardPoints,
+  getPromptId as getEnginePromptId,
   getBoardProgressLabel,
   getBibleCryptogramRemainingLetters,
   getScriptureRemainingLetters,
   getStandings,
   getUniqueWinner,
+  markCorrectForHost,
+  markIncorrectForHost,
   moveBibleAnagramTile,
   moveBibleBook,
   moveTimelineEvent,
@@ -90,6 +94,7 @@ import {
   selectProverbCategory,
   selectProverbCategoryCard,
   selectTwoTruthsStatement,
+  setCurrentActor,
   submitBibleAnagram,
   submitBibleCryptogramLetterGuess,
   submitBibleCryptogramSolve,
@@ -451,6 +456,11 @@ const TIMER_PRESET_SECONDS: Record<Exclude<TimerPreset, "off" | "custom">, { sta
 function getActiveGuessKey(state: SessionState | null): string | null {
   if (!state || state.status !== "in-progress") {
     return null;
+  }
+
+  const promptId = getEnginePromptId(state);
+  if (promptId) {
+    return promptId;
   }
 
   if (state.gameId === "scripture-puzzles") {
@@ -1881,6 +1891,7 @@ export function App() {
   const [sessionState, setSessionState] = useState<SessionState | null>(null);
   const [lastUndoState, setLastUndoState] = useState<SessionState | null>(null);
   const [isHostControlsOpen, setIsHostControlsOpen] = useState(false);
+  const [hostSelectedParticipantId, setHostSelectedParticipantId] = useState("");
   const [isGameHelpOpen, setIsGameHelpOpen] = useState(false);
   const [isAppHelpOpen, setIsAppHelpOpen] = useState(false);
   const [isTimerPaused, setIsTimerPaused] = useState(false);
@@ -1914,6 +1925,21 @@ export function App() {
 
   const activeGuessKey = getActiveGuessKey(sessionState);
   const roundStartKey = getRoundStartKey(sessionState);
+
+  useEffect(() => {
+    if (!sessionState) {
+      setHostSelectedParticipantId("");
+      return;
+    }
+
+    setHostSelectedParticipantId((current) => {
+      if (current && sessionState.participants.some((participant) => participant.id === current)) {
+        return current;
+      }
+
+      return getCurrentParticipantId(sessionState) ?? sessionState.participants[0]?.id ?? "";
+    });
+  }, [sessionState?.sessionInstanceId, sessionState?.turnIndex, sessionState?.participants]);
   const activeTimerSeconds = getTimerDurationSeconds(
     sessionState,
     gameId,
@@ -2880,7 +2906,12 @@ export function App() {
         return current;
       }
 
-      const participantId = getCurrentParticipantId(current) ?? current.participants[0]?.id;
+      const participantId =
+        (hostSelectedParticipantId && current.participants.some((participant) => participant.id === hostSelectedParticipantId)
+          ? hostSelectedParticipantId
+          : null) ??
+        getCurrentParticipantId(current) ??
+        current.participants[0]?.id;
       if (!participantId) {
         return current;
       }
@@ -2895,6 +2926,62 @@ export function App() {
 
   function adjustCurrentScore(delta: number) {
     updateCurrentScore((score) => score + delta, `${delta > 0 ? "Added" : "Subtracted"} ${Math.abs(delta)} point${Math.abs(delta) === 1 ? "" : "s"}.`);
+  }
+
+  function adjustTimer(seconds: number) {
+    setTimeRemaining((current) => Math.max(0, current + seconds));
+    setFlashMessage({
+      tone: "info",
+      text: `${seconds > 0 ? "Added" : "Subtracted"} ${Math.abs(seconds)} seconds.`
+    });
+  }
+
+  function getHostTargetParticipantId(state: SessionState): string | null {
+    return (
+      (hostSelectedParticipantId && state.participants.some((participant) => participant.id === hostSelectedParticipantId)
+        ? hostSelectedParticipantId
+        : null) ??
+      getCurrentParticipantId(state) ??
+      state.participants[0]?.id ??
+      null
+    );
+  }
+
+  function selectHostAnswerer(participantId: string) {
+    setHostSelectedParticipantId(participantId);
+    if (!sessionState) {
+      return;
+    }
+
+    handleAction(() => setCurrentActor(sessionState, participantId), null);
+  }
+
+  function markHostCorrect() {
+    if (!sessionState) {
+      return;
+    }
+
+    const participantId = getHostTargetParticipantId(sessionState);
+    if (!participantId) {
+      setFlashMessage({ tone: "warning", text: "Choose a participant before marking correct." });
+      return;
+    }
+
+    handleAction(() => markCorrectForHost(sessionState, participantId));
+  }
+
+  function markHostIncorrect() {
+    if (!sessionState) {
+      return;
+    }
+
+    const participantId = getHostTargetParticipantId(sessionState);
+    if (!participantId) {
+      setFlashMessage({ tone: "warning", text: "Choose a participant before marking incorrect." });
+      return;
+    }
+
+    handleAction(() => markIncorrectForHost(sessionState, participantId), "wrong");
   }
 
   function setCurrentScoreFromInput() {
@@ -2917,7 +3004,7 @@ export function App() {
 
     setSessionState(lastUndoState);
     setLastUndoState(null);
-    setFlashMessage({ tone: "info", text: "Last scoring action undone." });
+    setFlashMessage({ tone: "info", text: "Last host action undone." });
   }
 
   function endCurrentGame() {
@@ -3464,6 +3551,12 @@ export function App() {
   const standings = sessionState ? getStandings(sessionState) : [];
   const uniqueWinner = sessionState?.status === "completed" ? getUniqueWinner(sessionState) : null;
   const currentParticipantId = sessionState ? getCurrentParticipantId(sessionState) : null;
+  const hostTargetParticipantId =
+    sessionState && hostSelectedParticipantId && sessionState.participants.some((participant) => participant.id === hostSelectedParticipantId)
+      ? hostSelectedParticipantId
+      : currentParticipantId;
+  const hostAwardPoints =
+    sessionState && hostTargetParticipantId ? getHostAwardPoints(sessionState, hostTargetParticipantId) : null;
   const eventStandings = sortEventScores(eventScores);
   const eventChallengeCount = completedEventGameIds.length;
   const selectedEventChallengeCount = selectedEventGameIds.length;
@@ -4729,6 +4822,18 @@ export function App() {
                   <button type="button" className="secondary-button" onClick={() => setIsTimerPaused((current) => !current)}>
                     {isTimerPaused ? "Resume Timer" : "Pause Timer"}
                   </button>
+                  <button type="button" className="secondary-button" onClick={() => adjustTimer(30)} disabled={!timerEnabled}>
+                    Add 30 Seconds
+                  </button>
+                  <button type="button" className="secondary-button" onClick={() => adjustTimer(-30)} disabled={!timerEnabled}>
+                    Subtract 30 Seconds
+                  </button>
+                  <button type="button" className="primary-button" onClick={markHostCorrect}>
+                    Mark Correct{hostAwardPoints == null ? "" : ` (+${hostAwardPoints})`}
+                  </button>
+                  <button type="button" className="secondary-button" onClick={markHostIncorrect}>
+                    Mark Incorrect
+                  </button>
                   <button type="button" className="ghost-button" onClick={() => adjustCurrentScore(1)}>
                     Add Point
                   </button>
@@ -4736,7 +4841,7 @@ export function App() {
                     Subtract Point
                   </button>
                   <button type="button" className="ghost-button" onClick={undoLastSessionAction} disabled={!lastUndoState}>
-                    Undo Last Score
+                    Undo Last Action
                   </button>
                   <button type="button" className="secondary-button" onClick={() => handleAction(() => forceResolveForHost(sessionState), "pass")}>
                     Reveal Answer
@@ -4754,6 +4859,20 @@ export function App() {
                     Main Menu
                   </button>
                 </div>
+                <label className="host-field">
+                  <span>Answering participant</span>
+                  <select
+                    className="host-select"
+                    value={hostTargetParticipantId ?? ""}
+                    onChange={(event) => selectHostAnswerer(event.target.value)}
+                  >
+                    {sessionState.participants.map((participant) => (
+                      <option key={participant.id} value={participant.id}>
+                        {participant.name}
+                      </option>
+                    ))}
+                  </select>
+                </label>
                 <div className="inline-form">
                   <input
                     className="number-input"
