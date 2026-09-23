@@ -8297,6 +8297,14 @@ function VerseTypingRaceView(props: {
   );
 }
 
+function formatWordLadderPath(path: string[]): string {
+  return path.join(" → ").toUpperCase();
+}
+
+function areWordLadderPathsEqual(left: string[], right: string[]): boolean {
+  return left.length === right.length && left.every((word, index) => word.toLowerCase() === right[index]?.toLowerCase());
+}
+
 function WordLadderView(props: {
   state: WordLadderState;
   guessText: string;
@@ -8326,6 +8334,8 @@ function WordLadderView(props: {
   const prompt = state.currentPrompt;
   const isResolved = prompt.phase === "resolved";
   const canRemoveRung = prompt.chain.length > 1;
+  const revealPath = prompt.wasCorrect ? prompt.chain : prompt.round.revealPath;
+  const shouldShowBestPath = prompt.wasCorrect === true && !areWordLadderPathsEqual(prompt.chain, prompt.round.revealPath);
 
   return (
     <section className="panel panel-stage">
@@ -8382,7 +8392,8 @@ function WordLadderView(props: {
         <>
           <div className={getAnswerPanelClassName(prompt.wasCorrect, prompt.resolvedMessage)}>
             <span>{prompt.wasCorrect ? "Ladder Solved" : "Ladder Revealed"}</span>
-            <strong>{prompt.round.revealPath.join(" → ").toUpperCase()}</strong>
+            <strong>{formatWordLadderPath(revealPath)}</strong>
+            {shouldShowBestPath ? <p>Best path: {formatWordLadderPath(prompt.round.revealPath)}</p> : null}
             <p>{prompt.round.teachingNote}</p>
           </div>
           <InlineStudyNote />
