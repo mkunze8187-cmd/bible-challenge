@@ -316,6 +316,10 @@ It is **not** a goal to resist an attacker who can capture traffic on the local 
 http://192.168.1.42:4179/join?session=482913
 ```
 
+### Server Hardening
+
+The shared LAN server's Security Requirements (S1–S18 in the Host Remote section of `enhancement-spec-tournament-daily-host-map.md`) apply to Phone Mode too. For phones this especially means role-scoped broadcasting (S5), escaping phone-entered names everywhere (S6), and resource limits sized for 50 phones (S11).
+
 ### Input Limits
 
 - Cap message size. Drop anything larger.

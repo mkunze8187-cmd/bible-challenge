@@ -756,6 +756,49 @@ The remote has full host power, so pairing is stricter than phone joins.
 
 Threat model: stop other devices on the Wi-Fi, including players, from taking control or seeing the answer key by guessing. Traffic is plain HTTP, so someone capturing local network traffic could read the answer key. That is accepted for this use case and must be stated in help text.
 
+### Security Requirements
+
+The LAN server runs in the Electron main process with full Node access and accepts traffic from any device on the network. These requirements apply to the shared server in `electron/lan/`, so they cover Phone Mode as well. Each one needs a test unless marked manual.
+
+#### Must
+
+| # | Requirement | Why | Issue |
+|---|---|---|---|
+| S1 | **Origin and Host checks.** Reject WebSocket upgrades whose `Origin` is not the server's own `http://<ip>:<port>`. Reject HTTP requests whose `Host` header is not the served IP and port. | Browsers let any web page open a WebSocket to a LAN address. DNS rebinding can reach the HTTP side. | #95 |
+| S2 | **Bind to the selected adapter only.** Listen on the chosen adapter's IP, never `0.0.0.0`. Rebind when the host changes adapters. | Keeps the server off VPN, Hyper-V, WSL, and public adapters. | #95 |
+| S3 | **Fixed route map for static files.** Serve only a hard-coded map of URLs to bundled files. Never build a file path from the request URL. Everything else returns 404. | Prevents path traversal into the main process's file system. | #95 |
+| S4 | **Role authorization on every message.** Each connection has one role (`host-remote` or `phone`), fixed at pairing or join. Every message type has an allow-list of roles. Host commands from a `phone` connection are dropped and logged. | A phone must never be able to act as the host. | #95 |
+| S5 | **Role-scoped broadcasting.** The host view is sent only to `host-remote` connections, through a dedicated send function. There is no "send to all clients" helper. A test asserts a `phone` connection never receives a host message. | Prevents the answer key reaching players. | #95, #11 |
+| S6 | **No markup from untrusted text.** Participant, team, member, and device names are rendered with `textContent` or React's default escaping only. `innerHTML` and `dangerouslySetInnerHTML` are banned for these values on the remote, phone page, laptop, and projector. | A script injected into the remote page could steal the host token. | #96, #13 |
+| S7 | **Content-Security-Policy on served pages.** `default-src 'self'; connect-src 'self' ws://<ip>:<port>; img-src 'self' data:; frame-ancestors 'none'`. No inline scripts. | Stops injected script from running even if S6 is missed. | #96 |
+| S8 | **Keep the pairing code off the projector.** The QR code and pairing code are hidden behind a "Show pairing code" button and auto-hide after pairing or 2 minutes. When the laptop's displays are mirrored rather than extended, show a warning next to the button. | Venues often mirror the laptop to the projector. | #96 |
+| S9 | **Single-use pairing code.** Once a device is approved, that code stops working. Pairing another device needs a new code. | A photographed code cannot be reused. | #95 |
+| S10 | **No approval-prompt flooding.** Show the approval prompt only after a correct code, and only one at a time. Further attempts while a prompt is open are rejected. | Prevents dialog spam and an accidental Approve. | #95, #96 |
+
+#### Should
+
+| # | Requirement | Issue |
+|---|---|---|
+| S11 | **Resource limits.** `ws` `maxPayload` of 16 KB; at most 60 connections total and 4 per IP; per-connection message rate limit; drop connections silent past the heartbeat timeout; handshake timeout for half-open connections; renderer IPC throttled so a flood cannot freeze the game. | #95 |
+| S12 | **Secret handling.** Compare codes and tokens with `crypto.timingSafeEqual`. Tokens live in memory only and die when the app quits. Codes, tokens, and player names are never written to logs or files. After pairing, the remote page removes the code from its URL with `history.replaceState`. | #95, #96 |
+| S13 | **Response headers.** `X-Frame-Options: DENY`, `Cache-Control: no-store`, `Referrer-Policy: no-referrer`, `X-Content-Type-Options: nosniff` on every response. | #95 |
+| S14 | **Firewall rule scope.** If the installer adds an inbound rule, scope it to the app executable, the TCP port range, and the Private profile only. Never change the Windows network profile for the user. | #95 |
+| S15 | **Server visibility and lifetime.** Never start the server silently at launch (`enabledByDefault: false`). Show a "Listening on <ip>:<port>" indicator on the laptop whenever the server runs. Stop it when no feature needs it and in `before-quit`. | #95 |
+| S16 | **Audit trail.** Activity log entries for remote actions include the source, for example "Mark Correct (remote)". | #94 |
+| S17 | **Dependency hygiene.** Pin `ws` and `qrcode` versions, and run `npm audit` before each release. `ws` has had denial-of-service advisories (for example CVE-2024-37890). | #95 |
+| S18 | **App windows stay local.** The main and projector windows never navigate to LAN server URLs. Keep their navigation locked to app files, and keep `nodeIntegration` off and `contextIsolation` on. | #95 |
+
+#### Accepted Risk
+
+Plain HTTP lets someone capturing Wi-Fi traffic read the answer key and steal the remote's token (see `phone-buzzer-spec.md` section 2.8 for why HTTPS is not used). Revoke and app-lifetime tokens limit how long a stolen token is useful. Help text tells hosts to use their own Windows Mobile Hotspot or a trusted network for competitive events.
+
+#### Security Tests
+
+- Unit: Origin and Host rejection, role allow-list per message type, role-scoped broadcast, single-use code, one-at-a-time approval, rate and size limits, timing-safe comparison.
+- Unit: every static route resolves to a bundled file; `..`, encoded traversal, and unknown paths return 404.
+- Playwright: a page on a different origin cannot open a WebSocket to the server.
+- Manual: with the displays mirrored, the pairing code is hidden and the warning appears.
+
 ### Remote UI
 
 - A second Vite entry (for example `remote.html`) served by the LAN server. It reuses the Host Controls React components through a transport interface: in the app they call `dispatchHostCommand`; on the remote they send commands over WebSocket and render from `HostRemoteView`. It must not bundle game engines, content, or settings.
@@ -792,6 +835,7 @@ interface HostRemoteSettings {
 - The laptop Host Controls keep working while a remote is connected.
 - Stale commands (old `promptId` or `stateVersion`) are rejected with no state change.
 - A device without approval, or with a revoked token, cannot send commands or receive the view.
+- All Must security requirements (S1–S10) are met, with their tests passing.
 - The projector never shows the QR code, pairing code, or remote status.
 - The remote reconnects after sleep or a Wi-Fi drop and shows the current state without replaying old commands.
 - Turning Host Remote off, or losing the remote, never interrupts the game.
