@@ -5,6 +5,45 @@ This specification defines the product-wide visual redesign and adaptive interac
 
 Existing functional specifications remain authoritative: `enhancement-spec-tournament-daily-host-map.md` (#94–#96), `phone-buzzer-spec.md` (#11–#20), `automated-testing-spec.md`, and `game-show-expansion-spec.md`. This spec adds branding, shared design architecture, adaptive layouts, accessibility, interaction presentation, and migration requirements without changing game rules/security/privacy unless an implementation issue explicitly says so.
 
+## Authoritative visual references
+The following files are part of this specification and are the **approved visual-design references** for implementation:
+
+- `docs/design/agon/Agon-Logo-and-Icon.png` — approved logo, emblem/icon, navy/gold material treatment, crown/laurel/Bible/mountain visual language.
+- `docs/design/agon/Agon-Mockups.png` — approved cross-surface design direction for Challenge home/game selection, standard gameplay, Bible Baseball, Player Controller/Buzzer phone + tablet, Host Remote phone, and Host Remote tablet.
+
+These images are **design authority, not fixed pixel specifications**. Implementations must preserve their visual language while adapting according to this document's responsive, accessibility, role, and interaction requirements. Do not distort a mockup to fit another aspect ratio; reflow/recompose it.
+
+When written requirements and a mockup differ because the mockup is illustrative, the written functional/security/accessibility requirements win. When the written spec leaves a visual choice open, follow the reference images before inventing a different style.
+
+### What must remain visually consistent with the references
+- deep navy base with warm metallic-gold identity/accent treatment
+- premium, energetic game-show feel without neon-arcade excess
+- mountain/sunrise imagery used selectively as atmosphere, not as visual clutter
+- strong, readable light-on-dark hierarchy and dimensional but controlled panels/borders
+- large, obvious primary actions and game-state hierarchy
+- consistent Agon branding and logo placement appropriate to available space
+- clear player/team color identity, large scores, and high-contrast timer/status presentation
+- game-specific personality inside the common Agon shell
+- touch-first controller controls with generous spacing and unmistakable states
+- Host Remote phone = action-first; tablet = information-rich producer console
+
+### What is illustrative rather than literal
+- exact wording/question content, scores, player/team names, inning/count values, and example game catalog
+- exact pixel positions/sizes at any one viewport
+- the exact number of columns/panels when another viewport requires reflow
+- the exact background artwork for every game
+- controls shown only to illustrate a role; actual visibility remains governed by existing functional/privacy specs
+
+### Mockup panel guidance
+1. **Desktop Home / Game Selection** — visual target for branded Challenge navigation, game-card hierarchy, search, theme atmosphere, and scalable catalog presentation.
+2. **Gameplay / Quiz Example** — visual target for GameShell, title/progress, large prompt, answer choices, timer, and player score strip. This is a family reference, not a requirement that every game use multiple-choice layout.
+3. **Bible Baseball** — visual target for allowing a game-specific stadium/field personality while retaining Agon header, scoring, team identity, and control language. Private pitch selection must still obey the game/Phone Mode privacy requirements.
+4. **Player Controller / Buzzer** — visual target for phone Ready/Winner states and a richer shared-team tablet state. Buzzer is only one Player Controller interaction; typed answers, choices, ordering, tiles, maps, etc. use the same design language.
+5. **Host Remote / Phone** — visual target for one-handed prioritization of answerer, expected answer, judgment, timer, reveal/skip/next, undo, with secondary information progressively disclosed.
+6. **Host Remote / Tablet** — visual target for the producer-console concept: controls + question/answer/teaching notes + timer/scores/buzz order visible together when space permits.
+
+The Admin app is intentionally not pictured in `Agon-Mockups.png`; it must inherit the same brand/tokens/components while using the restrained productivity-console rules in this specification rather than copying game-show ornament literally.
+
 ## Product principles
 1. One product family, role-specific experiences.
 2. Adaptive, not merely responsive: layout and hierarchy change by available dimensions, aspect ratio, orientation, input capabilities, and role.
@@ -92,6 +131,8 @@ No essential runtime CDN. Lazy-load heavy game art where practical. Avoid layout
 ## Testing
 Extend existing Vitest/Playwright/visual infrastructure. Add representative visual baselines across Challenge/Projector/Admin/Player/Host viewports; orientation preservation; keyboard/focus; touch/no-hover; theme state/contrast; optional axe scans; privacy leak tests; #95/#96 security tests. Use a matrix: all games at a standard viewport plus representative game families at compact/4:3/widescreen/controller layouts.
 
+Visual regression review must compare implementation against the approved reference images for design-language drift as well as against automated baselines. Automated screenshot equality alone does not prove conformity to the Agon design direction.
+
 ## Ordered migration milestones
 1. **Agon 1 — Foundation:** brand assets/name, tokens, primitives, adaptive shell, accessibility foundations.
 2. **Agon 2 — Core Apps:** Challenge home/settings/common dialogs and Admin shell/forms/tables.
@@ -104,6 +145,7 @@ Existing feature issues can land before visual migration. Agon issues must not d
 
 ## Redesign definition of done
 - Branded Agon product family across Challenge/Admin/Projector/Host/Player.
+- Implemented visual language remains recognizably consistent with `docs/design/agon/Agon-Logo-and-Icon.png` and `docs/design/agon/Agon-Mockups.png` while adapting rather than copying fixed pixels.
 - Existing rules/scoring/content behavior retained.
 - Projector usable at 4:3, 16:10, 16:9 and 4K-class resolutions.
 - Desktop usable at representative 1280x720/1366x768 and above.
