@@ -30,23 +30,31 @@ Goal: add host-facing game controls and refactor gameplay actions so host-judged
 
 This release is the main prerequisite for Phone Mode because it establishes prompt identity, host judging, answerer selection, and undo behavior.
 
-### 0.3.0 - Phone Mode Stage 1
+### 0.3.0 - Host Remote
+
+Goal: let the host run Host Controls from a phone or tablet in projector mode, while the laptop keeps running the game and the projector.
+
+- #94 Host command dispatcher and remote view.
+- #95 LAN server core and host pairing.
+- #96 Phone/tablet controller UI and projector-mode integration (depends on #94 and #95).
+
+This is the first release that opens a network port and will need release notes for firewall and venue-network setup. Its LAN server is reused by Phone Mode.
+
+### 0.4.0 - Phone Mode Stage 1
 
 Goal: let player phones connect and buzz while keeping gameplay authority in the host app.
 
-- #11 Shared foundation: server, protocol, privacy projection.
+- #11 Shared foundation: protocol, device registry, privacy projection (on the #95 LAN server).
 - #12 Stage 1 Step 1: connect and buzz.
 - #13 Stage 1 Step 2: roster and room.
 - #14 Stage 1 Step 3: event readiness.
-
-This is the first release that opens a network port and will need release notes for firewall and venue-network setup.
 
 ### 1.0.0 - Stabilization
 
 Goal: declare the app stable after Host Mode and Phone Mode Stage 1 have survived real use and the core test coverage is in place.
 
 - #15 Stabilization checklist.
-- Depends on the critical testing, Host Mode, and Phone Mode Stage 1 work: #2, #4, #6, and #8 through #14.
+- Depends on the critical testing, Host Mode, Host Remote, and Phone Mode Stage 1 work: #2, #4, #6, #8 through #14, and #94 through #96.
 
 No new features should be added in this milestone.
 

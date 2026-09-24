@@ -42,9 +42,10 @@ Phone Mode requires the Host Mode work in section 3 of `enhancement-spec-tournam
 ## Build Order
 
 1. Host Mode Phases 1 and 2 (enhancement spec)
-2. Stage 1: Buzz Only
-3. Stage 2: Buzz + Typed Answer
-4. Stage 3: Full Phone Interaction, starting with Choice Select and Collect All
+2. Host Remote (enhancement spec section 3), which builds the shared LAN server in `electron/lan/`
+3. Stage 1: Buzz Only
+4. Stage 2: Buzz + Typed Answer
+5. Stage 3: Full Phone Interaction, starting with Choice Select and Collect All
 
 **Open decision: Choice Select before Typed Answer.** Choice Select (Stage 3, Step 1) is a strong candidate to build before or alongside Stage 2:
 
@@ -109,10 +110,10 @@ Flow for a buzz:
 
 ### Module Layout
 
-- `electron/phone/server.js`: HTTP + WebSocket server lifecycle.
+- `electron/lan/server.js`: HTTP + WebSocket server lifecycle. Built by Host Remote (#95) and shared; Phone Mode adds a `phone` client role.
+- `electron/lan/network.js`: adapter/IP selection, port selection, network profile checks. Built by Host Remote.
 - `electron/phone/buzzerState.js`: pure state machine (no I/O), unit-testable with vitest.
 - `electron/phone/devices.js`: device registry, tokens, assignments.
-- `electron/phone/network.js`: adapter/IP selection, port selection, network profile checks.
 - `src/lib/phoneView.ts`: pure `toPhoneView()` projection (see 2.12 Privacy).
 - Phone page: a small static HTML/JS bundle with no framework, targeting older mobile browsers (ES2017). It must not load the main React bundle.
 
@@ -121,11 +122,11 @@ Flow for a buzz:
 - `ws`: WebSocket server. Node includes a WebSocket client but not a server.
 - `qrcode` (or equivalent): QR code generation for the join URL.
 
-Both are runtime `dependencies`, so electron-builder packages them.
+Both are runtime `dependencies`, so electron-builder packages them. Host Remote adds them first.
 
 ### Server Lifecycle
 
-- Start only when the host enables Phone Mode.
+- Start only when the host enables Phone Mode or Host Remote, and keep running while either needs it.
 - Prefer port 4179. If it is in use, try the next ports in a small range and show the actual port.
 - Stop when Phone Mode is disabled, and explicitly in `app.on("before-quit")`, not only in `window-all-closed`.
 - Plain HTTP only. See 2.8 Screen Wake for why HTTPS is not used.

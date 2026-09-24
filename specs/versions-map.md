@@ -40,7 +40,8 @@ No major bumps before 1.0.0.
 |---|---|---|---|---|
 | 0.1.x | Automated testing, Steps 1-3 plus Layer 1 game tests | `automated-testing-spec.md` | Patch | Dev-only apart from seeded randomness and `maxPrompts`. Ships with the next fix release, or no release at all. |
 | **0.2.0** | Host Mode / Game Master Controls | `enhancement-spec-tournament-daily-host-map.md`, section 3 | Minor | Refactors every game's submit path. Adds Select Answering Participant, Mark Correct, Mark Incorrect, participant score selector, and multi-level undo. |
-| **0.3.0** | Phone Mode, Stage 1: Buzz Only | `phone-buzzer-spec.md`, section 3 | Minor | First release that opens a network port. Triggers a Windows firewall prompt. Adds `ws` and `qrcode` runtime dependencies. |
+| **0.3.0** | Host Remote: phone/tablet host controller | `enhancement-spec-tournament-daily-host-map.md`, section 3 (Host Remote) | Minor | First release that opens a network port. Triggers a Windows firewall prompt. Adds `ws` and `qrcode` runtime dependencies. Builds the LAN server Phone Mode reuses. |
+| **0.4.0** | Phone Mode, Stage 1: Buzz Only | `phone-buzzer-spec.md`, section 3 | Minor | Adds phone buzzers on the Host Remote LAN server. |
 | **1.0.0** | Stabilization milestone | — | Major (milestone) | No new features. Released once the 1.0.0 criteria below are met. |
 | 1.x.0 | Phone Mode, Stage 2: Typed Answer | `phone-buzzer-spec.md`, section 4 | Minor | Or Stage 3 Choice Select first; see the open decision in the phone spec. |
 | 1.x.0 | Phone Mode, Stage 3: Full Phone Interaction | `phone-buzzer-spec.md`, section 5 | Minor | Can split into several minors by step (Choice Select, Collect All, Map/medium games, board games). |
@@ -57,7 +58,8 @@ The order of the `1.x.0` rows is not fixed. Each gets the next minor number when
 ## Dependencies Between Releases
 
 - **0.2.0 Host Mode** needs the Layer 1 game play-through tests first. They are the safety net for the submit-path refactor.
-- **0.3.0 Phone Mode Stage 1** needs Host Mode (prompt identity, host judging actions, buzz turn policy).
+- **0.3.0 Host Remote** needs Host Mode (host actions, `getPromptId`, host hints).
+- **0.4.0 Phone Mode Stage 1** needs Host Mode (prompt identity, host judging actions, buzz turn policy) and the Host Remote LAN server core.
 - **Themed content packs** need the themed content groundwork. Pack Daily pools need Daily Challenge; pack map mini-packs need Bible Map Challenge. Neither blocks a pack from shipping.
 - **Phone Mode Stages 2 and 3** need Stage 1.
 - **Phone Mode map interaction** needs Bible Map Challenge.
@@ -67,7 +69,7 @@ The order of the `1.x.0` rows is not fixed. Each gets the next minor number when
 
 Release 1.0.0 when all of these are true:
 
-- Host Mode (0.2.0) and Phone Mode Stage 1 (0.3.0) are released and have been used in at least one real event without a blocking issue.
+- Host Mode (0.2.0), Host Remote (0.3.0), and Phone Mode Stage 1 (0.4.0) are released and have been used in at least one real event without a blocking issue.
 - Layer 1 game play-through tests and the Layer 2 game tests pass for every game.
 - Screenshot baselines exist for the menu, all themes, and every game screen.
 - Both apps tolerate settings keys they do not recognize (see Release Checklist).
@@ -87,11 +89,12 @@ For every minor or major release:
 Additional items for specific releases:
 
 - **0.2.0 Host Mode:** release notes explain Mark Correct / Mark Incorrect and that score buttons now target a chosen participant.
-- **0.3.0 Phone Mode:** release notes include firewall guidance, the Private network profile requirement, the Mobile Hotspot fallback for guest Wi-Fi, and the venue checklist.
+- **0.3.0 Host Remote:** release notes include firewall guidance, the Private network profile requirement, the Mobile Hotspot fallback for guest Wi-Fi, and the plain-HTTP answer-key caveat.
+- **0.4.0 Phone Mode:** release notes repeat the network guidance and add the venue checklist.
 - **Bible Map Challenge:** check the installer size increase from map assets.
 
 ## Open Decisions
 
-1. **1.0.0 timing.** This map places 1.0.0 right after Phone Mode Stage 1. The alternative is to wait until more of the 1.x features ship.
+1. **1.0.0 timing.** This map places 1.0.0 right after Phone Mode Stage 1 (0.4.0). The alternative is to wait until more of the 1.x features ship.
 2. **Order of 1.x features.** Phone Mode Stages 2-3, Tournament, Daily Challenge, and Map Challenge have no fixed order yet.
 3. **Phone Mode Stage 3 packaging.** Ship as one minor or one minor per step.
