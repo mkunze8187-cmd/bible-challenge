@@ -666,6 +666,187 @@ Admin console settings:
 
 - Add per-game host hints, private teaching notes, and admin permission settings.
 
+## Host Remote (Phone/Tablet Host Controller)
+
+### Summary
+
+In projector mode the laptop is the host console, which ties the host to the laptop. Host Remote lets the host run Host Controls from a phone or tablet on the same local network and move around the room. The laptop keeps running the game and driving the projector.
+
+Host Remote is its own release (0.3.0, milestone "0.3.0 — Host Remote", issues #94–#96). It ships before Phone Mode Stage 1 because it builds the local-network server Phone Mode reuses, with one trusted device and none of the buzz fairness, roster, or scale problems.
+
+### Goals
+
+- Every Host Controls action is available from a phone or tablet: select answerer, Mark Correct / Mark Incorrect, reveal, skip, next prompt, timer controls, score adjustment, undo, restart, end game.
+- The host sees the answer key, host hints, and teaching notes privately on the remote.
+- The laptop's Host Controls keep working at the same time.
+- No app install, no accounts, no internet.
+- The game never depends on the remote. If it disconnects, the host walks back to the laptop.
+
+### Non-Goals
+
+- Board play in tile, sequence, and map games from the remote. The answerer tells the host, and the host operates the board on the laptop, as today.
+- Settings, content packs, projector display selection, and game setup from the remote.
+- Remote control over the internet.
+
+### Architecture
+
+```txt
+Phone/tablet ──WebSocket──> Main process ─────────IPC─────────> Renderer
+                            • electron/lan/server.js             • dispatchHostCommand()
+                            • electron/lan/network.js            • toHostRemoteView()
+                            • electron/lan/hostRemote.js         • SessionState (source of truth)
+     ^                                                                  │
+     └────────────────────── HostRemoteView (throttled push) <──────────┘
+```
+
+- The renderer stays the single source of truth. The remote owns nothing.
+- `electron/lan/` is shared infrastructure. Phone Mode (`phone-buzzer-spec.md` section 2.1) adds a `phone` client role and its own modules under `electron/phone/`, instead of creating a second server.
+- Server lifecycle, port choice (prefer 4179), adapter selection, Windows network-profile checks, and plain HTTP follow `phone-buzzer-spec.md` sections 2.1, 2.8, and 2.9. The server runs while Host Remote or Phone Mode is enabled.
+- New runtime dependencies: `ws` and `qrcode`.
+
+### Host Command Dispatcher
+
+All host actions go through one entry point, used by the Host Controls modal, keyboard shortcuts, and the remote:
+
+```ts
+type HostCommand =
+  | HostAction
+  | { type: "continue" }
+  | { type: "restart-game" }
+  | { type: "end-game" }
+  | { type: "set-score"; participantId: string; score: number };
+
+interface HostCommandEnvelope {
+  command: HostCommand;
+  promptId?: string | null;
+  stateVersion?: number;
+}
+
+type HostCommandResult =
+  | { ok: true }
+  | { ok: false; reason: "stale-prompt" | "stale-version" | "not-allowed" | "no-session" };
+
+function dispatchHostCommand(envelope: HostCommandEnvelope): HostCommandResult;
+```
+
+- `stateVersion` increments on every applied host or gameplay action.
+- When an envelope carries `promptId` or `stateVersion` and either is not current, the command is rejected and nothing changes. This prevents a tap on the remote and a click on the laptop from both landing, for example two Mark Correct actions.
+- Desktop clicks omit both fields and always apply.
+- Admin settings from Phase 3 (for example "Allow answer reveal from host console") apply to remote commands the same way.
+
+### Host Remote View
+
+```ts
+function toHostRemoteView(state: SessionState, context: HostRemoteContext): HostRemoteView;
+```
+
+- A pure allow-list projection in `src/lib/hostRemoteView.ts`, built the same way as `toPhoneView`, but deliberately including host-only data: prompt text, answer key and aliases, host hints, teaching notes, `getHostAwardPoints` for the selected answerer, `BuzzTurnPolicy`, timer and answer clock, scoreboard, participants, current and selected answerer, the next undo label, `promptId`, and `stateVersion`.
+- It never sends the full `SessionState`, settings, content packs, or more than the last few activity log entries. Do not reuse `ProjectorSnapshot`.
+- Pushed to the remote on every change, throttled.
+
+### Pairing and Security
+
+The remote has full host power, so pairing is stricter than phone joins.
+
+- An 8-digit host pairing code and a QR code, shown only on the laptop and regenerated each time Host Remote is enabled. It is separate from the Phone Mode session code.
+- First pairing requires desktop approval: "Allow *device* to control the game?"
+- The approved device stores a random token (`crypto.getRandomValues`, `localStorage`) and reconnects without re-approval until the app quits or the host revokes it.
+- One paired remote at a time by default. Pairing a second device asks to replace the first.
+- Pairing attempts are rate-limited per IP (5 failures per minute). Message sizes are capped and shapes validated.
+
+Threat model: stop other devices on the Wi-Fi, including players, from taking control or seeing the answer key by guessing. Traffic is plain HTTP, so someone capturing local network traffic could read the answer key. That is accepted for this use case and must be stated in help text.
+
+### Security Requirements
+
+The LAN server runs in the Electron main process with full Node access and accepts traffic from any device on the network. These requirements apply to the shared server in `electron/lan/`, so they cover Phone Mode as well. Each one needs a test unless marked manual.
+
+#### Must
+
+| # | Requirement | Why | Issue |
+|---|---|---|---|
+| S1 | **Origin and Host checks.** Reject WebSocket upgrades whose `Origin` is not the server's own `http://<ip>:<port>`. Reject HTTP requests whose `Host` header is not the served IP and port. | Browsers let any web page open a WebSocket to a LAN address. DNS rebinding can reach the HTTP side. | #95 |
+| S2 | **Bind to the selected adapter only.** Listen on the chosen adapter's IP, never `0.0.0.0`. Rebind when the host changes adapters. | Keeps the server off VPN, Hyper-V, WSL, and public adapters. | #95 |
+| S3 | **Fixed route map for static files.** Serve only a hard-coded map of URLs to bundled files. Never build a file path from the request URL. Everything else returns 404. | Prevents path traversal into the main process's file system. | #95 |
+| S4 | **Role authorization on every message.** Each connection has one role (`host-remote` or `phone`), fixed at pairing or join. Every message type has an allow-list of roles. Host commands from a `phone` connection are dropped and logged. | A phone must never be able to act as the host. | #95 |
+| S5 | **Role-scoped broadcasting.** The host view is sent only to `host-remote` connections, through a dedicated send function. There is no "send to all clients" helper. A test asserts a `phone` connection never receives a host message. | Prevents the answer key reaching players. | #95, #11 |
+| S6 | **No markup from untrusted text.** Participant, team, member, and device names are rendered with `textContent` or React's default escaping only. `innerHTML` and `dangerouslySetInnerHTML` are banned for these values on the remote, phone page, laptop, and projector. | A script injected into the remote page could steal the host token. | #96, #13 |
+| S7 | **Content-Security-Policy on served pages.** `default-src 'self'; connect-src 'self' ws://<ip>:<port>; img-src 'self' data:; frame-ancestors 'none'`. No inline scripts. | Stops injected script from running even if S6 is missed. | #96 |
+| S8 | **Keep the pairing code off the projector.** The QR code and pairing code are hidden behind a "Show pairing code" button and auto-hide after pairing or 2 minutes. When the laptop's displays are mirrored rather than extended, show a warning next to the button. | Venues often mirror the laptop to the projector. | #96 |
+| S9 | **Single-use pairing code.** Once a device is approved, that code stops working. Pairing another device needs a new code. | A photographed code cannot be reused. | #95 |
+| S10 | **No approval-prompt flooding.** Show the approval prompt only after a correct code, and only one at a time. Further attempts while a prompt is open are rejected. | Prevents dialog spam and an accidental Approve. | #95, #96 |
+
+#### Should
+
+| # | Requirement | Issue |
+|---|---|---|
+| S11 | **Resource limits.** `ws` `maxPayload` of 16 KB; at most 60 connections total and 4 per IP; per-connection message rate limit; drop connections silent past the heartbeat timeout; handshake timeout for half-open connections; renderer IPC throttled so a flood cannot freeze the game. | #95 |
+| S12 | **Secret handling.** Compare codes and tokens with `crypto.timingSafeEqual`. Tokens live in memory only and die when the app quits. Codes, tokens, and player names are never written to logs or files. After pairing, the remote page removes the code from its URL with `history.replaceState`. | #95, #96 |
+| S13 | **Response headers.** `X-Frame-Options: DENY`, `Cache-Control: no-store`, `Referrer-Policy: no-referrer`, `X-Content-Type-Options: nosniff` on every response. | #95 |
+| S14 | **Firewall rule scope.** If the installer adds an inbound rule, scope it to the app executable, the TCP port range, and the Private profile only. Never change the Windows network profile for the user. | #95 |
+| S15 | **Server visibility and lifetime.** Never start the server silently at launch (`enabledByDefault: false`). Show a "Listening on <ip>:<port>" indicator on the laptop whenever the server runs. Stop it when no feature needs it and in `before-quit`. | #95 |
+| S16 | **Audit trail.** Activity log entries for remote actions include the source, for example "Mark Correct (remote)". | #94 |
+| S17 | **Dependency hygiene.** Pin `ws` and `qrcode` versions, and run `npm audit` before each release. `ws` has had denial-of-service advisories (for example CVE-2024-37890). | #95 |
+| S18 | **App windows stay local.** The main and projector windows never navigate to LAN server URLs. Keep their navigation locked to app files, and keep `nodeIntegration` off and `contextIsolation` on. | #95 |
+
+#### Accepted Risk
+
+Plain HTTP lets someone capturing Wi-Fi traffic read the answer key and steal the remote's token (see `phone-buzzer-spec.md` section 2.8 for why HTTPS is not used). Revoke and app-lifetime tokens limit how long a stolen token is useful. Help text tells hosts to use their own Windows Mobile Hotspot or a trusted network for competitive events.
+
+#### Security Tests
+
+- Unit: Origin and Host rejection, role allow-list per message type, role-scoped broadcast, single-use code, one-at-a-time approval, rate and size limits, timing-safe comparison.
+- Unit: every static route resolves to a bundled file; `..`, encoded traversal, and unknown paths return 404.
+- Playwright: a page on a different origin cannot open a WebSocket to the server.
+- Manual: with the displays mirrored, the pairing code is hidden and the warning appears.
+
+### Remote UI
+
+- A second Vite entry (for example `remote.html`) served by the LAN server. It reuses the Host Controls React components through a transport interface: in the app they call `dispatchHostCommand`; on the remote they send commands over WebSocket and render from `HostRemoteView`. It must not bundle game engines, content, or settings.
+- Loading React is acceptable here, unlike player phones: the remote is one device the host chooses. Target current iOS Safari and Android Chrome, and two versions back.
+- **Phone (portrait):** a single column of large buttons: answerer picker, Mark Correct (showing points) / Mark Incorrect, Reveal / Skip / Next, timer pause and ± time, Undo. Answer key and hints in a collapsible panel.
+- **Tablet or landscape:** the full Host Controls panel, with answer key, teaching notes, and scoreboard side by side.
+- Optional read-only mini view of what the projector shows.
+- Buttons disable after a tap until the result arrives or times out. A rejected command shows "The game moved on. Screen updated." and re-renders from the latest view.
+- Touch targets at least 44 px, `touch-action: manipulation`, `overscroll-behavior: none`, no hover-only controls.
+- Screen wake: the hidden looping video approach from `phone-buzzer-spec.md` section 2.8.
+
+### Laptop UI
+
+- A "Host Remote" section in the projector controls: enable/disable, QR code, URL and pairing code, adapter/IP picker, Wi-Fi network name, Public-profile warning, approval prompt, connected device, Revoke.
+- A small "Remote connected" indicator while a remote is paired. It never appears on the projector.
+
+### Settings
+
+Stored in the app settings file as `hostRemote`. All keys are optional with defaults.
+
+```ts
+interface HostRemoteSettings {
+  enabledByDefault: boolean;             // default false
+  preferredPort: number;                 // default 4179, shared with Phone Mode
+  preferredAdapterName: string | null;   // shared with Phone Mode
+  allowMultipleRemotes: boolean;         // default false
+}
+```
+
+### Acceptance Criteria
+
+- The host can enable Host Remote from the projector controls, scan the QR code, approve the device, and control the game from a phone or tablet.
+- Every Host Controls action in Goals works from the remote and produces the same state as the laptop button.
+- The laptop Host Controls keep working while a remote is connected.
+- Stale commands (old `promptId` or `stateVersion`) are rejected with no state change.
+- A device without approval, or with a revoked token, cannot send commands or receive the view.
+- All Must security requirements (S1–S10) are met, with their tests passing.
+- The projector never shows the QR code, pairing code, or remote status.
+- The remote reconnects after sleep or a Wi-Fi drop and shows the current state without replaying old commands.
+- Turning Host Remote off, or losing the remote, never interrupts the game.
+- Existing single-window and projector play are unchanged when Host Remote is off.
+
+### Implementation Issues
+
+1. #94 Host command dispatcher and remote view (renderer only, no networking).
+2. #95 LAN server core and host pairing (shared with Phone Mode).
+3. #96 Phone/tablet controller UI and projector-mode integration. Depends on #94 and #95.
+
 ---
 
 # 4. Bible Map Challenge
@@ -817,11 +998,12 @@ For MVP, authored JSON coordinates are acceptable.
 ## Suggested Build Order
 
 1. Host Mode / Game Master Controls
-2. Tournament / Season Mode
-3. Daily Challenge Pack
-4. Bible Map Challenge
+2. Host Remote (section 3)
+3. Tournament / Season Mode
+4. Daily Challenge Pack
+5. Bible Map Challenge
 
-Host Mode has the highest live-event value and supports the other modes. It is also a prerequisite for Phone Mode (`phone-buzzer-spec.md`): phone buzzers need Select Answering Participant, Mark Correct, Mark Incorrect, `getPromptId`, and the buzz turn policy. Tournament Mode builds naturally on event scoring. Daily Challenge is smaller but needs careful session orchestration. Bible Map Challenge is the largest new game engine surface.
+Host Mode has the highest live-event value and supports the other modes. It is also a prerequisite for Phone Mode (`phone-buzzer-spec.md`): phone buzzers need Select Answering Participant, Mark Correct, Mark Incorrect, `getPromptId`, and the buzz turn policy. Host Remote comes next because it builds the local-network server that Phone Mode reuses. Tournament Mode builds naturally on event scoring. Daily Challenge is smaller but needs careful session orchestration. Bible Map Challenge is the largest new game engine surface.
 
 ## Testing Strategy
 
