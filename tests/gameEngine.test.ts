@@ -2,6 +2,7 @@ import { describe, expect, it, vi } from "vitest";
 import oddOneOutData from "../src/data/odd-one-out.json";
 import wordLadderDictionaryData from "../src/data/word-ladder-dictionary.json";
 import {
+  GAME_LIBRARY,
   continueGame,
   createSessionState,
   getHostAwardPoints,
@@ -935,6 +936,43 @@ describe("gameEngine transitions", () => {
     expect(rejectedResult.currentPrompt.phase).toBe("active");
     expect(rejectedResult.stats["player-anna-1"].incorrectAttempts).toBe(1);
     expect(rejectedResult.stats["player-anna-1"].totalScore).toBe(0);
+  });
+
+  it("defines buzz turn policy metadata for every game", () => {
+    expect(Object.values(GAME_LIBRARY).every((entry) => entry.buzzTurnPolicy)).toBe(true);
+    expect(GAME_LIBRARY["five-guesses"].buzzTurnPolicy).toBe("buzz-orders-steals");
+    expect(GAME_LIBRARY.initials.buzzTurnPolicy).toBe("buzz-orders-steals");
+    expect(GAME_LIBRARY["name-that-book"].buzzTurnPolicy).toBe("buzz-orders-steals");
+    expect(GAME_LIBRARY["scripture-puzzles"].buzzTurnPolicy).toBe("buzz-to-solve");
+    expect(GAME_LIBRARY["bible-cryptogram"].buzzTurnPolicy).toBe("buzz-to-solve");
+    expect(GAME_LIBRARY["word-ladder"].buzzTurnPolicy).toBe("turn-based-only");
+    expect(GAME_LIBRARY.genealogy.buzzTurnPolicy).toBe("turn-based-only");
+    expect(GAME_LIBRARY["relay-verse-build"].buzzTurnPolicy).toBe("turn-based-only");
+    expect(GAME_LIBRARY["verse-typing-race"].buzzTurnPolicy).toBe("not-supported");
+  });
+
+  it("extends host judging to board and solve-out-of-turn games", async () => {
+    let initialsState = (await createSessionState({
+      gameId: "initials",
+      participantMode: "individual",
+      individualNames: ["Anna", "Ben"],
+      maxPrompts: 1
+    })) as InitialsState;
+    initialsState = selectBoardCard(initialsState, initialsState.boardCards[0].id).nextState as InitialsState;
+    initialsState = markCorrectForHost(initialsState, "player-ben-2").nextState as InitialsState;
+    expect(initialsState.currentPrompt?.phase).toBe("resolved");
+    expect(initialsState.stats["player-ben-2"].totalScore).toBeGreaterThan(0);
+
+    const scriptureState = (await createSessionState({
+      gameId: "scripture-puzzles",
+      participantMode: "individual",
+      individualNames: ["Anna", "Ben"],
+      maxPrompts: 1
+    })) as ScriptureState;
+    const solvedState = markCorrectForHost(scriptureState, "player-ben-2").nextState as ScriptureState;
+    expect(solvedState.currentPrompt.isComplete).toBe(true);
+    expect(solvedState.currentPrompt.winnerParticipantId).toBe("player-ben-2");
+    expect(solvedState.stats["player-ben-2"].totalScore).toBeGreaterThan(0);
   });
 
   it("keeps the same player on a Relay Verse Build miss and rotates turns on a correct word", () => {
