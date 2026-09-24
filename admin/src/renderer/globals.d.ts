@@ -17,6 +17,16 @@ interface AdminLockState {
   configured: boolean;
 }
 
+interface HostSettings {
+  hostControlsEnabled: boolean;
+  requireAdminPinForScoreAdjustment: boolean;
+  allowHostAnswerReveal: boolean;
+  hostTimerIncrements: number[];
+  hostUndoDepth: number;
+  answererTimerBehavior: "pause" | "answer-clock" | "continue";
+  answerClockSeconds: number;
+}
+
 declare global {
   interface Window {
     adminHost?: {
@@ -36,6 +46,8 @@ declare global {
       clearAppSettings: () => Promise<boolean>;
       getFeedbackEndpoint: () => Promise<string>;
       setFeedbackEndpoint: (endpoint: string) => Promise<string>;
+      getHostSettings: () => Promise<HostSettings>;
+      setHostSettings: (settings: HostSettings) => Promise<HostSettings>;
       getAdminLockState: () => Promise<AdminLockState>;
       setAdminPin: (pin: string) => Promise<AdminLockState>;
       clearAdminPin: () => Promise<AdminLockState>;

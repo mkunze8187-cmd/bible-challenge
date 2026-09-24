@@ -228,6 +228,27 @@ body {
   margin-top: 6px;
 }
 
+.settings-check-grid {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.check-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+}
+
+.check-row-inline {
+  margin: 0;
+}
+
+.host-settings-row {
+  max-width: 340px;
+}
+
 .compact-input {
   max-width: 160px;
 }

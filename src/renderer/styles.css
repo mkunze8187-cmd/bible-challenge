@@ -1841,6 +1841,56 @@ textarea {
   padding: 6px 10px;
 }
 
+.host-private-panel {
+  display: grid;
+  gap: 8px;
+  margin: 0 0 12px;
+  padding: 12px;
+  border: 1px solid rgba(78, 58, 44, 0.18);
+  border-radius: 10px;
+  background: rgba(255, 252, 245, 0.72);
+}
+
+.host-private-panel h3 {
+  margin: 0;
+  color: #34241c;
+  font-size: 0.94rem;
+}
+
+.host-private-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.host-private-grid div {
+  display: grid;
+  gap: 2px;
+}
+
+.host-private-panel span {
+  color: #6d5a4e;
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.host-private-panel strong,
+.host-private-panel p,
+.host-private-panel li {
+  color: #34241c;
+  line-height: 1.35;
+}
+
+.host-private-panel p,
+.host-private-panel ul {
+  margin: 0;
+}
+
+.host-private-panel ul {
+  padding-left: 18px;
+}
+
 .host-field {
   display: grid;
   gap: 6px;

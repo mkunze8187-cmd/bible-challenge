@@ -189,6 +189,7 @@ type SettingsTab = "appearance" | "players" | "timers" | "audio" | "feedback" | 
 type TimerPreset = "off" | "beginner" | "standard" | "advanced" | "expert" | "custom";
 type DisplayMode = "normal" | "projector";
 type AnswererTimerBehavior = "pause" | "answer-clock" | "continue";
+type HostTimerIncrement = 15 | 30 | 60;
 type ContentPackId =
   | "all"
   | "popular"
@@ -235,6 +236,11 @@ interface PersistedAppSettings {
   teamDifficulties: DifficultyFilter[];
   teamMemberDifficulties: DifficultyFilter[][];
   timerEnabled: boolean;
+  hostControlsEnabled: boolean;
+  requireAdminPinForScoreAdjustment: boolean;
+  allowHostAnswerReveal: boolean;
+  hostTimerIncrements: HostTimerIncrement[];
+  hostUndoDepth: number;
   answererTimerBehavior: AnswererTimerBehavior;
   answerClockSeconds: number;
   challengeTimerSeconds: Record<GameId, number>;
@@ -252,6 +258,7 @@ interface PersistedAppSettings {
   timerPreset: TimerPreset;
   displayMode: DisplayMode;
   defaultContentPackId: ContentPackId;
+  adminPin?: string;
 }
 
 // Test mode only (see IS_TEST_MODE below). A read-only snapshot of renderer state, attached
@@ -434,7 +441,8 @@ const DEFAULT_CHALLENGE_TIMER_SECONDS: Record<GameId, number> = {
 };
 const DEFAULT_VERSE_SCRAMBLE_SECONDS_PER_WORD = 6;
 const DEFAULT_ANSWER_CLOCK_SECONDS = 10;
-const SESSION_HISTORY_LIMIT = 20;
+const DEFAULT_HOST_TIMER_INCREMENTS: HostTimerIncrement[] = [15, 30, 60];
+const DEFAULT_HOST_UNDO_DEPTH = 20;
 const DIFFICULTY_FILTERS: Array<{ id: DifficultyFilter; label: string }> = [
   { id: "mixed", label: "Mixed" },
   { id: "easy", label: "Easy" },
@@ -1077,6 +1085,7 @@ interface StudyNoteContent {
   reference: string;
   verse: string;
   note: string;
+  hints?: string[];
 }
 
 const StudyNoteContext = createContext<StudyNoteContent | null>(null);
@@ -1121,6 +1130,93 @@ function getRoundTeachingNote(round: unknown): string {
 function getRoundReference(round: unknown): string {
   const record = round as { scriptureReference?: unknown; reference?: unknown };
   return getOptionalText(record.scriptureReference) || getOptionalText(record.reference);
+}
+
+function getRoundAnswer(round: unknown): string {
+  const record = round as Record<string, unknown>;
+  const arrayAnswer = (value: unknown) => (Array.isArray(value) ? value.map(String).filter(Boolean).join(", ") : "");
+
+  return (
+    getOptionalText(record.correctAnswer) ||
+    getOptionalText(record.answer) ||
+    getOptionalText(record.book) ||
+    getOptionalText(record.answerBook) ||
+    getOptionalText(record.correctReference) ||
+    getOptionalText(record.correctTheme) ||
+    getOptionalText(record.earlierEvent) ||
+    getOptionalText(record.laterEvent) ||
+    arrayAnswer(record.missingWords) ||
+    arrayAnswer(record.answerAliases) ||
+    arrayAnswer(record.acceptedAnswers) ||
+    arrayAnswer(record.revealPath) ||
+    "Answer key is shown in the resolved prompt."
+  );
+}
+
+function getRoundHints(round: unknown): string[] {
+  const record = round as Record<string, unknown>;
+  const candidates = [record.hints, record.clues, record.options, record.statements, record.categories];
+  const hints = candidates.flatMap((value) => {
+    if (!Array.isArray(value)) {
+      return [];
+    }
+
+    return value
+      .map((item) => {
+        if (typeof item === "string") {
+          return item;
+        }
+        if (item && typeof item === "object") {
+          const entry = item as Record<string, unknown>;
+          return (
+            getOptionalText(entry.text) ||
+            getOptionalText(entry.clue) ||
+            getOptionalText(entry.label) ||
+            getOptionalText(entry.title)
+          );
+        }
+        return "";
+      })
+      .filter(Boolean);
+  });
+
+  return [...new Set(hints)].slice(0, 8);
+}
+
+function getHostPromptContent(state: SessionState | null): StudyNoteContent | null {
+  if (!state) {
+    return null;
+  }
+
+  const prompt = "currentPrompt" in state ? state.currentPrompt : null;
+  const round = prompt && typeof prompt === "object" && "round" in prompt ? (prompt.round as unknown) : null;
+  if (!round) {
+    return getStudyNoteContent(state);
+  }
+
+  const promptId = getEnginePromptId(state) ?? `${state.gameId}:${"roundIndex" in state ? state.roundIndex : 0}`;
+  const record = round as Record<string, unknown>;
+  const verse =
+    getOptionalText(record.verseText) ||
+    getOptionalText(record.excerpt) ||
+    getOptionalText(record.verseTextShort) ||
+    getOptionalText(record.prophecyTextShort) ||
+    getOptionalText(record.fulfillmentText) ||
+    getOptionalText(record.prompt);
+
+  return {
+    key: promptId,
+    title: "Host Notes",
+    answer: getRoundAnswer(round),
+    reference:
+      getRoundReference(round) ||
+      getOptionalText(record.prophecyReference) ||
+      getOptionalText(record.fulfillmentReference) ||
+      getOptionalText(record.correctProphecyReference),
+    verse,
+    note: getRoundTeachingNote(round),
+    hints: getRoundHints(round)
+  };
 }
 
 function getStudyNoteContent(state: SessionState | null): StudyNoteContent | null {
@@ -1890,6 +1986,11 @@ function cleanAppSettings(value: unknown): Partial<PersistedAppSettings> {
 
   const input = value as Partial<PersistedAppSettings>;
   const timers = { ...DEFAULT_CHALLENGE_TIMER_SECONDS };
+  const hostTimerIncrements = Array.isArray(input.hostTimerIncrements)
+    ? input.hostTimerIncrements
+        .map((value) => Number(value))
+        .filter((value): value is HostTimerIncrement => value === 15 || value === 30 || value === 60)
+    : DEFAULT_HOST_TIMER_INCREMENTS;
 
   if (input.challengeTimerSeconds && typeof input.challengeTimerSeconds === "object") {
     ALL_GAME_IDS.forEach((mode) => {
@@ -1907,6 +2008,16 @@ function cleanAppSettings(value: unknown): Partial<PersistedAppSettings> {
     teamDifficulties: cleanDifficultyList(input.teamDifficulties),
     teamMemberDifficulties: cleanDifficultyMatrix(input.teamMemberDifficulties),
     timerEnabled: typeof input.timerEnabled === "boolean" ? input.timerEnabled : true,
+    hostControlsEnabled: typeof input.hostControlsEnabled === "boolean" ? input.hostControlsEnabled : true,
+    requireAdminPinForScoreAdjustment:
+      typeof input.requireAdminPinForScoreAdjustment === "boolean"
+        ? input.requireAdminPinForScoreAdjustment
+        : false,
+    allowHostAnswerReveal: typeof input.allowHostAnswerReveal === "boolean" ? input.allowHostAnswerReveal : true,
+    hostTimerIncrements: hostTimerIncrements.length > 0 ? hostTimerIncrements : DEFAULT_HOST_TIMER_INCREMENTS,
+    hostUndoDepth: Number.isFinite(Number(input.hostUndoDepth))
+      ? Math.min(50, Math.max(1, Math.round(Number(input.hostUndoDepth))))
+      : DEFAULT_HOST_UNDO_DEPTH,
     answererTimerBehavior:
       input.answererTimerBehavior === "answer-clock" || input.answererTimerBehavior === "continue"
         ? input.answererTimerBehavior
@@ -1935,7 +2046,9 @@ function cleanAppSettings(value: unknown): Partial<PersistedAppSettings> {
     difficultyFilter: cleanDifficultyFilter(input.difficultyFilter),
     timerPreset: cleanTimerPreset(input.timerPreset),
     displayMode: cleanDisplayMode(input.displayMode),
-    defaultContentPackId: cleanContentPackId(input.defaultContentPackId)
+    defaultContentPackId: cleanContentPackId(input.defaultContentPackId),
+    adminPin:
+      typeof input.adminPin === "string" && /^\d{4,12}$/.test(input.adminPin) ? input.adminPin : undefined
   };
 }
 
@@ -1962,6 +2075,13 @@ export function App() {
   const [timerPreset, setTimerPreset] = useState<TimerPreset>("standard");
   const [challengeTimerSeconds, setChallengeTimerSeconds] =
     useState<Record<GameId, number>>(DEFAULT_CHALLENGE_TIMER_SECONDS);
+  const [hostControlsEnabled, setHostControlsEnabled] = useState(true);
+  const [requireAdminPinForScoreAdjustment, setRequireAdminPinForScoreAdjustment] = useState(false);
+  const [allowHostAnswerReveal, setAllowHostAnswerReveal] = useState(true);
+  const [hostTimerIncrements, setHostTimerIncrements] =
+    useState<HostTimerIncrement[]>(DEFAULT_HOST_TIMER_INCREMENTS);
+  const [hostUndoDepth, setHostUndoDepth] = useState(DEFAULT_HOST_UNDO_DEPTH);
+  const [adminPin, setAdminPin] = useState<string | undefined>(undefined);
   const [useVerseSecondsPerWord, setUseVerseSecondsPerWord] = useState(true);
   const [verseScrambleSecondsPerWord, setVerseScrambleSecondsPerWord] = useState(
     DEFAULT_VERSE_SCRAMBLE_SECONDS_PER_WORD
@@ -2290,6 +2410,22 @@ export function App() {
         if (typeof cleaned.timerEnabled === "boolean") {
           setTimerEnabled(cleaned.timerEnabled);
         }
+        if (typeof cleaned.hostControlsEnabled === "boolean") {
+          setHostControlsEnabled(cleaned.hostControlsEnabled);
+        }
+        if (typeof cleaned.requireAdminPinForScoreAdjustment === "boolean") {
+          setRequireAdminPinForScoreAdjustment(cleaned.requireAdminPinForScoreAdjustment);
+        }
+        if (typeof cleaned.allowHostAnswerReveal === "boolean") {
+          setAllowHostAnswerReveal(cleaned.allowHostAnswerReveal);
+        }
+        if (cleaned.hostTimerIncrements) {
+          setHostTimerIncrements(cleaned.hostTimerIncrements);
+        }
+        if (typeof cleaned.hostUndoDepth === "number") {
+          setHostUndoDepth(cleaned.hostUndoDepth);
+        }
+        setAdminPin(cleaned.adminPin);
         if (cleaned.answererTimerBehavior) {
           setAnswererTimerBehavior(cleaned.answererTimerBehavior);
         }
@@ -2372,6 +2508,11 @@ export function App() {
       teamDifficulties: teams.map((team) => team.difficulty ?? "mixed"),
       teamMemberDifficulties: teams.map((team) => team.members.map((_, index) => team.memberDifficulties?.[index] ?? "mixed")),
       timerEnabled,
+      hostControlsEnabled,
+      requireAdminPinForScoreAdjustment,
+      allowHostAnswerReveal,
+      hostTimerIncrements,
+      hostUndoDepth,
       answererTimerBehavior,
       answerClockSeconds,
       challengeTimerSeconds,
@@ -2388,7 +2529,8 @@ export function App() {
       difficultyFilter,
       timerPreset,
       displayMode,
-      defaultContentPackId
+      defaultContentPackId,
+      adminPin
     };
 
     const timeoutId = window.setTimeout(() => {
@@ -2416,8 +2558,12 @@ export function App() {
     difficultyFilter,
     displayMode,
     hasLoadedAppSettings,
+    hostControlsEnabled,
+    hostTimerIncrements,
+    hostUndoDepth,
     participantMode,
     playerDifficulties,
+    requireAdminPinForScoreAdjustment,
     savedEventDefinitions,
     selectedEventGameIds,
     showChallengeRatings,
@@ -2426,7 +2572,9 @@ export function App() {
     teams,
     timerPreset,
     useVerseSecondsPerWord,
-    verseScrambleSecondsPerWord
+    verseScrambleSecondsPerWord,
+    allowHostAnswerReveal,
+    adminPin
   ]);
 
   useEffect(() => {
@@ -2454,6 +2602,11 @@ export function App() {
         teamDifficulties: teams.map((team) => team.difficulty ?? "mixed"),
         teamMemberDifficulties: teams.map((team) => team.members.map((_, index) => team.memberDifficulties?.[index] ?? "mixed")),
         timerEnabled,
+        hostControlsEnabled,
+        requireAdminPinForScoreAdjustment,
+        allowHostAnswerReveal,
+        hostTimerIncrements,
+        hostUndoDepth,
         answererTimerBehavior,
         answerClockSeconds,
         challengeTimerSeconds,
@@ -2489,10 +2642,14 @@ export function App() {
     eventName,
     feedbackEndpoint,
     gameStats,
+    hostControlsEnabled,
+    hostTimerIncrements,
+    hostUndoDepth,
     isSettingsOpen,
     isSetupOpen,
     participantMode,
     playerDifficulties,
+    requireAdminPinForScoreAdjustment,
     savedEventDefinitions,
     selectedEventGameIds,
     sessionState,
@@ -2502,7 +2659,8 @@ export function App() {
     teams,
     timerPreset,
     useVerseSecondsPerWord,
-    verseScrambleSecondsPerWord
+    verseScrambleSecondsPerWord,
+    allowHostAnswerReveal
   ]);
 
   useEffect(() => {
@@ -2858,7 +3016,7 @@ export function App() {
       state: structuredClone(state),
       buzzerSnapshot
     };
-    setSessionHistory((current) => [entry, ...current].slice(0, SESSION_HISTORY_LIMIT));
+    setSessionHistory((current) => [entry, ...current].slice(0, hostUndoDepth));
   }
 
   function clearSessionHistory() {
@@ -3087,7 +3245,30 @@ export function App() {
     });
   }
 
+  function verifyScoreAdjustmentPermission(): boolean {
+    if (!requireAdminPinForScoreAdjustment) {
+      return true;
+    }
+
+    if (!adminPin) {
+      setFlashMessage({ tone: "warning", text: "Admin PIN is required before score adjustment can be used." });
+      return false;
+    }
+
+    const enteredPin = window.prompt("Enter admin PIN to adjust scores.");
+    if (enteredPin !== adminPin) {
+      setFlashMessage({ tone: "warning", text: "Score adjustment blocked: incorrect admin PIN." });
+      return false;
+    }
+
+    return true;
+  }
+
   function updateCurrentScore(update: (score: number) => number, message: string) {
+    if (!verifyScoreAdjustmentPermission()) {
+      return;
+    }
+
     setSessionState((current) => {
       if (!current) {
         return current;
@@ -3818,12 +3999,14 @@ export function App() {
       : currentParticipantId;
   const hostAwardPoints =
     sessionState && hostTargetParticipantId ? getHostAwardPoints(sessionState, hostTargetParticipantId) : null;
+  const hostPromptContent = getHostPromptContent(sessionState);
   const hostBuzzPolicy = sessionState ? GAME_LIBRARY[sessionState.gameId].buzzTurnPolicy : currentGame.buzzTurnPolicy;
   const hostBuzzPolicyLabel = hostBuzzPolicy
     .split("-")
     .map((part) => part[0].toUpperCase() + part.slice(1))
     .join(" ");
   const recentScoreAdjustments = scoreAdjustments.slice(0, 5);
+  const canUseHostControls = hostControlsEnabled && !IS_PROJECTOR_WINDOW;
   const eventStandings = sortEventScores(eventScores);
   const eventChallengeCount = completedEventGameIds.length;
   const selectedEventChallengeCount = selectedEventGameIds.length;
@@ -5053,9 +5236,11 @@ export function App() {
               <button type="button" className="secondary-button" onClick={() => setIsGameHelpOpen(true)}>
                 Help
               </button>
-              <button type="button" className="secondary-button" onClick={() => setIsHostControlsOpen(true)}>
-                Host Controls
-              </button>
+              {canUseHostControls ? (
+                <button type="button" className="secondary-button" onClick={() => setIsHostControlsOpen(true)}>
+                  Host Controls
+                </button>
+              ) : null}
             </div>
 
             <div className="score-list score-list-horizontal">
@@ -5095,7 +5280,7 @@ export function App() {
             </div>
           </section>
 
-          {isHostControlsOpen ? (
+          {isHostControlsOpen && canUseHostControls ? (
             <div className="modal-backdrop" role="presentation">
               <section className="host-controls-modal" role="dialog" aria-modal="true" aria-labelledby="host-controls-title">
                 <div className="section-header">
@@ -5111,12 +5296,16 @@ export function App() {
                   <button type="button" className="secondary-button" onClick={() => setIsTimerPaused((current) => !current)}>
                     {isTimerPaused ? "Resume Timer" : "Pause Timer"}
                   </button>
-                  <button type="button" className="secondary-button" onClick={() => adjustTimer(30)} disabled={!timerEnabled}>
-                    Add 30 Seconds
-                  </button>
-                  <button type="button" className="secondary-button" onClick={() => adjustTimer(-30)} disabled={!timerEnabled}>
-                    Subtract 30 Seconds
-                  </button>
+                  {hostTimerIncrements.map((seconds) => (
+                    <button key={`add-${seconds}`} type="button" className="secondary-button" onClick={() => adjustTimer(seconds)} disabled={!timerEnabled}>
+                      Add {seconds} Seconds
+                    </button>
+                  ))}
+                  {hostTimerIncrements.map((seconds) => (
+                    <button key={`subtract-${seconds}`} type="button" className="secondary-button" onClick={() => adjustTimer(-seconds)} disabled={!timerEnabled}>
+                      Subtract {seconds} Seconds
+                    </button>
+                  ))}
                   <button type="button" className="primary-button" onClick={markHostCorrect}>
                     Mark Correct{hostAwardPoints == null ? "" : ` (+${hostAwardPoints})`}
                   </button>
@@ -5132,12 +5321,16 @@ export function App() {
                   <button type="button" className="ghost-button" onClick={undoLastSessionAction} disabled={sessionHistory.length === 0}>
                     Undo ({sessionHistory.length})
                   </button>
-                  <button type="button" className="secondary-button" onClick={() => handleAction(() => forceResolveForHost(sessionState), "pass")}>
-                    Reveal Answer
-                  </button>
-                  <button type="button" className="secondary-button" onClick={() => handleAction(() => forceResolveForHost(sessionState), "pass")}>
-                    Skip / Pass
-                  </button>
+                  {allowHostAnswerReveal ? (
+                    <button type="button" className="secondary-button" onClick={() => handleAction(() => forceResolveForHost(sessionState), "pass")}>
+                      Reveal Answer
+                    </button>
+                  ) : null}
+                  {allowHostAnswerReveal ? (
+                    <button type="button" className="secondary-button" onClick={() => handleAction(() => forceResolveForHost(sessionState), "pass")}>
+                      Skip / Pass
+                    </button>
+                  ) : null}
                   <button type="button" className="ghost-button" onClick={restartCurrentChallenge} disabled={isStartingGame}>
                     Restart Challenge
                   </button>
@@ -5152,6 +5345,32 @@ export function App() {
                   <span>Buzz policy: {hostBuzzPolicyLabel}</span>
                   {answerClockRemaining > 0 ? <span>Answer clock: {answerClockRemaining}s</span> : null}
                 </div>
+                {hostPromptContent ? (
+                  <div className="host-private-panel" aria-label="Private host notes">
+                    <h3>{hostPromptContent.title}</h3>
+                    <div className="host-private-grid">
+                      <div>
+                        <span>Answer Key</span>
+                        <strong>{hostPromptContent.answer}</strong>
+                      </div>
+                      {hostPromptContent.reference ? (
+                        <div>
+                          <span>Reference</span>
+                          <strong>{hostPromptContent.reference}</strong>
+                        </div>
+                      ) : null}
+                    </div>
+                    {hostPromptContent.verse ? <p>{hostPromptContent.verse}</p> : null}
+                    {hostPromptContent.hints && hostPromptContent.hints.length > 0 ? (
+                      <ul>
+                        {hostPromptContent.hints.map((hint) => (
+                          <li key={hint}>{hint}</li>
+                        ))}
+                      </ul>
+                    ) : null}
+                    <p>{hostPromptContent.note}</p>
+                  </div>
+                ) : null}
                 <label className="host-field">
                   <span>Answerer timer</span>
                   <select
