@@ -1824,6 +1824,23 @@ textarea {
   min-height: 44px;
 }
 
+.host-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 12px;
+  color: #4d382e;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.host-meta-row span {
+  border: 1px solid rgba(78, 58, 44, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 252, 245, 0.72);
+  padding: 6px 10px;
+}
+
 .host-field {
   display: grid;
   gap: 6px;
@@ -1842,6 +1859,35 @@ textarea {
   color: #34241c;
   padding: 8px 10px;
   font: inherit;
+}
+
+.host-audit {
+  margin-top: 12px;
+  border-top: 1px solid rgba(78, 58, 44, 0.18);
+  padding-top: 12px;
+}
+
+.host-audit h3 {
+  margin: 0 0 8px;
+  color: #34241c;
+  font-size: 0.92rem;
+}
+
+.host-audit p {
+  margin: 0;
+  color: #6d5a4e;
+  font-size: 0.86rem;
+}
+
+.host-audit-row {
+  display: grid;
+  grid-template-columns: minmax(90px, 1fr) auto minmax(140px, 1.4fr);
+  gap: 8px;
+  align-items: center;
+  min-height: 32px;
+  border-bottom: 1px solid rgba(78, 58, 44, 0.12);
+  color: #4d382e;
+  font-size: 0.84rem;
 }
 
 .feedback-modal {

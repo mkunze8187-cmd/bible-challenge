@@ -188,6 +188,7 @@ type AppTheme = "classic" | "forest" | "ocean" | "plum" | "dawn" | "meadow" | "r
 type SettingsTab = "appearance" | "players" | "timers" | "audio" | "feedback" | "content" | "event" | "about";
 type TimerPreset = "off" | "beginner" | "standard" | "advanced" | "expert" | "custom";
 type DisplayMode = "normal" | "projector";
+type AnswererTimerBehavior = "pause" | "answer-clock" | "continue";
 type ContentPackId =
   | "all"
   | "popular"
@@ -199,6 +200,23 @@ type ContentPackId =
   | "old-testament"
   | "new-testament"
   | "custom";
+
+interface SessionHistoryEntry {
+  id: string;
+  createdAt: string;
+  label: string;
+  promptId: string | null;
+  state: SessionState;
+  buzzerSnapshot?: unknown;
+}
+
+interface ScoreAdjustment {
+  id: string;
+  createdAt: string;
+  participantId: string;
+  delta: number;
+  reason: string;
+}
 
 interface FeedbackDraft {
   gameId: GameId | null;
@@ -217,6 +235,8 @@ interface PersistedAppSettings {
   teamDifficulties: DifficultyFilter[];
   teamMemberDifficulties: DifficultyFilter[][];
   timerEnabled: boolean;
+  answererTimerBehavior: AnswererTimerBehavior;
+  answerClockSeconds: number;
   challengeTimerSeconds: Record<GameId, number>;
   useVerseSecondsPerWord: boolean;
   verseScrambleSecondsPerWord: number;
@@ -413,6 +433,8 @@ const DEFAULT_CHALLENGE_TIMER_SECONDS: Record<GameId, number> = {
   "bible-cryptogram": 60
 };
 const DEFAULT_VERSE_SCRAMBLE_SECONDS_PER_WORD = 6;
+const DEFAULT_ANSWER_CLOCK_SECONDS = 10;
+const SESSION_HISTORY_LIMIT = 20;
 const DIFFICULTY_FILTERS: Array<{ id: DifficultyFilter; label: string }> = [
   { id: "mixed", label: "Mixed" },
   { id: "easy", label: "Easy" },
@@ -1844,7 +1866,7 @@ function cleanDisplayMode(value: unknown): DisplayMode {
 function cleanContentPackId(value: unknown): ContentPackId {
   return typeof value === "string" && MENU_CONTENT_PACK_IDS.includes(value as ContentPackId)
     ? (value as ContentPackId)
-    : "core";
+    : "popular";
 }
 
 function getTimerPresetSeconds(preset: Exclude<TimerPreset, "off" | "custom">): Record<GameId, number> {
@@ -1885,6 +1907,13 @@ function cleanAppSettings(value: unknown): Partial<PersistedAppSettings> {
     teamDifficulties: cleanDifficultyList(input.teamDifficulties),
     teamMemberDifficulties: cleanDifficultyMatrix(input.teamMemberDifficulties),
     timerEnabled: typeof input.timerEnabled === "boolean" ? input.timerEnabled : true,
+    answererTimerBehavior:
+      input.answererTimerBehavior === "answer-clock" || input.answererTimerBehavior === "continue"
+        ? input.answererTimerBehavior
+        : "pause",
+    answerClockSeconds: Number.isFinite(Number(input.answerClockSeconds))
+      ? Math.min(120, Math.max(3, Math.round(Number(input.answerClockSeconds))))
+      : DEFAULT_ANSWER_CLOCK_SECONDS,
     challengeTimerSeconds: timers,
     useVerseSecondsPerWord:
       typeof input.useVerseSecondsPerWord === "boolean" ? input.useVerseSecondsPerWord : true,
@@ -1940,8 +1969,8 @@ export function App() {
   const [showStudyNotes, setShowStudyNotes] = useState(true);
   const [difficultyFilter, setDifficultyFilter] = useState<DifficultyFilter>("mixed");
   const [displayMode, setDisplayMode] = useState<DisplayMode>(IS_PROJECTOR_WINDOW ? "projector" : "normal");
-  const [defaultContentPackId, setDefaultContentPackId] = useState<ContentPackId>("core");
-  const [activeContentPackId, setActiveContentPackId] = useState<ContentPackId>("core");
+  const [defaultContentPackId, setDefaultContentPackId] = useState<ContentPackId>("popular");
+  const [activeContentPackId, setActiveContentPackId] = useState<ContentPackId>("popular");
   const [customContentPacks, setCustomContentPacks] = useState<CustomContentPack[]>([]);
   const [timeRemaining, setTimeRemaining] = useState(30);
   const [eventScoringEnabled, setEventScoringEnabled] = useState(false);
@@ -1971,12 +2000,16 @@ export function App() {
   const [activeChallengeId, setActiveChallengeId] = useState<string | null>(null);
   const [isStartingGame, setIsStartingGame] = useState(false);
   const [sessionState, setSessionState] = useState<SessionState | null>(null);
-  const [lastUndoState, setLastUndoState] = useState<SessionState | null>(null);
+  const [sessionHistory, setSessionHistory] = useState<SessionHistoryEntry[]>([]);
+  const [scoreAdjustments, setScoreAdjustments] = useState<ScoreAdjustment[]>([]);
   const [isHostControlsOpen, setIsHostControlsOpen] = useState(false);
   const [hostSelectedParticipantId, setHostSelectedParticipantId] = useState("");
   const [isGameHelpOpen, setIsGameHelpOpen] = useState(false);
   const [isAppHelpOpen, setIsAppHelpOpen] = useState(false);
   const [isTimerPaused, setIsTimerPaused] = useState(false);
+  const [answererTimerBehavior, setAnswererTimerBehavior] = useState<AnswererTimerBehavior>("pause");
+  const [answerClockSeconds, setAnswerClockSeconds] = useState(DEFAULT_ANSWER_CLOCK_SECONDS);
+  const [answerClockRemaining, setAnswerClockRemaining] = useState(0);
   const [manualScoreInput, setManualScoreInput] = useState("");
   const [dismissedStudyNoteKey, setDismissedStudyNoteKey] = useState<string | null>(null);
   const [guessText, setGuessText] = useState("");
@@ -2257,6 +2290,12 @@ export function App() {
         if (typeof cleaned.timerEnabled === "boolean") {
           setTimerEnabled(cleaned.timerEnabled);
         }
+        if (cleaned.answererTimerBehavior) {
+          setAnswererTimerBehavior(cleaned.answererTimerBehavior);
+        }
+        if (typeof cleaned.answerClockSeconds === "number") {
+          setAnswerClockSeconds(cleaned.answerClockSeconds);
+        }
         if (cleaned.challengeTimerSeconds) {
           setChallengeTimerSeconds(cleaned.challengeTimerSeconds);
         }
@@ -2333,6 +2372,8 @@ export function App() {
       teamDifficulties: teams.map((team) => team.difficulty ?? "mixed"),
       teamMemberDifficulties: teams.map((team) => team.members.map((_, index) => team.memberDifficulties?.[index] ?? "mixed")),
       timerEnabled,
+      answererTimerBehavior,
+      answerClockSeconds,
       challengeTimerSeconds,
       useVerseSecondsPerWord,
       verseScrambleSecondsPerWord,
@@ -2363,6 +2404,8 @@ export function App() {
 
     return () => window.clearTimeout(timeoutId);
   }, [
+    answerClockSeconds,
+    answererTimerBehavior,
     challengeTimerSeconds,
     challengeRatings,
     colorTheme,
@@ -2411,6 +2454,8 @@ export function App() {
         teamDifficulties: teams.map((team) => team.difficulty ?? "mixed"),
         teamMemberDifficulties: teams.map((team) => team.members.map((_, index) => team.memberDifficulties?.[index] ?? "mixed")),
         timerEnabled,
+        answererTimerBehavior,
+        answerClockSeconds,
         challengeTimerSeconds,
         useVerseSecondsPerWord,
         verseScrambleSecondsPerWord,
@@ -2433,6 +2478,8 @@ export function App() {
       delete window.__bibleChallengeTest;
     };
   }, [
+    answerClockSeconds,
+    answererTimerBehavior,
     challengeRatings,
     challengeTimerSeconds,
     colorTheme,
@@ -2571,6 +2618,7 @@ export function App() {
     }
 
     setTimeRemaining(activeTimerSeconds);
+    setAnswerClockRemaining(0);
   }, [activeGuessKey, activeTimerSeconds, timerEnabled]);
 
   useEffect(() => {
@@ -2584,6 +2632,18 @@ export function App() {
 
     return () => window.clearTimeout(timeoutId);
   }, [activeGuessKey, isTimerPaused, timerEnabled, timeRemaining]);
+
+  useEffect(() => {
+    if (IS_PROJECTOR_WINDOW || !timerEnabled || answerClockRemaining <= 0) {
+      return;
+    }
+
+    const timeoutId = window.setTimeout(() => {
+      setAnswerClockRemaining((current) => Math.max(0, current - 1));
+    }, 1000);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [answerClockRemaining, timerEnabled]);
 
   useEffect(() => {
     if (IS_PROJECTOR_WINDOW || !timerEnabled || isTimerPaused || timeRemaining !== 0 || !activeGuessKey || !sessionState) {
@@ -2783,6 +2843,29 @@ export function App() {
     }
   }
 
+  function createEntryId(prefix: string): string {
+    return typeof crypto !== "undefined" && "randomUUID" in crypto
+      ? crypto.randomUUID()
+      : `${prefix}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+  }
+
+  function pushSessionHistory(state: SessionState, label: string, buzzerSnapshot?: unknown) {
+    const entry: SessionHistoryEntry = {
+      id: createEntryId("history"),
+      createdAt: new Date().toISOString(),
+      label,
+      promptId: getEnginePromptId(state),
+      state: structuredClone(state),
+      buzzerSnapshot
+    };
+    setSessionHistory((current) => [entry, ...current].slice(0, SESSION_HISTORY_LIMIT));
+  }
+
+  function clearSessionHistory() {
+    setSessionHistory([]);
+    setScoreAdjustments([]);
+  }
+
   // Returns the error message when `action` throws (callers that need to show that message
   // somewhere more specific than the flash banner — e.g. inline under a rejected cryptogram
   // guess — can use the return value; every other call site just ignores it, since the
@@ -2792,7 +2875,7 @@ export function App() {
       const previousState = sessionState;
       const result = action();
       if (previousState) {
-        setLastUndoState(previousState);
+        pushSessionHistory(previousState, result.text);
       }
       const missedPrompt = getNewMissedPrompt(previousState, result.nextState);
       if (missedPrompt && activeChallengeId) {
@@ -2882,7 +2965,7 @@ export function App() {
       setGameId(modeToStart);
       setGameStats((current) => recordGameStarted(current, modeToStart, participantMode, eventScoringEnabled));
       setSessionState(nextState);
-      setLastUndoState(null);
+      clearSessionHistory();
       setIsTimerPaused(false);
       setIsHostControlsOpen(false);
       setDismissedStudyNoteKey(null);
@@ -2992,7 +3075,7 @@ export function App() {
   function handleExitToMenu() {
     setSessionState(null);
     setActiveChallengeId(null);
-    setLastUndoState(null);
+    clearSessionHistory();
     setIsTimerPaused(false);
     setIsHostControlsOpen(false);
     setDismissedStudyNoteKey(null);
@@ -3021,8 +3104,23 @@ export function App() {
       }
 
       const nextState = structuredClone(current);
-      setLastUndoState(current);
-      nextState.stats[participantId].totalScore = Math.max(0, update(nextState.stats[participantId].totalScore));
+      const previousScore = nextState.stats[participantId].totalScore;
+      const nextScore = Math.max(0, update(previousScore));
+      const delta = nextScore - previousScore;
+      pushSessionHistory(current, message);
+      nextState.stats[participantId].totalScore = nextScore;
+      if (delta !== 0) {
+        setScoreAdjustments((entries) => [
+          {
+            id: createEntryId("score"),
+            createdAt: new Date().toISOString(),
+            participantId,
+            delta,
+            reason: message
+          },
+          ...entries
+        ].slice(0, 50));
+      }
       return nextState;
     });
     setFlashMessage({ tone: "info", text: message });
@@ -3053,6 +3151,15 @@ export function App() {
 
   function selectHostAnswerer(participantId: string) {
     setHostSelectedParticipantId(participantId);
+    if (answererTimerBehavior === "pause") {
+      setIsTimerPaused(true);
+      setAnswerClockRemaining(0);
+    } else if (answererTimerBehavior === "answer-clock") {
+      setIsTimerPaused(true);
+      setAnswerClockRemaining(answerClockSeconds);
+    } else {
+      setAnswerClockRemaining(0);
+    }
     if (!sessionState) {
       return;
     }
@@ -3072,6 +3179,10 @@ export function App() {
     }
 
     handleAction(() => markCorrectForHost(sessionState, participantId));
+    setAnswerClockRemaining(0);
+    if (answererTimerBehavior !== "continue") {
+      setIsTimerPaused(false);
+    }
   }
 
   function markHostIncorrect() {
@@ -3086,6 +3197,10 @@ export function App() {
     }
 
     handleAction(() => markIncorrectForHost(sessionState, participantId), "wrong");
+    setAnswerClockRemaining(0);
+    if (answererTimerBehavior !== "continue") {
+      setIsTimerPaused(false);
+    }
   }
 
   function setCurrentScoreFromInput() {
@@ -3101,14 +3216,16 @@ export function App() {
   }
 
   function undoLastSessionAction() {
-    if (!lastUndoState) {
+    const [entry] = sessionHistory;
+    if (!entry) {
       setFlashMessage({ tone: "info", text: "No scoring action is available to undo." });
       return;
     }
 
-    setSessionState(lastUndoState);
-    setLastUndoState(null);
-    setFlashMessage({ tone: "info", text: "Last host action undone." });
+    setSessionState(entry.state);
+    setSessionHistory((current) => current.slice(1));
+    setAnswerClockRemaining(0);
+    setFlashMessage({ tone: "info", text: `Undid: ${entry.label}` });
   }
 
   function endCurrentGame() {
@@ -3118,7 +3235,7 @@ export function App() {
       }
 
       const nextState = structuredClone(current);
-      setLastUndoState(current);
+      pushSessionHistory(current, "Host ended the game.");
       nextState.status = "completed";
       return nextState;
     });
@@ -3131,7 +3248,7 @@ export function App() {
       return;
     }
 
-    setLastUndoState(sessionState);
+    pushSessionHistory(sessionState, "Restart challenge.");
     setIsTimerPaused(false);
     setIsHostControlsOpen(false);
     setIsStartingGame(true);
@@ -3701,6 +3818,12 @@ export function App() {
       : currentParticipantId;
   const hostAwardPoints =
     sessionState && hostTargetParticipantId ? getHostAwardPoints(sessionState, hostTargetParticipantId) : null;
+  const hostBuzzPolicy = sessionState ? GAME_LIBRARY[sessionState.gameId].buzzTurnPolicy : currentGame.buzzTurnPolicy;
+  const hostBuzzPolicyLabel = hostBuzzPolicy
+    .split("-")
+    .map((part) => part[0].toUpperCase() + part.slice(1))
+    .join(" ");
+  const recentScoreAdjustments = scoreAdjustments.slice(0, 5);
   const eventStandings = sortEventScores(eventScores);
   const eventChallengeCount = completedEventGameIds.length;
   const selectedEventChallengeCount = selectedEventGameIds.length;
@@ -5006,8 +5129,8 @@ export function App() {
                   <button type="button" className="ghost-button" onClick={() => adjustCurrentScore(-1)}>
                     Subtract Point
                   </button>
-                  <button type="button" className="ghost-button" onClick={undoLastSessionAction} disabled={!lastUndoState}>
-                    Undo Last Action
+                  <button type="button" className="ghost-button" onClick={undoLastSessionAction} disabled={sessionHistory.length === 0}>
+                    Undo ({sessionHistory.length})
                   </button>
                   <button type="button" className="secondary-button" onClick={() => handleAction(() => forceResolveForHost(sessionState), "pass")}>
                     Reveal Answer
@@ -5025,6 +5148,38 @@ export function App() {
                     Main Menu
                   </button>
                 </div>
+                <div className="host-meta-row">
+                  <span>Buzz policy: {hostBuzzPolicyLabel}</span>
+                  {answerClockRemaining > 0 ? <span>Answer clock: {answerClockRemaining}s</span> : null}
+                </div>
+                <label className="host-field">
+                  <span>Answerer timer</span>
+                  <select
+                    className="host-select"
+                    value={answererTimerBehavior}
+                    onChange={(event) => {
+                      setAnswererTimerBehavior(event.target.value as AnswererTimerBehavior);
+                      setAnswerClockRemaining(0);
+                    }}
+                  >
+                    <option value="pause">Pause prompt timer</option>
+                    <option value="answer-clock">Use answer clock</option>
+                    <option value="continue">Keep timer running</option>
+                  </select>
+                </label>
+                {answererTimerBehavior === "answer-clock" ? (
+                  <label className="host-field">
+                    <span>Answer clock seconds</span>
+                    <input
+                      className="number-input"
+                      type="number"
+                      min={3}
+                      max={120}
+                      value={answerClockSeconds}
+                      onChange={(event) => setAnswerClockSeconds(Math.min(120, Math.max(3, Number.parseInt(event.target.value, 10) || DEFAULT_ANSWER_CLOCK_SECONDS)))}
+                    />
+                  </label>
+                ) : null}
                 <label className="host-field">
                   <span>Answering participant</span>
                   <select
@@ -5052,6 +5207,23 @@ export function App() {
                   <button type="button" className="primary-button" onClick={setCurrentScoreFromInput}>
                     Set Score
                   </button>
+                </div>
+                <div className="host-audit">
+                  <h3>Score Audit</h3>
+                  {recentScoreAdjustments.length === 0 ? (
+                    <p>No manual score adjustments yet.</p>
+                  ) : (
+                    recentScoreAdjustments.map((entry) => {
+                      const participant = sessionState.participants.find((candidate) => candidate.id === entry.participantId);
+                      return (
+                        <div key={entry.id} className="host-audit-row">
+                          <span>{participant?.name ?? "Participant"}</span>
+                          <strong>{entry.delta > 0 ? `+${entry.delta}` : entry.delta}</strong>
+                          <span>{entry.reason}</span>
+                        </div>
+                      );
+                    })
+                  )}
                 </div>
               </section>
             </div>

@@ -118,6 +118,13 @@ export interface SessionOption {
   theme: string;
 }
 
+export type BuzzTurnPolicy =
+  | "buzz-replaces-turn"
+  | "buzz-orders-steals"
+  | "buzz-to-solve"
+  | "turn-based-only"
+  | "not-supported";
+
 export interface InitialsBoardCard {
   id: string;
   round: InitialsRound & CardRoundMeta;
@@ -699,199 +706,232 @@ export const GAME_LIBRARY: Record<
     shortDescription: string;
     setupPrompt: string;
     accent: string;
+    buzzTurnPolicy: BuzzTurnPolicy;
   }
 > = {
   "five-guesses": {
     label: "Five Clues",
     shortDescription: "A five-category board with five value cards per category and steal attempts.",
     setupPrompt: "The active player chooses a category value. Five clues reveal automatically after misses.",
-    accent: "#8a5c24"
+    accent: "#8a5c24",
+    buzzTurnPolicy: "buzz-orders-steals"
   },
   initials: {
     label: "Bible Initials",
     shortDescription: "A random twenty-five-card board with initials first, then six live clues.",
     setupPrompt: "The active player chooses a card. Initials stay visible while six clues reveal after misses.",
-    accent: "#1f6650"
+    accent: "#1f6650",
+    buzzTurnPolicy: "buzz-orders-steals"
   },
   "scripture-puzzles": {
     label: "Verse Reveal",
     shortDescription: "Turn-based random scripture rounds with letter scoring and full-solve bonuses.",
     setupPrompt: "Five random scripture rounds are selected and turns rotate automatically after each action.",
-    accent: "#5d3567"
+    accent: "#5d3567",
+    buzzTurnPolicy: "buzz-to-solve"
   },
   "bible-timeline": {
     label: "Bible Timeline",
     shortDescription: "Arrange Bible events in chronological order before submitting the full timeline.",
     setupPrompt: "Five random timeline rounds are selected. A full correct order scores 10 points.",
-    accent: "#7c3f2c"
+    accent: "#7c3f2c",
+    buzzTurnPolicy: "buzz-replaces-turn"
   },
   "verse-scramble": {
     label: "Verse Scramble",
     shortDescription: "Rebuild a short KJV verse from scrambled word tiles.",
     setupPrompt: "Five random KJV verse rounds are selected. Click tiles into the answer row, then submit.",
-    accent: "#285f73"
+    accent: "#285f73",
+    buzzTurnPolicy: "buzz-replaces-turn"
   },
   "bible-connections": {
     label: "Bible Connections",
     shortDescription: "Find four connected sets of four Bible terms from a shuffled sixteen-tile board.",
     setupPrompt: "Three random connections boards are selected. Each correct group scores 5 points.",
-    accent: "#5c6f2a"
+    accent: "#5c6f2a",
+    buzzTurnPolicy: "buzz-replaces-turn"
   },
   "name-that-book": {
     label: "Name That Book",
     shortDescription: "Guess the Bible book from a five-clue ladder with one-point steal attempts.",
     setupPrompt: "Ten random book rounds are selected. Earlier clues score more points.",
-    accent: "#69436d"
+    accent: "#69436d",
+    buzzTurnPolicy: "buzz-orders-steals"
   },
   "before-or-after": {
     label: "Before Or After",
     shortDescription: "Choose which of two Bible events happened first.",
     setupPrompt: "Fifteen random comparison rounds are selected. Each correct answer scores 3 points.",
-    accent: "#83572a"
+    accent: "#83572a",
+    buzzTurnPolicy: "buzz-replaces-turn"
   },
   "reference-rush": {
     label: "Reference Rush",
     shortDescription: "Read a KJV verse and name its scripture reference before the round moves on.",
     setupPrompt: "Ten random KJV verse rounds are selected. A correct reference scores 5 points.",
-    accent: "#386b7d"
+    accent: "#386b7d",
+    buzzTurnPolicy: "buzz-replaces-turn"
   },
   "chapter-finder": {
     label: "Chapter Finder",
     shortDescription: "Identify the Bible book and chapter for a prompt, event, quote, person, or theme.",
     setupPrompt: "Ten random book-and-chapter prompts are selected. A correct answer scores 5 points.",
-    accent: "#6a6f2c"
+    accent: "#6a6f2c",
+    buzzTurnPolicy: "buzz-replaces-turn"
   },
   "who-said-it": {
     label: "Who Said It?",
     shortDescription: "Identify the speaker of a recognizable KJV Bible quote or statement.",
     setupPrompt: "Ten random quote rounds are selected. A correct speaker scores 5 points.",
-    accent: "#7f3b4a"
+    accent: "#7f3b4a",
+    buzzTurnPolicy: "buzz-replaces-turn"
   },
   "bible-books-relay": {
     label: "Bible Books Relay",
     shortDescription: "Arrange shuffled Bible book tiles into canonical order.",
     setupPrompt: "Five random book-order relays are selected. A perfect order scores 10 points.",
-    accent: "#3f6b45"
+    accent: "#3f6b45",
+    buzzTurnPolicy: "buzz-replaces-turn"
   },
   "missing-word": {
     label: "Missing Word",
     shortDescription: "Fill in one to three missing words from a KJV verse.",
     setupPrompt: "Ten random KJV verse rounds are selected. More missing words score more points.",
-    accent: "#75512e"
+    accent: "#75512e",
+    buzzTurnPolicy: "buzz-replaces-turn"
   },
   "odd-one-out": {
     label: "Odd One Out",
     shortDescription: "Pick the Bible person, place, event, or book that does not fit the group.",
     setupPrompt: "Ten random odd-one-out rounds are selected. Wrong choices disappear and scoring steps down.",
-    accent: "#83572a"
+    accent: "#83572a",
+    buzzTurnPolicy: "buzz-replaces-turn"
   },
   genealogy: {
     label: "Fill in the Genealogy",
     shortDescription: "Build the Bible family line one correct name at a time.",
     setupPrompt: "Six random genealogy chains are selected. Submit the next person in the authored lineage.",
-    accent: "#3f6b45"
+    accent: "#3f6b45",
+    buzzTurnPolicy: "turn-based-only"
   },
   "prophecy-match": {
     label: "Prophecy Match Challenge",
     shortDescription: "Match Old Testament prophecy cards with New Testament fulfillment cards.",
     setupPrompt: "Five prophecy pairs are selected. Match each prophecy to its fulfillment.",
-    accent: "#6a4b2c"
+    accent: "#6a4b2c",
+    buzzTurnPolicy: "buzz-replaces-turn"
   },
   "parable-match": {
     label: "Parable Match",
     shortDescription: "Match Jesus' parables with their central lessons.",
     setupPrompt: "Five parable pairs are selected. Match each parable to its lesson.",
-    accent: "#5d3567"
+    accent: "#5d3567",
+    buzzTurnPolicy: "buzz-replaces-turn"
   },
   "messiah-prophecy": {
     label: "Messiah Prophecy Challenge",
     shortDescription: "Identify the messianic fulfillment, event, person, or theme tied to a prophecy.",
     setupPrompt: "Ten prophecy prompts are selected. Wrong choices disappear and scoring steps down.",
-    accent: "#2f6653"
+    accent: "#2f6653",
+    buzzTurnPolicy: "buzz-replaces-turn"
   },
   "prophecy-clue-ladder": {
     label: "Prophecy Clue Ladder",
     shortDescription: "Name the prophecy theme, reference, fulfillment, person, or event from five clues.",
     setupPrompt: "Ten prophecy clue rounds are selected. Each miss or timer expiry reveals the next clue.",
-    accent: "#69436d"
+    accent: "#69436d",
+    buzzTurnPolicy: "buzz-replaces-turn"
   },
   "fulfillment-finder": {
     label: "Fulfillment Finder Challenge",
     shortDescription: "Choose the Old Testament prophecy connected to a New Testament fulfillment.",
     setupPrompt: "Ten fulfillment prompts are selected. Wrong prophecy references are disabled.",
-    accent: "#386b7d"
+    accent: "#386b7d",
+    buzzTurnPolicy: "buzz-replaces-turn"
   },
   "prophecy-categories": {
     label: "Prophecy Categories Challenge",
     shortDescription: "Sort prophecy cards into five reference-based categories.",
     setupPrompt: "One fifteen-card sorting board is selected with five prophecy categories.",
-    accent: "#7f3b4a"
+    accent: "#7f3b4a",
+    buzzTurnPolicy: "buzz-replaces-turn"
   },
   "complete-the-verse": {
     label: "Complete the Verse Challenge",
     shortDescription: "Complete a well-known KJV verse from Psalms or Proverbs from four endings.",
     setupPrompt: "Ten verse-ending rounds are selected. Wrong endings disappear and scoring steps down.",
-    accent: "#2f6653"
+    accent: "#2f6653",
+    buzzTurnPolicy: "buzz-replaces-turn"
   },
   "wisdom-match": {
     label: "Wisdom Match Challenge",
     shortDescription: "Match a Proverbs excerpt to its wisdom theme.",
     setupPrompt: "Ten Proverbs wisdom rounds are selected. Wrong themes disappear and scoring steps down.",
-    accent: "#8a5c24"
+    accent: "#8a5c24",
+    buzzTurnPolicy: "buzz-replaces-turn"
   },
   "psalm-theme": {
     label: "Psalm Theme Challenge",
     shortDescription: "Identify the major theme of a short Psalm excerpt.",
     setupPrompt: "Ten Psalm theme rounds are selected. Wrong themes disappear and scoring steps down.",
-    accent: "#285f73"
+    accent: "#285f73",
+    buzzTurnPolicy: "buzz-replaces-turn"
   },
   "proverb-categories": {
     label: "Proverb Categories Challenge",
     shortDescription: "Sort Proverbs cards into five wisdom categories.",
     setupPrompt: "One Proverbs sorting board is selected with five wisdom categories.",
-    accent: "#69436d"
+    accent: "#69436d",
+    buzzTurnPolicy: "buzz-replaces-turn"
   },
   "psalm-reference-finder": {
     label: "Psalm Reference Finder",
     shortDescription: "Choose the correct Psalm reference for a familiar KJV phrase.",
     setupPrompt: "Ten Psalm reference rounds are selected. Wrong references disappear and scoring steps down.",
-    accent: "#386b7d"
+    accent: "#386b7d",
+    buzzTurnPolicy: "buzz-replaces-turn"
   },
   "two-truths-and-a-lie": {
     label: "Two Truths and a Lie",
     shortDescription: "Spot the false statement among three about a Bible figure or event.",
     setupPrompt: "Ten random subject rounds are selected. Wrong picks disappear and scoring steps down.",
-    accent: "#7f3b4a"
+    accent: "#7f3b4a",
+    buzzTurnPolicy: "buzz-replaces-turn"
   },
   "relay-verse-build": {
     label: "Relay Verse Build",
     shortDescription: "Take turns typing one word at a time to rebuild a hidden KJV verse.",
     setupPrompt: "Five random KJV verse rounds are selected. A miss doesn't pass the turn, but Skip Word does.",
-    accent: "#3f6b45"
+    accent: "#3f6b45",
+    buzzTurnPolicy: "turn-based-only"
   },
   "verse-typing-race": {
     label: "Verse Typing Race",
     shortDescription: "Type a KJV verse as fast and accurately as you can.",
     setupPrompt: "Five random short KJV verse rounds are selected. Score is based on speed and accuracy.",
-    accent: "#285f73"
+    accent: "#285f73",
+    buzzTurnPolicy: "not-supported"
   },
   "word-ladder": {
     label: "Word Ladder",
     shortDescription: "Change one letter at a time to turn the start word into the end word.",
     setupPrompt: "Six random word ladders are selected. Take turns submitting the next valid word in the chain.",
-    accent: "#6a6f2c"
+    accent: "#6a6f2c",
+    buzzTurnPolicy: "turn-based-only"
   },
   "bible-anagrams": {
     label: "Bible Anagrams",
     shortDescription: "Unscramble the letters to name a Bible person, place, thing, or event.",
     setupPrompt: "Ten random anagram rounds are selected. Easy and medium rounds show a clue; hard rounds do not.",
-    accent: "#8a5c24"
+    accent: "#8a5c24",
+    buzzTurnPolicy: "buzz-replaces-turn"
   },
   "bible-cryptogram": {
     label: "Bible Cryptogram",
     shortDescription: "Crack a letter-substitution cipher to reveal a Bible name, phrase, or short verse.",
     setupPrompt: "A fresh random cipher is generated for each round. Guess a letter to reveal every occurrence, or solve the whole puzzle at once.",
-    accent: "#5d3567"
+    accent: "#5d3567",
+    buzzTurnPolicy: "buzz-to-solve"
   }
 };
 
@@ -926,7 +966,10 @@ const BIBLE_CRYPTOGRAM_ROUNDS_PER_GAME = 5;
 const DEFAULT_PARTICIPANT_COLORS = ["#2f6f5f", "#8a5c24", "#69436d", "#285f73", "#9b4a36", "#5c6f2a"];
 const HOST_MARK_INCORRECT_PLACEHOLDER = "__host_mark_incorrect__";
 
-const HOST_PHASE_ONE_GAMES = new Set<GameId>([
+const HOST_JUDGING_GAMES = new Set<GameId>([
+  "five-guesses",
+  "initials",
+  "scripture-puzzles",
   "before-or-after",
   "reference-rush",
   "chapter-finder",
@@ -949,7 +992,12 @@ const HOST_PHASE_ONE_GAMES = new Set<GameId>([
   "prophecy-match",
   "parable-match",
   "prophecy-categories",
-  "proverb-categories"
+  "proverb-categories",
+  "name-that-book",
+  "relay-verse-build",
+  "word-ladder",
+  "genealogy",
+  "bible-cryptogram"
 ]);
 
 function createPlayerStats(): PlayerStats {
@@ -2251,15 +2299,15 @@ export function setCurrentActor(state: SessionState, participantId: string): Act
   nextState.turnIndex = participantIndex;
   const participant = nextState.participants[participantIndex];
 
-  if (nextState.gameId === "name-that-book") {
+  if (nextState.gameId === "five-guesses" || nextState.gameId === "initials" || nextState.gameId === "name-that-book") {
     const prompt = nextState.currentPrompt;
-    if (prompt.phase === "primary") {
+    if (prompt && prompt.phase === "primary") {
       prompt.primaryParticipantIndex = participantIndex;
       prompt.primaryMemberName = getCurrentMemberName(participant);
       prompt.primaryTurnConsumed = false;
       prompt.stealOrder = buildStealOrder(nextState.participants.length, participantIndex);
       prompt.stealCursor = 0;
-    } else if (prompt.phase === "steal") {
+    } else if (prompt && prompt.phase === "steal") {
       prompt.stealOrder = [participantIndex, ...prompt.stealOrder.filter((entry) => entry !== participantIndex)];
       prompt.stealCursor = 0;
     }
@@ -2272,6 +2320,22 @@ function withHostActor(state: SessionState, participantId: string): SessionState
   const participantIndex = getParticipantIndexById(state, participantId);
   const nextState = structuredClone(state);
   nextState.turnIndex = participantIndex;
+  const participant = nextState.participants[participantIndex];
+
+  if (nextState.gameId === "five-guesses" || nextState.gameId === "initials" || nextState.gameId === "name-that-book") {
+    const prompt = nextState.currentPrompt;
+    if (prompt && prompt.phase === "primary") {
+      prompt.primaryParticipantIndex = participantIndex;
+      prompt.primaryMemberName = getCurrentMemberName(participant);
+      prompt.primaryTurnConsumed = false;
+      prompt.stealOrder = buildStealOrder(nextState.participants.length, participantIndex);
+      prompt.stealCursor = 0;
+    } else if (prompt && prompt.phase === "steal") {
+      prompt.stealOrder = [participantIndex, ...prompt.stealOrder.filter((entry) => entry !== participantIndex)];
+      prompt.stealCursor = 0;
+    }
+  }
+
   return nextState;
 }
 
@@ -2286,11 +2350,35 @@ function getFirstUnsortedProverbCategoryCard(state: ProverbCategoriesState): Pro
 export function getHostAwardPoints(state: SessionState, participantId: string): number | null {
   getParticipantIndexById(state, participantId);
 
-  if (state.status !== "in-progress" || !HOST_PHASE_ONE_GAMES.has(state.gameId)) {
+  if (state.status !== "in-progress" || !HOST_JUDGING_GAMES.has(state.gameId)) {
     return null;
   }
 
   switch (state.gameId) {
+    case "five-guesses":
+      return state.currentPrompt
+        ? state.boardCards.find((card) => card.id === state.currentPrompt?.cardId)?.boardValue ?? null
+        : null;
+    case "initials":
+      return state.currentPrompt ? scoreInitials(state.currentPrompt.revealedClues) : null;
+    case "name-that-book":
+      return state.currentPrompt.phase === "primary" ? 6 - state.currentPrompt.revealedClues : 1;
+    case "scripture-puzzles":
+      return state.currentPrompt.isComplete
+        ? null
+        : scoreScriptureSolve(countRemainingLetters(getScriptureText(state.currentPrompt.round), state.currentPrompt.attemptedLetters));
+    case "bible-cryptogram":
+      return state.currentPrompt.isComplete ? null : scoreScriptureSolve(getBibleCryptogramRemainingLetters(state));
+    case "word-ladder":
+      return state.currentPrompt.phase === "active"
+        ? scoreWordLadder(state.currentPrompt.round.revealPath.length - 1, state.currentPrompt.round.minSteps)
+        : null;
+    case "genealogy":
+      return state.currentPrompt.phase === "active"
+        ? scoreWordLadder(state.currentPrompt.round.fullChain.length - 1, state.currentPrompt.round.fullChain.length - 1)
+        : null;
+    case "relay-verse-build":
+      return state.currentPrompt.phase === "active" ? scoreProphecyRetry(state.currentPrompt.totalWrongAttempts) : null;
     case "before-or-after":
       return 3;
     case "reference-rush":
@@ -2365,6 +2453,74 @@ export function markCorrectForHost(
   let result: ActionResult;
 
   switch (hostState.gameId) {
+    case "five-guesses":
+    case "initials":
+      result = submitBoardGuess(hostState, hostState.currentPrompt?.round.answer ?? "");
+      break;
+    case "name-that-book":
+      result = submitNameThatBookGuess(hostState, hostState.currentPrompt.round.book);
+      break;
+    case "scripture-puzzles": {
+      const nextState = structuredClone(hostState);
+      nextState.currentPrompt.phase = "solve";
+      result = submitScriptureSolve(nextState, getScriptureText(nextState.currentPrompt.round));
+      break;
+    }
+    case "bible-cryptogram":
+      result = submitBibleCryptogramSolve(hostState, hostState.currentPrompt.round.verseText);
+      break;
+    case "relay-verse-build": {
+      const nextState = structuredClone(hostState);
+      const prompt = nextState.currentPrompt;
+      const actorIndex = nextState.turnIndex;
+      const actorLabel = getCurrentActorLabel(nextState);
+      const stats = getParticipantStats(nextState, actorIndex);
+      const points = scoreProphecyRetry(prompt.totalWrongAttempts);
+      prompt.revealedCount = prompt.words.length;
+      prompt.wrongAttemptsThisWord = 0;
+      prompt.wasCorrect = true;
+      stats.totalScore += points;
+      stats.roundWins += 1;
+      consumeTurn(nextState.participants, actorIndex);
+      nextState.turnIndex = nextIndex(nextState.participants.length, actorIndex);
+      resolveRoundState(nextState, `${actorLabel} completed the verse for ${points} points.`);
+      result = addActivity(nextState, "success", nextState.currentPrompt.resolvedMessage ?? "Verse completed.");
+      break;
+    }
+    case "word-ladder": {
+      const nextState = structuredClone(hostState);
+      const prompt = nextState.currentPrompt;
+      const actorIndex = nextState.turnIndex;
+      const actorLabel = getCurrentActorLabel(nextState);
+      const stats = getParticipantStats(nextState, actorIndex);
+      const stepsTaken = prompt.round.revealPath.length - 1;
+      const points = scoreWordLadder(stepsTaken, prompt.round.minSteps);
+      prompt.chain = [...prompt.round.revealPath];
+      prompt.wasCorrect = true;
+      stats.totalScore += points;
+      stats.roundWins += 1;
+      consumeTurn(nextState.participants, actorIndex);
+      resolveRoundState(nextState, `${actorLabel} completed the ladder in ${stepsTaken} steps for ${points} points.`);
+      result = addActivity(nextState, "success", nextState.currentPrompt.resolvedMessage ?? "Ladder completed.");
+      break;
+    }
+    case "genealogy": {
+      const nextState = structuredClone(hostState);
+      const prompt = nextState.currentPrompt;
+      const actorIndex = nextState.turnIndex;
+      const actorLabel = getCurrentActorLabel(nextState);
+      const stats = getParticipantStats(nextState, actorIndex);
+      const stepsTaken = prompt.round.fullChain.length - 1;
+      const points = scoreWordLadder(stepsTaken, stepsTaken);
+      prompt.chain = [...prompt.round.fullChain];
+      prompt.wasCorrect = true;
+      stats.totalScore += points;
+      stats.roundWins += 1;
+      consumeTurn(nextState.participants, actorIndex);
+      resolveRoundState(nextState, `${actorLabel} completed the genealogy in ${stepsTaken} generations for ${points} points.`);
+      result = addActivity(nextState, "success", nextState.currentPrompt.resolvedMessage ?? "Genealogy completed.");
+      break;
+    }
     case "before-or-after":
       result = answerBeforeOrAfter(hostState, hostState.currentPrompt.round.earlierEvent);
       break;
@@ -2499,6 +2655,8 @@ export function markCorrectForHost(
       result = submitProverbCategory(next);
       break;
     }
+    case "verse-typing-race":
+      throw new Error("Host judging is not supported for Verse Typing Race.");
     default:
       throw new Error("Host judging is not available for this game yet.");
   }
@@ -2518,6 +2676,24 @@ export function markIncorrectForHost(
   const hostState = withHostActor(state, participantId);
 
   switch (hostState.gameId) {
+    case "five-guesses":
+    case "initials":
+      return submitBoardGuess(hostState, HOST_MARK_INCORRECT_PLACEHOLDER);
+    case "name-that-book":
+      return submitNameThatBookGuess(hostState, HOST_MARK_INCORRECT_PLACEHOLDER);
+    case "scripture-puzzles": {
+      const nextState = structuredClone(hostState);
+      nextState.currentPrompt.phase = "solve";
+      return submitScriptureSolve(nextState, options.answerText ?? HOST_MARK_INCORRECT_PLACEHOLDER);
+    }
+    case "bible-cryptogram":
+      return submitBibleCryptogramSolve(hostState, options.answerText ?? HOST_MARK_INCORRECT_PLACEHOLDER);
+    case "relay-verse-build":
+      return submitRelayWord(hostState, options.answerText ?? HOST_MARK_INCORRECT_PLACEHOLDER);
+    case "word-ladder":
+      return passWordLadderTurn(hostState);
+    case "genealogy":
+      return submitGenealogyStep(hostState, options.answerText ?? HOST_MARK_INCORRECT_PLACEHOLDER);
     case "before-or-after":
       return answerBeforeOrAfter(hostState, hostState.currentPrompt.round.earlierEvent === "left" ? "right" : "left");
     case "reference-rush":
@@ -2603,6 +2779,8 @@ export function markIncorrectForHost(
       return passProphecyCategory(hostState);
     case "proverb-categories":
       return passProverbCategory(hostState);
+    case "verse-typing-race":
+      throw new Error("Host judging is not supported for Verse Typing Race.");
     default:
       throw new Error("Host judging is not available for this game yet.");
   }
