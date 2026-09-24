@@ -4,8 +4,9 @@
 
 Maps planned features to release versions for Bible Challenge and the Admin Console, and defines how version numbers are chosen.
 
-- **Current version:** 0.1.11 (both apps, tag `v0.1.11`)
-- **History:** every release so far (`v0.1.0` through `v0.1.11`) has been a patch bump, including the release that added six games and split out the admin console.
+- **Current version:** 0.2.0 (both apps, tag `v0.2.0`)
+- **History:** `v0.1.0` through `v0.1.11` were patch bumps, including the release that added six games and split out the admin console. `v0.2.0` added Host Mode.
+- **Product name:** Bible Challenge, becoming **Agon: The Bible Challenge** in 0.5.0 (`agon-ui-ux-design-system-spec.md`).
 
 ## Version Rules
 
@@ -42,9 +43,15 @@ No major bumps before 1.0.0.
 | **0.2.0** | Host Mode / Game Master Controls | `enhancement-spec-tournament-daily-host-map.md`, section 3 | Minor | Refactors every game's submit path. Adds Select Answering Participant, Mark Correct, Mark Incorrect, participant score selector, and multi-level undo. |
 | **0.3.0** | Host Remote: phone/tablet host controller | `enhancement-spec-tournament-daily-host-map.md`, section 3 (Host Remote) | Minor | First release that opens a network port. Triggers a Windows firewall prompt. Adds `ws` and `qrcode` runtime dependencies. Builds the LAN server Phone Mode reuses. |
 | **0.4.0** | Phone Mode, Stage 1: Buzz Only | `phone-buzzer-spec.md`, section 3 | Minor | Adds phone buzzers on the Host Remote LAN server. |
+| **0.5.0** | Agon 1: Foundation — rename continuity, brand assets, design tokens, UI primitives, adaptive layout | `agon-ui-ux-design-system-spec.md` | Minor | Product becomes Agon. Keeps the shared data folder, installer identity, and update asset names working (#117). Can be built in parallel with 0.3.0/0.4.0. |
+| **0.6.0** | Agon 2: Core Apps — Challenge home/setup/settings, Admin shell | `agon-ui-ux-design-system-spec.md` | Minor | |
+| **0.7.0** | Agon 3: Game Presentation — presentation system, projector layouts, existing-game migration | `agon-ui-ux-design-system-spec.md` | Minor | Games not built yet get their Agon presentation in their own milestone. |
+| **0.8.0** | Agon 4: Host Experience — Host Controls redesign, responsive Host Remote | `agon-ui-ux-design-system-spec.md` | Minor | Needs 0.3.0 Host Remote. |
 | **1.0.0** | Stabilization milestone | — | Major (milestone) | No new features. Released once the 1.0.0 criteria below are met. |
 | 1.x.0 | Phone Mode, Stage 2: Typed Answer | `phone-buzzer-spec.md`, section 4 | Minor | Or Stage 3 Choice Select first; see the open decision in the phone spec. |
 | 1.x.0 | Phone Mode, Stage 3: Full Phone Interaction | `phone-buzzer-spec.md`, section 5 | Minor | Can split into several minors by step (Choice Select, Collect All, Map/medium games, board games). |
+| 1.x.0 | Agon 5: Player Controller | `agon-ui-ux-design-system-spec.md` | Minor | Styles the phone interactions; needs Phone Mode Stages 2-3, the controller extensions, and Bible Map Challenge for maps. |
+| 1.x.0 | Agon 6: Polish & Validation | `agon-ui-ux-design-system-spec.md` | Minor | Motion/audio/haptics polish, then the accessibility and real-device validation gate. After Agon 5. |
 | 1.x.0 | Tournament / Season Mode | `enhancement-spec-tournament-daily-host-map.md`, section 1 | Minor | New persisted tournament data. |
 | 1.x.0 | Daily Challenge Pack | `enhancement-spec-tournament-daily-host-map.md`, section 2 | Minor | Depends on seeded randomness from the testing spec for repeatable daily selection. |
 | 1.x.0 | Bible Map Challenge | `enhancement-spec-tournament-daily-host-map.md`, section 4 | Minor | New game, new content schema, and map assets. Prerequisite for Phone Mode map interaction. |
@@ -61,7 +68,10 @@ The order of the `1.x.0` rows is not fixed. Each gets the next minor number when
 - **0.3.0 Host Remote** needs Host Mode (host actions, `getPromptId`, host hints).
 - **0.4.0 Phone Mode Stage 1** needs Host Mode (prompt identity, host judging actions, buzz turn policy) and the Host Remote LAN server core.
 - **Themed content packs** need the themed content groundwork. Pack Daily pools need Daily Challenge; pack map mini-packs need Bible Map Challenge. Neither blocks a pack from shipping.
+- **0.5.0-0.8.0 Agon 1-4** run in order. Agon 1-3 need nothing else; Agon 4 needs 0.3.0 Host Remote.
 - **Phone Mode Stages 2 and 3** need Stage 1.
+- **Agon 5** needs Phone Mode Stage 1, then Stages 2-3, the controller extensions, and Bible Map Challenge for its later steps. **Agon 6** follows Agon 5.
+- **New games and variants** should follow Agon 3 so they use the Game Presentation System.
 - **Phone Mode map interaction** needs Bible Map Challenge.
 - **Daily Challenge** needs seeded randomness.
 
@@ -70,8 +80,9 @@ The order of the `1.x.0` rows is not fixed. Each gets the next minor number when
 Release 1.0.0 when all of these are true:
 
 - Host Mode (0.2.0), Host Remote (0.3.0), and Phone Mode Stage 1 (0.4.0) are released and have been used in at least one real event without a blocking issue.
+- The Agon redesign through Agon 4 (0.5.0-0.8.0) is released, so 1.0.0 ships under the Agon name.
 - Layer 1 game play-through tests and the Layer 2 game tests pass for every game.
-- Screenshot baselines exist for the menu, all themes, and every game screen.
+- Screenshot baselines exist for the menu, all themes, and every game screen, taken from the Agon design.
 - Both apps tolerate settings keys they do not recognize (see Release Checklist).
 - No known bugs that lose data or block running a game.
 
@@ -91,10 +102,11 @@ Additional items for specific releases:
 - **0.2.0 Host Mode:** release notes explain Mark Correct / Mark Incorrect and that score buttons now target a chosen participant.
 - **0.3.0 Host Remote:** release notes include firewall guidance, the Private network profile requirement, the Mobile Hotspot fallback for guest Wi-Fi, and the plain-HTTP answer-key caveat.
 - **0.4.0 Phone Mode:** release notes repeat the network guidance and add the venue checklist.
+- **0.5.0 Agon 1:** upgrade-install test from the last Bible Challenge release keeps all data in both apps, and older admin consoles find the update (#117). Release notes explain the new name.
 - **Bible Map Challenge:** check the installer size increase from map assets.
 
 ## Open Decisions
 
-1. **1.0.0 timing.** This map places 1.0.0 right after Phone Mode Stage 1 (0.4.0). The alternative is to wait until more of the 1.x features ship.
+1. **1.0.0 timing.** This map places 1.0.0 after Phone Mode Stage 1 (0.4.0) and Agon 4 (0.8.0). The alternative is to wait until more of the 1.x features ship.
 2. **Order of 1.x features.** Phone Mode Stages 2-3, Tournament, Daily Challenge, and Map Challenge have no fixed order yet.
 3. **Phone Mode Stage 3 packaging.** Ship as one minor or one minor per step.
