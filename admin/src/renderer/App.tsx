@@ -39,6 +39,28 @@ declare global {
 }
 
 type StatusMessage = { tone: "info" | "warning" | "success"; text: string };
+type AnswererTimerBehavior = "pause" | "answer-clock" | "continue";
+type HostTimerIncrement = 15 | 30 | 60;
+
+interface HostSettings {
+  hostControlsEnabled: boolean;
+  requireAdminPinForScoreAdjustment: boolean;
+  allowHostAnswerReveal: boolean;
+  hostTimerIncrements: HostTimerIncrement[];
+  hostUndoDepth: number;
+  answererTimerBehavior: AnswererTimerBehavior;
+  answerClockSeconds: number;
+}
+
+const DEFAULT_HOST_SETTINGS: HostSettings = {
+  hostControlsEnabled: true,
+  requireAdminPinForScoreAdjustment: false,
+  allowHostAnswerReveal: true,
+  hostTimerIncrements: [15, 30, 60],
+  hostUndoDepth: 20,
+  answererTimerBehavior: "pause",
+  answerClockSeconds: 10
+};
 
 interface RoundIndexEntry {
   key: string;
@@ -998,11 +1020,21 @@ function SettingsTab() {
   const [feedbackEndpoint, setFeedbackEndpoint] = useState("");
   const [pin, setPin] = useState("");
   const [lockConfigured, setLockConfigured] = useState(false);
+  const [hostSettings, setHostSettings] = useState<HostSettings>(DEFAULT_HOST_SETTINGS);
   const [status, setStatus] = useState<StatusMessage | null>(null);
 
   useEffect(() => {
     window.adminHost?.getFeedbackEndpoint().then(setFeedbackEndpoint);
     window.adminHost?.getAdminLockState().then((state) => setLockConfigured(state.configured));
+    window.adminHost?.getHostSettings().then((settings) =>
+      setHostSettings({
+        ...DEFAULT_HOST_SETTINGS,
+        ...settings,
+        hostTimerIncrements: settings.hostTimerIncrements.filter((value): value is HostTimerIncrement =>
+          value === 15 || value === 30 || value === 60
+        )
+      })
+    );
   }, []);
 
   async function saveFeedbackEndpoint() {
@@ -1052,6 +1084,40 @@ function SettingsTab() {
     setStatus({ tone: "info", text: "Shared app settings cleared." });
   }
 
+  function updateHostSettings(update: Partial<HostSettings>) {
+    setHostSettings((current) => ({ ...current, ...update }));
+  }
+
+  function toggleHostTimerIncrement(increment: HostTimerIncrement) {
+    setHostSettings((current) => {
+      const next = current.hostTimerIncrements.includes(increment)
+        ? current.hostTimerIncrements.filter((value) => value !== increment)
+        : [...current.hostTimerIncrements, increment].sort((left, right) => left - right);
+
+      return {
+        ...current,
+        hostTimerIncrements: next.length > 0 ? next : [increment]
+      };
+    });
+  }
+
+  async function saveHostSettings() {
+    if (!window.adminHost) return;
+    try {
+      const saved = await window.adminHost.setHostSettings(hostSettings);
+      setHostSettings({
+        ...DEFAULT_HOST_SETTINGS,
+        ...saved,
+        hostTimerIncrements: saved.hostTimerIncrements.filter((value): value is HostTimerIncrement =>
+          value === 15 || value === 30 || value === 60
+        )
+      });
+      setStatus({ tone: "success", text: "Host mode settings saved." });
+    } catch (error) {
+      setStatus({ tone: "warning", text: error instanceof Error ? error.message : "Host settings could not be saved." });
+    }
+  }
+
   return (
     <div className="settings-grid">
       <section className="pack-detail">
@@ -1070,6 +1136,85 @@ function SettingsTab() {
             <button type="button" className="ghost-button" onClick={clearPin} disabled={!lockConfigured}>Clear PIN</button>
           </div>
         </div>
+      </section>
+      <section className="pack-detail">
+        <h2>Host Mode</h2>
+        <div className="settings-check-grid">
+          <label className="check-row">
+            <input
+              type="checkbox"
+              checked={hostSettings.hostControlsEnabled}
+              onChange={(event) => updateHostSettings({ hostControlsEnabled: event.target.checked })}
+            />
+            Enable host mode controls
+          </label>
+          <label className="check-row">
+            <input
+              type="checkbox"
+              checked={hostSettings.requireAdminPinForScoreAdjustment}
+              onChange={(event) => updateHostSettings({ requireAdminPinForScoreAdjustment: event.target.checked })}
+            />
+            Require admin PIN for score adjustment
+          </label>
+          <label className="check-row">
+            <input
+              type="checkbox"
+              checked={hostSettings.allowHostAnswerReveal}
+              onChange={(event) => updateHostSettings({ allowHostAnswerReveal: event.target.checked })}
+            />
+            Allow answer reveal from host console
+          </label>
+        </div>
+        <div className="field-row">
+          <label>Default timer override increments</label>
+          <div className="inline-controls">
+            {[15, 30, 60].map((increment) => (
+              <label key={increment} className="check-row check-row-inline">
+                <input
+                  type="checkbox"
+                  checked={hostSettings.hostTimerIncrements.includes(increment as HostTimerIncrement)}
+                  onChange={() => toggleHostTimerIncrement(increment as HostTimerIncrement)}
+                />
+                {increment}s
+              </label>
+            ))}
+          </div>
+        </div>
+        <div className="field-row host-settings-row">
+          <label>Keep undo depth</label>
+          <input
+            className="text-input compact-input"
+            type="number"
+            min={1}
+            max={50}
+            value={hostSettings.hostUndoDepth}
+            onChange={(event) => updateHostSettings({ hostUndoDepth: Math.min(50, Math.max(1, Number(event.target.value) || 1)) })}
+          />
+        </div>
+        <div className="field-row host-settings-row">
+          <label>Default answerer timer behavior</label>
+          <select
+            className="text-input compact-input"
+            value={hostSettings.answererTimerBehavior}
+            onChange={(event) => updateHostSettings({ answererTimerBehavior: event.target.value as AnswererTimerBehavior })}
+          >
+            <option value="pause">Pause prompt timer</option>
+            <option value="answer-clock">Use answer clock</option>
+            <option value="continue">Keep timer running</option>
+          </select>
+        </div>
+        <div className="field-row host-settings-row">
+          <label>Default answer clock seconds</label>
+          <input
+            className="text-input compact-input"
+            type="number"
+            min={3}
+            max={120}
+            value={hostSettings.answerClockSeconds}
+            onChange={(event) => updateHostSettings({ answerClockSeconds: Math.min(120, Math.max(3, Number(event.target.value) || 10)) })}
+          />
+        </div>
+        <button type="button" className="primary-button" onClick={saveHostSettings}>Save Host Settings</button>
       </section>
       <section className="pack-detail">
         <h2>Shared App Settings</h2>

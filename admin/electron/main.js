@@ -52,6 +52,15 @@ const INSTALLER_ASSET_PATTERNS = {
   main: /^BibleChallenge-Setup-.*\.exe$/i,
   admin: /^BibleChallengeAdmin-Setup-.*\.exe$/i
 };
+const HOST_SETTINGS_DEFAULTS = {
+  hostControlsEnabled: true,
+  requireAdminPinForScoreAdjustment: false,
+  allowHostAnswerReveal: true,
+  hostTimerIncrements: [15, 30, 60],
+  hostUndoDepth: 20,
+  answererTimerBehavior: "pause",
+  answerClockSeconds: 10
+};
 
 function getAppSettingsPath() {
   return path.join(app.getPath("userData"), "app-settings.json");
@@ -254,6 +263,52 @@ async function setFeedbackEndpoint(endpoint) {
   const settings = (await readAppSettings()) ?? {};
   await writeAppSettings({ ...settings, feedbackEndpoint: endpoint });
   return endpoint;
+}
+
+function sanitizeHostSettings(input = {}) {
+  const increments = Array.isArray(input.hostTimerIncrements)
+    ? input.hostTimerIncrements.map((value) => Number(value)).filter((value) => [15, 30, 60].includes(value))
+    : HOST_SETTINGS_DEFAULTS.hostTimerIncrements;
+  const answererTimerBehavior = ["pause", "answer-clock", "continue"].includes(input.answererTimerBehavior)
+    ? input.answererTimerBehavior
+    : HOST_SETTINGS_DEFAULTS.answererTimerBehavior;
+  const hostUndoDepth = Number.isFinite(Number(input.hostUndoDepth))
+    ? Math.min(50, Math.max(1, Math.round(Number(input.hostUndoDepth))))
+    : HOST_SETTINGS_DEFAULTS.hostUndoDepth;
+  const answerClockSeconds = Number.isFinite(Number(input.answerClockSeconds))
+    ? Math.min(120, Math.max(3, Math.round(Number(input.answerClockSeconds))))
+    : HOST_SETTINGS_DEFAULTS.answerClockSeconds;
+
+  return {
+    hostControlsEnabled:
+      typeof input.hostControlsEnabled === "boolean"
+        ? input.hostControlsEnabled
+        : HOST_SETTINGS_DEFAULTS.hostControlsEnabled,
+    requireAdminPinForScoreAdjustment:
+      typeof input.requireAdminPinForScoreAdjustment === "boolean"
+        ? input.requireAdminPinForScoreAdjustment
+        : HOST_SETTINGS_DEFAULTS.requireAdminPinForScoreAdjustment,
+    allowHostAnswerReveal:
+      typeof input.allowHostAnswerReveal === "boolean"
+        ? input.allowHostAnswerReveal
+        : HOST_SETTINGS_DEFAULTS.allowHostAnswerReveal,
+    hostTimerIncrements: increments.length > 0 ? [...new Set(increments)] : HOST_SETTINGS_DEFAULTS.hostTimerIncrements,
+    hostUndoDepth,
+    answererTimerBehavior,
+    answerClockSeconds
+  };
+}
+
+async function getHostSettings() {
+  const settings = (await readAppSettings()) ?? {};
+  return sanitizeHostSettings(settings);
+}
+
+async function setHostSettings(hostSettings) {
+  const settings = (await readAppSettings()) ?? {};
+  const sanitized = sanitizeHostSettings(hostSettings);
+  await writeAppSettings({ ...settings, ...sanitized });
+  return sanitized;
 }
 
 async function getAdminLockState() {
@@ -630,6 +685,14 @@ ipcMain.handle("app-settings:get-feedback-endpoint", async () => {
 
 ipcMain.handle("app-settings:set-feedback-endpoint", async (_event, endpoint) => {
   return setFeedbackEndpoint(endpoint);
+});
+
+ipcMain.handle("app-settings:get-host-settings", async () => {
+  return getHostSettings();
+});
+
+ipcMain.handle("app-settings:set-host-settings", async (_event, hostSettings) => {
+  return setHostSettings(hostSettings);
 });
 
 ipcMain.handle("admin-lock:get-state", async () => {

@@ -17,6 +17,8 @@ contextBridge.exposeInMainWorld("adminHost", {
   clearAppSettings: () => ipcRenderer.invoke("app-settings:clear-all"),
   getFeedbackEndpoint: () => ipcRenderer.invoke("app-settings:get-feedback-endpoint"),
   setFeedbackEndpoint: (endpoint) => ipcRenderer.invoke("app-settings:set-feedback-endpoint", endpoint),
+  getHostSettings: () => ipcRenderer.invoke("app-settings:get-host-settings"),
+  setHostSettings: (settings) => ipcRenderer.invoke("app-settings:set-host-settings", settings),
   getAdminLockState: () => ipcRenderer.invoke("admin-lock:get-state"),
   setAdminPin: (pin) => ipcRenderer.invoke("admin-lock:set-pin", pin),
   clearAdminPin: () => ipcRenderer.invoke("admin-lock:clear-pin"),
