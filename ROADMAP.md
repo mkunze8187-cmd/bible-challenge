@@ -23,7 +23,7 @@ The product is being renamed from **Bible Challenge** to **Agon: The Bible Chall
 | **0.7.0** | Agon 3: Game Presentation | #105–#107 | Agon 2 |
 | **0.8.0** | Agon 4: Host Experience | #108–#110 | Agon 3, 0.3.0 |
 | **1.0.0** | Stabilization | #15, #87 | 0.3.0–0.8.0 |
-| 1.x | Feature tracks, Agon 5–6, content | see below | varies |
+| 1.x | Feature tracks, Agon 5–6, Agon game foundations, new games, content | see below | varies |
 
 Agon 1–3 do not depend on Host Remote or Phone Mode, so they can be worked in parallel with 0.3.0/0.4.0. Version numbers are assigned in the order releases actually ship.
 
@@ -131,9 +131,47 @@ Unblocks Bible Baseball and Forbidden Words phone flows.
 - #22 Daily Challenge Pack (needs seeded randomness from #1).
 - #23 Bible Map Challenge (prerequisite for phone and controller map interaction).
 
-### New Games and Variants
+### Agon Game Foundations: Cards, Randomizers, Timer
 
-Build after Agon 3 so new games and modes use the Game Presentation System (#105).
+Reusable engines the new Agon games build on. The three tracks run in parallel. Specs are in PRs #129, #140, and #151.
+
+- Card & Deck Engine: #130, #131–#137, #167–#169 (#169 is the generic-engine release gate).
+- Dice/Randomizer: #141–#150. Spinner, Wheel, and Casting Lots: #152–#155.
+- Shared Agon Timer: #156–#159.
+
+### Bible Playing Deck
+
+- #138 52 Bible-character card assignments.
+- #139 Bible Playing Deck validation (needs #131–#137, #167).
+
+This is content work. The generic Card Engine does not wait for it.
+
+### New Agon Games (ahead of the older game milestones)
+
+- **Pairs of Faith** #120–#128 (spec PR #119). #126 needs Agon Host #108/#109.
+- **Unveiled** #172 (spec PR #171). Needs Card Engine #130/#132/#133/#167 and Timer #156.
+- **Multitude** #174–#179 (spec PR #173). Needs Timer #156. Does not need the Card or Randomizer engines.
+- **Wayfinder** #181–#186 (spec PR #180). Needs Timer #156–#159. Does not need the Card or Randomizer engines.
+
+All four also need the Player Controller and Host Remote foundations (Phone Mode Stages 2–3, Agon 4–5).
+
+### Computer Player Framework
+
+- #160–#163, #165–#166 framework; #164 Pairs of Faith adapter is its proof (needs #121/#122).
+
+Computer opponents are optional for every game. They do not block any game's human-multiplayer release.
+
+```txt
+Timer #156–#159 ───────┬───────────────┬──> Multitude #174–#179
+                       │               └──> Wayfinder #181–#186
+Card Engine #130–#169 ─┴──> Unveiled #172
+Randomizer #141–#155 ──> future games
+Pairs of Faith #120–#128 ──> Computer Players #160–#166
+```
+
+### Older New Games and Variants
+
+Build after Agon 3 so new games and modes use the Game Presentation System (#105). Scheduled after the new Agon games above.
 
 - #52–#55 Progressive reveal content-batch games.
 - #56–#57 Bible Timeline sub-modes.
