@@ -125,9 +125,24 @@ Unblocks Bible Baseball and Forbidden Words phone flows.
 - #114 Motion, audio, haptics, game feedback polish.
 - #115 Accessibility, responsive, visual-regression, and real-device validation gate.
 
-### Tournament, Daily, and Map Modes
+### Tournaments, Event Championships & Persistent Events
 
-- #21 Tournament / Season Mode.
+Shared Agon infrastructure, not tied to one game. Spec: PR #188.
+
+- #189 Four-team limit and game competition capability contract.
+- #190 Persistent Events and Game Sessions (save/resume across gatherings, recovery, migrations).
+- #191 Shared match engine and scoring ledger.
+- #192 Single and Double Elimination. #193 Round-Robin, Swiss, and Round-Robin + Knockout (needs #192).
+- #194 Event Championship: qualifiers, combined seeding, final knockout.
+- #195 Admin setup. #196 Saved Events, Host Remote, and projector views.
+- #197 Integration into existing games (per game, as each game is ready).
+- #198 Release gate.
+- #21 Original Tournament / Season Mode issue (narrower scope, predates PR #188).
+
+Normal game points always count toward the Agon score. Match records drive progression, qualifier seeding points only set seeds, and placement bonuses are awarded once at completion.
+
+### Daily and Map Modes
+
 - #22 Daily Challenge Pack (needs seeded randomness from #1).
 - #23 Bible Map Challenge (prerequisite for phone and controller map interaction).
 
