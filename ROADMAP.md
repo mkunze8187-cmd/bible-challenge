@@ -6,7 +6,7 @@ The product is being renamed from **Bible Challenge** to **Agon: The Bible Chall
 
 ## Current Baseline
 
-- Current shipped version: `0.2.0` (Host Mode).
+- Current shipped version: `0.3.0` (Host Remote).
 - Pre-1.0 feature work ships as minor releases; dev-only, content, polish, and test work can ship as patch releases.
 - Both apps (Challenge and Admin Console) share one version number.
 

@@ -11,9 +11,24 @@ const MAX_PAYLOAD_BYTES = 16 * 1024;
 const MAX_CONNECTIONS = 60;
 const MAX_CONNECTIONS_PER_IP = 4;
 const STATIC_ROOT = path.join(__dirname, "static");
+const DIST_ROOT = path.join(__dirname, "..", "dist");
+const REMOTE_MANIFEST_PATH = path.join(DIST_ROOT, ".vite", "manifest.json");
 const STATIC_ROUTES = new Map([
   ["/", { file: "host-remote.html", contentType: "text/html; charset=utf-8" }],
   ["/host-remote", { file: "host-remote.html", contentType: "text/html; charset=utf-8" }]
+]);
+const CONTENT_TYPES = new Map([
+  [".css", "text/css; charset=utf-8"],
+  [".html", "text/html; charset=utf-8"],
+  [".js", "text/javascript; charset=utf-8"],
+  [".json", "application/json; charset=utf-8"],
+  [".svg", "image/svg+xml"],
+  [".png", "image/png"],
+  [".jpg", "image/jpeg"],
+  [".jpeg", "image/jpeg"],
+  [".webp", "image/webp"],
+  [".woff", "font/woff"],
+  [".woff2", "font/woff2"]
 ]);
 
 function applySecurityHeaders(response) {
@@ -21,6 +36,20 @@ function applySecurityHeaders(response) {
   response.setHeader("Cache-Control", "no-store");
   response.setHeader("Referrer-Policy", "no-referrer");
   response.setHeader("X-Content-Type-Options", "nosniff");
+}
+
+function applyRemoteCsp(response, address, port) {
+  response.setHeader(
+    "Content-Security-Policy",
+    [
+      "default-src 'self'",
+      `connect-src 'self' ws://${address}:${port}`,
+      "img-src 'self' data:",
+      "style-src 'self'",
+      "script-src 'self'",
+      "frame-ancestors 'none'"
+    ].join("; ")
+  );
 }
 
 function getRemoteIp(request) {
@@ -33,6 +62,61 @@ function isExpectedHost(header, address, port) {
 
 function isExpectedOrigin(header, address, port) {
   return header === `http://${address}:${port}`;
+}
+
+function getBuiltRemoteRoutes() {
+  if (!fs.existsSync(REMOTE_MANIFEST_PATH) || !fs.existsSync(path.join(DIST_ROOT, "remote.html"))) {
+    return null;
+  }
+
+  const manifest = JSON.parse(fs.readFileSync(REMOTE_MANIFEST_PATH, "utf8"));
+  const remoteEntry = manifest["remote.html"];
+  if (!remoteEntry?.file) {
+    return null;
+  }
+
+  const routes = new Map([
+    ["/", { filePath: path.join(DIST_ROOT, "remote.html"), contentType: "text/html; charset=utf-8" }],
+    ["/host-remote", { filePath: path.join(DIST_ROOT, "remote.html"), contentType: "text/html; charset=utf-8" }]
+  ]);
+
+  const addAsset = (file) => {
+    if (typeof file !== "string" || !file.startsWith("assets/")) {
+      return;
+    }
+    routes.set(`/${file}`, {
+      filePath: path.join(DIST_ROOT, file),
+      contentType: CONTENT_TYPES.get(path.extname(file).toLowerCase()) ?? "application/octet-stream"
+    });
+  };
+
+  addAsset(remoteEntry.file);
+  for (const file of remoteEntry.css ?? []) {
+    addAsset(file);
+  }
+  for (const file of remoteEntry.assets ?? []) {
+    addAsset(file);
+  }
+  for (const importKey of remoteEntry.imports ?? []) {
+    const imported = manifest[importKey];
+    addAsset(imported?.file);
+    for (const file of imported?.css ?? []) {
+      addAsset(file);
+    }
+  }
+
+  return routes;
+}
+
+function getStaticRemoteRoutes() {
+  const routes = new Map();
+  for (const [routePath, route] of STATIC_ROUTES) {
+    routes.set(routePath, {
+      filePath: path.join(STATIC_ROOT, route.file),
+      contentType: route.contentType
+    });
+  }
+  return routes;
 }
 
 function createLanServer(options = {}) {
@@ -129,6 +213,7 @@ function createLanServer(options = {}) {
   function listenOnAvailablePort(address, preferredPort) {
     return new Promise((resolve, reject) => {
       const attempts = Array.from({ length: PORT_ATTEMPTS }, (_entry, index) => preferredPort + index);
+      const routeMap = getBuiltRemoteRoutes() ?? getStaticRemoteRoutes();
 
       function tryNext(index) {
         if (index >= attempts.length) {
@@ -137,7 +222,7 @@ function createLanServer(options = {}) {
         }
 
         const port = attempts[index];
-        const nextServer = http.createServer((request, response) => handleHttpRequest(request, response, address, port));
+        const nextServer = http.createServer((request, response) => handleHttpRequest(request, response, address, port, routeMap));
         const nextWss = new WebSocketServer({ noServer: true, maxPayload: MAX_PAYLOAD_BYTES });
 
         nextServer.on("upgrade", (request, socket, head) => {
@@ -160,8 +245,9 @@ function createLanServer(options = {}) {
     });
   }
 
-  function handleHttpRequest(request, response, address, port) {
+  function handleHttpRequest(request, response, address, port, routeMap) {
     applySecurityHeaders(response);
+    applyRemoteCsp(response, address, port);
     if (!isExpectedHost(request.headers.host, address, port)) {
       response.writeHead(403);
       response.end("Forbidden");
@@ -169,7 +255,7 @@ function createLanServer(options = {}) {
     }
 
     const url = new URL(request.url ?? "/", `http://${address}:${port}`);
-    const route = STATIC_ROUTES.get(url.pathname);
+    const route = routeMap.get(url.pathname);
     if (!route || request.method !== "GET") {
       response.writeHead(404);
       response.end("Not found");
@@ -177,7 +263,7 @@ function createLanServer(options = {}) {
     }
 
     response.writeHead(200, { "Content-Type": route.contentType });
-    fs.createReadStream(path.join(STATIC_ROOT, route.file)).pipe(response);
+    fs.createReadStream(route.filePath).pipe(response);
   }
 
   function handleUpgrade(nextWss, request, socket, head, address, port) {
