@@ -1,332 +1,365 @@
-# Agon Bible Deck & Card System Specification
+# Agon Card & Deck Engine + Bible Playing Deck Specification
 
 ## Purpose
-The **Agon Bible Deck** is reusable card-game infrastructure for Agon: The Bible Challenge. It provides a canonical Bible-themed 52-card deck, private player/team hands, public table/pile state, responsive Player Controller hand UI, shared card-game actions, Host Remote support, and reusable engine primitives so future games do not each implement their own deck/hand/privacy system.
+The **Agon Card & Deck Engine** is reusable card infrastructure for Agon: The Bible Challenge. It supports arbitrary deck sizes, card types, card dimensions/presentations, multiple decks in one game, ordered or shuffled decks, dynamically generated/subset decks, private player/team hands, public table/pile state, responsive controllers, shared card actions, and Host Remote support.
+
+The canonical **52-card Agon Bible Playing Deck** (Scrolls, Crowns, Trumpets, Fish × A–K) is one specialized deck built on this engine; it is not the engine's data model.
 
 This specification defines infrastructure, not a single game.
 
-## Non-negotiable product rule: no betting or gambling
-Agon must not implement, enable, simulate, normalize, or provide reusable infrastructure specifically for betting or gambling mechanics.
+## Core architectural rule: generic card first, specialized cards second
+The base engine must not assume that every card has a suit, rank, character, traditional playing-card aspect ratio, belongs in a private hand, or even belongs to a shuffled deck.
 
-Forbidden mechanics/terminology include:
-- betting or wagering
-- ante/blinds/pots
-- raise/call as wagering actions
-- gambling chips/currency/bankrolls
-- risking points, money, prizes, virtual currency, or other value on uncertain outcomes
-- odds-based wagering or side bets
-- casino/poker-style betting rounds
-- APIs/components whose intended purpose is to make future wagering mechanics easy to add
-
-Ordinary non-gambling card actions are allowed where a game's rules require them: draw, play, discard, pass, exchange, hold, reveal, select, skip, withdraw/fold (only when it means leave/concede/pass without wagering), sort, reorder, meld/group, ask, give/transfer, and similar actions.
-
-Code, UI copy, sample/demo games, tests, documentation, and AI implementation instructions must not use betting examples as generic card-system demonstrations.
-
-## Canonical deck
-The base deck has **52 unique cards: 4 Agon suits × 13 standard ranks**.
-
-Ranks remain mathematically compatible with ordinary card mechanics:
-`A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K`.
-
-Rank is a game property, not a theological/spiritual ranking of Bible characters.
-
-### Agon suits
-Traditional suit symbols are not displayed to players. Agon uses four original biblical suit identities:
-
-1. **Scrolls** — symbol: stylized biblical scroll
-2. **Crowns** — symbol: stylized crown
-3. **Trumpets** — symbol: stylized biblical trumpet/shofar
-4. **Fish** — symbol: stylized ichthys/fish
-
-Suit marks must:
-- be custom Agon artwork rather than Unicode emoji/traditional ♠♥♦♣ symbols
-- have strongly differentiated silhouettes
-- remain recognizable at small card-corner/icon sizes
-- work in monochrome; color may reinforce but never be the only distinction
-- have detailed and simplified/small-size variants where needed
-- visually belong to the Agon logo/design system
-
-Internal code may use stable identifiers such as `scrolls`, `crowns`, `trumpets`, `fish`; do not expose traditional suit names as the user-facing identity.
-
-### Character mapping
-Each of the 52 cards may map to a canonical Bible character/figure plus educational metadata. The complete 52-character assignment is a separate content/design issue and must be reviewed as a whole rather than filled arbitrarily.
-
-Guidelines:
-- distribute women naturally across appropriate suits rather than creating a sex-specific suit
-- balance OT/NT and recognizable/less-obvious figures where suit semantics allow
-- court-card assignments should feel intentional
-- avoid duplicate character identities in the canonical 52 unless a later explicit variant deck defines otherwise
-- do not make card rank imply spiritual importance
-- Jesus and God are not ordinary competitive playing cards in the canonical deck
-- disputed/traditional character facts must be marked/worded appropriately in metadata
-
-Conceptual card metadata:
+Conceptually:
 ```ts
-type AgonSuit = 'scrolls' | 'crowns' | 'trumpets' | 'fish';
-type AgonRank = 'A'|'2'|'3'|'4'|'5'|'6'|'7'|'8'|'9'|'10'|'J'|'Q'|'K';
+type AgonCard = {
+  id: string;
+  deckId: string;
+  type: string;
+  content: Record<string, unknown>;
+  presentation?: CardPresentation;
+  metadata?: Record<string, unknown>;
+  tags?: string[];
+};
 
-type AgonBibleCard = {
-  id: string;              // stable canonical id
-  suit: AgonSuit;
-  rank: AgonRank;
-  characterId?: string;
-  displayName: string;
-  artworkAssetId?: string;
-  testament?: 'OT'|'NT';
-  era?: string;
-  books?: string[];
-  categories?: string[];
-  scriptureReferences?: string[];
-  facts?: string[];
+type CardPresentation = {
+  format?: 'playing'|'portrait'|'landscape'|'square'|'mini'|'custom';
+  aspectRatio?: number;
+  renderer?: string;
+  frontAssetId?: string;
+  backAssetId?: string;
+};
+```
+Exact types follow repository conventions. Specialized schemas validate their own content rather than weakening everything to unchecked data.
+
+Examples of specialized card types:
+- Bible Playing Card: suit + rank + character/educational metadata
+- Event Card: title + description + artwork + effect/reference ID
+- Challenge Card: prompt/category/difficulty/timer or challenge reference
+- Character Card: person/role/artwork/metadata
+- Location Card: place/map/artwork/metadata
+- Resource Card: resource type/value/icon/metadata
+- Objective/Mission Card: goal/requirements/progress metadata
+- Clue Card: clue/reveal order/visibility
+- Story Card: narrative content/next-state references
+- Modifier/Action Card: game-defined effect reference
+- Reference Card: retained informational content
+
+The engine stores/transitions cards; the consuming game interprets semantic effects. Do not create an unrestricted card-script language that can mutate arbitrary game state.
+
+## Deck definitions
+A deck is an ordered collection/pool of card identities plus rules/configuration describing how that collection is initialized and used.
+
+Conceptually:
+```ts
+type AgonDeckDefinition = {
+  id: string;
+  version: number;
+  name: string;
+  cardType?: string;
+  source: DeckSource;
+  initialOrder?: 'defined'|'shuffle'|'game';
+  defaultPresentation?: CardPresentation;
   tags?: string[];
 };
 ```
 
-## Optional wild cards
-Wild/Joker-like cards are not part of the canonical 52 and are disabled unless a specific non-gambling game requests them. If introduced, use Agon-themed identities such as Crown Wild/Scroll Wild rather than traditional joker imagery. Wild cards must not introduce wagering mechanics.
+### Arbitrary deck size
+There is no engine-level 52-card assumption. A deck may contain 2, 8, 12, 24, 40, 52, 66, 100+, or another practical count. Games/content validation may impose their own min/max.
 
-## Shared card engine
-Create reusable deterministic/server-authoritative primitives for:
-- create canonical deck / variant subset
-- seeded shuffle
-- deal
-- draw
-- private hand ownership
-- public/private piles
-- discard pile
-- face-up / face-down state
-- play to table
-- transfer/pass cards
-- return cards to deck/pile
-- sort/group/meld validation hooks
-- hand/card counts
-- reshuffle when a specific game allows it
-- reveal/hide transitions
-- game-specific legal-action adapters
+Examples:
+- 52-card Agon Bible Playing Deck
+- 66-card Books of the Bible deck
+- 27-card New Testament subset
+- 24-card Event deck
+- 12-card Mission deck
+- dynamically constructed set of all characters matching game-defined tags
 
-The shared engine should not encode one game's rules. Individual games compose these primitives and remain authoritative for legal moves/scoring/turns.
+### Static, subset, query/dynamic, and generated decks
+Support deck creation from:
+- explicit static card IDs in defined order
+- a named canonical deck plus filter/subset
+- content query/filter (e.g. testament/category/tag) using stable repository content services
+- game-generated cards where explicitly supported and deterministically reproducible
 
-## Privacy model
-Private hands are first-class projected state.
+Dynamic deck construction must produce a committed authoritative card list before gameplay. Clients must not independently query/build hidden decks.
 
-The authoritative host/game state may contain all hands. A Player Controller projection receives only:
-- its authorized player/team's actual private cards
-- public table/pile/discard information
-- opponent/public participant card counts and other explicitly public metadata
-- currently legal actions for that player/team
+### Ordered vs shuffled decks
+A deck may be:
+- shuffled using authoritative seeded RNG
+- kept in defined order
+- partially shuffled/group shuffled where a game explicitly defines it
+- inserted/reordered through explicit authoritative game actions
 
-It must **not** receive opponents' private card identities, hidden deck order, hidden pile contents, or host-only information.
+Do not automatically shuffle every deck. Story/chapter/event decks may intentionally be ordered.
 
-Example:
-```ts
-{
-  myHand: [/* actual authorized cards */],
-  opponents: [
-    { id: 'p2', cardCount: 11 },
-    { id: 'p3', cardCount: 8 }
-  ],
-  publicTable: {/* public cards/piles */},
-  legalActions: [/* server/game-authorized actions */]
-}
+## Multiple decks in one game
+Multiple independent decks are first-class:
+```text
+Game Session
+  Character Deck
+  Event Deck
+  Location Deck
+  Challenge Deck
+  Resource Deck
 ```
+Each deck has a stable deck-instance ID and independent draw/order/pile state. A card belongs to one authoritative location at a time unless a game explicitly creates/copies a distinct card instance.
 
-Do not send all hands to the browser and rely on CSS/React to hide them.
+Games may move cards between compatible piles/decks only through explicit validated actions. Deck identity and card-instance identity must remain unambiguous for persistence/replay.
 
-### Reconnect/rejoin
-Private hands remain authoritative on the host/server. After an authenticated/authorized controller reconnects/rejoins, project that player/team's current private hand again. A device must not gain another participant's hand through reassignment/reconnect/stale-session bugs.
+## Card zones / piles
+Use a generic zone model rather than hard-coding only `deck/hand/discard`.
 
-## Projector/public table
-Projector/audience view may show:
-- public table cards
-- public discard/piles
-- deck/pile counts when game rules make them public
-- each participant/team's card count
-- turn/current-player/status information
+Common zone semantics:
+- draw/source pile
+- player/team hand
+- public table
+- discard
+- completed/resolved
+- removed/exiled
+- reserve/resource area
+- game-defined named zone
 
-It must never show private hand identities unless a game action has made those cards public.
+A zone defines owner/visibility/order semantics. Game rules define which transitions are legal.
 
-When a private card is legally played/revealed, animate/present it as transitioning into public table state where appropriate.
+Shared primitives include:
+- create/instantiate deck
+- seeded shuffle
+- draw one/many
+- deal/distribute
+- move/transfer/pass
+- reveal/hide
+- play to public/private zone
+- discard/resolve/remove
+- return/insert top/bottom/specific validated position
+- reshuffle when game permits
+- inspect count/top public card where permitted
+- sort/reorder private presentation vs authoritative order
 
-## Host privacy
-Normal Host Remote gameplay should not automatically expose all private hands. Show card counts/public state and only private card information required by the specific host workflow/game rule.
+## Card size, shape, and renderer
+Card mechanics are independent of visual aspect ratio.
 
-Administrative/debug inspection, if ever needed, must be explicitly separate from normal gameplay, clearly labeled, access-controlled according to existing Host security architecture, and never projected to audience/player views.
+First-class presentation formats:
+- `playing` — traditional playing-card-like proportion
+- `portrait` — taller character/art cards
+- `landscape` — event/instruction/story cards
+- `square` — tile-like cards
+- `mini` — compact resource/status cards
+- `custom` — game-defined constrained aspect ratio
 
-## Player Controller: private hand UI
-Create a reusable `PlayerCardHand` interaction designed for approximately **1–25 cards**, with 10+ cards treated as normal rather than exceptional.
+Games may use several formats simultaneously. UI must not assume all cards fit a fan of playing cards.
 
-### Phone portrait
-- hand and game actions occupy separate regions
-- overlapping/fanned or compact horizontally scrolling cards preserve visible rank + Agon suit mark
-- tapping a card raises/highlights it and may open a larger preview without losing hand context
-- selected count/state is obvious
-- large hands may switch to denser/two-row/compact representation
-- native safe areas/notches supported
+### Renderer architecture
+Use a generic `CardRenderer`/registry that selects an appropriate specialized renderer, e.g.:
+- `BiblePlayingCard`
+- `EventCard`
+- `CharacterCard`
+- `ChallengeCard`
+- `LocationCard`
+- `ResourceCard`
+- `GenericCard`
 
-### Phone landscape
-- hand/table information may occupy left/center while persistent actions occupy a right-side action rail when space permits
+Shared shell behavior includes card back, selection/focus, reveal/flip, accessibility, motion, privacy, and responsive sizing. Specialized renderer owns face layout/content.
 
-### Tablet
-- larger fan/grid/two-row hand
-- more public table/player context may be shown simultaneously
-- private hand remains visually distinct from public table
+## Canonical Agon Bible Playing Deck
+The canonical playing deck has **52 unique cards: 4 Agon suits × 13 standard ranks**.
 
-### Sorting and organization
-Support presentation sorting by at least:
-- rank
-- suit
-- character/name where useful
+Ranks: `A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K`.
 
-Allow manual arrangement when useful. Manual hand ordering is private presentation state unless a specific game declares hand order authoritative. Provide non-drag reordering/accessibility alternatives.
+Rank is a game property, not a theological/spiritual ranking.
 
-### Selection modes
-Reusable hand supports:
-- single-card selection
-- multi-card selection
-- ordered multi-card selection
-- group/meld selection
-- card + target selection
-- pass/transfer selection
+### Agon suits
+1. **Scrolls** — stylized biblical scroll
+2. **Crowns** — stylized crown
+3. **Trumpets** — stylized biblical trumpet/shofar
+4. **Fish** — stylized ichthys/fish
 
-The game engine, not the controller UI, determines selection limits and whether the selection is legal.
+Traditional ♠♥♦♣ symbols are not the player-facing suit identity. Suit marks must have strongly differentiated silhouettes, remain recognizable at small sizes, work in monochrome, and belong to the Agon design system.
 
-## Card game action area
-Create reusable `CardGameActionBar`/equivalent separate from `PlayerCardHand`.
-
-The authoritative game supplies currently legal actions and any requirements. The controller renders only relevant permitted actions or intentionally disabled actions with a useful reason.
-
-Examples of allowed actions: `play`, `draw`, `discard`, `pass`, `exchange`, `hold`, `reveal`, `select`, `skip`, `withdraw`, `sort`, `meld`, `ask`, `give`, `confirm`, `cancel`.
-
-Do **not** create generic betting/wagering actions.
-
-Action area requirements:
-- persistent/reachable even with 10–25 cards
-- >=44 CSS px targets; primary action generally larger
-- selection-dependent actions enable only when legal
-- invalid selection explains the correction needed where appropriate
-- action labels may be game-specific while using shared button/action infrastructure
-- phone keyboard/other overlays must not hide required confirmation actions
-
-Conceptual legal-action projection:
+### Bible Playing Card specialization
 ```ts
-type CardLegalAction = {
-  id: string;
-  kind: 'play'|'draw'|'discard'|'pass'|'exchange'|'hold'|'reveal'|'skip'|'withdraw'|'meld'|'ask'|'give'|'confirm'|'cancel'|string;
-  label: string;
-  enabled: boolean;
-  disabledReason?: string;
-  selection?: {
-    minCards?: number;
-    maxCards?: number;
-    ordered?: boolean;
-    targetRequired?: boolean;
+type AgonBiblePlayingCard = AgonCard & {
+  type: 'bible-playing-card';
+  content: {
+    suit: 'scrolls'|'crowns'|'trumpets'|'fish';
+    rank: 'A'|'2'|'3'|'4'|'5'|'6'|'7'|'8'|'9'|'10'|'J'|'Q'|'K';
+    characterId?: string;
+    displayName: string;
+    artworkAssetId?: string;
+    testament?: 'OT'|'NT';
+    era?: string;
+    books?: string[];
+    categories?: string[];
+    scriptureReferences?: string[];
+    facts?: string[];
   };
 };
 ```
-Game-specific extension strings are allowed only for non-gambling mechanics.
 
-## Public card table UI
-Create reusable Agon card presentation primitives:
-- `AgonPlayingCard`
+Character mapping guidelines remain: distribute women naturally across suits; balance OT/NT and recognizable/less-obvious figures; make court-card choices intentional; avoid duplicate character identities in the base 52; rank never implies spiritual importance; Jesus and God are not ordinary competitive cards; disputed/traditional facts are marked appropriately.
+
+Optional wild cards are outside the canonical 52 and must be explicitly enabled by a game.
+
+## Event / Chance-like decks
+The engine explicitly supports event-style decks in which drawing a card causes or offers a game event. These cards need no suit/rank/private hand.
+
+Example structure:
+```ts
+type EventCardContent = {
+  title: string;
+  description: string;
+  artworkAssetId?: string;
+  effectId?: string;
+  parameters?: Record<string, unknown>;
+};
+```
+
+`effectId` references a game-owned, allow-listed effect/command handler. The generic card engine does not execute arbitrary scripts from card content.
+
+Event decks may be shuffled, ordered, cyclical, exhaustible, discard-and-reshuffle, or chapter-specific according to game rules.
+
+## Challenge, clue, objective, mission, story, and resource decks
+These are supported as ordinary specialized deck definitions. A game may draw directly to public table, private hand, retained objective area, completed area, etc. A card does not have to enter a player's hand merely because it was drawn.
+
+## Non-negotiable product rule: no betting or gambling
+Agon must not implement or enable betting/wagering, ante/blinds/pots, gambling chips/currency/bankrolls, odds-based wagers, casino/poker betting rounds, or APIs intended to facilitate wagering.
+
+Ordinary non-gambling card actions such as draw, play, discard, pass, exchange, hold, reveal, select, skip, withdraw, sort, reorder, meld/group, ask, give/transfer and resolve are allowed when game rules require them.
+
+Event/resource/reward cards may award normal game points/resources/advantages directly under game rules, but never settle a wager.
+
+## Privacy model
+Visibility belongs to zones/card state, not to visual hiding.
+
+Authoritative state may contain all cards. A Player Controller receives only cards/content authorized for its participant/team plus explicitly public information. Never serialize opponents' private cards, hidden deck order, hidden pile contents, unrevealed objectives/clues, or host-only cards to unauthorized clients.
+
+Card backs/counts may be projected instead of identities. Reconnect/reassignment must reproject the current authorized state and clear stale private card content.
+
+## Player Controller: hands and retained card areas
+`PlayerCardHand` remains optimized for roughly 1–25 playing/hand cards, including compact/fan/scroll/two-row layouts, sorting, manual private arrangement, single/multi/ordered/group/target selection.
+
+Additionally provide generic private/public `CardCollection`/`CardZoneView` layouts for cards that do not fit a playing-card hand:
+- horizontal/vertical scroll
+- grid
+- stacked pile
+- one-card focus/detail
+- compact mini-card strip
+
+Landscape Event/Story/Objective cards should not be forced into a narrow playing-card fan.
+
+Persistent legal-action controls remain separate from card collection size.
+
+## Card game/action area
+Shared legal-action infrastructure is game-driven. Common non-gambling actions include play, draw, discard, pass, exchange, hold, reveal, skip, withdraw, resolve, choose, inspect-public, meld, ask, give, confirm, cancel.
+
+The game engine determines legality and selection requirements. Controller renders the authorized actions; card content cannot bypass game validation.
+
+## Public/projector UI
+Reusable primitives should include:
+- `CardRenderer`
 - `CardBack`
+- `BiblePlayingCard`
+- generic/specialized card renderers
 - `CardFan` / `PlayerCardHand`
+- `CardCollection` / `CardZoneView`
 - `CardPile`
 - `DiscardPile`
 - `PublicCardTable`
+- `SelectedCardPreview` / `CardDetail`
+- `OpponentHandSummary`
 - `CardGameActionBar`
-- `SelectedCardPreview`
-- `OpponentHandSummary` (count only unless public)
 
-Follow the Agon UI/UX spec and visual references. Card backs use the Agon identity; faces show rank, custom suit mark, character identity/artwork, and only as much educational metadata as remains readable for the current size.
+Projector can theatrically draw/reveal an Event/Challenge/Story card at large size while controller/host surfaces show a compact representation of the same authoritative card.
+
+## Host Remote
+Host Remote can perform only game-authorized deck/zone commands through shared dispatcher. It must not own/shuffle/generate hidden deck order locally. Phone remains action-first; tablet may show richer public deck/zone state. Normal host view does not automatically expose private hands/objectives/clues.
 
 ## Player/team model
-Support both:
-- one private controller per individual player
-- one shared private controller per team
+Support individual and team-owned private hands/zones. Do not assume one device per human. Games requiring hidden private cards declare the private-display/controller requirement.
 
-A team hand is visible to the team's authorized controller(s) according to existing Player Controller identity/session rules. Do not assume one physical device per human.
-
-Games requiring private hands must declare that a private display is required for each player/team participating with a hidden hand. Projector-only fallback cannot safely display a private hand. Host-assisted fallback may be game-specific but must not casually reveal private information.
-
-## Host Remote card controls
-Host Remote should support public game actions and card-table management defined by a game's HostCommand adapter without becoming a second game engine.
-
-Potential allowed host operations, when the game supports them:
-- start/deal
-- advance/confirm turn
-- resolve exceptional/recovery state
-- manage public deck/discard/table state through explicit commands
-- select/play for a participant only when the game's fallback rules allow it
-
-Phone remains action-first; tablet may show a richer public table. Shared dispatcher, prompt/state versioning, command acknowledgements, reconnect, and audit/source semantics from Host Remote specs remain authoritative.
+## Dynamic content safety and determinism
+For query/generated decks:
+- commit resolved card IDs/instances to authoritative session state before hidden play begins
+- seed randomized ordering using authoritative RNG
+- save sufficient deck-definition/version/source metadata for recovery/debugging
+- content updates during an active saved session must not silently replace already-instantiated cards
 
 ## Accessibility
-- suit identity never depends on color; custom symbols have accessible names
-- hidden cards are announced only as hidden/card position, never private identity
-- keyboard operation for desktop/public table
-- Player Controller card targets >=44 CSS px where interactive
-- selected/disabled/legal/played states use non-color cues
-- hand can be operated without drag
-- sorting/reordering has keyboard/tap alternatives
-- reduced-motion mode avoids required fan/flip animation
-- screen readers receive concise rank/suit/character information only when that card is authorized/revealed
+- all card types have concise accessible labels appropriate to authorized content
+- hidden cards announce only hidden/back/count/position as appropriate
+- color is never sole semantic cue
+- keyboard/touch selection and non-drag alternatives
+- >=44 CSS px interactive touch targets where practical
+- Reduced/Off motion for flips/deals/transitions
+- specialized image cards have meaningful accessible labels
+- private content never leaks through DOM/ARIA on unauthorized surfaces
 
 ## Adaptive/responsive requirements
-Validate at representative Agon controller/projector sizes. Hand/action layout must remain usable with 1, 5, 10, 15, 20, and 25 cards. Test long character names and large text settings.
+Test playing cards plus portrait, landscape, square, and mini formats across phone portrait/landscape, tablet, laptop, and 4:3/16:10/16:9 projector.
 
-Actions must never be pushed off-screen solely because hand size grows. Hand region scrolls/compacts independently from the persistent action area.
+Large collections scroll/compact independently from persistent action controls. A game with several simultaneous decks/zones must prioritize current actionable/public information rather than attempting to show every card at once.
+
+## Persistence/versioning
+Deck definitions and card definitions have stable IDs/versions. Session state stores deck instances, card instances/locations, authoritative order where required, reveal/visibility state, and game-specific references.
+
+The 52-card Bible Playing Deck has its own stable content version independent of generic engine version.
+
+## Relationship to Pairs of Faith
+Pairs of Faith may reuse the generic CardRenderer/CardBack/selection/flip/zone primitives, but its relationship cards are not forced into the 52-card Bible Playing Deck's rank/suit model.
 
 ## Security/testing requirements
 Unit tests:
-- canonical 52-card uniqueness
-- 4 suits × 13 ranks
-- deterministic seeded shuffle/deal
-- ownership transfer/draw/discard/public transitions
-- legal-action validation hooks
-- reconnect/reprojection of authorized hand
+- arbitrary deck sizes including 2/24/52/66/100+
+- empty/invalid deck definition validation where applicable
+- deterministic seeded shuffle and defined-order deck behavior
+- multiple independent decks in one session
+- draw/deal/move/transfer/discard/resolve/remove/return transitions
+- zone ownership/order invariants
+- dynamic subset/query resolution determinism
+- canonical Bible deck remains exactly 4×13 unique cards
 
-Privacy/security tests:
-- Player A projection never contains Player B private cards
-- projector never contains private hand cards
-- hidden deck order is absent from PlayerView
-- stale/reassigned device cannot retain prior participant's private hand
-- public reveal/play transitions only the intended card to public state
-- HostRemoteView contains only role-authorized private information
+Privacy/security:
+- hidden hands/objectives/clues/deck order absent from unauthorized serialized projections and DOM/ARIA
+- deck A cannot expose deck B private state through renderer/zone confusion
+- stale/reassigned controller cannot retain prior private cards
+- HostRemoteView receives only authorized card data
 
 Responsive/E2E:
-- 1/10/15/25-card hands on phone portrait/landscape and tablet
-- sort/select/multi-select/reorder without drag
-- persistent action area with varying legal actions
-- reconnect restores hand safely
-- shared-team controller path
-- public projector card transition
+- playing-card hands at 1/10/15/25
+- portrait/landscape/square/mini card collections
+- multiple decks/zones
+- Event card draw → large public reveal → resolved/discard zone
+- ordered story deck does not shuffle
+- 66-card/subset dynamic deck
+- reconnect preserves authoritative order/private state
 
-Policy/product tests:
-- shared action enum/default components contain no betting/wagering actions
-- docs/demo fixtures do not introduce ante/pot/bet/raise/call-as-wager mechanics
-- future game reviews should verify the no-gambling requirement
+Policy/product:
+- no wagering actions/fields/examples
+- generic event/reward effects cannot create a wagering settlement path
 
-## Persistence/versioning
-Canonical deck identity/version should be stable so saved games/content can reference card IDs safely. Character/art metadata can evolve through explicit deck-content versions without silently changing rank/suit identity in saved data.
+## Development harness
+The foundation harness should demonstrate without becoming a shipped game:
+1. canonical 52-card Bible Playing Deck with private hand/public play
+2. 24-card landscape Event Deck with public draw/resolve/discard
+3. 66-card Books deck plus deterministic NT subset
+4. portrait Character deck and square/mini Resource deck
+5. two or more independent decks active simultaneously
+6. ordered Story deck
+7. privacy/reconnect across private Objective/Clue cards
 
-Private hand state belongs to game/session state and follows existing session persistence/recovery conventions where applicable.
-
-## Relationship to Pairs of Faith
-Pairs of Faith may reuse visual card primitives where useful, but its relationship cards are not automatically the canonical 52-card Bible Deck. Do not force Pairs of Faith content into rank/suit semantics.
-
-## Initial implementation boundary
-The card system should provide the reusable deck/engine/privacy/UI foundation plus a development/demo harness sufficient to test dealing, private hands, public play/discard, sorting/selection, and legal non-gambling actions. Do not ship a fake betting/poker game as the test harness.
-
-Individual playable card games should be specified separately after the foundation is stable.
+Do not use poker/casino/betting as a demo.
 
 ## Definition of done
-- Canonical Scrolls/Crowns/Trumpets/Fish 52-card model exists with stable rank/suit identities.
-- Custom suit symbols exist and remain distinguishable without color.
-- Reusable deterministic deck/hand/pile engine exists.
-- Player Controller securely displays private hands of 1–25 cards with persistent game-action controls.
-- Projector/public table never leaks private hands.
-- Host Remote integrates through shared command/projection architecture without exposing all hands by default.
-- Individual/team controller ownership and reconnect are secure.
-- Shared UI supports single/multi/ordered/group/target card selection and common non-gambling actions.
-- Betting/gambling mechanics and enabling infrastructure are explicitly absent/prohibited.
-- Accessibility, responsive, privacy/security, and deterministic engine tests pass.
+- generic engine has no 52-card/suit/rank/aspect-ratio assumption
+- arbitrary static/dynamic/subset deck sizes work
+- multiple independent decks work in one game
+- shuffled and deliberately ordered decks work
+- generic zones and validated card transitions work
+- playing/portrait/landscape/square/mini/custom card presentation is supported
+- specialized renderer architecture exists
+- event/challenge/character/location/resource/objective/clue/story-style cards can use the same engine
+- canonical Scroll/Crown/Trumpet/Fish 52-card Bible Playing Deck exists as a specialization
+- secure private hands/zones and public projector/Host projections pass leak tests
+- responsive Player Controller and persistent legal actions work
+- accessibility and deterministic recovery tests pass
+- betting/gambling mechanics and enabling infrastructure remain explicitly absent
