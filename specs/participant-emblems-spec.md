@@ -21,8 +21,8 @@ In scope:
 - A shared `ParticipantEmblem` presentation component used across all surfaces.
 - Persistence through settings, sessions, Events, and tournaments.
 
-Out of scope (initially):
-- User-uploaded images (style consistency, moderation, and licensing). See §12.
+Out of scope:
+- User-uploaded images or custom logos (for churches, schools, or anyone else). Decided: not supported. Emblems come only from the curated Agon set and approved packs (§8).
 - Animated emblems beyond the shared celebration motion.
 
 ## 3. The Agon Emblem set
@@ -99,18 +99,19 @@ export interface Participant {
 ### 4.1 Rules
 
 - **Unique per session/Event:** no two participants share an emblem. Colors keep their current rules; the pair (color, emblem) is always unique.
-- **Defaults:** when none is chosen, assign deterministically from a default rotation (Lion, Eagle, Dove, Lamb, Crown, Shield, Star, Fish), skipping emblems already in use, so migration and quick-start always produce distinct emblems.
-- **Members:** member emblems are optional and may repeat across teams (they're only shown alongside the team emblem). If absent, the member displays with the team emblem.
+- **Defaults:** when none is chosen, assign deterministically from a default rotation (Lion, Eagle, Dove, Lamb, Crown, Shield, Star, Fish), skipping emblems already in use, so migration and quick-start always produce distinct emblems. The Cross is **selectable only**: it is never auto-assigned by the default rotation or "Surprise me", and Admin cannot add it to the default rotation.
+- **Individual mode:** a player has one emblem, the participant emblem. There is no separate personal/member emblem in individual mode; `ParticipantMember.emblemId` is ignored there and not shown in the individual-mode UI.
+- **Members:** in team mode, member emblems are optional and may repeat across teams (they're only shown alongside the team emblem). If absent, the member displays with the team emblem.
 - **Disabled emblems:** if Admin disables an emblem that a saved team uses, the team keeps it (no silent changes); it just can't be newly picked.
 - **Migration:** saved settings, snapshots, and sessions without emblems load with default assignment; nothing else changes.
 
 ## 5. Picker UX
 
-- **Players tab / game setup:** each player/team card shows the medallion preview (color + emblem). Tapping it opens the **Emblem Picker**: a 6×6 grid grouped by row/category, emblems already taken shown as unavailable with who has them, the color palette alongside, and a detail line with name, reference, and meaning for the focused emblem. A "Surprise me" button picks a random available emblem.
+- **Players tab / game setup:** each player/team card shows the medallion preview (color + emblem). Tapping it opens the **Emblem Picker**: a 6×6 grid grouped by row/category, emblems already taken shown as unavailable with who has them, the color palette alongside, and a detail line with name, reference, and meaning for the focused emblem. A "Surprise me" button picks a random available emblem (never the Cross).
 - **Event setup (#195):** entrants carry their emblem into the Event; conflicts between saved teams resolve in setup before start.
 - **Phone join (#13):** when a phone proposes a player/team, it may also propose an emblem from the available ones (shown on the phone at controller size). The host accepts as today; conflicts show "Taken, choose another."
 - **Host Remote (#109):** view and change emblems before the game starts; locked during a game (change between games only), matching color behavior.
-- **Admin:** enable/disable emblems, reorder the default rotation, preview all emblems on all participant colors (contrast check), and view references/meanings.
+- **Admin:** enable/disable emblems, reorder the default rotation (the Cross is excluded), preview all emblems on all participant colors (contrast check), and view references/meanings.
 - **Accessibility:** the picker is fully keyboard and screen-reader navigable (grid semantics; each emblem's accessible name is its name plus "taken by Team X" when unavailable). Minimum 44 px touch targets.
 
 ## 6. Presentation (`ParticipantEmblem` component)
@@ -159,8 +160,8 @@ All emblems are bundled SVG, loaded once, and inlined as a sprite for the render
 3. **Picker UX:** Players tab and game setup picker, "Surprise me", phone join proposal, Host Remote, Admin enable/disable/order/preview.
 4. **Presentation everywhere and release validation:** `ParticipantEmblem` component; integrate into badges, score cards, turn/buzz, controllers, Host Remote, results/podium, tournaments, boards, activity log; visual/accessibility/E2E tests.
 
-## 12. Open decisions
+## 12. Decisions
 
-- Whether to allow custom uploaded emblems later (for church or school logos). If yes: Admin-only upload, auto-fit to the medallion, local only, and a clear note that uploads aren't shared.
-- Whether the Cross should be in the default rotation or only selectable (recommended: selectable, not a default, so default assignment never ranks teams by symbol).
-- Whether individual players in `individual` mode should also get a personal member emblem distinct from their participant emblem (recommended: no; they're the same).
+- **No uploaded logos or custom images.** Emblems come only from the curated Agon set and approved packs.
+- **The Cross is selectable only.** It is never assigned by default, by "Surprise me", or by the default rotation.
+- **No personal emblem in individual mode.** A player's emblem is their participant emblem. Optional member emblems apply only to team members.
