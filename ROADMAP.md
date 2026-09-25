@@ -21,6 +21,7 @@ Architecture foundation ─> UI system ─> 3 reference games end to end ─> va
 - Build the architecture contracts (GameDefinition, capabilities, asset and content registries) **before** the Agon UI, so the UI renders stable concepts instead of today's game-specific code.
 - Build the UI system **before** migrating games, so each game moves to the new architecture and the new UI at the same time. Never migrate every game and then redo its UI.
 - **#321 is the gate for new games.** Three reference games (strong candidates: Before or After, Who Said It?, Missing Word) must prove the whole path: GameDefinition → engine → content → Asset Registry → Player Controller → Main Stage → Host Remote → persistence. Every new game issue is blocked by #321 and follows those games as templates.
+- Build the Bible translation foundation (#337–#343) before the catalog-wide migration (#331), so games are migrated once, already translation-aware.
 - Remove old components, CSS, assets, and bootstrap code only after nothing uses them. Then enforce the bundle architecture (#322/#323).
 
 ## Release Order at a Glance
@@ -186,6 +187,20 @@ Computer opponents are optional for every game. They do not block any game's hum
 - #321 Convert at least three simple existing games to GameDefinitions with shared content and assets (needs #304, #314, #316–#318).
 - #315 GameDefinition variant overlays (may proceed alongside #321).
 
+### Bible Translation Foundation
+
+Spec: PR #336. Makes translations a platform capability instead of per-game KJV code. It must land before the catalog-wide #331 migration so migrated games don't carry KJV assumptions into the new architecture.
+
+- #337 Audit every game and content source for KJV assumptions; classify each as `NONE`, `REFERENCE_ONLY`, `TEXT`, or `EXACT_WORDING`.
+- #338 BibleTextService, TranslationProvider contract, Translation Registry.
+- #339 Current KJV corpus behind the local provider, with no behavior change.
+- #340 Translation metadata in content and GameDefinition (needs #314, #318).
+- #341 Application → Event → Game translation selection and saved-session pinning (needs #190).
+- #342 Exact-wording games (Missing Word, Complete the Verse, Verse Scramble, Typing Race) generate from the selected translation.
+- #343 Central Scripture labels, attribution, and copyright UI (needs #316).
+
+#331 is blocked by #339–#342.
+
 ### Migration 2: Existing Game Families
 
 Migrate by family, adopting the new UI components at the same time: Challenge games, Cards, Ordering, Progressive Clue, Navigation, Reveal, then custom games.
@@ -197,7 +212,7 @@ Migrate by family, adopting the new UI components at the same time: Challenge ga
 - #309 Verse Reveal → shared reveal primitives.
 - #320 Trusted novel-mechanic module contract for custom games.
 - #311 Optional randomizer variants for migrated games.
-- #331 Umbrella: all remaining games (needs #321 and #305–#309, #315, #320).
+- #331 Umbrella: all remaining games (needs #321, #305–#309, #315, #320, and translation foundation #339–#342).
 
 #305–#309 need the seeded RNG (#142), persistence (#190), and scoring ledger (#191).
 
@@ -207,6 +222,13 @@ Migrate by family, adopting the new UI components at the same time: Challenge ga
 - #319 Local game/content/asset pack manifests (needs #314, #317, #318).
 - #323 CI size budgets, duplicate detection, reuse-first checks (needs #319, #322).
 - #324 Optional downloadable packs with offline use and integrity checks (needs #319, #320, #323).
+
+### Bible Translation Providers & Packs
+
+- #344 Policy-aware offline cache and prefetch, plus Event translation-readiness checks.
+- #345 Gauntlet, Events, Tournaments, and randomizers respect translation availability (needs #189–#198).
+- #346 One optional external translation provider (API.Bible is a candidate, not a fixed choice). Also needs a licensing decision made outside code.
+- #347 Translation data packaged once, inside the modular pack architecture (needs #317–#319).
 
 ## 1.x — New Games
 
