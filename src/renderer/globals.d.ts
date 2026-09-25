@@ -80,6 +80,15 @@ declare global {
       openProjectorWindow: (displayId: number | null) => Promise<ProjectorDisplay[]>;
       closeProjectorWindow: () => Promise<void>;
       updateProjectorState: (state: unknown) => void;
+      enableHostRemote: (options?: unknown) => Promise<unknown>;
+      disableHostRemote: () => Promise<unknown>;
+      getHostRemoteStatus: () => Promise<unknown>;
+      approveHostRemotePairing: () => Promise<unknown>;
+      denyHostRemotePairing: () => Promise<unknown>;
+      revokeHostRemote: () => Promise<unknown>;
+      updateHostRemoteView: (view: unknown) => void;
+      onHostRemoteStatus: (callback: (status: unknown) => void) => () => void;
+      onHostRemoteCommand: (callback: (command: unknown) => Promise<unknown> | unknown) => () => void;
       onProjectorState: (callback: (state: unknown) => void) => () => void;
       onProjectorWindowStatus: (callback: (status: { isOpen?: boolean }) => void) => () => void;
     };
