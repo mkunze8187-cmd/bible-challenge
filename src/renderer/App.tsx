@@ -4187,6 +4187,38 @@ export function App() {
       ? eventStandings[0]
       : null;
 
+  useEffect(() => {
+    if (IS_PROJECTOR_WINDOW || !window.desktopHost?.updateHostRemoteView || !hostRemoteView) {
+      return;
+    }
+
+    window.desktopHost.updateHostRemoteView(hostRemoteView);
+  }, [hostRemoteView]);
+
+  useEffect(() => {
+    if (IS_PROJECTOR_WINDOW || !window.desktopHost?.onHostRemoteCommand) {
+      return;
+    }
+
+    return window.desktopHost.onHostRemoteCommand((command) => dispatchHostCommand(command as HostCommand, "remote"));
+  }, [
+    activeContentPackId,
+    answerClockSeconds,
+    answererTimerBehavior,
+    difficultyFilter,
+    eventScoringEnabled,
+    hostSelectedParticipantId,
+    hostStateVersion,
+    isStartingGame,
+    participantMode,
+    playerColors,
+    playerDifficulties,
+    playerNames,
+    sessionHistory,
+    sessionState,
+    teams
+  ]);
+
   return (
     <div className={`app-shell app-theme-${colorTheme} app-display-${effectiveDisplayMode} ${sessionState ? "app-shell-play" : ""} ${IS_PROJECTOR_WINDOW ? "app-projector-window" : ""}`}>
       <div className="glow glow-left" />
