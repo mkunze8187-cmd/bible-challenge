@@ -851,6 +851,8 @@ interface HostRemoteSettings {
 
 # 4. Bible Map Challenge
 
+> **Update:** Bible Map Challenge now builds on the shared Image Board engine (`specs/image-board-engine-spec.md`). Map locations become Image Board regions instead of `x`/`y` pins, Locate/Route/Region Sort use regions, paths, and drop zones, and the map-coordinate picker is replaced by the Admin board editor. See that spec's §16. The data types below are superseded where they conflict.
+
 ## Summary
 
 Bible Map Challenge asks players to identify, place, connect, or sequence biblical locations and journeys. It adds a spatial learning mode distinct from the current word, verse, category, and timeline games.
