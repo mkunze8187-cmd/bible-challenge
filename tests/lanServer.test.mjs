@@ -88,12 +88,18 @@ describe("LAN server hardening", () => {
     expect(ok.headers["cache-control"]).toBe("no-store");
     expect(ok.headers["referrer-policy"]).toBe("no-referrer");
     expect(ok.headers["x-content-type-options"]).toBe("nosniff");
+    expect(ok.headers["content-security-policy"]).toContain("default-src 'self'");
+    expect(ok.headers["content-security-policy"]).toContain(`connect-src 'self' ws://127.0.0.1:${port}`);
+    expect(ok.headers["content-security-policy"]).toContain("frame-ancestors 'none'");
 
     const traversal = await httpRequest(port, "/%2e%2e/package.json");
     expect(traversal.statusCode).toBe(404);
 
     const unknown = await httpRequest(port, "/unknown");
     expect(unknown.statusCode).toBe(404);
+
+    const unknownAsset = await httpRequest(port, "/assets/not-in-manifest.js");
+    expect(unknownAsset.statusCode).toBe(404);
 
     const badHost = await httpRequest(port, "/host-remote", { Host: "evil.test" });
     expect(badHost.statusCode).toBe(403);

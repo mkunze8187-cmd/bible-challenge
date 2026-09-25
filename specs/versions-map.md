@@ -4,7 +4,7 @@
 
 Maps planned features to release versions for Bible Challenge and the Admin Console, and defines how version numbers are chosen.
 
-- **Current version:** 0.2.0 (both apps, tag `v0.2.0`)
+- **Current version:** 0.3.0 (both apps, tag `v0.3.0`)
 - **History:** `v0.1.0` through `v0.1.11` were patch bumps, including the release that added six games and split out the admin console. `v0.2.0` added Host Mode.
 - **Product name:** Bible Challenge, becoming **Agon: The Bible Challenge** in 0.5.0 (`agon-ui-ux-design-system-spec.md`).
 
