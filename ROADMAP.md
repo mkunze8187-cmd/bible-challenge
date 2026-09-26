@@ -13,15 +13,21 @@ The product is being renamed from **Bible Challenge** to **Agon: The Bible Chall
 ## Guiding Sequence
 
 ```txt
-Architecture foundation ─> UI system ─> 3 reference games end to end ─> validate ─> migrate everything else ─> cleanup
-                                                     │
-                                                     └─> new games (all built on the proven pattern)
+Architecture PRs ─> 0.6.0 architecture foundation ─> UI system (Agon 2–4)
+  ─> P0 Core Foundation (#362–#368, #349–#355) + Bible Translation Foundation (#337–#343)
+  ─> P0 Stage Platform Foundation (#369–#372)
+  ─> Local conformance runtime (#356/#357)
+  ─> 3 reference games end to end (#321) ─> validate
+        ├─> full catalog migration (#331) ─> cleanup (#322/#323)
+        └─> new games (all built on the proven pattern)
+  ─> P1 Platform Hardening (#373–#375) ─> Future: Hosted (#359/#378), Shared (#360/#377)
 ```
 
 - Build the architecture contracts (GameDefinition, capabilities, asset and content registries) **before** the Agon UI, so the UI renders stable concepts instead of today's game-specific code.
 - Build the UI system **before** migrating games, so each game moves to the new architecture and the new UI at the same time. Never migrate every game and then redo its UI.
-- **#321 is the gate for new games.** Three reference games (strong candidates: Before or After, Who Said It?, Missing Word) must prove the whole path: GameDefinition → engine → content → Asset Registry → Player Controller → Main Stage → Host Remote → persistence. Every new game issue is blocked by #321 and follows those games as templates.
-- Build the Bible translation foundation (#337–#343) before the catalog-wide migration (#331), so games are migrated once, already translation-aware.
+- **#321 is the architectural gate.** #331 must not be the experiment that discovers whether the foundations work. Two or three reference games (candidates: Before or After, Who Said It?, Missing Word) must prove the whole path first: GameDefinition → engines → learning/content → scoring → SessionRuntime → persistence → ProjectionService → StageOrchestration → Local Stage and phones → Host Remote. Every new game issue is blocked by #321 and follows those games as templates.
+- Build the Core Foundation, Stage Platform, and Bible translation foundation **before** #331. Existing games then migrate once, to GameDefinition + shared engines + shared UI/content/assets + runtime-neutral platform APIs + translation-aware text, instead of facing another catalog-wide refactor when Hosted or Shared is built.
+- Hosted and Shared commit to **interfaces now, implementations later**. No cloud technology, database, hosting vendor, or microservice choices yet, and no per-game Hosted forks (no `JoustHosted`).
 - Remove old components, CSS, assets, and bootstrap code only after nothing uses them. Then enforce the bundle architecture (#322/#323).
 
 ## Release Order at a Glance
@@ -180,12 +186,60 @@ Spec: PR #287. #280–#286, ending with the Bible Map Challenge migration (#286 
 
 Computer opponents are optional for every game. They do not block any game's human-multiplayer release.
 
-## 1.x — Platform Migration
+## 1.x — Platform Foundations and Migration
 
-### Migration 1: Reference Games (the new-game gate)
+Specs: PR #348 (Local, Shared, and Hosted multi-runtime platform) and PR #361 (Core foundations and Stage orchestration).
 
-- #321 Convert at least three simple existing games to GameDefinitions with shared content and assets (needs #304, #314, #316–#318).
+### Core Foundation (Pre-Migration) — P0
+
+Domain model:
+
+- #362 Canonical domain objects, stable IDs, and Mechanic → Game → Variant → Match → Tournament → Event ownership.
+- #363 Unified authoritative domain-event vocabulary (needs #350, #362).
+- #364 Central Score & Rules Ledger replacing direct `score +=` logic (needs #362, #363).
+- #365 Capability-based authorization: who someone is vs. what they may do (needs #354).
+- #366 Typed settings inheritance ending in a pinned `ResolvedSessionConfiguration`.
+- #367 One deterministic schema/version migration framework (needs #353).
+- #368 Scripture learning metadata: passages, people, topics, objectives, skills, ages, Dig Deeper (needs #318, #340).
+
+Multi-runtime contracts:
+
+- #349 Audit desktop, LAN, filesystem, and "host PC is always authoritative" assumptions.
+- #350 Versioned SessionRuntime semantic command/event API.
+- #351 Least-privilege ProjectionService for Main Stage, Host, players, teams, and remote sites (needs #316).
+- #352 Transport abstraction, reconnect, resynchronization, protocol negotiation.
+- #353 SessionPersistence contract with today's Local save/resume as its adapter (needs #190).
+- #354 Identity, roles, and presence; Local stays account-free.
+- #355 Network-safe authoritative timers, buzzers, RNG/randomizers, and simultaneous responses (needs #142, #156).
+
+### Stage Platform Foundation — P0
+
+Completes before #331 migrates Stage-heavy games and UI.
+
+```txt
+ProjectionService         "What is this display allowed to know?"
+        │
+StageOrchestrationService "What should this display present right now?"
+        │
+DisplayEndpoint           "Render it here."
+   ┌────┼─────┐
+ Local Shared Hosted Stage
+```
+
+- #369 DisplayEndpoint contract, so Local, Shared, and Hosted screens are the same kind of endpoint.
+- #370 StageOrchestrationService and semantic presentation states and commands.
+- #371 Synchronized reveals/animations across displays, and Stage reconnect/resynchronization.
+- #372 Today's installed Local Main Stage running through those contracts (needs #357; blocks #321 and #331).
+
+### Reference Architecture Validation (the gate)
+
+- #356 In-memory conformance runtime that simulates networking, disconnects, latency, and whole games headlessly.
+- #357 Agon Local end to end on the platform contracts with reference games.
+- #358 Local/Shared/Hosted compatibility metadata in GameDefinition.
+- #321 Convert two or three existing games end to end (needs #304, #314, #316–#318, #357, #364–#368, #372).
 - #315 GameDefinition variant overlays (may proceed alongside #321).
+
+Only after this validates does #331 run across the whole catalog, as systematic migration rather than architecture discovery.
 
 ### Bible Translation Foundation
 
@@ -212,7 +266,7 @@ Migrate by family, adopting the new UI components at the same time: Challenge ga
 - #309 Verse Reveal → shared reveal primitives.
 - #320 Trusted novel-mechanic module contract for custom games.
 - #311 Optional randomizer variants for migrated games.
-- #331 Umbrella: all remaining games (needs #321, #305–#309, #315, #320, and translation foundation #339–#342).
+- #331 Umbrella: all remaining games (needs #321, #305–#309, #315, #320, #372, and translation foundation #339–#342).
 
 #305–#309 need the seeded RNG (#142), persistence (#190), and scoring ledger (#191).
 
@@ -229,6 +283,39 @@ Migrate by family, adopting the new UI components at the same time: Challenge ga
 - #345 Gauntlet, Events, Tournaments, and randomizers respect translation availability (needs #189–#198).
 - #346 One optional external translation provider (API.Bible is a candidate, not a fixed choice). Also needs a licensing decision made outside code.
 - #347 Translation data packaged once, inside the modular pack architecture (needs #317–#319).
+
+### Platform Hardening — P1
+
+Not blockers for game work, but required before serious Hosted or Shared deployment.
+
+- #373 Diagnostics, logging/metrics/tracing, privacy classification, automatic sensitive-data redaction.
+- #374 Central runtime capabilities and temporary feature-rollout flags, so games never probe deployment details.
+- #375 Deterministic session replay from events, snapshots, RNG, and authoritative time, so bug reports can be reproduced from real session history.
+
+### Learning Platform Expansion — P2
+
+- #376 Optional learning-history provider, kept separate from scores and wins, and conservative about children's data. Learning metadata itself (#368) is P0.
+
+## Future — Agon Hosted and Agon Shared
+
+Both run the same games and platform contracts as Agon Local.
+
+- **Agon Hosted:** #359 hosted runtime; #378 browser Main Stage on the same DisplayEndpoint/Stage protocol.
+- **Agon Shared:** #360 multiple installed Agon groups playing together over the Internet; #377 the authoritative Host orchestrates Main Stages at remote installed sites.
+
+```txt
+              Agon Shared Session
+                       │
+              authoritative Host
+                       │
+             Stage Orchestration
+            ┌──────────┴──────────┐
+     Minnesota site          Iowa site
+     Local Agon Stage        Local Agon Stage
+     TV / projector          TV / projector
+```
+
+Each site receives the same semantic presentation instructions and renders them with its own installation and assets. There is no video stream.
 
 ## 1.x — New Games
 
