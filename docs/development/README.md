@@ -13,12 +13,14 @@ This directory is the canonical starting point for development documentation. Pr
 | [System Design](system-design.md) | Architecture, layers, trust boundaries, runtime modes, data/control flow, diagrams | Normative architecture overview |
 | [Contract/API Reference](contracts.md) | Official contracts between layers and compatibility/change rules | **Normative / semi-locked** |
 | [Build, Test & Deploy Guide](build-test-deploy.md) | Local setup, build, test pyramid, packaging, deployment/release gates | Normative engineering procedure |
+| [Documentation & Help Development Guide](documentation-system.md) | How game/player/Host/Admin/Parent-Teacher/developer documentation is authored, delivered, versioned and tested | Normative documentation procedure |
 | [Architecture Decision Records](adr/README.md) | How consequential architectural changes are proposed and recorded | Normative governance |
 
 Related source documents remain authoritative for their detailed domain:
 - `SPEC.md` — product/game behavior.
 - `ROADMAP.md` — delivery direction.
 - architecture specs introduced by foundation PRs/issues — detailed rationale and planned implementations.
+- `specs/architecture/documentation-help-system.md` — documentation/help subsystem architecture.
 - source TypeScript interfaces/schemas — executable realization of the contracts in this handbook.
 
 If source code and this handbook disagree, treat that as a defect: do not silently choose one. Determine whether implementation is behind the accepted contract or the contract has intentionally changed, then update code/tests/docs together.
@@ -45,5 +47,7 @@ A PR that changes a STABLE/LOCKED contract must include, in the same PR when pra
 - unit/contract/conformance tests;
 - migration or compatibility notes for breaking changes;
 - an ADR for significant or breaking architectural decisions.
+
+Product documentation follows the same principle: new games require How to Play + Quick Start; new Host/Admin features require contextual help; learning-oriented kids games require the applicable Parent/Teacher material. PDF/print/web/in-app Help should be generated or rendered from canonical structured documentation rather than maintained as conflicting copies.
 
 Mermaid diagrams are used as version-controlled architecture diagrams because GitHub renders them directly and they remain reviewable as text.
