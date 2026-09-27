@@ -3,7 +3,7 @@
 **Status:** STABLE engineering guide  
 **Current implementation baseline:** TypeScript/React/Vite + Electron desktop, Vitest, Playwright; Windows NSIS packaging.
 
-This guide documents the repository as it exists today and the quality gates expected as the foundation architecture is implemented.
+This guide documents the repository as it exists today and the quality gates expected as the foundation architecture is implemented. The target installation/package/update model is defined by `specs/architecture/packaging-installation-entitlements.md` (PR #424).
 
 ## 1. Prerequisites
 
@@ -32,64 +32,40 @@ The repository currently uses an npm workspace for `admin`.
 ## 3. Development commands
 
 ### Type checking
-
 ```bash
 npm run typecheck
 npm run typecheck:admin
 ```
 
-TypeScript is configured in strict mode and targets ES2022.
-
 ### Data validation
-
 ```bash
 npm run check:data
 ```
 
-Run this when changing game/content data and as part of normal pre-merge validation.
-
 ### Unit/component tests
-
 ```bash
 npm run test:run
 npm run test:admin
 ```
 
-Interactive Vitest is available through:
-
-```bash
-npm test
-```
-
 ### Build
-
 ```bash
 npm run build
 npm run build:admin
 ```
 
-The main build performs data validation and TypeScript checking before Vite build.
-
 ### Run installed-app development baseline
-
 ```bash
 npm start
 ```
 
-Current `start` builds the main application and launches Electron; it is not a hot-reload command.
-
 ## 4. End-to-end testing
-
-Full E2E command:
 
 ```bash
 npm run test:e2e
 ```
 
-This builds main/admin and then invokes the Playwright smoke runner.
-
-When the required build outputs are already current:
-
+When required outputs are already current:
 ```bash
 npm run test:e2e:fast
 ```
@@ -102,13 +78,10 @@ Do not use the fast/no-build path as release evidence unless the exact build und
 npm run test:visual
 ```
 
-Update baselines only when the visual change is intentional and reviewed:
-
+Update baselines only for intentional reviewed changes:
 ```powershell
 npm run test:visual:update
 ```
-
-A changed snapshot is not automatically a correct snapshot. Review Host, Stage and Controller implications, responsive behavior, and accessibility before accepting it.
 
 ## 6. Full local quality gate
 
@@ -116,166 +89,174 @@ A changed snapshot is not automatically a correct snapshot. Review Host, Stage a
 npm run test:all
 ```
 
-Current `test:all` runs data validation, main/admin type checking, main/admin tests, E2E and visual regression.
-
-Before merging architecture/reference-game work, also require the relevant contract/conformance tests introduced by the foundation issues even if they are not yet wired into `test:all`.
+Before merging foundation/reference-game work, also require applicable contract/conformance tests even when not yet wired into `test:all`.
 
 ## 7. Test pyramid and ownership
 
 ```mermaid
 flowchart TB
-  E2E[E2E / Visual\nsmall number, critical journeys]
-  CON[Contract / Conformance\nlayer and runtime compatibility]
-  INT[Integration\nmultiple services/engines]
-  UNIT[Unit / Property\nengines, policies, reducers, validators]
+  E2E[E2E / Visual]
+  CON[Contract / Conformance]
+  INT[Integration]
+  UNIT[Unit / Property]
   UNIT --> INT --> CON --> E2E
 ```
 
-### Unit/property tests
-Use for deterministic engines, answer policies, scoring rules, fairness calculations, schema validators and reducers. Inject clock/RNG; do not sleep/wait on real time when a deterministic clock can be used.
-
-### Integration tests
-Use for SessionRuntime + GameRuntime + ledger/persistence/projection interactions.
-
-### Contract tests
-Every stable contract gets boundary tests. Serialized contracts keep versioned fixtures.
-
-### Conformance tests
-All runtime adapters (Local, Shared, Hosted) must satisfy the same semantic suite where capabilities overlap. Display endpoints and input adapters should likewise have common suites.
-
-### E2E
-Cover representative user journeys rather than every rule permutation.
-
-### Visual
-Cover stable presentation surfaces/layouts. Game-rule correctness belongs below visual tests.
+Use unit/property tests for deterministic engines/policies/validators, integration for service boundaries, contract tests for STABLE serialized/API contracts, conformance across runtime adapters, E2E for critical journeys and visual tests for presentation.
 
 ## 8. Required architecture/security tests
 
-As foundations land, CI/local gates should include:
-- projection hidden-state leak tests;
-- command authorization/idempotency/replay tests;
-- deterministic clock/RNG tests;
-- persistence save/resume/migration fixtures;
-- score ledger correction/reversal tests;
-- answer-evaluation policy tests;
-- package integrity/path traversal tests;
-- network fairness simulations (latency/jitter/clock manipulation);
-- reconnect/resynchronization tests;
-- accessibility interaction/readiness tests;
-- compatibility/conformance matrix generation;
-- archive import/export round-trip and secret-exclusion tests.
+As foundations land, CI/local gates include projection leak tests; authorization/idempotency; deterministic clock/RNG; persistence migration/resume; score corrections; answer policies; network fairness; reconnect; accessibility; compatibility; archive round-trip; and package/entitlement tests described below.
 
-## 9. Packaging
+## 9. Desktop installer
 
-Current Windows installer command:
-
+Current command:
 ```bash
 npm run package
 ```
 
-Current packaging uses `electron-builder`, Windows x64 NSIS, output directory `release`, and installer naming based on `BibleChallenge-Setup-${version}`.
+Current packaging uses `electron-builder`, Windows x64 NSIS and `release` output. The target installer evolves to one signed distribution capable of installing:
+- Agon Core/runtime;
+- Agon Play/Host;
+- Agon Admin;
+- Package Manager and entitlement verifier;
+- core documentation/assets;
+- selected bundled `.agonpack` packages, including included and installed-but-locked packs.
 
-Packaging is not deployment approval. A release candidate must pass the release gates below.
+Bundled packages must be registered/validated through PackageManager rather than copied into game-specific filesystem locations.
 
-## 10. Release/deployment model
+Program files and user data are separate. Ordinary uninstall must not silently delete irreplaceable saved Events/sessions or user-authored content.
+
+## 10. Building `.agonpack` packages
+
+Package tooling must produce a versioned manifest, deterministic payload inventory, integrity hashes/signature metadata, dependencies, compatibility, entitlement/licensing metadata and documentation/asset references. Normal packages are declarative/non-executable.
+
+Package types include `GAME`, `CONTENT`, `BIBLE_TRANSLATION`, `MEDIA_ASSET`, `DOCUMENTATION`, and `BUNDLE`.
+
+Before publication validate schema, IDs/versions, dependency graph, Agon compatibility, provenance/license, entitlement policy, documentation, assets/content revisions, update/migration behavior and offline/Shared policies.
+
+See `guides/package-development.md`.
+
+## 11. Package signing and entitlement signing
+
+Package/application integrity signing and entitlement-certificate signing are separate trust purposes. Release automation may use separate protected signing identities/keys. Private signing keys must never be committed to the repository, included in installers/packages, or exposed in CI logs/artifacts.
+
+The application contains only the trusted public material required for verification.
+
+## 12. Release/deployment model
 
 ### Local desktop
-The current deployable artifact is the Windows installer. Until update architecture is implemented, release is an explicit artifact distribution process.
+Stable release artifact is the installer plus independently publishable compatible `.agonpack` packages. A normal installer may bundle popular/free/locked packs; future Complete/Offline distribution may bundle all redistributable packs without changing their package identities.
 
 ### Shared
-Future Shared deployment consists of compatible installed Agon sites plus the selected realtime/coordinator infrastructure. Game code must not be forked for Shared. Production Shared deployment requires security, identity/admission, transport, fairness, observability and compatibility gates.
+Compatible installed Agon sites negotiate protocol/runtime/package/capability/translation/entitlement readiness. They need not have byte-identical installations. Protected content is not transferred unless license/package policy explicitly permits it.
 
 ### Hosted
-Future Hosted deployment consists of the hosted authority/services and browser clients implementing the same contracts. Infrastructure/provider specifics belong in a deployment runbook when chosen; they are intentionally not invented here.
+Hosted authority/services use the same logical package/entitlement contracts while package deployment may be centralized. Browser clients do not receive server package stores or entitlement secrets.
 
-## 11. Release gates
+## 13. Application vs package releases
 
-Before producing a stable release:
-1. clean `npm ci` succeeds;
-2. `npm run test:all` succeeds;
-3. new/changed contracts pass contract/conformance tests;
-4. data/content validation succeeds;
-5. package/installer succeeds on supported target;
-6. smoke test the packaged artifact, not only Vite output;
-7. schema migrations are tested against representative previous-version data;
-8. active/saved session compatibility is understood;
-9. security/privacy review is completed for new external inputs/data classes;
-10. release notes identify migrations, compatibility constraints and known limitations.
+Application releases update Core/Play/Admin/trusted executable modules and may introduce schema/protocol changes. Package releases update compatible games/content/translations/media/docs independently when application compatibility permits.
 
-For Shared/Hosted additionally require:
-- protocol/version negotiation tests;
-- TLS/credential/admission configuration verification;
-- rate-limit and abuse controls;
-- observability/alerting readiness;
-- dependency/degraded-mode tests;
-- rollback plan;
-- backup/restore verification for authoritative persistence.
+Do not force an application release solely because compatible data/content changed.
 
-## 12. CI pipeline target
+## 14. Safe update pipeline
+
+```mermaid
+flowchart LR
+  A[Acquire] --> V[Verify]
+  V --> S[Stage]
+  S --> P[Compatibility + Migration Preflight]
+  P --> I[Transactional Install]
+  I --> T[Validate]
+  T --> C[Commit]
+  T -- Failure --> R[Rollback]
+```
+
+Never overwrite the only known-good version before validation. Active Events and saved-session package pins participate in preflight. Unsafe removal/update is blocked or retains a compatible pinned version.
+
+## 15. Entitlement/activation release testing
+
+Release testing for entitlement-enabled distributions covers:
+- bundled locked pack remains locked before entitlement;
+- activation yields/verifies signed entitlement;
+- unlocked pack becomes available without reinstall;
+- valid offline entitlement remains usable according to policy during service outage;
+- invalid/tampered/expired certificates are rejected safely;
+- raw keys/certificates are absent from routine logs/telemetry;
+- offline activation request/response when implemented;
+- transfer/recovery policy when implemented.
+
+## 16. Bible translation package release testing
+
+For `BIBLE_TRANSLATION` packages test translation identity/attribution, entitlement state, capabilities, BibleTextService resolution, offline/provider behavior, update/remove, exact-wording capability where claimed and license-driven caching/redistribution policy.
+
+Shared tests must prove that Host entitlement does not implicitly copy protected translation text to another site.
+
+## 17. Event preparation release testing
+
+`Prepare Event` must resolve required games, content revisions, translations, media/assets, documentation, endpoint capabilities, package versions and entitlements before play. Test READY, DOWNLOAD_REQUIRED, PACKAGE_LOCKED/LICENSE_REQUIRED, INCOMPATIBLE, remote missing dependency and provider-online-required paths.
+
+## 18. Release gates
+
+Before stable release:
+1. clean `npm ci`;
+2. `npm run test:all`;
+3. contract/conformance tests;
+4. content validation;
+5. application/package schema fixtures;
+6. installer build and clean-machine install;
+7. packaged artifact smoke test;
+8. bundled package registration/integrity test;
+9. locked/unlocked entitlement test when applicable;
+10. package dependency/update/rollback tests;
+11. representative previous-version schema migration;
+12. saved Event/session compatibility/pin verification;
+13. Bible translation license/attribution/readiness checks when changed;
+14. security/privacy review;
+15. release notes including migrations/compatibility/known limitations.
+
+Shared/Hosted additionally require protocol negotiation, admission/security, dependency/degraded-mode, observability, rollback and persistence backup/restore verification.
+
+## 19. CI pipeline target
 
 ```mermaid
 flowchart LR
   C[Checkout] --> I[npm ci]
-  I --> D[Data Validation]
+  I --> D[Data + Docs Validation]
   D --> T[Typecheck]
   T --> U[Unit + Integration]
   U --> K[Contract + Conformance]
   K --> B[Build]
-  B --> E[E2E]
-  E --> V[Visual]
-  V --> P[Package]
-  P --> S[Packaged Smoke]
-  S --> A[Release Artifact]
+  B --> E[E2E + Visual]
+  E --> PK[Build/Validate Packages]
+  PK --> P[Build Installer]
+  P --> S[Clean Install + Packaged Smoke]
+  S --> A[Signed Release Artifacts]
 ```
 
-PR CI may stop before packaging for ordinary changes, but release CI should verify the actual distributable artifact.
+Release CI verifies the actual distributable installer/packages, not only development output.
 
-## 13. Branch/PR expectations
+## 20. Branch/PR expectations
 
-A development PR should state:
-- problem/requirement;
-- architectural contracts touched;
-- implementation summary;
-- tests added/changed;
-- data/schema migration impact;
-- security/privacy impact;
-- screenshots for material UI changes;
-- compatibility impact for Local/Shared/Hosted;
-- follow-up issues if scope is intentionally deferred.
+A PR states problem/requirement, contracts touched, tests, migration impact, package/entitlement impact, security/privacy, Local/Shared/Hosted compatibility, documentation and follow-ups. Breaking STABLE/LOCKED contracts require ADR/version/migration strategy.
 
-Breaking contract changes require an ADR and version/migration plan.
+## 21. Schema/persistence/package migrations
 
-## 14. Schema and persistence migrations
+Never mutate historical persisted/package assumptions without versioned migration. Tests cover supported previous -> current, retry/idempotency where relevant, failure rollback, unknown future version rejection and saved Event/session restoration.
 
-Never mutate historical persisted data assumptions without a versioned migration. Migration tests should cover:
-- previous supported schema -> current;
-- idempotent/retry behavior where applicable;
-- failed migration rollback/recovery;
-- unknown future version rejection;
-- saved Event/tournament/session restoration.
+## 22. Content changes
 
-## 15. Content changes
+Published content is revisioned. Correcting published content normally creates a new revision rather than rewriting history required by pinned sessions. Generated drafts pass review before publication.
 
-Published content is revisioned. Correcting a published question should normally create a new revision rather than rewriting history needed by saved/replayable sessions. Generated drafts must pass the configured review lifecycle before publication.
+## 23. Debugging
 
-## 16. Debugging guidance
+Prefer structured IDs/reason codes. Never log credentials, product keys, entitlement certificates, provider secrets, private hands or unrevealed answers. Diagnostics exports must exclude secrets.
 
-Prefer structured domain/session IDs and reason codes over dumping state. Never log credentials, join secrets, private hands or unrevealed answers as routine diagnostics. When deterministic replay is available, capture privacy-safe event/snapshot/RNG/clock metadata sufficient to reproduce the problem.
+## 24. Definition of done
 
-## 17. Definition of done for a feature/game
+A feature/game/package is not done merely when it works. Applicable completion includes official contracts, deterministic authority behavior, validated content/schema, lowest-useful-layer tests, persistence/reconnect, privacy-safe projections, accessibility/input declarations, runtime capability expectations, package/dependency declarations, entitlement/licensing behavior, offline behavior, documentation and migration/update implications.
 
-A feature/game is not done merely when it works in the current UI. Applicable completion includes:
-- uses official contracts instead of bypassing layers;
-- no direct outcome-affecting wall-clock/RNG usage;
-- content/schema validated;
-- tests at the lowest useful layer;
-- persistence/reconnect behavior defined if stateful;
-- projections do not leak hidden state;
-- accessibility/input requirements declared;
-- Local/Shared/Hosted capability expectations declared;
-- required assets/packages identified;
-- documentation updated when behavior/contracts change.
+## 25. Current-command source of truth
 
-## 18. Current-command source of truth
-
-`package.json` remains the executable source of truth for npm scripts. If a command in this guide becomes stale, update this guide in the same PR that changes the script.
+`package.json` remains executable source of truth for npm scripts. Update this guide with script changes.
