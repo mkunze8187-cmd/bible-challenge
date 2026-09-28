@@ -1,5 +1,7 @@
 # Agon Bible Translation Platform Architecture
 
+> **Status: design reference (merged 2026-09-28).** Implementation targets **Agon vNext** per [ADR-001](../../docs/architecture/adr-001-agon-vnext-staged-replacement.md) and [the vNext migration spec](../agon-vnext-migration-spec.md). Any integration through legacy `src/lib/gameEngine.ts`, `src/renderer/App.tsx`, per-game `PlayerStats` fields or the central `GameId` union described here is superseded. Sequencing is governed by `ROADMAP.md` and native GitHub issue dependencies.
+
 ## Purpose
 Make Bible translation selection a first-class Agon platform capability instead of embedding KJV wording/assumptions in individual games. Agon must support KJV and optional additional translations through a common, licensing-aware, offline-aware architecture that integrates with GameDefinition, Content Registry, Events, Gauntlet, saved sessions, Player Controller, Main Stage, Host Remote, and future content/game packs.
 
