@@ -310,6 +310,87 @@ textarea {
   flex-wrap: wrap;
 }
 
+.projector-warning {
+  color: #8a4a17;
+  font-weight: 700;
+}
+
+.remote-connected-pill {
+  align-self: center;
+  border: 1px solid rgba(33, 83, 72, 0.28);
+  border-radius: 999px;
+  background: rgba(217, 235, 223, 0.92);
+  color: #1f5834;
+  padding: 7px 10px;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.host-remote-panel {
+  display: grid;
+  gap: 10px;
+  border-top: 1px solid rgba(64, 47, 28, 0.16);
+  padding-top: 12px;
+}
+
+.host-remote-header,
+.host-remote-approval {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.host-remote-header p {
+  margin: 2px 0 0;
+  color: rgba(36, 25, 21, 0.72);
+  font-size: 0.82rem;
+}
+
+.host-remote-meta {
+  display: grid;
+  gap: 4px;
+  color: rgba(36, 25, 21, 0.78);
+  font-size: 0.84rem;
+}
+
+.host-remote-pairing {
+  display: grid;
+  grid-template-columns: 104px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+
+.host-remote-pairing img {
+  width: 104px;
+  height: 104px;
+  border: 1px solid rgba(64, 47, 28, 0.16);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.host-remote-pairing div {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.host-remote-pairing span {
+  color: rgba(36, 25, 21, 0.65);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.host-remote-pairing strong {
+  overflow-wrap: anywhere;
+}
+
+.pairing-code {
+  font-size: 1.3rem;
+  letter-spacing: 0.08em;
+}
+
 .pill {
   display: inline-flex;
   align-items: center;

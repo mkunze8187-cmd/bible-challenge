@@ -1,6 +1,7 @@
 const { app, BrowserWindow, dialog, ipcMain, screen, shell } = require("electron");
 const fs = require("node:fs/promises");
 const path = require("node:path");
+const { createLanServer } = require("./lan/server");
 
 // Test mode is on only when BOTH BIBLE_CHALLENGE_E2E=1 and the app is running unpackaged.
 // This must be checked with app.isPackaged, not NODE_ENV or similar — isPackaged is the one
@@ -213,6 +214,42 @@ async function writeCustomContentPack(pack) {
 let mainWindow = null;
 let projectorWindow = null;
 let projectorState = null;
+let hostRemoteCommandSeq = 0;
+const hostRemoteCommandResults = new Map();
+let pendingHostRemoteView = null;
+let hostRemoteViewTimer = null;
+
+const lanServer = createLanServer({
+  onHostCommand: sendHostRemoteCommandToRenderer,
+  onHostRemoteStatus: (status) => sendToMainWindow("lan:host-remote-status", status),
+  onStatus: (status) => sendToMainWindow("lan:status", status),
+  onSecurityEvent: (eventName) => console.warn(`LAN security event: ${eventName}`)
+});
+
+function sendToMainWindow(channel, payload) {
+  if (mainWindow && !mainWindow.isDestroyed()) {
+    mainWindow.webContents.send(channel, payload);
+  }
+}
+
+function sendHostRemoteCommandToRenderer(command) {
+  if (!mainWindow || mainWindow.isDestroyed()) {
+    return Promise.resolve({ ok: false, reason: "no-session" });
+  }
+
+  const requestId = `host-remote-command-${++hostRemoteCommandSeq}`;
+  return new Promise((resolve) => {
+    const timeout = setTimeout(() => {
+      hostRemoteCommandResults.delete(requestId);
+      resolve({ ok: false, reason: "timeout" });
+    }, 5_000);
+    hostRemoteCommandResults.set(requestId, (result) => {
+      clearTimeout(timeout);
+      resolve(result && typeof result === "object" ? result : { ok: false, reason: "bad-result" });
+    });
+    mainWindow.webContents.send("host-remote:command", { requestId, command });
+  });
+}
 
 // In test mode, adds e2e=1 (and seed/maxPrompts/feedbackEndpoint when set) to a window's query
 // string so the renderer can read them at startup. Merges with any query the caller already
@@ -358,6 +395,10 @@ app.whenReady().then(() => {
   });
 });
 
+app.on("before-quit", () => {
+  lanServer.stop();
+});
+
 ipcMain.handle("app:exit", () => {
   app.quit();
 });
@@ -395,6 +436,52 @@ ipcMain.on("projector:update-state", (_event, state) => {
   if (projectorWindow && !projectorWindow.isDestroyed()) {
     projectorWindow.webContents.send("projector:state", projectorState);
   }
+});
+
+ipcMain.handle("lan:host-remote-enable", async (_event, options = {}) => {
+  return lanServer.startFeature("host-remote", options);
+});
+
+ipcMain.handle("lan:host-remote-disable", () => {
+  return lanServer.stopFeature("host-remote");
+});
+
+ipcMain.handle("lan:host-remote-status", () => {
+  return lanServer.getStatus().hostRemote;
+});
+
+ipcMain.handle("lan:host-remote-approve-pairing", () => {
+  return lanServer.approveHostRemotePairing();
+});
+
+ipcMain.handle("lan:host-remote-deny-pairing", () => {
+  return lanServer.denyHostRemotePairing();
+});
+
+ipcMain.handle("lan:host-remote-revoke", () => {
+  return lanServer.revokeHostRemote();
+});
+
+ipcMain.on("host-remote:view", (_event, view) => {
+  pendingHostRemoteView = view;
+  if (hostRemoteViewTimer) {
+    return;
+  }
+
+  hostRemoteViewTimer = setTimeout(() => {
+    hostRemoteViewTimer = null;
+    lanServer.sendHostRemoteView(pendingHostRemoteView);
+  }, 100);
+});
+
+ipcMain.handle("host-remote:command-result", (_event, requestId, result) => {
+  const resolve = hostRemoteCommandResults.get(requestId);
+  if (!resolve) {
+    return;
+  }
+
+  hostRemoteCommandResults.delete(requestId);
+  resolve(result);
 });
 
 ipcMain.handle("app:get-settings", async () => {

@@ -26,6 +26,14 @@ import {
   registerCustomContentPacks,
   type CustomContentPack
 } from "../lib/content";
+import {
+  guardHostCommand,
+  toHostRemoteView,
+  type HostCommand,
+  type HostCommandRejectReason,
+  type HostCommandSource,
+  type HostRemoteView
+} from "../lib/hostRemoteView";
 import { setRandomSeed } from "../lib/random";
 import {
   GAME_LIBRARY,
@@ -269,6 +277,7 @@ type TestModeScreen = "menu" | "setup" | "settings" | "game" | "complete";
 
 interface BibleChallengeTestHook {
   getSessionState(): SessionState | null;
+  getHostRemoteView(): HostRemoteView | null;
   getScreen(): TestModeScreen;
   getSettings(): PersistedAppSettings;
 }
@@ -306,6 +315,23 @@ interface ProjectorDisplay {
     height: number;
   };
   primary: boolean;
+}
+
+interface HostRemoteStatus {
+  enabled?: boolean;
+  listening?: boolean;
+  address?: string | null;
+  port?: number | null;
+  url?: string | null;
+  pairingCode?: string | null;
+  qrCodeDataUrl?: string | null;
+  paired?: boolean;
+  connected?: boolean;
+  deviceLabel?: string | null;
+  pendingPairing?: {
+    id: string;
+    deviceLabel: string;
+  } | null;
 }
 
 const IS_PROJECTOR_WINDOW = new URLSearchParams(window.location.search).get("projector") === "1";
@@ -1653,6 +1679,18 @@ function forceResolveForHost(state: SessionState): ActionResult {
   return { nextState, tone: "warning", text: message };
 }
 
+function appendRemoteActivitySource(state: SessionState | null, actionLabel: string): SessionState | null {
+  if (!state?.activityLog[0]) {
+    return state;
+  }
+
+  const nextState = structuredClone(state);
+  if (!nextState.activityLog[0].text.includes("(remote)")) {
+    nextState.activityLog[0].text = `${actionLabel} (remote): ${nextState.activityLog[0].text}`;
+  }
+  return nextState;
+}
+
 function submitOnEnter(
   event: ReactKeyboardEvent<HTMLInputElement | HTMLTextAreaElement>,
   onSubmit: () => void,
@@ -2120,6 +2158,7 @@ export function App() {
   const [activeChallengeId, setActiveChallengeId] = useState<string | null>(null);
   const [isStartingGame, setIsStartingGame] = useState(false);
   const [sessionState, setSessionState] = useState<SessionState | null>(null);
+  const [hostStateVersion, setHostStateVersion] = useState(0);
   const [sessionHistory, setSessionHistory] = useState<SessionHistoryEntry[]>([]);
   const [scoreAdjustments, setScoreAdjustments] = useState<ScoreAdjustment[]>([]);
   const [isHostControlsOpen, setIsHostControlsOpen] = useState(false);
@@ -2151,6 +2190,9 @@ export function App() {
   const [isProjectorWindowOpen, setIsProjectorWindowOpen] = useState(false);
   const [isProjectorControlsOpen, setIsProjectorControlsOpen] = useState(false);
   const [projectorStatus, setProjectorStatus] = useState("");
+  const [hostRemoteStatus, setHostRemoteStatus] = useState<HostRemoteStatus | null>(null);
+  const [hostRemoteMessage, setHostRemoteMessage] = useState("");
+  const [showHostRemotePairing, setShowHostRemotePairing] = useState(false);
 
   if (!audioManagerRef.current) {
     audioManagerRef.current = new AudioManager();
@@ -2239,6 +2281,30 @@ export function App() {
       }
     });
   }, []);
+
+  useEffect(() => {
+    if (IS_PROJECTOR_WINDOW || !window.desktopHost?.onHostRemoteStatus) {
+      return;
+    }
+
+    window.desktopHost.getHostRemoteStatus?.().then((status) => setHostRemoteStatus(status as HostRemoteStatus)).catch(() => undefined);
+    return window.desktopHost.onHostRemoteStatus((status) => {
+      const nextStatus = status as HostRemoteStatus;
+      setHostRemoteStatus(nextStatus);
+      if (nextStatus.paired) {
+        setShowHostRemotePairing(false);
+      }
+    });
+  }, []);
+
+  useEffect(() => {
+    if (!showHostRemotePairing) {
+      return;
+    }
+
+    const timeoutId = window.setTimeout(() => setShowHostRemotePairing(false), 120_000);
+    return () => window.clearTimeout(timeoutId);
+  }, [showHostRemotePairing, hostRemoteStatus?.pairingCode]);
 
   useEffect(() => {
     if (IS_PROJECTOR_WINDOW || !window.desktopHost?.updateProjectorState) {
@@ -2594,6 +2660,7 @@ export function App() {
 
     window.__bibleChallengeTest = {
       getSessionState: () => sessionState,
+      getHostRemoteView: () => hostRemoteView,
       getScreen: () => screen,
       getSettings: () => ({
         colorTheme,
@@ -2643,8 +2710,11 @@ export function App() {
     feedbackEndpoint,
     gameStats,
     hostControlsEnabled,
+    hostSelectedParticipantId,
+    hostStateVersion,
     hostTimerIncrements,
     hostUndoDepth,
+    isTimerPaused,
     isSettingsOpen,
     isSetupOpen,
     participantMode,
@@ -2653,8 +2723,10 @@ export function App() {
     savedEventDefinitions,
     selectedEventGameIds,
     sessionState,
+    sessionHistory,
     showChallengeRatings,
     showStudyNotes,
+    timeRemaining,
     timerEnabled,
     teams,
     timerPreset,
@@ -3001,6 +3073,54 @@ export function App() {
     }
   }
 
+  async function handleEnableHostRemote() {
+    if (!window.desktopHost?.enableHostRemote) {
+      setHostRemoteMessage("Host Remote is only available in the desktop app.");
+      return;
+    }
+
+    try {
+      const status = await window.desktopHost.enableHostRemote();
+      setHostRemoteStatus((status as { hostRemote?: HostRemoteStatus })?.hostRemote ?? (status as HostRemoteStatus));
+      setShowHostRemotePairing(true);
+      setHostRemoteMessage("Host Remote is listening. Windows may ask for firewall permission.");
+    } catch (error) {
+      setHostRemoteMessage(error instanceof Error ? error.message : "Host Remote could not be enabled.");
+    }
+  }
+
+  async function handleDisableHostRemote() {
+    try {
+      const status = await window.desktopHost?.disableHostRemote?.();
+      setHostRemoteStatus((status as { hostRemote?: HostRemoteStatus })?.hostRemote ?? null);
+      setShowHostRemotePairing(false);
+      setHostRemoteMessage("Host Remote is off.");
+    } catch (error) {
+      setHostRemoteMessage(error instanceof Error ? error.message : "Host Remote could not be disabled.");
+    }
+  }
+
+  async function handleApproveHostRemotePairing() {
+    const result = await window.desktopHost?.approveHostRemotePairing?.();
+    if ((result as { ok?: boolean })?.ok === false) {
+      setHostRemoteMessage("Pairing request could not be approved.");
+    } else {
+      setHostRemoteMessage("Host Remote paired.");
+    }
+  }
+
+  async function handleDenyHostRemotePairing() {
+    await window.desktopHost?.denyHostRemotePairing?.();
+    setHostRemoteMessage("Pairing request denied.");
+  }
+
+  async function handleRevokeHostRemote() {
+    const status = await window.desktopHost?.revokeHostRemote?.();
+    setHostRemoteStatus(status as HostRemoteStatus);
+    setShowHostRemotePairing(true);
+    setHostRemoteMessage("Host Remote access revoked. A new code is required.");
+  }
+
   function createEntryId(prefix: string): string {
     return typeof crypto !== "undefined" && "randomUUID" in crypto
       ? crypto.randomUUID()
@@ -3022,6 +3142,10 @@ export function App() {
   function clearSessionHistory() {
     setSessionHistory([]);
     setScoreAdjustments([]);
+  }
+
+  function bumpHostStateVersion() {
+    setHostStateVersion((current) => current + 1);
   }
 
   // Returns the error message when `action` throws (callers that need to show that message
@@ -3047,6 +3171,7 @@ export function App() {
         tone: result.tone,
         text: result.text
       });
+      bumpHostStateVersion();
       const effectName = getActionSoundEffect(previousState, result, preferredEffect);
 
       if (effectName) {
@@ -3123,6 +3248,7 @@ export function App() {
       setGameId(modeToStart);
       setGameStats((current) => recordGameStarted(current, modeToStart, participantMode, eventScoringEnabled));
       setSessionState(nextState);
+      setHostStateVersion(0);
       clearSessionHistory();
       setIsTimerPaused(false);
       setIsHostControlsOpen(false);
@@ -3232,6 +3358,7 @@ export function App() {
 
   function handleExitToMenu() {
     setSessionState(null);
+    setHostStateVersion(0);
     setActiveChallengeId(null);
     clearSessionHistory();
     setIsTimerPaused(false);
@@ -3264,7 +3391,11 @@ export function App() {
     return true;
   }
 
-  function updateCurrentScore(update: (score: number) => number, message: string) {
+  function getHostSourceLabel(source: HostCommandSource): string {
+    return source === "remote" ? " (remote)" : "";
+  }
+
+  function updateCurrentScore(update: (score: number) => number, message: string, participantOverrideId?: string) {
     if (!verifyScoreAdjustmentPermission()) {
       return;
     }
@@ -3275,6 +3406,9 @@ export function App() {
       }
 
       const participantId =
+        (participantOverrideId && current.participants.some((participant) => participant.id === participantOverrideId)
+          ? participantOverrideId
+          : null) ??
         (hostSelectedParticipantId && current.participants.some((participant) => participant.id === hostSelectedParticipantId)
           ? hostSelectedParticipantId
           : null) ??
@@ -3304,15 +3438,21 @@ export function App() {
       }
       return nextState;
     });
+    bumpHostStateVersion();
     setFlashMessage({ tone: "info", text: message });
   }
 
-  function adjustCurrentScore(delta: number) {
-    updateCurrentScore((score) => score + delta, `${delta > 0 ? "Added" : "Subtracted"} ${Math.abs(delta)} point${Math.abs(delta) === 1 ? "" : "s"}.`);
+  function adjustCurrentScore(delta: number, participantId?: string, source: HostCommandSource = "desktop") {
+    updateCurrentScore(
+      (score) => score + delta,
+      `${delta > 0 ? "Added" : "Subtracted"} ${Math.abs(delta)} point${Math.abs(delta) === 1 ? "" : "s"}${getHostSourceLabel(source)}.`,
+      participantId
+    );
   }
 
   function adjustTimer(seconds: number) {
     setTimeRemaining((current) => Math.max(0, current + seconds));
+    bumpHostStateVersion();
     setFlashMessage({
       tone: "info",
       text: `${seconds > 0 ? "Added" : "Subtracted"} ${Math.abs(seconds)} seconds.`
@@ -3348,36 +3488,42 @@ export function App() {
     handleAction(() => setCurrentActor(sessionState, participantId), null);
   }
 
-  function markHostCorrect() {
+  function markHostCorrect(participantOverrideId?: string, source: HostCommandSource = "desktop", answerText?: string) {
     if (!sessionState) {
       return;
     }
 
-    const participantId = getHostTargetParticipantId(sessionState);
+    const participantId = participantOverrideId ?? getHostTargetParticipantId(sessionState);
     if (!participantId) {
       setFlashMessage({ tone: "warning", text: "Choose a participant before marking correct." });
       return;
     }
 
-    handleAction(() => markCorrectForHost(sessionState, participantId));
+    handleAction(() => markCorrectForHost(sessionState, participantId, { answerText }), null);
+    if (source === "remote") {
+      setSessionState((current) => appendRemoteActivitySource(current, "Mark Correct"));
+    }
     setAnswerClockRemaining(0);
     if (answererTimerBehavior !== "continue") {
       setIsTimerPaused(false);
     }
   }
 
-  function markHostIncorrect() {
+  function markHostIncorrect(participantOverrideId?: string, source: HostCommandSource = "desktop", answerText?: string) {
     if (!sessionState) {
       return;
     }
 
-    const participantId = getHostTargetParticipantId(sessionState);
+    const participantId = participantOverrideId ?? getHostTargetParticipantId(sessionState);
     if (!participantId) {
       setFlashMessage({ tone: "warning", text: "Choose a participant before marking incorrect." });
       return;
     }
 
-    handleAction(() => markIncorrectForHost(sessionState, participantId), "wrong");
+    handleAction(() => markIncorrectForHost(sessionState, participantId, { answerText }), "wrong");
+    if (source === "remote") {
+      setSessionState((current) => appendRemoteActivitySource(current, "Mark Incorrect"));
+    }
     setAnswerClockRemaining(0);
     if (answererTimerBehavior !== "continue") {
       setIsTimerPaused(false);
@@ -3392,8 +3538,73 @@ export function App() {
       return;
     }
 
-    updateCurrentScore(() => parsed, "Score set by host.");
+    dispatchHostCommand({ type: "set-score", score: parsed });
     setManualScoreInput("");
+  }
+
+  function rejectHostCommand(reason: HostCommandRejectReason) {
+    setFlashMessage({
+      tone: "warning",
+      text: reason === "stale-prompt" ? "Remote command ignored: prompt changed." : "Remote command ignored: game state changed."
+    });
+    return { ok: false as const, reason };
+  }
+
+  function dispatchHostCommand(command: HostCommand, source: HostCommandSource = "desktop") {
+    if (!sessionState) {
+      return { ok: false as const, reason: "no-session" };
+    }
+
+    const staleReason = guardHostCommand(command, {
+      currentPromptId: getEnginePromptId(sessionState),
+      stateVersion: hostStateVersion
+    });
+    if (staleReason) {
+      return rejectHostCommand(staleReason);
+    }
+
+    switch (command.type) {
+      case "select-answerer":
+        selectHostAnswerer(command.participantId);
+        break;
+      case "mark-correct":
+        markHostCorrect(command.participantId, source, command.answerText);
+        break;
+      case "mark-incorrect":
+        markHostIncorrect(command.participantId, source, command.answerText);
+        break;
+      case "adjust-timer":
+        adjustTimer(command.seconds);
+        break;
+      case "set-timer-paused":
+        setIsTimerPaused(command.paused);
+        bumpHostStateVersion();
+        break;
+      case "reveal-answer":
+      case "skip":
+        handleAction(() => forceResolveForHost(sessionState), "pass");
+        break;
+      case "adjust-score":
+        adjustCurrentScore(command.delta, command.participantId, source);
+        break;
+      case "set-score":
+        updateCurrentScore(() => Math.max(0, command.score), `Score set by host${getHostSourceLabel(source)}.`, command.participantId);
+        break;
+      case "undo":
+        undoLastSessionAction();
+        break;
+      case "restart-game":
+        void restartCurrentChallenge();
+        break;
+      case "end-game":
+        endCurrentGame(source);
+        break;
+      case "continue":
+        handleAction(() => continueGame(sessionState));
+        break;
+    }
+
+    return { ok: true as const };
   }
 
   function undoLastSessionAction() {
@@ -3406,22 +3617,24 @@ export function App() {
     setSessionState(entry.state);
     setSessionHistory((current) => current.slice(1));
     setAnswerClockRemaining(0);
+    bumpHostStateVersion();
     setFlashMessage({ tone: "info", text: `Undid: ${entry.label}` });
   }
 
-  function endCurrentGame() {
+  function endCurrentGame(source: HostCommandSource = "desktop") {
     setSessionState((current) => {
       if (!current) {
         return current;
       }
 
       const nextState = structuredClone(current);
-      pushSessionHistory(current, "Host ended the game.");
+      pushSessionHistory(current, `Host ended the game${getHostSourceLabel(source)}.`);
       nextState.status = "completed";
       return nextState;
     });
+    bumpHostStateVersion();
     setIsHostControlsOpen(false);
-    setFlashMessage({ tone: "info", text: "Host ended the game." });
+    setFlashMessage({ tone: "info", text: `Host ended the game${getHostSourceLabel(source)}.` });
   }
 
   async function restartCurrentChallenge() {
@@ -3455,6 +3668,7 @@ export function App() {
         recordGameStarted(current, sessionState.gameId, participantMode, eventScoringEnabled)
       );
       setSessionState(restartedState);
+      setHostStateVersion(0);
       setSessionMisses((current) => ({
         ...current,
         [nextChallengeId]: []
@@ -4000,6 +4214,17 @@ export function App() {
   const hostAwardPoints =
     sessionState && hostTargetParticipantId ? getHostAwardPoints(sessionState, hostTargetParticipantId) : null;
   const hostPromptContent = getHostPromptContent(sessionState);
+  const hostRemoteView = sessionState
+    ? toHostRemoteView(sessionState, {
+        stateVersion: hostStateVersion,
+        timeRemaining,
+        timerEnabled,
+        isTimerPaused,
+        answerClockRemaining,
+        selectedAnswererId: hostTargetParticipantId,
+        undoLabel: sessionHistory[0]?.label ?? null
+      })
+    : null;
   const hostBuzzPolicy = sessionState ? GAME_LIBRARY[sessionState.gameId].buzzTurnPolicy : currentGame.buzzTurnPolicy;
   const hostBuzzPolicyLabel = hostBuzzPolicy
     .split("-")
@@ -4007,6 +4232,10 @@ export function App() {
     .join(" ");
   const recentScoreAdjustments = scoreAdjustments.slice(0, 5);
   const canUseHostControls = hostControlsEnabled && !IS_PROJECTOR_WINDOW;
+  const hostRemoteUrl = hostRemoteStatus?.url ?? (hostRemoteStatus?.address && hostRemoteStatus.port ? `http://${hostRemoteStatus.address}:${hostRemoteStatus.port}/host-remote` : null);
+  const selectedProjectorDisplay = projectorDisplays.find((display) => display.id === selectedProjectorDisplayId) ?? null;
+  const mayBeMirroredProjector =
+    projectorDisplays.length <= 1 || Boolean(selectedProjectorDisplay?.primary && isProjectorWindowOpen);
   const eventStandings = sortEventScores(eventScores);
   const eventChallengeCount = completedEventGameIds.length;
   const selectedEventChallengeCount = selectedEventGameIds.length;
@@ -4054,6 +4283,38 @@ export function App() {
       ? eventStandings[0]
       : null;
 
+  useEffect(() => {
+    if (IS_PROJECTOR_WINDOW || !window.desktopHost?.updateHostRemoteView || !hostRemoteView) {
+      return;
+    }
+
+    window.desktopHost.updateHostRemoteView(hostRemoteView);
+  }, [hostRemoteView]);
+
+  useEffect(() => {
+    if (IS_PROJECTOR_WINDOW || !window.desktopHost?.onHostRemoteCommand) {
+      return;
+    }
+
+    return window.desktopHost.onHostRemoteCommand((command) => dispatchHostCommand(command as HostCommand, "remote"));
+  }, [
+    activeContentPackId,
+    answerClockSeconds,
+    answererTimerBehavior,
+    difficultyFilter,
+    eventScoringEnabled,
+    hostSelectedParticipantId,
+    hostStateVersion,
+    isStartingGame,
+    participantMode,
+    playerColors,
+    playerDifficulties,
+    playerNames,
+    sessionHistory,
+    sessionState,
+    teams
+  ]);
+
   return (
     <div className={`app-shell app-theme-${colorTheme} app-display-${effectiveDisplayMode} ${sessionState ? "app-shell-play" : ""} ${IS_PROJECTOR_WINDOW ? "app-projector-window" : ""}`}>
       <div className="glow glow-left" />
@@ -4070,6 +4331,9 @@ export function App() {
           </div>
         </div>
         <div className="topbar-actions">
+          {hostRemoteStatus?.connected && !IS_PROJECTOR_WINDOW ? (
+            <span className="remote-connected-pill">Remote connected</span>
+          ) : null}
           {window.desktopHost?.openProjectorWindow ? (
             <div className="projector-menu">
               <button
@@ -4105,6 +4369,72 @@ export function App() {
                     </button>
                   </div>
                   {projectorStatus ? <p className="projector-status">{projectorStatus}</p> : null}
+                  <div className="host-remote-panel">
+                    <div className="host-remote-header">
+                      <div>
+                        <strong>Host Remote</strong>
+                        <p>Phone or tablet controller on this local network.</p>
+                      </div>
+                      {hostRemoteStatus?.enabled ? (
+                        <button type="button" className="ghost-button" onClick={handleDisableHostRemote}>
+                          Disable
+                        </button>
+                      ) : (
+                        <button type="button" className="primary-button" onClick={handleEnableHostRemote}>
+                          Enable
+                        </button>
+                      )}
+                    </div>
+                    {hostRemoteStatus?.enabled ? (
+                      <>
+                        <div className="host-remote-meta">
+                          <span>Listening: {hostRemoteStatus.address}:{hostRemoteStatus.port}</span>
+                          {hostRemoteStatus.connected ? <span>Connected: {hostRemoteStatus.deviceLabel ?? "Remote"}</span> : null}
+                        </div>
+                        {mayBeMirroredProjector ? (
+                          <p className="projector-status projector-warning">
+                            Pairing code may be visible if this display is mirrored. Keep it hidden until the host is ready to pair.
+                          </p>
+                        ) : null}
+                        {hostRemoteStatus.pendingPairing ? (
+                          <div className="host-remote-approval">
+                            <span>Allow {hostRemoteStatus.pendingPairing.deviceLabel} to control the game?</span>
+                            <button type="button" className="primary-button" onClick={handleApproveHostRemotePairing}>
+                              Approve
+                            </button>
+                            <button type="button" className="ghost-button" onClick={handleDenyHostRemotePairing}>
+                              Deny
+                            </button>
+                          </div>
+                        ) : null}
+                        {hostRemoteStatus.connected ? (
+                          <button type="button" className="ghost-button" onClick={handleRevokeHostRemote}>
+                            Revoke Remote
+                          </button>
+                        ) : null}
+                        {!hostRemoteStatus.connected ? (
+                          <button type="button" className="secondary-button" onClick={() => setShowHostRemotePairing((current) => !current)}>
+                            {showHostRemotePairing ? "Hide pairing code" : "Show pairing code"}
+                          </button>
+                        ) : null}
+                        {showHostRemotePairing && !hostRemoteStatus.connected ? (
+                          <div className="host-remote-pairing">
+                            {hostRemoteStatus.qrCodeDataUrl ? <img src={hostRemoteStatus.qrCodeDataUrl} alt="Host Remote QR code" /> : null}
+                            <div>
+                              <span>URL</span>
+                              <strong>{hostRemoteUrl}</strong>
+                              <span>Pairing code</span>
+                              <strong className="pairing-code">{hostRemoteStatus.pairingCode ?? "Waiting"}</strong>
+                            </div>
+                          </div>
+                        ) : null}
+                        <p className="projector-status">
+                          Use a Private network or Windows Mobile Hotspot. Host Remote uses plain HTTP on your local network.
+                        </p>
+                      </>
+                    ) : null}
+                    {hostRemoteMessage ? <p className="projector-status">{hostRemoteMessage}</p> : null}
+                  </div>
                 </div>
               ) : null}
             </div>
@@ -5293,48 +5623,64 @@ export function App() {
                   </button>
                 </div>
                 <div className="host-control-grid">
-                  <button type="button" className="secondary-button" onClick={() => setIsTimerPaused((current) => !current)}>
+                  <button
+                    type="button"
+                    className="secondary-button"
+                    onClick={() => dispatchHostCommand({ type: "set-timer-paused", paused: !isTimerPaused })}
+                  >
                     {isTimerPaused ? "Resume Timer" : "Pause Timer"}
                   </button>
                   {hostTimerIncrements.map((seconds) => (
-                    <button key={`add-${seconds}`} type="button" className="secondary-button" onClick={() => adjustTimer(seconds)} disabled={!timerEnabled}>
+                    <button
+                      key={`add-${seconds}`}
+                      type="button"
+                      className="secondary-button"
+                      onClick={() => dispatchHostCommand({ type: "adjust-timer", seconds })}
+                      disabled={!timerEnabled}
+                    >
                       Add {seconds} Seconds
                     </button>
                   ))}
                   {hostTimerIncrements.map((seconds) => (
-                    <button key={`subtract-${seconds}`} type="button" className="secondary-button" onClick={() => adjustTimer(-seconds)} disabled={!timerEnabled}>
+                    <button
+                      key={`subtract-${seconds}`}
+                      type="button"
+                      className="secondary-button"
+                      onClick={() => dispatchHostCommand({ type: "adjust-timer", seconds: -seconds })}
+                      disabled={!timerEnabled}
+                    >
                       Subtract {seconds} Seconds
                     </button>
                   ))}
-                  <button type="button" className="primary-button" onClick={markHostCorrect}>
+                  <button type="button" className="primary-button" onClick={() => dispatchHostCommand({ type: "mark-correct" })}>
                     Mark Correct{hostAwardPoints == null ? "" : ` (+${hostAwardPoints})`}
                   </button>
-                  <button type="button" className="secondary-button" onClick={markHostIncorrect}>
+                  <button type="button" className="secondary-button" onClick={() => dispatchHostCommand({ type: "mark-incorrect" })}>
                     Mark Incorrect
                   </button>
-                  <button type="button" className="ghost-button" onClick={() => adjustCurrentScore(1)}>
+                  <button type="button" className="ghost-button" onClick={() => dispatchHostCommand({ type: "adjust-score", delta: 1 })}>
                     Add Point
                   </button>
-                  <button type="button" className="ghost-button" onClick={() => adjustCurrentScore(-1)}>
+                  <button type="button" className="ghost-button" onClick={() => dispatchHostCommand({ type: "adjust-score", delta: -1 })}>
                     Subtract Point
                   </button>
-                  <button type="button" className="ghost-button" onClick={undoLastSessionAction} disabled={sessionHistory.length === 0}>
+                  <button type="button" className="ghost-button" onClick={() => dispatchHostCommand({ type: "undo" })} disabled={sessionHistory.length === 0}>
                     Undo ({sessionHistory.length})
                   </button>
                   {allowHostAnswerReveal ? (
-                    <button type="button" className="secondary-button" onClick={() => handleAction(() => forceResolveForHost(sessionState), "pass")}>
+                    <button type="button" className="secondary-button" onClick={() => dispatchHostCommand({ type: "reveal-answer" })}>
                       Reveal Answer
                     </button>
                   ) : null}
                   {allowHostAnswerReveal ? (
-                    <button type="button" className="secondary-button" onClick={() => handleAction(() => forceResolveForHost(sessionState), "pass")}>
+                    <button type="button" className="secondary-button" onClick={() => dispatchHostCommand({ type: "skip" })}>
                       Skip / Pass
                     </button>
                   ) : null}
-                  <button type="button" className="ghost-button" onClick={restartCurrentChallenge} disabled={isStartingGame}>
+                  <button type="button" className="ghost-button" onClick={() => dispatchHostCommand({ type: "restart-game" })} disabled={isStartingGame}>
                     Restart Challenge
                   </button>
-                  <button type="button" className="ghost-button" onClick={endCurrentGame}>
+                  <button type="button" className="ghost-button" onClick={() => dispatchHostCommand({ type: "end-game" })}>
                     End Game
                   </button>
                   <button type="button" className="ghost-button" onClick={handleExitToMenu}>
@@ -5404,7 +5750,7 @@ export function App() {
                   <select
                     className="host-select"
                     value={hostTargetParticipantId ?? ""}
-                    onChange={(event) => selectHostAnswerer(event.target.value)}
+                    onChange={(event) => dispatchHostCommand({ type: "select-answerer", participantId: event.target.value })}
                   >
                     {sessionState.participants.map((participant) => (
                       <option key={participant.id} value={participant.id}>

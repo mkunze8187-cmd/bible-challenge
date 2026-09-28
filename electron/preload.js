@@ -20,6 +20,26 @@ contextBridge.exposeInMainWorld("desktopHost", {
   openProjectorWindow: (displayId) => ipcRenderer.invoke("projector:open", displayId),
   closeProjectorWindow: () => ipcRenderer.invoke("projector:close"),
   updateProjectorState: (state) => ipcRenderer.send("projector:update-state", state),
+  enableHostRemote: (options) => ipcRenderer.invoke("lan:host-remote-enable", options),
+  disableHostRemote: () => ipcRenderer.invoke("lan:host-remote-disable"),
+  getHostRemoteStatus: () => ipcRenderer.invoke("lan:host-remote-status"),
+  approveHostRemotePairing: () => ipcRenderer.invoke("lan:host-remote-approve-pairing"),
+  denyHostRemotePairing: () => ipcRenderer.invoke("lan:host-remote-deny-pairing"),
+  revokeHostRemote: () => ipcRenderer.invoke("lan:host-remote-revoke"),
+  updateHostRemoteView: (view) => ipcRenderer.send("host-remote:view", view),
+  onHostRemoteStatus: (callback) => {
+    const listener = (_event, status) => callback(status);
+    ipcRenderer.on("lan:host-remote-status", listener);
+    return () => ipcRenderer.removeListener("lan:host-remote-status", listener);
+  },
+  onHostRemoteCommand: (callback) => {
+    const listener = async (_event, message) => {
+      const result = await callback(message.command);
+      await ipcRenderer.invoke("host-remote:command-result", message.requestId, result);
+    };
+    ipcRenderer.on("host-remote:command", listener);
+    return () => ipcRenderer.removeListener("host-remote:command", listener);
+  },
   onProjectorState: (callback) => {
     const listener = (_event, state) => callback(state);
     ipcRenderer.on("projector:state", listener);
