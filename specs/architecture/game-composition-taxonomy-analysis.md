@@ -1,5 +1,7 @@
 # Agon Game / Challenge Composition & Consolidation Analysis
 
+> **Status: design reference (merged 2026-09-28).** Implementation targets **Agon vNext** per [ADR-001](../../docs/architecture/adr-001-agon-vnext-staged-replacement.md) and [the vNext migration spec](../agon-vnext-migration-spec.md). Any integration through legacy `src/lib/gameEngine.ts`, `src/renderer/App.tsx`, per-game `PlayerStats` fields or the central `GameId` union described here is superseded. Sequencing is governed by `ROADMAP.md` and native GitHub issue dependencies. This analysis is an input to the catalog audit **#507**.
+
 **Status:** Architecture analysis — input to refactoring, not a deletion decision
 **Purpose:** Classify implemented and planned Agon experiences by architectural role, identify reusable challenge/play-style families, show which higher-order games consume those families, and provide a basis for refactoring, pack design, and duplicate-game review.
 
