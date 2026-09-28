@@ -5,7 +5,7 @@
 **Role:** Higher-order gameplay orchestrator
 
 ## Purpose
-Provide reusable board-game structure, turns, tokens, movement, spaces/nodes, path topology, action resolution and finish conditions while delegating specialized mechanics to existing Agon capabilities.
+Provide reusable board-game structure, turns, tokens, movement, spaces/nodes, path topology, spatial geometry, action resolution and finish conditions while delegating specialized mechanics to existing Agon capabilities.
 
 `board.play` MUST NOT reimplement Dice/Spinner/Casting Lots, Card/Deck, Challenge, Score, Timer, Buzzer, Input or Persistence capabilities.
 
@@ -35,14 +35,26 @@ Support these v1 topology profiles:
 - `CIRCULAR` — repeating path/laps;
 - `BRANCHING` — player chooses among valid outgoing edges;
 - `GRAPH` — arbitrary node/edge network or map;
-- `TRACK` — lane/position-oriented topology suitable for race-like presentation.
+- `TRACK` — lane/position-oriented topology suitable for race-like presentation;
+- `SPATIAL` — geometry-aware board where adjacency/direction/distance may be derived from a lattice or coordinate model.
 
-The logical model uses stable node and edge IDs; visual geometry is renderer/presentation data and must not be required for rules.
+Spatial subtypes:
+- `SQUARE_GRID`;
+- `HEX_GRID`;
+- `TRIANGULAR_GRID`;
+- `CUSTOM_LATTICE`;
+- `FREEFORM_COORDINATE`.
+
+The logical model always uses stable node and edge IDs. Most visual geometry is presentation metadata, but SPATIAL boards may explicitly opt into rule-relevant geometry for adjacency, direction, distance, lines, jumps, regions or territories.
+
+The overall board outline is unrestricted: rectangle, circle, star/Chinese-checkers-style, cross, map silhouette, winding illustrated path, irregular polygon or other artwork/layout. Board outline never implies rules unless a spatial rule explicitly references geometry/regions.
 
 ```ts
 interface BoardDefinition {
   boardId: string;
   topology: BoardTopology;
+  spatialModel?: BoardSpatialModel;
+  outline?: BoardOutlinePresentation;
   nodes: BoardNodeDefinition[];
   edges: BoardEdgeDefinition[];
   startNodeIds: string[];
@@ -55,7 +67,17 @@ interface BoardNodeDefinition {
   nodeId: string;
   tags?: string[];
   actions?: BoardActionBinding[];
+  geometry?: BoardNodeGeometry;
   presentation?: BoardNodePresentation;
+}
+
+interface BoardNodeGeometry {
+  coordinate?: BoardCoordinate;
+  shape?: 'CIRCLE' | 'SQUARE' | 'RECTANGLE' | 'TRIANGLE' | 'HEXAGON' | 'POLYGON' | 'IMAGE_REGION' | 'CUSTOM';
+  polygonPoints?: BoardPoint[];
+  orientationDegrees?: number;
+  size?: BoardSize;
+  regionId?: string;
 }
 
 interface BoardEdgeDefinition {
@@ -63,9 +85,27 @@ interface BoardEdgeDefinition {
   fromNodeId: string;
   toNodeId: string;
   cost?: number;
+  direction?: string;
   conditions?: ConditionExpression[];
 }
 ```
+
+### Spatial geometry rules
+For non-SPATIAL boards, geometry MUST NOT be required to determine legal moves. For SPATIAL boards, a definition may use geometry/lattice rules to generate or validate edges and relations.
+
+Supported spatial concepts should include:
+- neighbor/adjacency queries;
+- direction/ray queries;
+- distance where the selected lattice defines it;
+- line/alignment detection;
+- jump-over-node to landing-node queries;
+- region/territory membership;
+- coordinate-to-node lookup;
+- generated edges from a lattice with optional explicit overrides.
+
+A Chinese-checkers-style star board is represented as nodes arranged on an appropriate custom/triangular lattice or explicit graph. The star outline is presentation; legal adjacency and jumps come from the graph/lattice. The engine does not hard-code Chinese checkers rules.
+
+Space shapes may vary within one board. A single board can mix circles, triangles, hexagons, polygons and image regions. Shape does not determine behavior unless a game explicitly binds shape/tag/region to a rule.
 
 ## Pieces / tokens
 A board session may have participant/team tokens and game-owned tokens/markers.
@@ -108,13 +148,15 @@ Movement is expressed as semantic operations, for example:
 - follow selected valid edge;
 - move backward where topology permits;
 - move to tagged next/previous node;
+- move to adjacent spatial node;
+- move/jump along a legal spatial direction;
 - swap positions where game policy permits;
 - remain in place;
 - finish/lap transition.
 
 Movement source is independent from movement resolution. Sources may include Dice, Spinner, Card, Challenge result, fixed rule or game-specific adapter.
 
-Board Play validates the resulting move against topology/rules.
+Board Play validates the resulting move against topology/spatial rules.
 
 ## Space/node actions
 Nodes do not hard-code every game behavior. A node contains ordered action bindings invoking registered capabilities/actions.
@@ -166,7 +208,7 @@ V1 supports configurable occupancy policy:
 - landing interaction callback;
 - pass-through allowed/blocked.
 
-Capture, blocking, stealing or trading are not universal Board rules; they are optional bounded game adapters or specialized capabilities.
+Spatial boards may additionally query neighboring occupancy, intervening occupancy for jumps, regions and lines. Capture, blocking, stealing, trading, jump chains or territory scoring are not universal Board rules; they are optional bounded game adapters or specialized capabilities built on Board Play spatial queries.
 
 ## Finish / win conditions
 Board completion and game winner are separate concepts. Finish policies may include:
@@ -185,7 +227,7 @@ Support 1–4 participants/teams. Turn-based and compatible simultaneous phases 
 ## Persistence / deterministic replay
 Persist:
 - board definition/version;
-- topology/content revision;
+- topology/spatial/content revision;
 - token positions/status/laps;
 - current turn/phase/participant;
 - pending action resolution;
@@ -197,22 +239,25 @@ Persist:
 Randomizer results must be reproducible/auditable under the existing deterministic RNG policy. Resume must never redraw/re-roll a committed action.
 
 ## Stage / controller contract
-Stage receives a public board projection: topology presentation reference, token positions, current turn/phase, public card/randomizer/challenge results, and legal public state.
+Stage receives a public board projection: topology/presentation reference, spatial layout when relevant, token positions, current turn/phase, public card/randomizer/challenge results, and legal public state.
 
-Controllers receive participant-authorized actions: roll/spin request, choose branch, answer challenge, card choices, end/confirm turn, etc. Board definitions do not address UI elements directly.
+Controllers receive participant-authorized actions: roll/spin request, choose branch/node/direction, answer challenge, card choices, end/confirm turn, etc. Board definitions do not address UI elements directly.
+
+Renderers must support arbitrary board outlines and mixed node shapes without changing game logic. Hit testing/accessibility must use stable semantic node identity rather than relying on pixel color or artwork alone.
 
 ## Accessibility
-- logical board state must be understandable without relying solely on geometry/color;
-- expose node names/types and token positions semantically;
+- logical board state must be understandable without relying solely on geometry/color/shape;
+- expose node names/types, coordinates/regions where meaningful, neighbors/legal moves and token positions semantically;
 - reduced-motion mode jumps/shortens movement animation while preserving state;
 - randomizer animation is presentation only;
-- keyboard/controller equivalents for drag/drop/path selection;
-- no gameplay rule may require perception of color alone.
+- keyboard/controller equivalents for drag/drop/path/node selection;
+- no gameplay rule may require perception of color or shape alone; if shape is rule-relevant, provide a semantic/text equivalent.
 
 ## Packaging
 A board-game pack should normally contain:
 - BoardDefinition and GameDefinition;
 - board artwork/layout/presentation metadata;
+- spatial/lattice definition where required;
 - content profiles;
 - card definitions/content where applicable;
 - rules/help;
@@ -223,17 +268,24 @@ It must not package duplicate Challenge/Card/Randomizer/Score implementations.
 
 ## Candidate consumers
 - future traditional Bible board games;
+- star, hex, triangular, map, territory and other spatial board games;
 - The Pilgrim's Way where a literal board/path presentation is selected;
 - Running the Race for shared movement primitives where compatible (without forcing Race Engine into Board Play);
-- Wayfinder for graph/path primitives where compatible (maze/fog rules remain Wayfinder-specific);
-- Walls of Jerusalem/Blockbusters for selected graph/occupancy primitives where compatible;
+- Wayfinder for graph/path/spatial primitives where compatible (maze/fog rules remain Wayfinder-specific);
+- Walls of Jerusalem/Blockbusters for selected graph/spatial/occupancy primitives where compatible;
 - kids path/collection games;
 - downloadable themed board packs.
 
 Reuse should be by capability/interface; existing specialized games are not required to become generic board games if doing so harms their rules.
 
 ## Conformance tests
-- all v1 topology profiles;
+- all v1 topology profiles including SPATIAL;
+- square, hexagonal, triangular and custom lattice fixtures;
+- arbitrary/star-shaped overall board layout;
+- mixed circle/triangle/hexagon/polygon/image-region spaces;
+- spatial adjacency/direction/distance/line queries;
+- jump query with occupied intervening node and valid landing;
+- explicit graph versus lattice-generated edge equivalence;
 - roll/spin/card/challenge/fixed movement sources;
 - turn policy variations;
 - node action ordering;
