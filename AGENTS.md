@@ -1,43 +1,50 @@
-# AI Context & Execution Rules
+# AI Execution Rules
 
-## 🤐 Verbosity & Tone Control
-* **Code-First Output:** Deliver the target code or diff immediately. Do not introduce the code or summarize what you are about to do.
-* **No Post-Mortem Explanations:** Do not write paragraphs explaining why the fix works unless explicitly asked ("explain why").
-* **Zero Conversational Fluff:** Omit all pleasantries ("Sure, I can help!"), apologies, or structural sign-offs.
-* **Compact Markdown:** No full-file rewrites. Output only the specific lines or functions changed. Use concise comments inline if a line requires context.
+## Scope & Approval
+- Read the active GitHub issue first; its acceptance criteria plus referenced ADRs/specs define scope.
+- Load only documents needed for the active issue. Do not preload the docs/specs tree.
+- Do not implement adjacent backlog items.
+- **Approval required:** architecture/dependency direction, public contracts/schemas, security/trust boundaries, persistence formats, game rules/scoring, or UI/UX/layout/navigation/wording changes not explicitly authorized by the issue/spec.
+- If a protected decision or missing/contradictory contract blocks work, STOP and request approval. Do not invent a local workaround.
+- Migration/refactoring is not redesign: preserve observable behavior unless an approved requirement says otherwise.
 
-## 🏛 Project Architecture (Monorepo)
-* **Root App:** Windows Electron app (Main/Preload in `electron/`, Renderer in `src/`).
-* **Admin Workspace:** Admin Console SPA (`admin/` workspace, named `bible-challenge-admin`).
-* **Shared Data/Schemas:** `src/data/` (Schemas are vendored to `admin/src/data/schemas/` via sync script).
+## Cross-Agent Compatibility
+- Claude, Codex, and humans must be interchangeable between commits.
+- Source, tests, issues, ADRs, and specs are shared memory; never rely on undocumented agent assumptions.
+- Leave completed work buildable/testable and record durable decisions in the repository, not chat.
 
-## 🧭 Agon vNext Legacy Freeze (ADR-001)
-* **Governing docs:** `docs/architecture/adr-001-agon-vnext-staged-replacement.md`, `specs/agon-vnext-migration-spec.md`, `ROADMAP.md`.
-* **No new major game/engine logic in legacy monoliths** (`src/lib/gameEngine.ts`, `src/renderer/App.tsx`). New games, engines and capabilities target vNext contracts (M0 #509).
-* **Allowed legacy changes:** defect fixes, content maintenance, security/accessibility fixes, compatibility adapters, migration support. Label the issue/PR `legacy-only` and justify why vNext cannot host the change.
-* **Never:** extend the `GameId` union for a new game, add per-game fields to `PlayerStats`, or make game code import Electron/network transport directly.
-* **Audience boundary:** AGON_GENERAL and AGON_KIDS stay separate player-facing families; share infrastructure, not GameDefinitions.
+## UI/UX Freeze
+Unless explicitly authorized:
+- preserve layout, wording, controls, interaction order, responsive behavior, and existing design tokens/components;
+- do not modernize/simplify UI during migration;
+- never update visual baselines merely to make a regression pass.
+Unexpected visual differences are regressions.
 
-## ⚠️ Workspace & Context Guardrails
-* **Workspace Isolation:** Confirm if a file belongs to the Root Electron App or the Admin Console before editing to avoid mixed imports.
-* **Schema Sync Warning:** If modifying JSON schemas in `src/data/`, append the schema sync command to the end of the output.
-* **Never Guess Paths:** If file structure is ambiguous, ask to list the directory or view package.json first.
+## Agon vNext (ADR-001)
+- Governing docs: `docs/architecture/adr-001-agon-vnext-staged-replacement.md`, `specs/agon-vnext-migration-spec.md`, `ROADMAP.md`.
+- No new major game/engine logic in legacy `src/lib/gameEngine.ts` or `src/renderer/App.tsx`.
+- Allowed legacy work: defects, content, security/accessibility, compatibility adapters, migration support. Use `legacy-only` and justify why vNext cannot host it.
+- Never extend legacy `GameId` for a new game, add per-game `PlayerStats` fields, or import Electron/network transport from game code.
+- Games use runtime/contracts; Stage consumes public projections; controllers submit intents; runtime owns authority.
+- AGON_GENERAL and AGON_KIDS remain separate player-facing families; share infrastructure, not GameDefinitions.
 
-## 🏃‍♂️ Critical Commands (Run from Root via PowerShell)
-* **Dev/Run Challenge App:** `npm run start` (Builds then launches Electron)
-* **Dev/Run Admin App:** `npm run start --workspace bible-challenge-admin`
-* **Typecheck:** `npm run typecheck` | `npm run typecheck:admin`
-* **Test Suite:**
-  * Root Unit: `npm run test:run`
-  * Admin Unit: `npm run test:admin`
-  * E2E Smoke: `npm run test:e2e` (or `npm run test:e2e:fast` if dist is fresh)
-  * Complete Validation: `npm run test:all`
-* **Data & Schemas:**
-  * Validate: `npm run check:data`
-  * Sync Admin Copies: `npm run sync-schemas --workspace bible-challenge-admin -- --source ..`
+## Workspace
+- Root Electron app: Main/Preload `electron/`, Renderer `src/`.
+- Admin SPA: `admin/` workspace (`bible-challenge-admin`). Confirm workspace before editing.
+- Shared schemas: `src/data/`; Admin copies are synced to `admin/src/data/schemas/`.
+- If modifying schemas, run: `npm run sync-schemas --workspace bible-challenge-admin -- --source ..`
+- Never guess ambiguous paths; inspect the tree/package first.
 
-## 📁 Key File Map
-* Electron Main/Preload: `electron/`
-* UI Components (Root): `src/`
-* UI Components (Admin): `admin/src/`
-* Visual Test Snapshots & E2E: `tests/`
+## Validation
+Run the narrowest relevant checks while developing; run issue-required acceptance checks before completion. Do not fix unrelated failures without scope.
+- Typecheck: `npm run typecheck` | `npm run typecheck:admin`
+- Unit: `npm run test:run` | `npm run test:admin`
+- Data: `npm run check:data`
+- E2E: `npm run test:e2e` (`test:e2e:fast` only with fresh dist)
+- Full: `npm run test:all` only when required by issue/PR gate or broad cross-cutting change.
+- Run apps: `npm run start` | `npm run start --workspace bible-challenge-admin`
+
+## Response Economy
+- Code/work first; no preamble, fluff, or post-mortem unless requested.
+- Report only changed files, validation results, blockers, and approval decisions.
+- Do not restate issue/spec requirements.
