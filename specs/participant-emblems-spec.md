@@ -1,5 +1,7 @@
 # Agon Team & Player Emblems Spec
 
+> **Status: design reference (merged 2026-09-28).** Implementation targets **Agon vNext** per [ADR-001](../docs/architecture/adr-001-agon-vnext-staged-replacement.md) and [the vNext migration spec](agon-vnext-migration-spec.md). Any integration through legacy `src/lib/gameEngine.ts`, `src/renderer/App.tsx`, per-game `PlayerStats` fields or the central `GameId` union described here is superseded. Sequencing is governed by `ROADMAP.md` and native GitHub issue dependencies.
+
 ## 1. Purpose
 
 Today each player or team chooses a **name and color** (`Participant.color`, `DEFAULT_PARTICIPANT_COLORS` in `gameEngine.ts`; Players tab `playerColors`). This spec adds an **emblem**: an icon chosen from a curated set of Agon-style Bible symbols (Lion, Dove, Crown, Harp, Ark, …).
