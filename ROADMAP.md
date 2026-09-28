@@ -1,168 +1,106 @@
 # Agon: The Bible Challenge — Roadmap
 
-This roadmap summarizes the GitHub milestones and how they depend on each other. Detailed designs live in `specs/`; GitHub issues are the implementation tracker, and native `blockedBy` links on each issue are the source of truth for dependencies.
+This roadmap summarizes the GitHub milestones and how they depend on each other. **Native GitHub `blockedBy` links and sub-issues are the source of truth for dependencies**; "Depends on" lines in issue bodies are for reading only.
 
-The product is being renamed from **Bible Challenge** to **Agon: The Bible Challenge** in 0.5.0 (see Agon 1).
+**Governing architecture:** [ADR-001](docs/architecture/adr-001-agon-vnext-staged-replacement.md) and the [vNext migration spec](specs/agon-vnext-migration-spec.md). Agon vNext replaces the legacy `gameEngine.ts` / `App.tsx` architecture in stages, inside this repository. The full refactor rationale, audit and issue mapping are in [docs/architecture/agon-vnext-roadmap-refactor-proposal.md](docs/architecture/agon-vnext-roadmap-refactor-proposal.md). Descriptions of retired milestones are preserved in [docs/architecture/retired-milestones.md](docs/architecture/retired-milestones.md).
 
-## Current Baseline
+## Rules
 
-- Current shipped version: `0.3.0` (Host Remote).
-- Pre-1.0 feature work ships as minor releases; dev-only, content, polish, and test work can ship as patch releases.
-- Both apps (Challenge and Admin Console) share one version number.
+- **Legacy freeze.** Planned engines and major new games target vNext contracts. Legacy changes are limited to defect fixes, content maintenance, security/accessibility fixes, compatibility adapters and migration support (label `legacy-only`, with a justification in the issue).
+- **Local first.** Offline/Local is implemented first; Shared/Hosted never block Local.
+- **Audience boundary.** AGON_GENERAL and AGON_KIDS are separate player-facing families (#507, `docs/development/game-catalog-consolidation-policy.md`). They share infrastructure, not GameDefinitions.
+- **No duplicate closure without migration.** Close a duplicate only after its unique requirements are copied into the destination and cross-linked.
+- **Specs are design references.** Merged specs describe the design. Sequencing lives here and in issue dependencies.
 
-## Release Order at a Glance
+## Current baseline
 
-| Version | Milestone | Issues | Needs |
-|---|---|---|---|
-| ~~0.1.x~~ | Automated Testing Foundations | #1–#3 (done) | — |
-| ~~0.2.0~~ | Host Mode / Game Master Controls | #8–#10 (done) | 0.1.x |
-| **0.3.0** | Host Remote (phone/tablet host controller) | #94–#96 | 0.2.0 |
-| **0.4.0** | Phone Mode Stage 1 (Buzz Only) | #11–#14 | 0.2.0, #95 |
-| **0.5.0** | Agon 1: Foundation | #117, #99–#102 | — |
-| **0.6.0** | Agon 2: Core Apps | #103–#104 | Agon 1 |
-| **0.7.0** | Agon 3: Game Presentation | #105–#107 | Agon 2 |
-| **0.8.0** | Agon 4: Host Experience | #108–#110 | Agon 3, 0.3.0 |
-| **1.0.0** | Stabilization | #15, #87 | 0.3.0–0.8.0 |
-| 1.x | Feature tracks, Agon 5–6, content | see below | varies |
+- Shipped: `0.3.0` Host Remote. The legacy runtime runs all 32 implemented GameIds.
+- Next: M0 vNext foundation (#509), then the Five Clues reference migration (#510).
 
-Agon 1–3 do not depend on Host Remote or Phone Mode, so they can be worked in parallel with 0.3.0/0.4.0. Version numbers are assigned in the order releases actually ship.
+## Gates
 
-```txt
-0.2.0 Host Mode ──> 0.3.0 Host Remote ──┬──> 0.4.0 Phone Stage 1 ──────────┐
-                                        │                                 │
-0.5.0 Agon 1 ─> 0.6.0 Agon 2 ─> 0.7.0 Agon 3 ─┴─> 0.8.0 Agon 4 ───────────┴─> 1.0.0 Stabilization
-
-1.x: Phone Stages 2–3 + Controller extensions ─> Agon 5 ─> Agon 6
+```text
+PR #512 (ADR-001)
+   │
+   ▼
+M0 Foundation (#509) ─────────────────────────► Track: Brand & Design System (parallel)
+   │  domain #362 → GameDefinition #314 → EngineRegistry #447
+   │  intents/events #350/#448 → projection #351 → persistence #353
+   │  RNG #142, timer #156, ledger #364, BibleTextService #338/#339
+   │  LegacyGameAdapter #513, Offline adapter #514, boundary CI #515 (+#7)
+   ▼
+M1 Reference: Five Clues (#510; #402, #4, surface host #516)
+   │                     ╲
+   ▼                      ▼
+M2 #507 → #511        M5 renderer decomposition   M6 controller/LAN contracts
+   │                      (grow alongside M4)          │
+   ▼                                                    ▼
+M3 capabilities ──► M4 migration waves (#331) ──► M9 Shared/Hosted (after M6)
+   │                     │
+   ├──► M7 General new games (capability + #507 disposition)
+   ├──► M8 Agon Kids (capability + Kids foundation #234/#235)
+   ▼
+M10 Legacy retirement (#517; after M4 + M5 + M6)
 ```
 
-## Near-Term Release Path
+| Milestone | Purpose | Exit |
+|---|---|---|
+| **M0 — vNext Architecture Foundation** | #509: contracts, AgonRuntime, registries, Engine SDK, Offline adapter, LegacyGameAdapter/launch resolver, deterministic harness, CI enforcement | A minimal GameDefinition runs in a test host with no Electron/renderer/network dependency; all legacy games still launch; CI enforces boundaries |
+| **M1 — vNext Reference Migration** | #510: **Five Clues** end-to-end (fallback: Name That Book) | Five Clues is authoritative on vNext; migration checklist/template checked in |
+| **M2 — Catalog & Migration Classification** | #507 audience/catalog audit + #511 migration waves | Checked-in migration matrix + dependency graph; wave and capability issues created |
+| **M3 — Core Capability Extraction** | Reusable engines/capabilities with named consumers | Capabilities for the first bulk waves have stable contracts/tests |
+| **M4 — Existing Game Migration Waves** | #331 epic; waves by capability family | Every retained implemented game is on vNext or dispositioned |
+| **M5 — Renderer / Experience Decomposition** | Shell, setup, Host, Stage, game surface, results, help | Migrated games need no game-specific `App.tsx` branches |
+| **M6 — Controller & Shared/LAN Contract Migration** | Phone Mode, Player Controller, Host Remote behind Controller intents | Phone controllers work through vNext; another transport could implement the contract |
+| **M7 — New General Agon Catalog on vNext** | New AGON_GENERAL games | per game |
+| **M8 — Agon Kids on vNext** | AGON_KIDS family | per game |
+| **M9 — Shared/Hosted Platform Implementations** | Adapters/services, not game forks | Shared/Hosted run existing GameDefinitions unchanged |
+| **M10 — Legacy Retirement** | #517 | `gameEngine.ts` and the legacy launch path are removed; full regression green |
 
-### 0.3.0 — Host Remote
+Value tracks: **Agon Brand & Design System** (parallel now), **Tournaments & Persistent Events**, **Packaging, Distribution & Entitlements**, **Themed Content & Seasonal Packs**, **Platform Hardening & Operations**. Backlogs: **General Candidates**, **Agon Kids Candidates**, **Remaining Testing**. Per-game and per-feature grouping uses `track: *` labels.
 
-Goal: run Host Controls from a phone or tablet in projector mode while the laptop runs the game and projector.
+## 1.0.0 definition
 
-- #94 Host command dispatcher and remote view.
-- #95 LAN server core and host pairing (shared with Phone Mode).
-- #96 Phone/tablet controller UI and projector-mode integration (needs #94, #95).
+1.0 is the first release-quality, architecturally complete **Local vNext** product:
 
-First release that opens a network port: release notes need firewall, Private network profile, hotspot fallback, and the plain-HTTP caveat. Security requirements S1–S18 are in the Host Remote section of `enhancement-spec-tournament-daily-host-map.md`.
+- M0 complete; M1 reference architecture proven;
+- design system at release quality;
+- local phone controllers operating through vNext contracts;
+- save/resume working;
+- CI, regression and package validation green;
+- a representative set of migrated games covering the important interaction families (clue/reveal, question/choice, ordering, matching).
 
-### 0.4.0 — Phone Mode Stage 1
+The **percentage of implemented games on vNext is tracked as a roadmap metric**, not a release criterion. Shared/Hosted, complete legacy retirement and the new-game catalog are **not** 1.0 requirements. Tracking issue: #15.
 
-Goal: player phones connect and buzz while the host app keeps gameplay authority.
+## Migration metric
 
-- #11 Shared foundation: protocol, device registry, privacy projection (on the #95 server).
-- #12 Step 1: connect and buzz.
-- #13 Step 2: roster and room.
-- #14 Step 3: event readiness.
+| Date | Implemented GameIds | Authoritative on vNext | % |
+|---|---|---|---|
+| 2026-09-28 | 32 | 0 | 0% |
 
-### 0.5.0 — Agon 1: Foundation
+## Near-term execution order
 
-Goal: rename to Agon without losing data or updates, and lay the design-system foundation.
+1. #7 CI + #515 boundary guard.
+2. #509 foundation: #362 → #314 (+#358, #320) → #447–#450 → #350/#448 → #351 → #142/#156 → #364 → #353 → #338/#339 → #514 → #513 → #356.
+3. #507 catalog audit (parallel).
+4. #4 Five Clues oracle tests, #402 answer evaluation, #516 surface host → **#510 Five Clues**.
+5. #511 → wave and capability issues → first wave (progressive-clue family, #307).
+6. M5/M6 as migrated surfaces require them; then approved M7/M8 games.
 
-- #117 Rename continuity: data folder, update assets, installer identity (blocks #99).
-- #99 Brand assets and product naming.
-- #100 Design tokens, typography, icons, theme bridge.
-- #101 Shared UI primitives and accessibility foundation.
-- #102 Adaptive layout utilities and viewport test harness.
+In parallel now: Brand & Design System (#117, #99–#102, #104), content authoring, legacy defect fixes.
 
-### 0.6.0 — Agon 2: Core Apps
+## Do not implement yet
 
-- #103 Challenge home, navigation, setup, settings, dialogs.
-- #104 Admin console shell, navigation, forms, tables (parallel with #103).
+| Work | Blocked until |
+|---|---|
+| M7/M8 games | M0 + their M3 capability + a #507 disposition |
+| Timeline sub-modes #56/#57, Director's Cut #58, Word Ladder rungs #87, randomizer variants #311 | the owning game's M4 wave |
+| Legacy UI redesign #103, #105–#110 | #510 + #516 |
+| Phone Mode / Player Controller #11–#20, #50–#51, #111–#113 | Controller intents (M0), proven in #510 |
+| Tournaments #189–#198, Gauntlet adapters #310 | M0 persistence/ledger; #197 needs M4 |
+| Shared/Hosted/communications | M6 exit |
+| Packaging/Licensing implementation | duplicate reconciliation + M0 content contract |
 
-### 0.7.0 — Agon 3: Game Presentation
+## Release versions
 
-- #105 Game Presentation System and standard quiz-family migration.
-- #106 Projector/audience adaptive layouts and safe areas.
-- #107 Specialized boards: card ordering, tiles, maps, Bible Baseball presentation. Presentations for games not built yet are finished in those games' own milestones.
-
-### 0.8.0 — Agon 4: Host Experience
-
-- #108 Shared Host Controls component system and desktop host redesign (needs #94).
-- #109 Responsive Host Remote producer console (needs #94–#96).
-- #110 Host Remote board controls, ordering, text entry, specialized interactions.
-
-### 1.0.0 — Stabilization
-
-Goal: declare the app stable after Host Mode, Host Remote, Phone Mode Stage 1, and the Agon redesign through Agon 4 have survived real use.
-
-- #15 Stabilization checklist (blocked by the 0.3.0–0.8.0 work and critical testing).
-- #87 Word Ladder: cap rungs by difficulty.
-
-No new features in this milestone. 1.0.0 ships under the Agon name, so screenshot baselines cover the new design.
-
-## 1.x Feature Tracks
-
-The order of 1.x milestones is flexible unless a dependency is listed.
-
-### Phone Mode Stages 2 and 3
-
-- #16 Stage 2: buzz + typed answer.
-- #17 Stage 3 Step 1: choice select.
-- #18 Stage 3 Step 2: collect all.
-- #19 Stage 3 Step 3: map and medium games (map needs #23).
-- #20 Stage 3 Step 4: board games.
-
-Open decision: choice select may ship before or alongside typed answers.
-
-### Controller: Private Choice & Number Input
-
-- Done: #49 Number-input and private-choice interaction types.
-- #50 `privateOverride` in `PhonePromptModel` and `toPhoneView()`.
-- #51 Leak test coverage for `privateOverride`.
-
-Unblocks Bible Baseball and Forbidden Words phone flows.
-
-### Agon 5: Player Controller
-
-- #111 Controller shell, join/room, connection states, responsive buzzer (needs Phone Stage 1).
-- #112 Typed-answer, choice, number, private-choice interactions (needs #16–#18, #49–#51).
-- #113 Ordering, tiles, grouping, maps, specialized boards (needs #19, #20, #23).
-
-### Agon 6: Polish & Validation
-
-- #114 Motion, audio, haptics, game feedback polish.
-- #115 Accessibility, responsive, visual-regression, and real-device validation gate.
-
-### Tournament, Daily, and Map Modes
-
-- #21 Tournament / Season Mode.
-- #22 Daily Challenge Pack (needs seeded randomness from #1).
-- #23 Bible Map Challenge (prerequisite for phone and controller map interaction).
-
-### New Games and Variants
-
-Build after Agon 3 so new games and modes use the Game Presentation System (#105).
-
-- #52–#55 Progressive reveal content-batch games.
-- #56–#57 Bible Timeline sub-modes.
-- #58 Two Truths and a Lie narrated-account variant.
-- #59–#64 Bible Baseball.
-- #65–#68 Bible Blockbusters.
-- #69–#71 Forbidden Words.
-
-### Themed Content and Licensing
-
-- #24–#30 Themed content groundwork.
-- #31–#37 Content licensing (must ship before the first paid pack).
-- #38–#45 Individual themed content packs (1.x.y patches).
-
-Christmas (#38) and Easter / Resurrection Day (#39) are the first-pack candidates.
-
-## Backlog
-
-### Remaining Testing and CI
-
-- #4 Challenge app feature tests.
-- #5 Admin console and cross-app tests.
-- #6 Visual regression baselines (best done after Agon 3 so baselines match the new design).
-- #7 Optional CI pipeline.
-
-Pull these forward when a feature touches the relevant app surface or before 1.0.0.
-
-## Scheduling Notes
-
-- Dependencies are native GitHub `blockedBy` links; prose "Depends on" lines in issue bodies are for reading only.
-- Milestone descriptions point to `specs/...`.
-- Before each minor release, bump both app versions together, run the checks, and write release notes for host-facing setup or behavior changes.
+Versions are assigned in the order releases actually ship. Pre-1.0 feature work ships as minor releases; content, polish and test work can ship as patch releases. Both apps (Challenge and Admin Console) share one version number. Before each minor release, bump both app versions together, run `npm run test:all`, and write release notes for host-facing setup or behavior changes.
