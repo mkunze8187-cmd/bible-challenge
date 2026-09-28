@@ -11,6 +11,13 @@
 * **Admin Workspace:** Admin Console SPA (`admin/` workspace, named `bible-challenge-admin`).
 * **Shared Data/Schemas:** `src/data/` (Schemas are vendored to `admin/src/data/schemas/` via sync script).
 
+## 🧭 Agon vNext Legacy Freeze (ADR-001)
+* **Governing docs:** `docs/architecture/adr-001-agon-vnext-staged-replacement.md`, `specs/agon-vnext-migration-spec.md`, `ROADMAP.md`.
+* **No new major game/engine logic in legacy monoliths** (`src/lib/gameEngine.ts`, `src/renderer/App.tsx`). New games, engines and capabilities target vNext contracts (M0 #509).
+* **Allowed legacy changes:** defect fixes, content maintenance, security/accessibility fixes, compatibility adapters, migration support. Label the issue/PR `legacy-only` and justify why vNext cannot host the change.
+* **Never:** extend the `GameId` union for a new game, add per-game fields to `PlayerStats`, or make game code import Electron/network transport directly.
+* **Audience boundary:** AGON_GENERAL and AGON_KIDS stay separate player-facing families; share infrastructure, not GameDefinitions.
+
 ## ⚠️ Workspace & Context Guardrails
 * **Workspace Isolation:** Confirm if a file belongs to the Root Electron App or the Admin Console before editing to avoid mixed imports.
 * **Schema Sync Warning:** If modifying JSON schemas in `src/data/`, append the schema sync command to the end of the output.
