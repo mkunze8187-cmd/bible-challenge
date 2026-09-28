@@ -1,5 +1,7 @@
 # Bible Challenge Enhancement Spec: Tournament, Daily Challenge, Host Mode, and Bible Map Challenge
 
+> **Status: design reference (merged 2026-09-28).** Implementation targets **Agon vNext** per [ADR-001](../docs/architecture/adr-001-agon-vnext-staged-replacement.md) and [the vNext migration spec](agon-vnext-migration-spec.md). Any integration through legacy `src/lib/gameEngine.ts`, `src/renderer/App.tsx`, per-game `PlayerStats` fields or the central `GameId` union described here is superseded. Sequencing is governed by `ROADMAP.md` and native GitHub issue dependencies.
+
 ## Purpose
 
 This spec defines four additions to Bible Challenge and the Bible Challenge Admin Console:
@@ -850,6 +852,8 @@ interface HostRemoteSettings {
 ---
 
 # 4. Bible Map Challenge
+
+> **Update:** Bible Map Challenge now builds on the shared Image Board engine (`specs/image-board-engine-spec.md`). Map locations become Image Board regions instead of `x`/`y` pins, Locate/Route/Region Sort use regions, paths, and drop zones, and the map-coordinate picker is replaced by the Admin board editor. See that spec's §16. The data types below are superseded where they conflict.
 
 ## Summary
 
