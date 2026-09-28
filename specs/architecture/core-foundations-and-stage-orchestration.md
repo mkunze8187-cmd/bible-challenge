@@ -1,5 +1,7 @@
 # Agon Core Foundations & Stage Orchestration Architecture
 
+> **Status: design reference (merged 2026-09-28).** Implementation targets **Agon vNext** per [ADR-001](../../docs/architecture/adr-001-agon-vnext-staged-replacement.md) and [the vNext migration spec](../agon-vnext-migration-spec.md). Any integration through legacy `src/lib/gameEngine.ts`, `src/renderer/App.tsx`, per-game `PlayerStats` fields or the central `GameId` union described here is superseded. Sequencing is governed by `ROADMAP.md` and native GitHub issue dependencies. Where this document conflicts with ADR-001, **ADR-001 prevails**.
+
 ## Purpose
 Define cross-cutting foundations that should be stable before Agon migrates its full game catalog (#331) and before Local/Shared/Hosted runtimes diverge. These services sit below games and above deployment technology so games remain composable, testable, deterministic and portable.
 
