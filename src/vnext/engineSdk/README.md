@@ -23,3 +23,11 @@ An engine is a reusable mechanic/capability. Games and future session runtime co
 Capability IDs are stable strings such as `cards.hand`, `dice.roll` or `race.track`. Version matching supports exact versions, `^major` / `^major.minor` ranges, `>=` floors and `*`.
 
 `EngineRegistry.resolveRequirements` separates required, optional and missing optional capabilities. Missing required capabilities throw `UnknownCapabilityError` with a stable message.
+
+## Persistence And Readiness (#449)
+
+- `PersistedEngineSnapshot` stores logical state with an `EngineSessionPin` containing effective engine version, capability versions and state schema version.
+- `EngineSnapshotMigrationRegistry` restores compatible snapshots, applies explicit one-version-at-a-time schema migrations and rejects newer engine/schema snapshots.
+- `EnginePackageManifest` declares engine capability requirements for packages/games.
+- `evaluatePrepareEventEngineReadiness` reports missing or incompatible engine capabilities before play.
+- `negotiateSharedEngineCapabilities` compares capability metadata for Shared/Hosted style negotiation without exchanging implementation objects.
