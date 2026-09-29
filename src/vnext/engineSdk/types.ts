@@ -109,6 +109,11 @@ export interface EngineFactory<Config = unknown, State = unknown, Command = unkn
     snapshot: EngineSnapshot<State>,
     context: EngineContext,
   ): EngineInstance<State, Command, Event, Projection>;
+  replay?(
+    events: Event[],
+    config: Config,
+    context: EngineContext,
+  ): EngineInstance<State, Command, Event, Projection>;
 }
 
 export interface ResolvedEngineCapability {

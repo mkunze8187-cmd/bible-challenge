@@ -41,5 +41,7 @@ Normal `.agonpack` packages are non-executable. Trusted executable engine implem
 ## Conformance
 Applicable tests cover capability resolution/versioning, deterministic behavior, authorization/idempotency, snapshot/restore, replay, projection privacy, multiplayer isolation, invalid commands, renderer/action registration and readiness reporting.
 
+To add a new engine, build a harness for its factory and call `describeEngineConformanceSuite` from `tests/helpers/engineConformance.ts`. Start from `createReferenceEngineFactory` in `src/vnext/engineSdk/testing/referenceEngine.ts`; it demonstrates the required command, event, projection, snapshot, replay and privacy behavior. Trait-dependent checks run only when the engine declares the matching trait.
+
 ## Existing-engine migration
 Adapt existing reusable mechanics incrementally with compatibility adapters. Avoid a big-bang rewrite. Prioritize engines used by multiple games or needed by upcoming games. A migration issue should name consuming games and prove behavior parity before removing legacy paths.
