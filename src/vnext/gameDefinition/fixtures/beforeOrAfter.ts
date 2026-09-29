@@ -45,5 +45,39 @@ export const beforeOrAfterGameDefinition: GameDefinition = {
     host: "standard-challenge-host",
   },
   persistencePolicy: "challenge-session-v1",
+  runtimeCompatibility: {
+    local: {
+      status: "SUPPORTED",
+      requirements: {
+        privatePlayerProjection: true,
+        realtimeInput: false,
+        simultaneousInput: false,
+        localSiteAwareness: false,
+        authority: "LOCAL_HOST",
+      },
+    },
+    shared: {
+      status: "NOT_VALIDATED",
+      reason: "Legacy-compatible definition has not been exercised through Shared transport.",
+      requirements: {
+        privatePlayerProjection: true,
+        realtimeInput: false,
+        simultaneousInput: false,
+        localSiteAwareness: false,
+        authority: "EITHER",
+      },
+    },
+    hosted: {
+      status: "NOT_VALIDATED",
+      reason: "Legacy-compatible definition has not been exercised through Hosted transport.",
+      requirements: {
+        privatePlayerProjection: true,
+        realtimeInput: false,
+        simultaneousInput: false,
+        localSiteAwareness: false,
+        authority: "SERVER",
+      },
+    },
+  },
   assetDependencies: ["agon.core.ui"],
 };

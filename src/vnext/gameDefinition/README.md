@@ -13,9 +13,26 @@ A `GameDefinition` (`schema.ts`) declares, rather than owns:
 - randomizer/scoring/round/difficulty policy names
 - Main Stage/Player Controller/Host projection names
 - persistence policy
+- Local/Shared/Hosted runtime compatibility metadata
 - asset dependencies
 
 It does not contain behavior. Interpreting a definition (turning `randomizerPolicy: "seeded-selection"` into actual randomizer calls, for example) is the Game Runtime's job (#447–450), not this schema's.
+
+## Runtime compatibility (#358)
+
+Each `GameDefinition` declares a Local, Shared and Hosted compatibility entry:
+
+- `SUPPORTED` means setup/runtime code may use the definition in that mode.
+- `NOT_VALIDATED` means the mode is plausible but has not been proven.
+- `UNSUPPORTED` means a real contract requirement prevents that mode, with a reason.
+
+Requirements describe contract needs such as private player projection, realtime/simultaneous input, local-site awareness and authority placement. Most games should remain runtime-neutral; mode-specific metadata should express real requirements, not implementation branches.
+
+## Trusted novel-mechanic modules (#320)
+
+When an approved game mechanic cannot be represented by an existing reusable mechanic plus a declarative `GameDefinition`, use `TrustedGameModule` (`moduleContract.ts`). A module declares its runtime contract version, capabilities, projections, engine dependencies, persistence hooks, content and asset dependencies, runtime compatibility and optional Tournament/Gauntlet adapters.
+
+Modules are first-party code in this phase, not arbitrary executable plugins. They must consume shared vNext systems for RNG, scoring, persistence, assets, content and transport instead of duplicating those concerns. Core registers modules by contract and must not import a particular game's module.
 
 ## Registration and validation
 
