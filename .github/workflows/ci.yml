@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate data
+        run: npm run check:data
+
+      - name: Typecheck (root)
+        run: npm run typecheck
+
+      - name: Typecheck (admin)
+        run: npm run typecheck:admin
+
+      - name: Unit tests (root)
+        run: npm run test:run
+
+      - name: Unit tests (admin)
+        run: npm run test:admin
+
+      - name: E2E tests
+        env:
+          CI: true
+        run: npm run test:e2e
+
+      - name: Visual regression tests
+        env:
+          CI: true
+        run: npm run test:visual
+
+      - name: Upload test artifacts
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-artifacts
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 7
