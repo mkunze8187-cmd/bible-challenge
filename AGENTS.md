@@ -27,6 +27,7 @@ Unexpected visual differences are regressions.
 - Never extend legacy `GameId` for a new game, add per-game `PlayerStats` fields, or import Electron/network transport from game code.
 - Games use runtime/contracts; Stage consumes public projections; controllers submit intents; runtime owns authority.
 - AGON_GENERAL and AGON_KIDS remain separate player-facing families; share infrastructure, not GameDefinitions.
+- **CI-enforced (`tests/architectureBoundaries.test.ts`):** the `GameId` union and `PlayerStats` interface are pinned to their current member/field counts, and no file outside `src/lib`/`src/renderer` may import `gameEngine.ts` or `App.tsx`. A deliberate, justified change (`legacy-only` label + issue note) updates the pinned baseline in that test; do not work around a failure by widening the check.
 
 ## Workspace
 - Root Electron app: Main/Preload `electron/`, Renderer `src/`.
