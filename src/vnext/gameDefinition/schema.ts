@@ -19,6 +19,30 @@ export interface GameCapabilities {
   gauntletStage: boolean;
 }
 
+export type RuntimeMode = "LOCAL" | "SHARED" | "HOSTED";
+export type RuntimeSupportStatus = "SUPPORTED" | "NOT_VALIDATED" | "UNSUPPORTED";
+export type RuntimeAuthorityRequirement = "LOCAL_HOST" | "SERVER" | "EITHER";
+
+export interface RuntimeRequirements {
+  privatePlayerProjection: boolean;
+  realtimeInput: boolean;
+  simultaneousInput: boolean;
+  localSiteAwareness: boolean;
+  authority: RuntimeAuthorityRequirement;
+}
+
+export interface RuntimeCompatibility {
+  status: RuntimeSupportStatus;
+  reason?: string;
+  requirements: RuntimeRequirements;
+}
+
+export interface RuntimeCompatibilityMatrix {
+  local: RuntimeCompatibility;
+  shared: RuntimeCompatibility;
+  hosted: RuntimeCompatibility;
+}
+
 /** A mechanic/engine dependency, by capability ID, that this definition requires at runtime. */
 export interface MechanicDependency {
   mechanicId: MechanicId;
@@ -58,6 +82,7 @@ export interface GameDefinition {
   difficultyPolicy: string;
   projections: Projections;
   persistencePolicy: string;
+  runtimeCompatibility: RuntimeCompatibilityMatrix;
   assetDependencies: string[];
 }
 
@@ -84,6 +109,7 @@ export const gameDefinitionJsonSchema = {
     "difficultyPolicy",
     "projections",
     "persistencePolicy",
+    "runtimeCompatibility",
     "assetDependencies",
   ],
   properties: {
@@ -151,6 +177,52 @@ export const gameDefinitionJsonSchema = {
       },
     },
     persistencePolicy: { type: "string", minLength: 1 },
+    runtimeCompatibility: {
+      type: "object",
+      additionalProperties: false,
+      required: ["local", "shared", "hosted"],
+      properties: {
+        local: { $ref: "#/$defs/runtimeCompatibility" },
+        shared: { $ref: "#/$defs/runtimeCompatibility" },
+        hosted: { $ref: "#/$defs/runtimeCompatibility" },
+      },
+    },
     assetDependencies: { type: "array", items: { type: "string", minLength: 1 } },
+  },
+  $defs: {
+    runtimeCompatibility: {
+      type: "object",
+      additionalProperties: false,
+      required: ["status", "requirements"],
+      properties: {
+        status: { enum: ["SUPPORTED", "NOT_VALIDATED", "UNSUPPORTED"] },
+        reason: { type: "string", minLength: 1 },
+        requirements: { $ref: "#/$defs/runtimeRequirements" },
+      },
+      allOf: [
+        {
+          if: { properties: { status: { enum: ["NOT_VALIDATED", "UNSUPPORTED"] } } },
+          then: { required: ["reason"] },
+        },
+      ],
+    },
+    runtimeRequirements: {
+      type: "object",
+      additionalProperties: false,
+      required: [
+        "privatePlayerProjection",
+        "realtimeInput",
+        "simultaneousInput",
+        "localSiteAwareness",
+        "authority",
+      ],
+      properties: {
+        privatePlayerProjection: { type: "boolean" },
+        realtimeInput: { type: "boolean" },
+        simultaneousInput: { type: "boolean" },
+        localSiteAwareness: { type: "boolean" },
+        authority: { enum: ["LOCAL_HOST", "SERVER", "EITHER"] },
+      },
+    },
   },
 } as const;

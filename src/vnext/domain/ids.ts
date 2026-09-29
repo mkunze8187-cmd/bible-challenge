@@ -17,6 +17,7 @@ export type GameDefinitionId = Id<"GameDefinitionId">;
 export type GameVersion = Id<"GameVersion">;
 export type VariantId = Id<"VariantId">;
 export type MechanicId = Id<"MechanicId">;
+export type GameModuleId = Id<"GameModuleId">;
 
 export type ContentId = Id<"ContentId">;
 export type ChallengeId = Id<"ChallengeId">;

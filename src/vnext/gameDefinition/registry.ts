@@ -10,7 +10,12 @@
 
 import Ajv2020 from "ajv/dist/2020.js";
 import type { MechanicId } from "../domain/ids";
-import { gameDefinitionJsonSchema, type GameDefinition } from "./schema";
+import {
+  gameDefinitionJsonSchema,
+  type GameDefinition,
+  type RuntimeCompatibility,
+  type RuntimeMode,
+} from "./schema";
 
 const ajv = new Ajv2020({ allErrors: true, strict: false });
 const validateGameDefinitionSchema = ajv.compile(gameDefinitionJsonSchema);
@@ -55,6 +60,20 @@ export class MechanicDependencyCycleError extends Error {
   constructor(public readonly cycle: string[]) {
     super(`Mechanic dependency cycle detected: ${cycle.join(" -> ")}.`);
     this.name = "MechanicDependencyCycleError";
+  }
+}
+
+export class UnsupportedRuntimeError extends Error {
+  constructor(
+    public readonly gameDefinitionId: string,
+    public readonly runtimeMode: RuntimeMode,
+    public readonly compatibility: RuntimeCompatibility,
+  ) {
+    super(
+      `GameDefinition "${gameDefinitionId}" is ${compatibility.status} for ${runtimeMode}` +
+        (compatibility.reason ? `: ${compatibility.reason}` : "."),
+    );
+    this.name = "UnsupportedRuntimeError";
   }
 }
 
@@ -111,6 +130,27 @@ export class GameDefinitionRegistry {
 
   getGameDefinition(id: string): GameDefinition | undefined {
     return this.definitions.get(id);
+  }
+
+  getRuntimeCompatibility(id: string, runtimeMode: RuntimeMode): RuntimeCompatibility | undefined {
+    const definition = this.getGameDefinition(id);
+    if (!definition) return undefined;
+
+    const modeKey = runtimeMode.toLowerCase() as keyof GameDefinition["runtimeCompatibility"];
+    return definition.runtimeCompatibility[modeKey];
+  }
+
+  assertRuntimeSupported(id: string, runtimeMode: RuntimeMode): RuntimeCompatibility {
+    const compatibility = this.getRuntimeCompatibility(id, runtimeMode);
+    if (!compatibility) {
+      throw new Error(`GameDefinition "${id}" is not registered.`);
+    }
+
+    if (compatibility.status !== "SUPPORTED") {
+      throw new UnsupportedRuntimeError(id, runtimeMode, compatibility);
+    }
+
+    return compatibility;
   }
 
   listGameDefinitions(): GameDefinition[] {
