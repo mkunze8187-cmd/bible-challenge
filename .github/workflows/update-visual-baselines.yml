@@ -1,0 +1,29 @@
+name: Update Visual Baselines
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  update-baselines:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Update visual baselines
+        env:
+          CI: true
+        run: npm run test:visual:update
+
+      - name: Upload updated baselines
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-baselines
+          path: tests/e2e/**/*-snapshots/
+          retention-days: 14
