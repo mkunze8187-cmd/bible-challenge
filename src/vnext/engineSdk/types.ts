@@ -5,7 +5,7 @@
  * through this lifecycle instead of importing concrete engine implementations.
  */
 
-import type { ParticipantId, SessionId } from "../domain/ids";
+import type { CommandId, DomainEventId, ParticipantId, SessionId } from "../domain/ids";
 
 export type EngineTrait =
   | "DETERMINISTIC"
@@ -56,6 +56,28 @@ export interface EngineSnapshot<State = unknown> {
 export interface EngineTransition<State = unknown, Event = unknown> {
   state: State;
   events: Event[];
+}
+
+export interface EngineCommandEnvelope<Command = unknown> {
+  envelopeVersion: "engine-command.v1";
+  commandId: CommandId;
+  sessionId: SessionId;
+  engineId: string;
+  capability: string;
+  actor: ActorContext;
+  command: Command;
+  issuedAt: string;
+}
+
+export interface EngineEventEnvelope<Event = unknown> {
+  envelopeVersion: "engine-event.v1";
+  eventId: DomainEventId;
+  commandId?: CommandId;
+  sessionId: SessionId;
+  engineId: string;
+  capability: string;
+  event: Event;
+  occurredAt: string;
 }
 
 export interface EngineDiagnostics {
@@ -132,5 +154,19 @@ export class InvalidEngineDescriptorError extends Error {
   constructor(message: string) {
     super(message);
     this.name = "InvalidEngineDescriptorError";
+  }
+}
+
+export class InvalidEngineCommandError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = "InvalidEngineCommandError";
+  }
+}
+
+export class UnauthorizedEngineCommandError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = "UnauthorizedEngineCommandError";
   }
 }
