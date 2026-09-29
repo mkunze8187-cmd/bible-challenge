@@ -6,4 +6,5 @@ export * from "./readiness";
 export * from "./registry";
 export * from "./renderers";
 export * from "./semver";
+export * from "./testing";
 export * from "./types";
