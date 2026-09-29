@@ -15,7 +15,7 @@ This roadmap summarizes the GitHub milestones and how they depend on each other.
 ## Current baseline
 
 - Shipped: `0.3.0` Host Remote. The legacy runtime runs all 32 implemented GameIds.
-- Next: M0 vNext foundation (#509), then the Five Clues reference migration (#510).
+- In progress: M0 vNext foundation (#509) — #7, #515, #362 done; #314 next. Then the Five Clues reference migration (#510).
 
 ## Gates
 
@@ -24,10 +24,10 @@ PR #512 (ADR-001)
    │
    ▼
 M0 Foundation (#509) ─────────────────────────► Track: Brand & Design System (parallel; closes at 1.0.0)
-   │  domain #362/#363 → GameDefinition #314 → EngineRegistry #447
+   │  domain #362 (done) → GameDefinition #314 → EngineRegistry #447
    │  intents/events #350/#448 → projection #351 → persistence #353
    │  RNG #142, timer #156, ledger #364 (coordinated with #524), BibleTextService #338/#339
-   │  LegacyGameAdapter #513, Offline adapter #514, boundary CI #515 (+#7)
+   │  LegacyGameAdapter #513, Offline adapter #514, boundary CI #515 (+#7) — both done
    │  M0 exit gate: #522 gameplay lifecycle/resolution policies, #523 gameplay shell/viewport
    │               contract, #524 cross-game scoring normalization — all must be defined and
    │               tested before #510 can begin (M0 is not complete until they are)
@@ -73,10 +73,10 @@ Value tracks: **Agon Brand & Design System** (parallel from M0, closes at 1.0.0)
 This is the single ordered sequence every Track and Backlog above resolves into — nothing here is unsequenced. Where the roadmap states an explicit issue-level chain, issues are listed in that order; where it only states a milestone-level or track-level trigger, the block is kept as one named, countable group rather than inventing a false internal order. All counts below match GitHub's current open-issue milestone assignments.
 
 1. **PR #512 (ADR-001)** — governing decision record, already adopted; precedes everything below.
-2. **#7 CI pipeline + #515 architecture-boundary/legacy-freeze guard** — first concrete step (also M0 members).
+2. **#7 CI pipeline + #515 architecture-boundary/legacy-freeze guard — done.** First concrete step (also M0 members).
 3. **M0 — vNext Architecture Foundation (32 issues, including #7/#515 already placed in step 2):**
-   stated chain — #362/#363 → #314 (+#358, #320) → #447 → #448 → #449 → #450 → #350 → #351 → #142 + #156 → #364 → #353 → #338 + #339 → #514 → #513 → #356;
-   remaining M0 issues (no stated order among themselves, complete before M0's core-contracts exit): #337, #349, #355, #366, #367, #509, #519;
+   stated chain — **#362 (done)** → #314 (+#358, #320) → #447 → #448 → #449 → #450 → #350 → #351 → #142 + #156 → #364 → #353 → #338 + #339 → #514 → #513 → #356;
+   remaining M0 issues (no stated order among themselves, complete before M0's core-contracts exit): #337, #349, #355, #366, #367, #509, #519, **#363** (depends on #350; the migration spec flags it as a likely duplicate that folds into #350 + #448's runtime/engine event contracts rather than being implemented standalone — verify against #350/#448's merged requirements before treating #363 as separately closeable);
    **M0 exit gate — #522, #523, #524 (P0, added after the roadmap refactor):** these three contracts are foundation work, not later migration-visible work, even though Five Clues is their first proof. Each covers a distinct concern and must not be merged:
    - **#522** — common gameplay lifecycle and resolution policies (timeout, attempts, answer resolution, buzzers, steals/rebounds, scoring transitions, round advancement);
    - **#523** — standard gameplay shell, viewport containment, and reachable controls (fixes the existing defect where content can extend below the viewport and hide controls; defect correction, not redesign);
@@ -131,13 +131,14 @@ The **percentage of implemented games on vNext is tracked as a roadmap metric**,
 
 See "Full execution order" above for the complete, single sequence (all 444 open issues, nothing untracked). Immediate next steps:
 
-1. #7 CI + #515 boundary guard.
-2. #509 foundation: #362/#363 → #314 (+#358, #320) → #447–#450 → #350/#448 → #351 → #142/#156 → #364 → #353 → #338/#339 → #514 → #513 → #356.
-3. #507 catalog audit (parallel).
-4. #522 gameplay lifecycle/resolution policies, #523 gameplay shell/viewport contract, #524 cross-game scoring normalization (coordinated with #364) — required M0 exit gate, all three before #510 begins.
-5. #4 Five Clues oracle tests, #402 answer evaluation, #516 surface host → **#510 Five Clues** (proves #522/#523/#524; does not itself set the cross-game scoring scale).
-6. #511 → wave and capability issues → first wave (progressive-clue family, #307).
-7. M5/M6 as migrated surfaces require them; then approved M7/M8 games.
+1. ~~#7 CI + #515 boundary guard.~~ Done.
+2. ~~#362 canonical domain model.~~ Done.
+3. #509 foundation, continuing: **#314** (+#358, #320) → #447–#450 → #350/#448 → #351 → #142/#156 → #364 → #353 → #338/#339 → #514 → #513 → #356. (#363 depends on #350/#448 and is a likely fold-in, not a standalone step — see the Full execution order note above.)
+4. #507 catalog audit (parallel).
+5. #522 gameplay lifecycle/resolution policies, #523 gameplay shell/viewport contract, #524 cross-game scoring normalization (coordinated with #364) — required M0 exit gate, all three before #510 begins.
+6. #4 Five Clues oracle tests, #402 answer evaluation, #516 surface host → **#510 Five Clues** (proves #522/#523/#524; does not itself set the cross-game scoring scale).
+7. #511 → wave and capability issues → first wave (progressive-clue family, #307).
+8. M5/M6 as migrated surfaces require them; then approved M7/M8 games.
 
 In parallel now: Brand & Design System (#117, #99–#102, #104, closes at 1.0.0), Platform Hardening & Operations (#322 etc., starts once M0 lands), content authoring, legacy defect fixes.
 
