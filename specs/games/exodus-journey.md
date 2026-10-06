@@ -42,7 +42,7 @@ Every Exodus checkpoint keeps these independent:
 4. challenge content/pool;
 5. scoring policy.
 
-Thus the same Red Sea checkpoint can use ALL_PLAY in one session and HEAD_TO_HEAD/TOURNAMENT in another without changing Exodus 14 or the next canonical checkpoint.
+Checkpoint participation is content-defined. Most checkpoints may select among compatible formats, but a design-approved checkpoint may require one format. **Red Sea Crossing is fixed SHARED_COOPERATIVE** per its checkpoint specification; it is not converted to ALL_PLAY, HEAD_TO_HEAD, or TOURNAMENT.
 
 ## Participation formats
 Checkpoint activities may use:
@@ -76,7 +76,7 @@ Each checkpoint can select one of several compatible activity templates and part
 Examples:
 - **Plagues:** ALL_PLAY sequence/order, matching, BUZZER or general challenge round.
 - **Passover:** TEAM_PLAY/ALL_PLAY sequence/identify-instructions plus general challenge variants.
-- **Red Sea:** ALL_PLAY timed/simultaneous challenge, HEAD_TO_HEAD, or optional TOURNAMENT; points/results vary but all participants advance together through the canonical crossing.
+- **Red Sea:** dedicated **SHARED_COOPERATIVE real-time mass-movement/logistics checkpoint**; no Bible-question challenge, head-to-head, or tournament inside the crossing. Players continuously command the twelve tribes through the opened sea and assemble them on the far shore while canonical deliverance remains God's action. See [Red Sea Crossing checkpoint specification](./exodus-red-sea-crossing.md) and #602.
 - **Manna:** ALL_PLAY timed `Gather Manna` challenge.
 - **Amalek/Rephidim:** HEAD_TO_HEAD, TOURNAMENT, multi-round TEAM_PLAY or BUZZER challenge.
 - **Sinai:** individual-per-team private ordering/matching/trivia/Scripture/reference challenges.
@@ -155,3 +155,11 @@ Journey Journal records completed checkpoints with Scripture references, reviewe
 
 ## Testing
 Test canonical invariance under wins/losses/RNG/aids; exactly one shared JourneyProgress; no competitor can advance ahead/behind another on the canonical map; separate team/player scoring; final standings from cumulative points; ALL_PLAY/private answers; HEAD_TO_HEAD/TOURNAMENT where losers still advance with everyone; different challenge sets on repeated runs; Manna scoring/aid thresholds; aid use affects only challenge state; 1–4 team privacy; translation/content readiness; save/resume; checkpoint references; and no implication that Exodus proper concludes with entry into Canaan.
+
+## Design-approved checkpoint override — Red Sea Crossing
+
+Red Sea Crossing is fully specified in [`exodus-red-sea-crossing.md`](./exodus-red-sea-crossing.md) and tracked by #602.
+
+This checkpoint supersedes earlier generic examples that treated Red Sea as a timed Bible Challenge, head-to-head, tournament, or ordinary scored checkpoint. It is a shared cooperative real-time mass-movement/logistics experience with no Bible-question Challenges inside the crossing.
+
+The checkpoint's only cooperative bonuses are **Before Dawn** and **Progression Order**. There is no loss condition and no individual/team winner. The Scripture-driven opening follows Exodus 14 in order; after all tribes are across and assembled, canonical narrative resumes through the Song of Moses and the biblical experience ends with **Miriam (Exodus 15:20–21)** before results.
