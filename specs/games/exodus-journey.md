@@ -163,3 +163,45 @@ Red Sea Crossing is fully specified in [`exodus-red-sea-crossing.md`](./exodus-r
 This checkpoint supersedes earlier generic examples that treated Red Sea as a timed Bible Challenge, head-to-head, tournament, or ordinary scored checkpoint. It is a shared cooperative real-time mass-movement/logistics experience with no Bible-question Challenges inside the crossing.
 
 The checkpoint's only cooperative bonuses are **Before Dawn** and **Progression Order**. There is no loss condition and no individual/team winner. The Scripture-driven opening follows Exodus 14 in order; after all tribes are across and assembled, canonical narrative resumes through the Song of Moses and the biblical experience ends with **Miriam (Exodus 15:20–21)** before results.
+
+
+## Design-approved minor checkpoint — Marah (Exodus 15:22–27)
+
+Implementation is tracked by **#604**.
+
+Marah is a short **trust/provision** checkpoint immediately after the Red Sea, targeted at roughly 3–6 minutes. It uses **three Challenges per team**. Each team owns independent Challenge state and its players take turns answering; this checkpoint does not require cooperative solving.
+
+### Challenge-type contract
+Marah selects adaptable **Challenge types/families, not named games**. A compatible type can intentionally withhold enough necessary information that the initial answer is virtually impossible or highly uncertain, then expose one-step assistance that supplies the missing information and makes the answer clear/readily solvable.
+
+The Bible content itself remains Player-Profile-appropriate. **Game/activity difficulty has no impact on Marah.** The difficulty comes from intentionally missing information, never from assigning a harder Bible-question tier.
+
+Compatible patterns include Identification/Five-Clues-style, Multiple Choice, Sequence/Ordering, Matching, Fill-in/Completion, Relationship, Location/Context and Before/After. For example, a Five-Clues-style Identification Challenge may initially expose only one or two difficult/non-decisive clues; assistance reveals the remaining clues including a decisive clue.
+
+### Player responses
+While a Challenge is unresolved, the answering player may submit an answer, continue trying, **Give Up**, or **File Complaint**.
+
+Wrong answers are not punitive.
+
+**Give Up** immediately reveals the one-step assistance. There is no confirmation asking whether assistance is wanted.
+
+**File Complaint** opens a quick multiple-choice complaint selector, initially:
+- “This is too hard.”
+- “We don't have enough information.”
+- “This isn't fair.”
+- “This is impossible!”
+
+Complaint choice is not judged or scored and has no mechanical consequence. After the choice, the same one-step assistance is immediately revealed; there is no additional assistance prompt.
+
+Neither Give Up nor File Complaint ends the player's turn. The same player completes the now-clear answer. Assistance never auto-completes the Challenge.
+
+There is **no penalty whatsoever** for receiving assistance and **no bonus** for solving without it. Assistance is a gameplay analogue for receiving what was lacking; the UI must not imply that pressing a button commands God or mechanically produces divine revelation.
+
+Teams may progress independently through their three Challenges. When all teams finish, the canonical Journey reconverges for the closing narrative.
+
+### Scripture-driven close
+After Challenge play, present Exodus 15:22–27: three days without water, bitter water at Marah, the people's complaint, Moses crying to the LORD, and the LORD showing Moses what is needed so the water is made drinkable. Include the testing/statute material with reviewed translation-aware presentation.
+
+The close should allow the gameplay parallel to land naturally: players repeatedly lacked what they needed and received what made completion possible; Israel faced a need they could not resolve, and God provided. Do **not** convert this into punishment or an attitude score for complaining.
+
+End at **Elim**, with twelve springs/wells and seventy palm trees, as the restful narrative image of provision/abundance. Elim is not another gameplay checkpoint.
