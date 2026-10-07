@@ -384,6 +384,8 @@ Close Rephidim by connecting its two experiences: at Massah/Meribah Israel asked
 
 Mark Rephidim complete, return briefly to the Journey map, and show **Sinai visibly ahead**.
 
+Rephidim is the **final checkpoint of the wilderness-travel/provision chapter**. After the map reveal, close that chapter. **Arrival at Sinai begins a new Sinai / Covenant chapter** rather than continuing the Rephidim chapter. This chapter boundary is narrative and organizational; cumulative Journey state, scores and configured campaign persistence continue normally across it.
+
 ## Reusable capabilities surfaced by Rephidim
 
 Implement generically when not already present:
@@ -441,4 +443,5 @@ Exodus owns the Scripture, Rephidim theming, authored sequence, visual assets an
 - [ ] Player Mode creates streams only for controller-equipped players who opt in before play.
 - [ ] Scripture is revealed progressively so Aaron/Hur is not spoiled in the opening.
 - [ ] post-game order is cinematic resolution, Scripture, results, Rephidim reflection, Journey transition.
+- [ ] Rephidim closes the wilderness-travel/provision chapter; the map reveals Sinai ahead and arrival at Sinai begins a new chapter.
 - [ ] generic mechanics are implemented as reusable capabilities rather than Exodus-only code.
