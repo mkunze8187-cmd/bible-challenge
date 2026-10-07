@@ -15,7 +15,14 @@ Players/teams travel together through the recorded Exodus narrative while compet
 ## Scope
 Campaign content may cover Exodus proper and, if configured as a larger Wilderness/Journey campaign, later canonical material from Leviticus/Numbers/Deuteronomy. Campaign boundaries and book references must be explicit; the game must not imply that the book of Exodus itself ends at entry into the Promised Land.
 
-Initial Exodus-focused campaign chapters can include Egypt/plagues, Passover, departure/Red Sea, wilderness provision, Sinai/covenant and Tabernacle. Later wilderness-to-Jordan content should be separately identified even if presented as a continuation.
+Initial Exodus-focused campaign chapters can include Egypt/plagues, Passover/departure, the wilderness journey through Rephidim, Sinai/covenant and Tabernacle. Later wilderness-to-Jordan content should be separately identified even if presented as a continuation.
+
+### Design-approved chapter boundary: Rephidim -> Sinai
+The wilderness-travel/provision chapter **ends after Rephidim (Exodus 17)**. Rephidim is its culminating checkpoint and contains both Massah & Meribah / Water from the Rock and the Amalek endurance battle.
+
+**Sinai begins a new chapter.** Arrival at Sinai is a major narrative and gameplay boundary: the emphasis shifts from wilderness travel, provision and conflict to covenant, God's presence, law and Israel's relationship with God as His people. The Rephidim close returns to the Journey map, shows Sinai visibly ahead, and completes the current chapter before the Sinai chapter begins.
+
+Sinai is expected to contain **multiple checkpoints/experiences**, not one oversized activity. Its internal checkpoint structure for Exodus 19–24 will be designed separately.
 
 ## Reusability-first architecture rule
 Exodus is a **consumer and composition layer**, not the owner of generally useful gameplay mechanics.
@@ -76,11 +83,14 @@ A checkpoint can declare multiple allowed formats and a default. Host/session co
 ## Example campaign flow
 - Egypt / plagues
 - Passover — Exodus 12
-- Red Sea — Exodus 14
-- Marah — Exodus 15:22–27
-- Manna — Exodus 16
-- Rephidim — Exodus 17
-- Sinai / covenant — Exodus 19–24
+- **Wilderness journey chapter**
+  - Red Sea — Exodus 14
+  - Marah — Exodus 15:22–27
+  - Manna — Exodus 16
+  - Rephidim — Exodus 17
+  - **Chapter close:** Journey map reveals Sinai ahead
+- **Sinai / covenant chapter — Exodus 19–24**
+  - multiple checkpoints/experiences to be designed; arrival at Sinai begins the new chapter
 - Golden Calf / covenant renewal — Exodus 32–34
 - Tabernacle — Exodus 25–31, 35–40
 
@@ -94,8 +104,8 @@ Examples:
 - **Passover:** TEAM_PLAY/ALL_PLAY sequence/identify-instructions plus general challenge variants.
 - **Red Sea:** dedicated **SHARED_COOPERATIVE real-time mass-movement/logistics checkpoint**; no Bible-question challenge, head-to-head, or tournament inside the crossing. Players continuously command the twelve tribes through the opened sea and assemble them on the far shore while canonical deliverance remains God's action. See [Red Sea Crossing checkpoint specification](./exodus-red-sea-crossing.md) and #602.
 - **Manna:** dedicated shared-cooperative gathering checkpoint: teams concurrently gather for one chosen tribe, manage uncertainty around one shared need, and collectively decide when enough has been gathered. See the design-approved Manna section below and #462.
-- **Amalek/Rephidim:** HEAD_TO_HEAD, TOURNAMENT, multi-round TEAM_PLAY or BUZZER challenge.
-- **Sinai:** individual-per-team private ordering/matching/trivia/Scripture/reference challenges.
+- **Rephidim:** design-approved two-part checkpoint: Massah & Meribah Investigation/Testing followed by the simultaneous linked Battlefield/Hill Amalek endurance battle. See [Rephidim checkpoint specification](./exodus-rephidim.md) and #607. Rephidim closes the wilderness chapter.
+- **Sinai:** begins a new covenant-focused chapter and is expected to contain multiple checkpoints/experiences across Exodus 19–24; do not treat Sinai as one generic challenge placeholder.
 - **Tabernacle:** TEAM_PLAY or HEAD_TO_HEAD build/placement activity using reusable board/build capabilities.
 
 ## Gather Manna
