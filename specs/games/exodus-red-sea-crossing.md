@@ -198,7 +198,7 @@ This checkpoint demonstrates reusable needs for:
 - authoritative real-time multi-controller input;
 - condition/state simulation and congestion escalation.
 
-Implement reusable capabilities where justified by additional consumers; keep Exodus-specific Scripture, twelve-tribe identity, sea presentation, bonuses and narrative in the official Exodus Content Pack. Coordinate traversal/capability conclusions with #474 rather than duplicating a separate Exodus Adventure game.
+These generic mechanics MUST be implemented/exposed as reusable capabilities/contracts when they plausibly apply beyond this checkpoint; do not require a second implemented consumer first. Keep Exodus-specific Scripture, twelve-tribe identity, sea presentation, bonuses, tuning presets and narrative in the official Exodus Content Pack/composition. Capability APIs should use generic formation/command/camera/state/congestion semantics rather than Red-Sea-specific nouns. Coordinate traversal/capability conclusions with #474 rather than duplicating a separate Exodus Adventure game.
 
 ## Acceptance
 - [ ] Scripture sequence follows Exodus 14 in order and closes through Exodus 15, ending with Miriam 15:20–21.
