@@ -17,6 +17,22 @@ Campaign content may cover Exodus proper and, if configured as a larger Wilderne
 
 Initial Exodus-focused campaign chapters can include Egypt/plagues, Passover, departure/Red Sea, wilderness provision, Sinai/covenant and Tabernacle. Later wilderness-to-Jordan content should be separately identified even if presented as a continuation.
 
+## Reusability-first architecture rule
+Exodus is a **consumer and composition layer**, not the owner of generally useful gameplay mechanics.
+
+For every checkpoint mechanic, ask whether the behavior could plausibly serve another Agon game, Journey, Event, Content Pack or future experience. If yes, implement/expose it as a **reusable capability/contract** with generic semantics and configuration; the Exodus checkpoint composes that capability with Scripture-specific content, presentation and rules.
+
+Do not wait for a second implemented consumer before separating a clearly reusable mechanic. A second consumer is useful validation, not a prerequisite for reusable architecture.
+
+Keep checkpoint-specific only what is genuinely specific to the biblical event or authored experience: Scripture/narrative, themed assets/names, event-specific tuning/presets, canonical sequencing and combinations of capabilities.
+
+Examples from the design-approved checkpoints include:
+- Red Sea: deformable formation simulation, persistent/propagating commands, synchronized shared-camera control, authoritative multi-controller real-time input, condition/state simulation and congestion/escalation are reusable capabilities; Red Sea Scripture, twelve-tribe identity, sea presentation and its two bonuses are Exodus composition/content.
+- Marah: intentionally withheld information + decisive one-step assistance and reusable semantic Challenge actions such as Give Up/File Complaint belong in Challenge capabilities where applicable; Marah's three-Challenge composition and Exodus 15 narrative remain checkpoint-specific.
+- Manna: shared atomic claim/reservation, concurrent shared collection, hidden-value collection, replenishing/scattered selectable field, advisory group polling, private/final participant stopping, randomized intermittent shared measurement, count-based collection visualization, and dynamically scaled value distribution should be reusable capabilities/policies where they have plausible consumers; manna theming, tribe need, Exodus 16 content tags and Scripture framing remain checkpoint-specific.
+
+Capability interfaces should avoid Exodus nouns when the behavior is generic. Content packs should configure/compose capabilities rather than fork engines.
+
 ## Canonical invariance
 The order/outcome of recorded events is authored and fixed. No score, wrong answer, RNG roll, aid, team decision or resource state may cause alternate Scripture.
 
@@ -279,6 +295,6 @@ After final measurement/shared scoring, remind players of God's instruction and 
 Players do not cause manna to appear, and God's canonical provision is never conditional on performance.
 
 ### Architecture / acceptance
-Classify as **COMPOSE_EXISTING + reusable shared-cooperative collection/claim capability where needed**. Reuse Challenge Resolver, Player Profile difficulty, controller semantic actions, shared stage state and Score Ledger. Do not create a separate Manna GameId/engine merely for this checkpoint.
+Classify as **COMPOSE_EXISTING + reusable capabilities**. Reuse Challenge Resolver, Player Profile difficulty, controller semantic actions, shared stage state and Score Ledger. Generic behaviors must be capabilities/policies rather than Manna-only code, including where applicable: atomic shared claim/reservation with tie handling; concurrent shared collection; replenishing/scattered selectable fields; hidden-value item collection; advisory group polling; private/final participant stopping with inactivity policy; randomized intermittent shared measurement; count-based collection visualization; and need/team-count-derived value distributions. Do not create a separate Manna GameId/engine merely for this checkpoint.
 
 Acceptance requires: chosen tribe with optional advisory vote; hidden randomized tribe size but displayed calculated need; exactly one tribal total; concurrent gathering; alternating players without forced round-robin; profile-based Challenge difficulty; scattered replenished field with at least 3× teams selectable; atomic/grayed claims and non-double-counted simultaneous claims; dynamically scaled bell-curve-like values; the four approved thematic Challenge pools; basket fill by portion count only; brief randomized 110–130-second measurements; private/final Stop or 15-second eligible inactivity stop; 100–110% full shared points with progressive deductions and 75% floor; no failure/progression gate; and Scripture-driven canonical opening/close.
