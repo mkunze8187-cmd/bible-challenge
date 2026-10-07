@@ -17,6 +17,22 @@ Campaign content may cover Exodus proper and, if configured as a larger Wilderne
 
 Initial Exodus-focused campaign chapters can include Egypt/plagues, Passover, departure/Red Sea, wilderness provision, Sinai/covenant and Tabernacle. Later wilderness-to-Jordan content should be separately identified even if presented as a continuation.
 
+## Reusability-first architecture rule
+Exodus is a **consumer and composition layer**, not the owner of generally useful gameplay mechanics.
+
+For every checkpoint mechanic, ask whether the behavior could plausibly serve another Agon game, Journey, Event, Content Pack or future experience. If yes, implement/expose it as a **reusable capability/contract** with generic semantics and configuration; the Exodus checkpoint composes that capability with Scripture-specific content, presentation and rules.
+
+Do not wait for a second implemented consumer before separating a clearly reusable mechanic. A second consumer is useful validation, not a prerequisite for reusable architecture.
+
+Keep checkpoint-specific only what is genuinely specific to the biblical event or authored experience: Scripture/narrative, themed assets/names, event-specific tuning/presets, canonical sequencing and combinations of capabilities.
+
+Examples from the design-approved checkpoints include:
+- Red Sea: deformable formation simulation, persistent/propagating commands, synchronized shared-camera control, authoritative multi-controller real-time input, condition/state simulation and congestion/escalation are reusable capabilities; Red Sea Scripture, twelve-tribe identity, sea presentation and its two bonuses are Exodus composition/content.
+- Marah: intentionally withheld information + decisive one-step assistance and reusable semantic Challenge actions such as Give Up/File Complaint belong in Challenge capabilities where applicable; Marah's three-Challenge composition and Exodus 15 narrative remain checkpoint-specific.
+- Manna: shared atomic claim/reservation, concurrent shared collection, hidden-value collection, replenishing/scattered selectable field, advisory group polling, private/final participant stopping, randomized intermittent shared measurement, count-based collection visualization, and dynamically scaled value distribution should be reusable capabilities/policies where they have plausible consumers; manna theming, tribe need, Exodus 16 content tags and Scripture framing remain checkpoint-specific.
+
+Capability interfaces should avoid Exodus nouns when the behavior is generic. Content packs should configure/compose capabilities rather than fork engines.
+
 ## Canonical invariance
 The order/outcome of recorded events is authored and fixed. No score, wrong answer, RNG roll, aid, team decision or resource state may cause alternate Scripture.
 
@@ -77,29 +93,15 @@ Examples:
 - **Plagues:** ALL_PLAY sequence/order, matching, BUZZER or general challenge round.
 - **Passover:** TEAM_PLAY/ALL_PLAY sequence/identify-instructions plus general challenge variants.
 - **Red Sea:** dedicated **SHARED_COOPERATIVE real-time mass-movement/logistics checkpoint**; no Bible-question challenge, head-to-head, or tournament inside the crossing. Players continuously command the twelve tribes through the opened sea and assemble them on the far shore while canonical deliverance remains God's action. See [Red Sea Crossing checkpoint specification](./exodus-red-sea-crossing.md) and #602.
-- **Manna:** ALL_PLAY timed `Gather Manna` challenge.
+- **Manna:** dedicated shared-cooperative gathering checkpoint: teams concurrently gather for one chosen tribe, manage uncertainty around one shared need, and collectively decide when enough has been gathered. See the design-approved Manna section below and #462.
 - **Amalek/Rephidim:** HEAD_TO_HEAD, TOURNAMENT, multi-round TEAM_PLAY or BUZZER challenge.
 - **Sinai:** individual-per-team private ordering/matching/trivia/Scripture/reference challenges.
 - **Tabernacle:** TEAM_PLAY or HEAD_TO_HEAD build/placement activity using reusable board/build capabilities.
 
 ## Gather Manna
-A flagship themed activity at Exodus 16.
+The previous 60-second independent-team Gather Manna / Challenge-Aid example is **superseded**.
 
-Example default:
-- 60-second round;
-- all teams play simultaneously and independently;
-- answer as many configured Bible challenges as possible;
-- each team earns its own ordinary Agon points;
-- visual manna count represents that team's challenge performance;
-- thresholds can award that team Challenge Aids such as extra time for a later challenge;
-- manna is **not** food inventory controlling Israel's survival/progression.
-
-Example aid award policy:
-- 4 correct: one small aid;
-- 7 correct: additional/stronger configured aid;
-- 10 correct: maximum configured award.
-
-Thresholds/difficulty are content/game policy, not theological claims.
+The authoritative Exodus 16 checkpoint is the design-approved shared-cooperative Manna experience below and implementation issue #462. Manna is not survival inventory and cannot control canonical progression.
 
 ## Challenge Aids
 The campaign may award `challenge.aid` grants, visually themed to the checkpoint. These provide strategic choices while affecting only gameplay. Aids are normally owned by the player/team that earned them unless an activity explicitly awards a shared aid.
@@ -147,7 +149,7 @@ Journey Journal records completed checkpoints with Scripture references, reviewe
 - canonical checkpoint progression;
 - mixed checkpoint participation formats including ALL_PLAY and at least one HEAD_TO_HEAD/TOURNAMENT-capable activity;
 - variable challenge pools/templates;
-- Gather Manna timed activity;
+- design-approved shared-cooperative Manna gathering checkpoint;
 - Challenge Aid integration, initially EXTRA_TIME + HINT/ELIMINATE_DISTRACTOR where supported;
 - Score Ledger standings/final ranking;
 - save/resume;
@@ -205,3 +207,94 @@ After Challenge play, present Exodus 15:22–27: three days without water, bitte
 The close should allow the gameplay parallel to land naturally: players repeatedly lacked what they needed and received what made completion possible; Israel faced a need they could not resolve, and God provided. Do **not** convert this into punishment or an attitude score for complaining.
 
 End at **Elim**, with twelve springs/wells and seventy palm trees, as the restful narrative image of provision/abundance. Elim is not another gameplay checkpoint.
+
+
+## Design-approved checkpoint — Manna (Exodus 16)
+
+Implementation is tracked by **#462**. This section supersedes the earlier generic timed-trivia Gather Manna placeholder.
+
+Manna is a short **shared-cooperative gathering** checkpoint, targeted at roughly five minutes without a hard game clock. The experience is: **God has provided; gather enough for the tribe without gathering substantially more than it needs.** It represents an ordinary weekday gathering; Sabbath/double-portion gameplay, spoilage inventory, survival gating and a separate hoarding round are out of scope. Scripture framing explains the ordinary-weekday instruction concerning unused manna and ties it to the gameplay goal.
+
+### Tribe choice and need
+The group cooperatively chooses one of the twelve tribes to represent. An optional advisory vote may start discussion, but vote results never auto-select the tribe; the group still decides.
+
+The game assigns a randomized hidden tribe population/size. The population itself is never displayed and tribe identity must not expose a predictable size advantage. The hidden size determines the playthrough's manna requirement, and the **calculated required amount is shown at the start**.
+
+### One shared collection
+There is exactly **one authoritative tribal manna total**. Do not maintain or display team manna totals.
+
+All teams gather concurrently and independently at their own pace into the same tribal collection. Team communication is allowed and expected. Players on a team alternate as gatherers/answerers, but there is **no fixed round-robin order**. Bible Challenge difficulty always comes from the answering player's Player Profile.
+
+### Shared manna field
+Present manna as an attractive, naturally scattered field rather than a grid. Maintain at least **3× active team count** available/selectable portions at all times, with higher visual density allowed.
+
+Portion appearance, size and location must not reveal its hidden value. First claim wins: a claimed portion immediately **grays out** for other teams while its Challenge is active.
+
+On a correct answer, gather the portion, reveal that portion's value to the answering team/controller, add it to the one tribal total and remove/replenish the portion. On an incorrect answer, add nothing and return/reactivate the manna on the field.
+
+For a rare truly simultaneous claim, all tied teams may receive the Challenge without being told the claim was simultaneous. If at least one tied team succeeds, the portion contributes its value **once** to the tribal total; if none succeeds, it returns to the field.
+
+### Value distribution and pacing
+Manna values derive from desired gameplay length rather than a fixed percentage of tribal need.
+
+Baseline tuning targets approximately **8–12 successful Challenges per team**, with about 10/team as the normal statistical center. If `N` is target successes per team and `T` is active team count, the baseline mean portion value is approximately:
+
+`tribalNeed / (N × T)`
+
+Individual portion values follow a bell-curve-like distribution around that derived mean.
+
+Game difficulty may increase target Challenge count and/or shift the distribution toward lower-value portions. Exact curve, variance/bounds and difficulty targets remain prototype tuning. Game difficulty never changes Bible-question difficulty; Player Profile remains authoritative.
+
+### Challenge content
+Every successful Challenge gathers manna; an incorrect answer simply returns that portion to the field. Challenges should normally be quick enough to support the gathering pace. Favor concise compatible Challenge Families such as MCQ, identify, true/false, brief matching/fill-in and before/after; avoid long typing and multi-stage puzzles.
+
+Primary thematic pools/tags are:
+- **God's Provision**;
+- **Trust / Dependence on God**;
+- **Thanksgiving / Contentment**;
+- **God's Faithfulness**.
+
+Reuse Challenge Resolver and existing adaptable Challenge Families rather than creating a Manna-specific trivia engine.
+
+### Shared tribal basket
+The main/stage display includes a large shallow woven **shared tribal basket**. Successful portions visibly accumulate there.
+
+Basket fullness is driven by the **number of portions collected**, never their manna values or percentage of need. It has no numeric total, percentage, tick marks, capacity line or value-scaled fill and may become visually heaped. It is atmosphere/feedback, not a measurement instrument.
+
+### Periodic measurement
+The live total is not continuously displayed.
+
+At a nominal cadence of **120 seconds ± 10 seconds**, briefly show the actual combined tribal measurement against the known need on the main/stage display. Each next interval is independently randomized to **110–130 seconds**. There is no countdown or advance indication. The update disappears after a brief display and gameplay does not pause.
+
+When all teams have stopped, skip future periodic updates and proceed to final measurement.
+
+### Stopping
+A team stops either by explicitly selecting **Stop Gathering** or by remaining eligible to select manna but inactive for the configured timeout.
+
+Prototype/default inactivity timeout is **15 seconds**. It runs only while the team is free to select manna, is suspended while a Challenge is active, and restarts after Challenge resolution. Private controller feedback may become more prominent near timeout.
+
+Other teams are not notified when a team stops. **Stopping is final**; the team cannot resume after a later measurement. The randomized measurement cadence intentionally prevents reliably waiting for the next measurement without risking inactivity stop.
+
+Gathering ends when all teams have stopped.
+
+### Final measurement and shared points
+After all teams stop, reveal the final tribal amount.
+
+- **100–110% of need:** full shared checkpoint point award.
+- **Below 100% or above 110%:** progressive deduction based on distance from the acceptable band.
+- Under/over gathering alone must never reduce the checkpoint award below **75%**.
+- Exact deduction curve remains tuning data.
+
+There is no individual/team manna score, winner, failure gate or replay requirement. Canonical Journey progression continues regardless of the gathering result.
+
+### Scripture framing
+Opening presentation uses reviewed translation-aware Scripture through the material establishing God's provision, how much Israel is to gather, and the ordinary-weekday instruction concerning unused manna. Then gameplay begins.
+
+After final measurement/shared scoring, remind players of God's instruction and explain the unused/kept-manna consequence as part of the biblical account rather than another mechanic, then continue with the reviewed translation-aware ending Scripture for the passage.
+
+Players do not cause manna to appear, and God's canonical provision is never conditional on performance.
+
+### Architecture / acceptance
+Classify as **COMPOSE_EXISTING + reusable capabilities**. Reuse Challenge Resolver, Player Profile difficulty, controller semantic actions, shared stage state and Score Ledger. Generic behaviors must be capabilities/policies rather than Manna-only code, including where applicable: atomic shared claim/reservation with tie handling; concurrent shared collection; replenishing/scattered selectable fields; hidden-value item collection; advisory group polling; private/final participant stopping with inactivity policy; randomized intermittent shared measurement; count-based collection visualization; and need/team-count-derived value distributions. Do not create a separate Manna GameId/engine merely for this checkpoint.
+
+Acceptance requires: chosen tribe with optional advisory vote; hidden randomized tribe size but displayed calculated need; exactly one tribal total; concurrent gathering; alternating players without forced round-robin; profile-based Challenge difficulty; scattered replenished field with at least 3× teams selectable; atomic/grayed claims and non-double-counted simultaneous claims; dynamically scaled bell-curve-like values; the four approved thematic Challenge pools; basket fill by portion count only; brief randomized 110–130-second measurements; private/final Stop or 15-second eligible inactivity stop; 100–110% full shared points with progressive deductions and 75% floor; no failure/progression gate; and Scripture-driven canonical opening/close.
