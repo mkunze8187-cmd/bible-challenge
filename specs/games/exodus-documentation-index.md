@@ -42,6 +42,17 @@
 - Ten Commandments: foreground numbered moving people, private translated Scripture action, three-line scroll wheel, direct Obeyed/Disobeyed action, any applicable commandment accepted, seven-minute default; see #615 and PR #610.
 - Choker ha-Machane: max 3 cases/session; unassigned leads never available during investigation; locked filed charges; verbal deliberation; per-charge G/NG/CD Final; confidence vote; progressive truth review; permanent **per-case** report omitting investigative questions and individual/team decision attribution. 20-minute **advisory** case target; report failure never loses completed case; see PR #618 and #619–#624.
 
+
+## Source-preserving design-record files added in this reconciliation
+
+These files preserve the **exact substantive sections of #461** as separate reviewable documents. They are extracted design records, not yet independently validated against every historical chat or converted into final implementation-ready checkpoint specs.
+
+- [Chapter 1 design record](exodus-chapter-one-design-record.md) — Return to Egypt and initial plague chapter direction.
+- [Plagues design record](exodus-plagues-design-record.md) — detailed authored mechanics for Plagues 2–9; **Plague 1 must be audited separately**, as it was not in this extracted span.
+- [Passover and Goshen design record](exodus-passover-goshen-design-record.md) — Passover puzzle, Tenth Plague narrative, departure transitions, Goshen Escape Room.
+- [Journey bookends design record](exodus-journey-bookends-design-record.md) — prologue, finale and chapter transitions.
+- [God Leads Israel design record](exodus-god-leads-israel-design-record.md) — hidden routes, decisions, turnarounds, Blessings, Pharaoh pursuit and retrospective.
+
 ## Reconciliation actions / unresolved audit scope
 
 1. **Merge/review open specs** PR #610 and PR #618, resolving conflicts with #461 before treating them as on-main.
