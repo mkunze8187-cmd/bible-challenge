@@ -10,4 +10,7 @@ Record significant **cross-game** decisions here; detailed mechanics belong in g
 | Browser controller remains fully capable; native controllers optional | **Approved** | Controllers | [#625](https://github.com/mkunze8187-cmd/bible-challenge/issues/625) |
 | Native Android and iOS controller implementation | **Deferred / not committed** | Controllers | [#626](https://github.com/mkunze8187-cmd/bible-challenge/issues/626), [#627](https://github.com/mkunze8187-cmd/bible-challenge/issues/627) |
 
+| Translation-specific multi-game Game Data Packs, Agon-owned versioned schemas, explicit KJV fallback and schema-gated playability | **Approved** | Packages, games, Host, translations | [Data pack contracts](../architecture/game-data-pack-contracts.md), [#425](https://github.com/mkunze8187-cmd/bible-challenge/issues/425), [#580](https://github.com/mkunze8187-cmd/bible-challenge/issues/580), [#584](https://github.com/mkunze8187-cmd/bible-challenge/issues/584) |
+| Optional non-destructive migration of organization-authored data through the Data Authoring Tool; older compatible packs remain usable | **Approved** | Authoring and package lifecycle | [Data pack contracts](../architecture/game-data-pack-contracts.md) |
+
 When adding a row, link the approved issue, ADR or spec; do not mark proposals as approved.
