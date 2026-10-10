@@ -27,3 +27,8 @@ Do not preload the repository documentation. Start with the active issue and loa
 
 ## Validation
 Use the narrowest relevant tests while developing and the issue-required acceptance checks before completion. Do not fix unrelated failures without scope. See `AGENTS.md` for project commands/workspace map when needed.
+
+## Design and No-AI Product Rule
+- Follow root `AGENTS.md` and `docs/ai/design-workflow.md` for design conversations and GitHub-first decisions, not only coding tasks.
+- **Agon contains no AI in any shipped or hosted component.** All game behavior/content must be authored, deterministic and reproducible; seeded randomness is allowed. See `docs/ai/design-principles.md`.
+- Preserve cross-device continuity through `docs/ai/current-work.md`, `docs/ai/decision-register.md` and `docs/ai/conversation-handoff.md`.
