@@ -49,3 +49,8 @@ Run the narrowest relevant checks while developing; run issue-required acceptanc
 - Code/work first; no preamble, fluff, or post-mortem unless requested.
 - Report only changed files, validation results, blockers, and approval decisions.
 - Do not restate issue/spec requirements.
+
+## Design Conversations and Deterministic Product Rule
+- **No AI in Agon**: do not embed, ship, call or depend on AI/ML models or inference services in the runtime, Admin, authoring tools, controllers, Stage, installer, packs or Hosted/Shared/Offline components. Gameplay and content behavior must be deterministic and reproducible using versioned authored assets, explicit inputs and recorded/seeded randomization. AI may assist development only; resulting assets require human review and normal source control. See `docs/ai/design-principles.md`.
+- For design (not just implementation), follow `docs/ai/design-workflow.md`: review existing specs, issues, ADRs, relevant code and similar game behaviors; perform a reuse/duplication audit; distinguish proposals from approved decisions; never silently revise approved rules.
+- **GitHub is the source of truth across devices/chats.** Commit approved decisions to specs and linked issues via protected-branch PR workflow; update `docs/ai/decision-register.md` and `docs/ai/current-work.md` as appropriate. Use `docs/ai/conversation-handoff.md` to start new chats and identify any uncommitted decisions at session end.
