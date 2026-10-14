@@ -1,6 +1,6 @@
 # Agon — Current Work / Conversation Continuity
 
-**Snapshot: 2026-10-10.** Recheck live GitHub issues and PRs in the next conversation. This is a handoff/navigation aid, not a substitute for current repository state.
+**Snapshot: 2026-10-14.** Recheck live GitHub issues and PRs in the next conversation. This is a handoff/navigation aid, not a substitute for current repository state.
 
 ## Priority
 Finish **Exodus Journey** design/spec reconciliation and implementation before optional native controllers. Continue with the next Exodus checkpoint, first reviewing existing approved specs, issues, and relevant implementation.
@@ -11,6 +11,8 @@ Finish **Exodus Journey** design/spec reconciliation and implementation before o
 - Choker ha-Machane: [PR #618](https://github.com/mkunze8187-cmd/bible-challenge/pull/618) **merged**.
 - Sinai Ten Commandments: [PR #610](https://github.com/mkunze8187-cmd/bible-challenge/pull/610) **still open** as of this snapshot; review and merge separately. Its contents must not be treated as on `main`.
 - Baseline specs on `main`: `specs/games/exodus-journey.md`, `specs/games/exodus-red-sea-crossing.md`, `specs/games/exodus-rephidim.md`. Consult `specs/games/exodus-documentation-index.md` and relevant checkpoint specs.
+
+- Tabernacle design documented in [checkpoint spec](../../specs/games/exodus-tabernacle.md) and [IP-review notes](../ip/tabernacle-design-review.md); PR #633 open pending review, not merged. Follow linked implementation issues before coding.
 
 ## Recently merged cross-cutting decisions
 - [PR #630](https://github.com/mkunze8187-cmd/bible-challenge/pull/630) **merged**: GitHub-first design governance and deterministic/no-AI application principle; read `AGENTS.md`, `docs/ai/design-principles.md`, and `docs/ai/design-workflow.md`.

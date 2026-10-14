@@ -308,3 +308,13 @@ Players do not cause manna to appear, and God's canonical provision is never con
 Classify as **COMPOSE_EXISTING + reusable capabilities**. Reuse Challenge Resolver, Player Profile difficulty, controller semantic actions, shared stage state and Score Ledger. Generic behaviors must be capabilities/policies rather than Manna-only code, including where applicable: atomic shared claim/reservation with tie handling; concurrent shared collection; replenishing/scattered selectable fields; hidden-value item collection; advisory group polling; private/final participant stopping with inactivity policy; randomized intermittent shared measurement; count-based collection visualization; and need/team-count-derived value distributions. Do not create a separate Manna GameId/engine merely for this checkpoint.
 
 Acceptance requires: chosen tribe with optional advisory vote; hidden randomized tribe size but displayed calculated need; exactly one tribal total; concurrent gathering; alternating players without forced round-robin; profile-based Challenge difficulty; scattered replenished field with at least 3× teams selectable; atomic/grayed claims and non-double-counted simultaneous claims; dynamically scaled bell-curve-like values; the four approved thematic Challenge pools; basket fill by portion count only; brief randomized 110–130-second measurements; private/final Stop or 15-second eligible inactivity stop; 100–110% full shared points with progressive deductions and 75% floor; no failure/progression gate; and Scripture-driven canonical opening/close.
+
+
+## Design-approved checkpoint — Tabernacle (Exodus 25–31; 35–40)
+
+The authoritative approved design is [Exodus Tabernacle](exodus-tabernacle.md). It supersedes generic construction/trivia examples for this checkpoint. Cooperative parallel production and installation use a reusable shared worksite and warehouse, challenge-gated material requests, hidden quantitative resource accounting, modest seeded recipe variability without changing biblical specifications, section-level educational inspections that never alter completed state, interactive final Scripture review, and a simple Exodus 40:34–38 narrative conclusion. See [IP review notes](../../docs/ip/tabernacle-design-review.md) for a nonlegal technical disclosure inventory.
+
+
+## Design-approved checkpoint — Tabernacle (Exodus 25–31; 35–40)
+
+See [Exodus Tabernacle](exodus-tabernacle.md) for approved rules: cooperative production/installation, opaque resource accounting, challenge-gated requests, bounded seeded recipe variation without changing Scripture, section inspections, interactive final review and Exodus 40 close.
