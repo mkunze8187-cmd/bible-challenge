@@ -10,6 +10,13 @@ Use for **gameplay brainstorming, review and specification**, not just coding. G
 5. For each proposed capability, document reuse analysis: existing mechanism, possible extension, generic contract, game-specific configuration, other consumers, and duplication risks. Prefer generic reusable capabilities immediately when behavior plausibly applies elsewhere; a second consumer is not required.
 6. Preserve previously approved rules, terminology, canonical biblical narrative, profile-aware challenge selection, platform parity and the **no-AI deterministic runtime** invariant.
 
+## When the user requests documentation
+A request to **document our discussion** (or equivalent wording) means reconcile the approved design across **all applicable records**, not just write a standalone spec. In the same workflow:
+1. Update or create the authoritative game/engine/controller specifications and cross-reference indexes.
+2. Review existing GitHub issues; **update matching issues and create necessary new implementation, reusable-capability, dependency or follow-up issues**, with scope, acceptance criteria, dependencies and cross-links. Do not duplicate existing issues.
+3. Update or create **relevant IP-review/technical-disclosure documentation**, including potentially distinctive technical combinations, provenance/third-party rights questions, and supporting diagrams/evidence when appropriate. Distinguish factual design descriptions from unverified patentability, copyright clearance or freedom-to-operate conclusions.
+4. Update the decision register and current-work handoff when applicable, and submit coordinated changes through the repository's normal branch/PR process. Explicitly identify completed changes and any blocked or chat-only decisions. Documentation approval does **not** authorize implementation or imply an attorney's opinion.
+
 ## Commit approved decisions
 1. Update the **authoritative game/engine/controller spec** and its linked implementation issue; create a new issue only if genuinely distinct. Keep one-line summaries, scope, acceptance criteria, dependencies and issue cross-links.
 2. If changing architecture, security, transport, persistence or shared contracts, create/update an ADR or architecture issue; get explicit approval before implementation.
