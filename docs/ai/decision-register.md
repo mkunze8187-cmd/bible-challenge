@@ -14,3 +14,5 @@ Record significant **cross-game** decisions here; detailed mechanics belong in g
 | Optional non-destructive migration of organization-authored data through the Data Authoring Tool; older compatible packs remain usable | **Approved** | Authoring and package lifecycle | [Data pack contracts](../architecture/game-data-pack-contracts.md) |
 
 When adding a row, link the approved issue, ADR or spec; do not mark proposals as approved.
+
+| Tabernacle cooperative production/installation, hidden inventory and challenge-gated transfers, seeded bounded variable game-resource recipes (not biblical specifications), educational section inspections and clickable final review | **Approved design** | Exodus and candidate reusable worksite capability | [Tabernacle spec](../../specs/games/exodus-tabernacle.md), [#461](https://github.com/mkunze8187-cmd/bible-challenge/issues/461) |
