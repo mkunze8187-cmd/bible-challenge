@@ -9,10 +9,10 @@ Finish **Exodus Journey** design/spec reconciliation and implementation before o
 - Master implementation issue: [#461](https://github.com/mkunze8187-cmd/bible-challenge/issues/461).
 - Reconciliation/design records: [PR #628](https://github.com/mkunze8187-cmd/bible-challenge/pull/628) **merged**; follow-up audit [#629](https://github.com/mkunze8187-cmd/bible-challenge/issues/629) remains tracked.
 - Choker ha-Machane: [PR #618](https://github.com/mkunze8187-cmd/bible-challenge/pull/618) **merged**.
-- Sinai Ten Commandments: [PR #610](https://github.com/mkunze8187-cmd/bible-challenge/pull/610) **still open** as of this snapshot; review and merge separately. Its contents must not be treated as on `main`.
+- Sinai Ten Commandments: [PR #610](https://github.com/mkunze8187-cmd/bible-challenge/pull/610) **merged**; its specification is on `main`.
 - Baseline specs on `main`: `specs/games/exodus-journey.md`, `specs/games/exodus-red-sea-crossing.md`, `specs/games/exodus-rephidim.md`. Consult `specs/games/exodus-documentation-index.md` and relevant checkpoint specs.
 
-- Tabernacle design documented in [checkpoint spec](../../specs/games/exodus-tabernacle.md) and [IP-review notes](../ip/tabernacle-design-review.md); PR #633 open pending review, not merged. Follow linked implementation issues before coding.
+- Tabernacle design documented in [checkpoint spec](../../specs/games/exodus-tabernacle.md) and [IP-review notes](../ip/tabernacle-design-review.md); [PR #633](https://github.com/mkunze8187-cmd/bible-challenge/pull/633) **merged**. Follow implementation [#634](https://github.com/mkunze8187-cmd/bible-challenge/issues/634), reusable worksite [#635](https://github.com/mkunze8187-cmd/bible-challenge/issues/635), and IP-review preparation [#636](https://github.com/mkunze8187-cmd/bible-challenge/issues/636) before coding or making legal claims.
 
 ## Recently merged cross-cutting decisions
 - [PR #630](https://github.com/mkunze8187-cmd/bible-challenge/pull/630) **merged**: GitHub-first design governance and deterministic/no-AI application principle; read `AGENTS.md`, `docs/ai/design-principles.md`, and `docs/ai/design-workflow.md`.
