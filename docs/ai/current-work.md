@@ -30,3 +30,6 @@ Finish **Exodus Journey** design/spec reconciliation and implementation before o
 
 ## Working agreement
 GitHub is the source of truth. Review existing issues/specs/architecture and relevant code before proposing changes; preserve approved mechanics, perform a reuse audit, and distinguish proposed from approved. Record approved decisions through PRs and linked issues. Check open PR state before assuming content is on `main`. If any approved decisions remain only in chat, identify them explicitly.
+
+## Be Ye Holy documentation reconciliation (2026-10-16)
+Design approved in conversation for Lev 11–15, 19–20; new checkpoint [spec](../../specs/games/exodus-be-ye-holy.md) and [#644](https://github.com/mkunze8187-cmd/bible-challenge/issues/644), reusable [narrative graph #645](https://github.com/mkunze8187-cmd/bible-challenge/issues/645), [effort/duration #646](https://github.com/mkunze8187-cmd/bible-challenge/issues/646), and [standalone/Journey dual-launch #647](https://github.com/mkunze8187-cmd/bible-challenge/issues/647). Review and merge documentation PR before treating as main. Next: **verse-by-verse traceability audit** of Lev 11–15, 19–20, then representative branching encounter graphs (Future Harvest). Authored scenarios and numerical calibration are not yet complete. Do not implement until contracts are approved.
