@@ -176,3 +176,6 @@ Canonical campaigns provide passage references and reviewed narrative summaries.
 - final standings derive from cumulative participant/team points, not map position;
 - save/resume preserves shared canonical checkpoint history and separate participant state;
 - capability/activity readiness failure occurs before activity start.
+
+## Dual-launch game composition and effort estimation (design extension, 2026-10-16)
+A complete game/checkpoint eligible for independent selection uses the **same authoritative gameplay implementation** in standalone and Journey contexts. Journey provides narrative entry/exit, inherited participant/content configuration and canonical progress; the game reports completion/results without owning Journey progression. Not every activity slot is a standalone game. Details: [launch composition](../../docs/architecture/game-launch-composition.md), [#647](https://github.com/mkunze8187-cmd/bible-challenge/issues/647) and existing [#460](https://github.com/mkunze8187-cmd/bible-challenge/issues/460). Agon-wide relative effort and session calibration: [spec](../../docs/architecture/agon-effort-duration-estimation.md), [#646](https://github.com/mkunze8187-cmd/bible-challenge/issues/646). These are additive design requirements; older fixed-duration examples are not calibration contracts. Preserve existing checkpoint-specific timer mechanics.

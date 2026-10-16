@@ -70,3 +70,8 @@ These files preserve the **exact substantive sections of #461** as separate revi
 - PR #610 and PR #618 are stored remotely but **not merged into main** as of this audit snapshot.
 
 **Rule for future work:** Every approved gameplay decision should be reflected in a versioned GitHub spec and linked implementation issue; chat alone is not durable project documentation.
+
+## Be Ye Holy (Leviticus 11–15, 19–20) — design baseline 2026-10-16
+- [Be Ye Holy checkpoint and standalone specification](exodus-be-ye-holy.md), implementation [#644](https://github.com/mkunze8187-cmd/bible-challenge/issues/644): approved conversation decisions captured in documentation PR; **verse-level biblical coverage audit and authored scenario library remain pending**.
+- Reusable [branching narrative graph](../engines/branching-narrative-engine.md) [#645](https://github.com/mkunze8187-cmd/bible-challenge/issues/645), [effort/duration calibration](../../docs/architecture/agon-effort-duration-estimation.md) [#646](https://github.com/mkunze8187-cmd/bible-challenge/issues/646), and [dual-launch lifecycle](../../docs/architecture/game-launch-composition.md) [#647](https://github.com/mkunze8187-cmd/bible-challenge/issues/647) extend existing Journey #458/#460 rather than replacing them.
+- The checkpoint covers Leviticus in a wider wilderness continuation; do not present it as occurring within the book of Exodus itself.
